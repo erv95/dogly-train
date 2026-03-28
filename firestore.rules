@@ -1,0 +1,184 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Helpers ──────────────────────────────────────────────────────────────
+
+    // Is the request from an authenticated user?
+    function isAuth() {
+      return request.auth != null;
+    }
+
+    // Is the requester the given userId?
+    function isUser(uid) {
+      return isAuth() && request.auth.uid == uid;
+    }
+
+    // Is the requester an admin? (custom claim set server-side)
+    function isAdmin() {
+      return isAuth() && request.auth.token.admin == true;
+    }
+
+    // Does a user document exist and have the given role?
+    function hasRole(role) {
+      return isAuth() &&
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == role;
+    }
+
+    // Is the user's account active?
+    function isActive() {
+      return isAuth() &&
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.status == 'active';
+    }
+
+    // ── users ─────────────────────────────────────────────────────────────────
+    // - Anyone authenticated can read active trainer profiles (for discovery)
+    // - Users can read/write their own profile
+    // - Coin balance and isActive CANNOT be written by client
+    // - Admins can read/write all
+
+    match /users/{userId} {
+      // Read: own profile OR admin OR (reading an active trainer)
+      allow read: if isUser(userId)
+        || isAdmin()
+        || (isAuth() && isActive() &&
+            resource.data.role == 'trainer' &&
+            resource.data.isActive == true);
+
+      // Create: only yourself, safe initial values enforced
+      allow create: if isUser(userId)
+        && !('admin' in request.resource.data)
+        && (!('coinBalance' in request.resource.data) || request.resource.data.coinBalance == 0)
+        && (!('isActive' in request.resource.data) || request.resource.data.isActive == false);
+
+      // Update: own profile but cannot touch financial/admin fields
+      allow update: if isUser(userId)
+        && !request.resource.data.diff(resource.data).affectedKeys()
+            .hasAny(['coinBalance', 'isActive', 'averageRating', 'totalReviews',
+                     'boostedUntil', 'role'])
+        || isAdmin();
+
+      // Delete: admin only (GDPR handled by Cloud Function)
+      allow delete: if isAdmin();
+    }
+
+    // ── dogs ──────────────────────────────────────────────────────────────────
+    // - Owners can CRUD their own dogs
+    // - Trainers can read dogs (to understand client needs in chat)
+    // - No one else
+
+    match /dogs/{dogId} {
+      allow read: if isAdmin() || (isAuth() && isActive()
+        && (resource.data.ownerId == request.auth.uid || hasRole('trainer')));
+
+      allow create: if hasRole('owner') && isActive()
+        && request.resource.data.ownerId == request.auth.uid;
+
+      allow update: if hasRole('owner') && isActive()
+        && resource.data.ownerId == request.auth.uid
+        && request.resource.data.ownerId == request.auth.uid; // cannot transfer
+
+      allow delete: if hasRole('owner') && isActive()
+        && resource.data.ownerId == request.auth.uid;
+    }
+
+    // ── chats ─────────────────────────────────────────────────────────────────
+    // - Only participants can read their chat
+    // - Participants can create chats (validated fields)
+    // - Only last-message fields can be updated (done by sendMessage Cloud trigger)
+
+    match /chats/{chatId} {
+      allow read: if isAdmin() || (isAuth() && isActive()
+        && request.auth.uid in resource.data.participants);
+
+      allow create: if isAuth() && isActive()
+        && request.auth.uid in request.resource.data.participants
+        && request.resource.data.participants.size() == 2;
+
+      allow update: if isAuth() && isActive()
+        && request.auth.uid in resource.data.participants
+        && request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['lastMessage', 'lastMessageAt', 'lastMessageBy',
+                      'participantNames', 'participantPhotos']);
+
+      allow delete: if isAdmin();
+    }
+
+    // ── messages ──────────────────────────────────────────────────────────────
+    // - Only participants of the chat can read/write messages
+    // - Text must be non-empty and max 1000 chars
+    // - Cannot edit or delete own messages (immutable)
+
+    match /messages/{messageId} {
+      allow read: if isAuth() && isActive()
+        && exists(/databases/$(database)/documents/chats/$(resource.data.chatId))
+        && request.auth.uid in
+           get(/databases/$(database)/documents/chats/$(resource.data.chatId)).data.participants;
+
+      allow create: if isAuth() && isActive()
+        && request.resource.data.senderId == request.auth.uid
+        && request.resource.data.text is string
+        && request.resource.data.text.size() > 0
+        && request.resource.data.text.size() <= 1000
+        && exists(/databases/$(database)/documents/chats/$(request.resource.data.chatId))
+        && request.auth.uid in
+           get(/databases/$(database)/documents/chats/$(request.resource.data.chatId)).data.participants;
+
+      // Messages are immutable — no updates or deletes from client
+      allow update, delete: if isAdmin();
+    }
+
+    // ── reviews ───────────────────────────────────────────────────────────────
+    // - Owners can create/update their own review (1 per pair)
+    // - Only the trainer being reviewed can read their reviews
+    // - Rating must be 1-5
+
+    match /reviews/{reviewId} {
+      // Only the trainer can read reviews about them
+      allow read: if isAuth() && isActive()
+        && (resource.data.toUserId == request.auth.uid
+            || resource.data.fromUserId == request.auth.uid
+            || isAdmin());
+
+      // Owner creates review with deterministic ID {fromId}_{toId}
+      allow create: if hasRole('owner') && isActive()
+        && request.resource.data.fromUserId == request.auth.uid
+        && request.resource.data.rating >= 1
+        && request.resource.data.rating <= 5
+        && reviewId == request.resource.data.fromUserId + '_' + request.resource.data.toUserId;
+
+      // Owner can update their own review
+      allow update: if hasRole('owner') && isActive()
+        && resource.data.fromUserId == request.auth.uid
+        && request.resource.data.rating >= 1
+        && request.resource.data.rating <= 5
+        && !request.resource.data.diff(resource.data).affectedKeys()
+            .hasAny(['fromUserId', 'toUserId']); // cannot change target
+
+      allow delete: if isAdmin();
+    }
+
+    // ── coin_transactions ────────────────────────────────────────────────────
+    // - Users can only read their own transactions
+    // - No client writes (all writes are server-side via Cloud Functions)
+
+    match /coin_transactions/{txId} {
+      allow read: if isAdmin() || (isAuth() && resource.data.userId == request.auth.uid);
+      allow write: if false; // Cloud Functions only
+    }
+
+    // ── reports ───────────────────────────────────────────────────────────────
+    // - Any active user can create a report
+    // - Only admins can read/update reports
+
+    match /reports/{reportId} {
+      allow create: if isAuth() && isActive()
+        && request.resource.data.reportedBy == request.auth.uid;
+
+      allow read, update, delete: if isAdmin();
+    }
+
+  }
+}

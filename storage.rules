@@ -1,0 +1,56 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // ── Helpers ───────────────────────────────────────────────────────────────
+
+    function isAuth() {
+      return request.auth != null;
+    }
+
+    function isUser(uid) {
+      return isAuth() && request.auth.uid == uid;
+    }
+
+    // Max file size: 5 MB
+    function isValidImage() {
+      return request.resource.size <= 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+
+    // ── User avatars: users/{userId}/avatar.jpg ───────────────────────────────
+    // - Anyone authenticated can read (needed to display avatars in chat/lists)
+    // - Only the owner can write their own avatar
+
+    match /users/{userId}/{fileName} {
+      allow read: if isAuth();
+      allow write: if isUser(userId) && isValidImage();
+    }
+
+    // ── Dog photos: dogs/{userId}/{dogId}.jpg ─────────────────────────────────
+    // - Any authenticated user can read (trainers need to see dog photos)
+    // - Only the owner can upload/update
+
+    match /dogs/{userId}/{fileName} {
+      allow read: if isAuth();
+      allow write: if isUser(userId) && isValidImage();
+    }
+
+    // ── Trainer certifications: certs/{userId}/{fileName} ────────────────────
+    // - Any authenticated user can read
+    // - Only the trainer (owner of the path) can upload
+
+    match /certs/{userId}/{fileName} {
+      allow read: if isAuth();
+      allow write: if isUser(userId)
+        && request.resource.size <= 10 * 1024 * 1024 // 10 MB for docs
+        && (request.resource.contentType.matches('image/.*')
+            || request.resource.contentType == 'application/pdf');
+    }
+
+    // Deny everything else
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
