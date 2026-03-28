@@ -41,3 +41,14 @@ functions/.env.*
 # generated native folders
 /ios
 /android
+
+# Firebase Functions compiled output
+functions/lib/
+functions/node_modules/
+
+# Service account (sensitive)
+functions/serviceAccount.json.json
+functions/serviceAccount.json
+
+# Duplicated assets
+assets/assets/
