@@ -1,0 +1,158 @@
+{
+  "title": "Saluda con las dos patas",
+  "subtitle": "El truco que encanta a todos — ¡como decir hola con las manos!",
+  "level": "Intermedio",
+  "duration": "5–10 min por sesión",
+  "location": "Casa o jardín tranquilo",
+  "ageRecommendation": "Desde 5 meses",
+  "estimatedSessions": "8–12 sesiones para dominar",
+  "objective": "Enseñar al perro a ofrecer ambas patas de forma alterna con un movimiento de saludo, respondiendo a la señal verbal “saluda” o un gesto de mano.",
+  "why": [
+    "Es un truco muy vistoso que impresiona a familiares y amigos",
+    "Refuerza la confianza y el vínculo entre el perro y su dueño",
+    "Genera conciencia corporal: el perro aprende a controlar cada pata de forma independiente",
+    "Es la puerta de entrada a trucos más complejos como choca esos cinco"
+  ],
+  "benefits": [
+    "Tu perro aprenderá a gestionar la excitación canalizándola en un comportamiento concreto",
+    "Mejora la coordinación y el equilibrio en perros jóvenes",
+    "Reduce los saltos incontrolados al redirigir la energía en una conducta específica",
+    "Crea momentos de interacción positiva que refuerzan la obediencia general"
+  ],
+  "where": [
+    "🏠 En casa, en el salón o la cocina sin distracciones",
+    "🌿 En el jardín cuando ya lo domina en interior",
+    "🔇 Siempre en un espacio tranquilo al inicio"
+  ],
+  "materials": [
+    "🫖 Premios pequeños y muy apetecibles (pollo, queso, salchichas)",
+    "🛟 Superficie antideslizante para que el perro se sienta seguro",
+    "🖐️ Tus manos abiertas como señal visual",
+    "💛 Paciencia y muchas ganas de celebrar"
+  ],
+  "beforeYouStart": [
+    "Tu perro debe dominar “dame la pata” con al menos una pata antes de comenzar",
+    "Elige un momento tranquilo: ni muy excitado tras el paseo ni muy cansado",
+    "Ten preparados al menos 20 premios pequeños por sesión",
+    "Trabaja en una superficie antideslizante (alfombra o moqueta)",
+    "Sesiones de máximo 7 minutos para mantener la motivación alta"
+  ],
+  "methods": [
+    {
+      "id": "alternate_paws",
+      "title": "Método de patas alternas con saludo",
+      "description": "Primero consolidas “dame la pata” con cada lado por separado, luego alternas las patas y aceleras el movimiento hasta conseguir el saludo natural.",
+      "bestFor": "Perros que ya conocen dame la pata con una o las dos patas",
+      "steps": [
+        {
+          "title": "Consolida la pata derecha",
+          "description": "Extiende la mano derecha abierta y pide “derecha” (o el cue que uses). Cuando ofrezca la pata derecha, marca con “¡bien!” y premia al instante.",
+          "tip": "Si sólo conoce una pata, repite 5 veces hasta que responda fluido.",
+          "troubleshooting": "Si ofrece la pata equivocada, ignórala en silencio y vuelve a pedir."
+        },
+        {
+          "title": "Consolida la pata izquierda",
+          "description": "Extiende la mano izquierda y pide “izquierda”. Marca y premia cada vez que ofrezca la pata correcta. Dedica 2–3 sesiones a cada lado por separado.",
+          "tip": "Mantén las manos simétricas: misma altura, mismo gesto para cada lado."
+        },
+        {
+          "title": "Alterna las patas",
+          "description": "Una vez que responde bien a ambos lados, empieza a alternar: mano derecha → “derecha”, premia; mano izquierda → “izquierda”, premia. Aumenta el ritmo poco a poco.",
+          "tip": "Al principio alterna cada 3–4 segundos. Luego reduce a 1–2 segundos.",
+          "troubleshooting": "Si se confunde, vuelve a trabajar cada pata por separado un par de sesiones más."
+        },
+        {
+          "title": "Introduce la señal unificada “saluda”",
+          "description": "Cuando alterne bien ambas patas, empieza a decir “saluda” antes de mover las manos. El perro asociará la palabra con el movimiento alterno.",
+          "tip": "Usa un tono alegre y festivo al decir “saluda” — la emoción se contagia."
+        },
+        {
+          "title": "Acelera el movimiento — el saludo real",
+          "description": "Mueve las manos de forma más rápida y ligera, imitando un saludo humano. El perro seguirá el ritmo y el resultado se parecerá a un saludo con las patas.",
+          "tip": "Celebra con entusiasmo cuando el movimiento se vea fluido y natural.",
+          "troubleshooting": "Si pierde el ritmo, reduce la velocidad y vuelve a subir gradualmente."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Saltar a alternar antes de que cada pata esté consolidada por separado",
+      "cause": "Querer llegar al resultado final demasiado rápido",
+      "fix": "Dedica al menos 3 sesiones a cada pata por separado antes de combinarlas."
+    },
+    {
+      "error": "Usar el mismo gesto de mano para ambas patas",
+      "cause": "No diferenciar visualmente entre derecha e izquierda",
+      "fix": "Extiende la mano del mismo lado que la pata que quieres que ofrezca. La señal visual es clave."
+    },
+    {
+      "error": "Premiar demasiado tarde, cuando ya ha bajado la pata",
+      "cause": "Reflejos lentos o premios no preparados",
+      "fix": "Ten los premios en la mano libre. Marca y premia en el momento del contacto."
+    },
+    {
+      "error": "Sesiones demasiado largas que aburren al perro",
+      "cause": "Querer que aprenda en una sola sesión larga",
+      "fix": "7 minutos máximo. Termina siempre con un éxito fácil para que quede con ganas de más."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro sólo ofrece siempre la misma pata",
+      "solution": "Trabaja exclusivamente la pata olvidada durante 2–3 sesiones. Sólo premia esa pata hasta que se equilibre."
+    },
+    {
+      "problem": "El perro se echa cuando intento que ofrezca la segunda pata",
+      "solution": "Está perdiendo el equilibrio. Trabaja en una superficie más firme y pide cada pata con el perro bien asentado sobre las otras tres."
+    },
+    {
+      "problem": "El movimiento no parece un saludo, es muy lento",
+      "solution": "Reduce el tamaño del premio para que el perro esté más alerta y activo. Sube el ritmo de tu propia mano y él seguirá."
+    },
+    {
+      "problem": "El perro se excita mucho y empieza a saltar",
+      "solution": "Para la sesión, pide un “sentado” para calmarlo y vuelve a empezar. Baja el tono de voz y reduce la frecuencia de los premios."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–3",
+      "goal": "Ofrece cada pata por separado de forma fluida ante el gesto correspondiente"
+    },
+    {
+      "stage": "Sesión 4–7",
+      "goal": "Alterna ambas patas cuando cambias de mano, con pequeñas pausas entre cada una"
+    },
+    {
+      "stage": "Sesión 8–10",
+      "goal": "Responde a “saluda” y alterna las patas con ritmo creciente"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Ejecuta el saludo con fluidez ante cualquier persona conocida"
+    }
+  ],
+  "successSigns": [
+    "Ofrece ambas patas de forma alterna sin confundirse",
+    "Responde a la palabra “saluda” antes de ver el gesto",
+    "El movimiento es fluido y tiene ritmo de saludo natural",
+    "Lo hace frente a otras personas además de su dueño"
+  ],
+  "variations": [
+    "Saluda sólo con la pata derecha (clásico “dame la pata”)",
+    "Saluda a diferentes personas (familiares, amigos)",
+    "Saluda al ritmo de una canción",
+    "Saluda desde posición sentado y desde posición de pie",
+    "Encadena saludo + reverencia para una actuación completa"
+  ],
+  "safetyNotes": [
+    "No practiques si el perro tiene alguna lesión en las patas o articulaciones",
+    "Perros de razas grandes: supervisa que no carguen demasiado peso en una sola pata",
+    "Si el perro muestra resistencia o cojea, para y consulta al veterinario",
+    "Cachorros menores de 6 meses: sesiones de máximo 5 minutos para proteger las articulaciones en desarrollo"
+  ],
+  "funFact": "Los perros naturalmente ofrecen la pata como señal social de apaciguamiento. Cuando tu perro te la da, en el fondo te está diciendo: “me gustas, confío en ti”.",
+  "nextLevel": "Una vez dominado el saludo, prueba a enseñar “choca esos cinco” (high five) y luego encadénalos: saluda → choca → reverencia. ¡Una actuación completa!",
+  "proTip": "Usa premios de altísimo valor (pollo cocido, salchicha) para este truco porque requiere más coordinación. Tu perro necesita que valga la pena el esfuerzo."
+}

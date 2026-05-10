@@ -1,0 +1,159 @@
+{
+  "title": "Dá a volta",
+  "subtitle": "O truque mais impressionante — uma volta completa a partir do chão!",
+  "level": "Avançado",
+  "duration": "5–10 min por sessão",
+  "location": "Interior (superfície macia)",
+  "ageRecommendation": "A partir dos 8 meses",
+  "estimatedSessions": "10–15 sessões para dominar",
+  "objective": "Ensinar o cão a girar 360° a partir da posição deitado, passando pelo lateral e voltando a deitar, respondendo à ordem “dá a volta”.",
+  "why": [
+    "É o truque mais espetacular do repertório básico — surpreende e encanta sempre",
+    "Requer que o cão confie plenamente no dono para se expor numa posição vulnerável",
+    "Melhora a flexibilidade, a consciência corporal e a coordenação",
+    "Demonstra o mais alto nível de comunicação e entendimento entre cão e dono"
+  ],
+  "benefits": [
+    "Fortalece o vínculo e a confiança de forma extraordinária",
+    "Excelente exercício físico para a flexibilidade da coluna e dos flancos",
+    "Uma vez dominado, o cão executa-o com fluidez e elegância",
+    "É o ponto de partida para truques de espetáculo mais complexos"
+  ],
+  "where": [
+    "🏠 Exclusivamente em interior sobre uma superfície muito macia no início",
+    "🛏️ Tapete grosso, cobertor dobrado ou tapete de yoga — imprescindível",
+    "⛔ Nunca em chão duro, frio ou escorregadio — o cão deve sentir-se confortável na posição lateral"
+  ],
+  "materials": [
+    "🫖 Petiscos de máximo valor (frango cozido, queijo forte, salsicha)",
+    "🛟 Tapete de yoga, tapete grosso ou cobertor dobrado",
+    "🖐️ A sua mão para guiar o isco",
+    "💛 Paciência extra — este truque aprende-se fase a fase, não de uma vez"
+  ],
+  "beforeYouStart": [
+    "O seu cão deve dominar “deita” de forma muito fluente — é o ponto de partida obrigatório",
+    "Use a superfície mais macia e confortável que tiver: cobertor, tapete ou alcatifa grossa",
+    "Traga petiscos de altíssimo valor — este truque é exigente e merece a melhor recompensa",
+    "Trabalhe em fases: não tente a volta completa desde o primeiro dia",
+    "Sessões de no máximo 5 minutos — o truque requer um esforço físico e mental significativo"
+  ],
+  "methods": [
+    {
+      "id": "lure_over_shoulder",
+      "title": "Método do isco pelo ombro",
+      "description": "A partir da posição deitado, guie o isco em direção ao ombro do cão para que ele vire a cabeça, depois o corpo segue até completar a volta. Trabalhe fase a fase: virar a cabeça → ombro no chão → volta completa.",
+      "bestFor": "Cães que dominam o deitar e têm boa confiança com o dono",
+      "steps": [
+        {
+          "title": "Peça deitar no tapete",
+          "description": "Peça “deita” sobre a superfície macia. O cão deve estar completamente relaxado, com os cotovelos e o peito no chão.",
+          "tip": "Espere que esteja genuinamente confortável antes de continuar. Um cão tenso não rodará bem.",
+          "troubleshooting": "Se o cão se levantar ao ver o petisco, trabalhe primeiro manter o deitar com distrações."
+        },
+        {
+          "title": "Guie a cabeça para o ombro — Fase 1",
+          "description": "Com o petisco colado ao focinho, mova-o lentamente para o ombro do lado para o qual quer que role. O cão virará a cabeça seguindo o isco. Marque e recompense apenas a virar da cabeça.",
+          "tip": "Recompense generosamente esta fase durante 3–4 sessões. Não avance até ser natural.",
+          "troubleshooting": "Se o cão se levantar em vez de virar a cabeça, recomece o deitar e vá mais devagar."
+        },
+        {
+          "title": "O ombro toca o chão — Fase 2",
+          "description": "Continue a guiar o petisco além do ombro, para o chão do lado oposto. O corpo seguirá a cabeça e o ombro tocará o chão. O cão está agora em posição lateral. Marque e recompense.",
+          "tip": "Esta é a fase mais difícil porque o cão expõe-se numa posição vulnerável. Use o petisco de maior valor.",
+          "troubleshooting": "Se o cão resistir a cair de lado, desacelere o isco e recompense cada pequeno progresso."
+        },
+        {
+          "title": "O corpo completa a volta — Fase 3",
+          "description": "Com o cão em posição lateral, continue o arco do isco sobre o dorso para o outro lado. O cão rolará completando os 360° e ficará novamente em posição deitado normal. Marque e celebre com entusiasmo.",
+          "tip": "Quando o cão completar a volta inteira pela primeira vez, celebre como se fosse o melhor momento.",
+          "troubleshooting": "Se o cão completar só até à metade, recompense aí e vá estendendo um pouco mais a cada sessão."
+        },
+        {
+          "title": "Nomeie o truque e reduza o isco",
+          "description": "Quando a volta completa for consistente, diga “dá a volta” mesmo antes de iniciar o isco. Reduza progressivamente o gesto até o cão rodar apenas com a voz ou uma pequena rotação do pulso.",
+          "tip": "Reduza o isco muito gradualmente: petisco visível → punho fechado → apenas gesto → apenas voz.",
+          "troubleshooting": "Se o cão parar de rodar ao reduzir o isco, volte ao isco completo e reduza mais devagar."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Tentar a volta completa desde a primeira sessão",
+      "cause": "Querer ver o resultado final demasiado depressa",
+      "fix": "Trabalhe em fases. Dedique pelo menos 3–4 sessões a cada fase antes de avançar."
+    },
+    {
+      "error": "Guiar demasiado rápido e perder o cão a meio da volta",
+      "cause": "Isco a mover-se mais rápido do que o cão consegue seguir",
+      "fix": "O isco deve mover-se ao ritmo do cão. Se o cão se levantar, está a ir depressa demais."
+    },
+    {
+      "error": "Praticar em chão duro ou frio",
+      "cause": "Não preparar corretamente o ambiente",
+      "fix": "A superfície macia é inegociável. O cão precisa de se sentir confortável em posição lateral."
+    },
+    {
+      "error": "Forçar o cão para o lateral com a mão",
+      "cause": "Frustração quando o isco não funciona",
+      "fix": "Nunca use força física. Se o isco não funcionar, use um petisco de maior valor ou volte à fase anterior."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O cão vira a cabeça mas não o corpo",
+      "solution": "Está na Fase 1 — é normal. Continue a recompensar apenas a virar da cabeça até ser automático. O corpo seguirá naturalmente depois."
+    },
+    {
+      "problem": "O cão levanta-se cada vez que o isco se aproxima do ombro",
+      "solution": "Trabalhe primeiro o deitar com mais distrações. O cão precisa de mais confiança para manter a posição."
+    },
+    {
+      "problem": "O cão chega ao lateral mas não termina a volta",
+      "solution": "Recompense a posição lateral generosamente durante várias sessões. Depois guie o isco 10° mais a cada vez."
+    },
+    {
+      "problem": "O meu cão só rola num sentido",
+      "solution": "É normal e válido. Muitos cães preferem um lado. Consolide bem esse lado antes de tentar o sentido contrário."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessões 1–4",
+      "goal": "Vira a cabeça para o ombro seguindo o isco a partir da posição deitado"
+    },
+    {
+      "stage": "Sessões 5–8",
+      "goal": "O ombro toca o chão e o cão atinge a posição lateral completa"
+    },
+    {
+      "stage": "Sessões 9–12",
+      "goal": "Completa a volta de 360° seguindo o isco"
+    },
+    {
+      "stage": "Semana 4+",
+      "goal": "Responde a “dá a volta” com isco reduzido ou apenas com a voz"
+    }
+  ],
+  "successSigns": [
+    "Completa a volta de 360° de forma fluente sem pausa na posição lateral",
+    "Termina deitado e olha para o dono à espera da recompensa",
+    "Responde ao sinal verbal sem precisar do isco completo",
+    "Faz-o em diferentes superfícies macias (tapete, cobertor, tapete de yoga)"
+  ],
+  "variations": [
+    "Dá a volta no sentido contrário (para o outro lado)",
+    "Duas voltas seguidas com uma única ordem",
+    "Volta lenta e controlada (mais difícil do que rápida)",
+    "Encadear deita → dá a volta → senta para uma sequência fluente"
+  ],
+  "safetyNotes": [
+    "Nunca pratique com cães com problemas de coluna, anca ou displasia sem consultar um veterinário",
+    "Nunca force o cão para o lateral — se não o fizer voluntariamente, ainda não está pronto",
+    "Cães com mais de 8 anos: consulte um veterinário antes de ensinar este truque",
+    "Se o cão mostrar rigidez, desconforto ou evitar a posição lateral, pare e observe durante 48 horas"
+  ],
+  "funFact": "Os cães mostram a barriga como sinal máximo de confiança e apaziguamento. Quando o seu cão rola para si, está a dizer que se sente completamente seguro na sua presença.",
+  "nextLevel": "Encadeie: deita → dá a volta → senta → bate cá. Quatro truques seguidos que deixarão toda a gente de boca aberta!",
+  "proTip": "Trabalhe sempre no sentido que o cão escolher naturalmente no início. Uma vez que esse lado esteja dominado, o sentido oposto virá muito mais facilmente."
+}

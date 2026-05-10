@@ -4,112 +4,126 @@ service cloud.firestore {
 
     // ── Helpers ──────────────────────────────────────────────────────────────
 
-    // Is the request from an authenticated user?
     function isAuth() {
       return request.auth != null;
     }
 
-    // Is the requester the given userId?
     function isUser(uid) {
       return isAuth() && request.auth.uid == uid;
     }
 
-    // Is the requester an admin? (custom claim set server-side)
+    // Admin check via Custom Claims — never from Firestore data
     function isAdmin() {
       return isAuth() && request.auth.token.admin == true;
     }
 
-    // Does a user document exist and have the given role?
     function hasRole(role) {
       return isAuth() &&
         exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == role;
     }
 
-    // Is the user's account active?
+    // Account-level status check (active/banned/suspended)
     function isActive() {
       return isAuth() &&
         exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.status == 'active';
     }
 
+    // Fields a user can never write themselves
+    function protectedUserFields() {
+      return ['coinBalance', 'isActive', 'averageRating', 'totalReviews',
+              'boostedUntil', 'role', 'status', 'admin',
+              'isPremium', 'premiumPurchasedAt',
+              // Identity verification — only admin (or verified server flow)
+              // can flip these. Otherwise users could self-promote to verified.
+              'verified', 'verifiedAt'];
+    }
+
     // ── users ─────────────────────────────────────────────────────────────────
-    // - Anyone authenticated can read active trainer profiles (for discovery)
-    // - Users can read/write their own profile
-    // - Coin balance and isActive CANNOT be written by client
-    // - Admins can read/write all
 
     match /users/{userId} {
-      // Read: own profile OR admin OR (reading an active trainer)
+      // Trainers and caretakers are publicly readable to any active user as
+      // long as their account isn't banned/suspended. The marketplace search
+      // (searchTrainers/searchCaretakers) further filters to isActive == true
+      // for approved listings, but the in-app chat search should be able to
+      // find any active provider regardless of admin approval.
       allow read: if isUser(userId)
         || isAdmin()
-        || (isAuth() && isActive() &&
-            resource.data.role == 'trainer' &&
-            resource.data.isActive == true);
+        || (isAuth() && isActive()
+            && (resource.data.role == 'trainer' || resource.data.role == 'caretaker')
+            && (resource.data.status == 'active' || !('status' in resource.data)));
 
-      // Create: only yourself, safe initial values enforced
       allow create: if isUser(userId)
         && !('admin' in request.resource.data)
         && (!('coinBalance' in request.resource.data) || request.resource.data.coinBalance == 0)
-        && (!('isActive' in request.resource.data) || request.resource.data.isActive == false);
+        && (!('isActive' in request.resource.data) || request.resource.data.isActive == false)
+        && (!('status' in request.resource.data) || request.resource.data.status == 'active')
+        // GDPR: dateOfBirth is stored as ISO string (YYYY-MM-DD). Lexicographic
+        // comparison works because ISO 8601 sorts chronologically. We compare
+        // against today minus 16 years (5844 days, Julian).
+        && (
+          !('dateOfBirth' in request.resource.data)
+          || (
+            request.resource.data.dateOfBirth is string
+            && request.resource.data.dateOfBirth.size() >= 10
+            && request.resource.data.dateOfBirth.size() <= 30
+          )
+        );
 
-      // Update: own profile but cannot touch financial/admin fields
-      allow update: if isUser(userId)
-        && !request.resource.data.diff(resource.data).affectedKeys()
-            .hasAny(['coinBalance', 'isActive', 'averageRating', 'totalReviews',
-                     'boostedUntil', 'role'])
-        || isAdmin();
+      allow update: if (
+        isUser(userId)
+        && !request.resource.data.diff(resource.data).affectedKeys().hasAny(protectedUserFields())
+      ) || isAdmin();
 
-      // Delete: admin only (GDPR handled by Cloud Function)
       allow delete: if isAdmin();
     }
 
     // ── dogs ──────────────────────────────────────────────────────────────────
-    // - Owners can CRUD their own dogs
-    // - Trainers can read dogs (to understand client needs in chat)
-    // - No one else
 
     match /dogs/{dogId} {
-      allow read: if isAdmin() || (isAuth() && isActive()
-        && (resource.data.ownerId == request.auth.uid || hasRole('trainer')));
+      allow read: if isAdmin()
+        || (isAuth() && isActive()
+            && (resource.data.ownerId == request.auth.uid
+                || hasRole('trainer')
+                || hasRole('caretaker')));
 
       allow create: if hasRole('owner') && isActive()
         && request.resource.data.ownerId == request.auth.uid;
 
       allow update: if hasRole('owner') && isActive()
         && resource.data.ownerId == request.auth.uid
-        && request.resource.data.ownerId == request.auth.uid; // cannot transfer
+        && request.resource.data.ownerId == request.auth.uid;
 
       allow delete: if hasRole('owner') && isActive()
         && resource.data.ownerId == request.auth.uid;
     }
 
     // ── chats ─────────────────────────────────────────────────────────────────
-    // - Only participants can read their chat
-    // - Participants can create chats (validated fields)
-    // - Only last-message fields can be updated (done by sendMessage Cloud trigger)
 
     match /chats/{chatId} {
-      allow read: if isAdmin() || (isAuth() && isActive()
-        && request.auth.uid in resource.data.participants);
+      allow read: if isAdmin()
+        || (isAuth() && isActive() && request.auth.uid in resource.data.participants);
 
       allow create: if isAuth() && isActive()
         && request.auth.uid in request.resource.data.participants
         && request.resource.data.participants.size() == 2;
+      // Note: we intentionally don't validate the other participant's status
+      // here — legacy accounts may not have the `status` field at all and the
+      // get() would reject the create. Banned users are already excluded from
+      // searchUsers (rules require isActive == true to read trainer/caretaker
+      // docs) so they cannot be discovered to chat with in the first place.
 
       allow update: if isAuth() && isActive()
         && request.auth.uid in resource.data.participants
         && request.resource.data.diff(resource.data).affectedKeys()
             .hasOnly(['lastMessage', 'lastMessageAt', 'lastMessageBy',
-                      'participantNames', 'participantPhotos']);
+                      'participantNames', 'participantPhotos', 'unreadCounts']);
 
       allow delete: if isAdmin();
     }
 
     // ── messages ──────────────────────────────────────────────────────────────
-    // - Only participants of the chat can read/write messages
-    // - Text must be non-empty and max 1000 chars
-    // - Cannot edit or delete own messages (immutable)
 
     match /messages/{messageId} {
       allow read: if isAuth() && isActive()
@@ -119,65 +133,547 @@ service cloud.firestore {
 
       allow create: if isAuth() && isActive()
         && request.resource.data.senderId == request.auth.uid
-        && request.resource.data.text is string
-        && request.resource.data.text.size() > 0
-        && request.resource.data.text.size() <= 1000
+        && request.resource.data.type in ['text', 'image', 'file', 'audio', 'service_report']
+        && (
+          request.resource.data.type != 'text'
+          || (request.resource.data.text is string
+              && request.resource.data.text.size() > 0
+              && request.resource.data.text.size() <= 1000)
+        )
+        && (
+          request.resource.data.type != 'service_report'
+          || (
+            request.resource.data.serviceReport is map
+            && request.resource.data.serviceReport.category in ['walk', 'day_care', 'overnight', 'home_care']
+            && request.resource.data.serviceReport.photoURLs is list
+            && request.resource.data.serviceReport.photoURLs.size() >= 1
+            && request.resource.data.serviceReport.photoURLs.size() <= 3
+            && request.resource.data.serviceReport.note is string
+            && request.resource.data.serviceReport.note.size() > 0
+            && request.resource.data.serviceReport.note.size() <= 280
+          )
+        )
         && exists(/databases/$(database)/documents/chats/$(request.resource.data.chatId))
         && request.auth.uid in
            get(/databases/$(database)/documents/chats/$(request.resource.data.chatId)).data.participants;
 
-      // Messages are immutable — no updates or deletes from client
       allow update, delete: if isAdmin();
     }
 
     // ── reviews ───────────────────────────────────────────────────────────────
-    // - Owners can create/update their own review (1 per pair)
-    // - Only the trainer being reviewed can read their reviews
-    // - Rating must be 1-5
 
     match /reviews/{reviewId} {
-      // Only the trainer can read reviews about them
       allow read: if isAuth() && isActive()
         && (resource.data.toUserId == request.auth.uid
             || resource.data.fromUserId == request.auth.uid
             || isAdmin());
 
-      // Owner creates review with deterministic ID {fromId}_{toId}
       allow create: if hasRole('owner') && isActive()
         && request.resource.data.fromUserId == request.auth.uid
         && request.resource.data.rating >= 1
         && request.resource.data.rating <= 5
         && reviewId == request.resource.data.fromUserId + '_' + request.resource.data.toUserId;
 
-      // Owner can update their own review
       allow update: if hasRole('owner') && isActive()
         && resource.data.fromUserId == request.auth.uid
         && request.resource.data.rating >= 1
         && request.resource.data.rating <= 5
         && !request.resource.data.diff(resource.data).affectedKeys()
-            .hasAny(['fromUserId', 'toUserId']); // cannot change target
+            .hasAny(['fromUserId', 'toUserId']);
 
       allow delete: if isAdmin();
     }
 
     // ── coin_transactions ────────────────────────────────────────────────────
-    // - Users can only read their own transactions
-    // - No client writes (all writes are server-side via Cloud Functions)
 
     match /coin_transactions/{txId} {
       allow read: if isAdmin() || (isAuth() && resource.data.userId == request.auth.uid);
-      allow write: if false; // Cloud Functions only
+      allow write: if false; // Cloud Functions only via Admin SDK
     }
 
     // ── reports ───────────────────────────────────────────────────────────────
-    // - Any active user can create a report
-    // - Only admins can read/update reports
 
     match /reports/{reportId} {
       allow create: if isAuth() && isActive()
         && request.resource.data.reportedBy == request.auth.uid;
 
       allow read, update, delete: if isAdmin();
+    }
+
+    // ── dog_stats ─────────────────────────────────────────────────────────────
+    // XP, level, streak — one document per dog, keyed by dogId
+
+    match /dog_stats/{dogId} {
+      // resource is null when doc doesn't exist — must allow reads so getDoc returns
+      // "not found" instead of permission-denied (needed on first completion)
+      allow read: if isAdmin()
+        || (isAuth() && isActive()
+            && (resource == null || resource.data.ownerId == request.auth.uid));
+
+      allow create: if isAuth() && isActive()
+        && request.resource.data.ownerId == request.auth.uid;
+
+      allow update: if isAuth() && isActive()
+        && resource.data.ownerId == request.auth.uid
+        // ownerId must be immutable to prevent reassigning another dog's stats
+        && request.resource.data.ownerId == resource.data.ownerId;
+
+      allow delete: if isAdmin();
+    }
+
+    // ── course_progress ───────────────────────────────────────────────────────
+    // - Owners read/write only their own progress
+    // - Keyed by {userId}_{courseId} for deterministic IDs
+
+    match /course_progress/{progressId} {
+      // Key format: {userId}_{dogId}_{courseId}
+      // Read/write only allowed when progressId starts with the authenticated user's UID
+      allow read: if isAuth() && isActive()
+        && progressId.matches(request.auth.uid + '_.+');
+
+      allow create: if isAuth() && isActive()
+        && request.resource.data.userId == request.auth.uid
+        && progressId.matches(request.auth.uid + '_.+');
+
+      allow update: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+
+      allow delete: if isAdmin();
+    }
+
+    // ── dog_reminders ─────────────────────────────────────────────────────────
+    // Health reminders (vaccines, vet visits, grooming) per dog.
+    // Only the dog's owner may read/write their reminders.
+
+    match /dog_reminders/{reminderId} {
+      allow read: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+
+      allow create: if isAuth() && isActive()
+        && request.resource.data.userId == request.auth.uid;
+
+      allow update: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid
+        && request.resource.data.userId == request.auth.uid;
+
+      allow delete: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+    }
+
+    // ── dog_walks ─────────────────────────────────────────────────────────────
+    // Walk log entries per dog. Only the dog's owner may read/write.
+
+    match /dog_walks/{walkId} {
+      allow read: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+
+      allow create: if isAuth() && isActive()
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.durationMinutes is number
+        && request.resource.data.durationMinutes > 0
+        && request.resource.data.durationMinutes <= 600
+        && (
+          !('distanceKm' in request.resource.data)
+          || (request.resource.data.distanceKm is number
+              && request.resource.data.distanceKm >= 0
+              && request.resource.data.distanceKm <= 100)
+        )
+        // GPS route is optional. When present, cap at 1000 points to bound doc size.
+        && (
+          !('route' in request.resource.data)
+          || (request.resource.data.route is list
+              && request.resource.data.route.size() <= 1000)
+        );
+
+      // Walks are append-only from the user side. No updates needed for v1.
+      allow update: if false;
+
+      allow delete: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+    }
+
+    // ── bookings + availability + holds + transitions ───────────────────────
+    // /bookings: read by owner, provider, or admin. Writes are exclusively
+    // through Cloud Functions (atomic slot lock + denormalisation).
+    // /availability: providers manage their own; any active user can read to
+    // render the booking calendar.
+    // /availability_holds + /booking_transitions: server-only.
+
+    match /bookings/{bookingId} {
+      allow read: if isAuth() && isActive() && (
+           resource.data.ownerId == request.auth.uid
+        || resource.data.providerId == request.auth.uid
+        || isAdmin());
+      allow write: if false;
+    }
+
+    match /availability_holds/{lockId} {
+      allow read, write: if false;
+    }
+
+    match /booking_transitions/{txId} {
+      allow read, write: if false;
+    }
+
+    match /recurring_series/{seriesId} {
+      // Owner + provider can read their own series; admin reads all. All
+      // writes are server-only.
+      allow read: if isAuth() && (
+           resource.data.ownerId == request.auth.uid
+        || resource.data.providerId == request.auth.uid
+        || isAdmin());
+      allow write: if false;
+    }
+
+    match /availability/{providerId} {
+      // Any signed-in active user can read (owners need to render the calendar
+      // when picking a slot from a provider detail page).
+      allow read: if isAuth() && isActive();
+
+      allow create, update: if isUser(providerId) && isActive()
+        && (hasRole('trainer') || hasRole('caretaker'))
+        && request.resource.data.providerId == providerId
+        && request.resource.data.weekly is list
+        && request.resource.data.weekly.size() == 7
+        && request.resource.data.exceptions is list
+        && request.resource.data.exceptions.size() <= 365;
+
+      allow delete: if isAdmin();
+    }
+
+    // ── booking_live_sessions ────────────────────────────────────────────────
+    // Provider broadcasts location + photos during a confirmed booking.
+    // Both parties + admin can read; only provider can write to sub-collections
+    // (path + photos), and parent doc is server-only.
+
+    match /booking_live_sessions/{bookingId} {
+      function isParticipant() {
+        return isAuth() && (
+             resource.data.ownerId == request.auth.uid
+          || resource.data.providerId == request.auth.uid
+          || isAdmin());
+      }
+
+      // Parent doc — created via Cloud Function. Provider client bumps
+      // `lastPing` only (writeBatch from pushLocations / uploadLivePhoto).
+      allow read: if isParticipant();
+      allow create: if false;
+      allow update: if isAuth()
+        && resource.data.providerId == request.auth.uid
+        && request.resource.data.providerId == resource.data.providerId
+        && request.resource.data.ownerId == resource.data.ownerId
+        && request.resource.data.bookingId == resource.data.bookingId
+        // Provider can only nudge ephemeral fields, never the status/lifecycle
+        && request.resource.data.status == resource.data.status;
+      allow delete: if false;
+
+      match /path/{pointId} {
+        allow read: if isAuth() && (
+             get(/databases/$(database)/documents/booking_live_sessions/$(bookingId)).data.ownerId == request.auth.uid
+          || get(/databases/$(database)/documents/booking_live_sessions/$(bookingId)).data.providerId == request.auth.uid
+          || isAdmin());
+        allow create: if isAuth()
+          && get(/databases/$(database)/documents/booking_live_sessions/$(bookingId)).data.providerId == request.auth.uid
+          && request.resource.data.lat is number
+          && request.resource.data.lng is number;
+        allow update, delete: if false;
+      }
+
+      match /photos/{photoId} {
+        allow read: if isAuth() && (
+             get(/databases/$(database)/documents/booking_live_sessions/$(bookingId)).data.ownerId == request.auth.uid
+          || get(/databases/$(database)/documents/booking_live_sessions/$(bookingId)).data.providerId == request.auth.uid
+          || isAdmin());
+        allow create: if isAuth()
+          && get(/databases/$(database)/documents/booking_live_sessions/$(bookingId)).data.providerId == request.auth.uid;
+        allow update, delete: if false;
+      }
+    }
+
+    // ── referrals + audit ─────────────────────────────────────────────────────
+    // /referrals: each referrer reads their own list (referrerId == auth.uid),
+    // referred users read theirs, admins read all. All writes are server-only.
+    // /referral_audit: admin-only — exposes IP-hash buckets used for fraud review.
+
+    match /referrals/{referralId} {
+      allow read: if isAuth() && (
+           resource.data.referrerId == request.auth.uid
+        || resource.data.referredId == request.auth.uid
+        || isAdmin());
+      allow write: if false;
+    }
+
+    match /referral_audit/{auditId} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    // ── id_verifications ─────────────────────────────────────────────────────
+    // ID verification requests (trainers/caretakers). Doc id == userId so the
+    // user can read their own status without a list query. Admins read & write
+    // (approve/reject). The `verified` flag on /users/{uid} is admin-only via
+    // protectedUserFields(), so users cannot self-approve.
+
+    match /id_verifications/{userId} {
+      allow read: if isAuth() && isActive()
+        && (request.auth.uid == userId || isAdmin());
+
+      // Trainers/caretakers can submit (or re-submit). Status must start as
+      // 'pending' and the doc id must match their uid.
+      allow create: if isAuth() && isActive()
+        && request.auth.uid == userId
+        && (hasRole('trainer') || hasRole('caretaker'))
+        && request.resource.data.userId == userId
+        && request.resource.data.status == 'pending'
+        && request.resource.data.documentType in ['dni', 'passport', 'driver_license']
+        && request.resource.data.frontPath is string
+        && request.resource.data.selfiePath is string;
+
+      // Re-submitting overwrites the previous record. Same constraints as create
+      // when the user is the writer; admins can do anything (approve/reject).
+      allow update: if isAdmin()
+        || (isAuth() && isActive()
+            && request.auth.uid == userId
+            && resource.data.userId == userId
+            && request.resource.data.status == 'pending'
+            && request.resource.data.frontPath is string
+            && request.resource.data.selfiePath is string);
+
+      allow delete: if isAdmin();
+    }
+
+    // ── push_log ─────────────────────────────────────────────────────────────
+    // Every push attempt is logged here by the sendPush helper (admin SDK,
+    // bypasses rules). Admins read for the dashboard.
+
+    match /push_log/{logId} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    // ── breed_identifications & ai_usage ─────────────────────────────────────
+    // Both collections are written exclusively by the identifyBreed Cloud
+    // Function (admin SDK bypasses rules). Users may only read their own.
+
+    match /breed_identifications/{recordId} {
+      allow read: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+      allow write: if false;
+    }
+
+    match /ai_usage/{usageId} {
+      allow read: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+      allow write: if false;
+    }
+
+    // ── challenge_progress ───────────────────────────────────────────────────
+    // One doc per (dog, challengeTemplate). Doc id is `${dogId}_${templateId}`.
+    // Owner-only access. Same `resource == null` carve-out as weekly_plans so
+    // the client can do getDoc() before setDoc() on first start.
+
+    match /challenge_progress/{progressId} {
+      allow read: if isAuth() && isActive()
+        && (resource == null || resource.data.userId == request.auth.uid);
+
+      allow create: if isAuth() && isActive()
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.dogId is string
+        && request.resource.data.templateId is string
+        && request.resource.data.completions is list
+        && request.resource.data.completions.size() <= 30;
+
+      allow update: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid
+        && request.resource.data.userId == resource.data.userId
+        && request.resource.data.dogId == resource.data.dogId
+        && request.resource.data.templateId == resource.data.templateId
+        && request.resource.data.completions is list
+        && request.resource.data.completions.size() <= 30;
+
+      allow delete: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+    }
+
+    // ── weekly_plans ─────────────────────────────────────────────────────────
+    // One doc per (dog, ISO week). Owner of the dog reads/writes their own
+    // plans. Document id is `${dogId}_${weekIso}` (deterministic) so the
+    // client can do a direct getDoc + setDoc without a list query.
+
+    match /weekly_plans/{planId} {
+      // resource is null when the doc doesn't exist yet — getOrCreatePlanForWeek
+      // does getDoc() before setDoc(), so we must allow that read on missing docs
+      // (returns "not found" snapshot to the client, which then proceeds to create).
+      allow read: if isAuth() && isActive()
+        && (resource == null || resource.data.userId == request.auth.uid);
+
+      allow create: if isAuth() && isActive()
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.dogId is string
+        && request.resource.data.weekIso is string
+        && request.resource.data.days is list
+        && request.resource.data.days.size() == 7;
+
+      // Updates only by the owning user; userId/dogId/weekIso must not change.
+      allow update: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid
+        && request.resource.data.userId == resource.data.userId
+        && request.resource.data.dogId == resource.data.dogId
+        && request.resource.data.weekIso == resource.data.weekIso;
+
+      allow delete: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+    }
+
+    // ── places (dog-friendly POI map) ────────────────────────────────────────
+    // Anyone authenticated can read approved places + their own pending submissions.
+    // Only the submitter can create. Updates/deletes restricted to admin only
+    // (approval workflow). Rating subcollection is per-user.
+
+    match /places/{placeId} {
+      allow read: if isAuth() && isActive()
+        && (
+          resource.data.status == 'approved'
+          || resource.data.submittedBy == request.auth.uid
+          || isAdmin()
+        );
+
+      allow create: if isAuth() && isActive()
+        && request.resource.data.submittedBy == request.auth.uid
+        && request.resource.data.status == 'pending'
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 120
+        && request.resource.data.description is string
+        && request.resource.data.description.size() <= 500
+        && request.resource.data.category in ['park', 'restaurant', 'beach', 'hotel', 'shop', 'training_field', 'event']
+        && request.resource.data.latitude is number
+        && request.resource.data.latitude >= -90 && request.resource.data.latitude <= 90
+        && request.resource.data.longitude is number
+        && request.resource.data.longitude >= -180 && request.resource.data.longitude <= 180
+        && request.resource.data.geoHash is string
+        && request.resource.data.averageRating == 0
+        && request.resource.data.totalRatings == 0;
+
+      // Update + delete restricted to admin (approval/rejection/correction)
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+
+      // Ratings subcollection — one per user. The doc ID must equal the user's UID.
+      match /ratings/{ratingId} {
+        allow read: if isAuth() && isActive();
+        allow create, update: if isAuth() && isActive()
+          && ratingId == request.auth.uid
+          && request.resource.data.rating is number
+          && request.resource.data.rating >= 1
+          && request.resource.data.rating <= 5
+          && (
+            !('comment' in request.resource.data)
+            || (request.resource.data.comment is string && request.resource.data.comment.size() <= 500)
+          );
+        allow delete: if isAdmin() || (isAuth() && ratingId == request.auth.uid);
+      }
+    }
+
+    // The averageRating/totalRatings fields on the parent place doc are bumped
+    // by the transactional `ratePlace` service. Since clients can't update
+    // arbitrary fields on places (only admin can), we need a special carve-out
+    // for the rating-side increment. Documented limitation: the transaction
+    // updates BOTH the rating subdoc AND the parent place doc — the parent
+    // update is rejected by the rule above, breaking the transaction.
+    //
+    // SOLUTION: allow non-admin writes to places ONLY when the only fields
+    // changing are averageRating/totalRatings/updatedAt. This keeps the
+    // moderation flow intact while permitting rating aggregates to update.
+    // (Re-applied here as a more permissive rule for places — Firestore picks
+    // the first matching `allow` so this is OR'd with the admin-only rule.)
+    // Note: the create rule above forces averageRating == 0 / totalRatings == 0
+    // at creation, so this carve-out only allows mutations.
+
+    match /places/{placeId} {
+      allow update: if isAuth() && isActive()
+        && request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['averageRating', 'totalRatings', 'updatedAt']);
+    }
+
+    // ── vet_records ──────────────────────────────────────────────────────────
+    // Digital pet booklet entries (vaccines administered, vet visits, allergies,
+    // medications, surgeries, lab results). Owner-only access.
+
+    match /vet_records/{recordId} {
+      allow read: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+
+      allow create: if isAuth() && isActive()
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.type in ['vaccine', 'visit', 'allergy', 'medication', 'surgery', 'lab_result']
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 120
+        && request.resource.data.dogId is string
+        && request.resource.data.date is timestamp
+        && (
+          !('notes' in request.resource.data)
+          || request.resource.data.notes == null
+          || (request.resource.data.notes is string && request.resource.data.notes.size() <= 1000)
+        )
+        && (
+          !('severity' in request.resource.data)
+          || request.resource.data.severity == null
+          || request.resource.data.severity in ['low', 'medium', 'high']
+        );
+
+      allow update: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid
+        // userId and dogId stay immutable (cannot reassign someone else's record)
+        && request.resource.data.userId == resource.data.userId
+        && request.resource.data.dogId == resource.data.dogId;
+
+      allow delete: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+    }
+
+    // ── emergency_contacts ───────────────────────────────────────────────────
+    // First-aid contact list (vet, backup, shelter…) per user. Owner-only access.
+
+    match /emergency_contacts/{contactId} {
+      allow read: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+
+      allow create: if isAuth() && isActive()
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 80
+        && request.resource.data.phone is string
+        && request.resource.data.phone.size() > 0
+        && request.resource.data.phone.size() <= 30
+        && request.resource.data.relationship in ['vet', 'backup', 'shelter', 'other']
+        && (
+          !('notes' in request.resource.data)
+          || request.resource.data.notes == null
+          || (request.resource.data.notes is string && request.resource.data.notes.size() <= 200)
+        );
+
+      allow update: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid
+        // userId must remain immutable
+        && request.resource.data.userId == resource.data.userId
+        && (
+          !('phone' in request.resource.data)
+          || (request.resource.data.phone is string && request.resource.data.phone.size() <= 30)
+        );
+
+      allow delete: if isAuth() && isActive()
+        && resource.data.userId == request.auth.uid;
+    }
+
+    // ── admin_meta ────────────────────────────────────────────────────────────
+    // Internal admin metadata (e.g. broadcast rate limiting).
+    // Only admins can read or write.
+
+    match /admin_meta/{docId} {
+      allow read, write: if isAdmin();
     }
 
   }

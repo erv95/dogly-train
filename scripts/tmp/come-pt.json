@@ -1,0 +1,158 @@
+{
+  "title": "Chamada (Vem cá)",
+  "subtitle": "O comando mais importante para a segurança do seu cão",
+  "level": "Básico",
+  "duration": "5–10 min por sessão",
+  "location": "Casa, jardim ou parque com trela longa",
+  "ageRecommendation": "A partir das 8 semanas",
+  "estimatedSessions": "7–10 sessões para consolidar",
+  "objective": "Ensinar o cão a vir imediatamente ao seu lado quando ouve o seu nome seguido de 'vem' ou 'aqui', mesmo com distrações presentes.",
+  "why": [
+    "É o comando de segurança mais crítico: pode salvar a vida do seu cão",
+    "Permite dar liberdade controlada em espaços abertos",
+    "Fortalece o vínculo e a confiança entre cão e dono",
+    "Base para exercícios à distância e trabalho sem trela"
+  ],
+  "benefits": [
+    "Poderá soltar o seu cão no parque com confiança",
+    "Em caso de perigo, o seu cão regressará a si imediatamente",
+    "Facilita chamá-lo quando interage com outros cães ou pessoas",
+    "Melhora a comunicação geral e a atenção para consigo"
+  ],
+  "where": [
+    "🏠 Em casa (corredor ou sala sem distrações)",
+    "🌿 Jardim ou quintal vedado",
+    "🌳 Parque sossegado com trela longa de 5–10 metros"
+  ],
+  "materials": [
+    "🫖 Petiscos de altíssimo valor (frango, queijo, fiambre em pedacinhos)",
+    "🦮 Trela longa de 5–10 metros (não extensível)",
+    "🔔 Clicker (opcional mas muito útil)",
+    "💛 Tom de voz alegre e entusiasmado"
+  ],
+  "beforeYouStart": [
+    "O seu cão já deve responder ao seu nome com alguma consistência",
+    "Nunca use a chamada para algo desagradável (banho, cortar unhas, prender)",
+    "Use sempre um tom festivo: vir ao seu lado deve ser a melhor coisa do mundo",
+    "Comece em interiores ou jardim vedado, nunca em zona aberta sem segurança",
+    "Reserve petiscos de alto valor especificamente para este exercício"
+  ],
+  "methods": [
+    {
+      "id": "recall_game",
+      "title": "Jogo de chamada progressiva (recomendado)",
+      "description": "Pratica a chamada como um jogo, começando muito perto e aumentando gradualmente a distância e a dificuldade. O cão aprende que vir a si gera sempre a melhor recompensa.",
+      "bestFor": "Todos os cães desde cachorros até adultos",
+      "steps": [
+        {
+          "title": "Comece a um metro de distância",
+          "description": "Agache-se ao nível do cão, diga o seu nome e 'vem' com voz alegre e abra os braços. Quando chegar, dê vários petiscos seguidos e elogios entusiasmados.",
+          "tip": "Agachar-se e abrir os braços é um convite irresistível para o seu cão.",
+          "troubleshooting": "Se não vier, aproxime-se mais. Comece a meio metro se necessário."
+        },
+        {
+          "title": "Aumente a distância gradualmente",
+          "description": "Quando responder bem a 1 metro, passe para 2, depois 3, depois 5. Cada vez que vier: grande festa — vários petiscos, carícias e voz muito alegre.",
+          "tip": "Regra de ouro: se não vier 9 em cada 10 vezes, a distância é demasiada. Recue.",
+          "troubleshooting": "Nunca repita a ordem se não vier. Aproxime-se, mostre o petisco e tente de novo a menor distância."
+        },
+        {
+          "title": "Introduza a trela longa",
+          "description": "No jardim ou parque com trela longa de 5–10 metros. Deixe-o explorar e chame-o em momentos de distração moderada. Quando vier: festa total.",
+          "tip": "A trela longa é segurança, não um instrumento para puxar. Não a use para o arrastar.",
+          "troubleshooting": "Se estiver muito distraído, espere que a distração diminua antes de o chamar."
+        },
+        {
+          "title": "Alterne chamada com liberdade",
+          "description": "Chame-o, recompense generosamente e volte a soltá-lo para continuar a explorar. Aprende assim que vir a si não significa que a diversão acabou.",
+          "tip": "Se só o chamar para ir embora, aprenderá a ignorá-lo no final do passeio."
+        },
+        {
+          "title": "Adicione distrações progressivas",
+          "description": "Quando responder bem em zona calma, pratique com outras pessoas, cães ao longe ou sons. Aumente o valor dos petiscos à medida que a dificuldade sobe.",
+          "tip": "Mais distração = maior festa quando chega. O esforço extra merece recompensa extra."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Chamar o cão para algo desagradável (banho, cortar unhas, prendê-lo)",
+      "cause": "Usamos a chamada para situações necessárias mas desagradáveis",
+      "fix": "Vá ter com ele para as coisas desagradáveis. A chamada DEVE terminar sempre em algo positivo."
+    },
+    {
+      "error": "Repreender o cão quando finalmente chega (mesmo que tenha demorado muito)",
+      "cause": "Frustração pela demora",
+      "fix": "Nunca. Mesmo que demore 10 minutos, quando chegar: celebre. Punir a chegada significa que nunca mais voltará."
+    },
+    {
+      "error": "Repetir a ordem várias vezes ('vem, vem, vem...')",
+      "cause": "Nervosismo ou falta de paciência",
+      "fix": "Diga a ordem UMA vez em tom alegre. Se não vier, aproxime-se e tente a menor distância da próxima vez."
+    },
+    {
+      "error": "Praticar apenas em casa onde funciona sempre",
+      "cause": "Zona de conforto do dono",
+      "fix": "Pratique em sítios novos com distrações reais. A aprendizagem tem de se generalizar a diferentes ambientes."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão olha para mim mas não vem",
+      "solution": "Os petiscos não são suficientemente atrativos. Use frango ou queijo e exagere o entusiasmo: agache-se, bata palmas, voz muito alegre."
+    },
+    {
+      "problem": "Vem mas foge antes de o conseguir segurar",
+      "solution": "Está a agarrar a coleira demasiado depressa. Recompense primeiro durante 3 segundos, depois segure suavemente a coleira enquanto continua a dar petiscos."
+    },
+    {
+      "problem": "Funciona em casa mas no parque ignora-me",
+      "solution": "Normal: o parque tem demasiadas distrações. Comece no parque quando estiver vazio e aumente a dificuldade muito devagar."
+    },
+    {
+      "problem": "Deixou de responder mesmo que antes o fizesse bem",
+      "solution": "Pode ter aumentado a dificuldade depressa demais, ou usou a chamada para algo negativo. Volte a distâncias curtas com excelentes petiscos durante uma semana."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessões 1–3",
+      "goal": "Vem consistentemente de 1–3 metros em casa sem distrações"
+    },
+    {
+      "stage": "Sessões 4–6",
+      "goal": "Responde a 5 metros no jardim com distrações ligeiras"
+    },
+    {
+      "stage": "Sessões 7–10",
+      "goal": "Vem de 10 metros com trela longa num parque sossegado"
+    },
+    {
+      "stage": "Mês 2+",
+      "goal": "Responde em ambientes com distrações reais (outros cães, pessoas)"
+    }
+  ],
+  "successSigns": [
+    "Vem à primeira chamada sem necessidade de repetir a ordem",
+    "Abandona distrações moderadas (farejar, explorar) para vir",
+    "Chega completamente ao seu lado e fica (não apenas se aproxima)",
+    "Responde em pelo menos 3 ambientes diferentes"
+  ],
+  "variations": [
+    "Chamada entre duas pessoas (o cão vai e vem entre ambas)",
+    "Chamada escondido atrás de uma árvore ou esquina",
+    "Chamada durante o jogo com outro cão",
+    "Chamada apenas com sinal de mão (sem voz)",
+    "Chamada longa de 20–30 metros"
+  ],
+  "safetyNotes": [
+    "Nunca pratique sem trela em zonas abertas até a chamada estar muito sólida",
+    "Evite praticar quando o cão está muito agitado: espere que o nível de excitação baixe",
+    "Se usar trela longa, verifique que não está enrolada antes de o chamar",
+    "Reserve a chamada de emergência (voz alta e dramática) para perigos reais — use-a raramente para manter o impacto"
+  ],
+  "funFact": "Estudos mostram que os cães respondem melhor a vozes agudas e alegres do que a vozes graves e sérias. Quanto mais ridículo parecer a chamá-lo, melhor funciona!",
+  "nextLevel": "Pratique a chamada com distrações reais: cães a brincar perto, pessoas a correr, cheiros intensos. Depois introduza um 'quieto' antes de o chamar.",
+  "proTip": "Reserve os melhores petiscos APENAS para a chamada. Se o frango só aparecer quando ele vem ter consigo, virá a voar. A exclusividade do petisco torna o comportamento mais forte."
+}

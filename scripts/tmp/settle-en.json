@@ -1,0 +1,157 @@
+{
+  "title": "Settle",
+  "subtitle": "Active calm on cue in any situation",
+  "level": "Intermediate",
+  "duration": "10–15 min per session",
+  "location": "Home, patio, café, waiting room",
+  "ageRecommendation": "From 12 weeks",
+  "estimatedSessions": "8–12 sessions to master",
+  "objective": "Teach the dog to actively relax on cue — not just lie down, but release bodily tension — in any environment. Useful in cafés, at home with visitors, or during long stays.",
+  "why": [
+    "A dog that knows how to settle handles stress better in new environments",
+    "Allows you to take your dog to public spaces (patios, shops) without disruption",
+    "Reduces general reactivity by teaching the calm state as a concrete behaviour",
+    "Complements the 'down': relaxation goes beyond posture"
+  ],
+  "benefits": [
+    "Your dog can accompany you to restaurants, terraces and events without causing issues",
+    "Visitors feel comfortable because the dog doesn't bother them continuously",
+    "Quieter evenings at home when the dog learns to settle in the afternoons",
+    "Useful at vet appointments, grooming salons or long car journeys"
+  ],
+  "where": [
+    "🏠 Start at home in the dog's favourite living room or room",
+    "☕ Progress to quiet patios or cafés",
+    "🐾 Designated zone with a specific mat or bed for the dog"
+  ],
+  "materials": [
+    "🛏️ The dog's specific mat or bed (the 'safe zone')",
+    "🫖 High-value treats in small amounts",
+    "🔇 Very calm initial environment (no loud TV, no visitors)",
+    "💛 Exceptional patience: this command takes longer than the basics"
+  ],
+  "beforeYouStart": [
+    "The dog should already know 'down' fluently before working on settling",
+    "Choose a time of day when the dog is naturally calmer (post-walk)",
+    "Designate a specific mat or bed: always the same, don't move it initially",
+    "Sessions of no more than 10–15 minutes: relaxation cannot be forced or rushed",
+    "Turn off the TV and reduce stimuli during initial training"
+  ],
+  "methods": [
+    {
+      "id": "mat_protocol",
+      "title": "Mat protocol (progressive relaxation method)",
+      "description": "The mat becomes the physical cue for relaxation. The dog learns that being on the mat = releasing tension and receiving calm. You reinforce genuine relaxation states (sigh, slow blink, head down) and ignore alert states.",
+      "bestFor": "All dogs, especially anxious, hyperactive or reactive ones at home",
+      "steps": [
+        {
+          "title": "Introduce the mat as a positive place",
+          "description": "Lead your dog to the mat and reward simply for being on it. Don't ask for anything more yet. Mat = treat shower.",
+          "tip": "Do this 5–10 times before asking for any specific behaviour. The mat must be the best place in the world.",
+          "troubleshooting": "If the dog avoids the mat, reward even for approaching it. Build the positive association first before continuing."
+        },
+        {
+          "title": "Ask for 'down' on the mat",
+          "description": "Once the dog voluntarily goes onto the mat, ask for 'down'. Reward when they're lying down on it.",
+          "tip": "Don't introduce the word 'settle' yet. First build the behaviour of being down on the mat."
+        },
+        {
+          "title": "Observe and reinforce genuine relaxation",
+          "description": "Stay nearby but without talking. When the dog shows genuine relaxation signs (audible sigh, slow blinking, head dropping onto paws, body 'melting'), say 'settle' and reward very gently.",
+          "tip": "The reward must be given calmly: not with excitement. Excitement breaks relaxation. Gently toss the treat to the floor between their paws.",
+          "troubleshooting": "If the dog gets up, say nothing. Wait for them to lie down again. Reinforce only the calm."
+        },
+        {
+          "title": "Increase the duration of relaxation",
+          "description": "Over time, wait for more relaxation signals before rewarding: 5 seconds → 15 → 30 → 1 minute of continuous calm before the treat.",
+          "tip": "Use a phone timer so you don't reward too early. Timing precision is key."
+        },
+        {
+          "title": "Add gradual distractions",
+          "description": "Start practising with small distractions: talk on the phone, turn on the TV at low volume, enter and leave the room. Always reward sustained calm.",
+          "tip": "Increase distractions in very small steps. A setback is not failure: it's information."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Rewarding the dog when they get up to go get the treat",
+      "cause": "Offering the reward at the wrong height or approaching the dog with excitement",
+      "fix": "Always toss the treat to the floor between their paws. Never offer it from your hand when seeking relaxation."
+    },
+    {
+      "error": "Trying to force relaxation with intense petting",
+      "cause": "Confusing 'wanting to calm the dog' with 'trained active relaxation'",
+      "fix": "Anxious dogs get more overstimulated by petting when already activated. Use calm rewards and silence."
+    },
+    {
+      "error": "Practising during high-arousal moments",
+      "cause": "Wanting to resolve excitement with the command",
+      "fix": "'Settle' doesn't work at peak arousal. Always practise when the dog is already in a neutral or gently calm state."
+    },
+    {
+      "error": "Moving the mat before the behaviour is consolidated",
+      "cause": "Wanting it to work in different places too quickly",
+      "fix": "First consolidate at home with the mat always in the same place. Then progressively move the mat to other rooms and finally outdoors."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My dog lies down but doesn't relax: still scanning the room",
+      "solution": "They're physically in position but not in genuine relaxation. Keep waiting and reinforce when you see the first slow blink or sigh. Patience here is measured in minutes, not seconds."
+    },
+    {
+      "problem": "They get up every time I approach to reward",
+      "solution": "Change how you deliver the reward: instead of approaching, gently toss the treat to the floor from where you are."
+    },
+    {
+      "problem": "Works at home but they can't settle at the restaurant terrace",
+      "solution": "You've raised the distraction level too quickly. Take the mat to quiet places first (garden, quiet terrace) before moving to busy public spaces."
+    },
+    {
+      "problem": "My dog falls asleep before I can reward the relaxation",
+      "solution": "That's a total success! A dog that falls asleep on the mat has reached the maximum level of relaxation. Reward gently when they wake up."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Session 1–3",
+      "goal": "The dog voluntarily goes onto the mat and lies down without being asked"
+    },
+    {
+      "stage": "Session 4–6",
+      "goal": "Shows at least one genuine relaxation signal (sigh, slow blink) on the mat"
+    },
+    {
+      "stage": "Week 2–3",
+      "goal": "Relaxes for 1–2 minutes on the mat with small distractions present"
+    },
+    {
+      "stage": "Month 1+",
+      "goal": "Goes to the mat and relaxes when they hear 'settle' in quiet outdoor settings"
+    }
+  ],
+  "successSigns": [
+    "The dog sighs audibly when lying down on the mat",
+    "Maintains the relaxed position even when you stand up or walk nearby",
+    "Goes to the mat voluntarily when experiencing mild stress (visitors, new sounds)",
+    "The relaxation lasts over 5 minutes without intervention"
+  ],
+  "variations": [
+    "Settle on a restaurant terrace with background noise",
+    "Settle in the vet's waiting room",
+    "Settle while having visitors at home",
+    "Settle in a moving car",
+    "Settle without the mat (using only the verbal cue)"
+  ],
+  "safetyNotes": [
+    "Never use 'settle' to calm a dog in a fear crisis or panic: they first need to move away from the stimulus",
+    "If your dog never seems to relax, even at home, consult a behaviourist: there may be chronic anxiety",
+    "Don't practise this command in extremely noisy spaces or with active fear triggers",
+    "If you use the mat as a time-out or punishment zone, it will lose all its positive association"
+  ],
+  "funFact": "Dogs have a 'stress yawn' different from a sleepy yawn. A yawn during training is a sign the dog is self-regulating — it's actually a positive thing!",
+  "nextLevel": "Introduce a hand signal (pointing to the mat) alongside the verbal cue. Progress to having the dog settle in public spaces without the mat: using only the verbal cue.",
+  "proTip": "The state of relaxation cannot be demanded: it must be cultivated. Your calm is contagious to your dog. Talk less, move more slowly, and breathe more deeply during sessions."
+}

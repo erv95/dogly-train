@@ -1,0 +1,186 @@
+{
+  "title": "Deixa",
+  "subtitle": "O comando de segurança mais importante que o seu cão pode aprender",
+  "level": "Básico",
+  "duration": "5–10 min por sessão",
+  "location": "Casa ou jardim tranquilo",
+  "ageRecommendation": "A partir de 8 semanas",
+  "estimatedSessions": "5–8 sessões para dominar",
+  "objective": "Ensinar o cão a ignorar qualquer objeto no chão ou na sua mão quando ouve o sinal 'deixa', protegendo-o de ingerir itens perigosos.",
+  "why": [
+    "Protege o cão de comer alimentos perigosos, lixo ou toxinas na rua",
+    "Controla impulsos diante de objetos tentadores sem precisar puxar a guia",
+    "Fortalece a confiança entre o cão e o tutor através do autocontrole",
+    "Cria a base para um melhor comportamento exploratório em ambientes novos"
+  ],
+  "benefits": [
+    "O seu cão ignora comida que cai no chão antes que você possa apanhá-la",
+    "Evita conflitos por recursos com outros cães",
+    "Reduz o risco de intoxicação acidental durante os passeios",
+    "Desenvolve o autocontrole como habilidade transferível para outras situações"
+  ],
+  "where": [
+    "🏠 Comece em casa, num cômodo sem distrações",
+    "🌿 Progrida para o jardim ou terraço quando dominar o ambiente interno",
+    "🛣️ Por fim, pratique na rua com distrações reais"
+  ],
+  "materials": [
+    "🫖 Dois tipos de petiscos: baixo valor (ração) e alto valor (frango, queijo)",
+    "✋ Suas mãos como 'esconderijo' do petisco",
+    "🦮 Guia longa (opcional para prática ao ar livre)",
+    "💛 Paciência e muita calma"
+  ],
+  "beforeYouStart": [
+    "Tenha dois tipos de petiscos prontos: um para usar como 'tentação' e outro melhor para recompensar",
+    "Certifique-se de que o seu cão tem um nível mínimo de atenção para com você",
+    "Pratique sem guia em casa antes de passar para o exterior",
+    "Mantenha as sessões com no máximo 5 minutos para não sobrecarregar o cão",
+    "Não pratique se o cão estiver com muita fome ou muito agitado"
+  ],
+  "methods": [
+    {
+      "id": "closed_fist",
+      "title": "Método do punho fechado (recomendado para começar)",
+      "description": "Você esconde um petisco na mão fechada, o cão tenta obtê-lo e quando recua, você o recompensa com um petisco diferente e melhor. Ensina que ignorar = ganhar algo melhor.",
+      "bestFor": "Filhotes e cães sem experiência prévia com o comando",
+      "steps": [
+        {
+          "title": "Prepare o punho",
+          "description": "Coloque um petisco de baixo valor na mão e feche-a em punho. Ofereça o punho fechado ao cão na altura do focinho.",
+          "tip": "Use um petisco de baixo valor aqui (ração normal); o petisco bom fica na outra mão ou no bolso.",
+          "troubleshooting": "Se o cão latir ou arranhar com intensidade, mantenha firme. Não retire a mão nem o repreenda."
+        },
+        {
+          "title": "Observe e espere",
+          "description": "O cão vai cheirar, lamber e empurrar seu punho tentando obter o petisco. Não abra a mão. Espere em silêncio.",
+          "tip": "A paciência é fundamental. Na primeira vez pode demorar de 10 segundos a 2 minutos.",
+          "troubleshooting": "Se perder o interesse e se afastar, tente um cheiro mais atraente, mas só recompense quando recuar."
+        },
+        {
+          "title": "Capture o recuo",
+          "description": "No momento em que o cão afastar o focinho do seu punho (mesmo que seja apenas um centímetro), diga 'deixa' e recompense IMEDIATAMENTE com o petisco bom da outra mão.",
+          "tip": "O timing é crítico: a recompensa deve chegar em menos de 2 segundos após o recuo."
+        },
+        {
+          "title": "Repita e aumente a dificuldade",
+          "description": "Repita 5–8 vezes por sessão. Quando fizer com fluidez, comece a colocar um objeto no chão coberto pelo seu pé.",
+          "tip": "Aumente a dificuldade gradualmente: punho → chão coberto → chão visível → rua."
+        },
+        {
+          "title": "Generalize o comando",
+          "description": "Após dominar com o punho, pratique com objetos no chão, comida caída e depois ao ar livre com distrações reais.",
+          "tip": "Em cada novo ambiente, volte ao nível mais fácil antes de aumentar a dificuldade."
+        }
+      ]
+    },
+    {
+      "id": "ground_progression",
+      "title": "Método de progressão no chão",
+      "description": "Você começa com o petisco coberto pelo pé e vai descobrindo gradualmente enquanto o cão aprende a resistir à tentação. Ideal para consolidar o comando.",
+      "bestFor": "Cães que já entendem o conceito básico do punho ou com maior impulsividade",
+      "steps": [
+        {
+          "title": "Petisco sob o pé",
+          "description": "Coloque um petisco no chão e cubra-o completamente com a ponta do pé. Permita que o cão cheire ao redor do seu pé.",
+          "tip": "O pé deve cobrir completamente o petisco para que o cão não consiga roubá-lo.",
+          "troubleshooting": "Se arranhar o chão com força, não reaja. Espere calmamente até ele se afastar."
+        },
+        {
+          "title": "Diga 'deixa' e espere",
+          "description": "Quando o cão recuar mesmo que levemente do seu pé, diga 'deixa' com calma e recompense com um petisco da sua mão (não o do chão).",
+          "tip": "Nunca recompense com o petisco do chão: o cão deve aprender que 'deixa' significa 'esse petisco não é seu, mas você ganha um melhor'."
+        },
+        {
+          "title": "Descubra progressivamente",
+          "description": "Quando o cão esperar sem tentar pegar o petisco do chão, mova o pé muito levemente para revelar uma pequena parte. Repita o comando.",
+          "tip": "Se ele se lançar, cubra novamente com o pé. Sem repreender — simplesmente reinicie."
+        },
+        {
+          "title": "Petisco completamente visível",
+          "description": "O objetivo final é que o cão possa ver o petisco no chão e ignorá-lo ao ouvir 'deixa', olhando para você em espera da recompensa.",
+          "tip": "Esta etapa pode exigir 3–5 sessões adicionais. Não tenha pressa."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Repetir 'deixa' várias vezes seguidas",
+      "cause": "Frustração do tutor quando o cão não responde na primeira tentativa",
+      "fix": "Diga o comando UMA vez e espere em silêncio. Repetir ensina o cão a ignorá-lo."
+    },
+    {
+      "error": "Recompensar com o objeto que foi mandado deixar",
+      "cause": "Usar o que está mais à mão para recompensar",
+      "fix": "Sempre recompense com um petisco DIFERENTE e de maior valor. O objeto proibido nunca deve ser a recompensa."
+    },
+    {
+      "error": "Usar o comando em situações de perigo real sem treino prévio",
+      "cause": "Presumir que o cão já sabe sem prática sistemática",
+      "fix": "Pratique em casa semanas antes de precisar na rua. Em emergências reais, afaste o cão fisicamente."
+    },
+    {
+      "error": "Repreender o cão quando ele pega o objeto",
+      "cause": "Reação impulsiva de frustração",
+      "fix": "Nunca puna. Se ele pegou, é sinal que o treino precisa de etapas mais fundamentais. Volte a um nível anterior."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão pega o petisco antes de eu conseguir dizer 'deixa'",
+      "solution": "O objeto está acessível demais. Volte ao punho fechado e certifique-se de controlar o acesso antes de avançar."
+    },
+    {
+      "problem": "Faz 'deixa' em casa, mas não funciona na rua",
+      "solution": "Normal: a rua tem mais estímulos. Recomece o treino ao ar livre desde a etapa mais fácil, com menos distrações primeiro."
+    },
+    {
+      "problem": "O meu cão fica frustrado e late quando digo 'deixa'",
+      "solution": "O impulso é alto. Pratique em sessões mais curtas (2–3 minutos) com recompensas de maior valor e reduza o apelo do objeto proibido."
+    },
+    {
+      "problem": "Funciona bem com comida, mas não com objetos (meias, brinquedos)",
+      "solution": "São categorias distintas para o cão. Treine especificamente com cada tipo de objeto, começando pelos de menor valor para ele."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessão 1–2",
+      "goal": "O cão afasta o focinho do punho fechado pelo menos uma vez por sessão"
+    },
+    {
+      "stage": "Sessão 3–5",
+      "goal": "Ignora o punho em 7 de cada 10 tentativas e começa a olhar para você em busca do petisco bom"
+    },
+    {
+      "stage": "Semana 2",
+      "goal": "Ignora um petisco visível no chão coberto pelo pé ao ouvir 'deixa'"
+    },
+    {
+      "stage": "Semana 3–4",
+      "goal": "Ignora objetos no chão sem que o pé os cubra, em casa e no jardim"
+    }
+  ],
+  "successSigns": [
+    "Afasta-se do objeto e olha para você espontaneamente ao ouvir 'deixa'",
+    "Funciona com diferentes tipos de objetos (comida, brinquedos, lixo)",
+    "Realiza em ambientes externos com distrações moderadas",
+    "Mantém a distância do objeto por 5 ou mais segundos"
+  ],
+  "variations": [
+    "Deixa com comida na palma da mão aberta (nível avançado)",
+    "Deixa com outro cão como distrator",
+    "Deixa com um objeto jogado repentinamente ao chão",
+    "Deixa enquanto caminha (sem parar)",
+    "Deixa com período de espera antes de receber a recompensa alternativa"
+  ],
+  "safetyNotes": [
+    "Em situações de perigo real (tóxico, vidro), não dependa do comando: aja diretamente",
+    "Nunca use punição física ou verbal quando o cão falhar: reinicie o exercício",
+    "Certifique-se de que os petiscos de recompensa não são tóxicos para cães (sem xilitol, uvas, cebola)",
+    "Se o cão demonstrar guarda de recursos ou rosnados ao se aproximar do objeto, consulte um etologista antes de continuar"
+  ],
+  "funFact": "Cães que aprendem 'deixa' nas primeiras semanas de vida têm até 40% menos visitas ao veterinário por ingestão de objetos estranhos.",
+  "nextLevel": "Pratique 'deixa' em movimento durante os passeios. Em seguida, introduza o comando com outros cães ou animais como distrator.",
+  "proTip": "O segredo do 'deixa' é que o cão aprenda que ignorar algo sempre produz algo melhor. Nunca economize na qualidade do petisco de recompensa — ele deve ser claramente superior ao objeto proibido."
+}

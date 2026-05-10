@@ -1,0 +1,160 @@
+{
+  "title": "Larga / Solta",
+  "subtitle": "O comando que pode salvar a vida do seu cão",
+  "level": "Avançado",
+  "duration": "5–10 min por sessão",
+  "location": "Casa, jardim e qualquer ambiente",
+  "ageRecommendation": "A partir das 12 semanas (adaptar a dificuldade)",
+  "estimatedSessions": "8–12 sessões para uma resposta fiável",
+  "objective": "Ensinar o cão a largar imediatamente qualquer objeto — brinquedo, comida, objeto perigoso — ao ouvir o comando \"larga\", usando o jogo da troca como base.",
+  "why": [
+    "Pode salvar a vida do cão se morder algo perigoso ou tóxico",
+    "Evita jogos de perseguição que reforçam não largar",
+    "Reduz o comportamento de guarda de recursos (rosnar quando se aproxima)",
+    "Uma competência de segurança que todo o cão deve conhecer"
+  ],
+  "benefits": [
+    "Poderá retirar com segurança qualquer objeto perigoso da boca do seu cão",
+    "Os jogos de buscar e largar serão muito mais fluidos e divertidos",
+    "Reduz tensão e conflitos em torno de objetos valorizados pelo cão",
+    "Gera confiança: o cão aprende que largar traz sempre algo melhor"
+  ],
+  "where": [
+    "🏠 Em casa, sempre o primeiro ambiente de treino",
+    "🌿 No jardim uma vez consolidado em casa",
+    "🎯 Em qualquer ambiente com objetos reais uma vez generalizado"
+  ],
+  "materials": [
+    "🫖 Petiscos de altíssimo valor (frango, queijo, salsicha — o melhor que tiver)",
+    "🦴 Um brinquedo de baixo valor para começar (não o favorito do cão)",
+    "🦮 Trela opcional para a primeira fase",
+    "💛 Calma absoluta — nunca raiva nem frustração"
+  ],
+  "beforeYouStart": [
+    "O seu cão deve ter algum autocontrolo dos cursos anteriores",
+    "Nunca tente tirar um objeto à força da boca do cão",
+    "Se o seu cão rosna defensivamente com objetos, consulte um profissional antes de continuar",
+    "Tenha sempre a troca (o petisco) pronta antes de se aproximar",
+    "Aceite que no início o cão pode aprender a largar rapidamente para obter o petisco antes de lho pedir"
+  ],
+  "methods": [
+    {
+      "id": "trade_up",
+      "title": "Método da troca ascendente (recomendado)",
+      "description": "Oferece algo de maior valor do que o que o cão tem em troca de largar. Nunca lhe tira o objeto. O cão aprende que largar significa sempre obter algo melhor.",
+      "bestFor": "Todos os cães, especialmente os que tendem a guardar recursos",
+      "steps": [
+        {
+          "title": "Comece com um brinquedo de baixo valor",
+          "description": "Dê ao cão um brinquedo de que goste moderadamente (não o favorito). Deixe-o ter e desfrutar por um momento.",
+          "tip": "Se não houver objeto de partida, tente um que cheire a petisco ou que tenha sido premiado antes.",
+          "troubleshooting": "Se o cão não pegar no brinquedo, experimente um mais interessante ou brinque você mesmo com ele por alguns segundos."
+        },
+        {
+          "title": "Aproxime-se com calma com o petisco visível",
+          "description": "Sem pressa, aproxime-se do cão com o petisco na mão aberta, bem visível. Que veja claramente o que tem na mão. Não tente ainda tirar o brinquedo.",
+          "tip": "A calma é fundamental. Se se aproximar rápido ou com tensão, o cão apertará mais o objeto.",
+          "troubleshooting": "Se o cão se afasta quando se aproxima, pratique primeiro aproximar-se e afastar-se sem pedir nada durante vários dias."
+        },
+        {
+          "title": "Ofereça a troca — não peça o objeto",
+          "description": "Aproxime o petisco do nariz do cão enquanto tem o brinquedo. Quando abrir a boca para cheirar ou pegar no petisco, o brinquedo cairá naturalmente. Diga \"larga\" nesse momento exato.",
+          "tip": "A chave: o brinquedo cai porque o cão abre a boca pelo petisco. Você não o retira.",
+          "troubleshooting": "Se apertar mais forte, retire o petisco, aguarde alguns segundos e tente novamente mais devagar."
+        },
+        {
+          "title": "Recompense generosamente e devolva o brinquedo",
+          "description": "Dê vários petiscos seguidos enquanto o brinquedo está no chão. Depois devolva o brinquedo ao cão. Isto ensina que largar não é uma perda permanente.",
+          "tip": "Devolver o brinquedo é fundamental: se o guardar sempre, o cão aprenderá a nunca largar.",
+          "troubleshooting": "Se o cão não quiser o brinquedo de volta, não faz mal. A troca foi um sucesso de qualquer forma."
+        },
+        {
+          "title": "Generalize com objetos mais difíceis",
+          "description": "Com o tempo, pratique \"larga\" com brinquedos favoritos, comida encontrada, meias ou qualquer objeto que o cão apanhe. Para objetos perigosos, a resposta deve ser automática.",
+          "tip": "Troque sempre: mesmo que depois lhe devolva o brinquedo, a troca deve primeiro ocorrer.",
+          "troubleshooting": "Se o cão aprender a pegar em coisas só para conseguir a troca, pratique também \"deixa\" (não tocar num objeto neutro) como complemento."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Tentar tirar o objeto da boca à força",
+      "cause": "Instinto de resolver o problema rapidamente",
+      "fix": "Nunca meta a mão na boca nem puxe. Use sempre a troca. Forçar pode gerar mordidas defensivas."
+    },
+    {
+      "error": "Perseguir o cão quando tem algo que não devia",
+      "cause": "Pânico ao ver o objeto perigoso",
+      "fix": "Não corra atrás do cão. Sente-se no chão, mostre o petisco e aguarde. A perseguição transforma isto num jogo irresistível."
+    },
+    {
+      "error": "Nunca devolver o brinquedo após a troca",
+      "cause": "Pensar que \"se larga, fica comigo\"",
+      "fix": "Devolva sempre o objeto quando for seguro. O cão deve aprender que largar é temporário e neutro, não uma perda permanente."
+    },
+    {
+      "error": "Usar petiscos de baixo valor para trocar algo muito apreciado",
+      "cause": "Não calibrar o valor da troca",
+      "fix": "A troca deve ser sempre \"superior\". Para o brinquedo favorito, use o melhor petisco possível."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão abre a boca mas demora muito a largar",
+      "solution": "É progresso. Continue a recompensar generosamente e o tempo de resposta irá reduzir-se com a prática."
+    },
+    {
+      "problem": "O cão rosna quando me aproximo para lhe tirar o objeto",
+      "solution": "Sinal de guarda de recursos: nunca force. Consulte um treinador profissional. Entretanto, não se aproxime de objetos que lhe gerem tensão."
+    },
+    {
+      "problem": "Funciona bem com brinquedos mas não com comida do chão",
+      "solution": "A comida é de altíssimo valor. Pratique primeiro com petiscos de menor valor perto da comida, aumentando a dificuldade muito devagar."
+    },
+    {
+      "problem": "O cão aprende rapidamente a pegar em coisas para conseguir a troca",
+      "solution": "Sinal de inteligência. Acrescente \"deixa\" (não tocar num objeto neutro) como complemento para que o cão aprenda os dois lados do comportamento."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessão 1–3",
+      "goal": "O cão abre a boca e larga o brinquedo ao ver o petisco, mesmo que demore 3–5 segundos"
+    },
+    {
+      "stage": "Sessão 4–6",
+      "goal": "Larga em menos de 2 segundos ao ouvir \"larga\" com brinquedos de valor médio"
+    },
+    {
+      "stage": "Sessão 7–9",
+      "goal": "Larga imediatamente mesmo o brinquedo favorito em troca do petisco"
+    },
+    {
+      "stage": "Semana 3–4",
+      "goal": "Larga objetos encontrados na rua ao ouvir o comando, sem que precise de mostrar o petisco primeiro"
+    }
+  ],
+  "successSigns": [
+    "Larga o objeto ao ouvir o comando sem precisar de ver o petisco",
+    "Não rosna nem se afasta quando se aproxima enquanto tem algo na boca",
+    "Responde igualmente com brinquedos, comida e objetos encontrados",
+    "Volta-se para si depois de largar, à espera da troca"
+  ],
+  "variations": [
+    "Larga na água (praticar na piscina ou banheira)",
+    "Larga com comida na boca (snacks encontrados na rua)",
+    "Larga durante o jogo de cabo de guerra",
+    "Larga com objetos de tecido (meias, roupa)",
+    "Larga à distância (quando o cão está longe de si)"
+  ],
+  "safetyNotes": [
+    "Nunca meta os dedos na boca de um cão desconhecido ou tenso com um objeto",
+    "Se o cão engole objetos com frequência, consulte o veterinário (possível pica)",
+    "Não use esta técnica como desculpa para dar sempre comida ao cão quando tem algo: a resposta deve generalizar-se",
+    "Perante um objeto tóxico ou de risco vital, use a troca sem hesitar e afaste o cão da área"
+  ],
+  "funFact": "Os cães que aprendem \"larga\" corretamente tendem a brincar com mais confiança e a largar objetos espontaneamente durante o jogo, porque aprenderam que fazê-lo traz coisas boas.",
+  "nextLevel": "Combine \"larga\" com \"busca\" para um jogo de recuperação completamente fluido. Pratique também \"deixa\" (não apanhar um objeto do chão) como complemento essencial.",
+  "proTip": "Pratique \"larga\" com objetos que o seu cão pode ter sem perigo (brinquedos), não só perante objetos proibidos. Se a troca só aparece quando algo mau acontece, o cão aprenderá a esconder-se com o que apanha."
+}

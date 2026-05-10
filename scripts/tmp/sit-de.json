@@ -1,0 +1,189 @@
+{
+  "title": "Sitzen",
+  "subtitle": "Das erste Kommando, das jeder Hund lernen sollte",
+  "level": "Sehr einfach",
+  "duration": "5–10 min pro Sitzung",
+  "location": "Zuhause oder Garten",
+  "ageRecommendation": "Ab 8 Wochen",
+  "estimatedSessions": "3–5 Sitzungen zum Beherrschen",
+  "objective": "Den Hund lehren, sich auf das verbale Kommando „Sitz“ hinzusetzen und die Position zu halten, bis ein anderes Signal kommt.",
+  "why": [
+    "Den Hund in alltäglichen Situationen kontrollieren",
+    "Aufmerksamkeit und Fokus verbessern",
+    "Dient als Grundlage für jede weitere Ausbildung"
+  ],
+  "benefits": [
+    "Dein Hund beruhigt sich an Straßenübergängen oder beim Begrüßen von Besuchern",
+    "Reduziert das Risiko von Sprüngen auf Kinder oder ältere Menschen",
+    "Grundlage für fortgeschrittene Kommandos wie „Bleib“, „Platz“ oder „Pfote“",
+    "Schafft gegenseitiges Vertrauen vom ersten Tag des Zusammenlebens"
+  ],
+  "where": [
+    "🏠 Zuhause (Wohnzimmer oder ruhiger Raum)",
+    "🌿 Im Garten oder auf der Terrasse",
+    "🔇 Anfangs ohne Ablenkungen"
+  ],
+  "materials": [
+    "🫖 Kleine Leckerlis (weiches Futter, erbsengroß)",
+    "🦮 Kurze Leine (optional, falls dein Hund abgelenkt wird)",
+    "🛟 Eine Matte oder bequeme Oberfläche",
+    "💛 Geduld und ruhige Stimme"
+  ],
+  "beforeYouStart": [
+    "Dein Hund muss ruhig sein, nicht überreizt nach einem intensiven Spaziergang",
+    "Übe vor den Mahlzeiten (mit mäßigem Appetit, nie hungrig)",
+    "Wähle einen ruhigen Ort, ohne TV, andere Tiere oder Besucher",
+    "Halte die Leckerlis in einer Hüfttasche bereit",
+    "Sitzungen von maximal 5 Minuten: bevorzuge Qualität vor Quantität"
+  ],
+  "methods": [
+    {
+      "id": "lure",
+      "title": "Lock-Methode (empfohlen)",
+      "description": "Du führst den Hund mit einem Leckerli als Lockmittel in die Position. Die schnellste und klarste Methode für Anfänger.",
+      "bestFor": "Welpen und Hunde ohne Vorerfahrung",
+      "steps": [
+        {
+          "title": "Aufmerksamkeit gewinnen",
+          "description": "Stell dich vor deinen Hund. Zeige das Leckerli nahe an seiner Nase, um Aufmerksamkeit zu erregen.",
+          "tip": "Stelle sicher, dass er dich anschaut, bevor du fortfährst.",
+          "troubleshooting": "Schaut er nicht hin, erhöhe den Wert des Leckerlis (Käse, Wurst)."
+        },
+        {
+          "title": "Geführte Bewegung",
+          "description": "Hebe das Leckerli langsam nach oben und hinten über seinen Kopf. Der Hund senkt natürlich die Hüften und setzt sich.",
+          "tip": "Drücke ihn nicht. Lass die Bewegung ihn führen.",
+          "troubleshooting": "Wenn er rückwärts geht statt sich zu setzen, mach es vor einer Wand, damit er nicht zurückgehen kann."
+        },
+        {
+          "title": "Kommando einführen",
+          "description": "Sobald er sich setzt, sage klar: „Sitz“. Verwende immer das gleiche Wort und den gleichen Ton.",
+          "tip": "Timing ist entscheidend: Sage das Wort genau, wenn er sich setzt."
+        },
+        {
+          "title": "Sofortige Belohnung",
+          "description": "Gib das Leckerli sofort und lobe ihn mit fröhlicher, positiver Stimme. Der Hund verbindet „Sitz“ mit etwas Gutem.",
+          "tip": "Die Belohnung muss innerhalb von 2 Sekunden eintreffen."
+        },
+        {
+          "title": "Wiederholen und fortschreiten",
+          "description": "Mache 5–10 Wiederholungen pro Sitzung und 2–3 Sitzungen täglich. Reduziere nach und nach die Leckerlis.",
+          "tip": "Kurze Sitzungen = besseres Lernen."
+        }
+      ]
+    },
+    {
+      "id": "capture",
+      "title": "Einfang-Methode (Hunde, die sich schon allein setzen)",
+      "description": "Du belohnst den Hund jedes Mal, wenn er sich spontan setzt, ohne zu fragen. Funktioniert, wenn dein Hund bereits die Tendenz hat zu sitzen.",
+      "bestFor": "Erwachsene Hunde, gerettete Hunde oder Hunde mit Angst vor Händen am Gesicht",
+      "steps": [
+        {
+          "title": "Beobachten und warten",
+          "description": "Geh ruhig in der Wohnung herum mit Leckerlis griffbereit. Ignoriere den Hund und mach dein Ding.",
+          "tip": "Wichtig, den Hund nicht anzusprechen oder anzustarren."
+        },
+        {
+          "title": "Den Moment markieren",
+          "description": "Sobald der Hund sich aus eigener Initiative setzt, sage ein klares „Ja“ oder benutze den Clicker in diesem Moment.",
+          "tip": "Das „Ja“ oder der Klick muss IM exakten Moment kommen, in dem der Hintern den Boden berührt."
+        },
+        {
+          "title": "Sofort belohnen",
+          "description": "Wirf ihm ein Leckerli auf den Boden (nicht aus der Hand), damit er aufsteht und die Geste wiederholen kann.",
+          "tip": "Das Werfen aufs Bodens vermeidet Abhängigkeit von deiner Hand."
+        },
+        {
+          "title": "Das Wort hinzufügen",
+          "description": "Wenn er sich schon mehrmals setzt, um das Leckerli zu bekommen, sage „Sitz“ kurz bevor er es tut.",
+          "tip": "Nur das Wort hinzufügen, wenn das Verhalten vorhersehbar ist."
+        },
+        {
+          "title": "Generalisieren",
+          "description": "Übe in verschiedenen Räumen, Positionen und Tageszeiten. Generalisierung sorgt dafür, dass das Kommando immer funktioniert.",
+          "tip": "Zähle, wie oft er es richtig von 10 macht. Bei 8/10 wechsle den Kontext."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Das Kommando viele Male hintereinander wiederholen („Sitz, Sitz, Sitz“)",
+      "cause": "Frustration des Halters, wenn er nicht beim ersten Mal reagiert",
+      "fix": "Sage das Kommando EINMAL und warte 5 Sekunden in Stille. Ohne Antwort, geh zurück zum Lock-Schritt."
+    },
+    {
+      "error": "Spät belohnen, wenn der Hund schon aufgestanden ist",
+      "cause": "Langsame Reflexe oder Leckerli außer Reichweite",
+      "fix": "Übe Timing ohne Hund: Wirf ein Leckerli und fang es in unter 2 Sekunden."
+    },
+    {
+      "error": "Den Rücken oder die Hüften drücken, um die Position zu erzwingen",
+      "cause": "Ungeduld, schnelle Ergebnisse zu sehen",
+      "fix": "Berühre nie körperlich. Verbessere das Lockmittel (Leckerli näher an der Nase, langsamere Bewegung)."
+    },
+    {
+      "error": "Zu lange Sitzungen, die den Hund erschöpfen",
+      "cause": "Mehr Training ≠ besseres Lernen",
+      "fix": "Maximal 5 Minuten pro Sitzung. Beende immer mit einer erfolgreichen Wiederholung."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund schaut mich an, tut aber nichts",
+      "solution": "Bring das Leckerli näher an die Nase, fast berührend, und bewege es langsamer. Sonst probiere ein höherwertiges Leckerli."
+    },
+    {
+      "problem": "Er springt nach dem Leckerli, statt sich zu setzen",
+      "solution": "Du senkst die Hand zu sehr und hebst sie dann zu hoch. Halte das Leckerli direkt über seinem Kopf."
+    },
+    {
+      "problem": "Funktioniert zuhause, aber nicht draußen",
+      "solution": "Das ist normal. Wiederhole alle Schritte von vorn in der neuen Umgebung, mit weniger Ablenkungen zuerst."
+    },
+    {
+      "problem": "Er setzt sich, steht aber gleich wieder auf",
+      "solution": "Belohne schneller (in unter 1 Sekunde) und erhöhe schrittweise die Sekunden vor der Belohnung (1s → 3s → 5s)."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sitzung 1–2",
+      "goal": "Dein Hund folgt dem Leckerli mit der Nase und setzt sich mindestens einmal spontan"
+    },
+    {
+      "stage": "Sitzung 3–5",
+      "goal": "Setzt sich auf das Wort „Sitz“ in 70% der Versuche zuhause in Ruhe"
+    },
+    {
+      "stage": "Woche 2",
+      "goal": "Setzt sich ohne sichtbares Leckerli, nur auf Stimme"
+    },
+    {
+      "stage": "Woche 3+",
+      "goal": "Hält die Position 5–10 Sekunden vor der Belohnung, zuhause und im Garten"
+    }
+  ],
+  "successSigns": [
+    "Setzt sich auf das Kommando ohne sichtbares Leckerli",
+    "Macht es an verschiedenen Orten (Haus, Garten, ruhige Straße)",
+    "Reagiert auch bei kleinen Ablenkungen",
+    "Hält die Position bis zu einem anderen Signal"
+  ],
+  "variations": [
+    "Sitz aus 1 Meter Entfernung (ohne dich davor)",
+    "Sitz nur mit Handgeste, ohne Stimme",
+    "Seitliches Sitz (neben dir, nicht vor dir)",
+    "Sitz, während du dich hinsetzt oder aufstehst",
+    "Sitz für 30 Sekunden vor dem Essen (Selbstkontrolle)"
+  ],
+  "safetyNotes": [
+    "Zwinge nie einen älteren Hund oder einen mit Arthrose zur Wiederholung, wenn er Schmerz zeigt",
+    "Wenn dein Hund stark hechelt, sich entfernt oder Augenkontakt vermeidet, mach 24h Pause",
+    "Vermeide sehr kalte, heiße oder rutschige Oberflächen (frisch gewachstes Parkett)",
+    "Welpen unter 12 Wochen: maximal 3 Minuten pro Sitzung"
+  ],
+  "funFact": "Border Collies und Pudel lernen „Sitz“ in weniger als 5 Wiederholungen. Bulldoggen und Mastiffs brauchen vielleicht 30 oder mehr.",
+  "nextLevel": "„Sitz“ draußen mit Ablenkungen (andere Hunde, Lärm) üben. Dann „Bleib“ für mehrere Minuten einführen.",
+  "proTip": "Trainiere immer mit etwas hungrigem Hund (vor den Mahlzeiten). Bei starker Ablenkung erhöhe den Wert des Leckerlis (Trockenfutter → Käse oder gekochtes Hühnchen)."
+}

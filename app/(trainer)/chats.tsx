@@ -25,10 +25,12 @@ const styles = StyleSheet.create({
   },
   header: {
     padding: spacing.lg,
+    alignItems: 'center',
   },
   title: {
     fontSize: fontSize.xxl,
     fontWeight: '700',
     color: colors.text,
+    textAlign: 'center',
   },
 });

@@ -1,0 +1,192 @@
+{
+  "title": "Apportieren",
+  "subtitle": "Spiel, Bewegung und Gehorsam in einem einzigen Kommando",
+  "level": "Grundlegend",
+  "duration": "10–15 Min. pro Einheit",
+  "location": "Garten, Park oder langer Hausflur",
+  "ageRecommendation": "Ab 10 Wochen",
+  "estimatedSessions": "6–10 Einheiten zum Beherrschen",
+  "objective": "Den Hund beibringen, einen geworfenen Gegenstand zu verfolgen, aufzunehmen, zum Besitzer zu bringen und loszulassen — und damit den vollständigen Apportierzyklus zu schließen.",
+  "why": [
+    "Eine der effizientesten Möglichkeiten, dem Hund körperliche und geistige Auslastung zu geben",
+    "Stärkt die Bindung zwischen Halter und Hund durch das Spiel",
+    "Lehrt das Konzept des freiwilligen Austauschs, die Grundlage vieler anderer Verhaltensweisen",
+    "Bietet einen Energieabbaukanal für triebstarke Hunde"
+  ],
+  "benefits": [
+    "Dein Hund ist in 15 Minuten körperlich und geistig erschöpft, was destruktives Verhalten reduziert",
+    "Lernt, Gegenstände freiwillig loszulassen, was Ressourcenschutz reduziert",
+    "Die Vorfreude auf den Wurf verbessert Aufmerksamkeit und Fokus",
+    "Kann auf kleinem Raum mit weichen Gegenständen geübt werden"
+  ],
+  "where": [
+    "🏡 Eingezäunter Garten oder Hof für den Anfang",
+    "🌳 Park mit eingezäuntem oder Rasenfläche",
+    "🏠 Langer Hausflur mit weichem Ball (Anfang)"
+  ],
+  "materials": [
+    "🎾 Zwei identische oder ähnliche Spielzeuge oder Bälle",
+    "🫖 Hochwertige Leckerlis (optional, für frühe Einheiten)",
+    "🦮 Schleppleine von 5–10 m (für Hunde, die nicht zurückkommen)",
+    "💛 Begeisterung und lebhafte Stimme"
+  ],
+  "beforeYouStart": [
+    "Prüfe, ob dein Hund einen Jagdtrieb hat: Wirf einen Ball und beobachte, ob er ihn verfolgt",
+    "Wähle für die ersten Einheiten einen eingezäunten Bereich ohne Ausreißrisiko",
+    "Halte zwei Spielzeuge bereit: das ist der Schlüssel für die Zwei-Spielzeug-Methode",
+    "Einheiten maximal 10–15 Minuten, um Erschöpfung zu vermeiden",
+    "Hat der Hund noch nie gespielt, beginne mit dem Gegenstand auf dem Boden, bevor du wirfst"
+  ],
+  "methods": [
+    {
+      "id": "two_toys",
+      "title": "Zwei-Spielzeug-Methode (empfohlen)",
+      "description": "Du verwendest zwei identische Spielzeuge abwechselnd: wenn der Hund das erste zurückbringt, zeigst du das zweite begeistert, damit er das erste loslässt. Baut die Rückkehrangewohnheit auf, ohne 'Aus' separat zu üben.",
+      "bestFor": "Hunde mit Jagdtrieb, die nicht loslassen oder nicht zurückkommen",
+      "steps": [
+        {
+          "title": "Zwei Spielzeuge in der Hand",
+          "description": "Starte mit beiden Spielzeugen in deinen Händen, hinter deinem Rücken oder versteckt. Zeige dem Hund nur eines, um Interesse zu wecken.",
+          "tip": "Die Spielzeuge müssen attraktiv sein. Spiele vor dem Werfen kurz mit dem ersten, um seinen Wert zu steigern.",
+          "troubleshooting": "Zeigt der Hund kein Interesse, wedele vor dem Wurf mit dem Spielzeug nahe an ihm."
+        },
+        {
+          "title": "Erster Wurf",
+          "description": "Wirf Spielzeug Nr. 1 begeistert. Warte, bis der Hund es verfolgt und apportiert.",
+          "tip": "Wirf anfangs nur wenige Meter. Die Distanz steigt mit der Übung.",
+          "troubleshooting": "Verfolgt er es nicht, mache das Spielzeug interessanter: Bewege es am Boden wie Beute, bevor du wirfst."
+        },
+        {
+          "title": "Zeige Spielzeug Nr. 2",
+          "description": "Wenn der Hund Spielzeug Nr. 1 im Maul hat und anfängt zurückzukommen (auch nur teilweise), hole Spielzeug Nr. 2 mit großer Begeisterung heraus: wedele damit, mache es interessant.",
+          "tip": "Deine Einstellung ist entscheidend. Der Hund muss Spielzeug Nr. 2 mehr wollen als das, was er im Maul hat.",
+          "troubleshooting": "Bleibt der Hund mit dem Spielzeug stehen, drehe ihm den Rücken zu: Hunde wollen, was wir ignorieren."
+        },
+        {
+          "title": "Tausch und Loslassen",
+          "description": "Wenn der Hund zu dir kommt und Spielzeug Nr. 2 sucht, lässt er Nr. 1 freiwillig fallen. In diesem Moment wirf Nr. 2 als Belohnung.",
+          "tip": "Sage nicht 'Aus': Der Tausch macht es natürlich. Sage 'Ja' oder 'Gut', wenn er loslässt."
+        },
+        {
+          "title": "Kontinuierlicher Zyklus",
+          "description": "Hebe Spielzeug Nr. 1 auf und wiederhole den Zyklus. Der Hund lernt: zurückbringen = der Spaß beginnt neu.",
+          "tip": "Beende die Einheit selbst, solange der Hund noch mehr spielen möchte. Das erhält den Trieb für die nächste Einheit."
+        }
+      ]
+    },
+    {
+      "id": "shaping",
+      "title": "Shaping-Methode (für Hunde ohne Apportier-Instinkt)",
+      "description": "Du belohnst jeden progressiven Schritt auf das Spielzeug zu: schauen → annähern → beschnüffeln → berühren → aufnehmen → einen Schritt näherbringen. Ideal für Hunde, die kein natürliches Interesse am Verfolgen zeigen.",
+      "bestFor": "Hunde ohne natürlichen Apportierinstinkt, Nicht-Retriever-Rassen oder ältere Hunde",
+      "steps": [
+        {
+          "title": "Das Spielzeug anschauen",
+          "description": "Lege das Spielzeug auf den Boden. Jedes Mal, wenn der Hund es ansieht, sage 'Ja' und belohne. Verlange noch nicht mehr.",
+          "tip": "Ein Clicker ist bei dieser Methode sehr nützlich, um genau das richtige Verhalten zu markieren.",
+          "troubleshooting": "Schaut der Hund das Spielzeug nicht an, bewege es leicht, um seine Aufmerksamkeit zu wecken."
+        },
+        {
+          "title": "Sich dem Spielzeug nähern",
+          "description": "Belohne jetzt nur, wenn der Hund sich dem Spielzeug nähert, nicht nur wenn er hinsieht. Erhöhe die Kriterien langsam.",
+          "tip": "Jeder Schritt muss klein sein. Wird der Hund frustriert, gehe zum vorherigen Schritt zurück."
+        },
+        {
+          "title": "Das Spielzeug berühren oder aufnehmen",
+          "description": "Belohne, wenn der Hund das Spielzeug mit der Nase berührt oder es kurz mit dem Maul aufnimmt.",
+          "tip": "Jeder Kontakt mit dem Spielzeug ist in dieser Phase ein Erfolg. Verlange noch keine Perfektion."
+        },
+        {
+          "title": "Einen Schritt auf dich zu bringen",
+          "description": "Belohne nur, wenn der Hund das Spielzeug aufnimmt UND mindestens einen Schritt auf dich zugeht. Erhöhe die geforderte Distanz schrittweise.",
+          "tip": "Gehe selbst rückwärts, um dem Hund die Annäherung zu erleichtern. Deine Bewegung lädt seine Bewegung ein."
+        },
+        {
+          "title": "Vollständiges Apportieren",
+          "description": "Wenn er das Spielzeug konsistent bis zu dir bringt, füge den Tausch hinzu (ein Leckerli gegen das Spielzeug), um den Zyklus zu schließen.",
+          "tip": "Ersetze das Leckerli durch einen Spielzeugwurf, sobald der Hund das Konzept gut versteht."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Den Hund verfolgen, um das Spielzeug zurückzubekommen",
+      "cause": "Frustration, wenn der Hund nicht zurückkommt",
+      "fix": "Lauf niemals hinter ihm her: Du verwandelst es in ein 'Fang mich'-Spiel. Drehe ihm den Rücken zu oder lauf in die entgegengesetzte Richtung."
+    },
+    {
+      "error": "Das Maul gewaltsam öffnen, um das Spielzeug zu nehmen",
+      "cause": "Ungeduld, wieder zu werfen",
+      "fix": "Verwende immer den Tausch (zweites Spielzeug oder Leckerli). Erzwungenes Öffnen kann Ressourcenschutz erzeugen."
+    },
+    {
+      "error": "Zu lange Einheiten, die den Hund erschöpfen",
+      "cause": "Der Hund zeigt anfänglich Begeisterung und der Halter hört nicht rechtzeitig auf",
+      "fix": "Höre immer auf, bevor der Hund müde wird. Kurze Einheiten halten Trieb und Begeisterung aufrecht."
+    },
+    {
+      "error": "Das Spielzeug werfen, wenn der Hund springt oder schubst",
+      "cause": "Dem Druck des Hundes nachgeben",
+      "fix": "Wirf nur, wenn der Hund ruhig ist oder sitzt. Das lehrt Selbstkontrolle vor dem Spiel."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund verfolgt das Spielzeug, nimmt es aber nicht auf",
+      "solution": "Versuche ein weicheres, attraktiveres Spielzeug. Du kannst auch das Spielzeug 'fliehen' lassen, indem du es bewegst, um den Beutetrieb zu aktivieren."
+    },
+    {
+      "problem": "Er nimmt es auf, kommt aber nicht zurück",
+      "solution": "Verwende eine Schleppleine, um ihn sanft zu dir zu führen, während du große Begeisterung für Spielzeug Nr. 2 zeigst. Niemals ruckartig ziehen."
+    },
+    {
+      "problem": "Er kommt zurück, lässt das Spielzeug aber nicht los",
+      "solution": "Zwei-Spielzeug-Methode: Das zweite Spielzeug löst immer das Loslassen des ersten aus. Wenn nicht, biete ein sehr hochwertiges Leckerli an."
+    },
+    {
+      "problem": "Verliert nach 2–3 Würfen das Interesse",
+      "solution": "Die Einheiten sind zu lang oder das Spielzeug ist nicht motivierend genug. Versuche ein anderes Spielzeug und kürzere Einheiten (3–5 Würfe und Stopp)."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheit 1–2",
+      "goal": "Der Hund verfolgt das geworfene Spielzeug und nimmt es mindestens einmal auf"
+    },
+    {
+      "stage": "Einheit 3–5",
+      "goal": "Kommt in 50% der Versuche mit dem Spielzeug zu dir zurück"
+    },
+    {
+      "stage": "Einheit 6–8",
+      "goal": "Schließt den vollständigen Zyklus (verfolgen, aufnehmen, zurückkommen, loslassen) konsistent ab"
+    },
+    {
+      "stage": "Woche 3+",
+      "goal": "Führt das vollständige Apportieren draußen mit moderaten Ablenkungen durch"
+    }
+  ],
+  "successSigns": [
+    "Verfolgt das Spielzeug sofort, wenn es geworfen wird",
+    "Kommt mit dem Spielzeug zu dir zurück, ohne gerufen zu werden",
+    "Lässt das Spielzeug los, wenn er das zweite sieht oder 'Aus' hört",
+    "Hält die Begeisterung während der gesamten Einheit aufrecht"
+  ],
+  "variations": [
+    "Apportieren mit Objektnamen ('Hol den Ball', 'Hol das Seil')",
+    "Apportieren im Wasser (für Hunde, die gerne schwimmen)",
+    "Apportieren spezifischer Gegenstände (Such den Schlüssel, such die Fernbedienung)",
+    "Apportieren aus progressiv größeren Distanzen (5m → 20m → 50m)",
+    "Apportieren mit Hindernissen oder zwischen Bäumen"
+  ],
+  "safetyNotes": [
+    "Wirf niemals kleine Gegenstände, die geschluckt werden könnten",
+    "Vermeide das Werfen von Stöcken: Sie können schwere Mund- und Halsverletzungen verursachen",
+    "Begrenze intensives Spiel bei Hunden mit Hüftdysplasie oder Gelenkproblemen",
+    "Bei Hitze sehr kurze Einheiten mit Wasser bereitstellen: Apportieren ist sehr anstrengend"
+  ],
+  "funFact": "Golden Retriever und Labradore wurden genetisch dafür selektiert, Beute ohne Beschädigung zurückzubringen (weiches Maul). Deshalb lernen viele das Apportieren fast instinktiv.",
+  "nextLevel": "Lerne die Namen verschiedener Gegenstände, damit der Hund den richtigen suchen und bringen kann. Oder führe das Wasseraportieren ein, wenn dein Hund gerne schwimmt.",
+  "proTip": "Das Apportieren scheitert fast immer aus zwei Gründen: Der Hund lässt nicht los oder kommt nicht zurück. Universallösung: Hab immer ein zweites Spielzeug und verfolge deinen Hund niemals, unter keinen Umständen."
+}

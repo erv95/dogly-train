@@ -6,7 +6,9 @@ import {
   StyleSheet,
   TextInputProps,
   ViewStyle,
+  TouchableOpacity,
 } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { colors, borderRadius, fontSize, spacing } from '../../theme';
 
 interface InputProps extends TextInputProps {
@@ -19,24 +21,48 @@ export default function Input({
   label,
   error,
   containerStyle,
+  secureTextEntry: secureEntryProp,
   ...props
 }: InputProps) {
   const [focused, setFocused] = useState(false);
+  const [secureVisible, setSecureVisible] = useState(false);
+
+  const isSecure = secureEntryProp !== undefined && secureEntryProp !== false;
 
   return (
     <View style={[styles.container, containerStyle]}>
       {label && <Text style={styles.label}>{label}</Text>}
-      <TextInput
-        style={[
-          styles.input,
-          focused && styles.inputFocused,
-          error && styles.inputError,
-        ]}
-        placeholderTextColor={colors.textLight}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
-        {...props}
-      />
+      <View style={styles.inputWrapper}>
+        <TextInput
+          style={[
+            styles.input,
+            focused && styles.inputFocused,
+            error && styles.inputError,
+            isSecure && styles.inputWithIcon,
+          ]}
+          placeholderTextColor={colors.textLight}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          secureTextEntry={isSecure ? !secureVisible : false}
+          {...props}
+        />
+        {isSecure && (
+          <TouchableOpacity
+            style={styles.eyeButton}
+            onPress={() => setSecureVisible((v) => !v)}
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            accessibilityRole="button"
+            accessibilityLabel={secureVisible ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+            accessibilityState={{ expanded: secureVisible }}
+          >
+            <Ionicons
+              name={secureVisible ? 'eye-off-outline' : 'eye-outline'}
+              size={22}
+              color={colors.textSecondary}
+            />
+          </TouchableOpacity>
+        )}
+      </View>
       {error && <Text style={styles.error}>{error}</Text>}
     </View>
   );
@@ -52,6 +78,9 @@ const styles = StyleSheet.create({
     color: colors.text,
     marginBottom: spacing.xs,
   },
+  inputWrapper: {
+    position: 'relative',
+  },
   input: {
     backgroundColor: colors.backgroundSecondary,
     borderRadius: borderRadius.md,
@@ -62,11 +91,21 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     color: colors.text,
   },
+  inputWithIcon: {
+    paddingRight: 44,
+  },
   inputFocused: {
     borderColor: colors.primary,
   },
   inputError: {
     borderColor: colors.error,
+  },
+  eyeButton: {
+    position: 'absolute',
+    right: spacing.md,
+    top: 0,
+    bottom: 0,
+    justifyContent: 'center',
   },
   error: {
     fontSize: fontSize.xs,

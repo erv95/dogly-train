@@ -4,49 +4,80 @@ import * as admin from "firebase-admin";
 const db = admin.firestore();
 
 /**
- * Firestore trigger: recalculate trainer's average rating
+ * Firestore trigger: incrementally update trainer's average rating
  * when a review is created or updated.
+ * Uses atomic transaction with sumRatings/totalReviews fields
+ * instead of reading ALL reviews — O(1) instead of O(n).
  */
 export const onReviewWrite = functions.firestore
   .document("reviews/{reviewId}")
   .onWrite(async (change, context) => {
-    const data = change.after.exists ? change.after.data() : null;
-    if (!data) return; // Review deleted — skip
+    const before = change.before.exists ? change.before.data() : null;
+    const after = change.after.exists ? change.after.data() : null;
 
-    const trainerId = data.toUserId;
+    // Determine trainerId from whichever doc exists
+    const trainerId = after?.toUserId ?? before?.toUserId;
     if (!trainerId) return;
 
+    // Calculate delta: what changed in this write
+    const oldRating = before?.rating ?? 0;
+    const newRating = after?.rating ?? 0;
+    const wasCreate = !change.before.exists && change.after.exists;
+    const wasUpdate = change.before.exists && change.after.exists;
+    const wasDelete = change.before.exists && !change.after.exists;
+
+    let ratingDelta = 0;
+    let countDelta = 0;
+
+    if (wasCreate) {
+      ratingDelta = newRating;
+      countDelta = 1;
+    } else if (wasUpdate) {
+      ratingDelta = newRating - oldRating;
+      countDelta = 0;
+    } else if (wasDelete) {
+      ratingDelta = -oldRating;
+      countDelta = -1;
+    }
+
+    if (ratingDelta === 0 && countDelta === 0) return;
+
     try {
-      // Get all reviews for this trainer
-      const reviewsSnapshot = await db
-        .collection("reviews")
-        .where("toUserId", "==", trainerId)
-        .get();
+      const trainerRef = db.collection("users").doc(trainerId);
 
-      const totalReviews = reviewsSnapshot.size;
-      let sumRatings = 0;
+      await db.runTransaction(async (tx) => {
+        const trainerDoc = await tx.get(trainerRef);
+        if (!trainerDoc.exists) return;
 
-      reviewsSnapshot.forEach((doc) => {
-        sumRatings += doc.data().rating ?? 0;
+        const data = trainerDoc.data()!;
+        const currentTotal = data.totalReviews ?? 0;
+        // Prefer the canonical sum field if it exists; otherwise derive from
+        // the rounded average for backwards compatibility (one-time migration).
+        const currentSum = typeof data.sumRatings === 'number'
+          ? data.sumRatings
+          : (data.averageRating ?? 0) * currentTotal;
+
+        const newTotal = Math.max(0, currentTotal + countDelta);
+        const newSum = Math.max(0, currentSum + ratingDelta);
+        const newAverage = newTotal > 0
+          ? Math.round((newSum / newTotal) * 10) / 10
+          : 0;
+
+        tx.update(trainerRef, {
+          // Persist sumRatings so future writes don't suffer from rounding drift.
+          sumRatings: newSum,
+          averageRating: newAverage,
+          totalReviews: newTotal,
+          updatedAt: admin.firestore.Timestamp.now(),
+        });
       });
 
-      const averageRating = totalReviews > 0
-        ? Math.round((sumRatings / totalReviews) * 10) / 10
-        : 0;
-
-      // Update trainer profile
-      await db.collection("users").doc(trainerId).update({
-        averageRating,
-        totalReviews,
-        updatedAt: admin.firestore.Timestamp.now(),
-      });
-
-      functions.logger.info("Rating recalculated", {
+      functions.logger.info("Rating updated incrementally", {
         trainerId,
-        averageRating,
-        totalReviews,
+        ratingDelta,
+        countDelta,
       });
     } catch (error) {
-      functions.logger.error("Error recalculating rating", error);
+      functions.logger.error("Error updating rating", error);
     }
   });

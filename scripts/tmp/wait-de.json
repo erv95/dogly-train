@@ -1,0 +1,157 @@
+{
+  "title": "Warte",
+  "subtitle": "Kurze Pause mit Selbstkontrolle in alltäglichen Situationen",
+  "level": "Grundlegend",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Zuhause, Türschwelle, Futterzone",
+  "ageRecommendation": "Ab 8 Wochen",
+  "estimatedSessions": "4–6 Einheiten zum Beherrschen",
+  "objective": "Den Hund beibringen, auf ein verbales Signal kurz innezuhalten — anwendbar vor dem Überqueren einer Straße, vor dem Futternapf oder beim Überschreiten von Türschwellen. Anders als 'Platz/Bleib' — kürzer und kontextbezogener.",
+  "why": [
+    "Verhindert Unfälle an Straßenübergängen, indem der Hund nicht vorausstürmt",
+    "Lehrt Selbstkontrolle in Momenten hoher Erregung (Fütterungszeit, Parkeintritt)",
+    "Etabliert ein sicheres Türprotokoll, um Ausreißen zu verhindern",
+    "Eine echte Sicherheitsfertigkeit mit sofortigem Anwendungsbezug im Alltag"
+  ],
+  "benefits": [
+    "Dein Hund hält vor jeder gefährlichen Türschwelle an",
+    "Lernt, die Erregung zur Futterzeit zu kontrollieren",
+    "Reduziert Angst bei Übergängen (drinnen-draußen, Auto-Straße)",
+    "Verbessert Kommunikation und Vertrauen zwischen Hund und Halter"
+  ],
+  "where": [
+    "🚪 Innen- und Außentürschwellen",
+    "🍽️ Futterzone des Hundes",
+    "🛣️ Vor dem Überqueren von Zebrastreifen oder Straßen"
+  ],
+  "materials": [
+    "🍗 Futternapf des Hundes oder hochwertige Leckerlis",
+    "🚪 Echte Tür oder Schwelle zum Üben",
+    "🦮 Leine (optional für Straßenübungen)",
+    "💛 Konsequenz und Ruhe"
+  ],
+  "beforeYouStart": [
+    "Wähle eine konkrete Situation zum Starten: Der Futternapf ist ideal, da er täglich vorkommt",
+    "Folge in dieser Situation immer dem gleichen Protokoll, damit der Hund es antizipiert",
+    "Stelle sicher, dass der Hund beim Start nicht extrem aufgeregt ist",
+    "Kurze Einheiten: 3–5 Wiederholungen pro Kontext reichen aus",
+    "Halte Leckerlis bereit oder den echten Futternapf griffbereit"
+  ],
+  "methods": [
+    {
+      "id": "food_bowl_protocol",
+      "title": "Futternapf-Protokoll",
+      "description": "Du nutzt die Fütterungszeit als natürliches tägliches Training. Napf geht runter → Hund wartet → Napf geht rauf wenn er sich bewegt → belohne bei Geduld. Einfach, wiederholbar und mit sofortigem Effekt.",
+      "bestFor": "Alle Hunde, besonders solche, die sich auf den Napf stürzen oder den Halter zur Fütterungszeit drängen",
+      "steps": [
+        {
+          "title": "Hund in Sitzposition",
+          "description": "Bitte den Hund vor dem Napf-Vorbereiten zu sitzen. Kann er 'Sitz' noch nicht flüssig, beginne zuerst mit jenem Kurs.",
+          "tip": "Das Sitzen ist nicht zwingend, hilft aber: Ein sitzender Hund hat mehr Selbstkontrolle als ein stehender.",
+          "troubleshooting": "Setzt er sich nicht, warte stehend mit dem Napf in der Hand, bis er sich auch nur einen Moment beruhigt."
+        },
+        {
+          "title": "Sage 'Warte' und beginne, den Napf zu senken",
+          "description": "Mit dem Napf in den Händen sage ruhig 'Warte' und beginne, den Napf langsam zum Boden zu senken.",
+          "tip": "Das verbale Signal muss vor der Bewegung kommen, nicht danach. Der Hund soll lernen, dass 'Warte' bei Geduld Futter bedeutet."
+        },
+        {
+          "title": "Bewegt er sich, hebe den Napf hoch",
+          "description": "Steht der Hund auf, tritt vor oder berührt den Napf vor der Freigabe, hebe den Napf sofort hoch ohne etwas zu sagen. Kehre zum vorherigen Schritt zurück.",
+          "tip": "Kein Schimpfen: Der steigende Napf ist Information genug. Kein Drama.",
+          "troubleshooting": "Wiederholt er die Bewegung ständig, senke den Napf nur 5 cm und belohne von dort. Vergrößere die Distanz schrittweise."
+        },
+        {
+          "title": "Napf am Boden, Hund wartet",
+          "description": "Wenn der Napf den Boden berührt und der Hund unbewegt wartet, pause 1–2 Sekunden und sage dann 'okay' oder 'los', um die Freigabe zu geben.",
+          "tip": "Das Freigabewort ist genauso wichtig wie 'Warte'. Verwende immer dasselbe."
+        },
+        {
+          "title": "Wartezeit schrittweise verlängern",
+          "description": "Beginne mit 1–2 Sekunden Warten mit dem Napf am Boden. Steigere schrittweise auf 5, 10, 15 Sekunden vor der Freigabe.",
+          "tip": "Bei Misserfolg gehe zu einer kürzeren Zeit zurück. Fortschritt ist nicht linear und das ist normal."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "'Warte' mehrfach wiederholen, während der Napf bereits am Boden steht",
+      "cause": "Nervosität des Halters beim Anblick des sich nähernden Hundes",
+      "fix": "Sage 'Warte' EINMAL, bevor du den Napf senkst. Bewegt sich der Hund, hebe den Napf ohne ein Wort hoch."
+    },
+    {
+      "error": "Die Freigabe geben, bevor der Hund völlig stillsteht",
+      "cause": "Eile oder Wunsch, den Konflikt zu vermeiden",
+      "fix": "Warte, bis der Hund mindestens 1 Sekunde lang eindeutig stillsteht, bevor du die Freigabe gibst."
+    },
+    {
+      "error": "'Warte' und 'Bleib' verwechseln",
+      "cause": "Beide Kommandos abwechselnd verwenden",
+      "fix": "'Warte' ist kurz und kontextbezogen (Sekunden). 'Bleib' bedeutet, die Position bis zu einem neuen Signal zu halten. Verwende sie in verschiedenen Kontexten."
+    },
+    {
+      "error": "Die Türschwelle nicht als separate Situation üben",
+      "cause": "Annahme, dass das beim Napf Gelernte automatisch übertragbar ist",
+      "fix": "Übe 'Warte' gezielt an Türen, Toren und Straßenübergängen. Jeder Kontext braucht eigenes Training."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund wartet, starrt mich aber mit extremer Anspannung an",
+      "solution": "Die Wartezeit ist für sein aktuelles Niveau zu lang. Reduziere sie auf das, was er stressfrei schafft (auch wenn es nur 1 Sekunde ist), und steigere sehr langsam."
+    },
+    {
+      "problem": "Er lernt gut mit dem Napf, stürmt aber noch durch die Tür",
+      "solution": "Normal: Das sind verschiedene Kontexte. Übe das Türprotokoll genau wie das Napf-Protokoll: bewegt er sich vor, schließe die Tür. Wartet er, öffne sie und gib die Freigabe."
+    },
+    {
+      "problem": "Mein Hund wartet, schleicht aber langsam zum Napf",
+      "solution": "Schleichen zählt als Bewegung. Hebe den Napf hoch. Belohne nur, wenn er vollständig stillsteht."
+    },
+    {
+      "problem": "Funktioniert nur, wenn ich den Napf in der Hand halte, nicht mit Leckerlis auf dem Boden",
+      "solution": "Trainiere zuerst den Napf bis zur Festigung. Dann übe mit Leckerlis auf dem Boden nach der gleichen Progression: Hand → bedeckter Boden → sichtbarer Boden."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheit 1–2",
+      "goal": "Der Hund wartet mindestens 1–2 Sekunden mit dem Napf am Boden vor der Freigabe"
+    },
+    {
+      "stage": "Einheit 3–4",
+      "goal": "Wartet 10 Sekunden mit dem Napf am Boden ohne Bewegung"
+    },
+    {
+      "stage": "Woche 2",
+      "goal": "Wendet 'Warte' auch an der Türschwelle an"
+    },
+    {
+      "stage": "Woche 3+",
+      "goal": "Wartet konsistent an Straßenübergängen und vor dem Aussteigen aus dem Auto"
+    }
+  ],
+  "successSigns": [
+    "Der Hund hält beim Hören von 'Warte' inne, bevor er sich Richtung Napf oder Tür bewegt",
+    "Wartet ohne Körperbewegung, auch wenn der Napf am Boden steht",
+    "Reagiert gleich auf 'Warte' an der Tür, im Auto und auf der Straße",
+    "Bewegt sich nicht vorwärts, bis er das Freigabesignal hört"
+  ],
+  "variations": [
+    "Warten vor dem Aussteigen aus dem Auto",
+    "Warten vor dem Betreten des Hundeparks",
+    "Warten am Bordstein vor dem Überqueren der Straße",
+    "Warten beim Empfangen von Spielzeug oder Leckerlis aus der Hand",
+    "Warten mit Futter am Boden vor der Freigabe"
+  ],
+  "safetyNotes": [
+    "Verwende 'Warte' nicht als Ersatz für 'Bleib': Bei längeren Situationen nutze das richtige Kommando",
+    "Übe 'Warte' an der Tür vom ersten Tag zuhause, um lebenslange Ausreißgewohnheiten zu verhindern",
+    "Lass deinen Hund niemals warten, wenn er sich in extremem Stress oder Angst befindet: es verschlimmert die Situation",
+    "Gib immer das Freigabesignal, bevor der Hund sich selbstständig bewegt"
+  ],
+  "funFact": "Hunde, die lernen, vor dem Fressen zu warten, entwickeln insgesamt mehr Selbstkontrolle. Es ist wie der Marshmallow-Test für Hunde: Jene, die warten, lernen generell besser.",
+  "nextLevel": "Kombiniere 'Warte' mit 'Bleib' für längere Zeitspannen. Führe das Handsignal (Handfläche zum Hund gewandt) ein, um 'Warte' aus der Distanz zu geben.",
+  "proTip": "Das Geheimnis von 'Warte' ist Konsequenz: Lass deinen Hund auch nur einmal ohne das Freigabesignal vorrücken und er wird lernen, dass 'Warte' nicht immer bindend ist. Sei absolut konsequent jedes einzelne Mal."
+}

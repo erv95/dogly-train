@@ -1,0 +1,158 @@
+{
+  "title": "Le rappel (Viens ici)",
+  "subtitle": "La commande la plus importante pour la sécurité de votre chien",
+  "level": "Basique",
+  "duration": "5–10 min par séance",
+  "location": "Maison, jardin ou parc avec longe",
+  "ageRecommendation": "À partir de 8 semaines",
+  "estimatedSessions": "7–10 séances pour consolider",
+  "objective": "Apprendre au chien à revenir immédiatement à vos côtés lorsqu'il entend son prénom suivi de « viens » ou « ici », même en présence de distractions.",
+  "why": [
+    "C'est la commande de sécurité la plus critique : elle peut sauver la vie de votre chien",
+    "Permet d'offrir une liberté contrôlée dans les espaces ouverts",
+    "Renforce le lien et la confiance entre le chien et le maître",
+    "Base indispensable pour les exercices à distance et le travail sans laisse"
+  ],
+  "benefits": [
+    "Vous pourrez lâcher votre chien dans le parc en toute confiance",
+    "En cas de danger, votre chien reviendra immédiatement vers vous",
+    "Facilite le rappel lorsqu'il interagit avec d'autres chiens ou personnes",
+    "Améliore la communication générale et l'attention portée à vous"
+  ],
+  "where": [
+    "🏠 En intérieur (couloir ou salon sans distractions)",
+    "🌿 Jardin ou cour clôturés",
+    "🌳 Parc tranquille avec une longe de 5–10 mètres"
+  ],
+  "materials": [
+    "🫖 Friandises de très haute valeur (poulet, fromage, jambon en petits morceaux)",
+    "🦮 Longe de 5–10 mètres (pas extensible)",
+    "🔔 Clicker (facultatif mais très utile)",
+    "💛 Ton de voix enjoué et enthousiaste"
+  ],
+  "beforeYouStart": [
+    "Votre chien doit déjà répondre à son prénom avec une certaine régularité",
+    "N'utilisez jamais le rappel pour quelque chose de désagréable (bain, coupe des griffes, enfermement)",
+    "Adoptez toujours un ton festif : revenir à vos côtés doit être la meilleure chose au monde",
+    "Commencez en intérieur ou dans un jardin clôturé, jamais en zone ouverte sans sécurité",
+    "Réservez des friandises de haute valeur exclusivement pour cet exercice"
+  ],
+  "methods": [
+    {
+      "id": "recall_game",
+      "title": "Jeu de rappel progressif (recommandé)",
+      "description": "Vous pratiquez le rappel comme un jeu, en commençant très près et en augmentant progressivement la distance et la difficulté. Le chien apprend que revenir génère toujours la meilleure récompense.",
+      "bestFor": "Tous les chiens, des chiots aux adultes",
+      "steps": [
+        {
+          "title": "Commencez à un mètre de distance",
+          "description": "Accroupissez-vous au niveau du chien, dites son prénom et « viens » avec une voix joyeuse en ouvrant les bras. Quand il arrive, donnez plusieurs friandises à la suite et des félicitations enthousiastes.",
+          "tip": "S'accroupir et ouvrir les bras est une invitation irrésistible pour votre chien.",
+          "troubleshooting": "S'il ne vient pas, rapprochez-vous. Commencez à cinquante centimètres si nécessaire."
+        },
+        {
+          "title": "Augmentez la distance progressivement",
+          "description": "Quand il répond bien à 1 mètre, passez à 2, puis 3, puis 5. Chaque fois qu'il revient : grande fête, plusieurs friandises, câlins et voix très enjouée.",
+          "tip": "Règle d'or : s'il ne revient pas 9 fois sur 10, la distance est trop grande. Revenez en arrière.",
+          "troubleshooting": "Ne répétez jamais l'ordre s'il ne vient pas. Rapprochez-vous, montrez la friandise et réessayez à plus courte distance."
+        },
+        {
+          "title": "Introduisez la longe",
+          "description": "Dans le jardin ou au parc avec une longe de 5–10 mètres. Laissez-le explorer, puis rappelez-le lors d'une distraction modérée. Quand il revient : fête totale.",
+          "tip": "La longe est une sécurité, pas un outil pour le tirer vers vous. Ne l'utilisez pas pour le ramener de force.",
+          "troubleshooting": "S'il est très distrait, attendez que la distraction baisse avant de le rappeler."
+        },
+        {
+          "title": "Alternez rappel et liberté",
+          "description": "Rappelez-le, récompensez généreusement, puis relâchez-le pour qu'il continue à explorer. Il apprend ainsi que venir à vous ne signifie pas la fin de la promenade.",
+          "tip": "Si vous l'appelez uniquement pour rentrer à la maison, il apprendra à vous ignorer en fin de balade."
+        },
+        {
+          "title": "Ajoutez des distractions progressives",
+          "description": "Quand il répond bien dans un endroit calme, pratiquez avec d'autres personnes, des chiens éloignés ou des bruits. Augmentez la valeur des friandises à mesure que la difficulté monte.",
+          "tip": "Plus de distraction = plus de fête à l'arrivée. L'effort mérite une récompense plus grande."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Rappeler le chien pour quelque chose de désagréable (bain, coupe des griffes, l'enfermer)",
+      "cause": "Nous utilisons le rappel pour des situations nécessaires mais déplaisantes",
+      "fix": "Allez chercher le chien pour les choses désagréables. Le rappel DOIT toujours se terminer positivement."
+    },
+    {
+      "error": "Gronder le chien quand il revient enfin (même s'il a tardé)",
+      "cause": "Frustration due à l'attente",
+      "fix": "Jamais. Même s'il met 10 minutes, à son arrivée : fête. Le punir à l'arrivée signifie qu'il ne reviendra plus."
+    },
+    {
+      "error": "Répéter l'ordre plusieurs fois (« viens, viens, viens... »)",
+      "cause": "Nervosité ou manque de patience",
+      "fix": "Dites l'ordre UNE seule fois sur un ton joyeux. S'il ne vient pas, rapprochez-vous et réessayez plus près."
+    },
+    {
+      "error": "Ne pratiquer qu'à la maison où ça fonctionne toujours",
+      "cause": "Confort du maître",
+      "fix": "Pratiquez dans de nouveaux endroits avec de vraies distractions. L'apprentissage doit se généraliser."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien me regarde mais ne vient pas",
+      "solution": "Les friandises ne sont pas assez attrayantes. Utilisez du poulet ou du fromage et exagérez votre enthousiasme : accroupissez-vous, frappez dans vos mains, voix très joyeuse."
+    },
+    {
+      "problem": "Il vient mais s'enfuit avant que je puisse l'attraper",
+      "solution": "Vous saisissez son collier trop vite. Récompensez d'abord pendant 3 secondes, puis tenez doucement le collier en continuant à lui donner des friandises."
+    },
+    {
+      "problem": "Ça marche à la maison mais au parc il m'ignore",
+      "solution": "Normal : le parc offre trop de distractions. Commencez au parc quand il est vide et augmentez la difficulté très lentement."
+    },
+    {
+      "problem": "Il a arrêté de répondre alors qu'il le faisait bien avant",
+      "solution": "Vous avez peut-être augmenté la difficulté trop vite, ou utilisé le rappel pour quelque chose de négatif. Revenez à de courtes distances avec d'excellentes friandises pendant une semaine."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séances 1–3",
+      "goal": "Revient régulièrement à 1–3 mètres en intérieur sans distractions"
+    },
+    {
+      "stage": "Séances 4–6",
+      "goal": "Répond à 5 mètres dans le jardin avec distractions légères"
+    },
+    {
+      "stage": "Séances 7–10",
+      "goal": "Revient à 10 mètres avec la longe dans un parc tranquille"
+    },
+    {
+      "stage": "Mois 2+",
+      "goal": "Répond dans des environnements avec de vraies distractions (autres chiens, personnes)"
+    }
+  ],
+  "successSigns": [
+    "Vient au premier rappel sans que l'ordre soit répété",
+    "Abandonne des distractions modérées (renifler, explorer) pour venir",
+    "Arrive complètement à vos côtés et reste (pas seulement s'approche)",
+    "Répond dans au moins 3 environnements différents"
+  ],
+  "variations": [
+    "Rappel entre deux personnes (le chien va et vient entre elles)",
+    "Rappel depuis une cachette derrière un arbre ou un coin",
+    "Rappel pendant le jeu avec un autre chien",
+    "Rappel avec signal de la main uniquement (sans voix)",
+    "Rappel longue distance depuis 20–30 mètres"
+  ],
+  "safetyNotes": [
+    "Ne pratiquez jamais sans laisse en zone ouverte tant que le rappel n'est pas très solide",
+    "Évitez de pratiquer quand le chien est très excité : attendez que son niveau d'activation baisse",
+    "Si vous utilisez une longe, vérifiez qu'elle n'est pas emmêlée avant d'appeler",
+    "Réservez le rappel d'urgence (voix forte et dramatique) aux vrais dangers — utilisez-le rarement pour conserver son impact"
+  ],
+  "funFact": "Des études montrent que les chiens répondent mieux aux voix aiguës et joyeuses qu'aux voix graves et sérieuses. Plus vous avez l'air ridicule en l'appelant, mieux ça marche !",
+  "nextLevel": "Pratiquez le rappel avec de vraies distractions : des chiens qui jouent à proximité, des personnes qui courent, des odeurs fortes. Ensuite, introduisez un « reste » avant de le rappeler.",
+  "proTip": "Réservez vos meilleures friandises UNIQUEMENT pour le rappel. Si le poulet n'apparaît que lorsqu'il revient vers vous, il reviendra en courant. L'exclusivité renforce le comportement."
+}

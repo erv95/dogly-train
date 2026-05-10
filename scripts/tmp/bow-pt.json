@@ -1,0 +1,158 @@
+{
+  "title": "Reverência (saúda)",
+  "subtitle": "O gesto mais elegante — como se o seu cão estivesse a cumprimentar o público",
+  "level": "Intermediário",
+  "duration": "5–10 min por sessão",
+  "location": "Casa ou jardim",
+  "ageRecommendation": "A partir dos 4 meses",
+  "estimatedSessions": "6–10 sessões para dominar",
+  "objective": "Ensinar o cão a baixar o peito em direção ao chão enquanto mantém a parte traseira levantada (a postura de reverência ou play bow), respondendo ao sinal “reverência” ou “saúda”.",
+  "why": [
+    "A reverência é uma postura que os cães fazem de forma completamente natural ao convidar para brincar",
+    "É o truque visualmente mais elegante — parece um ator a cumprimentar o público",
+    "Reforça a consciência corporal ao dissociar o movimento do trem anterior do posterior",
+    "É o complemento perfeito para fechar qualquer sequência de truques"
+  ],
+  "benefits": [
+    "Excelente alongamento para as costas e ombros — funciona como yoga canino",
+    "Permite ao cão comunicar de forma natural o seu desejo de brincar",
+    "Fácil de aprender porque captura um comportamento instintivo",
+    "Gera reações muito positivas em todas as pessoas que o veem"
+  ],
+  "where": [
+    "🏠 Em casa, em qualquer divisão com espaço suficiente",
+    "🌿 No jardim ou ao ar livre quando já dominar em interior",
+    "🔇 Sem distrações no início para que o cão se concentre"
+  ],
+  "materials": [
+    "🫖 Petiscos pequenos de alto valor",
+    "🖐️ A sua mão como isco (petisco entre os dedos)",
+    "🛟 Superfície plana e confortável",
+    "💛 Paciência e atenção para capturar o comportamento natural"
+  ],
+  "beforeYouStart": [
+    "Observe o seu cão durante o dia — certamente já faz a reverência naturalmente ao acordar ou ao convidar para brincar",
+    "O truque pode ser ensinado por captura (aproveitando o comportamento natural) ou por isco",
+    "Tenha sempre petiscos à mão durante o dia para capturar o momento",
+    "Sessões de no máximo 5 minutos — curtas e frequentes",
+    "O seu cão não precisa de nenhum truque prévio para aprender este"
+  ],
+  "methods": [
+    {
+      "id": "capture_or_lure",
+      "title": "Método de captura e isco combinados",
+      "description": "Primeiro tente capturar as reverências naturais que o cão já faz. Se ocorrerem com frequência, marque-as e recompense-as até poder nomeá-las. Se o cão não fizer muitas reverências espontâneas, use o isco levando o petisco entre as suas patas dianteiras em direção ao chão, enquanto bloqueia suavemente a anca com o antebraço.",
+      "bestFor": "Qualquer cão — adapte o método conforme o cão faz muitas reverências naturais ou poucas",
+      "steps": [
+        {
+          "title": "Observe as reverências naturais",
+          "description": "Durante 2–3 dias, note quando o seu cão faz a reverência sozinho (ao acordar, ao convidar para brincar). Quando acontecer, diga “sim!” e corra a dar um petisco.",
+          "tip": "Tenha petiscos no bolso ou perto do lugar onde costuma esticar-se de manhã.",
+          "troubleshooting": "Se o cão raramente faz reverências espontâneas, passe diretamente ao método do isco."
+        },
+        {
+          "title": "Capture e marque o comportamento",
+          "description": "Cada vez que capturar uma reverência natural, marque com “sim!” no momento exato em que o peito está baixo e a anca está alta, e recompense imediatamente.",
+          "tip": "A precisão do timing é fundamental: marque quando o peito está no ponto mais baixo, não quando já se está a levantar."
+        },
+        {
+          "title": "Isco entre as patas dianteiras (se a captura não funcionar)",
+          "description": "Com o cão em pé, leve o isco desde o focinho até ao chão entre as suas patas dianteiras. Com o antebraço livre bloqueie suavemente a anca para que não se deite. O cão baixará o peito seguindo o petisco.",
+          "tip": "O antebraço sob a barriga atua como um guia suave — nunca como uma restrição forçada.",
+          "troubleshooting": "Se o cão se deitar completamente, retire o isco e tente novamente com menos movimento para baixo."
+        },
+        {
+          "title": "Nomeie o truque",
+          "description": "Quando o cão fizer a postura correta (peito baixo, anca alta) de forma consistente, adicione a palavra “reverência” ou “saúda” mesmo antes de iniciar o isco.",
+          "tip": "Use um tom suave e elegante — a reverência é um truque com classe."
+        },
+        {
+          "title": "Reduza o isco e generalize",
+          "description": "Reduza gradualmente o movimento do isco: primeiro com petisco na mão, depois apenas com o gesto vazio, finalmente apenas com a palavra. Pratique em diferentes sítios e com diferentes pessoas presentes.",
+          "tip": "A postura de reverência é fácil de manter 2–3 segundos. Recompense enquanto a mantém para prolongar a duração.",
+          "troubleshooting": "Se o cão voltar a deitar-se, regresse ao isco com o antebraço de apoio por mais sessões."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Baixar o isco tão rápido que o cão se deita em vez de fazer a reverência",
+      "cause": "Movimento demasiado direto para o chão",
+      "fix": "Baixe o isco muito devagar entre as patas dianteiras. Bloqueie a anca com o antebraço se necessário."
+    },
+    {
+      "error": "Não marcar o momento exato da reverência",
+      "cause": "Timing impreciso da recompensa",
+      "fix": "Marque quando o peito está no ponto mais baixo e a anca está alta. Se marcar tarde, está a reforçar o levantar."
+    },
+    {
+      "error": "Perder as reverências naturais durante o dia por não ter petiscos à mão",
+      "cause": "Não ter petiscos por perto",
+      "fix": "Leve petiscos no bolso durante as primeiras semanas para capturar as reverências espontâneas."
+    },
+    {
+      "error": "Confundir a reverência com o deitar",
+      "cause": "O isco vai demasiado para a frente em vez de ficar entre as patas",
+      "fix": "O isco vai para o chão entre as patas dianteiras, não para a frente. Isso força o peito para baixo sem baixar a anca."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O cão deita-se sempre completamente em vez de fazer a reverência",
+      "solution": "Use o antebraço sob a barriga como guia suave. Pode também praticar com o cão de frente para um sofá baixo para que as patas traseiras fiquem ligeiramente elevadas."
+    },
+    {
+      "problem": "A reverência dura apenas um instante e o cão levanta-se imediatamente",
+      "solution": "Recompense enquanto mantém a postura (não apenas ao chegar a ela). Comece por recompensar aos 0,5 segundos e suba gradualmente para 1, 2, 3 segundos."
+    },
+    {
+      "problem": "O cão faz a reverência naturalmente quando quer brincar mas não quando se lhe pede",
+      "solution": "Aproveite esses momentos para nomeá-la. Depois use o isco para a provocar de forma controlada fora do contexto de brincadeira."
+    },
+    {
+      "problem": "Não consegue manter a anca alta ao baixar o peito",
+      "solution": "O antebraço sob a barriga é a solução mais eficaz. Ou pratique num degrau baixo com as patas traseiras elevadas."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Dias 1–3",
+      "goal": "O cão faz a reverência natural pelo menos 3 vezes por dia e você marca e recompensa"
+    },
+    {
+      "stage": "Sessões 3–5",
+      "goal": "Baixa o peito seguindo o isco enquanto mantém a anca alta"
+    },
+    {
+      "stage": "Sessões 6–8",
+      "goal": "Responde a “reverência” com isco reduzido"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Mantém a postura 3–5 segundos e faz-o apenas com a voz ou um pequeno gesto"
+    }
+  ],
+  "successSigns": [
+    "Baixa o peito ao chão mantendo claramente a anca alta",
+    "Mantém a postura pelo menos 2 segundos antes da recompensa",
+    "Responde a “reverência” sem precisar do isco completo",
+    "Faz-o em diferentes sítios e perante diferentes pessoas"
+  ],
+  "variations": [
+    "Reverência lenta e sustentada (mais teatral e elegante)",
+    "Reverência com inclinação de cabeça (adicionar outro isco para baixar a cabeça)",
+    "Reverência em frente a um espelho para que o cão veja a sua postura",
+    "Encadear a reverência no início e no final de uma sequência de truques",
+    "Reverência + olhar direto à câmara (perfeita para fotos)"
+  ],
+  "safetyNotes": [
+    "Cães com problemas de coluna ou ombros: consulte um veterinário antes de praticar",
+    "Se o cão mostrar rigidez ou desconforto ao baixar o peito, pare a sessão",
+    "Não use o antebraço como restrição — apenas como guia suave e passivo",
+    "Cachorros com menos de 5 meses: sessões muito curtas e não force a postura"
+  ],
+  "funFact": "A reverência (play bow) é um dos sinais mais universais da linguagem corporal canina. Todos os cães do mundo a usam para dizer “vamos brincar?” — você está simplesmente a dar-lhe um nome.",
+  "nextLevel": "Encadeie: senta → bate cá → reverência. Uma saudação completa em três passos que qualquer cão pode aprender em 3 semanas.",
+  "proTip": "Se o seu cão faz a reverência naturalmente todas as manhãs ao acordar, esse é o melhor momento para capturá-la e nomeá-la. Guarde petiscos na mesinha de cabeceira — a sério!"
+}

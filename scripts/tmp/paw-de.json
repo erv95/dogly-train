@@ -1,0 +1,160 @@
+{
+  "title": "Pfötchen geben",
+  "subtitle": "Der klassische Trick, der die Bindung stärkt und die Pflege erleichtert",
+  "level": "Mittelstufe",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Zuhause oder ruhiger Garten",
+  "ageRecommendation": "Ab 12 Wochen",
+  "estimatedSessions": "5–8 Einheiten zum Meistern",
+  "objective": "Den Hund beibringen, eine Vorderpfote zu heben und auf Kommando \"Pfötchen\" in die Hand des Halters zu legen.",
+  "why": [
+    "Erleichtert das Krallenschneiden und tierärztliche Untersuchungen",
+    "Stärkt die Bindung zwischen Hund und Halter",
+    "Fördert die Körperwahrnehmung des Hundes",
+    "Grundlage für fortgeschrittene Tricks wie High-Five oder Winken"
+  ],
+  "benefits": [
+    "Ihr Hund wird beim Tierarzt und beim Trimmen ruhiger sein",
+    "Baut gegenseitiges Vertrauen auf spielerische Weise auf",
+    "Verbessert Koordination und Balance",
+    "Ein beeindruckender Trick, der die ganze Familie begeistert"
+  ],
+  "where": [
+    "🏠 Zuhause auf rutschfestem Untergrund",
+    "🌿 Im Garten auf Gras oder festem Boden",
+    "🔇 Anfangs ohne Ablenkungen"
+  ],
+  "materials": [
+    "🫖 Sehr schmackhafte Leckerlis (Hühnchen, Käse, Wurst)",
+    "🛏️ Rutschfeste Matte oder Teppich",
+    "✋ Ihre offene Hand als Ziel",
+    "💛 Geduld und kurze Einheiten"
+  ],
+  "beforeYouStart": [
+    "Ihr Hund sollte \"Sitz\" zuverlässig können, bevor Sie beginnen",
+    "Wählen Sie hochmotivierende Leckerlis — dieser Trick verdient das Beste",
+    "Stellen Sie sicher, dass der Untergrund rutschfest ist, damit der Hund sich sicher fühlt",
+    "Begrenzen Sie Einheiten auf 5 Minuten, um geistige Erschöpfung zu vermeiden",
+    "Arbeiten Sie immer mit derselben Pfote zuerst (meist die rechte)"
+  ],
+  "methods": [
+    {
+      "id": "capture_touch",
+      "title": "Capture-Methode mit sanftem Schulterberühren (empfohlen)",
+      "description": "Sie warten, bis der Hund aus dem Sitz heraus natürlich eine Pfote hebt, unterstützt durch ein leichtes Antippen der Schulter, und belohnen diese Bewegung.",
+      "bestFor": "Welpen und Hunde jeder Größe, die bereits Sitz können",
+      "steps": [
+        {
+          "title": "Sitz verlangen und Hand präsentieren",
+          "description": "Fordern Sie Sitz. Strecken Sie die offene Hand, Handfläche nach oben, auf Brusthöhe aus. Sagen Sie nichts weiter — warten Sie einfach.",
+          "tip": "Die offene Hand ist das visuelle Signal. Bleiben Sie entspannt und erwartungsvoll.",
+          "troubleshooting": "Wenn er die Hand ignoriert, bringen Sie sie etwas näher an die Pfoten, ohne zu berühren."
+        },
+        {
+          "title": "Sanftes Antippen der Schulter",
+          "description": "Hat der Hund nach 5 Sekunden die Pfote noch nicht gehoben, berühren Sie leicht die Schulter oder die Außenseite der Vorderpfote mit einem Finger. Die meisten Hunde heben instinktiv die Pfote.",
+          "tip": "Das Antippen soll sich wie ein Kitzeln anfühlen — kein Druck, kein Schubs.",
+          "troubleshooting": "Steht er auf, fordern Sie ruhig erneut Sitz und beginnen von vorne."
+        },
+        {
+          "title": "Bewegung markieren und belohnen",
+          "description": "In dem Moment, in dem die Pfote den Boden verlässt und Ihre Hand berührt, sagen Sie fröhlich \"Ja!\" und geben das Leckerli sofort.",
+          "tip": "Timing ist alles. Belohnen Sie die Pfote beim Berühren Ihrer Hand, nicht vorher oder nachher.",
+          "troubleshooting": "Erreicht die Pfote die Hand nicht, belohnen Sie zunächst jedes Heben und fordern Sie schrittweise mehr."
+        },
+        {
+          "title": "Verbales Kommando einführen",
+          "description": "Wenn der Hund die Pfote konstant hebt (7 von 10 Mal), fügen Sie \"Pfötchen\" kurz vor dem Ausstrecken der Hand hinzu.",
+          "tip": "Erst Geste, dann Wort. Fügen Sie das Wort erst hinzu, wenn das Verhalten stabil ist.",
+          "troubleshooting": "Wirkt er verwirrt, lassen Sie das Wort 2 Einheiten lang weg und kehren zur reinen Geste zurück."
+        },
+        {
+          "title": "Antippen reduzieren und Kontakt verlängern",
+          "description": "Reduzieren Sie das Schultertippen schrittweise. Schließen Sie dann sanft die Hand um die Pfote und halten Sie sie 2–3 Sekunden, bevor Sie belohnen.",
+          "tip": "Das Endziel ist, dass der Hund die Pfote in Ihrer Hand hält, bis Sie sie loslassen.",
+          "troubleshooting": "Zieht er die Pfote zu schnell zurück, belohnen Sie häufiger und erhöhen die Zeit sehr allmählich."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Die Pfote mit Gewalt nehmen",
+      "cause": "Ungeduld, wenn der Hund nicht versteht, was verlangt wird",
+      "fix": "Nehmen Sie die Pfote nie, ohne dass der Hund sie anbietet. Nutzen Sie das sanfte Antippen und warten Sie."
+    },
+    {
+      "error": "Belohnen, wenn die Pfote bereits wieder sinkt",
+      "cause": "Zu langes Timing bei der Belohnung",
+      "fix": "Üben Sie Ihr Timing alleine: Werfen Sie ein Leckerli hoch und fangen Sie es in unter 1 Sekunde."
+    },
+    {
+      "error": "Bei jedem Versuch die Pfote wechseln",
+      "cause": "Mangelnde Konsequenz des Halters",
+      "fix": "Arbeiten Sie in den ersten Wochen mit derselben Pfote. Führen Sie die andere danach ein."
+    },
+    {
+      "error": "Den Trick anfordern, ohne dass der Hund sitzt",
+      "cause": "Überspringen von Lernschritten",
+      "fix": "Ein solides Sitz ist Voraussetzung für diesen Trick. Beginnen Sie immer damit."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund hebt die Pfote nicht, egal wie lange ich warte",
+      "solution": "Versuchen Sie, ein Leckerli in der geschlossenen Faust auf Brusthöhe zu halten. Viele Hunde versuchen, sie mit der Pfote zu öffnen."
+    },
+    {
+      "problem": "Er hebt die Pfote, legt sie aber nicht in meine Hand",
+      "solution": "Bringen Sie Ihre Hand näher an die Pfoten. Der richtige Abstand ist fast mühelos für ihn."
+    },
+    {
+      "problem": "Klappt zuhause, aber nicht draußen",
+      "solution": "Normal. Üben Sie zuerst im Garten, dann auf einer ruhigen Straße. Verwenden Sie wertvollere Leckerlis in neuer Umgebung."
+    },
+    {
+      "problem": "Er verwechselt \"Pfötchen\" mit \"Sitz\"",
+      "solution": "Unterscheiden Sie das Handsignal deutlich: für Sitz zeigen Sie nach unten; für Pfötchen halten Sie die Handfläche waagerecht."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheit 1–2",
+      "goal": "Der Hund hebt die Pfote beim Anblick Ihrer Hand oder beim Antippen, auch nur einen Zentimeter"
+    },
+    {
+      "stage": "Einheit 3–5",
+      "goal": "Legt die Pfote mindestens 6 von 10 Mal in Ihre offene Hand"
+    },
+    {
+      "stage": "Einheit 6–7",
+      "goal": "Reagiert auf das verbale Kommando \"Pfötchen\" ohne Schultertippen"
+    },
+    {
+      "stage": "Woche 3+",
+      "goal": "Hält die Pfote 3–5 Sekunden in Ihrer Hand, bis Sie sie loslassen"
+    }
+  ],
+  "successSigns": [
+    "Hebt die Pfote sobald das Kommando gegeben wird",
+    "Legt sie sanft ab ohne zu kratzen",
+    "Bleibt im Sitz, während er die Pfote anbietet",
+    "Macht es an verschiedenen Orten und mit verschiedenen Personen"
+  ],
+  "variations": [
+    "Linke Pfote geben (die andere Pfote beibringen)",
+    "High-Five (Pfote höher, senkrechte Handfläche)",
+    "Pfötchen nur auf Handzeichen, ohne verbales Kommando",
+    "Pfötchen bei hockendem oder stehendem Halter",
+    "Verketten: Sitz → Pfötchen → Bleib"
+  ],
+  "safetyNotes": [
+    "Hören Sie auf, wenn der Hund beim Heben der Pfote Schmerzen zeigt — mögliches Gelenkproblem",
+    "Große Rassen oder Hunde mit Hüftdysplasie: kürzere Einheiten auf sehr weichem Untergrund",
+    "Misserfolge niemals bestrafen; gehen Sie einfach zum vorherigen Schritt zurück",
+    "Welpen unter 16 Wochen haben sich entwickelnde Knochen — keine Zwangshaltungen"
+  ],
+  "funFact": "Der Trick \"Pfötchen geben\" ist einer der ältesten dokumentierten: Europäische Kupferstiche aus dem 17. Jahrhundert zeigen bereits Hunde, die ihre Besitzer auf diese Weise begrüßen.",
+  "nextLevel": "Bringen Sie die linke Pfote bei, damit der Hund beide unterscheiden lernt. Entwickeln Sie dann High-Five, indem Sie die Handfläche schrittweise höher halten.",
+  "proTip": "Wenn Ihr Hund die Hand in Gesichtsnähe meidet, beginnen Sie mit einer zur Faust geballten Hand mit Leckerli darin. Er wird die Hand nicht mehr als Bedrohung sehen, sondern als Belohnungsautomat."
+}

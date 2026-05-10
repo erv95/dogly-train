@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -11,7 +11,8 @@ import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { getTrainerById } from '../../../src/services/trainers';
 import { useAuth } from '../../../src/contexts/AuthContext';
-import { Avatar, StarRating, Card, Button, LoadingScreen } from '../../../src/components/ui';
+import { Avatar, StarRating, Card, Button } from '../../../src/components/ui';
+import { ProfileSkeleton } from '../../../src/components/skeletons';
 import { colors, spacing, fontSize, borderRadius } from '../../../src/theme';
 import { TrainerProfile } from '../../../src/types';
 
@@ -24,25 +25,45 @@ export default function TrainerDetailScreen() {
 
   const [trainer, setTrainer] = useState<TrainerProfile | null>(null);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
 
-  useEffect(() => {
-    (async () => {
-      if (!id) return;
-      try {
-        const data = await getTrainerById(id);
-        setTrainer(data);
-        if (data) {
-          navigation.setOptions({ title: data.displayName });
-        }
-      } catch (error) {
-        console.error('Error loading trainer:', error);
-      } finally {
-        setLoading(false);
+  const loadTrainer = useCallback(async () => {
+    if (!id) return;
+    setLoading(true);
+    setLoadError(false);
+    try {
+      const data = await getTrainerById(id);
+      setTrainer(data);
+      if (data) {
+        navigation.setOptions({ title: data.displayName });
       }
-    })();
-  }, [id]);
+    } catch (error) {
+      console.error('Error loading trainer:', error);
+      setLoadError(true);
+    } finally {
+      setLoading(false);
+    }
+  }, [id, navigation]);
 
-  if (loading) return <LoadingScreen />;
+  useEffect(() => { loadTrainer(); }, [loadTrainer]);
+
+  if (loading) return (
+    <View style={{ flex: 1, backgroundColor: colors.background }}>
+      <ProfileSkeleton />
+    </View>
+  );
+
+  if (loadError) {
+    return (
+      <View style={styles.errorContainer}>
+        <Ionicons name="cloud-offline-outline" size={64} color={colors.textLight} />
+        <Text style={styles.errorText}>{t('common.error')}</Text>
+        <TouchableOpacity onPress={loadTrainer} style={styles.retryBtn} activeOpacity={0.85}>
+          <Text style={styles.retryBtnText}>{t('common.retry')}</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
 
   if (!trainer) {
     return (
@@ -54,7 +75,7 @@ export default function TrainerDetailScreen() {
   }
 
   const isBoosted = trainer.boostedUntil &&
-    (trainer.boostedUntil as any).toDate() > new Date();
+    (trainer.boostedUntil as any).toDate?.() > new Date();
   const isOwner = userData?.role === 'owner';
 
   return (
@@ -62,7 +83,17 @@ export default function TrainerDetailScreen() {
       {/* Header */}
       <View style={styles.profileHeader}>
         <Avatar uri={trainer.photoURL} name={trainer.displayName} size={100} />
-        <Text style={styles.name}>{trainer.displayName}</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+          <Text style={styles.name}>{trainer.displayName}</Text>
+          {trainer.verified && (
+            <Ionicons name="shield-checkmark" size={20} color="#2D9CDB" />
+          )}
+        </View>
+        {trainer.verified && (
+          <Text style={{ fontSize: 11, color: '#2D9CDB', fontWeight: '700', marginTop: 2 }}>
+            {t('identityVerification.verifiedBadge')}
+          </Text>
+        )}
         {trainer.city ? (
           <View style={styles.locationRow}>
             <Ionicons name="location-outline" size={16} color={colors.textSecondary} />
@@ -145,8 +176,14 @@ export default function TrainerDetailScreen() {
       {isOwner && (
         <View style={styles.actions}>
           <Button
+            title={t('bookings.flow.bookCta')}
+            onPress={() => router.push(`/(shared)/book/${trainer.id}`)}
+            size="lg"
+          />
+          <Button
             title={t('chat.startChat')}
             onPress={() => router.push(`/(shared)/chat/${trainer.id}`)}
+            variant="outline"
             size="lg"
           />
           <Button
@@ -179,6 +216,18 @@ const styles = StyleSheet.create({
   errorText: {
     fontSize: fontSize.md,
     color: colors.textSecondary,
+  },
+  retryBtn: {
+    backgroundColor: colors.primary,
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.md,
+    borderRadius: borderRadius.full,
+    marginTop: spacing.md,
+  },
+  retryBtnText: {
+    color: '#fff',
+    fontWeight: '700',
+    fontSize: fontSize.sm,
   },
   profileHeader: {
     alignItems: 'center',

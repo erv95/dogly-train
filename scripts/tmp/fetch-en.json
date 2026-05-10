@@ -1,0 +1,192 @@
+{
+  "title": "Fetch",
+  "subtitle": "Play, exercise and obedience all in one command",
+  "level": "Basic",
+  "duration": "10–15 min per session",
+  "location": "Garden, park or long hallway at home",
+  "ageRecommendation": "From 10 weeks",
+  "estimatedSessions": "6–10 sessions to master",
+  "objective": "Teach your dog to chase a thrown object, pick it up, bring it back to the owner, and release it — completing the full retrieve cycle.",
+  "why": [
+    "One of the most efficient ways to give a dog physical and mental exercise",
+    "Reinforces the bond between owner and dog through play",
+    "Teaches the concept of voluntary exchange, the foundation of many other behaviours",
+    "Provides an energy-release channel for high-drive dogs"
+  ],
+  "benefits": [
+    "Your dog is physically and mentally tired in 15 minutes, reducing destructive behaviours",
+    "Learns to release objects voluntarily, reducing resource guarding",
+    "Anticipation of the throw improves attention and focus",
+    "Can be practised in small spaces with soft objects"
+  ],
+  "where": [
+    "🏡 Fenced garden or yard to start",
+    "🌳 Park with enclosed or grassy area",
+    "🏠 Long home hallway with a soft ball (beginning)"
+  ],
+  "materials": [
+    "🎾 Two identical or similar toys or balls",
+    "🫖 High-value treats (optional, for early sessions)",
+    "🦮 Long line of 5–10 m (for dogs that don't return)",
+    "💛 Enthusiasm and an animated voice"
+  ],
+  "beforeYouStart": [
+    "Check if your dog has a chase instinct: toss a ball and see if they pursue it",
+    "Choose an enclosed space without escape risk for the first sessions",
+    "Have two toys ready: this is key for the two-toy method",
+    "Sessions no longer than 10–15 minutes to avoid fatigue",
+    "If the dog has never played, start with the object on the floor before throwing"
+  ],
+  "methods": [
+    {
+      "id": "two_toys",
+      "title": "Two-toy method (recommended)",
+      "description": "You use two identical toys alternating them: when the dog brings the first one back, you excitedly show the second one so they drop it. Builds the return habit without teaching 'drop it' separately.",
+      "bestFor": "Dogs with a chase instinct that don't drop or don't come back",
+      "steps": [
+        {
+          "title": "Two toys in hand",
+          "description": "Start with both toys in your hands, behind your back or hidden. Show only one to your dog to generate interest.",
+          "tip": "The toys must be appealing. Play a little with the first one before throwing to increase its value.",
+          "troubleshooting": "If the dog shows no interest, wiggle the toy near them before throwing."
+        },
+        {
+          "title": "First throw",
+          "description": "Throw toy #1 enthusiastically. Wait for your dog to chase and grab it.",
+          "tip": "Throw only a few metres at first. Distance increases with practice.",
+          "troubleshooting": "If they don't chase it, make the toy more interesting: move it on the floor like prey before throwing."
+        },
+        {
+          "title": "Show toy #2",
+          "description": "When the dog has toy #1 in their mouth and starts coming back (even partially), pull out toy #2 with great excitement: wiggle it, make it interesting.",
+          "tip": "Your attitude is key. The dog must want toy #2 more than the one in their mouth.",
+          "troubleshooting": "If the dog stays put with the toy, turn your back: dogs want what we ignore."
+        },
+        {
+          "title": "Exchange and drop",
+          "description": "When the dog comes to you seeking toy #2, they'll drop toy #1 voluntarily. At that moment, throw toy #2 as the reward.",
+          "tip": "Don't say 'drop it': the exchange makes it natural. Say 'yes' or 'good' when they drop it."
+        },
+        {
+          "title": "Continuous cycle",
+          "description": "Pick up toy #1 and repeat the cycle. The dog learns: bring it back = the fun starts again.",
+          "tip": "End the session yourself while the dog still wants more. This keeps the drive for the next session."
+        }
+      ]
+    },
+    {
+      "id": "shaping",
+      "title": "Shaping method (for dogs without retrieve instinct)",
+      "description": "You reinforce any progressive approach to the toy: looking → approaching → sniffing → touching → picking up → bringing one step closer. Ideal for dogs that show no natural interest in chasing.",
+      "bestFor": "Dogs without natural retrieve instinct, non-retriever breeds, or older dogs",
+      "steps": [
+        {
+          "title": "Look at the toy",
+          "description": "Place the toy on the floor. Every time the dog looks at it, say 'yes' and reward. Don't ask for more yet.",
+          "tip": "A clicker is very useful in this method to mark exactly the right behaviour.",
+          "troubleshooting": "If the dog doesn't look at the toy, move it slightly to attract their attention."
+        },
+        {
+          "title": "Approach the toy",
+          "description": "Now only reward if the dog moves toward the toy, not just looks at it. Raise the criteria slowly.",
+          "tip": "Each step must be small. If the dog gets frustrated, return to the previous step."
+        },
+        {
+          "title": "Touch or pick up the toy",
+          "description": "Reward when the dog touches the toy with their nose or picks it up with their mouth, even briefly.",
+          "tip": "Any contact with the toy is a success at this stage. Don't demand perfection yet."
+        },
+        {
+          "title": "Bring it one step toward you",
+          "description": "Reward only when the dog picks up the toy AND takes at least one step toward you. Gradually increase the required distance.",
+          "tip": "Step backward yourself to make it easier for the dog to approach. Your movement invites their movement."
+        },
+        {
+          "title": "Full retrieve",
+          "description": "Once they consistently bring the toy to you, add the exchange (a food treat in return for the toy) to complete the cycle.",
+          "tip": "Replace the food treat with a toy throw once the dog understands the concept well."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Chasing the dog to recover the toy",
+      "cause": "Frustration when the dog doesn't come back",
+      "fix": "Never run after them: you turn it into a 'catch me if you can' game. Turn your back or run in the opposite direction."
+    },
+    {
+      "error": "Forcing the mouth open to take the toy",
+      "cause": "Impatience to throw again",
+      "fix": "Always use the exchange (second toy or treat). Forced opening can create resource guarding."
+    },
+    {
+      "error": "Sessions too long that exhaust the dog",
+      "cause": "The dog shows initial enthusiasm and the owner doesn't stop in time",
+      "fix": "Always stop before the dog gets tired. Short sessions maintain drive and enthusiasm."
+    },
+    {
+      "error": "Throwing the toy when the dog jumps or pushes",
+      "cause": "Giving in to the dog's pressure",
+      "fix": "Only throw when the dog is calm or in a sit position. This teaches self-control before play."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My dog chases the toy but won't pick it up",
+      "solution": "Try a softer, more appealing toy. You can also make the toy 'flee' from them by moving it to activate prey instinct."
+    },
+    {
+      "problem": "They pick it up but don't come back",
+      "solution": "Use a long line to gently guide them toward you while showing great enthusiasm for toy #2. Never yank."
+    },
+    {
+      "problem": "They come back but won't drop the toy",
+      "solution": "Two-toy method: the second toy always triggers dropping the first. If not, offer a very high-value food treat."
+    },
+    {
+      "problem": "They lose interest after 2–3 throws",
+      "solution": "Sessions are too long or the toy isn't motivating enough. Try a different toy and shorter sessions (3–5 throws, then stop)."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Session 1–2",
+      "goal": "The dog chases the thrown toy and picks it up at least once"
+    },
+    {
+      "stage": "Session 3–5",
+      "goal": "Returns to you with the toy in 50% of attempts"
+    },
+    {
+      "stage": "Session 6–8",
+      "goal": "Completes the full cycle (chase, pick up, return, drop) consistently"
+    },
+    {
+      "stage": "Week 3+",
+      "goal": "Performs the full retrieve outdoors with moderate distractions"
+    }
+  ],
+  "successSigns": [
+    "Chases the toy immediately when thrown",
+    "Returns to you with the toy without being called",
+    "Drops the toy when they see the second one or hear 'drop it'",
+    "Maintains enthusiasm throughout the entire session"
+  ],
+  "variations": [
+    "Fetch by object name ('get the ball', 'get the rope')",
+    "Fetch in water (for dogs that enjoy swimming)",
+    "Fetch specific objects (find the keys, find the remote)",
+    "Fetch from progressively greater distances (5m → 20m → 50m)",
+    "Fetch with obstacles or between trees"
+  ],
+  "safetyNotes": [
+    "Never throw small objects that could be swallowed",
+    "Avoid throwing sticks: they can cause serious mouth and throat injuries",
+    "Limit intense play in dogs with hip dysplasia or joint problems",
+    "On hot days, very short sessions with water available: fetch is very demanding"
+  ],
+  "funFact": "Golden Retrievers and Labradors were genetically selected to retrieve prey without damaging it (soft mouth). That's why many learn fetch almost instinctively.",
+  "nextLevel": "Teach the names of different objects so the dog can search for and bring the correct one. Or introduce water retrieval if your dog enjoys swimming.",
+  "proTip": "Fetch breaks down almost always for two reasons: the dog won't drop or won't come back. Universal solution: always have a second toy and never, ever chase your dog."
+}

@@ -1,0 +1,967 @@
+{
+  "es": {
+    "title": "Emergencias",
+    "subtitle": "Mantén la calma. Cada segundo cuenta.",
+    "callPrimary": "Llamar a contacto principal",
+    "callVet": "Veterinario más cercano",
+    "openMaps": "Abrir en Google Maps",
+    "noPrimaryHint": "Configura un contacto principal",
+    "callNotAvailable": "Las llamadas no están disponibles en este dispositivo",
+    "vetSearchTerm": "veterinario urgencias 24h",
+    "disclaimer": "Esta guía es informativa y no sustituye la atención veterinaria. Llama siempre a un profesional ante cualquier duda.",
+    "universalPhones": {
+      "toxicLabel": "Toxicología veterinaria (24h)",
+      "toxic": "+34 91 562 04 20",
+      "emergencyLabel": "Emergencias generales",
+      "emergency": "112"
+    },
+    "relationship": {
+      "vet": "Veterinario",
+      "backup": "Contacto secundario",
+      "shelter": "Refugio / protectora",
+      "other": "Otro"
+    },
+    "contacts": {
+      "title": "Mis contactos de emergencia",
+      "empty": "Aún no has añadido ningún contacto",
+      "add": "Añadir contacto",
+      "new": "Nuevo contacto",
+      "edit": "Editar contacto",
+      "deleteConfirm": "¿Eliminar este contacto?",
+      "primary": "Principal",
+      "call": "Llamar",
+      "makePrimary": "Marcar como principal",
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Dr. García - Clínica San Roque",
+      "phoneLabel": "Teléfono",
+      "relationshipLabel": "Relación",
+      "notesLabel": "Notas (opcional)",
+      "notesPlaceholder": "Horario, dirección, etc.",
+      "markPrimary": "Marcar como contacto principal",
+      "markPrimaryHint": "Será el primero al que llames desde esta pantalla"
+    },
+    "daily": {
+      "label": "Configura tus emergencias",
+      "message": "Añade un contacto y ten los protocolos a mano",
+      "cta": "Configurar"
+    },
+    "protocols": {
+      "sectionTitle": "Protocolos de primeros auxilios",
+      "signsLabel": "Signos de alarma",
+      "stepsLabel": "Pasos a seguir",
+      "dontDoLabel": "Qué NO hacer",
+      "call112": "Llamar al 112",
+      "openContacts": "Mis contactos",
+      "choking": {
+        "title": "Atragantamiento",
+        "subtitle": "Algo bloquea las vías respiratorias del perro",
+        "signs": [
+          "Tose con fuerza, intenta vomitar sin éxito",
+          "Se lleva las patas a la boca con desesperación",
+          "Encías o lengua azuladas",
+          "Respira con dificultad o no respira"
+        ],
+        "steps": [
+          "Abre la boca con cuidado y mira si ves el objeto. Si está visible y accesible, retíralo con los dedos o pinzas.",
+          "Si NO lo ves: en perros pequeños, sujétalo boca abajo por las patas traseras y dale 4-5 palmadas firmes entre los omoplatos.",
+          "En perros medianos o grandes: rodéalo por detrás con los brazos, junta tus manos justo bajo la última costilla y comprime hacia arriba 4-5 veces (Heimlich canino).",
+          "Repite la inspección de la boca tras cada intento.",
+          "Acude al veterinario incluso si el objeto sale: puede haber lesiones internas."
+        ],
+        "dontDo": [
+          "No metas los dedos a ciegas: puedes empujar el objeto más adentro",
+          "No le des de beber ni comer para «empujarlo»",
+          "No golpees con fuerza excesiva sobre el pecho de un cachorro pequeño"
+        ],
+        "whenToCallVet": "Llama al vet inmediatamente si las encías están moradas, si pierde el conocimiento o si tras 1 minuto no consigues sacar el objeto."
+      },
+      "bleeding": {
+        "title": "Sangrado",
+        "subtitle": "Heridas con pérdida de sangre visible",
+        "signs": [
+          "Sangrado activo (continuo o pulsátil)",
+          "Encías pálidas, debilidad, mareo",
+          "Frecuencia cardíaca acelerada",
+          "Charco de sangre o ropa empapada"
+        ],
+        "steps": [
+          "Ponte guantes si tienes. Mantén al perro lo más quieto posible para no aumentar el sangrado.",
+          "Aplica presión directa con una gasa, paño o camiseta limpia sobre la herida durante al menos 5 minutos sin levantar.",
+          "Si el paño se empapa, añade otro encima sin retirar el primero. Sigue presionando.",
+          "Si es una pata, eleva la extremidad por encima del corazón si es posible.",
+          "Una vez controlado, venda firmemente (no demasiado apretado) y traslada al vet sin esperar."
+        ],
+        "dontDo": [
+          "No retires un objeto clavado (cristal, palo): puede empeorar el sangrado",
+          "No uses torniquetes salvo emergencia extrema (riesgo de necrosis)",
+          "No apliques alcohol, agua oxigenada ni desinfectantes fuertes en heridas profundas"
+        ],
+        "whenToCallVet": "Cualquier sangrado que no se detiene en 5 minutos, sangre por boca/ano/orina o herida mayor de 2 cm de profundidad es emergencia veterinaria inmediata."
+      },
+      "poisoning": {
+        "title": "Intoxicación",
+        "subtitle": "Ha ingerido algo tóxico (chocolate, uvas, raticida…)",
+        "signs": [
+          "Vómitos, diarrea, babeo excesivo",
+          "Temblores, convulsiones, descoordinación",
+          "Encías pálidas o azuladas",
+          "Letargo o agitación inusual"
+        ],
+        "steps": [
+          "Identifica el tóxico: guarda el envase, hoja, planta o muestra del vómito para mostrar al vet.",
+          "Llama YA al Centro Nacional de Toxicología Veterinaria (+34 91 562 04 20) y describe qué ha comido y cuánto.",
+          "Sigue sus instrucciones al pie de la letra. NO induzcas vómito sin confirmación.",
+          "Mantén al perro tranquilo, abrigado y en un lugar seguro hasta llegar al vet.",
+          "Acude al veterinario más cercano con el envase del tóxico."
+        ],
+        "dontDo": [
+          "NO induzcas vómito si ha ingerido algo cáustico (lejía, ácidos), derivados del petróleo o un objeto punzante",
+          "No le des leche, sal, aceite ni «remedios caseros»: pueden agravar la intoxicación",
+          "No esperes a ver síntomas: muchos venenos actúan después de horas"
+        ],
+        "whenToCallVet": "TODA intoxicación es emergencia inmediata. Aunque parezca estar bien, los efectos pueden tardar horas."
+      },
+      "heat_stroke": {
+        "title": "Golpe de calor",
+        "subtitle": "Hipertermia por calor (coche, ejercicio, sol)",
+        "signs": [
+          "Jadeo extremo y babeo espeso",
+          "Encías rojas brillantes o moradas",
+          "Vómito, diarrea, debilidad muscular",
+          "Temperatura rectal superior a 40°C"
+        ],
+        "steps": [
+          "Llévalo INMEDIATAMENTE a la sombra o a un lugar fresco con ventilación.",
+          "Mójalo con agua templada (NO helada) por todo el cuerpo, especialmente cuello, axilas e ingles.",
+          "Pon un ventilador o abanícalo para acelerar la evaporación.",
+          "Ofrece pequeños sorbos de agua fresca si está consciente y puede tragar.",
+          "Traslado urgente al vet aunque parezca recuperarse: puede haber daño interno."
+        ],
+        "dontDo": [
+          "NUNCA uses agua helada ni hielo: provoca vasoconstricción y empeora el cuadro",
+          "No envuelvas al perro en toallas mojadas que retengan calor",
+          "No le obligues a beber grandes cantidades de golpe (riesgo de aspiración)"
+        ],
+        "whenToCallVet": "Llama al vet de camino. Una temperatura rectal superior a 41°C es potencialmente mortal y requiere hospitalización."
+      },
+      "seizures": {
+        "title": "Convulsiones",
+        "subtitle": "Pierde el control del cuerpo, sacudidas, salivación",
+        "signs": [
+          "Caída al suelo y rigidez muscular",
+          "Movimientos involuntarios de patas como pedaleo",
+          "Salivación abundante, pérdida de orina o heces",
+          "Mirada fija, falta de respuesta a tu voz"
+        ],
+        "steps": [
+          "NO intentes sujetarlo. Aleja muebles, escaleras u objetos que puedan dañarle.",
+          "Cronometra desde el inicio. Una convulsión típica dura 30-90 segundos.",
+          "Habla con voz suave aunque parezca no oírte; le ayuda al volver en sí.",
+          "Una vez termine, mantenlo en un lugar tranquilo, oscuro y silencioso para que se recupere.",
+          "Acude al vet siempre tras una primera convulsión, aunque parezca recuperado."
+        ],
+        "dontDo": [
+          "NO le metas las manos ni objetos en la boca: NO se traga la lengua y puedes ser mordido",
+          "No le grites, sacudas ni intentes despertarlo bruscamente",
+          "No le des comida, agua ni medicación durante o justo después"
+        ],
+        "whenToCallVet": "EMERGENCIA INMEDIATA si: la convulsión dura más de 2 minutos, hay varias seguidas sin recuperar conciencia entre ellas, o es la primera vez que ocurre."
+      },
+      "cpr": {
+        "title": "Parada cardíaca / RCP",
+        "subtitle": "El perro no respira y no tiene pulso",
+        "signs": [
+          "No responde, no se mueve",
+          "No se ve subir y bajar el pecho",
+          "No notas pulso en la cara interna del muslo",
+          "Encías muy pálidas o azuladas"
+        ],
+        "steps": [
+          "Tumbalo sobre el costado derecho en superficie firme. Comprueba que la vía aérea está libre (saca lengua hacia delante).",
+          "Da 2 ventilaciones: cierra la boca, sopla por la nariz hasta que veas subir el pecho.",
+          "Compresiones torácicas: en perros medianos/grandes presiona sobre la parte más alta del costillar con ambas manos. En pequeños usa una mano sobre el corazón (codo izquierdo).",
+          "Ritmo: 100-120 compresiones por minuto (al ritmo de la canción «Stayin' Alive»). Profundidad: 1/3 del grosor del tórax.",
+          "Cada 30 compresiones, da 2 ventilaciones. Continúa hasta que respire o llegues al vet."
+        ],
+        "dontDo": [
+          "No abandones la RCP por cansancio en menos de 10 minutos sin atención veterinaria",
+          "No comprimas en perros conscientes o que respiran (puedes romper costillas)",
+          "No coloques la palma sobre el abdomen: puedes lesionar órganos"
+        ],
+        "whenToCallVet": "EMERGENCIA MÁXIMA. Si estás solo, haz 1 minuto de RCP, luego llama al 112 mientras conduces hacia el vet más cercano."
+      }
+    }
+  },
+  "en": {
+    "title": "Emergencies",
+    "subtitle": "Stay calm. Every second counts.",
+    "callPrimary": "Call primary contact",
+    "callVet": "Nearest veterinarian",
+    "openMaps": "Open in Google Maps",
+    "noPrimaryHint": "Set up a primary contact",
+    "callNotAvailable": "Calls are not available on this device",
+    "vetSearchTerm": "24h emergency veterinarian",
+    "disclaimer": "This guide is informative and does not replace veterinary care. Always call a professional when in doubt.",
+    "universalPhones": {
+      "toxicLabel": "Veterinary toxicology (24h)",
+      "toxic": "+1 888 426 4435",
+      "emergencyLabel": "General emergencies",
+      "emergency": "911"
+    },
+    "relationship": {
+      "vet": "Veterinarian",
+      "backup": "Backup contact",
+      "shelter": "Shelter / rescue",
+      "other": "Other"
+    },
+    "contacts": {
+      "title": "My emergency contacts",
+      "empty": "You haven't added any contacts yet",
+      "add": "Add contact",
+      "new": "New contact",
+      "edit": "Edit contact",
+      "deleteConfirm": "Delete this contact?",
+      "primary": "Primary",
+      "call": "Call",
+      "makePrimary": "Mark as primary",
+      "nameLabel": "Name",
+      "namePlaceholder": "Dr. Smith — Main Street Vet Clinic",
+      "phoneLabel": "Phone",
+      "relationshipLabel": "Relationship",
+      "notesLabel": "Notes (optional)",
+      "notesPlaceholder": "Hours, address, etc.",
+      "markPrimary": "Mark as primary contact",
+      "markPrimaryHint": "This is the first contact called from this screen"
+    },
+    "daily": {
+      "label": "Set up emergencies",
+      "message": "Add a contact and keep protocols handy",
+      "cta": "Set up"
+    },
+    "protocols": {
+      "sectionTitle": "First-aid protocols",
+      "signsLabel": "Warning signs",
+      "stepsLabel": "Steps to follow",
+      "dontDoLabel": "What NOT to do",
+      "call112": "Call 911",
+      "openContacts": "My contacts",
+      "choking": {
+        "title": "Choking",
+        "subtitle": "Something is blocking the dog's airway",
+        "signs": [
+          "Strong cough, retching without success",
+          "Pawing desperately at the mouth",
+          "Bluish gums or tongue",
+          "Difficulty breathing or no breathing"
+        ],
+        "steps": [
+          "Open the mouth carefully and look for the object. If visible and reachable, remove it with your fingers or tweezers.",
+          "If you can't see it: for small dogs, hold them upside-down by the hind legs and give 4-5 firm slaps between the shoulder blades.",
+          "For medium or large dogs: hug them from behind, hands joined just below the last rib, and compress upward 4-5 times (canine Heimlich).",
+          "Recheck the mouth after each attempt.",
+          "Go to the vet even if the object comes out — there may be internal injuries."
+        ],
+        "dontDo": [
+          "Don't poke fingers blindly: you may push the object deeper",
+          "Don't give water or food to «push it down»",
+          "Don't strike a small puppy's chest with excessive force"
+        ],
+        "whenToCallVet": "Call the vet immediately if gums turn purple, the dog loses consciousness, or you can't get the object out within 1 minute."
+      },
+      "bleeding": {
+        "title": "Bleeding",
+        "subtitle": "Wounds with visible blood loss",
+        "signs": [
+          "Active bleeding (continuous or pulsing)",
+          "Pale gums, weakness, dizziness",
+          "Rapid heart rate",
+          "Pool of blood or soaked clothing"
+        ],
+        "steps": [
+          "Put on gloves if available. Keep the dog as still as possible to avoid worsening the bleeding.",
+          "Apply direct pressure with gauze, cloth or clean shirt for at least 5 minutes without lifting.",
+          "If the cloth soaks through, add another on top without removing the first. Keep pressing.",
+          "If it's a leg, raise the limb above heart level if possible.",
+          "Once controlled, bandage firmly (not too tight) and head to the vet without waiting."
+        ],
+        "dontDo": [
+          "Don't remove an embedded object (glass, stick): can worsen bleeding",
+          "Don't use tourniquets except in extreme emergency (necrosis risk)",
+          "Don't apply alcohol, hydrogen peroxide or strong disinfectants on deep wounds"
+        ],
+        "whenToCallVet": "Any bleeding that doesn't stop in 5 minutes, blood from mouth/anus/urine, or wounds deeper than 2 cm is an immediate veterinary emergency."
+      },
+      "poisoning": {
+        "title": "Poisoning",
+        "subtitle": "Ingested something toxic (chocolate, grapes, rat poison…)",
+        "signs": [
+          "Vomiting, diarrhea, excessive drooling",
+          "Tremors, seizures, lack of coordination",
+          "Pale or bluish gums",
+          "Lethargy or unusual agitation"
+        ],
+        "steps": [
+          "Identify the toxin: keep the container, leaf, plant or vomit sample to show the vet.",
+          "Call the Veterinary Poison Helpline NOW (+1 888 426 4435) and describe what was eaten and how much.",
+          "Follow their instructions exactly. DO NOT induce vomiting without confirmation.",
+          "Keep the dog calm, warm, and in a safe place until reaching the vet.",
+          "Go to the nearest vet with the toxin's container."
+        ],
+        "dontDo": [
+          "DO NOT induce vomiting if they ate something caustic (bleach, acids), petroleum products or a sharp object",
+          "Don't give milk, salt, oil, or «home remedies»: may worsen the poisoning",
+          "Don't wait for symptoms: many poisons take hours to show effects"
+        ],
+        "whenToCallVet": "ALL poisoning is an immediate emergency. Even if they look fine, effects may take hours."
+      },
+      "heat_stroke": {
+        "title": "Heat stroke",
+        "subtitle": "Hyperthermia from heat (car, exercise, sun)",
+        "signs": [
+          "Extreme panting and thick drooling",
+          "Bright red or purple gums",
+          "Vomiting, diarrhea, muscle weakness",
+          "Rectal temperature above 104°F (40°C)"
+        ],
+        "steps": [
+          "Move IMMEDIATELY to shade or a cool, ventilated place.",
+          "Wet them with lukewarm water (NOT cold/icy) all over, especially neck, armpits and groin.",
+          "Use a fan or wave a towel to speed up evaporation.",
+          "Offer small sips of cool water if conscious and able to swallow.",
+          "Urgent transport to the vet even if they seem to recover: internal damage may have occurred."
+        ],
+        "dontDo": [
+          "NEVER use icy water or ice: causes vasoconstriction and worsens the condition",
+          "Don't wrap the dog in wet towels that trap heat",
+          "Don't force them to drink large amounts at once (aspiration risk)"
+        ],
+        "whenToCallVet": "Call the vet on the way. Rectal temperature above 106°F (41°C) is potentially fatal and requires hospitalization."
+      },
+      "seizures": {
+        "title": "Seizures",
+        "subtitle": "Loss of body control, shaking, drooling",
+        "signs": [
+          "Falling to the ground and muscle stiffness",
+          "Involuntary leg movements like pedaling",
+          "Heavy drooling, loss of urine or feces",
+          "Fixed gaze, no response to your voice"
+        ],
+        "steps": [
+          "DO NOT try to hold them. Move furniture, stairs or objects that may injure them.",
+          "Time it from the start. A typical seizure lasts 30-90 seconds.",
+          "Talk softly even if they seem not to hear; it helps them when they recover.",
+          "Once it ends, keep them in a calm, dark, quiet place to recover.",
+          "Always go to the vet after a first seizure, even if they seem recovered."
+        ],
+        "dontDo": [
+          "DO NOT put hands or objects in the mouth: dogs do NOT swallow their tongue and you may be bitten",
+          "Don't shout, shake or try to wake them abruptly",
+          "Don't give food, water or medication during or just after"
+        ],
+        "whenToCallVet": "IMMEDIATE EMERGENCY if: the seizure lasts more than 2 minutes, several occur without regaining consciousness between them, or it's the first time."
+      },
+      "cpr": {
+        "title": "Cardiac arrest / CPR",
+        "subtitle": "The dog isn't breathing and has no pulse",
+        "signs": [
+          "Doesn't respond, doesn't move",
+          "Chest doesn't rise and fall",
+          "No pulse felt on inner thigh",
+          "Very pale or bluish gums"
+        ],
+        "steps": [
+          "Lay them on their right side on a firm surface. Check the airway is clear (pull tongue forward).",
+          "Give 2 rescue breaths: close the mouth, blow through the nose until you see the chest rise.",
+          "Chest compressions: for medium/large dogs press on the highest part of the rib cage with both hands. For small dogs use one hand over the heart (left elbow).",
+          "Rate: 100-120 compressions per minute (to the beat of «Stayin' Alive»). Depth: 1/3 of chest thickness.",
+          "Every 30 compressions, give 2 breaths. Continue until they breathe or you reach the vet."
+        ],
+        "dontDo": [
+          "Don't stop CPR due to fatigue in less than 10 minutes without veterinary attention",
+          "Don't compress on conscious or breathing dogs (you can break ribs)",
+          "Don't place your palm on the abdomen: you can damage organs"
+        ],
+        "whenToCallVet": "MAXIMUM EMERGENCY. If alone, do 1 minute of CPR, then call 911 while driving to the nearest vet."
+      }
+    }
+  },
+  "fr": {
+    "title": "Urgences",
+    "subtitle": "Garde ton calme. Chaque seconde compte.",
+    "callPrimary": "Appeler le contact principal",
+    "callVet": "Vétérinaire le plus proche",
+    "openMaps": "Ouvrir dans Google Maps",
+    "noPrimaryHint": "Configure un contact principal",
+    "callNotAvailable": "Les appels ne sont pas disponibles sur cet appareil",
+    "vetSearchTerm": "vétérinaire urgences 24h",
+    "disclaimer": "Ce guide est informatif et ne remplace pas les soins vétérinaires. Appelle toujours un professionnel en cas de doute.",
+    "universalPhones": {
+      "toxicLabel": "Toxicologie vétérinaire (24h)",
+      "toxic": "+33 1 40 05 48 48",
+      "emergencyLabel": "Urgences générales",
+      "emergency": "112"
+    },
+    "relationship": {
+      "vet": "Vétérinaire",
+      "backup": "Contact secondaire",
+      "shelter": "Refuge / association",
+      "other": "Autre"
+    },
+    "contacts": {
+      "title": "Mes contacts d'urgence",
+      "empty": "Vous n'avez encore ajouté aucun contact",
+      "add": "Ajouter un contact",
+      "new": "Nouveau contact",
+      "edit": "Modifier le contact",
+      "deleteConfirm": "Supprimer ce contact ?",
+      "primary": "Principal",
+      "call": "Appeler",
+      "makePrimary": "Marquer comme principal",
+      "nameLabel": "Nom",
+      "namePlaceholder": "Dr. Martin — Clinique de la Place",
+      "phoneLabel": "Téléphone",
+      "relationshipLabel": "Relation",
+      "notesLabel": "Notes (optionnel)",
+      "notesPlaceholder": "Horaires, adresse, etc.",
+      "markPrimary": "Marquer comme contact principal",
+      "markPrimaryHint": "Premier contact appelé depuis cet écran"
+    },
+    "daily": {
+      "label": "Configure tes urgences",
+      "message": "Ajoute un contact et garde les protocoles à portée",
+      "cta": "Configurer"
+    },
+    "protocols": {
+      "sectionTitle": "Protocoles de premiers secours",
+      "signsLabel": "Signes d'alarme",
+      "stepsLabel": "Étapes à suivre",
+      "dontDoLabel": "Ce qu'il ne faut PAS faire",
+      "call112": "Appeler le 112",
+      "openContacts": "Mes contacts",
+      "choking": {
+        "title": "Étouffement",
+        "subtitle": "Quelque chose bloque les voies respiratoires",
+        "signs": [
+          "Toux forte, tentatives de vomir sans succès",
+          "Se gratte la bouche désespérément",
+          "Gencives ou langue bleutées",
+          "Respiration difficile ou absente"
+        ],
+        "steps": [
+          "Ouvre la bouche avec précaution et cherche l'objet. Si visible et accessible, retire-le avec les doigts ou une pince.",
+          "Si tu ne le vois pas : pour les petits chiens, tiens-le tête en bas par les pattes arrière et donne 4-5 claques fermes entre les omoplates.",
+          "Pour les chiens moyens ou grands : entoure-le par derrière, mains jointes juste sous la dernière côte, et comprime vers le haut 4-5 fois (Heimlich canin).",
+          "Réinspecte la bouche après chaque tentative.",
+          "Va chez le vétérinaire même si l'objet sort : il peut y avoir des lésions internes."
+        ],
+        "dontDo": [
+          "Ne mets pas les doigts à l'aveugle : tu peux pousser l'objet plus loin",
+          "Ne donne ni eau ni nourriture pour « le faire descendre »",
+          "Ne frappe pas trop fort sur la poitrine d'un petit chiot"
+        ],
+        "whenToCallVet": "Appelle le vétérinaire immédiatement si les gencives deviennent violettes, s'il perd connaissance ou si tu n'arrives pas à sortir l'objet en 1 minute."
+      },
+      "bleeding": {
+        "title": "Saignement",
+        "subtitle": "Plaies avec perte de sang visible",
+        "signs": [
+          "Saignement actif (continu ou pulsé)",
+          "Gencives pâles, faiblesse, vertiges",
+          "Fréquence cardiaque élevée",
+          "Mare de sang ou tissu imbibé"
+        ],
+        "steps": [
+          "Mets des gants si possible. Garde le chien aussi immobile que possible.",
+          "Applique une pression directe avec gaze, tissu ou t-shirt propre pendant au moins 5 minutes sans lever.",
+          "Si le tissu se trempe, ajoute-en un autre par-dessus sans retirer le premier. Continue à presser.",
+          "Si c'est une patte, élève le membre au-dessus du cœur si possible.",
+          "Une fois contrôlé, bande fermement (pas trop serré) et va chez le vétérinaire sans attendre."
+        ],
+        "dontDo": [
+          "Ne retire pas un objet planté (verre, bâton) : peut aggraver le saignement",
+          "Pas de garrots sauf urgence extrême (risque de nécrose)",
+          "Pas d'alcool, eau oxygénée ou désinfectants forts sur des plaies profondes"
+        ],
+        "whenToCallVet": "Tout saignement qui ne s'arrête pas en 5 minutes, du sang par la bouche/anus/urine ou une plaie de plus de 2 cm de profondeur est une urgence immédiate."
+      },
+      "poisoning": {
+        "title": "Intoxication",
+        "subtitle": "A ingéré quelque chose de toxique (chocolat, raisin, raticide…)",
+        "signs": [
+          "Vomissements, diarrhée, salivation excessive",
+          "Tremblements, convulsions, manque de coordination",
+          "Gencives pâles ou bleutées",
+          "Léthargie ou agitation inhabituelle"
+        ],
+        "steps": [
+          "Identifie le toxique : garde l'emballage, la feuille, la plante ou un échantillon du vomi pour le vétérinaire.",
+          "Appelle MAINTENANT le centre antipoison vétérinaire (+33 1 40 05 48 48) et décris ce qui a été ingéré et la quantité.",
+          "Suis leurs instructions à la lettre. NE provoque PAS de vomissement sans confirmation.",
+          "Garde le chien calme, au chaud, dans un endroit sûr jusqu'à l'arrivée chez le vétérinaire.",
+          "Va chez le vétérinaire le plus proche avec l'emballage du toxique."
+        ],
+        "dontDo": [
+          "NE provoque PAS de vomissement après ingestion de produits caustiques (eau de javel, acides), pétroliers ou objets pointus",
+          "Pas de lait, sel, huile ou « remèdes maison » : peuvent aggraver",
+          "N'attends pas l'apparition des symptômes : beaucoup de poisons agissent après plusieurs heures"
+        ],
+        "whenToCallVet": "TOUTE intoxication est une urgence immédiate. Même s'il semble bien, les effets peuvent apparaître après des heures."
+      },
+      "heat_stroke": {
+        "title": "Coup de chaleur",
+        "subtitle": "Hyperthermie due à la chaleur (voiture, exercice, soleil)",
+        "signs": [
+          "Halètement extrême et salive épaisse",
+          "Gencives rouge vif ou violettes",
+          "Vomissement, diarrhée, faiblesse musculaire",
+          "Température rectale supérieure à 40°C"
+        ],
+        "steps": [
+          "Mets-le IMMÉDIATEMENT à l'ombre ou dans un endroit frais et ventilé.",
+          "Mouille-le avec de l'eau tiède (PAS glacée) sur tout le corps, surtout cou, aisselles et aines.",
+          "Mets un ventilateur ou évente-le pour accélérer l'évaporation.",
+          "Offre de petites gorgées d'eau fraîche s'il est conscient et peut avaler.",
+          "Transport urgent chez le vétérinaire même s'il semble récupérer : il peut y avoir des dommages internes."
+        ],
+        "dontDo": [
+          "JAMAIS d'eau glacée ni de glace : provoque une vasoconstriction et aggrave",
+          "Ne l'enveloppe pas dans des serviettes mouillées qui retiennent la chaleur",
+          "Ne le force pas à boire de grandes quantités d'un coup (risque d'aspiration)"
+        ],
+        "whenToCallVet": "Appelle le vétérinaire en route. Une température rectale supérieure à 41°C est potentiellement mortelle et nécessite une hospitalisation."
+      },
+      "seizures": {
+        "title": "Convulsions",
+        "subtitle": "Perte de contrôle du corps, secousses, salivation",
+        "signs": [
+          "Chute au sol et raideur musculaire",
+          "Mouvements involontaires des pattes (pédalage)",
+          "Salivation abondante, perte d'urine ou de selles",
+          "Regard fixe, pas de réponse à ta voix"
+        ],
+        "steps": [
+          "N'essaie PAS de le tenir. Éloigne meubles, escaliers ou objets qui pourraient le blesser.",
+          "Chronomètre dès le début. Une convulsion typique dure 30-90 secondes.",
+          "Parle doucement même s'il semble ne pas entendre ; cela aide à la récupération.",
+          "Une fois terminé, garde-le dans un endroit calme, sombre et silencieux pour récupérer.",
+          "Va toujours chez le vétérinaire après une première convulsion, même s'il semble récupéré."
+        ],
+        "dontDo": [
+          "NE mets PAS les mains ni d'objets dans la bouche : les chiens N'avalent PAS leur langue et tu peux te faire mordre",
+          "Ne crie pas, ne secoue pas, ne le réveille pas brutalement",
+          "Pas de nourriture, eau ou médication pendant ou juste après"
+        ],
+        "whenToCallVet": "URGENCE IMMÉDIATE si : la convulsion dure plus de 2 minutes, plusieurs s'enchaînent sans reprise de conscience, ou si c'est la première fois."
+      },
+      "cpr": {
+        "title": "Arrêt cardiaque / RCP",
+        "subtitle": "Le chien ne respire pas et n'a pas de pouls",
+        "signs": [
+          "Ne répond pas, ne bouge pas",
+          "La poitrine ne se soulève plus",
+          "Pas de pouls senti à la face interne de la cuisse",
+          "Gencives très pâles ou bleutées"
+        ],
+        "steps": [
+          "Allonge-le sur le côté droit sur une surface ferme. Vérifie que les voies respiratoires sont libres (tire la langue vers l'avant).",
+          "Donne 2 insufflations : ferme la gueule, souffle par le nez jusqu'à voir la poitrine se soulever.",
+          "Compressions thoraciques : pour les chiens moyens/grands, presse la partie la plus haute de la cage thoracique avec les deux mains. Pour les petits, utilise une main sur le cœur (coude gauche).",
+          "Rythme : 100-120 compressions par minute (au rythme de « Stayin' Alive »). Profondeur : 1/3 de l'épaisseur du thorax.",
+          "Toutes les 30 compressions, donne 2 insufflations. Continue jusqu'à ce qu'il respire ou que tu arrives chez le vétérinaire."
+        ],
+        "dontDo": [
+          "N'arrête pas la RCP par fatigue en moins de 10 minutes sans assistance vétérinaire",
+          "Ne comprime pas un chien conscient ou qui respire (tu peux casser des côtes)",
+          "Ne place pas la paume sur l'abdomen : tu peux léser des organes"
+        ],
+        "whenToCallVet": "URGENCE MAXIMALE. Si tu es seul, fais 1 minute de RCP, puis appelle le 112 en route vers le vétérinaire le plus proche."
+      }
+    }
+  },
+  "pt": {
+    "title": "Emergências",
+    "subtitle": "Mantém a calma. Cada segundo conta.",
+    "callPrimary": "Ligar ao contacto principal",
+    "callVet": "Veterinário mais próximo",
+    "openMaps": "Abrir no Google Maps",
+    "noPrimaryHint": "Configura um contacto principal",
+    "callNotAvailable": "As chamadas não estão disponíveis neste dispositivo",
+    "vetSearchTerm": "veterinário urgências 24h",
+    "disclaimer": "Este guia é informativo e não substitui os cuidados veterinários. Liga sempre a um profissional em caso de dúvida.",
+    "universalPhones": {
+      "toxicLabel": "Toxicologia veterinária (24h)",
+      "toxic": "+351 808 250 143",
+      "emergencyLabel": "Emergências gerais",
+      "emergency": "112"
+    },
+    "relationship": {
+      "vet": "Veterinário",
+      "backup": "Contacto secundário",
+      "shelter": "Abrigo / associação",
+      "other": "Outro"
+    },
+    "contacts": {
+      "title": "Os meus contactos de emergência",
+      "empty": "Ainda não adicionou nenhum contacto",
+      "add": "Adicionar contacto",
+      "new": "Novo contacto",
+      "edit": "Editar contacto",
+      "deleteConfirm": "Eliminar este contacto?",
+      "primary": "Principal",
+      "call": "Ligar",
+      "makePrimary": "Marcar como principal",
+      "nameLabel": "Nome",
+      "namePlaceholder": "Dra. Costa — Clínica do Centro",
+      "phoneLabel": "Telefone",
+      "relationshipLabel": "Relação",
+      "notesLabel": "Notas (opcional)",
+      "notesPlaceholder": "Horário, morada, etc.",
+      "markPrimary": "Marcar como contacto principal",
+      "markPrimaryHint": "Será o primeiro contacto chamado deste ecrã"
+    },
+    "daily": {
+      "label": "Configura as tuas emergências",
+      "message": "Adiciona um contacto e tem os protocolos à mão",
+      "cta": "Configurar"
+    },
+    "protocols": {
+      "sectionTitle": "Protocolos de primeiros socorros",
+      "signsLabel": "Sinais de alarme",
+      "stepsLabel": "Passos a seguir",
+      "dontDoLabel": "O que NÃO fazer",
+      "call112": "Ligar 112",
+      "openContacts": "Os meus contactos",
+      "choking": {
+        "title": "Engasgamento",
+        "subtitle": "Algo bloqueia as vias respiratórias",
+        "signs": [
+          "Tosse forte, tenta vomitar sem sucesso",
+          "Esfrega a boca com as patas desesperadamente",
+          "Gengivas ou língua azuladas",
+          "Respira com dificuldade ou não respira"
+        ],
+        "steps": [
+          "Abre a boca com cuidado e olha se vês o objeto. Se visível e acessível, retira-o com os dedos ou pinças.",
+          "Se NÃO o vês: em cães pequenos, pega-o de cabeça para baixo pelas patas traseiras e dá 4-5 palmadas firmes entre as omoplatas.",
+          "Em cães médios ou grandes: rodeia-o por trás com os braços, junta as mãos logo abaixo da última costela e comprime para cima 4-5 vezes (Heimlich canino).",
+          "Repete a inspeção da boca após cada tentativa.",
+          "Vai ao veterinário mesmo que o objeto saia: pode haver lesões internas."
+        ],
+        "dontDo": [
+          "Não metas os dedos às cegas: podes empurrar o objeto mais para dentro",
+          "Não dês de beber ou comer para «empurrar»",
+          "Não bates com força excessiva no peito de um cachorro pequeno"
+        ],
+        "whenToCallVet": "Liga ao vet imediatamente se as gengivas ficarem roxas, se perde consciência ou se em 1 minuto não consegues retirar o objeto."
+      },
+      "bleeding": {
+        "title": "Sangramento",
+        "subtitle": "Feridas com perda de sangue visível",
+        "signs": [
+          "Sangramento ativo (contínuo ou pulsátil)",
+          "Gengivas pálidas, fraqueza, tonturas",
+          "Frequência cardíaca acelerada",
+          "Poça de sangue ou roupa encharcada"
+        ],
+        "steps": [
+          "Põe luvas se tiveres. Mantém o cão o mais quieto possível.",
+          "Aplica pressão direta com gaze, pano ou t-shirt limpa por pelo menos 5 minutos sem levantar.",
+          "Se o pano se encharcar, adiciona outro por cima sem retirar o primeiro. Continua a pressionar.",
+          "Se for uma pata, eleva o membro acima do coração se possível.",
+          "Uma vez controlado, ata firmemente (não muito apertado) e vai ao vet sem esperar."
+        ],
+        "dontDo": [
+          "Não retires um objeto cravado (vidro, pau): pode piorar o sangramento",
+          "Não uses torniquetes salvo emergência extrema (risco de necrose)",
+          "Não apliques álcool, água oxigenada ou desinfetantes fortes em feridas profundas"
+        ],
+        "whenToCallVet": "Qualquer sangramento que não pare em 5 minutos, sangue pela boca/ânus/urina ou ferida com mais de 2 cm de profundidade é emergência veterinária imediata."
+      },
+      "poisoning": {
+        "title": "Intoxicação",
+        "subtitle": "Ingeriu algo tóxico (chocolate, uvas, raticida…)",
+        "signs": [
+          "Vómitos, diarreia, baba excessiva",
+          "Tremores, convulsões, descoordenação",
+          "Gengivas pálidas ou azuladas",
+          "Letargia ou agitação invulgar"
+        ],
+        "steps": [
+          "Identifica o tóxico: guarda a embalagem, folha, planta ou amostra do vómito para mostrar ao vet.",
+          "Liga JÁ ao centro de toxicologia veterinária (+351 808 250 143) e descreve o que comeu e quanto.",
+          "Segue as instruções à risca. NÃO induzas vómito sem confirmação.",
+          "Mantém o cão tranquilo, agasalhado e em local seguro até chegar ao vet.",
+          "Vai ao veterinário mais próximo com a embalagem do tóxico."
+        ],
+        "dontDo": [
+          "NÃO induzas vómito se ingeriu algo cáustico (lixívia, ácidos), derivados do petróleo ou objeto pontiagudo",
+          "Não dês leite, sal, óleo ou «remédios caseiros»: podem agravar",
+          "Não esperes pelos sintomas: muitos venenos atuam horas depois"
+        ],
+        "whenToCallVet": "TODA a intoxicação é emergência imediata. Mesmo que pareça bem, os efeitos podem demorar horas."
+      },
+      "heat_stroke": {
+        "title": "Golpe de calor",
+        "subtitle": "Hipertermia por calor (carro, exercício, sol)",
+        "signs": [
+          "Ofegação extrema e baba espessa",
+          "Gengivas vermelhas brilhantes ou roxas",
+          "Vómito, diarreia, fraqueza muscular",
+          "Temperatura retal acima de 40°C"
+        ],
+        "steps": [
+          "Leva-o IMEDIATAMENTE para a sombra ou local fresco e ventilado.",
+          "Molha-o com água morna (NÃO gelada) por todo o corpo, especialmente pescoço, axilas e virilhas.",
+          "Põe um ventilador ou abana-o para acelerar a evaporação.",
+          "Oferece pequenos goles de água fresca se estiver consciente e capaz de engolir.",
+          "Transporte urgente para o vet mesmo que pareça recuperar: pode haver dano interno."
+        ],
+        "dontDo": [
+          "NUNCA uses água gelada nem gelo: provoca vasoconstrição e piora",
+          "Não envolvas o cão em toalhas molhadas que retenham calor",
+          "Não o obrigues a beber grandes quantidades de uma vez (risco de aspiração)"
+        ],
+        "whenToCallVet": "Liga ao vet a caminho. Temperatura retal superior a 41°C é potencialmente mortal e exige hospitalização."
+      },
+      "seizures": {
+        "title": "Convulsões",
+        "subtitle": "Perde controlo do corpo, sacudidelas, salivação",
+        "signs": [
+          "Queda ao chão e rigidez muscular",
+          "Movimentos involuntários das patas (pedalar)",
+          "Salivação abundante, perda de urina ou fezes",
+          "Olhar fixo, sem resposta à tua voz"
+        ],
+        "steps": [
+          "NÃO tentes segurá-lo. Afasta móveis, escadas ou objetos que possam magoá-lo.",
+          "Cronometra desde o início. Uma convulsão típica dura 30-90 segundos.",
+          "Fala suavemente mesmo que pareça não ouvir; ajuda na recuperação.",
+          "Quando terminar, mantém-no num local calmo, escuro e silencioso para recuperar.",
+          "Vai sempre ao vet após uma primeira convulsão, mesmo que pareça recuperado."
+        ],
+        "dontDo": [
+          "NÃO metas as mãos nem objetos na boca: os cães NÃO engolem a língua e podes ser mordido",
+          "Não grites, sacudas nem o tentes acordar bruscamente",
+          "Não dês comida, água ou medicação durante ou logo a seguir"
+        ],
+        "whenToCallVet": "EMERGÊNCIA IMEDIATA se: a convulsão dura mais de 2 minutos, várias seguidas sem recuperar consciência, ou se é a primeira vez."
+      },
+      "cpr": {
+        "title": "Paragem cardíaca / RCP",
+        "subtitle": "O cão não respira e não tem pulso",
+        "signs": [
+          "Não responde, não se mexe",
+          "O peito não sobe nem desce",
+          "Não sentes pulso na face interna da coxa",
+          "Gengivas muito pálidas ou azuladas"
+        ],
+        "steps": [
+          "Deita-o sobre o lado direito numa superfície firme. Verifica que a via aérea está livre (puxa a língua para a frente).",
+          "Dá 2 ventilações: fecha a boca, sopra pelo nariz até veres o peito subir.",
+          "Compressões torácicas: em cães médios/grandes pressiona a parte mais alta da grade torácica com ambas as mãos. Em pequenos usa uma mão sobre o coração (cotovelo esquerdo).",
+          "Ritmo: 100-120 compressões por minuto (ao ritmo de «Stayin' Alive»). Profundidade: 1/3 da espessura do tórax.",
+          "A cada 30 compressões, dá 2 ventilações. Continua até respirar ou chegar ao vet."
+        ],
+        "dontDo": [
+          "Não pares a RCP por cansaço em menos de 10 minutos sem ajuda veterinária",
+          "Não comprimas em cães conscientes ou que respiram (podes partir costelas)",
+          "Não coloques a palma sobre o abdómen: podes lesar órgãos"
+        ],
+        "whenToCallVet": "EMERGÊNCIA MÁXIMA. Se estás sozinho, faz 1 minuto de RCP, depois liga 112 enquanto conduzes para o vet mais próximo."
+      }
+    }
+  },
+  "de": {
+    "title": "Notfälle",
+    "subtitle": "Bleib ruhig. Jede Sekunde zählt.",
+    "callPrimary": "Hauptkontakt anrufen",
+    "callVet": "Nächster Tierarzt",
+    "openMaps": "In Google Maps öffnen",
+    "noPrimaryHint": "Lege einen Hauptkontakt fest",
+    "callNotAvailable": "Anrufe sind auf diesem Gerät nicht verfügbar",
+    "vetSearchTerm": "Tierarzt Notdienst 24h",
+    "disclaimer": "Diese Anleitung ist informativ und ersetzt keine tierärztliche Versorgung. Rufe im Zweifel immer einen Profi an.",
+    "universalPhones": {
+      "toxicLabel": "Tierärztliche Toxikologie (24h)",
+      "toxic": "+49 30 19240",
+      "emergencyLabel": "Allgemeine Notrufe",
+      "emergency": "112"
+    },
+    "relationship": {
+      "vet": "Tierarzt",
+      "backup": "Zweiter Kontakt",
+      "shelter": "Tierheim / Verein",
+      "other": "Sonstige"
+    },
+    "contacts": {
+      "title": "Meine Notfallkontakte",
+      "empty": "Du hast noch keine Kontakte hinzugefügt",
+      "add": "Kontakt hinzufügen",
+      "new": "Neuer Kontakt",
+      "edit": "Kontakt bearbeiten",
+      "deleteConfirm": "Diesen Kontakt löschen?",
+      "primary": "Haupt",
+      "call": "Anrufen",
+      "makePrimary": "Als Hauptkontakt markieren",
+      "nameLabel": "Name",
+      "namePlaceholder": "Dr. Müller — Tierklinik Mitte",
+      "phoneLabel": "Telefon",
+      "relationshipLabel": "Beziehung",
+      "notesLabel": "Notizen (optional)",
+      "notesPlaceholder": "Öffnungszeiten, Adresse, etc.",
+      "markPrimary": "Als Hauptkontakt markieren",
+      "markPrimaryHint": "Wird zuerst von diesem Bildschirm angerufen"
+    },
+    "daily": {
+      "label": "Notfälle einrichten",
+      "message": "Füge einen Kontakt hinzu und habe Protokolle zur Hand",
+      "cta": "Einrichten"
+    },
+    "protocols": {
+      "sectionTitle": "Erste-Hilfe-Protokolle",
+      "signsLabel": "Warnzeichen",
+      "stepsLabel": "Schritte",
+      "dontDoLabel": "Was NICHT tun",
+      "call112": "112 anrufen",
+      "openContacts": "Meine Kontakte",
+      "choking": {
+        "title": "Ersticken",
+        "subtitle": "Etwas blockiert die Atemwege des Hundes",
+        "signs": [
+          "Starker Husten, erfolgloses Würgen",
+          "Verzweifelt mit Pfoten ans Maul",
+          "Bläuliches Zahnfleisch oder Zunge",
+          "Atemnot oder keine Atmung"
+        ],
+        "steps": [
+          "Öffne vorsichtig das Maul und schau nach dem Objekt. Wenn sichtbar und erreichbar, entferne es mit Fingern oder Pinzette.",
+          "Wenn nicht sichtbar: bei kleinen Hunden, halte sie kopfüber an den Hinterläufen und gib 4-5 feste Schläge zwischen die Schulterblätter.",
+          "Bei mittleren oder großen Hunden: umarme sie von hinten, Hände direkt unter der letzten Rippe, und komprimiere 4-5 mal nach oben (Heimlich für Hunde).",
+          "Untersuche das Maul nach jedem Versuch erneut.",
+          "Geh auch zum Tierarzt, wenn das Objekt herauskommt — es können innere Verletzungen vorliegen."
+        ],
+        "dontDo": [
+          "Stecke nicht blind die Finger hinein: du kannst das Objekt tiefer schieben",
+          "Gib weder Wasser noch Futter, um es «herunter zu spülen»",
+          "Schlage nicht zu fest auf die Brust eines kleinen Welpen"
+        ],
+        "whenToCallVet": "Rufe sofort den Tierarzt, wenn das Zahnfleisch lila wird, der Hund das Bewusstsein verliert oder du das Objekt nicht innerhalb 1 Minute herausbekommst."
+      },
+      "bleeding": {
+        "title": "Blutung",
+        "subtitle": "Wunden mit sichtbarem Blutverlust",
+        "signs": [
+          "Aktive Blutung (kontinuierlich oder pulsierend)",
+          "Blasses Zahnfleisch, Schwäche, Schwindel",
+          "Erhöhter Herzschlag",
+          "Blutlache oder durchnässte Kleidung"
+        ],
+        "steps": [
+          "Ziehe Handschuhe an, wenn vorhanden. Halte den Hund so ruhig wie möglich.",
+          "Übe direkten Druck mit Mull, Tuch oder sauberem T-Shirt mindestens 5 Minuten lang aus, ohne abzuheben.",
+          "Wenn das Tuch durchnässt, lege ein weiteres darüber, ohne das erste zu entfernen. Drücke weiter.",
+          "Bei einem Bein, hebe die Gliedmaße möglichst über Herzhöhe.",
+          "Wenn unter Kontrolle, verbinde fest (nicht zu stramm) und fahr ohne Verzögerung zum Tierarzt."
+        ],
+        "dontDo": [
+          "Entferne keinen eingedrungenen Gegenstand (Glas, Stock): kann die Blutung verschlimmern",
+          "Keine Tourniquets außer in extremen Notfällen (Nekrose-Risiko)",
+          "Kein Alkohol, Wasserstoffperoxid oder starke Desinfektionsmittel auf tiefen Wunden"
+        ],
+        "whenToCallVet": "Jede Blutung, die nicht in 5 Minuten stoppt, Blut aus Mund/After/Urin oder Wunde tiefer als 2 cm ist sofortiger tierärztlicher Notfall."
+      },
+      "poisoning": {
+        "title": "Vergiftung",
+        "subtitle": "Hat etwas Giftiges geschluckt (Schokolade, Trauben, Rattengift…)",
+        "signs": [
+          "Erbrechen, Durchfall, übermäßiger Speichelfluss",
+          "Zittern, Krämpfe, Koordinationsverlust",
+          "Blasses oder bläuliches Zahnfleisch",
+          "Lethargie oder ungewöhnliche Erregung"
+        ],
+        "steps": [
+          "Identifiziere das Gift: Bewahre Verpackung, Blatt, Pflanze oder Erbrochenes-Probe für den Tierarzt auf.",
+          "Rufe SOFORT den Giftnotruf an (+49 30 19240) und beschreibe was und wie viel gefressen wurde.",
+          "Befolge die Anweisungen genau. Erbrechen NICHT ohne Bestätigung herbeiführen.",
+          "Halte den Hund ruhig, warm und in einem sicheren Ort bis zum Tierarzt.",
+          "Geh zum nächsten Tierarzt mit der Verpackung des Gifts."
+        ],
+        "dontDo": [
+          "Erbrechen NICHT herbeiführen bei ätzenden Substanzen (Bleichmittel, Säuren), Erdölprodukten oder spitzen Objekten",
+          "Keine Milch, Salz, Öl oder «Hausmittel»: können verschlimmern",
+          "Warte nicht auf Symptome: viele Gifte wirken erst nach Stunden"
+        ],
+        "whenToCallVet": "JEDE Vergiftung ist ein sofortiger Notfall. Auch wenn er gesund wirkt, können Effekte Stunden später auftreten."
+      },
+      "heat_stroke": {
+        "title": "Hitzschlag",
+        "subtitle": "Hyperthermie durch Hitze (Auto, Anstrengung, Sonne)",
+        "signs": [
+          "Extremes Hecheln und dicker Speichel",
+          "Hellrotes oder lila Zahnfleisch",
+          "Erbrechen, Durchfall, Muskelschwäche",
+          "Rektaltemperatur über 40°C"
+        ],
+        "steps": [
+          "Bring ihn SOFORT in den Schatten oder einen kühlen, gut belüfteten Ort.",
+          "Befeuchte ihn mit lauwarmem (NICHT eiskaltem) Wasser am ganzen Körper, besonders Hals, Achseln und Leisten.",
+          "Stelle einen Ventilator auf oder fächere ihn, um die Verdunstung zu beschleunigen.",
+          "Biete kleine Schlucke kühles Wasser an, wenn er bei Bewusstsein ist und schlucken kann.",
+          "Dringender Transport zum Tierarzt, auch wenn er sich zu erholen scheint: innere Schäden möglich."
+        ],
+        "dontDo": [
+          "NIEMALS Eiswasser oder Eis verwenden: verursacht Vasokonstriktion und verschlimmert",
+          "Wickle den Hund nicht in nasse Handtücher, die Hitze speichern",
+          "Zwinge ihn nicht, große Mengen auf einmal zu trinken (Aspirationsrisiko)"
+        ],
+        "whenToCallVet": "Rufe den Tierarzt unterwegs an. Rektaltemperatur über 41°C ist potenziell tödlich und erfordert Hospitalisierung."
+      },
+      "seizures": {
+        "title": "Krampfanfälle",
+        "subtitle": "Verlust der Körperkontrolle, Zuckungen, Speicheln",
+        "signs": [
+          "Sturz auf den Boden und Muskelsteifheit",
+          "Unwillkürliche Beinbewegungen wie Treten",
+          "Starkes Speicheln, Verlust von Urin oder Kot",
+          "Starrer Blick, keine Reaktion auf deine Stimme"
+        ],
+        "steps": [
+          "Versuche NICHT, ihn festzuhalten. Entferne Möbel, Treppen oder Gegenstände, die ihn verletzen könnten.",
+          "Stoppe die Zeit ab Beginn. Ein typischer Anfall dauert 30-90 Sekunden.",
+          "Sprich sanft, auch wenn er nicht zu hören scheint; es hilft beim Aufwachen.",
+          "Wenn vorbei, halte ihn an einem ruhigen, dunklen, leisen Ort zur Erholung.",
+          "Geh nach einem ersten Anfall immer zum Tierarzt, auch wenn er erholt wirkt."
+        ],
+        "dontDo": [
+          "STECKE KEINE Hände oder Gegenstände in das Maul: Hunde verschlucken NICHT ihre Zunge und du kannst gebissen werden",
+          "Schreie nicht, schüttele nicht und versuche nicht, ihn abrupt zu wecken",
+          "Gib weder Futter, Wasser noch Medikamente während oder direkt danach"
+        ],
+        "whenToCallVet": "SOFORTIGER NOTFALL wenn: der Anfall länger als 2 Minuten dauert, mehrere ohne Bewusstseinsrückkehr aufeinander folgen, oder es das erste Mal ist."
+      },
+      "cpr": {
+        "title": "Herzstillstand / HLW",
+        "subtitle": "Der Hund atmet nicht und hat keinen Puls",
+        "signs": [
+          "Reagiert nicht, bewegt sich nicht",
+          "Brust hebt und senkt sich nicht",
+          "Kein Puls an der Innenseite des Oberschenkels",
+          "Sehr blasses oder bläuliches Zahnfleisch"
+        ],
+        "steps": [
+          "Lege ihn auf die rechte Seite auf eine feste Unterlage. Prüfe, ob die Atemwege frei sind (ziehe die Zunge nach vorne).",
+          "Gib 2 Beatmungen: schließe das Maul, blase durch die Nase, bis sich der Brustkorb hebt.",
+          "Brustkompressionen: bei mittleren/großen Hunden mit beiden Händen auf den höchsten Teil des Brustkorbs drücken. Bei kleinen eine Hand über das Herz (linker Ellbogen).",
+          "Rhythmus: 100-120 Kompressionen pro Minute (im Takt von «Stayin' Alive»). Tiefe: 1/3 der Brustdicke.",
+          "Nach jeweils 30 Kompressionen 2 Beatmungen. Weiter bis er atmet oder der Tierarzt erreicht ist."
+        ],
+        "dontDo": [
+          "Brich die HLW nicht aus Erschöpfung in weniger als 10 Minuten ohne tierärztliche Hilfe ab",
+          "Komprimiere nicht bei bewusstem oder atmendem Hund (du kannst Rippen brechen)",
+          "Lege die Handfläche nicht auf den Bauch: du kannst Organe verletzen"
+        ],
+        "whenToCallVet": "MAXIMALER NOTFALL. Wenn du allein bist, mache 1 Minute HLW, dann rufe 112 während du zum nächsten Tierarzt fährst."
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "title": "Au pied",
+  "subtitle": "Marcher avec précision aux côtés du guide, attentif et contrôlé",
+  "level": "Intermédiaire",
+  "duration": "10–15 min par séance",
+  "location": "Maison, jardin, rue calme",
+  "ageRecommendation": "Dès 12 semaines",
+  "estimatedSessions": "10–15 séances pour maîtriser",
+  "objective": "Apprendre au chien à marcher avec précision au côté gauche du guide, en le regardant, sans tirer, en incluant les arrêts et les virages. Plus précis et exigeant que la marche en laisse détendue.",
+  "why": [
+    "Permet un contrôle total dans les environnements bondés ou dangereux sans recourir à la force",
+    "Développe l'attention et le lien : le chien vous regarde, pas le monde",
+    "Base pour les sports canins (obéissance, Rally-O, agility) et les promenades tranquilles",
+    "Un chien qui marche 'au pied' ne tire jamais et rend les promenades agréables"
+  ],
+  "benefits": [
+    "Promenades sans tension sur la laisse même avec de fortes distractions",
+    "Plus grande sécurité lors des traversées ou dans les zones à fort trafic",
+    "Le chien apprend à se concentrer sur vous comme source d'informations et de récompenses",
+    "Sert de base pour une excellente communication lors de toute activité"
+  ],
+  "where": [
+    "🏠 Commencez à la maison ou dans un long couloir sans distractions",
+    "🌿 Progressez vers le jardin ou une zone clôturée",
+    "🛣️ Pratiquez finalement dans la rue avec de vraies distractions"
+  ],
+  "materials": [
+    "🫖 Friandises de très haute valeur (poulet cuit, saucisse, fromage)",
+    "🦮 Courte laisse de 1–1,5 m pour commencer",
+    "🎯 Clicker ou marqueur verbal cohérent ('oui' ou 'bien')",
+    "💛 Patience et de nombreuses pauses"
+  ],
+  "beforeYouStart": [
+    "Le chien doit connaître 'assis' avec fluidité avant de commencer le 'au pied'",
+    "Décidez dès le début que le 'au pied' sera toujours à votre côté GAUCHE : soyez cohérent",
+    "Courtes séances de 5–10 minutes avec de nombreuses pauses : le 'au pied' est cognitivement exigeant",
+    "Ayez des friandises de valeur maximale dans votre main gauche : le chien apprend à suivre cette main",
+    "Ne pratiquez pas après une longue promenade d'exercice : le chien doit être alerte"
+  ],
+  "methods": [
+    {
+      "id": "left_lure",
+      "title": "Méthode du leurre main gauche (début recommandé)",
+      "description": "Vous tenez la friandise dans votre main gauche à hauteur de la hanche. Le chien apprend que rester à votre côté gauche produit des récompenses continues. Construite la position 'au pied' avant d'ajouter du mouvement.",
+      "bestFor": "Chiens sans expérience du 'au pied' ou chiots qui débutent de zéro",
+      "steps": [
+        {
+          "title": "Position de départ : chien assis à votre gauche",
+          "description": "Le chien assis à votre côté gauche, regardant dans la même direction que vous. C'est la position 'au pied' initiale.",
+          "tip": "Récompensez plusieurs fois simplement pour être dans cette position. L'espace près de votre hanche gauche = zone de récompenses.",
+          "troubleshooting": "Si le chien se met devant vous, utilisez un mur à votre droite pour limiter son espace."
+        },
+        {
+          "title": "Friandise à hauteur de la hanche gauche",
+          "description": "Tenez la friandise dans votre main gauche à hauteur de votre hanche. Le chien étire le cou vers le haut en cherchant la friandise.",
+          "tip": "Votre main gauche est l'ancre du chien. Elle doit toujours être au même endroit.",
+          "troubleshooting": "Si le chien saute pour attraper la friandise, baissez légèrement la main. Ne récompensez que quand ses pattes sont au sol."
+        },
+        {
+          "title": "Premier pas ensemble",
+          "description": "Faites un seul pas en avant avec votre pied gauche et dites 'au pied'. Si le chien vous suit en position, récompensez immédiatement.",
+          "tip": "Un pas, une récompense. Ne demandez pas plus de distance que le chien ne peut maintenir en position.",
+          "troubleshooting": "S'il se précipite devant, arrêtez-vous net et attendez qu'il revienne à votre côté avant de continuer."
+        },
+        {
+          "title": "Augmentez les pas progressivement",
+          "description": "De 1 pas → 3 → 5 → 10 → le tour du pâté de maisons. Récompensez au moins tous les 3–5 pas en position correcte.",
+          "tip": "La fréquence de renforcement est clé au début : récompensez souvent pour garder le chien engagé à votre côté."
+        },
+        {
+          "title": "Introduisez les arrêts et les virages",
+          "description": "Ajoutez un arrêt : quand vous vous arrêtez, le chien doit s'asseoir automatiquement à votre côté. Introduisez les virages : courbes douces à gauche et à droite.",
+          "tip": "Anticipez les virages par un léger ralentissement pour laisser au chien le temps de s'adapter."
+        }
+      ]
+    },
+    {
+      "id": "circles",
+      "title": "Méthode des cercles (pour maintenir le rythme et l'attention)",
+      "description": "Vous marchez en cercles serrés vers le côté du chien (gauche), ce qui le force à accélérer le pas pour maintenir sa position. Excellent pour renforcer l'attention et le rythme.",
+      "bestFor": "Chiens qui prennent du retard ou qui ont tendance à perdre leur position en ligne droite",
+      "steps": [
+        {
+          "title": "Petits cercles vers la gauche",
+          "description": "Commencez à marcher en petits cercles tournant vers la gauche. Le chien doit accélérer pour rester à votre côté.",
+          "tip": "Les cercles vers la gauche sont plus exigeants pour le chien (il parcourt plus de chemin). Ceux vers la droite sont plus faciles.",
+          "troubleshooting": "Si le chien se précipite devant, réduisez le rayon du cercle pour qu'il ait moins d'espace pour passer devant."
+        },
+        {
+          "title": "Récompensez la bonne position dans le cercle",
+          "description": "Chaque fois que le chien est en bonne position (épaule près de votre hanche gauche), récompensez.",
+          "tip": "La récompense vient de votre main gauche vers le bas. Ne faites pas sauter le chien pour l'obtenir."
+        },
+        {
+          "title": "Alternez cercles et ligne droite",
+          "description": "Après les cercles, marchez en ligne droite quelques pas. Le chien aura déjà appris le rythme et la position des cercles.",
+          "tip": "La transition des cercles à la ligne droite est le moment de consolider le comportement."
+        },
+        {
+          "title": "Réduisez progressivement le renforcement",
+          "description": "Avec le temps, récompensez tous les 10, 20 puis 50 pas plutôt que tous les quelques pas. Gardez le chien dans une incertitude positive sur le moment de la récompense.",
+          "tip": "Récompensez de façon variable : parfois 5 pas, parfois 20. La variabilité maintient l'attention mieux que la routine."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Tirer sur la laisse pour maintenir le chien en position",
+      "cause": "Vouloir des résultats rapides sans travail de positionnement",
+      "fix": "Le 'au pied' s'enseigne avec des friandises et du positionnement, jamais avec une pression de laisse. La laisse doit être un accessoire de sécurité, pas de contrôle."
+    },
+    {
+      "error": "Séances trop longues qui ennuient ou épuisent le chien",
+      "cause": "Vouloir avancer rapidement",
+      "fix": "Le 'au pied' est mentalement intense. Séances de 5–10 minutes avec de nombreuses pauses de jeu libre."
+    },
+    {
+      "error": "Passer dans la rue avant de consolider à l'intérieur",
+      "cause": "Passer trop vite à l'environnement réel",
+      "fix": "Consolidez d'abord à l'intérieur, puis dans le jardin, puis dans une rue calme, puis une rue avec distractions. Chaque contexte nécessite un renforcement supplémentaire."
+    },
+    {
+      "error": "Alterner entre côté gauche et droit selon les jours",
+      "cause": "Manque de cohérence dans la position",
+      "fix": "Choisissez UN côté (conventionnellement gauche) et soyez cohérent. Le chien apprend une position spécifique, pas 'n'importe quel côté'."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien me regarde mais prend du retard",
+      "solution": "Le rythme est trop lent pour lui. Augmentez-le légèrement. Les chiens qui prennent du retard s'améliorent fréquemment quand vous accélérez le pas."
+    },
+    {
+      "problem": "Maintient la position 10 pas mais se distrait ensuite et se précipite devant",
+      "solution": "Le renforcement a été espacé trop tôt. Revenez à récompenser tous les 3–5 pas jusqu'à ce que la position soit plus solide."
+    },
+    {
+      "problem": "Fonctionne en ligne droite mais perd la position dans les virages",
+      "solution": "Les virages sont plus difficiles. Pratiquez uniquement les virages pendant une séance entière, en récompensant chaque virage correct indépendamment."
+    },
+    {
+      "problem": "Fonctionne seulement avec la friandise visible en main ; sans friandise, il ne le fait pas",
+      "solution": "Éliminez progressivement la main avec friandise : d'abord en main, puis en poche mais en la sortant pour récompenser, puis dans une sacoche. Le chien doit apprendre que la récompense peut apparaître à tout moment."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séance 1–3",
+      "goal": "Le chien suit la main gauche en bonne position pendant 5–10 pas"
+    },
+    {
+      "stage": "Séance 4–7",
+      "goal": "Maintient la position en ligne droite pendant 20–30 pas avec un renforcement fréquent"
+    },
+    {
+      "stage": "Semaine 2–3",
+      "goal": "Exécute le 'au pied' en incluant les arrêts (avec assis automatique) et les virages doux"
+    },
+    {
+      "stage": "Mois 1+",
+      "goal": "Marche 'au pied' en extérieur avec des distractions modérées pendant 1–2 minutes sans friandise visible"
+    }
+  ],
+  "successSigns": [
+    "Le chien établit régulièrement un contact visuel en marchant à votre côté",
+    "L'épaule du chien reste alignée avec votre hanche gauche pendant au moins 30 pas consécutifs",
+    "S'assoit automatiquement quand vous vous arrêtez",
+    "Maintient la position dans les virages sans guidage physique"
+  ],
+  "variations": [
+    "Au pied avec changements de rythme (très lent → trot)",
+    "Au pied entre des obstacles (cônes, chaises)",
+    "Au pied avec d'autres chiens ou personnes passant à proximité",
+    "Au pied sans laisse dans une zone sécurisée (avancé)",
+    "Au pied avec un huit entre les jambes du guide"
+  ],
+  "safetyNotes": [
+    "N'utilisez jamais de colliers étrangleurs, à picots ou électriques pour enseigner le 'au pied' : ils sont contre-productifs et nuisibles",
+    "Si le chien a des problèmes de hanches ou d'articulations, consultez le vétérinaire avant de longues séances de 'au pied'",
+    "Emportez toujours de l'eau pour les séances de plus de 10 minutes par temps chaud",
+    "Ne pratiquez pas le 'au pied' avec peu de renforcement dans des zones à fort trafic tant que le comportement n'est pas très solide"
+  ],
+  "funFact": "Le 'Heelwork to Music' est un sport canin dans lequel le chien réalise des chorégraphies précises en rythme avec de la musique. Certains chiens apprennent jusqu'à 20 positions différentes !",
+  "nextLevel": "Introduisez le 'au pied' sans laisse dans des espaces fermés. Puis pratiquez le 'au pied' avec d'autres chiens ou personnes qui passent. Enfin, combinez-le avec d'autres commandes (au pied → reste → au pied).",
+  "proTip": "Le regard du chien dans vos yeux est la clé du 'au pied' avancé. Récompensez spécifiquement les moments de contact visuel : 'vous regarde = vous suit = récompense'. Construisez le contact visuel avant d'exiger une position parfaite."
+}

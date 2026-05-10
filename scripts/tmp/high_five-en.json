@@ -1,0 +1,158 @@
+{
+  "title": "High Five",
+  "subtitle": "The coolest greeting between dog and owner — paw meets palm!",
+  "level": "Intermediate",
+  "duration": "5–10 min per session",
+  "location": "Home or garden",
+  "ageRecommendation": "From 5 months",
+  "estimatedSessions": "6–10 sessions to master",
+  "objective": "Teach the dog to raise a paw vertically and touch the owner's open palm, responding to the verbal cue “high five” or a vertical open palm.",
+  "why": [
+    "It's one of the most photogenic and fun tricks to share",
+    "Requires the dog to differentiate between “shake” (horizontal) and “high five” (vertical)",
+    "Builds coordination and awareness of paw position",
+    "Creates close, positive interaction with the owner and with new people"
+  ],
+  "benefits": [
+    "Improves focus and attention because the dog must watch the palm",
+    "Creates a shared celebration ritual — perfect for reinforcing good behaviour",
+    "It's a stepping stone to more complex tricks like clapping or targeting objects",
+    "Children love it and it makes socialisation with new people more positive"
+  ],
+  "where": [
+    "🏠 Indoors, in the living room or kitchen",
+    "🌿 In the garden or park once it's well mastered",
+    "🔇 Without distractions at first — the trick requires precision"
+  ],
+  "materials": [
+    "🫖 High-value treats (cooked chicken, cheese, sausage)",
+    "🖐️ Your open palm as the visual cue",
+    "🛟 Non-slip surface for better stability",
+    "💛 An enthusiastic vocal celebration for every success"
+  ],
+  "beforeYouStart": [
+    "Your dog should know “shake” reliably before starting",
+    "Make sure the surface is non-slip so the dog feels secure raising a paw",
+    "Prepare 20 small treats per session",
+    "Start with the dog's dominant paw (usually the left)",
+    "Keep sessions to 5–7 minutes maximum"
+  ],
+  "methods": [
+    {
+      "id": "paw_to_vertical",
+      "title": "Progressive paw elevation method",
+      "description": "Start from shake at the normal low position and raise your palm gradually session by session until it is fully vertical. The dog learns that it must lift its paw higher each time to make contact.",
+      "bestFor": "Dogs that already know shake",
+      "steps": [
+        {
+          "title": "Shake at normal height",
+          "description": "Cue “shake” with your palm facing up at the usual height. Mark and reward when it touches your hand.",
+          "tip": "This is the starting point. Do 5 repetitions to warm up.",
+          "troubleshooting": "If shake isn't reliable, spend 2–3 sessions consolidating it first."
+        },
+        {
+          "title": "Raise the palm gradually",
+          "description": "Each session, raise your palm a few centimetres. The dog will have to lift its paw higher to touch it. Keep the palm horizontal at first.",
+          "tip": "Don't raise more than 3–5 cm per session. Gradual progression is the key.",
+          "troubleshooting": "If the dog can't reach the hand, lower a little and work that height more before going higher."
+        },
+        {
+          "title": "Rotate palm to vertical",
+          "description": "Once the dog brings its paw up to chest height, start rotating your palm to a vertical position (as if offering a handshake to someone). The dog will touch the palm head-on.",
+          "tip": "The visual cue of a vertical palm will become the definitive signal for “high five”."
+        },
+        {
+          "title": "Introduce the “high five” cue",
+          "description": "When the dog consistently touches your vertical palm, add “high five” just before extending your hand. Mark the contact and reward enthusiastically.",
+          "tip": "Use a festive, celebratory tone — this trick deserves a party.",
+          "troubleshooting": "If it confuses “high five” with “shake”, work them in different contexts and use clearly different gestures."
+        },
+        {
+          "title": "Differentiate between shake and high five",
+          "description": "Practice alternating both signals so the dog distinguishes them: palm horizontal facing down = “shake”; palm vertical facing the dog = “high five”. Reward the correct response with higher value.",
+          "tip": "Signal differentiation is the most advanced level. Don't rush it."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Raising the hand too fast before the dog consolidates each height",
+      "cause": "Impatience to reach the full high five",
+      "fix": "Spend at least 2 sessions at each height before going higher. Quality matters more than speed."
+    },
+    {
+      "error": "Accepting the dog scratching the hand instead of touching with a flat paw",
+      "cause": "Not marking precisely what type of contact is wanted",
+      "fix": "Only mark clean flat-paw contact. Ignore scratches without rewarding them."
+    },
+    {
+      "error": "Not differentiating the visual signals between shake and high five",
+      "cause": "Using the same gesture for both tricks",
+      "fix": "Horizontal palm for “shake”, vertical palm for “high five”. Train this difference actively."
+    },
+    {
+      "error": "Rewarding with low energy — the trick feels boring",
+      "cause": "Sparse or monotone celebration",
+      "fix": "High five deserves euphoria! Raise your voice, smile big, and add a “great job!” with conviction."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The dog touches the hand with its nose instead of its paw",
+      "solution": "Withdraw your hand when the nose approaches and offer it again. Only mark paw contact."
+    },
+    {
+      "problem": "The dog loses balance raising the paw very high",
+      "solution": "Work on a non-slip surface and don't raise the hand so high yet. Balance will improve with practice."
+    },
+    {
+      "problem": "Can't differentiate between “shake” and “high five”",
+      "solution": "Exaggerate the gesture difference and work each signal in separate sessions for a week before mixing them."
+    },
+    {
+      "problem": "Does it well at home but not with other people",
+      "solution": "Start by showing the trick to family members at home. Then with friends. Generalisation takes time."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessions 1–2",
+      "goal": "Raises the paw at least to elbow height in response to the palm"
+    },
+    {
+      "stage": "Sessions 3–5",
+      "goal": "Touches the vertical palm at chest height consistently"
+    },
+    {
+      "stage": "Sessions 6–8",
+      "goal": "Responds to “high five” at full high five height"
+    },
+    {
+      "stage": "Week 3+",
+      "goal": "Clearly differentiates between “shake” and “high five” and does it with other people"
+    }
+  ],
+  "successSigns": [
+    "Raises paw to the vertical palm without hesitation",
+    "Responds to “high five” before even seeing the palm",
+    "Does it with other people besides the owner",
+    "Clearly distinguishes between “shake” and “high five”"
+  ],
+  "variations": [
+    "High five with left paw and right paw",
+    "High five at different heights (low, mid, high)",
+    "High five from a distance (50 cm away)",
+    "Chain high five + bow for a complete routine",
+    "High ten: both paws simultaneously against both palms"
+  ],
+  "safetyNotes": [
+    "Never force the paw upward with your hand — let the dog raise it on its own",
+    "Dogs with shoulder or elbow issues: consult a vet before practicing",
+    "If the dog shows discomfort raising the paw, stop the session and check for limping",
+    "Puppies under 6 months: limit height to protect developing joints"
+  ],
+  "funFact": "Dogs that learn “high five” often start offering it spontaneously when they want attention — your dog may become addicted to giving you high fives out of nowhere.",
+  "nextLevel": "Teach the high ten (both paws at once). Then chain: wave → high five → bow. You have a complete three-trick performance!",
+  "proTip": "When the dog nails a perfect high five, celebrate with the biggest reaction you can manage. Dogs learn fastest when the emotional reward is huge."
+}

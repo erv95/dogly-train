@@ -1,0 +1,150 @@
+{
+  "title": "Répondre à son nom",
+  "subtitle": "La base de toute communication avec votre chien",
+  "level": "Très basique",
+  "duration": "3–5 min par séance",
+  "location": "Maison sans distractions → jardin → extérieur",
+  "ageRecommendation": "À partir de 8 semaines",
+  "estimatedSessions": "2–4 séances pour l’association initiale",
+  "objective": "Faire en sorte que le chien regarde immédiatement son tuteur en entendant son nom, dans n’importe quel contexte.",
+  "why": [
+    "Sans réponse au nom, vous ne pouvez rien lui apprendre d’autre",
+    "Nécessaire pour contrôler le chien dans la rue",
+    "Renforce le lien et l’attention mutuelle",
+    "Base du rappel et de tous les ordres à distance"
+  ],
+  "benefits": [
+    "Votre chien viendra quand vous l’appelez dans les parcs ou chez des amis",
+    "Réduit les accidents : se tourner à son nom évite les dangers (voitures, autres chiens)",
+    "Indispensable pour un rappel d’urgence fiable",
+    "Construit un chien attentif à vous, pas à l’environnement"
+  ],
+  "where": [
+    "🏠 À la maison, dans une pièce calme (séances 1–3)",
+    "🛋️ Différentes pièces (séances 4–6)",
+    "🌿 Jardin ou terrasse (séance 7+)",
+    "🌳 Extérieur peu distrayant (parc vide)"
+  ],
+  "materials": [
+    "🫖 Friandises à très haute valeur (fromage, saucisse, poulet)",
+    "🦮 Longe 5–10 m (pour l’extérieur)",
+    "🔇 Environnement silencieux au début",
+    "💛 Voix joyeuse et enthousiaste"
+  ],
+  "beforeYouStart": [
+    "Assurez-vous de ne pas avoir utilisé le nom comme réprimande auparavant",
+    "Si le chien a des associations négatives, envisagez de changer son nom",
+    "Friandises de très haute valeur : pas de croquettes ici",
+    "Séances courtes : 3–5 minutes, plusieurs fois par jour",
+    "N’utilisez jamais le nom suivi de quelque chose de désagréable (bain, coupe d’ongles)"
+  ],
+  "methods": [
+    {
+      "id": "name_game",
+      "title": "Le jeu du nom (classique)",
+      "description": "Associer le nom à quelque chose d’extrêmement positif de manière répétée.",
+      "bestFor": "Tout chien, surtout chiots et chiens récemment adoptés",
+      "steps": [
+        {
+          "title": "Captez l’attention mutuelle",
+          "description": "Asseyez-vous au sol dans une pièce calme. Attendez que votre chien soit détendu mais pas endormi.",
+          "tip": "Ne lui parlez ni ne le regardez au début."
+        },
+        {
+          "title": "Dites son nom UNE fois",
+          "description": "D’une voix joyeuse et douce, prononcez son nom clairement. Une seule fois.",
+          "tip": "Le ton doit sembler excitant, pas comme un ordre.",
+          "troubleshooting": "S’il ne réagit pas, NE répétez PAS le nom : passez à l’étape 3."
+        },
+        {
+          "title": "Récompensez immédiatement",
+          "description": "Dès qu’il vous regarde (même une microseconde !), dites « bien ! » et donnez une friandise de haute valeur.",
+          "tip": "S’il ne regarde pas en 2 secondes, faites un bruit pour attirer son attention et récompensez."
+        },
+        {
+          "title": "Espacez les récompenses",
+          "description": "Ne donnez pas d’autre friandise avant de redire le nom. Attendez 10–30 secondes.",
+          "tip": "Si vous enchaînez, le chien commence à vous regarder seul."
+        },
+        {
+          "title": "Changez de pièce",
+          "description": "Après 5 séances réussies dans la même pièce, allez ailleurs. Reprenez tout le processus.",
+          "tip": "Le changement de contexte est où l’on apprend vraiment."
+        },
+        {
+          "title": "Niveau supérieur : distractions",
+          "description": "Quand cela fonctionne dans toute la maison, essayez avec TV allumée, autres personnes, nourriture à côté.",
+          "tip": "Chaque nouveau contexte = recommencer avec récompenses faciles."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Répéter le nom plusieurs fois (« Toby, Toby, Toby »)",
+      "cause": "Frustration quand il ne répond pas",
+      "fix": "S’il ne répond pas du premier coup, NE répétez PAS. Attirez son attention par un bruit et récompensez quand il regarde."
+    },
+    {
+      "error": "Utiliser le nom avant quelque chose de désagréable (bain, vétérinaire)",
+      "cause": "Habitude inconsciente",
+      "fix": "Pour les choses désagréables, allez le chercher physiquement sans dire son nom. Le nom doit TOUJOURS être positif."
+    },
+    {
+      "error": "Friandises de basse qualité (croquettes sèches)",
+      "cause": "Confort",
+      "fix": "Pour enseigner le nom utilisez les friandises les PLUS savoureuses que vous avez."
+    },
+    {
+      "error": "Séances de 30 minutes",
+      "cause": "Penser « plus c’est mieux »",
+      "fix": "3–5 minutes maximum. La concentration s’épuise vite. Mieux 5 séances courtes qu’1 longue."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien a un nom long et ne réagit pas",
+      "solution": "Utilisez un surnom court de 1–2 syllabes pour l’entraînement. Par ex. « Maximilien » → « Max »."
+    },
+    {
+      "problem": "Fonctionne à la maison mais pas dans la rue",
+      "solution": "Vous avez besoin d’une longe + friandises TRÈS hautes. Commencez en zones vides."
+    },
+    {
+      "problem": "Il me regarde mais ne s’approche pas",
+      "solution": "C’est déjà un succès dans ce cours. S’approcher est le niveau suivant : cours « Rappel »."
+    },
+    {
+      "problem": "Je vis avec plusieurs chiens et ne sais pas lequel appeler",
+      "solution": "Entraînez chacun séparément d’abord. Puis utilisez des noms clairement distincts en syllabes."
+    }
+  ],
+  "progressMilestones": [
+    { "stage": "Séance 1–2", "goal": "Regarde en entendant son nom dans une pièce calme" },
+    { "stage": "Séance 3–5", "goal": "Réaction immédiate (en moins d’1 seconde) dans différentes pièces" },
+    { "stage": "Semaine 1", "goal": "Répond au nom dans le jardin avec peu de distractions" },
+    { "stage": "Semaine 2+", "goal": "Répond au parc avec d’autres chiens et personnes à 5 mètres" }
+  ],
+  "successSigns": [
+    "Tourne la tête immédiatement en entendant son nom",
+    "Le fait sans friandise visible",
+    "Fonctionne même avec distractions moyennes (autres chiens au loin)",
+    "Maintient le contact visuel quelques secondes en attendant des instructions"
+  ],
+  "variations": [
+    "Dire le nom depuis différents côtés (doit tourner pour vous chercher)",
+    "Dire le nom quand il est distrait à renifler",
+    "Dire le nom depuis une autre pièce (doit venir ou jeter un œil)",
+    "Dire le nom quand il joue avec d’autres chiens",
+    "Combiner nom + geste silencieux (taper des mains)"
+  ],
+  "safetyNotes": [
+    "JAMAIS utiliser le nom sur un ton de réprimande : ruinerait des mois de travail",
+    "Pour quelque chose de désagréable, faites-le sans nommer le chien",
+    "Chiens avec surdité partielle : utilisez aussi gestes visuels et vibrations du sol",
+    "Si le chien a été maltraité verbalement, envisagez un nouveau nom et repartez de zéro"
+  ],
+  "funFact": "Les chiens distinguent leur nom des autres mots humains en seulement 2 semaines d’exposition cohérente. Mais ils peuvent l’oublier si associé à des choses négatives en 3-4 épisodes seulement.",
+  "nextLevel": "Passer au cours « Rappel (viens) » : qu’il ne se contente pas de regarder, mais qu’il s’approche.",
+  "proTip": "Pour garder le nom « frais » toute la vie, continuez à récompenser épisodiquement quand il répond — même des années après. Une fois par mois suffit."
+}

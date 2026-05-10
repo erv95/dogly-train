@@ -1,0 +1,159 @@
+{
+  "title": "Fais le tonneau",
+  "subtitle": "Le tour le plus impressionnant — un roulé complet depuis le sol !",
+  "level": "Avancé",
+  "duration": "5–10 min par séance",
+  "location": "Intérieur (surface douce)",
+  "ageRecommendation": "À partir de 8 mois",
+  "estimatedSessions": "10–15 séances pour maîtriser",
+  "objective": "Apprendre au chien à faire un tour complet de 360° depuis la position couchée, en passant par le côté et en revenant couché, en répondant à l'ordre “fais le tonneau”.",
+  "why": [
+    "C'est le tour le plus spectaculaire du répertoire de base — il surprend et émerveille toujours",
+    "Nécessite que le chien fasse totalement confiance à son maître pour s'exposer dans une position vulnérable",
+    "Améliore la flexibilité, la conscience corporelle et la coordination",
+    "Démontre le plus haut niveau de communication et de compréhension entre le chien et son maître"
+  ],
+  "benefits": [
+    "Renforce le lien et la confiance de façon extraordinaire",
+    "Excellent exercice physique pour la flexibilité de la colonne et des flancs",
+    "Une fois maîtrisé, le chien l'exécute avec fluidité et élégance",
+    "Point de départ pour des tours de spectacle plus complexes"
+  ],
+  "where": [
+    "🏠 Exclusivement en intérieur sur une surface très douce au début",
+    "🛏️ Tapis épais, couverture pliée ou tapis de yoga — indispensable",
+    "⛔ Jamais sur sol dur, froid ou glissant — le chien doit être à l'aise sur le côté"
+  ],
+  "materials": [
+    "🫖 Friandises de valeur maximale (poulet cuit, fromage fort, saucisse)",
+    "🛟 Tapis de yoga, tapis épais ou couverture pliée",
+    "🖐️ Votre main pour guider le leurre",
+    "💛 Patience supplémentaire — ce tour s'apprend phase par phase"
+  ],
+  "beforeYouStart": [
+    "Votre chien doit maîtriser “couché” très sûrement — c'est le point de départ obligatoire",
+    "Utilisez la surface la plus douce et confortable possible : couverture, tapis ou moquette épaisse",
+    "Apportez les friandises de plus haute valeur — ce tour est exigeant et mérite la meilleure récompense",
+    "Travaillez en phases : n'essayez pas le roulé complet dès le premier jour",
+    "Maximum 5 minutes par séance — le tour demande un effort physique et mental important"
+  ],
+  "methods": [
+    {
+      "id": "lure_over_shoulder",
+      "title": "Méthode du leurre par l'épaule",
+      "description": "Depuis la position couchée, guidez le leurre vers l'épaule du chien pour qu'il tourne la tête, puis le corps suit jusqu'au roulé complet. Travaillez phase par phase : rotation de tête → épaule au sol → roulé complet.",
+      "bestFor": "Chiens qui maîtrisent le couché et ont bonne confiance avec leur maître",
+      "steps": [
+        {
+          "title": "Demandez couché sur le tapis",
+          "description": "Demandez “couché” sur la surface douce. Le chien doit être complètement détendu, coudes et poitrine au sol.",
+          "tip": "Attendez qu'il soit vraiment à l'aise avant de continuer. Un chien tendu ne roulera pas bien.",
+          "troubleshooting": "Si le chien se lève en voyant la friandise, travaillez d'abord à maintenir le couché avec des distractions."
+        },
+        {
+          "title": "Guidez la tête vers l'épaule — Phase 1",
+          "description": "Avec la friandise collée à son museau, déplacez-la lentement vers l'épaule du côté où vous voulez qu'il roule. Le chien tournera la tête en suivant le leurre. Marquez et récompensez seulement la rotation de tête.",
+          "tip": "Récompensez généreusement cette phase pendant 3–4 séances. N'avancez pas avant que ce soit naturel.",
+          "troubleshooting": "Si le chien se lève au lieu de tourner la tête, recommencez le couché et allez plus doucement."
+        },
+        {
+          "title": "L'épaule touche le sol — Phase 2",
+          "description": "Continuez à guider la friandise au-delà de l'épaule, vers le sol de l'autre côté. Le corps suivra la tête et l'épaule touchera le sol. Le chien est maintenant couché sur le côté. Marquez et récompensez.",
+          "tip": "C'est la phase la plus difficile car le chien s'expose en position vulnérable. Utilisez la friandise de plus haute valeur.",
+          "troubleshooting": "Si le chien résiste à tomber sur le côté, ralentissez le leurre et récompensez chaque petit progrès."
+        },
+        {
+          "title": "Le corps complète le roulé — Phase 3",
+          "description": "Le chien couché sur le côté, continuez l'arc du leurre sur le dos vers l'autre côté. Le chien roulera et complètera les 360° pour revenir en position couchée normale. Marquez et célébrez avec enthousiasme.",
+          "tip": "Quand le chien complète le roulé entier pour la première fois, célébrez comme si c'était le meilleur moment.",
+          "troubleshooting": "Si le chien n'arrive qu'à la moitié, récompensez là et prolongez un peu plus à chaque séance."
+        },
+        {
+          "title": "Nommez le tour et réduisez le leurre",
+          "description": "Quand le roulé complet est régulier, dites “fais le tonneau” juste avant de commencer le leurre. Réduisez progressivement le geste jusqu'à ce que le chien roule avec seulement la voix ou un petit mouvement de poignet.",
+          "tip": "Réduisez le leurre très progressivement : friandise visible → poing fermé → geste seul → voix seule.",
+          "troubleshooting": "Si le chien arrête de rouler quand vous réduisez le leurre, revenez au leurre complet et réduisez plus lentement."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Essayer le roulé complet dès la première séance",
+      "cause": "Vouloir voir le résultat final trop vite",
+      "fix": "Travaillez en phases. Consacrez au moins 3–4 séances à chaque phase avant de passer à la suivante."
+    },
+    {
+      "error": "Guider trop vite et perdre le chien à mi-roulé",
+      "cause": "Leurre qui va plus vite que le chien ne peut suivre",
+      "fix": "Le leurre doit suivre le rythme du chien. Si le chien se lève, vous allez trop vite."
+    },
+    {
+      "error": "Pratiquer sur sol dur ou froid",
+      "cause": "Environnement non préparé correctement",
+      "fix": "La surface douce est non négociable. Le chien doit se sentir à l'aise couché sur le côté."
+    },
+    {
+      "error": "Forcer le chien sur le côté avec la main",
+      "cause": "Frustration quand le leurre ne fonctionne pas",
+      "fix": "Ne jamais utiliser la force physique. Si le leurre ne fonctionne pas, utilisez une friandise de plus haute valeur ou revenez à la phase précédente."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Le chien tourne la tête mais pas le corps",
+      "solution": "Vous êtes en Phase 1 — c'est normal. Continuez à récompenser seulement la rotation de tête jusqu'à ce que ce soit automatique. Le corps suivra naturellement."
+    },
+    {
+      "problem": "Le chien se lève à chaque fois que le leurre s'approche de l'épaule",
+      "solution": "Travaillez d'abord le couché avec plus de distractions. Le chien a besoin de plus de confiance pour maintenir la position."
+    },
+    {
+      "problem": "Le chien arrive jusqu'au côté mais ne finit pas le roulé",
+      "solution": "Récompensez généreusement la position sur le côté pendant plusieurs séances. Puis guidez le leurre 10° de plus à chaque fois."
+    },
+    {
+      "problem": "Mon chien ne roule que dans un sens",
+      "solution": "C'est normal et valable. Beaucoup de chiens préfèrent un côté. Consolidez bien ce côté avant d'essayer l'autre direction."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séances 1–4",
+      "goal": "Tourne la tête vers l'épaule en suivant le leurre depuis la position couchée"
+    },
+    {
+      "stage": "Séances 5–8",
+      "goal": "L'épaule touche le sol et le chien atteint la position couchée sur le côté"
+    },
+    {
+      "stage": "Séances 9–12",
+      "goal": "Complète le roulé de 360° en suivant le leurre"
+    },
+    {
+      "stage": "Semaine 4+",
+      "goal": "Répond à “fais le tonneau” avec un leurre réduit ou seulement la voix"
+    }
+  ],
+  "successSigns": [
+    "Complète le roulé de 360° fluidement sans pause sur le côté",
+    "Se retrouve couché et regarde son maître en attendant la récompense",
+    "Répond au signal verbal sans avoir besoin du leurre complet",
+    "Le fait sur différentes surfaces douces (tapis, couverture, tapis de yoga)"
+  ],
+  "variations": [
+    "Roulé dans le sens inverse (vers l'autre côté)",
+    "Deux roulés de suite sur une seule commande",
+    "Roulé lent et contrôlé (plus difficile que rapide)",
+    "Enchaîner couché → tonneau → assis pour une séquence fluide"
+  ],
+  "safetyNotes": [
+    "Ne pratiquez jamais avec des chiens ayant des problèmes de dos, de hanches ou de dysplasie sans consulter un vétérinaire",
+    "Ne forcez jamais le chien sur le côté — s'il ne le fait pas volontairement, il n'est pas prêt",
+    "Chiens de plus de 8 ans : consultez un vétérinaire avant d'apprendre ce tour",
+    "Si le chien montre de la raideur, de l'inconfort ou évite la position sur le côté, arrêtez et observez 48 heures"
+  ],
+  "funFact": "Les chiens montrent le ventre comme signal ultime de confiance et d'apaisement. Quand votre chien roule pour vous, il vous dit qu'il se sent totalement en sécurité avec vous.",
+  "nextLevel": "Enchaînez : couché → tonneau → assis → tope-là. Quatre tours à la suite qui laisseront tout le monde bouche bée !",
+  "proTip": "Travaillez toujours dans le sens que le chien choisit naturellement au début. Une fois ce côté maîtrisé, l'autre côté viendra beaucoup plus facilement."
+}

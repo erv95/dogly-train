@@ -1,0 +1,158 @@
+{
+  "title": "Bleib",
+  "subtitle": "Impulskontrolle aufbauen: Dein Hund lernt, in der Position zu warten",
+  "level": "Grundlegend",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Zuhause oder ruhiger Garten",
+  "ageRecommendation": "Ab 10 Wochen",
+  "estimatedSessions": "8–12 Einheiten, um alle 3 Ds zu meistern",
+  "objective": "Dem Hund beibringen, eine Position (Sitzen oder Liegen) zu halten, bis er das Freigabesignal erhält, und dabei schrittweise Dauer, Distanz und Ablenkungen zu steigern.",
+  "why": [
+    "Entwickelt Selbstkontrolle und Impulskontrolle — Schlüsselkompetenzen für den Alltag",
+    "Ermöglicht sicheres Handeln in Alltagssituationen (Straße überqueren, Haustür)",
+    "Unverzichtbare Ergänzung zu 'Sitz' und 'Platz', um diese Kommandos nützlicher zu machen",
+    "Reduziert Hyperaktivität und Impulsivität beim Hund"
+  ],
+  "benefits": [
+    "Dein Hund wartet ruhig, während du sein Futter vorbereitest oder die Tür öffnest",
+    "Kann im Restaurant oder beim Tierarzt still bleiben",
+    "Verhindert gefährliche Ausbrüche durch die Haustür",
+    "Erleichtert die Handhabung bei Menschen, Autos oder Fahrrädern"
+  ],
+  "where": [
+    "🏠 Drinnen (Wohnzimmer oder Flur ohne Ablenkungen)",
+    "🌿 Ruhiger Garten, sobald es drinnen gefestigt ist",
+    "⛔ Nie in offenen Bereichen ohne Sicherung, bevor es sehr zuverlässig ist"
+  ],
+  "materials": [
+    "🫖 Kleine, weiche, hochwertige Leckerlis",
+    "🦮 Kurze Leine (optional bei sehr aktiven Hunden)",
+    "🛏️ Matte oder Decke als Positionsreferenz",
+    "💛 Geduld: Diese Übung braucht mehr Zeit als andere"
+  ],
+  "beforeYouStart": [
+    "Dein Hund sollte 'Sitz' oder 'Platz' sicher beherrschen, bevor du anfängst",
+    "Wähle ein klares Freigabewort: 'Ok', 'Frei' oder 'Los' und nutze es konsequent",
+    "Beginne mit nur 1 Sekunde Dauer: Frühe Erfolge sind entscheidend",
+    "Erhöhe niemals Distanz und Dauer gleichzeitig",
+    "Beende die Einheit immer mit einem 'Bleib', den der Hund perfekt schafft"
+  ],
+  "methods": [
+    {
+      "id": "three_d_progression",
+      "title": "3-D-Progression (empfohlen)",
+      "description": "Du arbeitest die drei Dimensionen des 'Bleib' getrennt und der Reihe nach: zuerst Dauer, dann Distanz, zuletzt Ablenkungen. Sie zu früh zu mischen ist der häufigste Fehler.",
+      "bestFor": "Alle Hunde, die bereits Sitz oder Platz kennen",
+      "steps": [
+        {
+          "title": "Phase 1 – Dauer (ohne dich zu bewegen)",
+          "description": "Sage 'Sitz' oder 'Platz', sag ruhig 'Bleib' und warte 1 Sekunde, bevor du belohnst. Dann Freigabe mit 'Ok'. Steigere schrittweise von 1 auf 3, 5, 10, 30 Sekunden.",
+          "tip": "Wenn er die Position bricht, nicht schimpfen. Einfach die Position neu einfordern und die Zeit reduzieren.",
+          "troubleshooting": "Wenn er keine Sekunde hält, belohne bei 0,5 Sekunden und steigere sehr langsam."
+        },
+        {
+          "title": "Phase 2 – Distanz (wenn er 30 Sekunden hält, ohne dass du dich bewegst)",
+          "description": "Mache einen Schritt rückwärts, während der Hund im 'Bleib' ist. Kehre zurück, bevor er sich bewegt, und belohne. Steigere auf 2, 3, 5 Schritte.",
+          "tip": "Gehe IMMER zurück zum Hund, um zu belohnen. Ruf ihn nicht — geh zu ihm.",
+          "troubleshooting": "Wenn er aufsteht, sobald du dich entfernst, reduziere die Distanz. Ein Schritt reicht zunächst."
+        },
+        {
+          "title": "Phase 3 – Dauer und Distanz kombinieren",
+          "description": "Wenn er bei 5 Schritten ohne Bewegung bleibt, beginne zu kombinieren: Geh weg und warte zusätzlich einige Sekunden, bevor du zurückkehrst.",
+          "tip": "Die Regel: Wenn er scheitert, vereinfache. Geh zurück zu dem, was funktionierte."
+        },
+        {
+          "title": "Phase 4 – Leichte Ablenkungen",
+          "description": "Mit dem Hund im 'Bleib' kleine Ablenkungen einführen: etwas fallen lassen, seitlich bewegen, leise klatschen. Wenn er bleibt, großzügig belohnen.",
+          "tip": "Je stärker die Ablenkung, desto größer soll die Belohnung für das Halten des 'Bleib' sein.",
+          "troubleshooting": "Wenn die Ablenkung zu stark ist und er bricht, gehe zu einer schwächeren zurück."
+        },
+        {
+          "title": "Freigabesignal",
+          "description": "Beende 'Bleib' immer mit deinem Freigabewort ('Ok', 'Frei'). Der Hund lernt, dass er sich nur bewegen darf, wenn du es signalisierst, nicht nach eigenem Ermessen.",
+          "tip": "Die Freigabe ist genauso wichtig wie das 'Bleib' selbst. Lehre sie vom ersten Tag an."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Dauer und Distanz gleichzeitig erhöhen",
+      "cause": "Zu schnell vorankommen wollen",
+      "fix": "Arbeite eine Dimension nach der anderen. Mehr Distanz = weniger Dauer. Mehr Dauer = weniger Distanz."
+    },
+    {
+      "error": "Den Hund aus der Ferne rufen, um das 'Bleib' zu beenden",
+      "cause": "Bequemlichkeit des Halters",
+      "fix": "Gehe immer zurück, um neben dem Hund zu belohnen. Aus der Ferne rufen trainiert den Rückruf, nicht das 'Bleib'."
+    },
+    {
+      "error": "Kein Freigabewort verwenden",
+      "cause": "Versehen oder mangelndes Wissen",
+      "fix": "Ohne Freigabewort entscheidet der Hund, wann er sich bewegt. Lege 'Ok' oder 'Frei' vom ersten Tag an fest."
+    },
+    {
+      "error": "Den Hund schimpfen, wenn er die Position bricht",
+      "cause": "Frustration",
+      "fix": "Fordere die Position einfach neu ein. Das Brechen zeigt, dass die Übung zu schwer war, nicht dass der Hund ungehorsam ist."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund bewegt sich, sobald ich einen Schritt zurückgehe",
+      "solution": "Die Distanz kam zu früh. Kehre zu Phase 1 zurück (nur Dauer, ohne dich zu bewegen), bis er bequem 30 Sekunden hält."
+    },
+    {
+      "problem": "Er hält das 'Bleib' drinnen, aber draußen nicht",
+      "solution": "Normal: Außenablenkungen sind stärker. Fange in der neuen Umgebung wieder bei 1 Sekunde an."
+    },
+    {
+      "problem": "Er steht auf, genau wenn ich ihn belohnen will",
+      "solution": "Deine Hand, die zur Leckerli-Tasche greift, ist sein Signal aufzustehen. Variiere den Zeitpunkt, wann du nach dem Leckerli greifst."
+    },
+    {
+      "problem": "Mein Hund bleibt, wirkt aber sehr ängstlich",
+      "solution": "Reduziere Zeit und Distanz stark. Das 'Bleib' soll angenehm sein, nicht stressig. Angst bedeutet, die Übung ist zu fordernd."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheiten 1–3",
+      "goal": "Hält Sitz oder Platz für 5–10 Sekunden, ohne dass du dich bewegst"
+    },
+    {
+      "stage": "Einheiten 4–7",
+      "goal": "Hält Position bei 3–5 Schritten Distanz für 10 Sekunden"
+    },
+    {
+      "stage": "Einheiten 8–10",
+      "goal": "Hält 30 Sekunden bei 5 Schritten Distanz drinnen"
+    },
+    {
+      "stage": "Woche 3+",
+      "goal": "Hält das 'Bleib' bei leichten Ablenkungen (Geräusche, seitliche Bewegungen)"
+    }
+  ],
+  "successSigns": [
+    "Bleibt in der Position, bis er das Freigabewort hört",
+    "Bewegt sich nicht, wenn du 5 oder mehr Schritte entfernt bist",
+    "Hält die Position bei kleinen Ablenkungen in der Nähe",
+    "Das 'Bleib' funktioniert sowohl in Sitz- als auch in Liegend-Position"
+  ],
+  "variations": [
+    "Bleib, während du die Haustür öffnest und schließt",
+    "Bleib, während du sein Futter vorbereitest (Impulskontrolle)",
+    "Bleib, während andere Personen vorbeigehen",
+    "Bleib, während du dich hinhockst oder auf den Boden setzt",
+    "Bleib draußen in einem eingezäunten Bereich"
+  ],
+  "safetyNotes": [
+    "Nutze 'Bleib' nie, um den Hund allein in einem Gefahrenbereich zu lassen (offene Straße, Balkon)",
+    "Wenn dein Hund während der Übung sehr gestresst wirkt, mache eine Pause und vereinfache",
+    "Sehr aktive oder ängstliche Hunde brauchen mehr Zeit — vergleiche sie nicht mit anderen",
+    "Welpen unter 14 Wochen: maximal 3 Minuten pro Einheit"
+  ],
+  "funFact": "Schäferhunde und Border Collies lernen 'Bleib' in wenigen Einheiten, aber Terrier und Spaniels können doppelt so lang brauchen, weil sie von Natur aus sehr impulsiv sind. Die Rasse spielt eine Rolle!",
+  "nextLevel": "Übe 'Bleib' mit echten Ablenkungen: andere Hunde, Fahrräder, rennende Menschen. Kombiniere es dann mit 'Platz geh' (Zielscheibe), damit der Hund zu einem bestimmten Ort geht und dort bleibt.",
+  "proTip": "Das 'Bleib' bricht zusammen, wenn der Hund die Motivation verliert oder die Umgebung zu schwer ist. Scheitert er dreimal hintereinander, ist die Übung zu schwer — gehe einen Level zurück und ende mit Erfolg."
+}

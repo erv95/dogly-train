@@ -1,0 +1,160 @@
+{
+  "title": "Lâche / Donne",
+  "subtitle": "L'ordre qui peut sauver la vie de votre chien",
+  "level": "Avancé",
+  "duration": "5–10 min par séance",
+  "location": "Maison, jardin et tout environnement",
+  "ageRecommendation": "À partir de 12 semaines (adapter la difficulté)",
+  "estimatedSessions": "8–12 séances pour une réponse fiable",
+  "objective": "Apprendre au chien à lâcher immédiatement tout objet — jouet, nourriture, objet dangereux — sur l'ordre « lâche », en utilisant le jeu de l'échange comme base.",
+  "why": [
+    "Peut sauver la vie du chien s'il mord quelque chose de dangereux ou de toxique",
+    "Évite les jeux de poursuite qui renforcent le fait de ne pas lâcher",
+    "Réduit le comportement de garde de ressources (grognements quand on s'approche)",
+    "Une compétence de sécurité que tout chien doit posséder"
+  ],
+  "benefits": [
+    "Vous pourrez retirer en toute sécurité tout objet dangereux de la gueule de votre chien",
+    "Les jeux de rapporter et de lâcher seront bien plus fluides et agréables",
+    "Réduit les tensions et conflits autour des objets de valeur pour le chien",
+    "Crée de la confiance : le chien apprend que lâcher apporte toujours quelque chose de meilleur"
+  ],
+  "where": [
+    "🏠 À la maison, toujours le premier environnement d'entraînement",
+    "🌿 Au jardin une fois consolidé à la maison",
+    "🎯 Dans n'importe quel environnement avec de vrais objets une fois généralisé"
+  ],
+  "materials": [
+    "🫖 Friandises de très haute valeur (poulet, fromage, saucisse — le meilleur que vous ayez)",
+    "🦴 Un jouet de faible valeur pour commencer (pas le préféré du chien)",
+    "🦮 Laisse facultative pour la première phase",
+    "💛 Calme absolu — jamais de colère ni de frustration"
+  ],
+  "beforeYouStart": [
+    "Votre chien doit avoir un certain contrôle des impulsions des cours précédents",
+    "N'essayez jamais de retirer un objet de force de la gueule du chien",
+    "Si votre chien grogne défensivement avec des objets, consultez un professionnel avant de continuer",
+    "Ayez toujours l'échange (la friandise) prêt avant de vous approcher",
+    "Acceptez qu'au début le chien puisse apprendre à lâcher vite pour obtenir la friandise avant que vous le demandiez"
+  ],
+  "methods": [
+    {
+      "id": "trade_up",
+      "title": "Méthode de l'échange ascendant (recommandée)",
+      "description": "Vous offrez quelque chose de plus haute valeur que ce que le chien a en échange de lâcher. Vous ne lui arrachez jamais l'objet. Le chien apprend que lâcher signifie toujours obtenir quelque chose de mieux.",
+      "bestFor": "Tous les chiens, surtout ceux qui ont tendance à garder les ressources",
+      "steps": [
+        {
+          "title": "Commencez avec un jouet de faible valeur",
+          "description": "Donnez au chien un jouet qu'il aime modérément (pas son préféré). Laissez-le l'avoir et en profiter un moment.",
+          "tip": "S'il n'y a pas d'objet de départ, essayez-en un qui sent la friandise ou qui a été récompensé auparavant.",
+          "troubleshooting": "S'il ne prend pas le jouet, essayez-en un plus intéressant ou jouez vous-même avec quelques secondes d'abord."
+        },
+        {
+          "title": "Approchez-vous calmement avec la friandise visible",
+          "description": "Sans précipitation, approchez-vous du chien avec la friandise dans la main ouverte, bien visible. Laissez-le voir clairement ce que vous avez. N'essayez pas encore de prendre le jouet.",
+          "tip": "Le calme est essentiel. Si vous approchez vite ou avec tension, le chien serrera l'objet plus fort.",
+          "troubleshooting": "S'il recule quand vous approchez, entraînez-vous d'abord à vous approcher et à vous éloigner sans rien demander pendant plusieurs jours."
+        },
+        {
+          "title": "Proposez l'échange — ne réclamez pas l'objet",
+          "description": "Rapprochez la friandise du museau du chien pendant qu'il tient le jouet. Quand il ouvre la gueule pour sentir ou prendre la friandise, le jouet tombera naturellement. Dites « lâche » à cet instant précis.",
+          "tip": "Le jouet tombe parce que le chien ouvre la gueule pour la friandise. Vous ne le retirez pas.",
+          "troubleshooting": "S'il serre plus fort, retirez la friandise, attendez quelques secondes et réessayez plus lentement."
+        },
+        {
+          "title": "Récompensez généreusement et rendez le jouet",
+          "description": "Donnez plusieurs friandises consécutives pendant que le jouet est au sol. Puis rendez le jouet au chien. Cela lui apprend que lâcher n'est pas une perte permanente.",
+          "tip": "Rendre le jouet est fondamental : si vous le gardez toujours, le chien apprendra à ne jamais lâcher.",
+          "troubleshooting": "Si le chien ne veut pas du jouet en retour, ce n'est pas grave. L'échange a réussi quand même."
+        },
+        {
+          "title": "Généralisez avec des objets plus difficiles",
+          "description": "Avec le temps, pratiquez « lâche » avec les jouets préférés, la nourriture trouvée, les chaussettes ou tout objet que le chien ramasse. Pour les objets dangereux, la réponse doit être automatique.",
+          "tip": "Échangez toujours : même si vous lui rendez ensuite le jouet, l'échange doit d'abord avoir lieu.",
+          "troubleshooting": "Si le chien apprend à ramasser des choses pour demander l'échange, pratiquez aussi « laisse » (ne pas toucher un objet neutre) en complément."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Essayer de retirer l'objet de la gueule par la force",
+      "cause": "Instinct de résoudre le problème rapidement",
+      "fix": "Ne mettez jamais la main dans la gueule ni ne tirez. Utilisez toujours l'échange. Forcer peut provoquer des morsures défensives."
+    },
+    {
+      "error": "Courir après le chien quand il a quelque chose qu'il ne devrait pas",
+      "cause": "Panique en voyant l'objet dangereux",
+      "fix": "Ne courez pas après le chien. Asseyez-vous par terre, montrez la friandise et attendez. La poursuite transforme cela en un jeu irrésistible."
+    },
+    {
+      "error": "Ne jamais rendre le jouet après l'échange",
+      "cause": "Penser que « s'il lâche, on prend »",
+      "fix": "Rendez toujours l'objet quand c'est sécurisé. Le chien doit apprendre que lâcher est temporaire et neutre, pas une perte permanente."
+    },
+    {
+      "error": "Utiliser des friandises de faible valeur pour échanger quelque chose de très prisé",
+      "cause": "Ne pas calibrer la valeur de l'échange",
+      "fix": "L'échange doit toujours être « supérieur ». Pour le jouet préféré, utilisez la meilleure friandise possible."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien ouvre la gueule mais met longtemps à lâcher",
+      "solution": "C'est un progrès. Continuez à récompenser généreusement et le temps de réponse se réduira avec la pratique."
+    },
+    {
+      "problem": "Le chien grogne quand je m'approche pour prendre l'objet",
+      "solution": "Signe de garde de ressources : ne forcez jamais. Consultez un entraîneur professionnel. En attendant, ne vous approchez pas des objets qui génèrent de la tension."
+    },
+    {
+      "problem": "Fonctionne bien avec les jouets mais pas avec la nourriture trouvée au sol",
+      "solution": "La nourriture est de très haute valeur. Pratiquez d'abord avec des friandises de moindre valeur près de la nourriture, en augmentant très lentement la distraction."
+    },
+    {
+      "problem": "Le chien apprend vite à ramasser des choses pour obtenir l'échange",
+      "solution": "Signe d'intelligence. Ajoutez « laisse » (ne pas toucher un objet neutre) en complément pour que le chien apprenne les deux aspects du comportement."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séance 1–3",
+      "goal": "Le chien ouvre la gueule et lâche le jouet en voyant la friandise, même si cela prend 3–5 secondes"
+    },
+    {
+      "stage": "Séance 4–6",
+      "goal": "Lâche en moins de 2 secondes en entendant « lâche » avec des jouets de valeur moyenne"
+    },
+    {
+      "stage": "Séance 7–9",
+      "goal": "Lâche immédiatement même son jouet préféré en échange de la friandise"
+    },
+    {
+      "stage": "Semaine 3–4",
+      "goal": "Lâche des objets trouvés dans la rue en entendant l'ordre, sans que vous ayez à montrer la friandise d'abord"
+    }
+  ],
+  "successSigns": [
+    "Lâche l'objet sur ordre sans avoir besoin de voir la friandise",
+    "Ne grogne pas et ne s'éloigne pas quand vous approchez pendant qu'il tient quelque chose",
+    "Répond aussi bien avec des jouets, de la nourriture et des objets trouvés",
+    "Se retourne vers vous après avoir lâché, dans l'attente de l'échange"
+  ],
+  "variations": [
+    "Lâche dans l'eau (pratiquer dans la piscine ou la baignoire)",
+    "Lâche avec de la nourriture en gueule (en-cas trouvés dans la rue)",
+    "Lâche pendant le jeu de tir à la corde",
+    "Lâche avec des objets en tissu (chaussettes, vêtements)",
+    "Lâche à distance (quand le chien est loin de vous)"
+  ],
+  "safetyNotes": [
+    "Ne mettez jamais les doigts dans la gueule d'un chien inconnu ou tendu par un objet",
+    "Si le chien avale fréquemment des objets, consultez le vétérinaire (pica possible)",
+    "N'utilisez pas cette technique comme prétexte pour toujours donner de la nourriture quand le chien a quelque chose : la réponse doit se généraliser",
+    "Face à un objet toxique ou menaçant pour la vie, utilisez l'échange sans hésiter et éloignez le chien de la zone"
+  ],
+  "funFact": "Les chiens qui apprennent correctement « lâche » ont tendance à jouer avec plus de confiance et à lâcher spontanément des objets pendant le jeu, car ils ont appris que le faire apporte de bonnes choses.",
+  "nextLevel": "Combinez « lâche » avec « rapporte » pour un jeu de récupération totalement fluide. Pratiquez aussi « laisse » (ne pas ramasser un objet au sol) comme complément essentiel.",
+  "proTip": "Pratiquez « lâche » avec des objets que votre chien peut avoir sans danger (jouets), pas seulement face aux objets interdits. Si l'échange n'apparaît que quand quelque chose de mauvais se passe, le chien apprendra à se cacher avec ce qu'il ramasse."
+}

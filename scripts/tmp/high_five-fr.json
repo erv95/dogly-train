@@ -1,0 +1,158 @@
+{
+  "title": "Tope là !",
+  "subtitle": "Le salut le plus cool entre chien et maître — patte contre paume !",
+  "level": "Intermédiaire",
+  "duration": "5–10 min par séance",
+  "location": "Maison ou jardin",
+  "ageRecommendation": "À partir de 5 mois",
+  "estimatedSessions": "6–10 séances pour maîtriser",
+  "objective": "Apprendre au chien à lever une patte verticalement pour toucher la paume ouverte du maître, en répondant au signal verbal “tope” ou la paume tendue verticalement.",
+  "why": [
+    "C'est l'un des tours les plus photogéniques et amusants à partager",
+    "Demande au chien de distinguer “donne la patte” (horizontal) et “tope” (vertical)",
+    "Développe la coordination et la conscience de la position des pattes",
+    "Crée une interaction proche et positive avec le maître et avec de nouvelles personnes"
+  ],
+  "benefits": [
+    "Améliore la concentration car le chien doit regarder la paume",
+    "Crée un rituel de célébration partagé — parfait pour renforcer les bons comportements",
+    "Tremplin pour des tours plus complexes comme applaudir ou toucher des objets avec la patte",
+    "Plaît beaucoup aux enfants et facilite une socialisation positive"
+  ],
+  "where": [
+    "🏠 À la maison, dans le salon ou la cuisine",
+    "🌿 Au jardin ou au parc une fois bien maîtrisé",
+    "🔇 Sans distractions au début — le tour demande de la précision"
+  ],
+  "materials": [
+    "🫖 Friandises de haute valeur (poulet cuit, fromage, saucisse)",
+    "🖐️ Votre paume ouverte comme signal visuel",
+    "🛟 Surface antidérapante pour plus de stabilité",
+    "💛 Une célébration vocale enthousiaste à chaque succès"
+  ],
+  "beforeYouStart": [
+    "Votre chien doit connaître “donne la patte” avec fluidité avant de commencer",
+    "Assurez-vous que la surface est antidérapante pour que le chien se sente en sécurité en levant la patte",
+    "Préparez 20 petites friandises par séance",
+    "Commencez avec la patte dominante du chien (généralement la gauche)",
+    "Séances de 5–7 minutes maximum"
+  ],
+  "methods": [
+    {
+      "id": "paw_to_vertical",
+      "title": "Méthode d'élévation progressive de la patte",
+      "description": "Partez de “donne la patte” en position basse et montez progressivement la paume séance après séance jusqu'à ce qu'elle soit totalement verticale. Le chien apprend qu'il doit lever la patte de plus en plus haut pour obtenir le contact.",
+      "bestFor": "Chiens qui connaissent déjà donne la patte",
+      "steps": [
+        {
+          "title": "Donne la patte à hauteur normale",
+          "description": "Demandez “donne la patte” avec la paume vers le haut à la hauteur habituelle. Marquez et récompensez quand il touche votre main.",
+          "tip": "C'est le point de départ. Faites 5 répétitions pour vous échauffer.",
+          "troubleshooting": "Si donne la patte n'est pas fiable, consacrez d'abord 2–3 séances à le consolider."
+        },
+        {
+          "title": "Montez progressivement la paume",
+          "description": "À chaque séance, montez votre paume de quelques centimètres. Le chien devra lever la patte plus haut pour la toucher. Gardez la paume horizontale au début.",
+          "tip": "Ne montez pas de plus de 3–5 cm par séance. La progression graduelle est la clé.",
+          "troubleshooting": "Si le chien ne peut pas atteindre la main, abaissez un peu et travaillez cette hauteur avant de monter."
+        },
+        {
+          "title": "Faites pivoter la paume en vertical",
+          "description": "Quand le chien amène la patte jusqu'à la hauteur de la poitrine, commencez à faire pivoter votre paume en position verticale (comme pour serrer la main). Le chien devra toucher la paume de face.",
+          "tip": "Le geste visuel de la paume verticale deviendra le signal définitif pour “tope”."
+        },
+        {
+          "title": "Introduire le signal “tope”",
+          "description": "Quand le chien touche régulièrement votre paume verticale, ajoutez “tope” juste avant de tendre la main. Marquez le contact et récompensez avec enthousiasme.",
+          "tip": "Utilisez un ton festif et joyeux — ce tour mérite la fête.",
+          "troubleshooting": "S'il confond “tope” et “donne la patte”, travaillez-les dans des contextes différents avec des gestes clairement distincts."
+        },
+        {
+          "title": "Différencier donne la patte et tope",
+          "description": "Pratiquez en alternant les deux signaux pour que le chien les distingue : paume horizontale vers le bas = “donne la patte” ; paume verticale vers lui = “tope”. Récompensez davantage la bonne réponse.",
+          "tip": "La différenciation des signaux est le niveau le plus avancé. Ne vous précipitez pas."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Monter la main trop vite avant que le chien consolide chaque hauteur",
+      "cause": "Impatience d'arriver au tope-là complet",
+      "fix": "Consacrez au moins 2 séances à chaque hauteur avant de monter. La qualité prime sur la vitesse."
+    },
+    {
+      "error": "Accepter que le chien griffe la main au lieu de la toucher avec la patte à plat",
+      "cause": "Ne pas marquer précisément quel type de contact est souhaité",
+      "fix": "Ne marquez que le contact net de la patte à plat. Ignorez les griffures sans les récompenser."
+    },
+    {
+      "error": "Ne pas différencier les signaux visuels entre donne la patte et tope",
+      "cause": "Utiliser le même geste pour les deux tours",
+      "fix": "Paume horizontale pour “donne la patte”, paume verticale pour “tope”. Entraînez activement cette différence."
+    },
+    {
+      "error": "Récompenser avec peu d'émotion — le tour paraît ennuyeux",
+      "cause": "Célébration rare ou monotone",
+      "fix": "Le tope-là mérite l'euphorie ! Haussez la voix, souriez et ajoutez “bravo !” avec conviction."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Le chien touche la main avec le museau au lieu de la patte",
+      "solution": "Retirez la main quand le museau s'approche et reproposez-la. Ne marquez que le contact avec la patte."
+    },
+    {
+      "problem": "Le chien perd l'équilibre en levant la patte très haut",
+      "solution": "Travaillez sur une surface antidérapante et ne montez pas la main si haut pour l'instant. L'équilibre s'améliorera avec la pratique."
+    },
+    {
+      "problem": "Ne fait pas la différence entre “donne la patte” et “tope”",
+      "solution": "Exagérez la différence de gestes et travaillez chaque signal dans des séances séparées pendant une semaine avant de les mélanger."
+    },
+    {
+      "problem": "Le fait bien à la maison mais pas avec d'autres personnes",
+      "solution": "Commencez par présenter le tour à des membres de la famille à la maison. Puis avec des amis. La généralisation prend du temps."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séances 1–2",
+      "goal": "Lève la patte au moins jusqu'à la hauteur du coude en réponse à la paume"
+    },
+    {
+      "stage": "Séances 3–5",
+      "goal": "Touche la paume verticale à hauteur de poitrine de façon régulière"
+    },
+    {
+      "stage": "Séances 6–8",
+      "goal": "Répond à “tope” avec la paume à hauteur complète de tope-là"
+    },
+    {
+      "stage": "Semaine 3+",
+      "goal": "Distingue clairement “donne la patte” et “tope” et le fait avec d'autres personnes"
+    }
+  ],
+  "successSigns": [
+    "Lève la patte jusqu'à la paume verticale sans hésiter",
+    "Répond à “tope” avant même de voir la paume",
+    "Le fait avec d'autres personnes que son maître",
+    "Distingue clairement “donne la patte” et “tope”"
+  ],
+  "variations": [
+    "Tope-là avec la patte gauche et la patte droite",
+    "Tope-là à différentes hauteurs (bas, milieu, haut)",
+    "Tope-là à distance (à 50 cm)",
+    "Enchaîner tope + salut pour une routine complète",
+    "Tope-dix : les deux pattes simultanément contre vos deux paumes"
+  ],
+  "safetyNotes": [
+    "Ne forcez jamais la patte vers le haut avec votre main — laissez le chien la lever seul",
+    "Chiens avec problèmes d'épaule ou de coude : consultez un vétérinaire avant de pratiquer",
+    "Si le chien montre une gêne en levant la patte, arrêtez la séance et observez s'il boite",
+    "Chiots de moins de 6 mois : limitez la hauteur pour protéger les articulations en développement"
+  ],
+  "funFact": "Les chiens qui apprennent le tope-là ont tendance à le proposer spontanément quand ils veulent de l'attention — votre chien peut devenir accro aux tope-là improvisés !",
+  "nextLevel": "Apprenez le tope-dix (les deux pattes à la fois). Puis enchaînez : salut → tope → révérence. Un spectacle complet en trois tours !",
+  "proTip": "Quand le chien fait un tope-là parfait, célébrez avec la plus grande émotion possible. Les chiens apprennent plus vite quand la récompense émotionnelle est énorme."
+}

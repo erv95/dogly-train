@@ -1,0 +1,160 @@
+{
+  "title": "Suéltalo",
+  "subtitle": "La orden que puede salvar la vida de tu perro",
+  "level": "Avanzado",
+  "duration": "5–10 min por sesión",
+  "location": "Casa, jardín y cualquier entorno",
+  "ageRecommendation": "Desde 12 semanas (adaptar dificultad)",
+  "estimatedSessions": "8–12 sesiones para respuesta fiable",
+  "objective": "Enseñar al perro a soltar inmediatamente cualquier objeto (juguete, comida, objeto peligroso) al escuchar la orden “suéltalo”, usando el juego del intercambio como base.",
+  "why": [
+    "Puede salvar la vida del perro si muerde algo peligroso o tóxico",
+    "Evita juegos de persecución que refuerzan el no soltar",
+    "Reduce el comportamiento de guardia de recursos (gruñir al acercarte)",
+    "Es una habilidad de seguridad que todo perro debe conocer"
+  ],
+  "benefits": [
+    "Podrás retirar cualquier objeto peligroso de la boca de tu perro de forma segura",
+    "Los juegos de traer y soltar serán mucho más divertidos y fluidos",
+    "Reduce tensión y conflictos alrededor de objetos de valor para el perro",
+    "Genera confianza: el perro aprende que soltar siempre trae algo bueno"
+  ],
+  "where": [
+    "🏠 En casa, siempre el primer entorno de entrenamiento",
+    "🌿 En el jardín una vez consolidado en casa",
+    "🎯 En cualquier entorno con objetos reales una vez generalizado"
+  ],
+  "materials": [
+    "🫖 Premios de altísimo valor (pollo, queso, salchicha: lo mejor que tenga)",
+    "🦴 Juguete de bajo valor para empezar (no el favorito del perro)",
+    "🦮 Correa opcional para la primera fase",
+    "💛 Calma absoluta: nunca enfado ni frustración"
+  ],
+  "beforeYouStart": [
+    "Tu perro debe tener algo de control de impulsos (de los cursos anteriores)",
+    "Nunca intentes quitar un objeto a la fuerza de la boca del perro",
+    "Si tu perro gruñe defensivamente con objetos, consulta a un profesional antes de continuar",
+    "Ten siempre el intercambio (el premio) preparado antes de acercarte",
+    "Acepta que al principio el perro puede aprender a soltar rápido para conseguir el premio antes de que lo pidas"
+  ],
+  "methods": [
+    {
+      "id": "trade_up",
+      "title": "Método del intercambio ascendente (recomendado)",
+      "description": "Ofreces algo de mayor valor que lo que tiene el perro a cambio de soltar. Nunca arrebatas el objeto. El perro aprende que soltar siempre significa obtener algo mejor.",
+      "bestFor": "Todos los perros, especialmente los que tienden a guardar recursos",
+      "steps": [
+        {
+          "title": "Empieza con un juguete de poco valor",
+          "description": "Dale al perro un juguete que le guste moderadamente (no su favorito). Deja que lo tenga y lo disfrute un momento.",
+          "tip": "Si no hay objeto de partida, usa uno con olor a premio o que haya sido premiado antes.",
+          "troubleshooting": "Si el perro no coge el juguete, prueba con uno más interesante o juega primero unos segundos con él."
+        },
+        {
+          "title": "Acércate con calma y el premio a la vista",
+          "description": "Sin prisa, acércate al perro con el premio en la mano, a la vista. Que vea claramente lo que tiene la mano. No intentes coger el juguete todavía.",
+          "tip": "La calma es clave. Si te acercas rápido o con tensión, el perro apretará más el objeto.",
+          "troubleshooting": "Si el perro se aleja cuando te acercas, practica primero acercarte y alejarte sin pedir nada durante varios días."
+        },
+        {
+          "title": "Ofrece el intercambio, no pidas el objeto",
+          "description": "Acerca el premio a la nariz del perro mientras tiene el juguete. Cuando abra la boca para olfatear o tomar el premio, el juguete caerá solo. Di “suéltalo” en ese momento exacto.",
+          "tip": "La clave: el juguete cae porque el perro abre la boca por el premio. Tú no lo sacas.",
+          "troubleshooting": "Si aprieta más fuerte, retira el premio, espera unos segundos y vuelve a intentarlo más despacio."
+        },
+        {
+          "title": "Premia generosamente y devuelve el juguete",
+          "description": "Dale varios premios seguidos mientras el juguete está en el suelo. Luego devuelve el juguete al perro. Esto enseña que soltar no significa perder para siempre.",
+          "tip": "Devolver el juguete es fundamental: si siempre te quedas con él, el perro aprenderá a no soltarlo.",
+          "troubleshooting": "Si el perro no quiere el juguete de vuelta, no pasa nada. El intercambio fue un éxito de todas formas."
+        },
+        {
+          "title": "Generaliza con objetos más difíciles",
+          "description": "Con el tiempo, practica “suéltalo” con juguetes favoritos, comida encontrada, calcetines o cualquier objeto que el perro recoja. En objetos peligrosos, la respuesta debe ser automática.",
+          "tip": "Siempre intercambia: aunque tengas que dejar que se quede con el juguete después, el intercambio debe ocurrir.",
+          "troubleshooting": "Si el perro aprende a coger cosas solo para pedir el intercambio, practica también “no lo toques” para objetos específicos."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Intentar sacar el objeto de la boca del perro con la mano",
+      "cause": "Instinto de resolver el problema rápido",
+      "fix": "Nunca metas la mano en la boca ni tires del objeto. Usa siempre el intercambio. Forzar puede generar mordeduras defensivas."
+    },
+    {
+      "error": "Perseguir al perro cuando tiene algo que no debe",
+      "cause": "Pánico al ver el objeto peligroso",
+      "fix": "No corras detrás del perro. Siéntate en el suelo, muestra el premio y espera. La persecución convierte esto en un juego irresistible."
+    },
+    {
+      "error": "No devolver nunca el juguete después del intercambio",
+      "cause": "Creer que “si lo suelto, lo quitan”",
+      "fix": "Devuelve el objeto siempre que sea seguro. El perro debe aprender que soltar es temporal y neutral, no una pérdida permanente."
+    },
+    {
+      "error": "Usar premios de bajo valor para intercambiar algo muy apreciado",
+      "cause": "No calibrar el valor del intercambio",
+      "fix": "El intercambio debe ser siempre “superior”. Para el juguete favorito, usa el mejor premio posible."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro abre la boca pero tarda mucho en soltar",
+      "solution": "Es progreso. Sigue premiando generosamente y el tiempo de respuesta irá reduciéndose con la práctica."
+    },
+    {
+      "problem": "El perro gruñe cuando me acerco a tomar el objeto",
+      "solution": "Señal de guardia de recursos: no fuerces nunca. Consulta a un entrenador profesional. Mientras tanto, no te acerques a objetos que le generen tensión."
+    },
+    {
+      "problem": "Lo hace bien con juguetes pero no con comida del suelo",
+      "solution": "La comida es de altísimo valor. Practica primero con premios de menor valor cerca de la comida, aumentando la distracción muy despacio."
+    },
+    {
+      "problem": "Aprende muy rápido a coger cosas para conseguir el intercambio",
+      "solution": "Buen signo de inteligencia. Añade “déjalo” (no tocar un objeto neutro) como complemento para que aprenda los dos lados de la conducta."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–3",
+      "goal": "El perro abre la boca y suelta el juguete al ver el premio, aunque tarde 3–5 segundos"
+    },
+    {
+      "stage": "Sesión 4–6",
+      "goal": "Suelta en menos de 2 segundos al escuchar “suéltalo” con juguetes de valor medio"
+    },
+    {
+      "stage": "Sesión 7–9",
+      "goal": "Suelta inmediatamente incluso con el juguete favorito a cambio del premio"
+    },
+    {
+      "stage": "Semana 3–4",
+      "goal": "Suelta objetos encontrados en la calle al escuchar la orden, sin que tengas que mostrar el premio primero"
+    }
+  ],
+  "successSigns": [
+    "Suelta el objeto al escuchar la orden, sin que tengas que mostrar el premio",
+    "No gruñe ni se aleja cuando te acercas mientras tiene algo en la boca",
+    "Responde igualmente con juguetes, comida y objetos encontrados",
+    "Vuelve hacia ti después de soltar, esperando el intercambio"
+  ],
+  "variations": [
+    "Suéltalo con agua (practicar en la piscina o bañera)",
+    "Suéltalo con comida en boca (snacks encontrados en la calle)",
+    "Suéltalo durante el juego de tira y afloja",
+    "Suéltalo con objetos de tela (calcetines, ropa)",
+    "Suéltalo de forma remota (si el perro está lejos de ti)"
+  ],
+  "safetyNotes": [
+    "Nunca metas los dedos en la boca de un perro desconocido o tenso por un objeto",
+    "Si el perro traga objetos con frecuencia, consulta al veterinario (posible pica)",
+    "No uses esta técnica como excusa para dar siempre comida al perro cuando tiene algo: la respuesta debe generalizarse",
+    "Ante un objeto tóxico o de riesgo vital, usa el intercambio sin dudarlo y aleja al perro del área"
+  ],
+  "funFact": "Los perros que aprenden “suéltalo” correctamente tienden a jugar con más confianza y soltar objetos espontáneamente durante el juego, porque han aprendido que hacerlo trae cosas buenas.",
+  "nextLevel": "Combina “suéltalo” con “trae” para un juego de buscar y recuperar completamente fluido. También practica el “déjalo” (no tomar un objeto del suelo) como complemento esencial.",
+  "proTip": "Practica “suéltalo” con objetos que tu perro pueda tener sin peligro (juguetes), no solo ante objetos prohibidos. Si solo aparece el intercambio cuando hay algo malo, el perro aprenderá a esconderse con lo que recoge."
+}

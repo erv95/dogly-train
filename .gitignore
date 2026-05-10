@@ -46,9 +46,16 @@ functions/.env.*
 functions/lib/
 functions/node_modules/
 
-# Service account (sensitive)
+# Service accounts (sensitive)
 functions/serviceAccount.json.json
 functions/serviceAccount.json
+play-store-service-account.json
 
 # Duplicated assets
 assets/assets/
+
+# Firebase CLI local cache
+.firebase/
+
+# Personal assets (not part of the app source)
+Imágenes/

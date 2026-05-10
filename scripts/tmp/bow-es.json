@@ -1,0 +1,158 @@
+{
+  "title": "Reverencia (saluda)",
+  "subtitle": "El gesto más elegante — como si tu perro saludara al público",
+  "level": "Intermedio",
+  "duration": "5–10 min por sesión",
+  "location": "Casa o jardín",
+  "ageRecommendation": "Desde 4 meses",
+  "estimatedSessions": "6–10 sesiones para dominar",
+  "objective": "Enseñar al perro a bajar el pecho hacia el suelo mientras mantiene las patas traseras levantadas (la postura de reverencia o play bow), respondiendo a la señal “reverencia” o “saluda”.",
+  "why": [
+    "La reverencia es una postura que los perros hacen de forma completamente natural al invitar al juego",
+    "Es el truco más elegante visualmente — parece un actor saludando al público",
+    "Refuerza la conciencia corporal al disociar el movimiento del tren delantero del trasero",
+    "Es el complemento perfecto para cerrar cualquier secuencia de trucos"
+  ],
+  "benefits": [
+    "Excelente estiramiento para la espalda y los hombros — funciona como yoga canino",
+    "Permite al perro comunicar de forma natural su deseo de jugar",
+    "Es fácil de aprender porque captura un comportamiento instintivo",
+    "Genera reacciones muy positivas en todas las personas que lo ven"
+  ],
+  "where": [
+    "🏠 En casa, en cualquier habitación con espacio suficiente",
+    "🌿 En el jardín o al aire libre cuando ya lo domina en interior",
+    "🔇 Sin distracciones al inicio para que el perro se concentre"
+  ],
+  "materials": [
+    "🫖 Premios pequeños y de alto valor",
+    "🖐️ Tu mano como señuelo (premio entre los dedos)",
+    "🛟 Superficie plana y cómoda",
+    "💛 Paciencia y ojos atentos para capturar el comportamiento natural"
+  ],
+  "beforeYouStart": [
+    "Observa a tu perro durante el día — seguro que ya hace la reverencia espontáneamente al despertar o al invitar al juego",
+    "El truco puede enseñarse por captura (aprovechando el comportamiento natural) o por señuelo",
+    "Ten los premios siempre a mano durante el día para capturar el momento",
+    "Sesiones de 5 minutos máximo — cortas y frecuentes",
+    "Tu perro no necesita saber ningún truco previo para aprender este"
+  ],
+  "methods": [
+    {
+      "id": "capture_or_lure",
+      "title": "Método de captura y señuelo combinado",
+      "description": "Primero intentas capturar las reverencias naturales que el perro ya hace. Si ocurren con frecuencia, las marcas y premias hasta poder nombrarlas. Si el perro no hace muchas reverencias espontáneas, usas el señuelo llevando el premio entre sus patas hacia el suelo mientras bloqueas la cadera con el antebrazo.",
+      "bestFor": "Cualquier perro — adapta el método según si hace muchas reverencias naturales o pocas",
+      "steps": [
+        {
+          "title": "Observa las reverencias naturales",
+          "description": "Durante 2–3 días, observa cuándo tu perro hace la reverencia solo (al despertar, al invitar al juego). Cuando lo haga, di “¡bien!” y corre a darle un premio.",
+          "tip": "Ten premios en el bolsillo o cerca de donde suele hacer la reverencia al despertar.",
+          "troubleshooting": "Si el perro apenas hace reverencias espontáneas, pasa directamente al señuelo."
+        },
+        {
+          "title": "Captura y marca el comportamiento",
+          "description": "Cada vez que captes una reverencia natural, marca con “¡bien!” en el momento exacto en que el pecho está bajo y las caderas arriba, y premia inmediatamente.",
+          "tip": "La precisión del timing es fundamental: marca cuando el pecho esté más bajo, no cuando ya se esté levantando."
+        },
+        {
+          "title": "Señuelo entre las patas (si captura no funciona)",
+          "description": "Con el perro de pie, lleva el señuelo desde su nariz hacia el suelo entre sus patas delanteras. Con el antebrazo libre bloquea suavemente su cadera para que no se tumbe. El perro bajará el pecho siguiendo el premio.",
+          "tip": "El antebrazo bajo la barriga actúa como una guía suave — nunca como una restricción forzada.",
+          "troubleshooting": "Si el perro se tumba completamente, retira el señuelo y vuelve a intentar con menos movimiento hacia abajo."
+        },
+        {
+          "title": "Nombra el truco",
+          "description": "Cuando el perro haga la postura correcta (pecho bajo, caderas arriba) de forma consistente, añade la palabra “reverencia” o “saluda” justo antes de iniciar el señuelo.",
+          "tip": "Usa un tono suave y elegante — la reverencia es un truco con clase."
+        },
+        {
+          "title": "Reduce el señuelo y generaliza",
+          "description": "Reduce gradualmente el movimiento del señuelo: primero con el premio en la mano, luego sólo con el gesto vacío, finalmente sólo con la palabra. Practica en distintos lugares y con distintas personas presentes.",
+          "tip": "La postura de reverencia es fácil de sostener 2–3 segundos. Premia mientras la mantiene para alargar la duración.",
+          "troubleshooting": "Si el perro vuelve a tumbarse, vuelve al señuelo con el antebrazo de apoyo por más sesiones."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Bajar el señuelo tan rápido que el perro se tumba en lugar de hacer la reverencia",
+      "cause": "Movimiento demasiado directo hacia el suelo",
+      "fix": "Baja el señuelo muy despacio entre las patas delanteras. Bloquea la cadera con el antebrazo si es necesario."
+    },
+    {
+      "error": "No marcar el momento exacto de la reverencia",
+      "cause": "Timing impreciso de la recompensa",
+      "fix": "Marca cuando el pecho esté en el punto más bajo y las caderas arriba. Si marcas tarde, refuerzas el levantarse."
+    },
+    {
+      "error": "Ignorar las reverencias naturales durante el día",
+      "cause": "No tener premios a mano",
+      "fix": "Lleva premios en el bolsillo las primeras semanas para capturar las reverencias espontáneas."
+    },
+    {
+      "error": "Confundir la reverencia con el tumbado",
+      "cause": "El señuelo va demasiado hacia adelante en lugar de quedarse entre las patas",
+      "fix": "El señuelo va hacia el suelo entre las patas delanteras, no hacia adelante. Eso fuerza el pecho abajo sin que las caderas bajen."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "El perro siempre se tumba en lugar de hacer la reverencia",
+      "solution": "Usa el antebrazo bajo su barriga como guía suave. También puedes practicar con el perro frente a un sofá bajo para que sus patas traseras queden más elevadas."
+    },
+    {
+      "problem": "La reverencia dura sólo un instante y el perro se levanta inmediatamente",
+      "solution": "Premia mientras mantiene la postura (no sólo al llegar a ella). Empieza premiando a los 0,5 segundos y sube a 1, 2, 3 segundos gradualmente."
+    },
+    {
+      "problem": "El perro hace la reverencia sólo cuando quiere jugar pero no al pedírsela",
+      "solution": "Aprovecha esos momentos para nombrarla. Luego usa el señuelo para provocarla de forma controlada fuera del contexto de juego."
+    },
+    {
+      "problem": "No mantiene las caderas arriba al bajar el pecho",
+      "solution": "El antebrazo bajo la barriga es la solución más eficaz. O practica frente a un peldaño bajo con las patas traseras elevadas."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Días 1–3",
+      "goal": "El perro hace la reverencia natural al menos 3 veces al día y tú la marcas y premias"
+    },
+    {
+      "stage": "Sesión 3–5",
+      "goal": "Baja el pecho siguiendo el señuelo mientras mantiene las caderas arriba"
+    },
+    {
+      "stage": "Sesión 6–8",
+      "goal": "Responde a “reverencia” con señuelo reducido"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Mantiene la postura 3–5 segundos y la hace con sólo la voz o un pequeño gesto"
+    }
+  ],
+  "successSigns": [
+    "Baja el pecho al suelo manteniendo claramente las caderas arriba",
+    "Mantiene la postura al menos 2 segundos antes del premio",
+    "Responde a “reverencia” sin necesitar el señuelo completo",
+    "Lo hace en diferentes lugares y frente a distintas personas"
+  ],
+  "variations": [
+    "Reverencia lenta y sostenida (más teatral y elegante)",
+    "Reverencia con inclinación de cabeza (añadir otro señuelo para bajar la cabeza)",
+    "Reverencia frente a un espejo para que el perro vea su postura",
+    "Encadena reverencia al inicio y al final de una secuencia de trucos",
+    "Reverencia + mirada a la cámara (perfecta para fotos)"
+  ],
+  "safetyNotes": [
+    "Perros con problemas de columna o hombros: consulta al veterinario antes de practicar",
+    "Si el perro muestra rigidez o incomodidad al bajar el pecho, para la sesión",
+    "No uses el antebrazo como restricción — sólo como guía suave y pasiva",
+    "Cachorros menores de 5 meses: sesiones muy cortas y no fuerces la postura"
+  ],
+  "funFact": "La reverencia o “play bow” es uno de los gestos más universales del lenguaje canino. Todos los perros del mundo la usan para decir “¿jugamos?” — tú sólo le estás poniendo nombre.",
+  "nextLevel": "Encadena: siéntate → choca esos cinco → reverencia. Un saludo completo en tres pasos que cualquier perro puede aprender en 3 semanas.",
+  "proTip": "Si tu perro hace la reverencia sola al despertar cada mañana, ese es el mejor momento para capturarla y nombrarla. Pon premios en la mesilla de noche — ¡en serio!"
+}

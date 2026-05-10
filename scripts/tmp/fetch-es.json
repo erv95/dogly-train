@@ -1,0 +1,192 @@
+{
+  "title": "Trae la pelota",
+  "subtitle": "Juego, ejercicio y obediencia en un solo comando",
+  "level": "Básico",
+  "duration": "10–15 min por sesión",
+  "location": "Jardín, parque o pasillo largo en casa",
+  "ageRecommendation": "Desde 10 semanas",
+  "estimatedSessions": "6–10 sesiones para dominar",
+  "objective": "Enseñar al perro a perseguir un objeto lanzado, recogerlo, traerlo de vuelta al dueño y soltarlo, completando el ciclo completo del aporte.",
+  "why": [
+    "Es una de las formas más eficientes de dar ejercicio físico y mental al perro",
+    "Refuerza el vínculo entre dueño y perro a través del juego",
+    "Enseña el concepto de intercambio voluntario, base de muchos otros comportamientos",
+    "Proporciona un canal de descarga energética para perros con alto drive"
+  ],
+  "benefits": [
+    "Tu perro se agota física y mentalmente en 15 minutos, reduciendo comportamientos destructivos",
+    "Aprende a soltar objetos voluntariamente, reduciendo la guardia de recursos",
+    "La anticipación del lanzamiento mejora la atención y el enfoque",
+    "Puede practicarse en espacios pequeños con objetos blandos"
+  ],
+  "where": [
+    "🏡 Jardín o patio cerrado para empezar",
+    "🌳 Parque con zona vallada o de césped",
+    "🏠 Pasillo largo de casa con pelota blanda (inicio)"
+  ],
+  "materials": [
+    "🎾 Dos juguetes o pelotas idénticos o similares",
+    "🫖 Premios de alto valor (opcional, para las primeras sesiones)",
+    "🦮 Correa larga de 5–10 m (para perros que no vuelven)",
+    "💛 Entusiasmo y voz animada"
+  ],
+  "beforeYouStart": [
+    "Identifica si tu perro tiene instinto de persecución: lanza una pelota y observa si la persigue",
+    "Elige un espacio cercado o sin peligro de escape las primeras sesiones",
+    "Ten dos juguetes preparados: esto es clave para el método de los dos juguetes",
+    "Sesiones de no más de 10–15 minutos para evitar el agotamiento",
+    "Si el perro nunca ha jugado, empieza con el objeto en el suelo antes de lanzar"
+  ],
+  "methods": [
+    {
+      "id": "two_toys",
+      "title": "Método de los dos juguetes (recomendado)",
+      "description": "Usas dos juguetes idénticos alternándolos: cuando el perro trae el primero, muestras el segundo con emoción para que lo suelte. Construye el hábito de volver sin enseñar el 'suelta' por separado.",
+      "bestFor": "Perros con instinto de persecución pero que no sueltan o no vuelven",
+      "steps": [
+        {
+          "title": "Dos juguetes en mano",
+          "description": "Empieza con ambos juguetes en tus manos, detrás de tu espalda o escondidos. Muestra solo uno al perro para generar interés.",
+          "tip": "Los juguetes deben ser atractivos. Juega un poco con el primero antes de lanzar para aumentar el valor.",
+          "troubleshooting": "Si el perro no muestra interés, agita el juguete cerca de él antes de lanzar."
+        },
+        {
+          "title": "Primer lanzamiento",
+          "description": "Lanza el juguete nº1 con entusiasmo. Espera a que el perro lo persiga y lo coja.",
+          "tip": "Lanza solo unos metros al principio. La distancia aumenta con la práctica.",
+          "troubleshooting": "Si no lo persigue, haz el juguete más interesante: muévelo en el suelo como si fuera presa antes de lanzar."
+        },
+        {
+          "title": "Muestra el juguete nº2",
+          "description": "Cuando el perro tenga el juguete nº1 en la boca y empiece a volver (aunque sea parcialmente), saca el juguete nº2 con mucha emoción: agítalo, hazlo interesante.",
+          "tip": "Tu actitud es clave. El perro debe querer el juguete nº2 más que el que tiene en la boca.",
+          "troubleshooting": "Si el perro se queda donde está con el juguete, gírate de espaldas: los perros quieren lo que ignoramos."
+        },
+        {
+          "title": "Intercambio y soltar",
+          "description": "Cuando el perro llega junto a ti buscando el juguete nº2, el nº1 caerá de su boca o lo soltará voluntariamente. En ese momento, lanza el nº2 como recompensa.",
+          "tip": "No pidas 'suelta': el intercambio lo hace natural. Di 'bien' o 'sí' cuando lo suelte."
+        },
+        {
+          "title": "Ciclo continuo",
+          "description": "Recoge el juguete nº1 y repite el ciclo. El perro aprende: traer = empieza la diversión de nuevo.",
+          "tip": "Termina la sesión tú primero, mientras el perro aún quiere jugar más. Esto mantiene el drive para la próxima sesión."
+        }
+      ]
+    },
+    {
+      "id": "shaping",
+      "title": "Método de moldeado (para perros sin instinto recuperador)",
+      "description": "Refuerzas cualquier acercamiento progresivo al juguete: mirar → acercarse → olfatear → tocar → coger → traer un paso. Ideal para perros que no muestran interés natural en perseguir.",
+      "bestFor": "Perros sin instinto de recuperación natural, razas no retriever, o perros mayores",
+      "steps": [
+        {
+          "title": "Mirar al juguete",
+          "description": "Coloca el juguete en el suelo. Cada vez que el perro lo mire, di 'sí' y premia. No pidas más aún.",
+          "tip": "El clicker es muy útil en este método para marcar exactamente el comportamiento correcto.",
+          "troubleshooting": "Si el perro no mira el juguete, muévelo un poco para atraer su atención."
+        },
+        {
+          "title": "Acercarse al juguete",
+          "description": "Ahora solo premia si el perro se acerca al juguete, no solo lo mira. Sube el criterio lentamente.",
+          "tip": "Cada paso debe ser pequeño. Si el perro se frustra, vuelve al paso anterior."
+        },
+        {
+          "title": "Tocar o coger el juguete",
+          "description": "Premia cuando el perro toque con el hocico o coja el juguete con la boca, aunque sea brevemente.",
+          "tip": "Cualquier contacto con el juguete es un éxito en esta fase. No pidas perfección aún."
+        },
+        {
+          "title": "Traer un paso hacia ti",
+          "description": "Premia solo cuando el perro coja el juguete Y dé al menos un paso hacia ti. Ve aumentando la distancia requerida gradualmente.",
+          "tip": "Retrocede tú para facilitar que el perro se acerque. El movimiento tuyo invita al movimiento del perro."
+        },
+        {
+          "title": "Aporte completo",
+          "description": "Una vez que trae el juguete hasta ti consistentemente, añade el intercambio (un premio de comida a cambio del juguete) para completar el ciclo.",
+          "tip": "Cambia el premio de comida por el lanzamiento del juguete cuando el perro ya lo entienda bien."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Perseguir al perro para recuperar el juguete",
+      "cause": "Frustración cuando el perro no vuelve",
+      "fix": "Nunca corras detrás de él: lo conviertes en un juego de 'atrápame si puedes'. Gírate de espaldas o corre en dirección contraria."
+    },
+    {
+      "error": "Forzar la apertura de la boca para quitar el juguete",
+      "cause": "Impaciencia para volver a lanzar",
+      "fix": "Usa siempre el intercambio (segundo juguete o premio). La apertura forzada puede generar guardia de recursos."
+    },
+    {
+      "error": "Sesiones demasiado largas que agotan al perro",
+      "cause": "El perro muestra entusiasmo inicial y el dueño no para a tiempo",
+      "fix": "Termina siempre antes de que el perro se canse. Las sesiones cortas mantienen el drive y el entusiasmo."
+    },
+    {
+      "error": "Lanzar el juguete cuando el perro salta o empuja",
+      "cause": "Ceder ante la presión del perro",
+      "fix": "Solo lanza cuando el perro esté tranquilo o en posición sentado. Esto enseña autocontrol antes del juego."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro persigue el juguete pero no lo recoge",
+      "solution": "Prueba con un juguete más suave y atractivo para él. También puedes hacer que el juguete 'huya' de él moviéndolo para activar el instinto de presa."
+    },
+    {
+      "problem": "Recoge el juguete pero no vuelve",
+      "solution": "Usa la correa larga para guiarle suavemente hacia ti mientras te muestras muy entusiasta con el juguete nº2. Nunca jales con fuerza."
+    },
+    {
+      "problem": "Vuelve pero no suelta el juguete",
+      "solution": "Método de los dos juguetes: el segundo juguete siempre provoca que suelte el primero. Si no, ofrece un premio de comida de muy alto valor."
+    },
+    {
+      "problem": "Pierde el interés después de 2–3 lanzamientos",
+      "solution": "Las sesiones son demasiado largas o el juguete no es suficientemente motivante. Prueba con un juguete diferente y sesiones más cortas (3–5 lanzamientos y para)."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–2",
+      "goal": "El perro persigue el juguete lanzado y lo coge al menos una vez"
+    },
+    {
+      "stage": "Sesión 3–5",
+      "goal": "Vuelve hacia ti con el juguete en el 50% de los intentos"
+    },
+    {
+      "stage": "Sesión 6–8",
+      "goal": "Completa el ciclo completo (perseguir, coger, volver, soltar) de forma consistente"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Hace el aporte completo en exterior con distracciones moderadas"
+    }
+  ],
+  "successSigns": [
+    "Persigue el juguete inmediatamente cuando se lanza",
+    "Vuelve hacia ti con el juguete sin que tengas que llamarle",
+    "Suelta el juguete al ver el segundo o al escuchar 'suelta'",
+    "Mantiene el entusiasmo durante toda la sesión"
+  ],
+  "variations": [
+    "Aporte con nombre del objeto ('coge la pelota', 'coge el kong')",
+    "Aporte en el agua (para perros que disfrutan nadar)",
+    "Aporte de objetos específicos (busca la llave, busca el mando)",
+    "Aporte desde mayor distancia progresiva (5m → 20m → 50m)",
+    "Aporte con obstáculos o entre árboles"
+  ],
+  "safetyNotes": [
+    "Nunca lances objetos pequeños que puedan ser tragados",
+    "Evita lanzar palos: pueden causar heridas graves en boca y garganta",
+    "Limita el juego intenso en perros con displasia o problemas articulares",
+    "En días de calor, sesiones muy cortas con agua disponible: el juego de aporte es muy exigente"
+  ],
+  "funFact": "Los Golden Retrievers y Labradores fueron seleccionados genéticamente para recuperar presas sin dañarlas (boca blanda). Por eso muchos aprenden el aporte casi de forma instintiva.",
+  "nextLevel": "Enseña el nombre de diferentes objetos para que el perro los busque y traiga el correcto. O introduce el aporte desde el agua si tu perro disfruta nadando.",
+  "proTip": "El aporte se rompe casi siempre por dos razones: el perro no quiere soltar o no quiere volver. Solución universal: siempre ten un segundo juguete y nunca, jamás, persigas al perro."
+}

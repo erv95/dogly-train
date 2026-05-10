@@ -1,0 +1,158 @@
+{
+  "title": "Tourne (360°)",
+  "subtitle": "Le tour le plus spectaculaire et facile — un cercle complet sur soi-même !",
+  "level": "Intermédiaire",
+  "duration": "5–10 min par séance",
+  "location": "Maison ou jardin",
+  "ageRecommendation": "À partir de 4 mois",
+  "estimatedSessions": "5–8 séances pour maîtriser",
+  "objective": "Apprendre au chien à tourner sur lui-même à 360° dans la direction indiquée, en répondant à l'ordre “tourne” ou à un geste circulaire de la main.",
+  "why": [
+    "C'est l'un des tours les plus amusants et visuellement impressionnants",
+    "Améliore la conscience corporelle et l'équilibre du chien",
+    "Peut s'apprendre aussi bien à droite qu'à gauche",
+    "Nécessite très peu d'espace et aucun équipement spécial"
+  ],
+  "benefits": [
+    "Stimule mentalement le chien et combat l'ennui",
+    "Améliore la flexibilité et la coordination motrice",
+    "Peut servir d'exercice d'échauffement avant d'autres activités",
+    "Rend le chien plus attentif et motivé pendant les séances d'entraînement"
+  ],
+  "where": [
+    "🏠 À la maison, dans une pièce avec assez de place pour tourner",
+    "🌿 Au jardin ou au parc une fois maîtrisé en intérieur",
+    "🔇 Toujours sans distractions au début"
+  ],
+  "materials": [
+    "🫖 Petites friandises de haute valeur (poulet, fromage)",
+    "🖐️ Une main pour guider le mouvement circulaire",
+    "🛟 Surface plane sans obstacles autour",
+    "💛 Enthousiasme et célébration vocale"
+  ],
+  "beforeYouStart": [
+    "Votre chien n'a besoin d'aucune commande préalable — c'est un tour relativement facile pour débuter",
+    "Assurez-vous qu'il y a au moins 1 mètre d'espace libre autour du chien",
+    "Préparez 20 petites friandises par séance",
+    "Décidez dès le début si vous apprenez d'abord à droite ou à gauche",
+    "Séances de 5–7 minutes maximum"
+  ],
+  "methods": [
+    {
+      "id": "lure_circle",
+      "title": "Méthode du leurre circulaire",
+      "description": "Guidez le chien avec la friandise en décrivant un cercle horizontal lent autour de son corps. Quand il complète le tour, marquez et récompensez. Réduisez ensuite progressivement le leurre jusqu'à ce que seul le geste ou la voix suffise.",
+      "bestFor": "Tout chien à partir de 4 mois, surtout les chiens motivés par la nourriture",
+      "steps": [
+        {
+          "title": "Friandise au museau",
+          "description": "Le chien debout devant vous, placez la friandise juste à son museau pour capter son attention. Le chien doit suivre la friandise de la tête.",
+          "tip": "Si le chien saute pour attraper la friandise, attendez qu'il soit calme avant de commencer.",
+          "troubleshooting": "Si le chien ne s'intéresse pas à la friandise, essayez-en une de plus haute valeur (poulet, saucisse)."
+        },
+        {
+          "title": "Amorcez l'arc circulaire",
+          "description": "Déplacez lentement la friandise vers un côté (par exemple vers la droite du chien) en la maintenant à hauteur de museau. Le chien tournera la tête en suivant le leurre.",
+          "tip": "Le mouvement doit être lent et continu. Trop rapide, le chien perdra le fil.",
+          "troubleshooting": "Si le chien s'assied, recommencez debout avec la friandise un peu plus haute."
+        },
+        {
+          "title": "Complétez le cercle",
+          "description": "Continuez le mouvement circulaire autour du corps du chien, le long du dos puis de l'autre flanc, jusqu'à ce qu'il ait complété les 360° et vous fasse à nouveau face.",
+          "tip": "Maintenez la friandise à hauteur de museau tout le long — jamais plus haut ni plus bas."
+        },
+        {
+          "title": "Nommez le tour",
+          "description": "Quand le chien termine le cercle complet, dites “tourne” d'un ton joyeux et donnez la friandise instantanément.",
+          "tip": "Ne dites pas “tourne” avant qu'il essaie — attendez le mouvement complet, puis nommez-le."
+        },
+        {
+          "title": "Réduisez le leurre",
+          "description": "Après 5–6 séances, faites le geste circulaire sans friandise dans la main. Quand le chien tourne, récompensez depuis votre poche. Finalement, utilisez seulement le doigt ou la voix.",
+          "tip": "Réduisez le leurre très progressivement : poing fermé (sans friandise visible) puis seulement le geste.",
+          "troubleshooting": "Si le chien arrête de tourner sans le leurre, reculez de deux étapes et réduisez plus lentement."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Déplacer le leurre trop vite",
+      "cause": "Enthousiasme de vouloir voir le résultat final",
+      "fix": "Le leurre doit bouger au rythme du chien. S'il perd le fil, recommencez plus lentement."
+    },
+    {
+      "error": "Dire “tourne” avant que le chien commence à bouger",
+      "cause": "Vouloir que le signal précède le comportement",
+      "fix": "Obtenez d'abord le tour complet avec le leurre. N'ajoutez le mot que lorsque c'est réalisé de façon consistante."
+    },
+    {
+      "error": "Récompenser à mi-tour au lieu de la fin",
+      "cause": "Célébrer trop tôt",
+      "fix": "Gardez la friandise jusqu'à ce que le chien ait complété le cercle entier et vous regarde de face."
+    },
+    {
+      "error": "Enseigner les deux sens en même temps",
+      "cause": "Vouloir progresser trop vite",
+      "fix": "Maîtrisez un sens (par ex. droite) pendant 3–4 séances avant d'introduire l'autre."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Le chien ne tourne qu'à moitié et s'arrête",
+      "solution": "Récompensez le demi-tour au début (renforcement par approximation) et étendez l'arc progressivement séance par séance jusqu'à atteindre 360°."
+    },
+    {
+      "problem": "Le chien s'assied pendant le tour",
+      "solution": "Le leurre est trop haut. Maintenez la friandise à hauteur de museau pendant tout l'arc."
+    },
+    {
+      "problem": "Mon chien refuse de tourner dans un sens",
+      "solution": "Normal — les chiens ont un côté préféré. Travaillez davantage le côté difficile dans des séances séparées."
+    },
+    {
+      "problem": "Il tourne bien mais seulement avec le leurre en main",
+      "solution": "Commencez avec le poing fermé (sans friandise visible) et récompensez depuis la poche. Réduisez la taille du geste chaque semaine."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séances 1–2",
+      "goal": "Le chien suit le leurre et complète au moins un demi-tour"
+    },
+    {
+      "stage": "Séances 3–5",
+      "goal": "Complète le tour à 360° en suivant le leurre dans 70% des essais"
+    },
+    {
+      "stage": "Séances 6–8",
+      "goal": "Répond à “tourne” avec un leurre réduit (poing fermé)"
+    },
+    {
+      "stage": "Semaine 3+",
+      "goal": "Tour complet avec seulement la voix ou un petit geste circulaire du doigt"
+    }
+  ],
+  "successSigns": [
+    "Complète le tour à 360° de façon fluide et sans pause",
+    "Répond à “tourne” avant de voir le geste de la main",
+    "Peut tourner à droite et à gauche sous des signaux différents",
+    "Le fait dans différentes pièces et en présence de personnes"
+  ],
+  "variations": [
+    "Tourner à droite sur un signal et à gauche sur un autre",
+    "Deux tours de suite sur une seule commande",
+    "Tourner en marchant à vos côtés",
+    "Tourner à distance (sans être juste devant lui)",
+    "Enchaîner tourne + révérence pour une fin spectaculaire"
+  ],
+  "safetyNotes": [
+    "Ne pratiquez pas sur surfaces glissantes — le tour implique pivoter sur les pattes arrière",
+    "Chiens avec problèmes de hanche ou de genou : consultez un vétérinaire avant d'enseigner ce tour",
+    "Si le chien montre des signes de vertige (mouvements de tête inhabituels), commencez par des demi-tours",
+    "Chiots de moins de 5 mois : tours doux et séances très courtes pour protéger les articulations"
+  ],
+  "funFact": "Quand un chien tourne en rond avant de se coucher, il suit un instinct ancestral pour aplatir l'herbe et vérifier qu'il n'y a pas de danger. Votre chien fait déjà des tours naturellement !",
+  "nextLevel": "Apprenez le tour dans le sens inverse avec un mot différent. Puis combinez : “tourne à droite — tourne à gauche” en séquence. C'est une vraie chorégraphie !",
+  "proTip": "Le secret est dans le rythme du leurre : ni trop lent (le chien perd intérêt) ni trop rapide (il se perd). Bougez la main au rythme d'une valse lente et votre chien tournera parfaitement."
+}

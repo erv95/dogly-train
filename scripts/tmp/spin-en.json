@@ -1,0 +1,158 @@
+{
+  "title": "Spin (360°)",
+  "subtitle": "The most crowd-pleasing trick — a full circle on the spot!",
+  "level": "Intermediate",
+  "duration": "5–10 min per session",
+  "location": "Home or garden",
+  "ageRecommendation": "From 4 months",
+  "estimatedSessions": "5–8 sessions to master",
+  "objective": "Teach the dog to spin a full 360° circle on cue, responding to the verbal cue “spin” or a circular hand gesture.",
+  "why": [
+    "It's one of the most fun and eye-catching tricks to show in public",
+    "Improves body awareness and balance",
+    "Can be taught in both directions for twice the repertoire",
+    "Requires almost no space and zero special equipment"
+  ],
+  "benefits": [
+    "Mentally stimulates the dog and combats boredom",
+    "Improves flexibility and motor coordination",
+    "Can be used as a warm-up exercise before other activities",
+    "Makes the dog more attentive and motivated during training sessions"
+  ],
+  "where": [
+    "🏠 Indoors, in any room with enough space for the dog to turn around",
+    "🌿 In the garden or park once mastered indoors",
+    "🔇 Always distraction-free at the start"
+  ],
+  "materials": [
+    "🫖 Small high-value treats (chicken, cheese)",
+    "🖐️ One hand to guide the circular motion",
+    "🛟 Flat surface with no obstacles around",
+    "💛 Enthusiasm and vocal celebration"
+  ],
+  "beforeYouStart": [
+    "Your dog does not need any previous commands — this is a relatively easy starting trick",
+    "Make sure there's at least 1 metre of clear space around the dog",
+    "Prepare 20 small treats per session",
+    "Decide from the start whether you'll teach right or left first",
+    "Keep sessions to 5–7 minutes maximum"
+  ],
+  "methods": [
+    {
+      "id": "lure_circle",
+      "title": "Circular lure method",
+      "description": "Guide the dog with the treat describing a slow horizontal circle around its body. When it completes the turn, mark and reward. Then gradually fade the lure until only the gesture or voice is needed.",
+      "bestFor": "Any dog from 4 months, especially food-motivated ones",
+      "steps": [
+        {
+          "title": "Treat at the nose",
+          "description": "With the dog standing in front of you, place the treat right at its nose to get attention. The dog should follow the treat with its head.",
+          "tip": "If the dog jumps for the treat, wait until calm before starting.",
+          "troubleshooting": "If the dog shows no interest in the treat, try a higher-value one (chicken, sausage)."
+        },
+        {
+          "title": "Start the circular arc",
+          "description": "Move the treat slowly to one side (for example, to the dog's right) keeping it at nose height. The dog will turn its head following the lure.",
+          "tip": "The movement must be slow and continuous. If too fast the dog will lose track.",
+          "troubleshooting": "If the dog sits, restart from standing with the treat a little higher."
+        },
+        {
+          "title": "Complete the circle",
+          "description": "Continue the circular movement around the dog's body, guiding the lure along the back, then the other flank, until the dog has completed the full 360° and is facing you again.",
+          "tip": "Keep the treat at nose height the whole time — never higher or lower."
+        },
+        {
+          "title": "Name the trick",
+          "description": "When the dog completes the full circle, say “spin” in a happy tone and deliver the treat instantly.",
+          "tip": "Don't say “spin” before it tries — wait for the completed movement, then name it."
+        },
+        {
+          "title": "Fade the lure",
+          "description": "After 5–6 sessions, start making the circular gesture without a treat in hand. When the dog completes the spin, reward from your pocket. Eventually use only a finger gesture or the voice.",
+          "tip": "Fade the lure gradually: first use a closed fist (no visible treat), then just the gesture.",
+          "troubleshooting": "If the dog stops spinning without the lure, go back two steps and fade more slowly."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Moving the lure too fast",
+      "cause": "Excitement about seeing the final result",
+      "fix": "The lure must move at the dog's pace. If it loses track, restart more slowly."
+    },
+    {
+      "error": "Saying “spin” before the dog starts moving",
+      "cause": "Wanting the cue to come before the behaviour",
+      "fix": "Get the full spin with the lure first. Add the word only when the dog does it consistently."
+    },
+    {
+      "error": "Rewarding halfway through instead of at the end",
+      "cause": "Celebrating too soon",
+      "fix": "Hold the treat until the dog has completed the full circle and is facing you again."
+    },
+    {
+      "error": "Teaching both directions at the same time",
+      "cause": "Wanting to progress faster",
+      "fix": "Master one direction (e.g. right) over 3–4 sessions before introducing the other."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The dog only turns halfway and stops",
+      "solution": "Reward the half-spin at first (shaping) and extend the arc gradually session by session until reaching 360°."
+    },
+    {
+      "problem": "The dog sits during the spin",
+      "solution": "The lure is too high. Keep the treat at nose height throughout the entire arc."
+    },
+    {
+      "problem": "My dog refuses to turn in one direction",
+      "solution": "Normal — dogs have a preferred side. Work the difficult side in separate sessions."
+    },
+    {
+      "problem": "Can spin but only with the lure in hand",
+      "solution": "Start using a closed fist (no visible treat) and reward from your pocket. Reduce the gesture size each week."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessions 1–2",
+      "goal": "The dog follows the lure and completes at least half a turn"
+    },
+    {
+      "stage": "Sessions 3–5",
+      "goal": "Completes the full 360° spin following the lure in 70% of attempts"
+    },
+    {
+      "stage": "Sessions 6–8",
+      "goal": "Responds to “spin” with a reduced lure (closed fist)"
+    },
+    {
+      "stage": "Week 3+",
+      "goal": "Full spin with just the voice or a small circular finger gesture"
+    }
+  ],
+  "successSigns": [
+    "Completes the full 360° turn smoothly without pausing",
+    "Responds to “spin” before seeing the hand gesture",
+    "Can spin both right and left under different cues",
+    "Does it in different rooms and with people present"
+  ],
+  "variations": [
+    "Spin right on one cue, left on a different cue",
+    "Two spins in a row on a single command",
+    "Spin while walking alongside you",
+    "Spin at a distance (without being right in front of it)",
+    "Chain spin + bow for a complete crowd-pleasing finish"
+  ],
+  "safetyNotes": [
+    "Do not practice on slippery surfaces — the spin involves pivoting on the back legs",
+    "Dogs with hip or knee issues: consult a vet before teaching this trick",
+    "If the dog shows dizziness (odd head movements), start with half-turns",
+    "Puppies under 5 months: gentle turns and very short sessions to protect joints"
+  ],
+  "funFact": "When a dog turns in circles before lying down, it's following an ancient instinct to flatten the grass and check for dangers. Your dog already spins naturally!",
+  "nextLevel": "Teach the spin in the opposite direction with a different word. Then combine: “spin right — spin left” in sequence. It looks like a choreographed dance!",
+  "proTip": "The secret is the lure rhythm: not too slow (loses interest) and not too fast (loses track). Move your hand at the pace of a slow waltz and your dog will spin perfectly."
+}

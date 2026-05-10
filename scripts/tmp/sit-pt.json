@@ -1,0 +1,189 @@
+{
+  "title": "Sentar",
+  "subtitle": "O primeiro comando que todo cão deve aprender",
+  "level": "Muito básico",
+  "duration": "5–10 min por sessão",
+  "location": "Casa ou jardim",
+  "ageRecommendation": "A partir das 8 semanas",
+  "estimatedSessions": "3–5 sessões para dominar",
+  "objective": "Ensinar o cão a sentar quando lhe é dado o comando verbal “sentado”, mantendo a posição até nova sinalização.",
+  "why": [
+    "Controlar o cão em situações do quotidiano",
+    "Melhorar a atenção e o foco",
+    "Serve de base para qualquer outra aprendizagem"
+  ],
+  "benefits": [
+    "O seu cão acalmará nas passadeiras ou ao receber visitas",
+    "Reduz o risco de saltos sobre crianças e idosos",
+    "Base para comandos avançados como “fica”, “deita-te” ou “dá a pata”",
+    "Cria confiança mútua desde o primeiro dia de convivência"
+  ],
+  "where": [
+    "🏠 Em casa (sala ou divisão tranquila)",
+    "🌿 No jardim ou varanda",
+    "🔇 Sem distrações no início"
+  ],
+  "materials": [
+    "🫖 Petiscos pequenos (comida mole, do tamanho de uma ervilha)",
+    "🦮 Trela curta (opcional, se o seu cão se distrai)",
+    "🛟 Tapete ou superfície confortável",
+    "💛 Paciência e voz tranquila"
+  ],
+  "beforeYouStart": [
+    "O seu cão deve estar calmo, não sobreexcitado após um passeio intenso",
+    "Pratique antes das refeições (com apetite moderado, nunca esfomeado)",
+    "Escolha um lugar silencioso, sem TV, outros animais ou visitas",
+    "Tenha os petiscos prontos numa bolsa à cintura",
+    "Sessões de 5 minutos no máximo: prefira qualidade a quantidade"
+  ],
+  "methods": [
+    {
+      "id": "lure",
+      "title": "Método com isco (recomendado)",
+      "description": "Guia o cão para a posição usando um petisco como isco. O método mais rápido e claro para principiantes.",
+      "bestFor": "Cachorros e cães sem treino prévio",
+      "steps": [
+        {
+          "title": "Capte a atenção",
+          "description": "Coloque-se em frente ao seu cão. Mostre o petisco perto do nariz para captar a atenção.",
+          "tip": "Certifique-se de que ele olha para si antes de continuar.",
+          "troubleshooting": "Se não olhar, suba o valor do petisco (queijo, salsicha)."
+        },
+        {
+          "title": "Movimento guiado",
+          "description": "Suba o petisco lentamente para cima e para trás, sobre a cabeça. O cão baixará naturalmente as ancas e sentará.",
+          "tip": "Não o empurre. Deixe o movimento guiá-lo.",
+          "troubleshooting": "Se recuar em vez de sentar, faça-o contra uma parede para que não possa andar para trás."
+        },
+        {
+          "title": "Introduza o comando",
+          "description": "Assim que sentar, diga claramente: “sentado”. Use sempre a mesma palavra e o mesmo tom.",
+          "tip": "O timing é crucial: a palavra vai no momento exato em que senta."
+        },
+        {
+          "title": "Recompensa imediata",
+          "description": "Dê o petisco no instante e elogie com voz alegre e positiva. O cão associará “sentado” a algo bom.",
+          "tip": "A recompensa deve chegar em menos de 2 segundos."
+        },
+        {
+          "title": "Repita e progrida",
+          "description": "Faça 5–10 repetições por sessão e 2–3 sessões por dia. Reduza gradualmente os petiscos.",
+          "tip": "Sessões curtas = melhor aprendizagem."
+        }
+      ]
+    },
+    {
+      "id": "capture",
+      "title": "Método de captura (cães que já sentam sozinhos)",
+      "description": "Recompensa o cão sempre que sentar espontaneamente, sem pedir. Funciona se o seu cão já tende a sentar.",
+      "bestFor": "Cães adultos, resgatados ou com medo de mãos perto da face",
+      "steps": [
+        {
+          "title": "Observe e espere",
+          "description": "Caminhe tranquilamente pela casa com petiscos à mão. Ignore o cão e faça as suas coisas.",
+          "tip": "É importante não falar nem olhar fixamente para o cão."
+        },
+        {
+          "title": "Marque o momento",
+          "description": "Assim que o cão sentar por iniciativa própria, diga um “sim” claro ou use o clicker nesse instante.",
+          "tip": "O “sim” ou o clic deve chegar NO momento exato em que o traseiro toca o chão."
+        },
+        {
+          "title": "Recompense de imediato",
+          "description": "Atire um petisco para o chão (não da mão) para que se levante e possa repetir.",
+          "tip": "Atirar o petisco ao chão evita dependência da sua mão."
+        },
+        {
+          "title": "Adicione a palavra",
+          "description": "Quando já sentar várias vezes para ganhar o petisco, comece a dizer “sentado” mesmo antes de ele o fazer.",
+          "tip": "Só adicione a palavra quando o comportamento for previsível."
+        },
+        {
+          "title": "Generalize",
+          "description": "Pratique em diferentes divisões, posições e momentos do dia. A generalização faz o comando funcionar sempre.",
+          "tip": "Conte quantas vezes acerta em 10. Quando chegar a 8/10, mude de contexto."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Repetir o comando muitas vezes seguidas (“sentado, sentado, sentado”)",
+      "cause": "Frustração do tutor quando não responde à primeira",
+      "fix": "Diga o comando UMA vez e espere 5 segundos em silêncio. Sem resposta, volte ao isco."
+    },
+    {
+      "error": "Recompensar tarde, quando o cão já se levantou",
+      "cause": "Reflexos lentos ou petisco fora de alcance",
+      "fix": "Treine o timing sem cão: atire um petisco e apanhe-o em menos de 2 segundos."
+    },
+    {
+      "error": "Empurrar o lombo ou as ancas para forçar a posição",
+      "cause": "Ansiedade por ver resultados rápidos",
+      "fix": "Nunca toque fisicamente. Melhore o isco (petisco mais perto do nariz, movimento mais lento)."
+    },
+    {
+      "error": "Sessões longas demais que esgotam o cão",
+      "cause": "Mais treino ≠ melhor aprendizagem",
+      "fix": "5 minutos no máximo por sessão. Termine sempre numa repetição bem-sucedida."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão olha para mim mas não faz nada",
+      "solution": "Aproxime mais o petisco do nariz, quase tocando, e mova mais devagar. Se continuar sem reagir, prove um petisco de maior valor."
+    },
+    {
+      "problem": "Salta para apanhar o petisco em vez de sentar",
+      "solution": "Está a baixar muito a mão e depois subir muito. Mantenha o petisco mesmo por cima da cabeça."
+    },
+    {
+      "problem": "Funciona em casa mas não na rua",
+      "solution": "É normal. Repita todos os passos do zero no novo ambiente, com menos distrações primeiro."
+    },
+    {
+      "problem": "Senta mas levanta-se logo",
+      "solution": "Recompense mais rápido (em menos de 1 segundo) e aumente gradualmente os segundos antes de recompensar (1s → 3s → 5s)."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessão 1–2",
+      "goal": "O seu cão segue o petisco com o nariz e senta espontaneamente pelo menos uma vez"
+    },
+    {
+      "stage": "Sessão 3–5",
+      "goal": "Senta com a palavra “sentado” em 70% das tentativas em casa tranquila"
+    },
+    {
+      "stage": "Semana 2",
+      "goal": "Senta sem petisco visível, apenas com a voz"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Mantém a posição 5–10 segundos antes de recompensar, em casa e jardim"
+    }
+  ],
+  "successSigns": [
+    "Senta ao ouvir o comando sem petisco visível",
+    "Fá-lo em diferentes lugares (casa, jardim, rua tranquila)",
+    "Responde mesmo com pequenas distrações",
+    "Mantém a posição até receber outro sinal"
+  ],
+  "variations": [
+    "Sentado a 1 metro de distância (sem estar à frente)",
+    "Sentado apenas com gesto da mão, sem voz",
+    "Sentado lateral (ao seu lado, não em frente)",
+    "Sentado enquanto se senta ou se levanta",
+    "Sentado durante 30 segundos antes de comer (autocontrolo)"
+  ],
+  "safetyNotes": [
+    "Nunca obrigue um cão idoso ou com artrose a repetir se mostrar dor",
+    "Se o seu cão arquejar muito, se afastar ou evitar contacto visual, faça pausa de 24h",
+    "Evite superfícies muito frias, quentes ou escorregadias (parquet recém-encerado)",
+    "Cachorros com menos de 12 semanas: 3 minutos no máximo por sessão"
+  ],
+  "funFact": "Border Collies e Caniches aprendem “sentado” em menos de 5 repetições. Bulldogs e Mastins podem precisar de 30 ou mais.",
+  "nextLevel": "Praticar “sentado” na rua com distrações (outros cães, ruído). Depois introduzir “fica” por vários minutos.",
+  "proTip": "Treine sempre com o cão um pouco esfomeado (antes de comer). Se muito distraído, suba o valor do petisco (ração → queijo ou frango cozido)."
+}

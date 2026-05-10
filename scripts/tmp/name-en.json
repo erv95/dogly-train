@@ -1,0 +1,150 @@
+{
+  "title": "Respond to their name",
+  "subtitle": "The foundation of all communication with your dog",
+  "level": "Very basic",
+  "duration": "3–5 min per session",
+  "location": "Home with no distractions → garden → outside",
+  "ageRecommendation": "From 8 weeks",
+  "estimatedSessions": "2–4 sessions for initial association",
+  "objective": "Get the dog to look at the handler immediately when they hear their name, in any context.",
+  "why": [
+    "Without a response to the name you can't teach anything else",
+    "Necessary to control the dog on the street",
+    "Reinforces the bond and mutual attention",
+    "Foundation for recall and all distance commands"
+  ],
+  "benefits": [
+    "Your dog will come when called in parks or at friends' homes",
+    "Reduces accidents: turning to their name avoids dangers (cars, other dogs)",
+    "Essential for a reliable emergency recall",
+    "Builds a dog focused on you, not the environment"
+  ],
+  "where": [
+    "🏠 At home, in a quiet room (sessions 1–3)",
+    "🛋️ Different rooms (sessions 4–6)",
+    "🌿 Garden or terrace (session 7+)",
+    "🌳 Outside with low distractions (empty park)"
+  ],
+  "materials": [
+    "🫖 Very high-value treats (cheese, sausage, chicken)",
+    "🦮 Long leash 5–10 m (for outside)",
+    "🔇 Quiet environment at first",
+    "💛 Cheerful and enthusiastic voice"
+  ],
+  "beforeYouStart": [
+    "Make sure you haven't used the name as a reprimand previously",
+    "If the dog has negative associations with their name, consider changing it",
+    "Highest-value treats: no kibble here",
+    "Short sessions: 3–5 minutes, several times a day",
+    "Never use the name followed by something unpleasant (bath, nail trimming)"
+  ],
+  "methods": [
+    {
+      "id": "name_game",
+      "title": "The name game (classic)",
+      "description": "Repeatedly associate the name with something extremely positive.",
+      "bestFor": "Any dog, especially puppies and recently adopted dogs",
+      "steps": [
+        {
+          "title": "Capture mutual attention",
+          "description": "Sit on the floor in a quiet room. Wait until your dog is relaxed but not asleep.",
+          "tip": "Don't talk to or look at them at first."
+        },
+        {
+          "title": "Say their name ONCE",
+          "description": "With a happy, soft voice, say their name clearly. Just once.",
+          "tip": "The tone should sound exciting, not commanding.",
+          "troubleshooting": "If they don't react, do NOT repeat the name: move to step 3."
+        },
+        {
+          "title": "Reward immediately",
+          "description": "As soon as they look at you (even for a microsecond!), say “good!” and give a high-value treat.",
+          "tip": "If they don't look in 2 seconds, make a sound (click) to get attention and reward when they look."
+        },
+        {
+          "title": "Space out the rewards",
+          "description": "Don't give another treat until you say the name again. Wait 10–30 seconds between repetitions.",
+          "tip": "If you do them back-to-back, the dog will start looking without your name."
+        },
+        {
+          "title": "Change rooms",
+          "description": "After 5 successful sessions in the same room, move to another. Repeat the whole process.",
+          "tip": "Context change is where real learning happens."
+        },
+        {
+          "title": "Level up: distractions",
+          "description": "Once it works in the whole house, try with TV on, other people present, food nearby.",
+          "tip": "Each new context = start with easy rewards."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Repeating the name multiple times (“Toby, Toby, Toby”)",
+      "cause": "Frustration when they don't respond",
+      "fix": "If no response first try, do NOT repeat. Get attention with a sound and reward when they look. Next time say the name from closer."
+    },
+    {
+      "error": "Using the name before something bad (bath, vet trip)",
+      "cause": "Unconscious habit",
+      "fix": "For unpleasant things, go get them physically without saying their name. The name must ALWAYS be positive."
+    },
+    {
+      "error": "Low-quality treats (dry kibble)",
+      "cause": "Convenience",
+      "fix": "Use the TASTIEST treats you have for teaching the name. It's an initial investment."
+    },
+    {
+      "error": "30-minute sessions",
+      "cause": "Thinking “more is better”",
+      "fix": "Max 3–5 minutes. Dog focus runs out fast. Better 5 short sessions than 1 long one."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My dog has a long name and doesn't react",
+      "solution": "Use a short 1–2 syllable nickname for training. E.g. “Maximilian” → “Max”. Always keep the same."
+    },
+    {
+      "problem": "Works at home but ignores me on the street",
+      "solution": "You need a long leash + VERY high treats. Start in empty areas. The street is “expert level” compared to home."
+    },
+    {
+      "problem": "Looks at me but doesn't come closer",
+      "solution": "That's success in this course. Coming closer is the next level: the “Recall” course."
+    },
+    {
+      "problem": "I have several dogs and don't know which to call",
+      "solution": "Train each in separate sessions first. Then use clearly distinct names by syllables."
+    }
+  ],
+  "progressMilestones": [
+    { "stage": "Session 1–2", "goal": "Looks when hearing their name in a quiet room" },
+    { "stage": "Session 3–5", "goal": "Immediate reaction (under 1 second) in different rooms" },
+    { "stage": "Week 1", "goal": "Responds to name in garden with low distractions" },
+    { "stage": "Week 2+", "goal": "Responds in park with other dogs and people 5 meters away" }
+  ],
+  "successSigns": [
+    "Turns head immediately upon hearing their name",
+    "Does it without a visible treat",
+    "Works even with medium distractions (other dogs at distance)",
+    "Holds eye contact for a few seconds awaiting instructions"
+  ],
+  "variations": [
+    "Say the name from different sides (must turn looking for you)",
+    "Say the name when distracted sniffing",
+    "Say the name from another room (must come or look in)",
+    "Say the name when playing with other dogs",
+    "Combine name + silent gesture (clap hands)"
+  ],
+  "safetyNotes": [
+    "NEVER use the name in a scolding tone: you'd ruin months of work",
+    "If you're going to do something unpleasant, do it without naming the dog",
+    "Dogs with partial deafness: also use visual gestures and floor vibrations",
+    "If the dog was verbally abused, consider a new name and start from scratch"
+  ],
+  "funFact": "Dogs distinguish their name from other human words in just 2 weeks of consistent exposure. But they can forget it if it gets associated with negative things in only 3-4 episodes.",
+  "nextLevel": "Move to the “Recall (come)” course: not just looking, but actually coming to you.",
+  "proTip": "To keep the name “fresh” throughout the dog's life, keep rewarding occasionally when they respond — even years later. Once a month is enough to keep the response solid."
+}

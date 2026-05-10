@@ -1,0 +1,187 @@
+{
+  "title": "Junto",
+  "subtitle": "Caminhar com precisão ao lado do guia, atento e controlado",
+  "level": "Intermediário",
+  "duration": "10–15 min por sessão",
+  "location": "Casa, jardim, rua tranquila",
+  "ageRecommendation": "A partir de 12 semanas",
+  "estimatedSessions": "10–15 sessões para dominar",
+  "objective": "Ensinar o cão a caminhar com precisão ao lado esquerdo do guia, olhando para ele, sem puxar, incluindo paradas e viragens. Mais preciso e exigente do que a caminhada com trela solta.",
+  "why": [
+    "Permite controlo total em ambientes movimentados ou perigosos sem recorrer à força",
+    "Desenvolve a atenção e o vínculo: o cão olha para você, não para o mundo",
+    "Base para desportos caninos (obediência, Rally-O, agility) e passeios tranquilos",
+    "Um cão que anda 'junto' nunca puxa e torna os passeios agradáveis"
+  ],
+  "benefits": [
+    "Passeios sem tensão na trela mesmo com distrações fortes",
+    "Maior segurança ao atravessar ruas ou em zonas de muito trânsito",
+    "O cão aprende a focar-se em você como fonte de informação e recompensas",
+    "Serve de base para uma excelente comunicação durante qualquer atividade"
+  ],
+  "where": [
+    "🏠 Comece em casa ou num corredor longo sem distrações",
+    "🌿 Progrida para o jardim ou zona vedada",
+    "🛣️ Por fim, pratique na rua com distrações reais"
+  ],
+  "materials": [
+    "🫖 Petiscos de muito alto valor (frango cozido, salsicha, queijo)",
+    "🦮 Trela curta de 1–1,5 m para o início",
+    "🎯 Clicker ou marcador verbal consistente ('isso' ou 'muito bem')",
+    "💛 Paciência e muitas pausas"
+  ],
+  "beforeYouStart": [
+    "O cão deve conhecer 'senta' com fluidez antes de começar o 'junto'",
+    "Decida desde o início que o 'junto' será sempre ao seu lado ESQUERDO: seja consistente",
+    "Sessões curtas de 5–10 minutos com muitas pausas: o 'junto' é cognitivamente exigente",
+    "Tenha petiscos de máximo valor na mão esquerda: o cão aprende a seguir essa mão",
+    "Não pratique após um passeio longo de exercício: o cão deve estar alerta"
+  ],
+  "methods": [
+    {
+      "id": "left_lure",
+      "title": "Método do isco com a mão esquerda (início recomendado)",
+      "description": "Você segura o petisco na mão esquerda à altura do seu quadril. O cão aprende que manter-se ao seu lado esquerdo produz recompensas contínuas. Constrói a posição 'junto' antes de adicionar movimento.",
+      "bestFor": "Cães sem experiência em 'junto' ou filhotes a começar do zero",
+      "steps": [
+        {
+          "title": "Posição inicial: cão sentado à sua esquerda",
+          "description": "O cão sentado ao seu lado esquerdo, olhando na mesma direção que você. Esta é a posição inicial do 'junto'.",
+          "tip": "Recompense várias vezes simplesmente por estar nessa posição. O espaço junto ao seu quadril esquerdo = zona de recompensas.",
+          "troubleshooting": "Se o cão se posicionar à sua frente, use uma parede à sua direita para limitar o espaço dele."
+        },
+        {
+          "title": "Petisco à altura do quadril esquerdo",
+          "description": "Segure o petisco na mão esquerda à altura do seu quadril. O cão vai esticar o pescoço para cima em busca do petisco.",
+          "tip": "A sua mão esquerda é a 'âncora' do cão. Deve estar sempre no mesmo lugar.",
+          "troubleshooting": "Se o cão saltar para apanhar o petisco, baixe a mão levemente. Recompense apenas quando as patas estiverem no chão."
+        },
+        {
+          "title": "Primeiro passo juntos",
+          "description": "Dê um único passo em frente com o pé esquerdo e diga 'junto'. Se o cão o seguir em posição, recompense imediatamente.",
+          "tip": "Um passo, uma recompensa. Não peça mais distância do que o cão consegue manter em posição.",
+          "troubleshooting": "Se avançar à frente, pare completamente e espere que ele volte ao seu lado antes de continuar."
+        },
+        {
+          "title": "Aumente os passos progressivamente",
+          "description": "De 1 passo → 3 → 5 → 10 → dar a volta ao quarteirão. Recompense pelo menos a cada 3–5 passos em posição correta.",
+          "tip": "A frequência de reforço é fundamental no início: recompense com frequência para manter o cão engajado ao seu lado."
+        },
+        {
+          "title": "Introduza paradas e viragens",
+          "description": "Adicione uma parada: quando parar, o cão deve sentar-se automaticamente ao seu lado. Introduza viragens: curvas suaves à esquerda e à direita.",
+          "tip": "Antecipe as viragens com uma ligeira redução do ritmo para dar tempo ao cão de se ajustar."
+        }
+      ]
+    },
+    {
+      "id": "circles",
+      "title": "Método dos círculos (para manter o ritmo e a atenção)",
+      "description": "Você caminha em círculos fechados em direção ao lado do cão (esquerda), o que o obriga a acelerar o passo para manter a posição. Excelente para aumentar a atenção e o ritmo.",
+      "bestFor": "Cães que ficam para trás ou que tendem a perder a posição em linha reta",
+      "steps": [
+        {
+          "title": "Círculos pequenos para a esquerda",
+          "description": "Comece a caminhar em círculos pequenos girando para a esquerda. O cão tem de acelerar para se manter ao seu lado.",
+          "tip": "Os círculos para a esquerda são mais exigentes para o cão (percorre mais caminho). Os da direita são mais fáceis.",
+          "troubleshooting": "Se o cão avançar à frente, reduza o raio do círculo para que tenha menos espaço para ir à frente."
+        },
+        {
+          "title": "Recompense a posição correta no círculo",
+          "description": "Sempre que o cão estiver na posição correta (ombro junto ao seu quadril esquerdo), recompense.",
+          "tip": "A recompensa vem da mão esquerda para baixo. Não faça o cão saltar para obtê-la."
+        },
+        {
+          "title": "Alterne círculos e linha reta",
+          "description": "Depois dos círculos, caminhe em linha reta alguns passos. O cão já terá aprendido o ritmo e a posição dos círculos.",
+          "tip": "A transição dos círculos para a reta é o momento de consolidar o comportamento."
+        },
+        {
+          "title": "Reduza o reforço gradualmente",
+          "description": "Com o tempo, recompense a cada 10, 20 e depois 50 passos em vez de a cada poucos passos. Mantenha o cão em incerteza positiva sobre quando a recompensa chegará.",
+          "tip": "Recompense de forma variável: às vezes 5 passos, às vezes 20. A variabilidade mantém a atenção melhor do que a rotina."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Puxar a trela para manter o cão em posição",
+      "cause": "Querer resultados rápidos sem trabalho de posicionamento",
+      "fix": "O 'junto' ensina-se com petiscos e posicionamento, nunca com pressão de trela. A trela deve ser um acessório de segurança, não de controlo."
+    },
+    {
+      "error": "Sessões muito longas que entediam ou cansam o cão",
+      "cause": "Querer avançar rapidamente",
+      "fix": "O 'junto' é mentalmente intenso. Sessões de 5–10 minutos com muitas pausas de brincadeira livre."
+    },
+    {
+      "error": "Passar para a rua antes de consolidar em casa",
+      "cause": "Saltar muito rapidamente para o ambiente real",
+      "fix": "Consolide primeiro dentro de casa, depois no jardim, depois numa rua tranquila, depois numa rua com distrações. Cada contexto exige reforço adicional."
+    },
+    {
+      "error": "Alternar entre lado esquerdo e direito dependendo do dia",
+      "cause": "Falta de consistência na posição",
+      "fix": "Escolha UM lado (convencionalmente esquerdo) e seja consistente. O cão aprende uma posição específica, não 'qualquer lado'."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão olha para mim mas fica para trás",
+      "solution": "O ritmo é lento demais para ele. Aumente-o ligeiramente. Cães que ficam para trás frequentemente melhoram quando você acelera o passo."
+    },
+    {
+      "problem": "Mantém a posição 10 passos mas depois distrai-se e avança à frente",
+      "solution": "O reforço foi espaçado cedo demais. Volte a recompensar a cada 3–5 passos até a posição ser mais sólida."
+    },
+    {
+      "problem": "Funciona em linha reta mas perde a posição nas viragens",
+      "solution": "As viragens são mais difíceis. Pratique apenas viragens durante uma sessão inteira, recompensando cada viragem correta independentemente."
+    },
+    {
+      "problem": "Só funciona com o petisco visível na mão; sem petisco não o faz",
+      "solution": "Elimine progressivamente a mão com petisco: primeiro na mão, depois no bolso mas tirando para recompensar, depois numa bolsa. O cão deve aprender que a recompensa pode aparecer a qualquer momento."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessão 1–3",
+      "goal": "O cão segue a mão esquerda em posição correta durante 5–10 passos"
+    },
+    {
+      "stage": "Sessão 4–7",
+      "goal": "Mantém a posição em linha reta durante 20–30 passos com reforço frequente"
+    },
+    {
+      "stage": "Semana 2–3",
+      "goal": "Executa 'junto' incluindo paradas (com senta automático) e viragens suaves"
+    },
+    {
+      "stage": "Mês 1+",
+      "goal": "Caminha 'junto' no exterior com distrações moderadas durante 1–2 minutos sem petisco visível"
+    }
+  ],
+  "successSigns": [
+    "O cão estabelece contacto visual regular enquanto caminha ao seu lado",
+    "O ombro do cão mantém-se alinhado com o seu quadril esquerdo durante pelo menos 30 passos consecutivos",
+    "Senta-se automaticamente quando você para",
+    "Mantém a posição nas viragens sem orientação física"
+  ],
+  "variations": [
+    "Junto com mudanças de ritmo (muito lento → trote)",
+    "Junto entre obstáculos (cones, cadeiras)",
+    "Junto com outros cães ou pessoas a passar perto",
+    "Junto sem trela em zona segura (avançado)",
+    "Junto com oito entre as pernas do guia"
+  ],
+  "safetyNotes": [
+    "Nunca use coleiras de estrangulamento, de picos ou elétricas para ensinar o 'junto': são contraproducentes e prejudiciais",
+    "Se o cão tiver problemas de ancas ou articulações, consulte o veterinário antes de sessões longas de 'junto'",
+    "Leve sempre água para sessões de mais de 10 minutos em dias quentes",
+    "Não pratique 'junto' com reforço muito escasso em zonas de muito trânsito até o comportamento estar muito sólido"
+  ],
+  "funFact": "O 'Heelwork to Music' é uma modalidade desportiva em que o cão realiza coreografias precisas ao ritmo de música. Alguns cães aprendem até 20 posições diferentes!",
+  "nextLevel": "Introduza o 'junto' sem trela em espaços fechados. Depois pratique 'junto' com outros cães ou pessoas a passar. Por fim, combine-o com outros comandos (junto → fica → junto).",
+  "proTip": "O olhar do cão nos seus olhos é a chave do 'junto' avançado. Recompense especificamente os momentos de contacto visual: 'olha para você = segue você = recompensa'. Construa o contacto visual antes de exigir uma posição perfeita."
+}

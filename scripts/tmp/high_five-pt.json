@@ -1,0 +1,158 @@
+{
+  "title": "Bate cá!",
+  "subtitle": "A saudação mais cool entre cão e dono — pata contra palma!",
+  "level": "Intermediário",
+  "duration": "5–10 min por sessão",
+  "location": "Casa ou jardim",
+  "ageRecommendation": "A partir dos 5 meses",
+  "estimatedSessions": "6–10 sessões para dominar",
+  "objective": "Ensinar o cão a levantar uma pata verticalmente para tocar na palma aberta do dono, respondendo ao sinal verbal “bate cá” ou à palma estendida verticalmente.",
+  "why": [
+    "É um dos truques mais fotogénicos e divertidos para partilhar",
+    "Requer que o cão diferencie entre “dá a pata” (horizontal) e “bate cá” (vertical)",
+    "Desenvolve a coordenação e a consciência da posição das patas",
+    "Cria interação próxima e positiva com o dono e com novas pessoas"
+  ],
+  "benefits": [
+    "Melhora a concentração pois o cão tem de olhar para a palma",
+    "Cria um ritual de celebração partilhado — ideal para reforçar bons comportamentos",
+    "É um trampolim para truques mais complexos como aplaudir ou tocar objetos com a pata",
+    "As crianças adoram e facilita a socialização positiva com novas pessoas"
+  ],
+  "where": [
+    "🏠 Em casa, na sala ou na cozinha",
+    "🌿 No jardim ou parque quando já dominar bem",
+    "🔇 Sem distrações no início — o truque requer precisão"
+  ],
+  "materials": [
+    "🫖 Petiscos de alto valor (frango cozido, queijo, salsicha)",
+    "🖐️ A sua palma aberta como sinal visual",
+    "🛟 Superfície antiderrapante para maior estabilidade",
+    "💛 Uma celebração vocal entusiasta a cada sucesso"
+  ],
+  "beforeYouStart": [
+    "O seu cão deve conhecer “dá a pata” com fluidez antes de começar",
+    "Certifique-se de que a superfície é antiderrapante para que o cão se sinta seguro ao levantar a pata",
+    "Prepare 20 petiscos pequenos por sessão",
+    "Comece com a pata dominante do cão (normalmente a esquerda)",
+    "Sessões de no máximo 5–7 minutos"
+  ],
+  "methods": [
+    {
+      "id": "paw_to_vertical",
+      "title": "Método de elevação progressiva da pata",
+      "description": "Comece de “dá a pata” em posição baixa e vá subindo a palma gradualmente sessão a sessão até ficar completamente vertical. O cão aprende que precisa de levantar mais a pata a cada vez para conseguir o contacto.",
+      "bestFor": "Cães que já conhecem dá a pata",
+      "steps": [
+        {
+          "title": "Dá a pata na posição normal",
+          "description": "Peça “dá a pata” com a palma voltada para cima na altura habitual. Marque e recompense quando tocar na sua mão.",
+          "tip": "Este é o ponto de partida. Faça 5 repetições para aquecimento.",
+          "troubleshooting": "Se dá a pata não for fiável, dedique primeiro 2–3 sessões a consolidá-lo."
+        },
+        {
+          "title": "Suba a palma gradualmente",
+          "description": "A cada sessão, suba a palma alguns centímetros. O cão terá de levantar mais a pata para a tocar. Mantenha a palma horizontal no início.",
+          "tip": "Não suba mais de 3–5 cm por sessão. A progressão gradual é a chave.",
+          "troubleshooting": "Se o cão não conseguir alcançar a mão, desça um pouco e trabalhe essa altura antes de subir mais."
+        },
+        {
+          "title": "Rode a palma para vertical",
+          "description": "Quando o cão levar a pata até à altura do peito, comece a rodar a palma para uma posição vertical (como ao apertar a mão de alguém). O cão terá de tocar a palma de frente.",
+          "tip": "O gesto visual da palma vertical tornar-se-á o sinal definitivo para “bate cá”."
+        },
+        {
+          "title": "Introduza o sinal “bate cá”",
+          "description": "Quando o cão tocar consistentemente a palma vertical, adicione “bate cá” mesmo antes de estender a mão. Marque o contacto e recompense com entusiasmo.",
+          "tip": "Use um tom festivo e celebratório — este truque merece festa.",
+          "troubleshooting": "Se confundir “bate cá” com “dá a pata”, trabalhe em contextos diferentes com gestos claramente distintos."
+        },
+        {
+          "title": "Diferencie dá a pata de bate cá",
+          "description": "Pratique alternando ambos os sinais para que o cão os diferencie: palma horizontal virada para baixo = “dá a pata”; palma vertical voltada para ele = “bate cá”. Recompense mais a resposta correta.",
+          "tip": "A diferenciação de sinais é o nível mais avançado. Não apresse."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Subir a mão demasiado rápido antes de o cão consolidar cada altura",
+      "cause": "Impaciência para chegar ao high five completo",
+      "fix": "Dedique pelo menos 2 sessões a cada altura antes de subir. A qualidade importa mais do que a velocidade."
+    },
+    {
+      "error": "Aceitar que o cão arranha a mão em vez de tocar com a pata plana",
+      "cause": "Não marcar com precisão que tipo de contacto se quer",
+      "fix": "Marque apenas o contacto limpo da pata plana. Ignore as arranhadelas sem as recompensar."
+    },
+    {
+      "error": "Não diferenciar os sinais visuais entre dá a pata e bate cá",
+      "cause": "Usar o mesmo gesto para os dois truques",
+      "fix": "Palma horizontal para “dá a pata”, palma vertical para “bate cá”. Treine esta diferença ativamente."
+    },
+    {
+      "error": "Recompensar com pouca emoção — o truque parece aborrecido",
+      "cause": "Celebração escassa ou monótona",
+      "fix": "Bate cá merece euforia! Suba o volume, sorria e adicione “muito bem!” com convicção."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O cão toca a mão com o focinho em vez da pata",
+      "solution": "Retire a mão quando o focinho se aproximar e ofereça novamente. Marque apenas o contacto com a pata."
+    },
+    {
+      "problem": "O cão perde o equilíbrio ao levantar a pata muito alto",
+      "solution": "Trabalhe numa superfície antiderrapante e não suba a mão tão alto por agora. O equilíbrio melhorará com a prática."
+    },
+    {
+      "problem": "Não diferencia “dá a pata” de “bate cá”",
+      "solution": "Exagere a diferença dos gestos e trabalhe cada sinal em sessões separadas durante uma semana antes de os misturar."
+    },
+    {
+      "problem": "Faz bem em casa mas não com outras pessoas",
+      "solution": "Comece por apresentar o truque a familiares em casa. Depois com amigos. A generalização leva o seu tempo."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessões 1–2",
+      "goal": "Levanta a pata pelo menos até à altura do cotovelo em resposta à palma"
+    },
+    {
+      "stage": "Sessões 3–5",
+      "goal": "Toca a palma vertical à altura do peito de forma consistente"
+    },
+    {
+      "stage": "Sessões 6–8",
+      "goal": "Responde a “bate cá” com a palma à altura completa de high five"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Diferencia claramente “dá a pata” de “bate cá” e faz com outras pessoas"
+    }
+  ],
+  "successSigns": [
+    "Levanta a pata até à palma vertical sem hesitar",
+    "Responde a “bate cá” antes mesmo de ver a palma",
+    "Faz com outras pessoas além do dono",
+    "Diferencia claramente “dá a pata” de “bate cá”"
+  ],
+  "variations": [
+    "High five com a pata esquerda e com a direita",
+    "High five a diferentes alturas (baixo, médio, alto)",
+    "High five à distância (a 50 cm)",
+    "Encadear bate cá + reverência para uma rotina completa",
+    "High ten: as duas patas ao mesmo tempo contra as suas duas palmas"
+  ],
+  "safetyNotes": [
+    "Nunca force a pata para cima com a sua mão — deixe o cão levantá-la sozinho",
+    "Cães com problemas no ombro ou no cotovelo: consulte um veterinário antes de praticar",
+    "Se o cão mostrar desconforto ao levantar a pata, pare a sessão e verifique se coxeia",
+    "Cachorros com menos de 6 meses: limite a altura para proteger as articulações em desenvolvimento"
+  ],
+  "funFact": "Os cães que aprendem “bate cá” tendem a oferecê-lo espontaneamente quando querem atenção — o seu cão pode tornar-se viciado em dar high fives inesperados.",
+  "nextLevel": "Ensine o high ten (as duas patas ao mesmo tempo). Depois encadeie: acena → bate cá → reverência. Um espetáculo completo com três truques!",
+  "proTip": "Quando o cão fizer um high five perfeito, celebre com a maior emoção possível. Os cães aprendem mais depressa quando a recompensa emocional é enorme."
+}

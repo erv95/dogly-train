@@ -1,0 +1,158 @@
+{
+  "title": "Leinenführigkeit",
+  "subtitle": "Angenehme Spaziergänge für dich und deinen Hund — kein Zerren mehr",
+  "level": "Grundlegend",
+  "duration": "10–15 Min. pro Einheit",
+  "location": "Ruhige Straße, Gehweg oder Park",
+  "ageRecommendation": "Ab 10 Wochen",
+  "estimatedSessions": "10–15 Einheiten für gleichmäßige Ergebnisse",
+  "objective": "Dem Hund beibringen, neben dem Halter zu gehen, ohne die Leine zu straffen, durch die Baummethode und Richtungswechsel mit positivem Verstärken.",
+  "why": [
+    "Ein ziehender Hund macht Spaziergänge anstrengend und gefährlich für den Halter",
+    "Ständige Leinenspannung kann den Hals und die Luftröhre des Hundes verletzen",
+    "Leinenführigkeit verbessert die Beziehung und das gegenseitige Vertrauen",
+    "Grundlage für Fortschritte hin zur Arbeit ohne Leine in sicheren Bereichen"
+  ],
+  "benefits": [
+    "Spaziergänge werden entspannt und angenehm für die ganze Familie",
+    "Reduziert das Risiko von Stürzen oder Verletzungen, besonders bei großen Hunden",
+    "Dein Hund lernt, während des Spaziergangs auf dich zu achten",
+    "Verbessert die allgemeine Handhabung des Hundes in öffentlichen Bereichen"
+  ],
+  "where": [
+    "🏠 Beginne zuhause oder im Garten, bevor du auf die Straße gehst",
+    "🛣️ Ruhige Straße mit wenigen Ablenkungen am Anfang",
+    "🌳 Ruhiger Park, sobald stetige Fortschritte erzielt wurden"
+  ],
+  "materials": [
+    "🦮 H- oder Y-Geschirr (KEIN Stachelhalsband, Würgehalsband oder Elektroschock)",
+    "📏 Feste Leine 1,5–2 Meter (NICHT ausziehbar)",
+    "🫖 Hochwertige Leckerlis in einem leicht zugänglichen Beutel",
+    "💛 Geduld: Dies ist ein Prozess, keine Sofortlösung"
+  ],
+  "beforeYouStart": [
+    "Verwende immer ein Brustgeschirr in H- oder Y-Form: verteilt den Druck und schützt den Hals",
+    "NIEMALS ein Stachelhalsband, Würgehalsband, Elektroschockhalsband oder Slip-Leine verwenden",
+    "Eine ausziehbare Leine eignet sich nicht für diese Übung: sie gibt keine klaren Signale",
+    "Beginne Einheiten, wenn der Hund wenig Energie hat (nach dem Spielen)",
+    "Halte während des Trainings immer Leckerlis griffbereit"
+  ],
+  "methods": [
+    {
+      "id": "tree_and_direction",
+      "title": "Baummethode + Richtungswechsel (empfohlen)",
+      "description": "Wenn der Hund zieht, bleibst du wie ein Baum stehen, bis die Leine nachlässt. Wenn die Leine locker ist, gehst du weiter. Du wechselst zufällig die Richtung, um seine Aufmerksamkeit auf dich zu lenken.",
+      "bestFor": "Alle Hunde, besonders solche, die bereits eine Zieh-Gewohnheit haben",
+      "steps": [
+        {
+          "title": "Ausgangsposition und Startkommando",
+          "description": "Hund an deiner Seite (links oder rechts — wähle eine Seite und bleibe dabei). Sage 'Los' oder 'Gehen wir' als Startsignal und beginne zu gehen.",
+          "tip": "Wähle immer dieselbe Seite. Konsequenz ist entscheidend, damit der Hund versteht, was erwartet wird.",
+          "troubleshooting": "Wenn der Hund schon beim ersten Schritt zieht, bleibe wie ein Baum stehen, bevor du auch nur einen Schritt machst."
+        },
+        {
+          "title": "Der Baum: Anhalten wenn er zieht",
+          "description": "In dem Moment, in dem die Leine sich spannt, bleibst du vollständig stehen. Kein Rucken, kein Schreien, keine Bewegung. Warte schweigend, bis die Leine nachlässt.",
+          "tip": "Das Anhalten muss sofort erfolgen: jede Verzögerung verwirrt den Hund.",
+          "troubleshooting": "Wenn er die Leine nicht nachlässt, gehe einen Schritt auf ihn zu (kein Rucken), um etwas Spielraum zu schaffen, und warte dann, dass er dir folgt."
+        },
+        {
+          "title": "Belohne die lockere Leine",
+          "description": "Sobald die Leine nachlässt (Hund schaut dich an, kommt näher oder tritt zurück), sage fröhlich 'Ja' und belohne. Dann geh weiter.",
+          "tip": "Belohne genau in dem Moment, in dem die Leine nachlässt, nicht fünf Sekunden später."
+        },
+        {
+          "title": "Richtungswechsel",
+          "description": "Kehre zufällig und ohne Vorwarnung um und gehe in die entgegengesetzte Richtung. Wenn der Hund folgt und dich mit locker Leine einholt, belohne großzügig.",
+          "tip": "Häufige Richtungswechsel lehren den Hund, dass du unberechenbar bist und er auf dich achten muss.",
+          "troubleshooting": "Mach dir keine Sorgen, wenn es anfangs so aussieht, als würdest du im Kreis laufen. Das ist normal und notwendig."
+        },
+        {
+          "title": "Aufmerksamkeit proaktiv belohnen",
+          "description": "Wenn der Hund dich während des Spaziergangs anschaut (ohne dass du es gefordert hast), sofort belohnen. Das verstärkt, dass dich anzuschauen sehr lohnenswert ist.",
+          "tip": "Ein freiwilliges 'Check-in' ist das beste Zeichen, dass die Übung funktioniert."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Halsband statt Geschirr verwenden",
+      "cause": "Gewohnheit oder Unkenntnis des verursachten Schadens",
+      "fix": "Ein Halsband bei einem ziehenden Hund kann Schäden an Luftröhre, Wirbelsäule oder Schilddrüse verursachen. Wechsle sofort zu einem H- oder Y-Geschirr."
+    },
+    {
+      "error": "Nachgeben und weitergehen, wenn der Hund zieht",
+      "cause": "Erschöpfung oder Wunsch, das Ziel zu erreichen",
+      "fix": "Jedes Mal, wenn du vorwärtsgehst während er zieht, bestärkst du das Ziehen. Konsequenz ist nicht verhandelbar."
+    },
+    {
+      "error": "Die Leine zur Korrektur nach hinten reißen",
+      "cause": "Instinktive Reaktion",
+      "fix": "Rucke erzeugen einen Gegendruck-Reflex (der Hund zieht stärker). Bleibe stehen ohne dich zu bewegen und warte schweigend."
+    },
+    {
+      "error": "Zu lange Einheiten in einer sehr stimulierenden Umgebung",
+      "cause": "Zu schnell in schwierigen Umgebungen Fortschritte erzielen wollen",
+      "fix": "Beginne mit 5–10 Minuten auf einer ruhigen Straße. Steigere nur, wenn der Hund es konsequent gut macht."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund zieht von der ersten Sekunde an, wenn wir rausgehen",
+      "solution": "Die Aufregungsschwelle ist beim Aufbruch sehr hoch. Übe zuerst im Treppenhaus oder am Hauseingang. Wenn er dort ruhig ist, gehe auf die Straße."
+    },
+    {
+      "problem": "Ich stehe wie ein Baum, aber der Hund lässt die Leine nie nach",
+      "solution": "Mache einen Schritt auf den Hund zu, um etwas Spielraum zu schaffen, warte bis er dich anschaut, und belohne. Dann setze die Bewegung fort."
+    },
+    {
+      "problem": "Es funktioniert auf ruhigen Straßen gut, aber bei anderen Hunden zieht er extrem",
+      "solution": "Andere Hunde sind Ablenkungen auf fortgeschrittenem Niveau. Vergrößere den Abstand zu anderen Hunden, bis du die lockere Leine belohnen kannst, und reduziere ihn dann sehr langsam."
+    },
+    {
+      "problem": "Der Hund scheint es zu verstehen, aber am nächsten Tag vergisst er es",
+      "solution": "Normal in den ersten Wochen. Tägliche Konsequenz schlägt gelegentliche lange Einheiten. 10 Minuten täglich übertreffen 1 Stunde am Samstag."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheiten 1–3",
+      "goal": "Hund verbindet Leinenspannung mit dem Anhalten. Hält mindestens 50 % der Zeit an"
+    },
+    {
+      "stage": "Einheiten 4–7",
+      "goal": "Geht 10–20 Schritte hintereinander mit locker Leine auf einer ruhigen Straße"
+    },
+    {
+      "stage": "Einheiten 8–12",
+      "goal": "Bietet freiwillige Check-ins (schaut dich an) während des Spaziergangs ohne Aufforderung"
+    },
+    {
+      "stage": "Monat 2+",
+      "goal": "Hält die Leine locker in mäßig stimulierenden Umgebungen (Park, belebte Straße)"
+    }
+  ],
+  "successSigns": [
+    "Die Leine hat während des größten Teils des Spaziergangs eine entspannte U-Form",
+    "Der Hund schaut dich spontan an, ohne dass du es forderst",
+    "Bleibt neben dir stehen ohne zu ziehen, wenn du anhältst",
+    "Stellt die lockere Leine innerhalb von 2–3 Sekunden nach einer Ablenkung wieder her"
+  ],
+  "variations": [
+    "Spaziergang mit häufigen Richtungswechseln in einem Trainingsbereich",
+    "Formales 'Fuß': Hund dicht an deinem linken Bein",
+    "Stopp-und-Geh: Jede 10 Schritte 3 Sekunden anhalten und belohnen, wenn er nicht vorprescht",
+    "Spaziergang mit einer zweiten Person: Hund lernt, sie zu ignorieren",
+    "Spaziergang mit Hundepackrucksack (erhöht natürlicherweise die Konzentration)"
+  ],
+  "safetyNotes": [
+    "NIEMALS ein Würgehalsband, Stachelhalsband oder Elektrohalsband verwenden: sie verursachen Schmerzen und körperliche sowie Verhaltensschäden",
+    "Wenn dein Hund Probleme mit Hals oder Luftröhre hat, konsultiere vor dem Start den Tierarzt",
+    "An sehr heißen Tagen die Einheit auf 5 Minuten begrenzen und heißen Asphalt vermeiden",
+    "Sehr reaktive Hunde (bellen oder schnappen nach anderen Hunden): suche professionelle Hilfe, bevor du auf der Straße arbeitest"
+  ],
+  "funFact": "Hunde ziehen, weil schnelles Laufen zu dem, was sie interessiert, ihr ganzes Leben lang funktioniert hat. Es ist keine Dominanz und keine schlechte Erziehung — es ist einfach das, was ihnen immer Erfolg gebracht hat. Jetzt bringen wir ihnen bei, dass eine lockere Leine noch besser funktioniert!",
+  "nextLevel": "Übe in stimulierenderen Umgebungen: Märkte, belebte Parks, Bereiche mit anderen Hunden. Dann führe formales 'Fuß' ein für präziseres Gehen direkt an deiner Seite.",
+  "proTip": "Wenn dein Hund ein freiwilliges Check-in anbietet (dich während des Spaziergangs unaufgefordert anschaut), belohne ihn wie einen Lotterie-Gewinner. Dieser Moment spontaner Aufmerksamkeit ist das, was einen Spaziergang zu echter Teamarbeit macht."
+}

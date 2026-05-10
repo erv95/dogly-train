@@ -1,0 +1,150 @@
+{
+  "title": "Auf den Namen reagieren",
+  "subtitle": "Die Grundlage jeder Kommunikation mit deinem Hund",
+  "level": "Sehr einfach",
+  "duration": "3–5 min pro Sitzung",
+  "location": "Zuhause ohne Ablenkungen → Garten → draußen",
+  "ageRecommendation": "Ab 8 Wochen",
+  "estimatedSessions": "2–4 Sitzungen für die Anfangsverknüpfung",
+  "objective": "Erreichen, dass der Hund sofort zum Halter schaut, wenn er seinen Namen hört, in jedem Kontext.",
+  "why": [
+    "Ohne Namensreaktion kannst du ihm nichts anderes beibringen",
+    "Notwendig zur Kontrolle des Hundes auf der Straße",
+    "Stärkt die Bindung und gegenseitige Aufmerksamkeit",
+    "Grundlage für den Rückruf und alle Distanzkommandos"
+  ],
+  "benefits": [
+    "Dein Hund kommt, wenn du ihn rufst, in Parks oder bei Freunden",
+    "Reduziert Schrecken: Wenden zum Namen vermeidet Gefahren (Autos, andere Hunde)",
+    "Unverzichtbar für einen zuverlässigen Notfall-Rückruf",
+    "Baut einen Hund auf, der auf dich achtet, nicht auf die Umgebung"
+  ],
+  "where": [
+    "🏠 Zuhause, in einem ruhigen Raum (Sitzungen 1–3)",
+    "🛋️ Verschiedene Räume (Sitzungen 4–6)",
+    "🌿 Garten oder Terrasse (Sitzung 7+)",
+    "🌳 Draußen mit wenig Ablenkungen (leerer Park)"
+  ],
+  "materials": [
+    "🫖 Sehr hochwertige Leckerlis (Käse, Wurst, Hühnchen)",
+    "🦮 Schleppleine 5–10 m (für draußen)",
+    "🔇 Ruhige Umgebung am Anfang",
+    "💛 Fröhliche und enthusiastische Stimme"
+  ],
+  "beforeYouStart": [
+    "Stelle sicher, dass du den Namen nicht früher als Tadel verwendet hast",
+    "Wenn der Hund negative Assoziationen hat, denke über eine Namensänderung nach",
+    "Höchstwertige Leckerlis: hier kein Trockenfutter",
+    "Kurze Sitzungen: 3–5 Minuten, mehrmals täglich",
+    "Verwende den Namen nie vor etwas Unangenehmem (Bad, Krallen schneiden)"
+  ],
+  "methods": [
+    {
+      "id": "name_game",
+      "title": "Das Namensspiel (klassisch)",
+      "description": "Den Namen wiederholt mit etwas extrem Positivem verbinden.",
+      "bestFor": "Jeder Hund, besonders Welpen und kürzlich adoptierte Hunde",
+      "steps": [
+        {
+          "title": "Gegenseitige Aufmerksamkeit gewinnen",
+          "description": "Setze dich auf den Boden in einem ruhigen Raum. Warte, bis dein Hund entspannt aber nicht schlafend ist.",
+          "tip": "Sprich ihn am Anfang nicht an und schau ihn nicht an."
+        },
+        {
+          "title": "Sage seinen Namen EINMAL",
+          "description": "Mit fröhlicher, sanfter Stimme, sage seinen Namen klar. Nur einmal.",
+          "tip": "Der Ton soll aufregend klingen, nicht befehlend.",
+          "troubleshooting": "Wenn er nicht reagiert, wiederhole den Namen NICHT: gehe zu Schritt 3."
+        },
+        {
+          "title": "Sofort belohnen",
+          "description": "Sobald er dich anschaut (auch nur eine Mikrosekunde!), sage „gut!“ und gib ein hochwertiges Leckerli.",
+          "tip": "Wenn er in 2 Sekunden nicht schaut, mach ein Geräusch und belohne, wenn er schaut."
+        },
+        {
+          "title": "Belohnungen verteilen",
+          "description": "Gib kein weiteres Leckerli, bis du den Namen wieder sagst. Warte 10–30 Sekunden.",
+          "tip": "Wenn du sie nacheinander gibst, beginnt der Hund von selbst zu schauen."
+        },
+        {
+          "title": "Raum wechseln",
+          "description": "Nach 5 erfolgreichen Sitzungen im selben Raum, geh in einen anderen. Wiederhole den Prozess.",
+          "tip": "Kontextwechsel ist, wo wirklich gelernt wird."
+        },
+        {
+          "title": "Level höher: Ablenkungen",
+          "description": "Wenn es im ganzen Haus funktioniert, probiere mit TV an, anderen Personen, Essen in der Nähe.",
+          "tip": "Jeder neue Kontext = mit einfachen Belohnungen anfangen."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Den Namen mehrmals wiederholen („Toby, Toby, Toby“)",
+      "cause": "Frustration, wenn er nicht reagiert",
+      "fix": "Wenn keine Reaktion beim ersten Mal, wiederhole NICHT. Hol Aufmerksamkeit mit Geräusch und belohne."
+    },
+    {
+      "error": "Den Namen vor etwas Schlechtem verwenden (Bad, Tierarzt)",
+      "cause": "Unbewusste Gewohnheit",
+      "fix": "Für unangenehme Dinge, hol ihn körperlich, ohne den Namen zu sagen. Der Name muss IMMER positiv sein."
+    },
+    {
+      "error": "Geringwertige Leckerlis (Trockenfutter)",
+      "cause": "Bequemlichkeit",
+      "fix": "Verwende die LECKERSTEN Leckerlis, die du hast. Es ist eine Anfangsinvestition."
+    },
+    {
+      "error": "30-Minuten-Sitzungen",
+      "cause": "Denken „mehr ist besser“",
+      "fix": "Maximal 3–5 Minuten. Konzentration läuft schnell aus. Besser 5 kurze Sitzungen als 1 lange."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund hat einen langen Namen und reagiert nicht",
+      "solution": "Verwende einen kurzen Spitznamen mit 1–2 Silben fürs Training. Z.B. „Maximilian“ → „Max“."
+    },
+    {
+      "problem": "Funktioniert zuhause, aber draußen ignoriert er mich",
+      "solution": "Du brauchst eine Schleppleine + SEHR hochwertige Leckerlis. Beginne in leeren Bereichen."
+    },
+    {
+      "problem": "Schaut mich an, kommt aber nicht näher",
+      "solution": "Das ist Erfolg in diesem Kurs. Näher kommen ist die nächste Stufe: der Kurs „Rückruf“."
+    },
+    {
+      "problem": "Ich habe mehrere Hunde und weiß nicht, wen ich rufe",
+      "solution": "Trainiere jeden zuerst in getrennten Sitzungen. Dann verwende klar unterschiedliche Namen nach Silben."
+    }
+  ],
+  "progressMilestones": [
+    { "stage": "Sitzung 1–2", "goal": "Schaut beim Hören seines Namens in einem ruhigen Raum" },
+    { "stage": "Sitzung 3–5", "goal": "Sofortige Reaktion (unter 1 Sekunde) in verschiedenen Räumen" },
+    { "stage": "Woche 1", "goal": "Reagiert auf den Namen im Garten mit wenig Ablenkungen" },
+    { "stage": "Woche 2+", "goal": "Reagiert im Park mit anderen Hunden und Personen 5 Meter entfernt" }
+  ],
+  "successSigns": [
+    "Dreht den Kopf sofort beim Hören seines Namens",
+    "Macht es ohne sichtbares Leckerli",
+    "Funktioniert auch mit mittleren Ablenkungen (andere Hunde in Distanz)",
+    "Hält Augenkontakt einige Sekunden, in Erwartung von Anweisungen"
+  ],
+  "variations": [
+    "Den Namen von verschiedenen Seiten sagen (muss sich umdrehen, um dich zu finden)",
+    "Den Namen sagen, wenn er abgelenkt schnüffelt",
+    "Den Namen aus einem anderen Raum sagen (muss kommen oder reinschauen)",
+    "Den Namen sagen, wenn er mit anderen Hunden spielt",
+    "Name + stille Geste kombinieren (Hände klatschen)"
+  ],
+  "safetyNotes": [
+    "Verwende den Namen NIEMALS im Tadel-Ton: würde Monate Arbeit ruinieren",
+    "Wenn du etwas Unangenehmes tun willst, tu es ohne den Hund zu nennen",
+    "Hunde mit teilweiser Taubheit: verwende auch visuelle Gesten und Bodenvibrationen",
+    "Wenn der Hund verbal misshandelt wurde, denke über einen neuen Namen nach"
+  ],
+  "funFact": "Hunde unterscheiden ihren Namen von anderen menschlichen Wörtern in nur 2 Wochen konsequenter Exposition. Aber sie können ihn vergessen, wenn er mit negativen Dingen verbunden wird, in nur 3-4 Episoden.",
+  "nextLevel": "Gehe zum Kurs „Rückruf (Komm)“: nicht nur schauen, sondern auf dich zukommen.",
+  "proTip": "Um den Namen das ganze Hundeleben „frisch“ zu halten, belohne weiterhin gelegentlich, wenn er reagiert — sogar Jahre später. Einmal im Monat reicht."
+}

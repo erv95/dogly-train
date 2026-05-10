@@ -1,0 +1,160 @@
+{
+  "title": "Platz / Geh auf deinen Platz",
+  "subtitle": "Ihr Hund lernt, auf seine Decke zu gehen und dort zu bleiben, bis Sie ihn freigeben",
+  "level": "Mittelstufe",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Zuhause mit einer bestimmten Decke oder einem Hundebett",
+  "ageRecommendation": "Ab 14 Wochen",
+  "estimatedSessions": "8–12 Einheiten zum Meistern",
+  "objective": "Den Hund beibringen, zu seiner Decke oder seinem Bett zu gehen und dort ruhig zu bleiben, bis er das Freigabesignal erhält.",
+  "why": [
+    "Gibt dem Hund einen eigenen, sicheren Bereich im Zuhause",
+    "Reduziert aufdringliches Verhalten beim Essen oder wenn Gäste kommen",
+    "Lehrt den Hund, sich selbst zu beruhigen",
+    "Legt die Grundlage für das Ablenkungsmanagement zu Hause"
+  ],
+  "benefits": [
+    "Ihr Hund stört nicht mehr beim Essen oder wenn Besuch kommt",
+    "Reduziert Angst durch einen vorhersehbaren, sicheren Raum",
+    "Verbessert Selbstkontrolle und Frustrationstoleranz",
+    "Ermöglicht dem Hund zu ruhen, ohne ständig im Weg zu sein"
+  ],
+  "where": [
+    "🏠 Zuhause, mit der Decke immer am selben Platz",
+    "🛋️ Im Wohnzimmer oder Hauptbereich der Familie",
+    "⛔ Keine Durchgangszonen, wo der Hund gestört wird"
+  ],
+  "materials": [
+    "🛏️ Ein bestimmtes Bett, eine Decke oder Matte (immer dieselbe)",
+    "🫖 Hochwertige Leckerlis für die ersten Einheiten",
+    "🦮 Lange Schleppleine (optional, für frühe Distanzarbeit)",
+    "💛 Geduld und tägliche Konsequenz"
+  ],
+  "beforeYouStart": [
+    "Ihr Hund sollte \"Platz\" und \"Bleib\" mit einiger Sicherheit beherrschen",
+    "Wählen Sie einen festen Platz für die Decke und ändern Sie ihn während des Trainings nicht",
+    "Das Bett muss bequem und groß genug zum vollständigen Hinlegen sein",
+    "Halten Sie hochwertige Leckerlis bereit: diese Übung erfordert mehr Konzentration",
+    "Üben Sie in ruhigen Momenten, nicht wenn der Hund bereits aufgeregt ist"
+  ],
+  "methods": [
+    {
+      "id": "lure_to_mat",
+      "title": "Lockfutter-zur-Decke-Methode (empfohlen)",
+      "description": "Sie nutzen ein Leckerli, um den Hund zur Decke zu führen, und fügen dann schrittweise Distanz, Dauer und Ablenkungen hinzu.",
+      "bestFor": "Hunde, die bereits Platz und Bleib können",
+      "steps": [
+        {
+          "title": "Hund zur Decke locken",
+          "description": "Mit einem Leckerli in der Hand führen Sie den Hund zur Decke. Wenn alle vier Pfoten darauf stehen, sagen Sie \"Platz\" und geben das Leckerli.",
+          "tip": "Das Leckerli auf der Decke fallen lassen, nicht auf dem Boden. Das verstärkt das Verbleiben darauf.",
+          "troubleshooting": "Betritt der Hund die Decke nicht, beginnen Sie mit dem Leckerli am Rand und bewegen es schrittweise zur Mitte."
+        },
+        {
+          "title": "Hinlegen auf der Decke verlangen",
+          "description": "Sobald der Hund auf der Decke ist, verlangen Sie \"Platz\". Liegt er, belohnen Sie. Das Ziel ist nun, liegend auf dem Platz zu verbleiben.",
+          "tip": "Die Liegeposition erleichtert das Aufrechterhalten von Ruhe und den Aufbau von Dauer erheblich.",
+          "troubleshooting": "Legt er sich nicht hin, nutzen Sie dieselbe Locktechnik wie im Liegekurs."
+        },
+        {
+          "title": "Freigabewort einführen",
+          "description": "Nach 2–3 Sekunden Liegen sagen Sie \"Frei\" (oder \"Los\" — immer dasselbe Wort) und ermutigen ihn, die Decke zu verlassen. In dieser Phase nicht außerhalb der Decke belohnen.",
+          "tip": "Das Freigabewort ist genauso wichtig wie das Kommando. Ohne es weiß der Hund nicht, wann er gehen darf.",
+          "troubleshooting": "Verlässt er die Decke vor der Freigabe, bringen Sie ihn ruhig zurück, ohne zu schelten."
+        },
+        {
+          "title": "Distanz hinzufügen",
+          "description": "Wenn der Hund konsequent zur Decke geht und liegt, gehen Sie einen Schritt zurück, dann zwei, dann drei. Kehren Sie zurück, bevor der Hund sich bewegt, und belohnen Sie auf der Decke.",
+          "tip": "Immer selbst zum Hund zurückgehen — nie den Hund zu sich rufen. So wird Bleiben und nicht Kommen verstärkt.",
+          "troubleshooting": "Folgt er Ihnen, reduzieren Sie auf einen halben Schritt und festigen Sie dieses Niveau viele Male."
+        },
+        {
+          "title": "Dauer und Ablenkungen hinzufügen",
+          "description": "Zeit schrittweise erhöhen (5s → 15s → 30s → 1 Min.). Dann kleine Ablenkungen einführen: sich im Zimmer bewegen, den Kühlschrank öffnen, an die Tür klopfen.",
+          "tip": "Erhöhen Sie Distanz ODER Dauer ODER Ablenkung — nie alle drei gleichzeitig.",
+          "troubleshooting": "Wenn die Übung scheitert, vereinfachen Sie immer: reduzieren Sie die Variable, die Sie gerade erhöht haben."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Den Hund vom Platz rufen statt selbst zurückzugehen",
+      "cause": "Verwechslung von \"bleib auf der Decke\" und \"komm wenn ich rufe\"",
+      "fix": "Kehren Sie immer selbst zum Hund zurück, um zu belohnen und freizugeben. Das verstärkt das Bleiben auf dem Platz."
+    },
+    {
+      "error": "Schwierigkeit zu schnell steigern",
+      "cause": "Überoptimismus nach ersten Erfolgen",
+      "fix": "Folgen Sie der 80%-Regel: Steigern Sie die Schwierigkeit nur, wenn der Hund 8 von 10 Mal erfolgreich ist."
+    },
+    {
+      "error": "Die Decke häufig verschieben oder wechseln",
+      "cause": "Mangelnde Umgebungsplanung",
+      "fix": "Der Deckenplatz sollte während des Trainings konstant bleiben. Umgebungsstabilität fördert das Lernen."
+    },
+    {
+      "error": "Den Hund schimpfen, wenn er die Decke verlässt",
+      "cause": "Frustration des Halters",
+      "fix": "Bringen Sie den Hund einfach schweigend zurück. Die Rückkehr zur Decke sollte nie eine negative Erfahrung sein."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund geht auf die Decke, verlässt sie aber nach wenigen Sekunden",
+      "solution": "Sie warten zu lange mit der Belohnung. Belohnen Sie anfangs alle 1–2 Sekunden, um das Verbleiben auf der Decke zu verstärken."
+    },
+    {
+      "problem": "Er will die Decke nicht betreten",
+      "solution": "Machen Sie die Decke attraktiver: Legen Sie seine Lieblingsdecke, ein Spielzeug darauf oder geben Sie dort mehrere Tage lang seine besten Leckerlis, bevor Sie mit dem Training beginnen."
+    },
+    {
+      "problem": "Geht auf die Decke, legt sich aber nicht hin",
+      "solution": "Üben Sie \"Platz\" auf der Decke als separate Übung, bevor Sie die Distanz einführen."
+    },
+    {
+      "problem": "Klappt zuhause, aber nicht bei Freunden oder im Urlaub",
+      "solution": "Bringen Sie immer dieselbe Decke oder eine tragbare Matte mit. Der vertraute Geruch dient dem Hund als Kontextsignal."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheit 1–3",
+      "goal": "Der Hund geht mit Lockfutter auf die Decke und legt sich auf Aufforderung hin"
+    },
+    {
+      "stage": "Einheit 4–6",
+      "goal": "Geht auf das verbale Kommando auf die Decke und bleibt 15 Sekunden"
+    },
+    {
+      "stage": "Einheit 7–9",
+      "goal": "Bleibt auf der Decke, während Sie sich 3 Meter entfernen — 30 Sekunden lang"
+    },
+    {
+      "stage": "Woche 3–4",
+      "goal": "Verbleibt 2–5 Minuten auf der Decke bei leichten Ablenkungen (Türklingel, Bewegungen im Zimmer)"
+    }
+  ],
+  "successSigns": [
+    "Geht auf Kommando ohne Lockfutter auf die Decke",
+    "Legt sich hin und bleibt bis zum Freigabewort",
+    "Bewegt sich nicht, wenn Sie weggehen oder kurz das Zimmer verlassen",
+    "Nutzt die Decke freiwillig zum Ausruhen ohne Aufforderung"
+  ],
+  "variations": [
+    "Platz in verschiedenen Zimmern des Hauses",
+    "Platz bei Verwandten oder Freunden (gleiche Decke)",
+    "Platz während eines vollständigen Familienessens",
+    "Platz beim Empfangen von Gästen",
+    "Platz im Garten oder auf der Terrasse"
+  ],
+  "safetyNotes": [
+    "Nutzen Sie die Decke nie als Strafe: sie muss immer ein positiver Ort sein",
+    "Stellen Sie sicher, dass das Bett groß genug für komfortables Liegen ist",
+    "Verlangen Sie anfangs keine sehr langen Liegezeiten — steigern Sie graduell",
+    "Wirkt der Hund auf der Decke ängstlich, prüfen Sie, ob der Bereich zu isoliert ist"
+  ],
+  "funFact": "Hunde mit einem gut etablierten eigenen Platz zeigen deutlich niedrigere Cortisolwerte (Stresshormon) als Hunde, die frei umherwandern, ohne einen definierten Bereich zu haben.",
+  "nextLevel": "Üben Sie \"Platz\" bei sich öffnender Haustür, eintretenden Besuchern, und schließlich in hundefreundlichen öffentlichen Bereichen mit einer tragbaren Matte.",
+  "proTip": "Füttern Sie Ihren Hund eine Woche lang auf seiner Decke, bevor Sie mit dem Training beginnen. So ist die Decke bereits der beste Platz der Welt, bevor Sie irgendwelche Anforderungen stellen."
+}

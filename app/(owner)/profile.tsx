@@ -16,7 +16,8 @@ import { useAuth } from '../../src/contexts/AuthContext';
 import { updateUserProfile } from '../../src/services/users';
 import { pickAndUploadImage } from '../../src/utils/photo';
 import { Button, Avatar, Input } from '../../src/components/ui';
-import { colors, spacing, fontSize } from '../../src/theme';
+import { CoinBalancePill } from '../../src/components/CoinBalancePill';
+import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 
 export default function OwnerProfileScreen() {
   const { t } = useTranslation();
@@ -67,6 +68,9 @@ export default function OwnerProfileScreen() {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>{t('owner.profile')}</Text>
+        <View style={styles.headerRight}>
+          <CoinBalancePill />
+        </View>
       </View>
       <ScrollView contentContainerStyle={styles.content}>
         {/* Avatar */}
@@ -113,8 +117,28 @@ export default function OwnerProfileScreen() {
         )}
 
         <Text style={styles.email}>{userData?.email}</Text>
+        {userData?.displayId && (
+          <View style={styles.idBadge}>
+            <Ionicons name="id-card-outline" size={13} color={colors.primary} />
+            <Text style={styles.idText}>#{userData.displayId}</Text>
+          </View>
+        )}
 
         <View style={styles.actions}>
+          <Button
+            title={t('bookings.list.title')}
+            onPress={() => router.push('/(owner)/bookings')}
+          />
+          <Button
+            title={t('coins.historyTitle')}
+            onPress={() => router.push('/(shared)/transactions')}
+            variant="outline"
+          />
+          <Button
+            title={t('referrals.cta')}
+            onPress={() => router.push('/(shared)/referrals')}
+            variant="outline"
+          />
           <Button
             title={t('settings.title')}
             onPress={() => router.push('/(shared)/settings')}
@@ -122,16 +146,11 @@ export default function OwnerProfileScreen() {
           />
           {isAdmin && (
             <Button
-              title="Panel de Administración"
+              title={t('settings.adminPanel')}
               onPress={() => router.push('/(shared)/admin')}
               variant="outline"
             />
           )}
-          <Button
-            title={t('settings.logout')}
-            onPress={handleLogout}
-            variant="ghost"
-          />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -145,11 +164,22 @@ const styles = StyleSheet.create({
   },
   header: {
     padding: spacing.lg,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerRight: {
+    position: 'absolute',
+    right: spacing.lg,
+    top: 0,
+    bottom: 0,
+    justifyContent: 'center',
   },
   title: {
     fontSize: fontSize.xxl,
     fontWeight: '700',
     color: colors.text,
+    textAlign: 'center',
   },
   content: {
     alignItems: 'center',
@@ -183,6 +213,23 @@ const styles = StyleSheet.create({
   email: {
     fontSize: fontSize.md,
     color: colors.textSecondary,
+  },
+  idBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: colors.primary + '15',
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.xs,
+    borderRadius: borderRadius.full,
+    borderWidth: 1,
+    borderColor: colors.primary + '30',
+  },
+  idText: {
+    fontSize: fontSize.sm,
+    fontWeight: '700',
+    color: colors.primary,
+    letterSpacing: 1,
   },
   editSection: {
     width: '100%',

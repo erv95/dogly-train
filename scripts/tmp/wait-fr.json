@@ -1,0 +1,157 @@
+{
+  "title": "Attends",
+  "subtitle": "Pause brève avec autocontrôle dans les situations du quotidien",
+  "level": "Basique",
+  "duration": "5–10 min par séance",
+  "location": "Maison, seuil de porte, zone d'alimentation",
+  "ageRecommendation": "Dès 8 semaines",
+  "estimatedSessions": "4–6 séances pour maîtriser",
+  "objective": "Apprendre au chien à s'arrêter momentanément sur un signal verbal, applicable avant de traverser la rue, avant de recevoir sa gamelle ou en franchissant des seuils. Différent de 'reste' — plus court et plus contextuel.",
+  "why": [
+    "Prévient les accidents aux traversées en empêchant le chien de courir devant",
+    "Enseigne l'autocontrôle dans les moments de forte excitation (heure du repas, entrée au parc)",
+    "Établit un protocole de porte sécurisé pour éviter les fugues",
+    "Une vraie compétence de sécurité à application immédiate dans la vie quotidienne"
+  ],
+  "benefits": [
+    "Votre chien s'arrête avant de franchir tout seuil dangereux",
+    "Apprend à contrôler son excitation à l'heure des repas",
+    "Réduit l'anxiété lors des transitions (intérieur-extérieur, voiture-rue)",
+    "Améliore la communication et la confiance entre le chien et le maître"
+  ],
+  "where": [
+    "🚪 Seuils de portes intérieures et extérieures",
+    "🍽️ Zone d'alimentation du chien",
+    "🛣️ Avant de traverser des passages piétons ou des rues"
+  ],
+  "materials": [
+    "🍗 Gamelle du chien ou friandises de haute valeur",
+    "🚪 Vraie porte ou seuil pour pratiquer",
+    "🦮 Laisse (optionnelle pour la pratique dans la rue)",
+    "💛 Constance et calme"
+  ],
+  "beforeYouStart": [
+    "Choisissez une situation concrète pour commencer : la gamelle est idéale car elle se produit quotidiennement",
+    "Suivez toujours le même protocole dans cette situation pour que le chien l'anticipe",
+    "Assurez-vous que le chien n'est pas dans un état d'excitation extrême au départ",
+    "Séances courtes : 3–5 répétitions par contexte suffisent",
+    "Ayez les friandises prêtes ou la vraie gamelle de nourriture à portée de main"
+  ],
+  "methods": [
+    {
+      "id": "food_bowl_protocol",
+      "title": "Protocole de la gamelle",
+      "description": "Vous utilisez l'heure du repas comme entraînement quotidien naturel. La gamelle descend → le chien attend → la gamelle remonte s'il bouge → récompensez quand il est patient. Simple, reproductible et à impact immédiat.",
+      "bestFor": "Tous les chiens, surtout ceux qui se ruent sur la gamelle ou poussent le maître à l'heure des repas",
+      "steps": [
+        {
+          "title": "Chien en position assise",
+          "description": "Avant de préparer la gamelle, demandez au chien de s'asseoir. S'il ne connaît pas 'assis' avec fluidité, commencez d'abord par ce cours.",
+          "tip": "L'assis n'est pas obligatoire, mais aide : un chien assis a plus d'autocontrôle qu'un chien debout.",
+          "troubleshooting": "Si le chien ne s'assoit pas, attendez debout avec la gamelle en main jusqu'à ce qu'il se calme, même un instant."
+        },
+        {
+          "title": "Dites 'attends' et commencez à baisser la gamelle",
+          "description": "Avec la gamelle dans les mains, dites 'attends' calmement et commencez à descendre lentement la gamelle vers le sol.",
+          "tip": "Le signal verbal doit venir avant le mouvement, pas après. Le chien doit apprendre que 'attends' prédit la nourriture s'il est patient."
+        },
+        {
+          "title": "S'il bouge, levez la gamelle",
+          "description": "Si le chien se lève, avance ou touche la gamelle avant la permission, levez immédiatement la gamelle sans rien dire. Revenez à l'étape précédente.",
+          "tip": "Pas de gronderie : la gamelle qui remonte suffit comme information. Sans drame.",
+          "troubleshooting": "S'il répète le mouvement constamment, ne descendez la gamelle que de 5 cm et récompensez depuis là. Augmentez la distance petit à petit."
+        },
+        {
+          "title": "Gamelle au sol, le chien attend",
+          "description": "Quand la gamelle touche le sol et que le chien attend sans bouger, faites une pause de 1–2 secondes puis dites 'vas-y' ou 'c'est bon' pour donner la permission.",
+          "tip": "Le mot de permission est aussi important que 'attends'. Utilisez toujours le même."
+        },
+        {
+          "title": "Augmentez progressivement le temps d'attente",
+          "description": "Commencez par 1–2 secondes d'attente avec la gamelle au sol. Augmentez progressivement à 5, 10, 15 secondes avant la permission.",
+          "tip": "En cas d'échec à un moment, revenez à un temps plus court. Le progrès n'est pas linéaire et c'est normal."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Répéter 'attends' tandis que la gamelle est déjà au sol",
+      "cause": "Nervosité du maître en voyant le chien approcher de la gamelle",
+      "fix": "Dites 'attends' UNE fois avant de baisser la gamelle. Si le chien bouge, levez la gamelle sans rien dire."
+    },
+    {
+      "error": "Donner la permission avant que le chien soit complètement immobile",
+      "cause": "Précipitation ou désir d'éviter le conflit",
+      "fix": "Attendez que le chien soit clairement immobile pendant au moins 1 seconde avant de donner la permission."
+    },
+    {
+      "error": "Confondre 'attends' et 'reste'",
+      "cause": "Utiliser les deux commandes de façon interchangeable",
+      "fix": "'Attends' est bref et contextuel (quelques secondes). 'Reste' implique maintenir la position jusqu'à un nouveau signal. Utilisez-les dans des contextes différents."
+    },
+    {
+      "error": "Ne pas pratiquer le seuil de la porte comme situation séparée",
+      "cause": "Supposer que ce qui est appris avec la gamelle se transfère automatiquement",
+      "fix": "Pratiquez 'attends' spécifiquement aux portes, portails et traversées de rue. Chaque contexte nécessite son propre entraînement."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien attend mais me fixe avec une anxiété extrême",
+      "solution": "L'attente est trop longue pour son niveau actuel. Réduisez le temps d'attente à ce qu'il peut faire sans stress (même 1 seconde) et augmentez très lentement."
+    },
+    {
+      "problem": "Il apprend bien avec la gamelle mais file encore par la porte",
+      "solution": "Normal : ce sont des contextes différents. Pratiquez le protocole de porte comme pour la gamelle : s'il avance, fermez la porte. S'il attend, ouvrez et donnez la permission."
+    },
+    {
+      "problem": "Mon chien attend mais rampe lentement vers la gamelle",
+      "solution": "Ramper compte comme un mouvement. Levez la gamelle. Ne récompensez que quand il est complètement immobile."
+    },
+    {
+      "problem": "Ça ne fonctionne que quand j'ai la gamelle en main, pas avec des friandises au sol",
+      "solution": "Entraînez d'abord la gamelle jusqu'à la consolidation. Puis pratiquez avec des friandises au sol en utilisant la même progression : main → sol couvert → sol visible."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séance 1–2",
+      "goal": "Le chien attend au moins 1–2 secondes avec la gamelle au sol avant la permission"
+    },
+    {
+      "stage": "Séance 3–4",
+      "goal": "Attend 10 secondes avec la gamelle au sol sans bouger"
+    },
+    {
+      "stage": "Semaine 2",
+      "goal": "Applique 'attends' également au seuil de la porte"
+    },
+    {
+      "stage": "Semaine 3+",
+      "goal": "Attend de façon consistante aux traversées et avant de sortir de la voiture"
+    }
+  ],
+  "successSigns": [
+    "Le chien s'arrête en entendant 'attends' avant de se diriger vers la gamelle ou la porte",
+    "Attend sans bouger le corps même avec la gamelle au sol",
+    "Réagit de la même façon à 'attends' à la porte, en voiture et dans la rue",
+    "N'avance pas avant d'entendre le signal de permission"
+  ],
+  "variations": [
+    "Attendre avant de sortir de la voiture",
+    "Attendre avant d'entrer au parc à chiens",
+    "Attendre au bord du trottoir avant de traverser la rue",
+    "Attendre quand on reçoit des jouets ou des friandises de la main",
+    "Attendre avec de la nourriture au sol avant de donner la permission"
+  ],
+  "safetyNotes": [
+    "N'utilisez pas 'attends' comme substitut de 'reste' : dans les situations de longue durée, utilisez la bonne commande",
+    "Pratiquez 'attends' à la porte dès le premier jour à la maison pour prévenir les habitudes de fuite",
+    "Ne faites jamais attendre votre chien s'il est dans un état de stress ou de peur extrême : cela aggravera la situation",
+    "Assurez-vous toujours de donner le signal de permission avant que le chien ne bouge de lui-même"
+  ],
+  "funFact": "Les chiens qui apprennent à attendre avant de manger développent une plus grande capacité d'autocontrôle en général. C'est comme le test de la guimauve pour les chiens : ceux qui attendent apprennent mieux.",
+  "nextLevel": "Combinez 'attends' avec 'reste' pour des durées plus longues. Introduisez le signal de la main (paume face au chien) pour travailler 'attends' à distance.",
+  "proTip": "Le secret de 'attends' est la constance : permettez à votre chien de bouger même une fois sans le signal de permission et il apprendra que 'attends' n'est pas toujours obligatoire. Soyez absolument constant chaque fois."
+}

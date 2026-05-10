@@ -1,0 +1,183 @@
+{
+  "title": "Platz",
+  "subtitle": "Der nächste Schritt nach dem Sitzen",
+  "level": "Sehr einfach",
+  "duration": "5–10 min pro Sitzung",
+  "location": "Zuhause oder ruhiger Garten",
+  "ageRecommendation": "Ab 10 Wochen",
+  "estimatedSessions": "5–7 Sitzungen zum Beherrschen",
+  "objective": "Den Hund lehren, sich auf das Kommando „Platz“ hinzulegen und die Position mehrere Sekunden zu halten.",
+  "why": [
+    "Beruhigt den Hund in aufregenden Momenten",
+    "Hilft, Situationen im öffentlichen Raum zu kontrollieren",
+    "Verbessert den allgemeinen Gehorsam",
+    "Natürlicher Schritt nach „Sitz“"
+  ],
+  "benefits": [
+    "Dein Hund entspannt in Restaurants, auf Terrassen oder bei langen Besuchen",
+    "Ideale Position für längere Ruhe und Bell-Kontrolle",
+    "Grundlage, um „Bleib“ über mehrere Minuten zu lehren",
+    "Reduziert Reaktivität: ein liegender Hund springt nicht und stürmt nicht"
+  ],
+  "where": [
+    "🏠 Zuhause (bequemer Boden, Teppich oder Wohnzimmer)",
+    "🌿 Ruhiger Garten",
+    "⛔ Anfangs kalte, harte oder rutschige Oberflächen vermeiden"
+  ],
+  "materials": [
+    "🫖 Kleine weiche Leckerlis",
+    "🛏️ Matte oder Hundebett (empfohlen)",
+    "🦮 Kurze Leine (optional)",
+    "💛 Geduld und ruhige Stimme"
+  ],
+  "beforeYouStart": [
+    "Dein Hund muss „Sitz“ bereits flüssig beherrschen",
+    "Stelle sicher, dass die Oberfläche bequem ist (kein kaltes Parkett)",
+    "Sitzung nach kurzem Spaziergang: leicht müder Hund lernt besser",
+    "Habe mindestens 15 kleine Leckerlis bereit",
+    "Sitzungen von max. 5 Minuten"
+  ],
+  "methods": [
+    {
+      "id": "lure_l",
+      "title": "L-förmige Lock-Methode (empfohlen)",
+      "description": "Du führst den Hund mit einem Leckerli in L-Form: zuerst nach unten zwischen seine Pfoten, dann nach vorne.",
+      "bestFor": "Welpen und Hunde, die bereits „Sitz“ können",
+      "steps": [
+        {
+          "title": "Startposition: Sitz",
+          "description": "Bitte deinen Hund, sich zu setzen. Idealer Ausgangspunkt, da die Hüften bereits unten sind.",
+          "tip": "Wenn er nicht flüssig auf „Sitz“ reagiert, gehe zuerst zurück zu diesem Kurs.",
+          "troubleshooting": "Wenn er den Sitz aufgibt, bitte ihn ruhig erneut, ohne zu schimpfen."
+        },
+        {
+          "title": "Bewegung nach unten",
+          "description": "Setze das Leckerli auf seine Nase und senke es langsam zum Boden zwischen seinen Vorderpfoten.",
+          "tip": "Langsame, kontinuierliche Bewegung, ohne Pausen.",
+          "troubleshooting": "Wenn er aufsteht, bitte erneut um „Sitz“ und beginne langsamer."
+        },
+        {
+          "title": "Bewegung nach vorne",
+          "description": "Sobald das Leckerli auf dem Boden ist, schiebe es geradlinig nach vorne. Der Hund streckt sich und legt sich.",
+          "tip": "Die gesamte Bewegung zeichnet ein großes L."
+        },
+        {
+          "title": "Kommando einführen",
+          "description": "Sobald er vollständig liegt (Bauch berührt Boden), sage klar „Platz“.",
+          "tip": "Sage das Wort nur, wenn er ganz unten ist, nicht halbwegs."
+        },
+        {
+          "title": "Belohnung und Verstärkung",
+          "description": "Gib das Leckerli sofort, auf den Boden zwischen seinen Pfoten. Lobe mit fröhlicher Stimme.",
+          "tip": "Auf dem Boden zu belohnen verstärkt die Position und verhindert Aufstehen."
+        },
+        {
+          "title": "Dauer erhöhen",
+          "description": "Wenn er es beim ersten Versuch macht, warte 1 Sekunde vor Belohnung. Steigere auf 3, 5, 10 Sekunden.",
+          "tip": "Wenn er die Position früher aufgibt, gehe zur vorherigen Dauer zurück."
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "title": "Methode mit erhöhter Plattform",
+      "description": "Du nutzt eine niedrige Stufe oder ein Kissen: der Hund ist halb erhöht, was es einfacher macht, die Vorderpfoten nach vorne gleiten zu lassen.",
+      "bestFor": "Große Hunde, ängstliche Hunde oder solche, die nicht auf Lockmittel reagieren",
+      "steps": [
+        {
+          "title": "Hund auf niedriges Kissen setzen",
+          "description": "Plattform von 5–10 cm Höhe. Festes Kissen, niedrige Stufe oder Yogablock.",
+          "tip": "Die Vorderkante muss frei sein."
+        },
+        {
+          "title": "Sitz auf der Plattform verlangen",
+          "description": "Der Hund soll sich auf das Kissen setzen. Belohne.",
+          "tip": "Wenn er sich nicht wohl fühlt, nimm dir einige Minuten zur Eingewöhnung."
+        },
+        {
+          "title": "Nach vorne locken",
+          "description": "Mit einem Leckerli die Vorderpfoten nach vorne ziehen (von der Plattform herunter). Er fällt natürlich in die Liegeposition.",
+          "tip": "Der Trick: die erhöhte Plattform macht das Hinlegen körperlich einfacher."
+        },
+        {
+          "title": "Markieren und belohnen",
+          "description": "Sobald er ganz liegt, sage „Platz“ und belohne.",
+          "tip": "Wiederhole, bis er das Wort verbindet."
+        },
+        {
+          "title": "Plattform entfernen",
+          "description": "Nach 5–10 Sitzungen mit Plattform, probiere auf flachem Boden. Sollte gleich funktionieren.",
+          "tip": "Wenn nicht, gehe 2–3 weitere Sitzungen zur Plattform zurück."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Den Hund mit der Hand am Rücken nach unten drücken",
+      "cause": "Frustration, wenn das Lockmittel nicht beim ersten Mal funktioniert",
+      "fix": "Niemals körperliche Gewalt anwenden. Verbessere die Lockbewegung oder nutze die Plattform-Methode."
+    },
+    {
+      "error": "Belohnen, bevor er ganz liegt",
+      "cause": "Erfolg vorwegnehmen",
+      "fix": "Warte, bis Bauch und Ellbogen am Boden sind, bevor du belohnst."
+    },
+    {
+      "error": "Auf kalten oder rutschigen Oberflächen üben",
+      "cause": "Mangelnde Umgebungsplanung",
+      "fix": "Verwende immer Teppich, Bett oder Auslegware. Hunde meiden instinktiv kalte/harte Flächen."
+    },
+    {
+      "error": "„Sitz“ als Grundlage überspringen",
+      "cause": "Abkürzungen wollen",
+      "fix": "Flüssiges „Sitz“ ist Voraussetzung. Wenn nicht beherrscht, frage noch nicht nach Platz."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Folgt dem Leckerli mit der Nase, senkt aber den Körper nicht",
+      "solution": "Du bewegst das Leckerli zu schnell oder zu weit. Halte es am Boden und bewege es sehr langsam nach vorne."
+    },
+    {
+      "problem": "Legt sich, steht aber sofort wieder auf",
+      "solution": "Anfangs normal. Belohne schneller (in unter 1 Sekunde) und erhöhe Dauer schrittweise."
+    },
+    {
+      "problem": "Macht eine „Sphinx“-Pose, legt sich aber nicht seitlich",
+      "solution": "Sphinx ist gültig und ausreichend. Seitliche Form ist entspannter aber nicht erforderlich."
+    },
+    {
+      "problem": "Mein großer/alter Hund weigert sich",
+      "solution": "Kann Gelenkschmerzen sein. Konsultiere den Tierarzt. Verwende inzwischen eine sehr gepolsterte Oberfläche."
+    }
+  ],
+  "progressMilestones": [
+    { "stage": "Sitzung 1–2", "goal": "Folgt dem Leckerli zum Boden und beugt die Vorderbeine" },
+    { "stage": "Sitzung 3–5", "goal": "Legt sich vollständig mit Lockmittel in 60% der Versuche" },
+    { "stage": "Sitzung 6–7", "goal": "Legt sich auf „Platz“ ohne Lockmittel" },
+    { "stage": "Woche 2–3", "goal": "Hält die Position 30 Sekunden vor Belohnung" }
+  ],
+  "successSigns": [
+    "Legt sich auf Kommando ohne sichtbares Lockmittel",
+    "Macht es an verschiedenen Orten und Positionen",
+    "Hält die Position länger als 10 Sekunden",
+    "Legt sich erneut, wenn er die Position aufgibt und erneut gefragt wird"
+  ],
+  "variations": [
+    "Platz auf Distanz (1–2 Meter Entfernung)",
+    "Vollständiges seitliches Liegen (auf der Seite, nicht Sphinx)",
+    "Platz während du frühstückst",
+    "Platz nur mit Handgeste nach unten",
+    "Platz nach einem verketteten Sitz (Kommandos kombinieren)"
+  ],
+  "safetyNotes": [
+    "Wenn dein Hund Schmerz oder Knacken beim Hinlegen zeigt, konsultiere den Tierarzt vor dem Weitermachen",
+    "Große Rassen (Mastiffs, Doggen) können wegen Anatomie länger brauchen",
+    "Nie körperlich zwingen: kann Angst und Ablehnung des Kommandos erzeugen",
+    "Welpen unter 14 Wochen: max. 3 Minuten pro Sitzung"
+  ],
+  "funFact": "Hunde legen sich nur seitlich (auf die Seite), wenn sie sich 100% sicher fühlen. Wenn deiner es bei dir tut, ist es ein Zeichen tiefen Vertrauens.",
+  "nextLevel": "Dauer auf 1–2 Minuten erhöhen. Mit Ablenkungen und in der Öffentlichkeit üben. Dann „Bleib“ einführen.",
+  "proTip": "Wenn dein Hund sich nicht legt, gehe zurück zu „Sitz“ und wiederhole langsamer. Wirf das Leckerli immer auf den Boden zwischen die Pfoten, nie aus der Hand: das verstärkt das Liegen-Bleiben."
+}

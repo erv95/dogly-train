@@ -1,0 +1,158 @@
+{
+  "title": "Acena com as duas patas",
+  "subtitle": "O truque que encanta a todos — como dizer olá com as mãos!",
+  "level": "Intermediário",
+  "duration": "5–10 min por sessão",
+  "location": "Casa ou jardim tranquilo",
+  "ageRecommendation": "A partir dos 5 meses",
+  "estimatedSessions": "8–12 sessões para dominar",
+  "objective": "Ensinar o cão a oferecer as duas patas alternadamente com um movimento de aceno, respondendo ao sinal verbal “acena” ou a um gesto de mão.",
+  "why": [
+    "É um truque muito vistoso que impressiona familiares e amigos",
+    "Reforça a confiança e o vínculo entre o cão e o dono",
+    "Desenvolve a consciência corporal: o cão aprende a controlar cada pata de forma independente",
+    "Abre as portas para truques mais avançados como o high five"
+  ],
+  "benefits": [
+    "O seu cão aprende a canalizar a excitação num comportamento concreto e controlado",
+    "Melhora a coordenação e o equilíbrio em cães jovens",
+    "Reduz os saltos descontrolados ao redirecionar a energia para uma ação específica",
+    "Cria momentos de interação positiva que reforçam a obediência geral"
+  ],
+  "where": [
+    "🏠 Em casa, na sala ou na cozinha sem distrações",
+    "🌿 No jardim quando já dominar bem em interior",
+    "🔇 Sempre num espaço calmo no início"
+  ],
+  "materials": [
+    "🫖 Petiscos pequenos e muito apetitosos (frango, queijo, salsicha)",
+    "🛟 Superfície antiderrapante para que o cão se sinta seguro",
+    "🖐️ As suas mãos abertas como sinal visual",
+    "💛 Paciência e vontade de celebrar cada sucesso"
+  ],
+  "beforeYouStart": [
+    "O seu cão deve dominar “dá a pata” com pelo menos uma pata antes de começar",
+    "Escolha um momento tranquilo: nem muito agitado após o passeio nem muito cansado",
+    "Prepare pelo menos 20 petiscos pequenos por sessão",
+    "Trabalhe numa superfície antiderrapante (tapete ou alcatifa)",
+    "Sessões de no máximo 7 minutos para manter a motivação"
+  ],
+  "methods": [
+    {
+      "id": "alternate_paws",
+      "title": "Método das patas alternadas com aceno",
+      "description": "Primeiro consolide “dá a pata” com cada lado separadamente, depois alterne as patas e acelere o movimento até obter o aceno natural.",
+      "bestFor": "Cães que já conhecem dá a pata com uma ou ambas as patas",
+      "steps": [
+        {
+          "title": "Consolide a pata direita",
+          "description": "Estenda a mão direita aberta e peça “direita” (ou o sinal que usa). Quando o cão oferecer a pata direita, marque com “sim!” e recompense imediatamente.",
+          "tip": "Se o cão só conhece uma pata, repita 5 vezes até a resposta ser fluente.",
+          "troubleshooting": "Se o cão oferecer a pata errada, ignore-a em silêncio e peça novamente."
+        },
+        {
+          "title": "Consolide a pata esquerda",
+          "description": "Estenda a mão esquerda e peça “esquerda”. Marque e recompense sempre que a pata correta for oferecida. Dedique 2–3 sessões a cada lado separadamente.",
+          "tip": "Mantenha as mãos simétricas: mesma altura, mesmo gesto para cada lado."
+        },
+        {
+          "title": "Alterne as patas",
+          "description": "Quando ambos os lados respondem bem, comece a alternar: mão direita → “direita”, recompensa; mão esquerda → “esquerda”, recompensa. Aumente gradualmente o ritmo.",
+          "tip": "Comece alternando a cada 3–4 segundos. Depois reduza para 1–2 segundos.",
+          "troubleshooting": "Se o cão se confundir, volte a trabalhar cada pata separadamente por mais algumas sessões."
+        },
+        {
+          "title": "Introduza o sinal unificado “acena”",
+          "description": "Quando o cão alternar bem as duas patas, comece a dizer “acena” antes de mover as mãos. O cão associará a palavra ao movimento alternado.",
+          "tip": "Use um tom alegre e festivo ao dizer “acena” — o entusiasmo é contagiante."
+        },
+        {
+          "title": "Acelere o movimento — o aceno real",
+          "description": "Mova as mãos mais rápida e levemente, imitando um aceno humano. O cão seguirá o ritmo e o resultado parecerá um aceno real com as patas.",
+          "tip": "Celebre com entusiasmo quando o movimento for fluente e natural.",
+          "troubleshooting": "Se o cão perder o ritmo, desacelere e aumente gradualmente a velocidade."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Passar para a alternância antes de cada pata estar bem consolidada separadamente",
+      "cause": "Querer chegar ao resultado final demasiado depressa",
+      "fix": "Dedique pelo menos 3 sessões a cada pata separadamente antes de as combinar."
+    },
+    {
+      "error": "Usar o mesmo gesto de mão para as duas patas",
+      "cause": "Não diferenciar visualmente entre direita e esquerda",
+      "fix": "Estenda a mão do mesmo lado que a pata que quer. O sinal visual é fundamental."
+    },
+    {
+      "error": "Recompensar demasiado tarde, quando a pata já desceu",
+      "cause": "Reflexos lentos ou petiscos não prontos",
+      "fix": "Tenha os petiscos na mão livre. Marque e recompense no momento do contacto."
+    },
+    {
+      "error": "Sessões demasiado longas que entediam o cão",
+      "cause": "Querer ensinar tudo numa longa sessão",
+      "fix": "7 minutos no máximo. Termine sempre com um sucesso fácil para que fique com vontade de mais."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão oferece sempre a mesma pata",
+      "solution": "Trabalhe exclusivamente a pata esquecida durante 2–3 sessões. Só recompense essa pata até equilibrar."
+    },
+    {
+      "problem": "O cão deita-se quando tento que ofereça a segunda pata",
+      "solution": "Está a perder o equilíbrio. Trabalhe numa superfície mais firme e peça cada pata com o cão bem apoiado nas outras três."
+    },
+    {
+      "problem": "O movimento não parece um aceno, é demasiado lento",
+      "solution": "Reduza o tamanho do petisco para que o cão esteja mais alerta. Aumente o ritmo da sua mão e ele seguirá."
+    },
+    {
+      "problem": "O cão fica muito agitado e começa a saltar",
+      "solution": "Pare a sessão, peça um “senta” para acalmá-lo e recomece. Baixe o tom de voz e reduza a frequência das recompensas."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessões 1–3",
+      "goal": "Oferece cada pata separadamente de forma fluente em resposta ao gesto correto"
+    },
+    {
+      "stage": "Sessões 4–7",
+      "goal": "Alterna as duas patas quando muda de mão, com pequenas pausas entre cada uma"
+    },
+    {
+      "stage": "Sessões 8–10",
+      "goal": "Responde a “acena” e alterna as patas com ritmo crescente"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Executa o aceno com fluidez perante qualquer pessoa conhecida"
+    }
+  ],
+  "successSigns": [
+    "Oferece as duas patas alternadamente sem se confundir",
+    "Responde a “acena” antes mesmo de ver o gesto",
+    "O movimento é fluente e tem ritmo de aceno natural",
+    "Faz-o perante outras pessoas além do dono"
+  ],
+  "variations": [
+    "Acenar apenas com a pata direita (clássico “dá a pata”)",
+    "Acenar a diferentes pessoas (familiares, amigos)",
+    "Acenar ao ritmo de uma música",
+    "Acenar da posição sentado e da posição em pé",
+    "Encadear aceno + reverência para um espetáculo completo"
+  ],
+  "safetyNotes": [
+    "Não pratique se o cão tiver alguma lesão nas patas ou articulações",
+    "Raças grandes: supervisione para não carregarem demasiado peso numa única pata",
+    "Se o cão mostrar resistência ou coxear, pare e consulte um veterinário",
+    "Cachorros com menos de 6 meses: sessões de no máximo 5 minutos para proteger as articulações em desenvolvimento"
+  ],
+  "funFact": "Os cães oferecem naturalmente a pata como sinal social de apaziguamento. Quando o seu cão lha dá, no fundo está a dizer: “gosto de si, confio em si”.",
+  "nextLevel": "Uma vez dominado o aceno, tente ensinar o high five e depois encadeie: acena → high five → reverência. Um espetáculo completo com três truques!",
+  "proTip": "Use petiscos de altíssimo valor (frango cozido, salsicha) para este truque porque requer mais coordenação. O seu cão precisa de sentir que o esforço vale a pena."
+}

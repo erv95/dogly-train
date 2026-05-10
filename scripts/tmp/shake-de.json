@@ -1,0 +1,158 @@
+{
+  "title": "Winke mit beiden Pfoten",
+  "subtitle": "Der Trick, den alle lieben — wie Hallo sagen mit den Händen!",
+  "level": "Mittelstufe",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Zuhause oder ruhiger Garten",
+  "ageRecommendation": "Ab 5 Monaten",
+  "estimatedSessions": "8–12 Einheiten zum Beherrschen",
+  "objective": "Den Hund beibringen, beide Pfoten abwechselnd mit einer Winkbewegung anzubieten, als Reaktion auf das verbale Signal “winke” oder eine Handgeste.",
+  "why": [
+    "Ein beeindruckender Trick, der Familie und Freunde begeistert",
+    "Stärkt das Vertrauen und die Bindung zwischen Hund und Halter",
+    "Entwickelt das Körperbewusstsein — der Hund lernt, jede Pfote unabhängig zu steuern",
+    "Öffnet die Tür zu fortgeschritteneren Tricks wie Pfote geben oder High Five"
+  ],
+  "benefits": [
+    "Ihr Hund lernt, Aufregung in ein konkretes, kontrolliertes Verhalten zu kanalisieren",
+    "Verbessert Koordination und Gleichgewicht bei jungen Hunden",
+    "Reduziert unkontrolliertes Springen, indem die Energie in eine präzise Aktion umgeleitet wird",
+    "Schafft positive Interaktionsmomente, die den allgemeinen Gehorsam stärken"
+  ],
+  "where": [
+    "🏠 Zuhause, im Wohnzimmer oder in der Küche ohne Ablenkungen",
+    "🌿 Im Garten, wenn er drinnen gut beherrscht wird",
+    "🔇 Immer in einer ruhigen Umgebung am Anfang"
+  ],
+  "materials": [
+    "🫖 Kleine, sehr begehrte Leckerlis (Hühnchen, Käse, Wurst)",
+    "🛟 Rutschfester Untergrund, damit sich der Hund sicher fühlt",
+    "🖐️ Ihre offenen Hände als visuelles Signal",
+    "💛 Geduld und Freude beim Feiern jedes Erfolgs"
+  ],
+  "beforeYouStart": [
+    "Ihr Hund sollte „Pfote geben“ mit mindestens einer Pfote sicher beherrschen",
+    "Wählen Sie einen ruhigen Moment — nicht direkt nach einem aufregenden Spaziergang",
+    "Bereiten Sie mindestens 20 kleine Leckerlis pro Einheit vor",
+    "Arbeiten Sie auf einem rutschfesten Untergrund (Teppich)",
+    "Maximal 7 Minuten pro Einheit, um die Motivation aufrechtzuerhalten"
+  ],
+  "methods": [
+    {
+      "id": "alternate_paws",
+      "title": "Methode mit abwechselnden Pfoten und Winken",
+      "description": "Festigen Sie zuerst „Pfote geben“ mit jeder Seite einzeln, wechseln Sie dann die Pfoten ab und beschleunigen Sie die Bewegung, bis ein natürliches Winken entsteht.",
+      "bestFor": "Hunde, die „Pfote geben“ bereits mit einer oder beiden Pfoten kennen",
+      "steps": [
+        {
+          "title": "Rechte Pfote festigen",
+          "description": "Strecken Sie die rechte Hand offen aus und sagen Sie „rechts“ (oder welches Signal Sie verwenden). Wenn der Hund die rechte Pfote anbietet, markieren Sie mit „Ja!” und belohnen sofort.",
+          "tip": "Wenn der Hund nur eine Pfote kennt, wiederholen Sie 5 Mal, bis die Reaktion flüssig ist.",
+          "troubleshooting": "Wenn der Hund die falsche Pfote anbietet, ignorieren Sie diese still und fragen Sie erneut."
+        },
+        {
+          "title": "Linke Pfote festigen",
+          "description": "Strecken Sie die linke Hand aus und sagen Sie „links“. Markieren und belohnen Sie jedes Mal, wenn die richtige Pfote angeboten wird. Widmen Sie 2–3 Einheiten jeder Seite einzeln.",
+          "tip": "Halten Sie die Hände symmetrisch: gleiche Höhe, gleiche Geste für jede Seite."
+        },
+        {
+          "title": "Pfoten abwechseln",
+          "description": "Sobald beide Seiten gut reagieren, beginnen Sie abzuwechseln: rechte Hand → „rechts“, belohnen; linke Hand → „links”, belohnen. Erhöhen Sie das Tempo schrittweise.",
+          "tip": "Beginnen Sie im Abstand von 3–4 Sekunden. Dann auf 1–2 Sekunden reduzieren.",
+          "troubleshooting": "Wenn der Hund verwirrt ist, üben Sie jede Pfote für einige Einheiten wieder einzeln."
+        },
+        {
+          "title": "Signal „winke“ einführen",
+          "description": "Wenn der Hund die Pfoten gut abwechselt, sagen Sie „winke“ bevor Sie die Hände bewegen. Der Hund verbindet das Wort mit der Wechselbewegung.",
+          "tip": "Verwenden Sie einen fröhlichen, festlichen Ton bei „winke“ — die Begeisterung ist ansteckend."
+        },
+        {
+          "title": "Bewegung beschleunigen — das echte Winken",
+          "description": "Bewegen Sie die Hände schneller und leichter, wie ein menschliches Winken. Der Hund folgt dem Rhythmus und das Ergebnis sieht wie ein echtes Winken mit den Pfoten aus.",
+          "tip": "Feiern Sie begeistert, wenn die Bewegung flüssig und natürlich wirkt.",
+          "troubleshooting": "Wenn der Hund den Rhythmus verliert, verlangsamen Sie und steigern Sie das Tempo wieder schrittweise."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Zum Abwechseln übergehen, bevor jede Pfote einzeln gefestigt ist",
+      "cause": "Das Endergebnis zu schnell erreichen wollen",
+      "fix": "Widmen Sie mindestens 3 Einheiten jeder Pfote einzeln, bevor Sie sie kombinieren."
+    },
+    {
+      "error": "Dieselbe Handgeste für beide Pfoten verwenden",
+      "cause": "Links und rechts nicht visuell unterscheiden",
+      "fix": "Strecken Sie die Hand auf derselben Seite wie die gewünschte Pfote aus. Das visuelle Signal ist entscheidend."
+    },
+    {
+      "error": "Zu spät belohnen, wenn die Pfote bereits unten ist",
+      "cause": "Langsame Reflexe oder Leckerlis nicht bereit",
+      "fix": "Halten Sie Leckerlis in der freien Hand. Markieren und belohnen Sie im Moment des Kontakts."
+    },
+    {
+      "error": "Zu lange Einheiten, die den Hund langweilen",
+      "cause": "Alles in einer langen Einheit beibringen wollen",
+      "fix": "Maximal 7 Minuten. Beenden Sie immer mit einem einfachen Erfolg, damit er mehr will."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund bietet immer dieselbe Pfote an",
+      "solution": "Üben Sie 2–3 Einheiten ausschließlich mit der vernachlässigten Pfote. Belohnen Sie nur diese Pfote, bis sich das Gleichgewicht einpendelt."
+    },
+    {
+      "problem": "Der Hund legt sich hin, wenn ich die zweite Pfote fordere",
+      "solution": "Er verliert das Gleichgewicht. Üben Sie auf einem festeren Untergrund und fordern Sie jede Pfote, wenn der Hund gut auf den anderen drei steht."
+    },
+    {
+      "problem": "Die Bewegung sieht nicht wie Winken aus — sie ist zu langsam",
+      "solution": "Verwenden Sie ein kleineres Leckerli, damit der Hund aufmerksamer ist. Erhöhen Sie das Tempo Ihrer eigenen Hand und er wird folgen."
+    },
+    {
+      "problem": "Der Hund wird zu aufgeregt und beginnt zu springen",
+      "solution": "Stoppen Sie die Einheit, fragen Sie nach „Sitz“ zum Beruhigen und beginnen Sie neu. Senken Sie die Stimmlage und reduzieren Sie die Belohnungshäufigkeit."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheiten 1–3",
+      "goal": "Bietet jede Pfote einzeln flüssig als Reaktion auf die entsprechende Hand an"
+    },
+    {
+      "stage": "Einheiten 4–7",
+      "goal": "Wechselt beide Pfoten ab, wenn die Hand wechselt, mit kleinen Pausen dazwischen"
+    },
+    {
+      "stage": "Einheiten 8–10",
+      "goal": "Reagiert auf „winke“ und wechselt die Pfoten mit zunehmendem Rhythmus"
+    },
+    {
+      "stage": "Woche 3+",
+      "goal": "Führt das Winken flüssig vor jeder bekannten Person aus"
+    }
+  ],
+  "successSigns": [
+    "Bietet beide Pfoten abwechselnd an, ohne sich zu verwirren",
+    "Reagiert auf „winke“, noch bevor er die Handgeste sieht",
+    "Die Bewegung ist flüssig und hat einen natürlichen Winkrhythmus",
+    "Macht es vor anderen Personen außer dem Halter"
+  ],
+  "variations": [
+    "Nur mit der rechten Pfote winken (klassisches „Pfote geben“)",
+    "Verschiedenen Personen winken (Familie, Freunde)",
+    "Im Rhythmus von Musik winken",
+    "Im Sitzen und im Stehen winken",
+    "Winken + Verbeugung für eine komplette Vorstellung kombinieren"
+  ],
+  "safetyNotes": [
+    "Nicht üben, wenn der Hund eine Verletzung an einer Pfote oder einem Gelenk hat",
+    "Große Rassen: darauf achten, dass nicht zu viel Gewicht auf einer einzelnen Pfote lastet",
+    "Wenn der Hund Widerstand zeigt oder hinkt, aufhören und einen Tierarzt aufsuchen",
+    "Welpen unter 6 Monaten: maximal 5 Minuten pro Einheit, um die sich entwickelnden Gelenke zu schützen"
+  ],
+  "funFact": "Hunde bieten natürlich eine Pfote als soziales Beschwichtigungssignal an. Wenn Ihr Hund Ihnen die Pfote gibt, sagt er im Grunde: „Ich mag Sie, ich vertraue Ihnen.“",
+  "nextLevel": "Wenn das Winken beherrscht wird, versuchen Sie High Five beizubringen und kombinieren Sie dann: Winken → High Five → Verbeugung. Eine vollständige Drei-Tricks-Vorstellung!",
+  "proTip": "Verwenden Sie für diesen Trick die wertvollsten Leckerlis (gekochtes Hühnchen, Wurst), da er mehr Koordination erfordert. Ihr Hund muss das Gefühl haben, dass die Mühe sich lohnt."
+}

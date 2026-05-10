@@ -1,0 +1,158 @@
+{
+  "title": "Gira (360°)",
+  "subtitle": "El truco más vistoso y fácil de aprender — ¡una vuelta completa sobre sí mismo!",
+  "level": "Intermedio",
+  "duration": "5–10 min por sesión",
+  "location": "Casa o jardín",
+  "ageRecommendation": "Desde 4 meses",
+  "estimatedSessions": "5–8 sesiones para dominar",
+  "objective": "Enseñar al perro a girar 360° sobre sí mismo en la dirección indicada, respondiendo a la orden verbal “gira” o un gesto circular de mano.",
+  "why": [
+    "Es uno de los trucos más divertidos y llamativos para mostrar en público",
+    "Mejora la conciencia corporal y el equilibrio del perro",
+    "Puede enseñarse tanto hacia la derecha como hacia la izquierda",
+    "Requiere muy poco espacio y cero equipamiento especial"
+  ],
+  "benefits": [
+    "Estimula mentalmente al perro y combate el aburrimiento",
+    "Mejora la flexibilidad y la coordinación motriz",
+    "Puede usarse como ejercicio de calentamiento antes de otras actividades",
+    "Hace que el perro esté más atento y motivado en las sesiones de entrenamiento"
+  ],
+  "where": [
+    "🏠 En casa, en cualquier habitación con espacio suficiente para que el perro gire",
+    "🌿 En el jardín o parque cuando ya lo domina en interior",
+    "🔇 Siempre sin distracciones al inicio"
+  ],
+  "materials": [
+    "🫖 Premios pequeños y de alto valor (pollo, queso)",
+    "🖐️ Una mano como guía del movimiento circular",
+    "🛟 Superficie plana y sin obstáculos alrededor",
+    "💛 Entusiasmo y celebración vocal"
+  ],
+  "beforeYouStart": [
+    "Tu perro no necesita saber ninguna orden previa — este es un truco de inicio relativamente fácil",
+    "Asegúrate de que hay al menos 1 metro de espacio libre alrededor del perro",
+    "Ten preparados 20 premios pequeños por sesión",
+    "Decide desde el principio si enseñas primero hacia la derecha o hacia la izquierda",
+    "Sesiones de 5–7 minutos máximo"
+  ],
+  "methods": [
+    {
+      "id": "lure_circle",
+      "title": "Método del señuelo circular",
+      "description": "Guías al perro con el premio describiendo un círculo horizontal lento alrededor de su cuerpo. Cuando completa el giro, marcas y premias. Después reduces el señuelo hasta que sólo necesite el gesto.",
+      "bestFor": "Cualquier perro a partir de 4 meses, especialmente los motivados por comida",
+      "steps": [
+        {
+          "title": "Premio en la nariz",
+          "description": "Con el perro de pie frente a ti, pon el premio justo en su nariz para captar su atención. El perro debe seguir el premio con la cabeza.",
+          "tip": "Si el perro salta a por el premio, espera a que esté tranquilo antes de comenzar.",
+          "troubleshooting": "Si no muestra interés en el premio, prueba con uno de mayor valor (pollo, salchicha)."
+        },
+        {
+          "title": "Inicia el arco circular",
+          "description": "Mueve el premio lentamente hacia un lado (por ejemplo, hacia la derecha del perro) manteniéndolo a la altura de su nariz. El perro girará la cabeza siguiendo el señuelo.",
+          "tip": "El movimiento debe ser lento y continuo. Si va demasiado rápido el perro se perderá.",
+          "troubleshooting": "Si el perro se sienta, reinicia desde de pie con el premio un poco más alto."
+        },
+        {
+          "title": "Completa el círculo",
+          "description": "Continúa el movimiento circular alrededor del cuerpo del perro. Guía el señuelo siguiendo la espalda, luego el otro flanco, hasta que el perro haya completado los 360° y esté de nuevo mirándote.",
+          "tip": "Mantén el premio siempre a la altura de la nariz, nunca más alto ni más bajo."
+        },
+        {
+          "title": "Nombra el truco",
+          "description": "Cuando el perro complete el círculo entero, di “gira” con tono alegre y dale el premio al instante.",
+          "tip": "No digas “gira” antes de que lo intente — espera a que complete el movimiento y luego ponle nombre."
+        },
+        {
+          "title": "Reduce el señuelo",
+          "description": "Tras 5–6 sesiones, empieza a hacer el gesto circular sin premio en la mano. Cuando complete el giro, premia desde el bolsillo. Finalmente, usa sólo el dedo o la voz.",
+          "tip": "Reduce el señuelo muy gradualmente: primero usa el puño cerrado (sin premio visible) y luego sólo el gesto.",
+          "troubleshooting": "Si deja de girar sin el señuelo, vuelve dos pasos atrás y reduce más lento."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Mover el señuelo demasiado rápido",
+      "cause": "Entusiasmo por ver el resultado final",
+      "fix": "El señuelo debe moverse al ritmo que el perro puede seguir. Si pierde el hilo, reinicia más despacio."
+    },
+    {
+      "error": "Decir “gira” antes de que el perro empiece a moverse",
+      "cause": "Querer que la orden llegue antes del comportamiento",
+      "fix": "Primero consigue el giro completo con el señuelo. Añade la palabra sólo cuando el perro lo hace consistentemente."
+    },
+    {
+      "error": "Premiar a mitad del giro en lugar de al finalizar",
+      "cause": "Celebrar demasiado pronto",
+      "fix": "Aguanta el premio hasta que el perro haya completado el círculo completo y te mire de frente."
+    },
+    {
+      "error": "Enseñar los dos sentidos a la vez",
+      "cause": "Querer avanzar más rápido",
+      "fix": "Domina primero un sentido (por ejemplo, derecha) durante 3–4 sesiones antes de introducir el otro."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "El perro sólo gira media vuelta y se detiene",
+      "solution": "Premía el medio giro al principio (refuerzo por aproximación) y ve extendiendo el arco sesión a sesión hasta llegar a 360°."
+    },
+    {
+      "problem": "El perro se sienta durante el giro",
+      "solution": "El señuelo está demasiado alto. Mantén el premio a la altura de la nariz durante todo el arco."
+    },
+    {
+      "problem": "Mi perro no quiere girar hacia un lado concreto",
+      "solution": "Es normal — los perros tienen un lado preferido. Trabaja más el lado difícil en sesiones separadas."
+    },
+    {
+      "problem": "Ya sabe girar pero sólo con el señuelo en la mano",
+      "solution": "Empieza a usar el puño cerrado (sin premio visible) y recompensa desde el bolsillo. Reduce el tamaño del gesto cada semana."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–2",
+      "goal": "El perro sigue el señuelo y completa al menos medio giro"
+    },
+    {
+      "stage": "Sesión 3–5",
+      "goal": "Completa el giro de 360° siguiendo el señuelo en el 70% de los intentos"
+    },
+    {
+      "stage": "Sesión 6–8",
+      "goal": "Responde a la palabra “gira” con señuelo reducido (puño cerrado)"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Gira completo con sólo la voz o un pequeño gesto circular del dedo"
+    }
+  ],
+  "successSigns": [
+    "Completa el giro de 360° de forma fluida y sin pausas",
+    "Responde a “gira” antes de ver el gesto de la mano",
+    "Puede girar tanto a la derecha como a la izquierda bajo señales diferentes",
+    "Lo hace en diferentes habitaciones y con personas presentes"
+  ],
+  "variations": [
+    "Gira a la derecha con una señal y a la izquierda con otra diferente",
+    "Dos giros seguidos con una sola orden",
+    "Gira en movimiento (mientras camina contigo)",
+    "Gira a distancia (sin estar justo delante de él)",
+    "Encadena gira + reverencia para un saludo completo"
+  ],
+  "safetyNotes": [
+    "No practiques en superficies resbaladizas — el giro implica apoyar en las patas traseras",
+    "Perros con problemas de cadera o rodilla: consulta al veterinario antes de enseñar este truco",
+    "Si el perro muestra mareos (movimientos de cabeza extraños), reduce a medios giros al principio",
+    "Cachorros menores de 5 meses: giros suaves y sesiones muy cortas para proteger las articulaciones"
+  ],
+  "funFact": "Cuando un perro gira sobre sí mismo antes de echarse a dormir, está siguiendo un instinto ancestral para aplanar la hierba y comprobar que no hay peligros. ¡Tu perro ya hace giros de forma natural!",
+  "nextLevel": "Enseña el giro en el sentido contrario con una palabra diferente. Después combina: “gira derecha — gira izquierda” en secuencia. ¡Parece una coreografía de baile!",
+  "proTip": "El secreto está en el ritmo del señuelo: ni demasiado lento (pierde interés) ni demasiado rápido (se pierde). Mueve la mano al ritmo de un vals lento y tu perro girará perfectamente."
+}

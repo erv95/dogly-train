@@ -7,6 +7,7 @@ import {
   query,
   where,
   orderBy,
+  limit,
   Timestamp,
 } from 'firebase/firestore';
 import { db } from '../config/firebase';
@@ -52,11 +53,12 @@ export async function submitReview(
 /**
  * Get all reviews for a trainer (private — only visible to the trainer)
  */
-export async function getReviewsForTrainer(trainerId: string): Promise<Review[]> {
+export async function getReviewsForTrainer(trainerId: string, maxResults = 50): Promise<Review[]> {
   const q = query(
     collection(db, 'reviews'),
     where('toUserId', '==', trainerId),
-    orderBy('createdAt', 'desc')
+    orderBy('createdAt', 'desc'),
+    limit(maxResults)
   );
   const snapshot = await getDocs(q);
   return snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as Review));

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   View,
   Text,
@@ -12,7 +12,7 @@ import { useRouter, useNavigation } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '../../src/contexts/AuthContext';
-import { createCheckoutSession } from '../../src/services/coins';
+import { createCheckoutSession, createPaypalOrder } from '../../src/services/coins';
 import { Button, Card } from '../../src/components/ui';
 import { colors, spacing, fontSize, borderRadius, shadow, COIN_PACKAGES } from '../../src/theme';
 import { useEffect } from 'react';
@@ -25,10 +25,17 @@ export default function PurchaseScreen() {
 
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [paypalLoading, setPaypalLoading] = useState(false);
 
   useEffect(() => {
     navigation.setOptions({ title: t('coins.buyCoins') });
   }, [t, navigation]);
+
+  const buttonTitle = useMemo(() => {
+    if (!selectedPackage) return t('coins.buyCoins');
+    const pkg = COIN_PACKAGES.find((p) => p.id === selectedPackage);
+    return pkg ? `${t('coins.buyCoins')} - $${pkg.price.toFixed(2)}` : t('coins.buyCoins');
+  }, [selectedPackage, t]);
 
   const handlePurchase = async () => {
     if (!selectedPackage || !firebaseUser) return;
@@ -47,6 +54,24 @@ export default function PurchaseScreen() {
       Alert.alert(t('common.error'), t('authErrors.generic'));
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handlePaypal = async () => {
+    if (!selectedPackage || !firebaseUser) return;
+    setPaypalLoading(true);
+    try {
+      const approvalUrl = await createPaypalOrder(firebaseUser.uid, selectedPackage);
+      const supported = await Linking.canOpenURL(approvalUrl);
+      if (supported) {
+        await Linking.openURL(approvalUrl);
+      } else {
+        Alert.alert(t('common.error'), t('authErrors.generic'));
+      }
+    } catch (error) {
+      Alert.alert(t('common.error'), t('authErrors.generic'));
+    } finally {
+      setPaypalLoading(false);
     }
   };
 
@@ -106,19 +131,50 @@ export default function PurchaseScreen() {
       </View>
 
       <Button
-        title={selectedPackage
-          ? `${t('coins.buyCoins')} - $${COIN_PACKAGES.find(p => p.id === selectedPackage)?.price.toFixed(2) ?? ''}`
-          : t('coins.buyCoins')
-        }
+        title={buttonTitle}
         onPress={handlePurchase}
         loading={loading}
         disabled={!selectedPackage}
         size="lg"
       />
 
-      <Text style={styles.disclaimer}>
-        {t('coins.boostCost')}
-      </Text>
+      {/* PayPal divider + button */}
+      <View style={styles.dividerRow}>
+        <View style={styles.dividerLine} />
+        <Text style={styles.dividerText}>{t('coins.orPayWith')}</Text>
+        <View style={styles.dividerLine} />
+      </View>
+
+      <TouchableOpacity
+        style={[styles.paypalBtn, (!selectedPackage || paypalLoading) && styles.paypalBtnDisabled]}
+        onPress={handlePaypal}
+        disabled={!selectedPackage || paypalLoading}
+        activeOpacity={0.8}
+      >
+        {paypalLoading ? (
+          <Text style={styles.paypalBtnText}>...</Text>
+        ) : (
+          <>
+            <Ionicons name="logo-paypal" size={20} color="#003087" />
+            <Text style={styles.paypalBtnText}>{t('coins.payWithPaypal')}</Text>
+          </>
+        )}
+      </TouchableOpacity>
+
+      <View style={styles.legalFooter}>
+        <Text style={styles.disclaimer}>
+          {t('legal.purchaseDisclaimer')}
+        </Text>
+        <Text style={styles.disclaimer}>
+          {t('legal.processedBy')}
+        </Text>
+        <Text
+          style={styles.legalLink}
+          onPress={() => Linking.openURL('https://dogly-train.web.app/terms-of-service')}
+        >
+          {t('legal.viewTerms')}
+        </Text>
+      </View>
     </ScrollView>
   );
 }
@@ -213,10 +269,56 @@ const styles = StyleSheet.create({
     color: colors.textLight,
     marginTop: 2,
   },
+  legalFooter: {
+    marginTop: spacing.lg,
+    alignItems: 'center',
+    gap: spacing.xs,
+  },
   disclaimer: {
     fontSize: fontSize.xs,
     color: colors.textLight,
     textAlign: 'center',
-    marginTop: spacing.lg,
+  },
+  legalLink: {
+    fontSize: fontSize.xs,
+    color: colors.primary,
+    fontWeight: '600',
+    textDecorationLine: 'underline',
+    marginTop: spacing.xs,
+  },
+  dividerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: spacing.lg,
+    gap: spacing.sm,
+  },
+  dividerLine: {
+    flex: 1,
+    height: 1,
+    backgroundColor: colors.border,
+  },
+  dividerText: {
+    fontSize: fontSize.xs,
+    color: colors.textLight,
+    fontWeight: '600',
+  },
+  paypalBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: spacing.sm,
+    backgroundColor: '#FFC439',
+    borderRadius: borderRadius.lg,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.xl,
+    marginBottom: spacing.sm,
+  },
+  paypalBtnDisabled: {
+    opacity: 0.5,
+  },
+  paypalBtnText: {
+    fontSize: fontSize.md,
+    fontWeight: '700',
+    color: '#003087',
   },
 });

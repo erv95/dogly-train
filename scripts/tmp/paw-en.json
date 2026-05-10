@@ -1,0 +1,160 @@
+{
+  "title": "Shake / Give Paw",
+  "subtitle": "The classic trick that strengthens the bond and makes grooming easier",
+  "level": "Intermediate",
+  "duration": "5–10 min per session",
+  "location": "Home or quiet garden",
+  "ageRecommendation": "From 12 weeks",
+  "estimatedSessions": "5–8 sessions to master",
+  "objective": "Teach the dog to lift a front paw and place it in the handler's hand on the cue \"shake\" or \"give paw\".",
+  "why": [
+    "Makes nail trims and vet check-ups much easier",
+    "Strengthens the bond between dog and handler",
+    "Develops the dog's body awareness",
+    "Foundation for advanced tricks like high-five or wave"
+  ],
+  "benefits": [
+    "Your dog will be calmer at the vet and during grooming",
+    "Builds mutual trust through playful interaction",
+    "Improves coordination and balance",
+    "A crowd-pleasing trick the whole family will enjoy"
+  ],
+  "where": [
+    "🏠 At home on a non-slip surface",
+    "🌿 In the garden on grass or firm ground",
+    "🔇 Distraction-free environment at first"
+  ],
+  "materials": [
+    "🫖 High-value treats (chicken, cheese, soft jerky)",
+    "🛏️ Non-slip mat or carpet",
+    "✋ Your open hand as the target",
+    "💛 Patience and short sessions"
+  ],
+  "beforeYouStart": [
+    "Your dog must know \"sit\" reliably before starting",
+    "Choose high-motivation treats — this trick demands something special",
+    "Make sure the surface is non-slip so your dog feels secure",
+    "Keep sessions to 5 minutes max to avoid mental fatigue",
+    "Start with the same paw every time (right paw is common)"
+  ],
+  "methods": [
+    {
+      "id": "capture_touch",
+      "title": "Capture with gentle shoulder prompt (recommended)",
+      "description": "You wait for the dog to naturally lift a paw from the sitting position, helped by a light shoulder tap, and reward that movement.",
+      "bestFor": "Puppies and dogs of any size that already know sit",
+      "steps": [
+        {
+          "title": "Ask for sit and present your hand",
+          "description": "Ask your dog to sit. Extend your open hand, palm up, at chest height. Say nothing else — just wait.",
+          "tip": "Your open hand is the visual cue. Keep a relaxed, expectant posture.",
+          "troubleshooting": "If the dog ignores your hand, bring it slightly closer to the paws without touching."
+        },
+        {
+          "title": "Gentle shoulder tap",
+          "description": "If the dog hasn't lifted the paw after 5 seconds, lightly graze the shoulder or outer leg with one finger. Most dogs will lift the paw instinctively.",
+          "tip": "The tap should feel like a tickle — not a push or push.",
+          "troubleshooting": "If the dog stands up, ask for sit again calmly and start over."
+        },
+        {
+          "title": "Capture the movement and reward",
+          "description": "The exact moment the paw lifts off the ground and touches your hand, say \"yes!\" in a happy voice and deliver the treat instantly.",
+          "tip": "Timing is everything. Reward the paw touching your hand, not before or after.",
+          "troubleshooting": "If the paw doesn't reach your hand, first reward any paw lift at all, then gradually require more."
+        },
+        {
+          "title": "Add the verbal cue",
+          "description": "Once the dog lifts the paw consistently (7 out of 10 times), add the word \"shake\" just before extending your hand.",
+          "tip": "Gesture first, word second. Don't add the word until the behavior is reliable.",
+          "troubleshooting": "If the dog looks confused, drop the word for 2 sessions and go back to just the gesture."
+        },
+        {
+          "title": "Fade the tap and extend duration",
+          "description": "Gradually stop using the shoulder tap. Then begin gently closing your hand around the paw and holding for 2–3 seconds before rewarding.",
+          "tip": "The end goal is the dog keeping the paw in your hand until you release it.",
+          "troubleshooting": "If the paw is pulled away quickly, reward more frequently and increase time very gradually."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Grabbing the paw by force",
+      "cause": "Impatience when the dog doesn't understand what's being asked",
+      "fix": "Never take the paw without the dog offering it. Use the gentle tap and wait."
+    },
+    {
+      "error": "Rewarding after the paw is already on the way down",
+      "cause": "Slow reward timing",
+      "fix": "Practice your timing alone: toss a treat in the air and catch it in under 1 second."
+    },
+    {
+      "error": "Switching paws on every attempt",
+      "cause": "Inconsistency from the handler",
+      "fix": "Work the same paw for the first few weeks. Introduce the other paw later."
+    },
+    {
+      "error": "Cueing the trick without the dog in a sit",
+      "cause": "Skipping steps in the learning process",
+      "fix": "A solid sit is required for this trick. Always start from there."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My dog won't lift the paw even after waiting a long time",
+      "solution": "Try holding a treat in a closed fist in front of their chest. Many dogs paw at the fist to open it."
+    },
+    {
+      "problem": "Dog lifts the paw but doesn't place it in my hand",
+      "solution": "Move your hand closer to the paws. The correct distance is almost effortless contact."
+    },
+    {
+      "problem": "Works at home but not outside",
+      "solution": "Normal. Practice first in the garden, then on a quiet street. Use higher-value treats in new environments."
+    },
+    {
+      "problem": "Dog confuses \"shake\" with \"sit\"",
+      "solution": "Differentiate the hand signal: for sit point downward; for shake, hold your palm flat and horizontal."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Session 1–2",
+      "goal": "Dog lifts the paw even just a centimeter when seeing your hand or feeling the tap"
+    },
+    {
+      "stage": "Session 3–5",
+      "goal": "Places paw in your open hand at least 6 out of 10 times"
+    },
+    {
+      "stage": "Session 6–7",
+      "goal": "Responds to the verbal cue \"shake\" without needing the shoulder tap"
+    },
+    {
+      "stage": "Week 3+",
+      "goal": "Holds the paw in your hand for 3–5 seconds until you release it"
+    }
+  ],
+  "successSigns": [
+    "Lifts the paw as soon as the cue is given",
+    "Places the paw gently without scratching",
+    "Stays in a sit while offering the paw",
+    "Performs in different locations and with different people"
+  ],
+  "variations": [
+    "Left paw shake (teach the other paw)",
+    "High-five (paw raised higher, vertical palm)",
+    "Shake on hand gesture only, no verbal cue",
+    "Shake while handler is crouching or standing",
+    "Chain: sit → shake → stay"
+  ],
+  "safetyNotes": [
+    "Stop if your dog shows pain when lifting the paw — this may indicate a joint problem",
+    "Large breeds or dogs with hip dysplasia: shorter sessions on very soft surfaces",
+    "Never punish failure; simply go back to the previous step",
+    "Puppies under 16 weeks have developing bones — never force postures"
+  ],
+  "funFact": "The \"give paw\" trick is one of the oldest on record — European engravings from the 17th century depict dogs greeting their owners this way.",
+  "nextLevel": "Teach the left paw so the dog learns to distinguish both. Then build toward high-five by gradually raising your palm higher.",
+  "proTip": "If your dog is hand-shy, start with a closed fist holding a treat. The dog will stop seeing your hand as a threat and start seeing it as a vending machine."
+}

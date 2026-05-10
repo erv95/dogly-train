@@ -1,0 +1,159 @@
+{
+  "title": "Aufmerksamkeit trotz Ablenkungen",
+  "subtitle": "Ihr Hund bleibt aufmerksam bei Ihnen, auch wenn die ganze Welt ihn ablenkt",
+  "level": "Fortgeschritten",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Progressiv: Zuhause → Garten → Straße → Park",
+  "ageRecommendation": "Ab 5 Monaten (Voraussetzungen gefestigt)",
+  "estimatedSessions": "10–15 Einheiten zum Generalisieren",
+  "objective": "Den Hund beibringen, Aufmerksamkeit und Gehorsam aufrechtzuerhalten, auch wenn Ablenkungen auftreten — andere Hunde, Menschen, Essen auf dem Boden oder laute Geräusche.",
+  "why": [
+    "Aufmerksamkeit ist die Grundlage jedes Gehorsams in der realen Welt",
+    "Ein Hund, der auf Signal zu Ihnen schaut, ist ein sicherer und handhabbarer Hund",
+    "Verhindert Unfälle auf der Straße und gefährliche Situationen",
+    "Reduziert Reaktivität und Überreizung in neuen Umgebungen"
+  ],
+  "benefits": [
+    "Sie können ruhig spazieren gehen, auch wenn andere Hunde in der Nähe sind",
+    "Ihr Hund wird nicht nach heruntergefallenen Essensresten schnappen",
+    "Er reagiert auf Kommandos, auch im Park oder bei Freunden",
+    "Verringert die Angst Ihres Hundes in unbekannten Umgebungen"
+  ],
+  "where": [
+    "🏠 Beginnen Sie immer zuhause ohne Ablenkungen",
+    "🌿 Steigern Sie auf Garten, dann auf ruhige Straße",
+    "🎯 Schließen Sie im Park oder in Umgebungen mit echten Ablenkungen ab"
+  ],
+  "materials": [
+    "🫖 Leckerlis mit maximaler Motivation (gekochtes Hühnchen, Käse, Wurst)",
+    "🦮 2-Meter-Leine für die Außenphasen",
+    "🎯 Ihre Stimme, Ihr Blick und Ihre Körpersprache als Hauptwerkzeuge",
+    "💛 Geduld, um anfangs sehr langsam voranzukommen"
+  ],
+  "beforeYouStart": [
+    "Ihr Hund muss zuhause ohne Ablenkungen sicheres \"Bleib\" und \"Komm\" beherrschen",
+    "Beginnen Sie immer mit sehr kleinen Ablenkungen — nie zuerst mit dem schwersten Level",
+    "Verwenden Sie hochwertige Leckerlis: sie müssen mit dem konkurrieren, was Ihren Hund ablenkt",
+    "Einheiten von 5 Minuten: konzentrierte Aufmerksamkeit unter Druck erschöpft den Hund geistig",
+    "Akzeptieren Sie Rückschritte und schlechte Tage. Konsequenz löst das"
+  ],
+  "methods": [
+    {
+      "id": "gradient_focus",
+      "title": "Gradientenmethode mit \"Schau mich an\"-Signal (empfohlen)",
+      "description": "Sie bauen die Aufmerksamkeit schrittweise auf: zuerst in einer neutralen Umgebung, dann mit zunehmend intensiveren Ablenkungen. Das Signal \"Schau mich an\" lehrt den Hund, Sie zu suchen, wenn etwas Interessantes auftaucht.",
+      "bestFor": "Hunde mit hoher Erregbarkeit oder die sich in Reizen festbeißen",
+      "steps": [
+        {
+          "title": "\"Schau mich an\" ohne Ablenkungen beibringen",
+          "description": "Zuhause ein Leckerli nahe ans Auge halten und warten. Sobald der Hund Blickkontakt herstellt, sagen Sie \"Schau mich an\", belohnen und loben. 10 Mal pro Einheit wiederholen.",
+          "tip": "Später brauchen Sie das Leckerli nicht mehr nah ans Auge zu halten — sagen Sie nur das Wort und warten Sie auf Blickkontakt.",
+          "troubleshooting": "Schaut er das Leckerli an, aber nicht Ihre Augen, bewegen Sie das Leckerli langsam Richtung Stirn."
+        },
+        {
+          "title": "Sehr kleine Ablenkung einführen",
+          "description": "Legen Sie ein langweiliges Spielzeug oder ein neutrales Objekt 3 Meter entfernt hin. Sagen Sie \"Schau mich an\". Schaut er Sie an, belohnen Sie großzügig. Wenn nicht, nähern Sie sich der Ablenkung nur, wenn der Hund aus der Distanz gut schaut.",
+          "tip": "Die Ablenkung sollte interessant, aber nicht unwiderstehlich sein. Kann er sie nicht ignorieren, ist sie zu viel.",
+          "troubleshooting": "Kann er den Blick nicht abwenden, rücken Sie die Ablenkung weiter weg oder verwenden Sie eine weniger interessante."
+        },
+        {
+          "title": "Mit beweglichen Ablenkungen üben",
+          "description": "Nun bewegliche Ablenkungen nutzen: ein rollender Ball, eine gehende Person, ein Hund in der Ferne. \"Schau mich an\" sagen, kurz bevor die Ablenkung erscheint oder sich nähert.",
+          "tip": "Der Schlüsselmoment ist, Aufmerksamkeit zu fordern BEVOR der Hund die Ablenkung bemerkt, nicht danach.",
+          "troubleshooting": "Ist er bereits auf die Ablenkung fixiert, gehen Sie seitlich weg oder drehen Sie sich um, um seine Aufmerksamkeit zurückzugewinnen."
+        },
+        {
+          "title": "Gehorsam unter Ablenkung hinzufügen",
+          "description": "Wenn er sich trotz Ablenkungen zuverlässig konzentriert, kombinieren Sie \"Schau mich an\" mit \"Sitz\" oder \"Bleib\". Der Hund soll Kommandos befolgen können, auch wenn etwas Interessantes in der Nähe ist.",
+          "tip": "Belohnen Sie Erfolg mit einem JACKPOT: 5–6 Leckerlis nacheinander, wenn er trotz Ablenkung gehorcht.",
+          "troubleshooting": "Scheitern kombinierte Kommandos, gehen Sie zurück zu nur \"Schau mich an\" und steigern die Schwierigkeit langsamer."
+        },
+        {
+          "title": "In realen Umgebungen generalisieren",
+          "description": "Training in den Park, belebte Straßen, Markt bringen. In jeder neuen Umgebung mit den kleinsten Ablenkungen beginnen und schrittweise steigern.",
+          "tip": "Jede neue Umgebung ist wie ein Neuanfang: der Hund braucht eine Eingewöhnungsphase.",
+          "troubleshooting": "Ist im Park keine Aufmerksamkeit zu erlangen, erst 10 Minuten spazieren gehen, damit der Hund Energie abbaut, bevor trainiert wird."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Von Anfang an die maximale Ablenkung präsentieren",
+      "cause": "Schnelle Ergebnisse wollen",
+      "fix": "Immer unterhalb der Schwelle beginnen: das Level, wo der Hund die Ablenkung ignorieren KANN. Stufe für Stufe steigern."
+    },
+    {
+      "error": "Kommando wiederholen, wenn der Hund auf die Ablenkung fixiert ist",
+      "cause": "Glauben, dass häufigeres Wiederholen hilft",
+      "fix": "Ist er fixiert, ändern Sie Ihre Position (seitlich gehen, Hund wegführen) und fordern Sie dann Aufmerksamkeit."
+    },
+    {
+      "error": "Minderwerte Leckerlis bei starken Ablenkungen verwenden",
+      "cause": "Leckerliswert nicht an die Übungsschwierigkeit anpassen",
+      "fix": "Je stärker die Ablenkung, desto wertvoller das Leckerli. Gekochtes Hühnchen oder Käse muss attraktiver sein als das, was ablenkt."
+    },
+    {
+      "error": "Trainieren, wenn der Hund bereits überreizt ist",
+      "cause": "Falscher Zeitpunkt (Ankunft im Park, intensives Spiel zuvor)",
+      "fix": "10–15 Minuten nach Ankunft in einer neuen Umgebung oder nach intensivem Spiel warten. Der Geist beruhigt sich mit der Zeit."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Im Park ignoriert mich mein Hund vollständig",
+      "solution": "Der Ablenkungslevel ist zu hoch. Erst 10 Minuten spazieren gehen, um die Erregung zu senken, dann eine ruhige Ecke des Parks zum Starten suchen."
+    },
+    {
+      "problem": "Mein Hund fixiert andere Hunde und reagiert auf nichts",
+      "solution": "Sie sind dem anderen Hund zu nahe. Die Sicherheitsdistanz ist dort, wo Ihr Hund trotz Ablenkung noch zu Ihnen schauen kann. Vergrößern Sie den Abstand."
+    },
+    {
+      "problem": "Klappt super zuhause, aber auf der Straße ist es als wüsste er nichts",
+      "solution": "Normal: Hunde lernen kontextgebunden. Üben Sie im Flur, dann an der Haustür, dann 5 Meter, dann um die Ecke. In kleinen Schritten generalisieren."
+    },
+    {
+      "problem": "Mein Hund macht Fortschritte und scheint dann zurückzufallen",
+      "solution": "Rückschritte sind normal, besonders in Wachstumsphasen oder bei Umgebungsänderungen. Ein Level zurückgehen und erneut aufbauen."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Woche 1–2",
+      "goal": "Hund hält 3–5 Sekunden Blickkontakt bei kleinen statischen Ablenkungen zuhause"
+    },
+    {
+      "stage": "Woche 3–4",
+      "goal": "Reagiert auf \"Schau mich an\" im Garten bei Personen oder Hunden ab 10+ Meter Entfernung"
+    },
+    {
+      "stage": "Woche 5–6",
+      "goal": "Kann Sitz oder Bleib auf der Straße ausführen, auch wenn Personen oder Radfahrer vorbeikommen"
+    },
+    {
+      "stage": "Woche 7+",
+      "goal": "Hält Aufmerksamkeit im Park mit anderen Hunden in der Umgebung und reagiert auf Grundkommandos"
+    }
+  ],
+  "successSigns": [
+    "Hund schaut Sie spontan an, wenn etwas Interessantes auftaucht",
+    "Reagiert auf Grundkommandos trotz moderater Ablenkungen",
+    "Kann an Ihrer Seite gehen, ohne zu ziehen, auch wenn andere Hunde 5 Meter entfernt sind",
+    "Lenkt Aufmerksamkeit auf Sie um, wenn Sie es fordern, auch im Park"
+  ],
+  "variations": [
+    "Aufmerksamkeit bei Essen auf dem Boden (besonders nützlich in Städten)",
+    "Aufmerksamkeit bei anderen rennenden Hunden in der Nähe",
+    "Aufmerksamkeit bei lauten Geräuschen (Feuerwerk, Motorräder, Baustellen)",
+    "Aufmerksamkeit im Wartezimmer beim Tierarzt"
+  ],
+  "safetyNotes": [
+    "Setzen Sie den Hund nie in Situationen, die seine Schwelle weit überschreiten: das kann Trauma oder erhöhte Reaktivität verursachen",
+    "Zeigt Ihr Hund Angstzeichen (Rute unten, Ohren angelegt, Zittern), beenden Sie die Einheit und vergrößern den Abstand zur Ablenkung",
+    "Reaktive Hunde benötigen professionelle Hilfe: die Gradientenmethode allein reicht in schweren Fällen nicht",
+    "Trainieren Sie Aufmerksamkeit nicht mit straff gespannter Leine: das erhöht den Stress des Hundes"
+  ],
+  "funFact": "Hunde können die Welt bis zu 5-mal schneller verarbeiten als Menschen. Was Ihnen wie eine kleine Ablenkung erscheint, kann für Ihren Hund eine vollständige sensorische Informationsflut sein.",
+  "nextLevel": "Üben Sie mit sehr hochwertigen Ablenkungen wie Essen in der Hand einer anderen Person oder Hunden im freien Spiel. Führen Sie dann \"Aus\" kombiniert mit Aufmerksamkeitsarbeit ein.",
+  "proTip": "Werden Sie das Interessanteste beim Spaziergang: sprechen Sie mit Ihrem Hund, wechseln Sie das Tempo, machen Sie unerwartete Richtungsänderungen. Ein unberechenbarer, spaßiger Halter erzeugt natürliche Aufmerksamkeit, ohne darum bitten zu müssen."
+}

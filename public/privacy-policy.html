@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogly Train — Privacy Policy</title>
+  <style>
+    :root { --primary: #F5A623; --bg: #FAFAFA; --text: #1A1A2E; --muted: #6B7280; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .header { background: var(--primary); color: #fff; padding: 24px 0; text-align: center; }
+    .header h1 { font-size: 24px; font-weight: 700; }
+    .lang-bar { text-align: center; padding: 12px; background: #fff; border-bottom: 1px solid #e5e7eb; }
+    .lang-bar a { margin: 0 8px; text-decoration: none; color: var(--primary); font-weight: 600; font-size: 14px; }
+    .lang-bar a.active { text-decoration: underline; }
+    .container { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+    h2 { font-size: 20px; margin: 28px 0 12px; color: var(--text); }
+    h3 { font-size: 16px; margin: 20px 0 8px; }
+    p, li { font-size: 15px; color: #374151; margin-bottom: 8px; }
+    ul { padding-left: 20px; }
+    .date { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+    a { color: var(--primary); }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px 12px; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .footer { text-align: center; padding: 24px; color: var(--muted); font-size: 13px; border-top: 1px solid #e5e7eb; margin-top: 48px; }
+    /* Hide all lang sections except the active one */
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+  </style>
+</head>
+<body>
+  <div class="header"><h1>Dogly Train</h1></div>
+  <div class="lang-bar">
+    <a href="javascript:void(0)" onclick="setLang('en')" id="btn-en" class="active">English</a>
+    <a href="javascript:void(0)" onclick="setLang('es')" id="btn-es">Espa&ntilde;ol</a>
+    <a href="javascript:void(0)" onclick="setLang('fr')" id="btn-fr">Fran&ccedil;ais</a>
+    <a href="javascript:void(0)" onclick="setLang('pt')" id="btn-pt">Portugu&ecirc;s</a>
+    <a href="javascript:void(0)" onclick="setLang('de')" id="btn-de">Deutsch</a>
+  </div>
+  <div class="container">
+
+    <!-- ═══════════════════ ENGLISH ═══════════════════ -->
+    <div class="lang-section active" id="lang-en">
+      <h2>Privacy Policy</h2>
+      <p class="date">Effective date: April 3, 2026</p>
+
+      <p>Dogly Train ("we", "us", "our") operates the Dogly Train mobile application. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our app.</p>
+
+      <h3>1. Information We Collect</h3>
+      <table>
+        <tr><th>Data</th><th>Purpose</th><th>Shared?</th></tr>
+        <tr><td>Email address</td><td>Authentication, account recovery</td><td>No</td></tr>
+        <tr><td>Display name</td><td>Shown to other users in chat &amp; profiles</td><td>Yes</td></tr>
+        <tr><td>Date of birth</td><td>Age verification (16+ requirement)</td><td>No</td></tr>
+        <tr><td>Profile photos</td><td>Profile display</td><td>Yes</td></tr>
+        <tr><td>Dog photos &amp; info</td><td>Dog profile management</td><td>Yes (to trainers)</td></tr>
+        <tr><td>Trainer certifications</td><td>Verification of trainer credentials</td><td>Yes (to owners)</td></tr>
+        <tr><td>Approximate location</td><td>Finding nearby trainers</td><td>Yes (zone only, not exact)</td></tr>
+        <tr><td>Precise location</td><td>Distance calculation</td><td>No (processed locally)</td></tr>
+        <tr><td>Chat messages &amp; media</td><td>Communication between users</td><td>Yes (with chat partner only)</td></tr>
+        <tr><td>Push notification tokens</td><td>Sending notifications</td><td>No</td></tr>
+        <tr><td>Purchase history</td><td>Coin balance, transaction records</td><td>No</td></tr>
+        <tr><td>Course progress &amp; reviews</td><td>Training tracking, trainer ratings</td><td>Reviews visible to trainer + admin</td></tr>
+        <tr><td>Language preference</td><td>App localization</td><td>No</td></tr>
+      </table>
+
+      <h3>2. Third-Party Services</h3>
+      <ul>
+        <li><strong>Firebase (Google)</strong> — Authentication, database, file storage, cloud functions. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></li>
+        <li><strong>Stripe</strong> — Payment processing for coin purchases. We do not store your card details. <a href="https://stripe.com/privacy" target="_blank">Stripe Privacy</a></li>
+        <li><strong>PayPal</strong> — Alternative payment processing. <a href="https://www.paypal.com/webapps/mpp/ua/privacy-full" target="_blank">PayPal Privacy</a></li>
+        <li><strong>Expo</strong> — Push notification delivery. <a href="https://expo.dev/privacy" target="_blank">Expo Privacy</a></li>
+      </ul>
+
+      <h3>3. Data Security</h3>
+      <p>All data is transmitted over encrypted connections (HTTPS/TLS). Firestore security rules enforce access controls. Payment data is handled entirely by Stripe/PayPal and never touches our servers.</p>
+
+      <h3>4. Data Retention</h3>
+      <p>We retain your data as long as your account is active. When you delete your account, we permanently remove all personal data including: profile information, dog profiles, chat messages, photos, recordings, purchase history, reviews, and course progress.</p>
+
+      <h3>5. Your Rights (GDPR)</h3>
+      <p>If you are in the European Economic Area, you have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> your personal data</li>
+        <li><strong>Rectify</strong> inaccurate data via your profile settings</li>
+        <li><strong>Erase</strong> all your data by deleting your account (in-app or via <a href="/delete-account">our web page</a>)</li>
+        <li><strong>Data portability</strong> — contact us to receive your data in a portable format</li>
+        <li><strong>Object</strong> to processing — contact us</li>
+      </ul>
+
+      <h3>6. Children's Privacy</h3>
+      <p>Dogly Train is not intended for anyone under the age of 16. We verify age during registration and do not knowingly collect data from children under 16. If we discover that a child under 16 has provided us with personal information, we will delete it immediately.</p>
+
+      <h3>7. Changes to This Policy</h3>
+      <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Effective date" at the top of this page.</p>
+
+      <h3>8. Contact Us</h3>
+      <p>If you have questions about this Privacy Policy, contact us at: <a href="mailto:privacy@dogly-train.com">privacy@dogly-train.com</a></p>
+    </div>
+
+    <!-- ═══════════════════ SPANISH ═══════════════════ -->
+    <div class="lang-section" id="lang-es">
+      <h2>Pol&iacute;tica de Privacidad</h2>
+      <p class="date">Fecha de vigencia: 3 de abril de 2026</p>
+
+      <p>Dogly Train ("nosotros", "nuestro") opera la aplicaci&oacute;n m&oacute;vil Dogly Train. Esta Pol&iacute;tica de Privacidad explica c&oacute;mo recopilamos, usamos, divulgamos y protegemos su informaci&oacute;n cuando utiliza nuestra app.</p>
+
+      <h3>1. Informaci&oacute;n que Recopilamos</h3>
+      <table>
+        <tr><th>Dato</th><th>Prop&oacute;sito</th><th>&iquest;Compartido?</th></tr>
+        <tr><td>Correo electr&oacute;nico</td><td>Autenticaci&oacute;n, recuperaci&oacute;n de cuenta</td><td>No</td></tr>
+        <tr><td>Nombre de usuario</td><td>Mostrado a otros usuarios</td><td>S&iacute;</td></tr>
+        <tr><td>Fecha de nacimiento</td><td>Verificaci&oacute;n de edad (16+)</td><td>No</td></tr>
+        <tr><td>Fotos de perfil</td><td>Visualizaci&oacute;n del perfil</td><td>S&iacute;</td></tr>
+        <tr><td>Fotos e info de perros</td><td>Gesti&oacute;n de perfiles de perros</td><td>S&iacute; (a entrenadores)</td></tr>
+        <tr><td>Certificaciones de entrenador</td><td>Verificaci&oacute;n de credenciales</td><td>S&iacute; (a due&ntilde;os)</td></tr>
+        <tr><td>Ubicaci&oacute;n aproximada</td><td>Encontrar entrenadores cercanos</td><td>S&iacute; (zona, no exacta)</td></tr>
+        <tr><td>Ubicaci&oacute;n precisa</td><td>C&aacute;lculo de distancia</td><td>No (procesada localmente)</td></tr>
+        <tr><td>Mensajes y multimedia</td><td>Comunicaci&oacute;n entre usuarios</td><td>S&iacute; (solo con destinatario)</td></tr>
+        <tr><td>Tokens de notificaciones</td><td>Env&iacute;o de notificaciones</td><td>No</td></tr>
+        <tr><td>Historial de compras</td><td>Balance de coins, registros</td><td>No</td></tr>
+        <tr><td>Progreso de cursos y rese&ntilde;as</td><td>Seguimiento y valoraciones</td><td>Rese&ntilde;as visibles al entrenador</td></tr>
+        <tr><td>Preferencia de idioma</td><td>Localizaci&oacute;n de la app</td><td>No</td></tr>
+      </table>
+
+      <h3>2. Servicios de Terceros</h3>
+      <ul>
+        <li><strong>Firebase (Google)</strong> — Autenticaci&oacute;n, base de datos, almacenamiento. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacidad de Firebase</a></li>
+        <li><strong>Stripe</strong> — Procesamiento de pagos. No almacenamos datos de tarjeta. <a href="https://stripe.com/privacy" target="_blank">Privacidad de Stripe</a></li>
+        <li><strong>PayPal</strong> — Procesamiento de pagos alternativo. <a href="https://www.paypal.com/webapps/mpp/ua/privacy-full" target="_blank">Privacidad de PayPal</a></li>
+        <li><strong>Expo</strong> — Env&iacute;o de notificaciones push. <a href="https://expo.dev/privacy" target="_blank">Privacidad de Expo</a></li>
+      </ul>
+
+      <h3>3. Seguridad de Datos</h3>
+      <p>Todos los datos se transmiten mediante conexiones cifradas (HTTPS/TLS). Las reglas de seguridad de Firestore controlan el acceso. Los datos de pago son gestionados &iacute;ntegramente por Stripe/PayPal.</p>
+
+      <h3>4. Retenci&oacute;n de Datos</h3>
+      <p>Conservamos sus datos mientras su cuenta est&eacute; activa. Al eliminar su cuenta, eliminamos permanentemente toda su informaci&oacute;n personal: perfil, perros, mensajes, fotos, grabaciones, historial de compras, rese&ntilde;as y progreso de cursos.</p>
+
+      <h3>5. Sus Derechos (RGPD)</h3>
+      <ul>
+        <li><strong>Acceso</strong> a sus datos personales</li>
+        <li><strong>Rectificaci&oacute;n</strong> de datos incorrectos desde su perfil</li>
+        <li><strong>Eliminaci&oacute;n</strong> de todos sus datos eliminando su cuenta (en la app o v&iacute;a <a href="/delete-account">nuestra p&aacute;gina web</a>)</li>
+        <li><strong>Portabilidad</strong> — cont&aacute;ctenos para recibir sus datos</li>
+        <li><strong>Oposici&oacute;n</strong> al tratamiento — cont&aacute;ctenos</li>
+      </ul>
+
+      <h3>6. Privacidad de Menores</h3>
+      <p>Dogly Train no est&aacute; destinada a menores de 16 a&ntilde;os. Verificamos la edad durante el registro. Si descubrimos que un menor de 16 a&ntilde;os nos ha proporcionado informaci&oacute;n personal, la eliminaremos inmediatamente.</p>
+
+      <h3>7. Cambios en esta Pol&iacute;tica</h3>
+      <p>Podemos actualizar esta pol&iacute;tica peri&oacute;dicamente. Le notificaremos de cualquier cambio actualizando la fecha de vigencia.</p>
+
+      <h3>8. Contacto</h3>
+      <p>Para consultas sobre privacidad: <a href="mailto:privacy@dogly-train.com">privacy@dogly-train.com</a></p>
+    </div>
+
+    <!-- ═══════════════════ FRENCH ═══════════════════ -->
+    <div class="lang-section" id="lang-fr">
+      <h2>Politique de Confidentialit&eacute;</h2>
+      <p class="date">Date d'entr&eacute;e en vigueur : 3 avril 2026</p>
+
+      <p>Dogly Train ("nous", "notre") exploite l'application mobile Dogly Train. Cette politique explique comment nous collectons, utilisons et prot&eacute;geons vos informations.</p>
+
+      <h3>1. Donn&eacute;es Collect&eacute;es</h3>
+      <table>
+        <tr><th>Donn&eacute;e</th><th>Objectif</th><th>Partag&eacute;e ?</th></tr>
+        <tr><td>Adresse e-mail</td><td>Authentification, r&eacute;cup&eacute;ration</td><td>Non</td></tr>
+        <tr><td>Nom d'affichage</td><td>Affich&eacute; aux autres utilisateurs</td><td>Oui</td></tr>
+        <tr><td>Date de naissance</td><td>V&eacute;rification d'&acirc;ge (16+)</td><td>Non</td></tr>
+        <tr><td>Photos de profil</td><td>Affichage du profil</td><td>Oui</td></tr>
+        <tr><td>Photos et infos chiens</td><td>Gestion des profils de chiens</td><td>Oui</td></tr>
+        <tr><td>Certifications d'&eacute;ducateur</td><td>V&eacute;rification des comp&eacute;tences</td><td>Oui</td></tr>
+        <tr><td>Localisation approximative</td><td>Trouver des &eacute;ducateurs proches</td><td>Oui (zone uniquement)</td></tr>
+        <tr><td>Localisation pr&eacute;cise</td><td>Calcul de distance</td><td>Non</td></tr>
+        <tr><td>Messages et m&eacute;dias</td><td>Communication entre utilisateurs</td><td>Oui (destinataire seul)</td></tr>
+        <tr><td>Tokens de notification</td><td>Envoi de notifications</td><td>Non</td></tr>
+        <tr><td>Historique d'achats</td><td>Solde de coins, historique</td><td>Non</td></tr>
+        <tr><td>Progression et avis</td><td>Suivi et &eacute;valuations</td><td>Avis visibles pour l'&eacute;ducateur</td></tr>
+        <tr><td>Pr&eacute;f&eacute;rence de langue</td><td>Localisation de l'app</td><td>Non</td></tr>
+      </table>
+
+      <h3>2. Services Tiers</h3>
+      <ul>
+        <li><strong>Firebase (Google)</strong> — Authentification, base de donn&eacute;es, stockage.</li>
+        <li><strong>Stripe</strong> — Traitement des paiements. Nous ne stockons pas vos donn&eacute;es bancaires.</li>
+        <li><strong>PayPal</strong> — Traitement des paiements alternatif.</li>
+        <li><strong>Expo</strong> — Notifications push.</li>
+      </ul>
+
+      <h3>3. S&eacute;curit&eacute;</h3>
+      <p>Toutes les donn&eacute;es transitent via des connexions chiffr&eacute;es (HTTPS/TLS).</p>
+
+      <h3>4. Conservation</h3>
+      <p>Vos donn&eacute;es sont conserv&eacute;es tant que votre compte est actif. La suppression de votre compte entra&icirc;ne la suppression d&eacute;finitive de toutes vos donn&eacute;es.</p>
+
+      <h3>5. Vos Droits (RGPD)</h3>
+      <ul>
+        <li><strong>Acc&egrave;s</strong>, <strong>rectification</strong>, <strong>effacement</strong> (via l'app ou <a href="/delete-account">notre page web</a>), <strong>portabilit&eacute;</strong>, <strong>opposition</strong></li>
+      </ul>
+
+      <h3>6. Mineurs</h3>
+      <p>Dogly Train n'est pas destin&eacute;e aux mineurs de moins de 16 ans.</p>
+
+      <h3>7. Contact</h3>
+      <p><a href="mailto:privacy@dogly-train.com">privacy@dogly-train.com</a></p>
+    </div>
+
+    <!-- ═══════════════════ PORTUGUESE ═══════════════════ -->
+    <div class="lang-section" id="lang-pt">
+      <h2>Pol&iacute;tica de Privacidade</h2>
+      <p class="date">Data de vig&ecirc;ncia: 3 de abril de 2026</p>
+
+      <p>Dogly Train ("n&oacute;s", "nosso") opera o aplicativo m&oacute;vel Dogly Train. Esta pol&iacute;tica explica como coletamos, usamos e protegemos suas informa&ccedil;&otilde;es.</p>
+
+      <h3>1. Dados Coletados</h3>
+      <table>
+        <tr><th>Dado</th><th>Finalidade</th><th>Compartilhado?</th></tr>
+        <tr><td>E-mail</td><td>Autentica&ccedil;&atilde;o, recupera&ccedil;&atilde;o</td><td>N&atilde;o</td></tr>
+        <tr><td>Nome de exibi&ccedil;&atilde;o</td><td>Exibido para outros usu&aacute;rios</td><td>Sim</td></tr>
+        <tr><td>Data de nascimento</td><td>Verifica&ccedil;&atilde;o de idade (16+)</td><td>N&atilde;o</td></tr>
+        <tr><td>Fotos de perfil</td><td>Exibi&ccedil;&atilde;o do perfil</td><td>Sim</td></tr>
+        <tr><td>Fotos e info de c&atilde;es</td><td>Gerenciamento de perfis de c&atilde;es</td><td>Sim</td></tr>
+        <tr><td>Certifica&ccedil;&otilde;es de treinador</td><td>Verifica&ccedil;&atilde;o de credenciais</td><td>Sim</td></tr>
+        <tr><td>Localiza&ccedil;&atilde;o aproximada</td><td>Encontrar treinadores pr&oacute;ximos</td><td>Sim (zona apenas)</td></tr>
+        <tr><td>Localiza&ccedil;&atilde;o precisa</td><td>C&aacute;lculo de dist&acirc;ncia</td><td>N&atilde;o</td></tr>
+        <tr><td>Mensagens e m&iacute;dia</td><td>Comunica&ccedil;&atilde;o entre usu&aacute;rios</td><td>Sim (apenas destinat&aacute;rio)</td></tr>
+        <tr><td>Tokens de notifica&ccedil;&atilde;o</td><td>Envio de notifica&ccedil;&otilde;es</td><td>N&atilde;o</td></tr>
+        <tr><td>Hist&oacute;rico de compras</td><td>Saldo de coins, registros</td><td>N&atilde;o</td></tr>
+        <tr><td>Progresso e avalia&ccedil;&otilde;es</td><td>Acompanhamento e classifica&ccedil;&otilde;es</td><td>Avalia&ccedil;&otilde;es vis&iacute;veis ao treinador</td></tr>
+        <tr><td>Prefer&ecirc;ncia de idioma</td><td>Localiza&ccedil;&atilde;o do app</td><td>N&atilde;o</td></tr>
+      </table>
+
+      <h3>2. Servi&ccedil;os de Terceiros</h3>
+      <ul>
+        <li><strong>Firebase (Google)</strong> — Autentica&ccedil;&atilde;o, banco de dados, armazenamento.</li>
+        <li><strong>Stripe</strong> — Processamento de pagamentos.</li>
+        <li><strong>PayPal</strong> — Processamento de pagamentos alternativo.</li>
+        <li><strong>Expo</strong> — Notifica&ccedil;&otilde;es push.</li>
+      </ul>
+
+      <h3>3. Seguran&ccedil;a</h3>
+      <p>Todos os dados s&atilde;o transmitidos via conex&otilde;es criptografadas (HTTPS/TLS).</p>
+
+      <h3>4. Reten&ccedil;&atilde;o</h3>
+      <p>Seus dados s&atilde;o mantidos enquanto sua conta estiver ativa. A exclus&atilde;o da conta remove permanentemente todos os dados pessoais.</p>
+
+      <h3>5. Seus Direitos (LGPD/RGPD)</h3>
+      <ul>
+        <li><strong>Acesso</strong>, <strong>retifica&ccedil;&atilde;o</strong>, <strong>exclus&atilde;o</strong> (via app ou <a href="/delete-account">nossa p&aacute;gina web</a>), <strong>portabilidade</strong>, <strong>oposi&ccedil;&atilde;o</strong></li>
+      </ul>
+
+      <h3>6. Menores</h3>
+      <p>Dogly Train n&atilde;o &eacute; destinado a menores de 16 anos.</p>
+
+      <h3>7. Contato</h3>
+      <p><a href="mailto:privacy@dogly-train.com">privacy@dogly-train.com</a></p>
+    </div>
+
+    <!-- ═══════════════════ GERMAN ═══════════════════ -->
+    <div class="lang-section" id="lang-de">
+      <h2>Datenschutzerkl&auml;rung</h2>
+      <p class="date">G&uuml;ltig ab: 3. April 2026</p>
+
+      <p>Dogly Train ("wir", "uns", "unser") betreibt die mobile App Dogly Train. Diese Datenschutzerkl&auml;rung erl&auml;utert, wie wir Ihre Daten erheben, verwenden und sch&uuml;tzen.</p>
+
+      <h3>1. Erhobene Daten</h3>
+      <table>
+        <tr><th>Daten</th><th>Zweck</th><th>Geteilt?</th></tr>
+        <tr><td>E-Mail-Adresse</td><td>Authentifizierung, Kontowiederherstellung</td><td>Nein</td></tr>
+        <tr><td>Anzeigename</td><td>Wird anderen Nutzern angezeigt</td><td>Ja</td></tr>
+        <tr><td>Geburtsdatum</td><td>Alterspr&uuml;fung (16+)</td><td>Nein</td></tr>
+        <tr><td>Profilfotos</td><td>Profilanzeige</td><td>Ja</td></tr>
+        <tr><td>Hundefotos &amp; Infos</td><td>Hundeprofilverwaltung</td><td>Ja</td></tr>
+        <tr><td>Trainerzertifikate</td><td>&Uuml;berpr&uuml;fung der Qualifikation</td><td>Ja</td></tr>
+        <tr><td>Ungef&auml;hrer Standort</td><td>Trainer in der N&auml;he finden</td><td>Ja (nur Zone)</td></tr>
+        <tr><td>Genauer Standort</td><td>Entfernungsberechnung</td><td>Nein</td></tr>
+        <tr><td>Nachrichten &amp; Medien</td><td>Kommunikation zwischen Nutzern</td><td>Ja (nur Empf&auml;nger)</td></tr>
+        <tr><td>Push-Token</td><td>Benachrichtigungen</td><td>Nein</td></tr>
+        <tr><td>Kaufhistorie</td><td>Coin-Guthaben, Transaktionen</td><td>Nein</td></tr>
+        <tr><td>Kursfortschritt &amp; Bewertungen</td><td>Trainingsfortschritt</td><td>Bewertungen sichtbar f&uuml;r Trainer</td></tr>
+        <tr><td>Spracheinstellung</td><td>App-Lokalisierung</td><td>Nein</td></tr>
+      </table>
+
+      <h3>2. Drittanbieter</h3>
+      <ul>
+        <li><strong>Firebase (Google)</strong> — Authentifizierung, Datenbank, Speicher.</li>
+        <li><strong>Stripe</strong> — Zahlungsabwicklung.</li>
+        <li><strong>PayPal</strong> — Alternative Zahlungsabwicklung.</li>
+        <li><strong>Expo</strong> — Push-Benachrichtigungen.</li>
+      </ul>
+
+      <h3>3. Sicherheit</h3>
+      <p>Alle Daten werden &uuml;ber verschl&uuml;sselte Verbindungen (HTTPS/TLS) &uuml;bertragen.</p>
+
+      <h3>4. Aufbewahrung</h3>
+      <p>Ihre Daten werden aufbewahrt, solange Ihr Konto aktiv ist. Bei Kontol&ouml;schung werden alle Daten unwiderruflich gel&ouml;scht.</p>
+
+      <h3>5. Ihre Rechte (DSGVO)</h3>
+      <ul>
+        <li><strong>Auskunft</strong>, <strong>Berichtigung</strong>, <strong>L&ouml;schung</strong> (in der App oder &uuml;ber <a href="/delete-account">unsere Webseite</a>), <strong>&Uuml;bertragbarkeit</strong>, <strong>Widerspruch</strong></li>
+      </ul>
+
+      <h3>6. Minderj&auml;hrige</h3>
+      <p>Dogly Train ist nicht f&uuml;r Personen unter 16 Jahren bestimmt.</p>
+
+      <h3>7. Kontakt</h3>
+      <p><a href="mailto:privacy@dogly-train.com">privacy@dogly-train.com</a></p>
+    </div>
+
+  </div>
+  <div class="footer">
+    <a href="/terms-of-service">Terms of Service</a> &middot; <a href="/delete-account">Delete Account</a>
+    <br>Dogly Train &copy; 2026
+  </div>
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(function(el) { el.classList.remove('active'); });
+      document.querySelectorAll('.lang-bar a').forEach(function(el) { el.classList.remove('active'); });
+      document.getElementById('lang-' + lang).classList.add('active');
+      document.getElementById('btn-' + lang).classList.add('active');
+    }
+    // Auto-detect browser language
+    (function() {
+      var nav = (navigator.language || '').substring(0, 2);
+      if (['es','fr','pt','de'].indexOf(nav) !== -1) setLang(nav);
+    })();
+  </script>
+</body>
+</html>

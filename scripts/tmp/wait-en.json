@@ -1,0 +1,157 @@
+{
+  "title": "Wait",
+  "subtitle": "Brief pause with self-control in everyday situations",
+  "level": "Basic",
+  "duration": "5–10 min per session",
+  "location": "Home, doorway, feeding area",
+  "ageRecommendation": "From 8 weeks",
+  "estimatedSessions": "4–6 sessions to master",
+  "objective": "Teach your dog to pause momentarily on a verbal cue, applicable before crossing the street, before receiving their food bowl, or when crossing thresholds. Different from 'stay' — it's shorter and more contextual.",
+  "why": [
+    "Prevents accidents at street crossings by stopping your dog from running ahead",
+    "Teaches self-control during high-excitement moments (feeding time, entering the park)",
+    "Establishes a safe door protocol to prevent escapes",
+    "A real safety skill with immediate application in daily life"
+  ],
+  "benefits": [
+    "Your dog stops before crossing any dangerous threshold",
+    "Learns to control excitement at feeding time",
+    "Reduces anxiety during transitions (indoors-outdoors, car-street)",
+    "Improves communication and trust between dog and owner"
+  ],
+  "where": [
+    "🚪 Indoor and outdoor doorways and thresholds",
+    "🍽️ Your dog's feeding area",
+    "🛣️ Before crossing pedestrian crossings or streets"
+  ],
+  "materials": [
+    "🍗 Dog's food bowl or high-value treats",
+    "🚪 Actual door or threshold to practise at",
+    "🦮 Leash (optional for street practice)",
+    "💛 Consistency and calm"
+  ],
+  "beforeYouStart": [
+    "Choose one specific situation to start with: the food bowl is ideal because it happens daily",
+    "Always follow the same protocol in that situation so the dog anticipates it",
+    "Make sure the dog is not in an extreme state of excitement when you start",
+    "Short sessions: 3–5 repetitions per context is enough",
+    "Have treats ready or the actual food bowl on hand"
+  ],
+  "methods": [
+    {
+      "id": "food_bowl_protocol",
+      "title": "Food bowl protocol",
+      "description": "You use feeding time as natural daily training. Bowl goes down → dog waits → bowl rises if they move → reward when patient. Simple, repeatable and with immediate impact.",
+      "bestFor": "All dogs, especially those that lunge at the bowl or push the owner at feeding time",
+      "steps": [
+        {
+          "title": "Dog in a sit",
+          "description": "Before preparing the bowl, ask your dog to sit. If they don't know 'sit' fluently, start with that course first.",
+          "tip": "The sit is not mandatory, but it helps: a sitting dog has more self-control than a standing one.",
+          "troubleshooting": "If the dog won't sit, wait standing with the bowl in hand until they calm down, even for a moment."
+        },
+        {
+          "title": "Say 'wait' and begin lowering the bowl",
+          "description": "With the bowl in your hands, say 'wait' calmly and begin slowly lowering the bowl toward the floor.",
+          "tip": "The verbal cue must come before the movement, not after. The dog should learn that 'wait' predicts food if they are patient."
+        },
+        {
+          "title": "If they move, raise the bowl",
+          "description": "If the dog stands up, moves forward or touches the bowl before the release, immediately raise the bowl without saying anything. Return to the previous step.",
+          "tip": "No scolding: the rising bowl is enough information. No drama.",
+          "troubleshooting": "If they keep repeating the movement, lower the bowl only 5 cm and reward from there. Increase distance little by little."
+        },
+        {
+          "title": "Bowl on the floor, dog waits",
+          "description": "When the bowl touches the floor and the dog waits without moving, pause 1–2 seconds, then say 'okay' or 'go' to give the release.",
+          "tip": "The release word is as important as 'wait'. Always use the same one."
+        },
+        {
+          "title": "Gradually increase wait time",
+          "description": "Start with 1–2 seconds of waiting with the bowl on the floor. Gradually increase to 5, 10, 15 seconds before the release.",
+          "tip": "If they fail at any point, go back to a shorter time. Progress is not linear and that's normal."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Repeating 'wait' while the bowl is already on the floor",
+      "cause": "Owner nervousness when seeing the dog approach the bowl",
+      "fix": "Say 'wait' ONCE before lowering the bowl. If they move, raise the bowl without saying anything."
+    },
+    {
+      "error": "Giving the release before the dog is completely still",
+      "cause": "Rushing or wanting to avoid conflict",
+      "fix": "Wait until the dog is clearly motionless for at least 1 second before giving the release."
+    },
+    {
+      "error": "Confusing 'wait' with 'stay'",
+      "cause": "Using both commands interchangeably",
+      "fix": "'Wait' is brief and contextual (seconds). 'Stay' means holding the position until a new signal. Use them in different contexts."
+    },
+    {
+      "error": "Not practising the doorway as a separate situation",
+      "cause": "Assuming that learning with the bowl transfers automatically",
+      "fix": "Practise 'wait' specifically at doors, gates and street crossings. Each context needs its own training."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My dog waits but stares at me with extreme anxiety",
+      "solution": "The wait is too long for their current level. Reduce the wait time to whatever they can do without stress (even 1 second) and increase very slowly."
+    },
+    {
+      "problem": "They learn well with the bowl but still bolt through the door",
+      "solution": "Normal: these are different contexts. Practise the door protocol just like the bowl: if they advance, close the door. If they wait, open it and give the release."
+    },
+    {
+      "problem": "My dog waits but slowly creeps toward the bowl",
+      "solution": "Creeping counts as movement. Raise the bowl. Only reward when they are completely still."
+    },
+    {
+      "problem": "Only works when I have the bowl in my hand, not with treats on the floor",
+      "solution": "Train the bowl first until consolidated. Then practise with treats on the floor using the same progression: hand → covered floor → visible floor."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Session 1–2",
+      "goal": "Dog waits at least 1–2 seconds with the bowl on the floor before the release"
+    },
+    {
+      "stage": "Session 3–4",
+      "goal": "Waits 10 seconds with the bowl on the floor without moving"
+    },
+    {
+      "stage": "Week 2",
+      "goal": "Applies 'wait' at the doorway as well"
+    },
+    {
+      "stage": "Week 3+",
+      "goal": "Waits consistently at street crossings and before getting out of the car"
+    }
+  ],
+  "successSigns": [
+    "Dog stops when they hear 'wait' before moving toward the bowl or door",
+    "Waits without moving their body even with the bowl on the floor",
+    "Responds the same to 'wait' at the door, in the car and on the street",
+    "Does not move forward until hearing the release signal"
+  ],
+  "variations": [
+    "Wait before getting out of the car",
+    "Wait before entering the dog park",
+    "Wait at the kerb before crossing the street",
+    "Wait when receiving toys or treats from your hand",
+    "Wait with food on the floor before giving the release"
+  ],
+  "safetyNotes": [
+    "Don't use 'wait' as a substitute for 'stay': in long-duration situations use the correct command",
+    "Practise 'wait' at the door from day one at home to prevent lifetime escape habits",
+    "Never make your dog wait if they are in a state of extreme stress or fear: it will make things worse",
+    "Always make sure to give the release signal before the dog moves on their own"
+  ],
+  "funFact": "Dogs that learn to wait before eating develop greater self-control in general. It's like the marshmallow test for dogs: those that wait learn better overall.",
+  "nextLevel": "Combine 'wait' with 'stay' for longer durations. Introduce the hand signal (palm facing the dog) to work 'wait' from a distance.",
+  "proTip": "The secret of 'wait' is consistency: allow your dog to move even once without the release signal and they'll learn that 'wait' isn't always mandatory. Be absolutely consistent every single time."
+}

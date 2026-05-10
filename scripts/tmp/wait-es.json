@@ -1,0 +1,157 @@
+{
+  "title": "Espera",
+  "subtitle": "Pausa breve con autocontrol en situaciones cotidianas",
+  "level": "Básico",
+  "duration": "5–10 min por sesión",
+  "location": "Casa, umbral de puerta, zona de alimentación",
+  "ageRecommendation": "Desde 8 semanas",
+  "estimatedSessions": "4–6 sesiones para dominar",
+  "objective": "Enseñar al perro a pausar momentáneamente ante una señal verbal, aplicable antes de cruzar la calle, antes de recibir el cuenco de comida o al cruzar umbrales. Diferente al 'quieto': es más breve y contextual.",
+  "why": [
+    "Previene accidentes en cruces de calle al impedir que el perro salga corriendo",
+    "Enseña autocontrol en momentos de alta excitación (hora de comer, entrar al parque)",
+    "Establece un protocolo seguro de puertas para evitar fugas",
+    "Es una habilidad de seguridad real con aplicación inmediata en la vida diaria"
+  ],
+  "benefits": [
+    "Tu perro se detiene antes de cruzar cualquier umbral peligroso",
+    "Aprende a controlar la excitación a la hora de comer",
+    "Reduce la ansiedad en transiciones (dentro-fuera, coche-calle)",
+    "Mejora la comunicación y la confianza entre perro y dueño"
+  ],
+  "where": [
+    "🚪 Umbral de puertas interiores y exteriores",
+    "🍽️ Zona de alimentación del perro",
+    "🛣️ Antes de cruzar pasos de cebra o calles"
+  ],
+  "materials": [
+    "🍗 Cuenco de comida del perro o premios de alto valor",
+    "🚪 Puerta o umbral real para practicar",
+    "🦮 Correa (opcional para práctica en la calle)",
+    "💛 Constancia y calma"
+  ],
+  "beforeYouStart": [
+    "Elige una situación concreta para empezar: el cuenco de comida es ideal porque ocurre a diario",
+    "Practica el mismo protocolo siempre en esa situación para que el perro lo anticipe",
+    "Asegúrate de que el perro no está en un estado de excitación extrema al empezar",
+    "Sesiones cortas: 3–5 repeticiones por contexto es suficiente",
+    "Ten los premios preparados o el cuenco de comida real a mano"
+  ],
+  "methods": [
+    {
+      "id": "food_bowl_protocol",
+      "title": "Protocolo del cuenco de comida",
+      "description": "Usas la hora de comer como entrenamiento diario natural. El cuenco baja → el perro espera → el cuenco sube si se mueve → premia cuando es paciente. Simple, repetible y con impacto inmediato.",
+      "bestFor": "Todos los perros, especialmente los que se lanzan al cuenco o empujan al dueño a la hora de comer",
+      "steps": [
+        {
+          "title": "Perro en posición sentado",
+          "description": "Antes de preparar el cuenco, pide que se siente. Si no sabe 'sentado' de forma fluida, empieza por ese curso primero.",
+          "tip": "El sentado no es obligatorio, pero ayuda: un perro sentado tiene más autocontrol que uno de pie.",
+          "troubleshooting": "Si el perro no se sienta, espera de pie con el cuenco en mano hasta que se calme, aunque sea un segundo."
+        },
+        {
+          "title": "Di 'espera' y empieza a bajar el cuenco",
+          "description": "Con el cuenco en tus manos, di 'espera' con voz tranquila y empieza a descender el cuenco lentamente hacia el suelo.",
+          "tip": "La señal verbal debe venir antes del movimiento, no después. El perro debe aprender que 'espera' predice comida si es paciente."
+        },
+        {
+          "title": "Si se mueve, sube el cuenco",
+          "description": "Si el perro se levanta, avanza o toca el cuenco antes del permiso, levanta el cuenco inmediatamente sin decir nada. Vuelve al paso anterior.",
+          "tip": "No hay regañina: el cuenco que sube es suficiente información. Sin drama.",
+          "troubleshooting": "Si repite el movimiento constantemente, baja el cuenco solo 5 cm y premia desde ahí. Aumenta la distancia poco a poco."
+        },
+        {
+          "title": "Cuenco en el suelo, perro espera",
+          "description": "Cuando el cuenco toque el suelo y el perro espere sin moverse, pausa 1–2 segundos y luego di 'vale' o 'ya' para dar permiso.",
+          "tip": "La palabra de permiso es tan importante como 'espera'. Usa siempre la misma."
+        },
+        {
+          "title": "Aumenta el tiempo de espera progresivamente",
+          "description": "Empieza con 1–2 segundos de espera con el cuenco en el suelo. Sube progresivamente a 5, 10, 15 segundos antes del permiso.",
+          "tip": "Si en algún momento falla, vuelve a un tiempo menor. El progreso no es lineal y eso es normal."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Repetir 'espera' mientras el cuenco ya está en el suelo",
+      "cause": "Nerviosismo del dueño al ver al perro acercarse al cuenco",
+      "fix": "Di 'espera' UNA vez antes de bajar el cuenco. Si se mueve, sube el cuenco sin decir nada."
+    },
+    {
+      "error": "Dar permiso antes de que el perro esté completamente quieto",
+      "cause": "Prisa o querer evitar el conflicto",
+      "fix": "Espera a que el perro esté claramente inmóvil al menos 1 segundo antes de dar el permiso."
+    },
+    {
+      "error": "Confundir 'espera' con 'quieto'",
+      "cause": "Usar los dos comandos de forma intercambiable",
+      "fix": "'Espera' es breve y contextual (segundos). 'Quieto' implica mantener la posición hasta nueva orden. Úsalos en contextos distintos."
+    },
+    {
+      "error": "No practicar el umbral de la puerta como situación separada",
+      "cause": "Asumir que aprendido en el cuenco se transfiere automáticamente",
+      "fix": "Practica 'espera' específicamente en puertas, rejas y cruces de calle. Cada contexto necesita entrenamiento propio."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro espera, pero me mira con ansiedad extrema",
+      "solution": "La espera es demasiado larga para su nivel actual. Reduce el tiempo de espera a lo que pueda hacer sin estrés (aunque sea 1 segundo) y sube muy despacio."
+    },
+    {
+      "problem": "Aprende bien con el cuenco pero en la puerta sigue saliendo disparado",
+      "solution": "Normal: son contextos distintos. Practica el protocolo de puerta igual que el del cuenco: si avanza, cierra la puerta. Si espera, abre y da permiso."
+    },
+    {
+      "problem": "Mi perro espera pero se arrastra hacia el cuenco lentamente",
+      "solution": "El arrastrarse cuenta como movimiento. Sube el cuenco. Premia solo cuando esté completamente quieto."
+    },
+    {
+      "problem": "Sólo funciona cuando tengo el cuenco en la mano, no con premios en el suelo",
+      "solution": "Entrena primero el cuenco hasta consolidar. Luego practica con premios en el suelo usando la misma progresión: mano → suelo cubierto → suelo visible."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–2",
+      "goal": "El perro espera al menos 1–2 segundos con el cuenco en el suelo antes del permiso"
+    },
+    {
+      "stage": "Sesión 3–4",
+      "goal": "Espera 10 segundos con el cuenco en el suelo sin moverse"
+    },
+    {
+      "stage": "Semana 2",
+      "goal": "Aplica 'espera' también en el umbral de la puerta"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Espera en cruces de calle y antes de bajar del coche de forma consistente"
+    }
+  ],
+  "successSigns": [
+    "El perro se detiene al escuchar 'espera' antes de avanzar hacia el cuenco o la puerta",
+    "Espera sin mover el cuerpo aunque el cuenco esté en el suelo",
+    "Reacciona igual a 'espera' en la puerta, en el coche y en la calle",
+    "No avanza hasta escuchar la señal de permiso"
+  ],
+  "variations": [
+    "Espera antes de bajar del coche",
+    "Espera antes de entrar al parque para perros",
+    "Espera en la vereda antes de cruzar la calle",
+    "Espera al recibir juguetes o premios de la mano",
+    "Espera con comida en el suelo antes de dar el permiso"
+  ],
+  "safetyNotes": [
+    "No uses 'espera' como sustituto de 'quieto': en situaciones de larga duración usa el comando correcto",
+    "Practica 'espera' en la puerta desde el primer día en casa para prevenir fugas de toda la vida",
+    "Nunca hagas esperar a tu perro si está en un estado de estrés o miedo extremo: empeorará la situación",
+    "Asegúrate de dar siempre la señal de permiso antes de que el perro se mueva por su cuenta"
+  ],
+  "funFact": "Los perros que aprenden a esperar antes de comer desarrollan más capacidad de autocontrol en general. Es como el test del malvavisco para perros: los que esperan, aprenden mejor.",
+  "nextLevel": "Combina 'espera' con 'quieto' para situaciones más largas. Introduce la señal de mano (palma hacia el perro) para trabajar 'espera' a distancia.",
+  "proTip": "El secreto del 'espera' es la consistencia: una sola vez que le permitas avanzar sin dar la señal de permiso y el perro aprenderá que 'espera' no siempre es obligatorio. Sé absolutamente consistente."
+}

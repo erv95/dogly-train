@@ -1,0 +1,186 @@
+{
+  "title": "Leave It",
+  "subtitle": "The most important safety command your dog can learn",
+  "level": "Basic",
+  "duration": "5–10 min per session",
+  "location": "Home or quiet garden",
+  "ageRecommendation": "From 8 weeks",
+  "estimatedSessions": "5–8 sessions to master",
+  "objective": "Teach your dog to ignore any object on the ground or in your hand when they hear the cue 'leave it', protecting them from ingesting dangerous items.",
+  "why": [
+    "Protects your dog from eating dangerous food, garbage or toxins on the street",
+    "Controls impulses around tempting objects without needing to yank the leash",
+    "Builds trust between dog and owner through self-control",
+    "Lays the foundation for better exploration behavior in new environments"
+  ],
+  "benefits": [
+    "Your dog ignores food dropped on the floor before you can pick it up",
+    "Prevents resource conflicts with other dogs",
+    "Reduces the risk of accidental poisoning during walks",
+    "Develops self-control as a transferable skill for other situations"
+  ],
+  "where": [
+    "🏠 Start at home in a distraction-free room",
+    "🌿 Progress to the garden or patio once they've mastered it indoors",
+    "🛣️ Finally practice on the street with real-life distractions"
+  ],
+  "materials": [
+    "🫖 Two types of treats: low-value (kibble) and high-value (chicken, cheese)",
+    "✋ Your hands as the treat 'hiding spot'",
+    "🦮 Long leash (optional for outdoor practice)",
+    "💛 Patience and a calm demeanor"
+  ],
+  "beforeYouStart": [
+    "Have two types of treats ready: one to use as the 'temptation' and a better one to reward with",
+    "Make sure your dog has a minimum level of attention toward you",
+    "Practice off-leash at home before moving outdoors",
+    "Keep sessions to a maximum of 5 minutes to avoid overwhelming your dog",
+    "Don't practice if your dog is very hungry or overly excited"
+  ],
+  "methods": [
+    {
+      "id": "closed_fist",
+      "title": "Closed fist method (recommended to start)",
+      "description": "You hide a treat in your closed hand, the dog tries to get it, and when they back off you reward them with a different and better treat. Teaches that ignoring = earning something better.",
+      "bestFor": "Puppies and dogs with no prior experience with the command",
+      "steps": [
+        {
+          "title": "Make the fist",
+          "description": "Place a low-value treat in your hand and close it into a fist. Offer the closed fist to the dog at nose level.",
+          "tip": "Use a low-value treat here (regular kibble); the good treat goes in your other hand or pocket.",
+          "troubleshooting": "If your dog barks or paws intensely, hold steady. Don't pull your hand away or scold them."
+        },
+        {
+          "title": "Observe and wait",
+          "description": "Your dog will sniff, lick and push at your fist trying to get the treat. Don't open your hand. Wait in silence.",
+          "tip": "Patience is key. The first time it may take anywhere from 10 seconds to 2 minutes.",
+          "troubleshooting": "If they lose interest and walk away, try a more enticing smell but still only reward when they back off."
+        },
+        {
+          "title": "Capture the withdrawal",
+          "description": "The moment your dog pulls their nose away from your fist (even by a centimetre), say 'leave it' and immediately reward with the good treat from your other hand.",
+          "tip": "Timing is critical: the reward must arrive within 2 seconds of them backing away."
+        },
+        {
+          "title": "Repeat and increase difficulty",
+          "description": "Repeat 5–8 times per session. Once they do it fluidly, begin placing an object on the floor covered by your foot.",
+          "tip": "Increase difficulty gradually: fist → floor covered → floor visible → street."
+        },
+        {
+          "title": "Generalize the command",
+          "description": "Once they master it with your fist, practice with objects on the floor, dropped food, and then outdoors with real distractions.",
+          "tip": "In every new environment, go back to the easiest level before increasing difficulty."
+        }
+      ]
+    },
+    {
+      "id": "ground_progression",
+      "title": "Ground progression method",
+      "description": "You start with the treat covered by your foot and gradually uncover it as the dog learns to resist the temptation. Ideal for consolidating the command.",
+      "bestFor": "Dogs that already understand the basic concept from the fist method or have higher impulse",
+      "steps": [
+        {
+          "title": "Treat under the foot",
+          "description": "Place a treat on the floor and cover it completely with the tip of your foot. Allow your dog to sniff around your foot.",
+          "tip": "Your foot must fully cover the treat so they can't steal it.",
+          "troubleshooting": "If they scratch the floor intensely, don't react. Wait calmly until they back away."
+        },
+        {
+          "title": "Say 'leave it' and wait",
+          "description": "When your dog backs away even slightly from your foot, say 'leave it' calmly and reward with a treat from your hand (not the one on the floor).",
+          "tip": "Never reward with the floor treat: the dog must learn that 'leave it' means 'that treat isn't yours, but you earn a better one'."
+        },
+        {
+          "title": "Gradually uncover",
+          "description": "Once the dog waits without trying to grab the floor treat, move your foot very slightly to reveal a small part of the treat. Repeat the command.",
+          "tip": "If they lunge, cover it again with your foot. No scolding — just reset."
+        },
+        {
+          "title": "Treat fully visible",
+          "description": "The final goal is for your dog to see the treat on the floor and ignore it when they hear 'leave it', looking at you instead in anticipation of the reward.",
+          "tip": "This step may require 3–5 additional sessions. Don't rush."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Repeating 'leave it' multiple times in a row",
+      "cause": "Owner frustration when the dog doesn't respond on the first try",
+      "fix": "Say the command ONCE and wait in silence. Repeating it teaches your dog to ignore it."
+    },
+    {
+      "error": "Rewarding with the object they were told to leave",
+      "cause": "Using whatever is most convenient to reward with",
+      "fix": "Always reward with a DIFFERENT and higher-value treat. The forbidden object must never become the reward."
+    },
+    {
+      "error": "Using the command in real dangerous situations without prior training",
+      "cause": "Assuming the dog knows it without systematic practice",
+      "fix": "Practice at home weeks before needing it on the street. In real emergencies, physically remove your dog."
+    },
+    {
+      "error": "Scolding the dog when they grab the object",
+      "cause": "Impulsive reaction of frustration",
+      "fix": "Never punish. If they grabbed it, the training needs more foundational steps. Go back to an earlier level."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My dog grabs the treat before I can say 'leave it'",
+      "solution": "The object is too accessible. Go back to the closed fist and make sure you control access before advancing."
+    },
+    {
+      "problem": "They do 'leave it' at home but it doesn't work on the street",
+      "solution": "Normal: the street has more stimuli. Restart training outdoors from the easiest step, with fewer distractions first."
+    },
+    {
+      "problem": "My dog gets frustrated and barks when I say 'leave it'",
+      "solution": "Impulse is high. Practice in shorter sessions (2–3 minutes) with higher-value rewards and reduce the appeal of the forbidden object."
+    },
+    {
+      "problem": "Works fine with food but not with objects (socks, toys)",
+      "solution": "These are different categories for your dog. Train specifically with each type of object, starting with those of lower value to them."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Session 1–2",
+      "goal": "Dog pulls nose away from the closed fist at least once per session"
+    },
+    {
+      "stage": "Session 3–5",
+      "goal": "Ignores the fist in 7 out of 10 attempts and starts looking at you for the good treat"
+    },
+    {
+      "stage": "Week 2",
+      "goal": "Ignores a visible treat on the floor covered by your foot when they hear 'leave it'"
+    },
+    {
+      "stage": "Week 3–4",
+      "goal": "Ignores objects on the floor without the foot covering them, at home and in the garden"
+    }
+  ],
+  "successSigns": [
+    "Backs away from the object and looks at you spontaneously when they hear 'leave it'",
+    "Works with different types of objects (food, toys, garbage)",
+    "Performs in outdoor settings with moderate distractions",
+    "Maintains distance from the object for 5 or more seconds"
+  ],
+  "variations": [
+    "Leave it with food in your open palm (advanced level)",
+    "Leave it with another dog as the distractor",
+    "Leave it with an object suddenly tossed to the floor",
+    "Leave it while walking (without stopping)",
+    "Leave it with a waiting period before receiving the alternative reward"
+  ],
+  "safetyNotes": [
+    "In real danger situations (toxin, glass) don't rely on the command: act directly",
+    "Never use physical or verbal punishment when your dog fails: just reset the exercise",
+    "Make sure reward treats are not toxic to dogs (no xylitol, grapes, onion)",
+    "If your dog shows resource guarding or growling when you approach the object, consult a certified behaviorist before continuing"
+  ],
+  "funFact": "Dogs that learn 'leave it' in their first weeks of life have up to 40% fewer vet visits for ingesting foreign objects.",
+  "nextLevel": "Practice 'leave it' while moving during walks. Then introduce it with other dogs or animals as the distractor.",
+  "proTip": "The secret of 'leave it' is that the dog learns ignoring something always produces something better. Never skimp on the quality of the reward treat — it must be clearly superior to the forbidden object."
+}

@@ -1,0 +1,187 @@
+{
+  "title": "Fuß",
+  "subtitle": "Präzises Gehen neben dem Führer, aufmerksam und kontrolliert",
+  "level": "Mittelstufe",
+  "duration": "10–15 Min. pro Einheit",
+  "location": "Zuhause, Garten, ruhige Straße",
+  "ageRecommendation": "Ab 12 Wochen",
+  "estimatedSessions": "10–15 Einheiten zum Beherrschen",
+  "objective": "Den Hund beibringen, präzise an der linken Seite des Führers zu gehen, ihn anzusehen, ohne zu ziehen, einschließlich Stopps und Wendungen. Präziser und anspruchsvoller als das lockere Leinenspaziergang.",
+  "why": [
+    "Ermöglicht volle Kontrolle in belebten oder gefährlichen Umgebungen ohne Krafteinsatz",
+    "Entwickelt Aufmerksamkeit und Bindung: Der Hund schaut dich an, nicht die Welt",
+    "Grundlage für Hundesport (Obedience, Rally-O, Agility) und ruhige Spaziergänge",
+    "Ein Hund, der 'bei Fuß' geht, zieht nie und macht Spaziergänge angenehm"
+  ],
+  "benefits": [
+    "Spannungsfreie Spaziergänge an der Leine auch bei starken Ablenkungen",
+    "Mehr Sicherheit beim Überqueren von Straßen oder in stark befahrenen Bereichen",
+    "Der Hund lernt, sich auf dich als Informations- und Belohnungsquelle zu konzentrieren",
+    "Dient als Grundlage für ausgezeichnete Kommunikation bei jeder Aktivität"
+  ],
+  "where": [
+    "🏠 Beginne zuhause oder in einem langen ablenkungsfreien Flur",
+    "🌿 Gehe in den Garten oder einen eingezäunten Bereich über",
+    "🛣️ Übe schließlich auf der Straße mit echten Ablenkungen"
+  ],
+  "materials": [
+    "🫖 Sehr hochwertige Leckerlis (gekochtes Huhn, Wurst, Käse)",
+    "🦮 Kurze Leine von 1–1,5 m für den Anfang",
+    "🎯 Clicker oder konsistentes verbales Markerwort ('Ja' oder 'Super')",
+    "💛 Geduld und viele Pausen"
+  ],
+  "beforeYouStart": [
+    "Der Hund sollte 'Sitz' flüssig beherrschen, bevor du mit 'Fuß' anfängst",
+    "Entscheide von Anfang an, dass 'Fuß' immer an deiner LINKEN Seite sein wird: sei konsequent",
+    "Kurze Einheiten von 5–10 Minuten mit vielen Pausen: 'Fuß' ist kognitiv anspruchsvoll",
+    "Habe Top-Leckerlis in der linken Hand: Der Hund lernt, dieser Hand zu folgen",
+    "Nicht nach einem langen Sportspaziergang üben: Der Hund muss aufmerksam sein"
+  ],
+  "methods": [
+    {
+      "id": "left_lure",
+      "title": "Lockstoff-Methode mit linker Hand (empfohlener Einstieg)",
+      "description": "Du hältst das Leckerli in der linken Hand auf Hüfthöhe. Der Hund lernt, dass an deiner linken Seite zu bleiben kontinuierliche Belohnungen erzeugt. Baut die 'Fuß'-Position auf, bevor Bewegung hinzukommt.",
+      "bestFor": "Hunde ohne 'Fuß'-Erfahrung oder Welpen, die von Null beginnen",
+      "steps": [
+        {
+          "title": "Ausgangsposition: Hund sitzend zu deiner Linken",
+          "description": "Der Hund sitzt zu deiner linken Seite und schaut in dieselbe Richtung wie du. Dies ist die anfängliche 'Fuß'-Position.",
+          "tip": "Belohne mehrfach einfach dafür, in dieser Position zu sein. Der Platz neben deiner linken Hüfte = Belohnungszone.",
+          "troubleshooting": "Setzt sich der Hund vor dich, nutze eine Wand zu deiner Rechten, um seinen Raum zu begrenzen."
+        },
+        {
+          "title": "Leckerli auf Hüfthöhe links",
+          "description": "Halte das Leckerli in der linken Hand auf Hüfthöhe. Der Hund streckt den Hals nach oben, um das Leckerli zu suchen.",
+          "tip": "Deine linke Hand ist der 'Anker' des Hundes. Sie sollte immer an derselben Stelle sein.",
+          "troubleshooting": "Springt der Hund nach dem Leckerli, senke die Hand etwas. Belohne nur, wenn alle vier Pfoten am Boden sind."
+        },
+        {
+          "title": "Erster Schritt gemeinsam",
+          "description": "Mache einen Schritt vorwärts mit dem linken Fuß und sage 'Fuß'. Folgt der Hund in Position, belohne sofort.",
+          "tip": "Ein Schritt, eine Belohnung. Verlange nicht mehr Distanz, als der Hund in Position halten kann.",
+          "troubleshooting": "Läuft er voraus, stoppe komplett und warte, bis er an deine Seite zurückkommt, bevor du weitermachst."
+        },
+        {
+          "title": "Schritte schrittweise erhöhen",
+          "description": "Von 1 Schritt → 3 → 5 → 10 → einmal um den Block. Belohne mindestens alle 3–5 Schritte in korrekter Position.",
+          "tip": "Die Verstärkungsfrequenz ist anfangs entscheidend: Belohne oft, um den Hund an deiner Seite zu halten."
+        },
+        {
+          "title": "Stopps und Wendungen einführen",
+          "description": "Füge einen Stopp hinzu: Wenn du anhältst, soll der Hund automatisch neben dir sitzen. Führe Wendungen ein: sanfte Kurven nach links und rechts.",
+          "tip": "Kündige Wendungen durch leichtes Abbremsen an, damit der Hund Zeit hat, sich anzupassen."
+        }
+      ]
+    },
+    {
+      "id": "circles",
+      "title": "Kreis-Methode (um Tempo und Aufmerksamkeit zu erhalten)",
+      "description": "Du gehst in engen Kreisen zur Seite des Hundes (links), was ihn zwingt, das Tempo zu erhöhen, um in Position zu bleiben. Ausgezeichnet für den Aufbau von Aufmerksamkeit und Tempo.",
+      "bestFor": "Hunde, die zurückfallen oder dazu neigen, auf gerader Strecke die Position zu verlieren",
+      "steps": [
+        {
+          "title": "Kleine Kreise nach links",
+          "description": "Beginne in kleinen Kreisen nach links zu gehen. Der Hund muss das Tempo erhöhen, um an deiner Seite zu bleiben.",
+          "tip": "Linkskreise sind für den Hund anspruchsvoller (er muss mehr Weg zurücklegen). Rechtskreise sind leichter.",
+          "troubleshooting": "Läuft der Hund vor, verkleinere den Kreisradius, damit er weniger Raum hat, vorzulaufen."
+        },
+        {
+          "title": "Korrekte Position im Kreis belohnen",
+          "description": "Immer wenn der Hund in der korrekten Position ist (Schulter neben deiner linken Hüfte), belohne.",
+          "tip": "Die Belohnung kommt von deiner linken Hand nach unten. Lass den Hund nicht springen, um sie zu bekommen."
+        },
+        {
+          "title": "Kreise und gerade Strecke abwechseln",
+          "description": "Nach den Kreisen gehe ein paar Schritte geradeaus. Der Hund hat bereits Tempo und Position aus den Kreisen gelernt.",
+          "tip": "Der Übergang von Kreisen zur Geraden ist der Moment, das Verhalten zu festigen."
+        },
+        {
+          "title": "Verstärkung schrittweise reduzieren",
+          "description": "Mit der Zeit alle 10, 20 dann 50 Schritte belohnen statt alle paar Schritte. Den Hund in positiver Ungewissheit darüber halten, wann die Belohnung kommt.",
+          "tip": "Variabel belohnen: manchmal 5 Schritte, manchmal 20. Variabilität erhält Aufmerksamkeit besser als Routine."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "An der Leine reißen, um den Hund in Position zu halten",
+      "cause": "Schnelle Ergebnisse ohne Positionsarbeit wollen",
+      "fix": "'Fuß' wird mit Leckerlis und Positionierung gelehrt, nie mit Leinendruck. Die Leine muss ein Sicherheitszubehör sein, kein Kontrollmittel."
+    },
+    {
+      "error": "Zu lange Einheiten, die den Hund langweilen oder erschöpfen",
+      "cause": "Schnell vorankommen wollen",
+      "fix": "'Fuß' ist mental intensiv. Einheiten von 5–10 Minuten mit vielen Freispiel-Pausen."
+    },
+    {
+      "error": "Auf die Straße gehen, bevor das Verhalten zuhause gefestigt ist",
+      "cause": "Zu schnell zur echten Umgebung übergehen",
+      "fix": "Erst zuhause festigen, dann Garten, dann ruhige Straße, dann Straße mit Ablenkungen. Jeder Kontext braucht zusätzliches Verstärken."
+    },
+    {
+      "error": "Je nach Tag zwischen linker und rechter Seite wechseln",
+      "cause": "Inkonsistenz bei der Position",
+      "fix": "Wähle EINE Seite (üblicherweise links) und bleibe konsequent. Der Hund lernt eine bestimmte Position, nicht 'irgendeine Seite'."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund schaut mich an, bleibt aber zurück",
+      "solution": "Das Tempo ist zu langsam für ihn. Erhöhe es leicht. Hunde, die zurückfallen, verbessern sich oft, wenn du das Tempo steigerst."
+    },
+    {
+      "problem": "Hält 10 Schritte die Position, wird dann aber abgelenkt und läuft vor",
+      "solution": "Die Verstärkung wurde zu früh ausgedünnt. Kehre zum Belohnen alle 3–5 Schritte zurück, bis die Position solider ist."
+    },
+    {
+      "problem": "Funktioniert auf gerader Strecke, verliert aber die Position bei Wendungen",
+      "solution": "Wendungen sind schwieriger. Übe eine gesamte Einheit lang nur Wendungen und belohne jede korrekte Wendung eigenständig."
+    },
+    {
+      "problem": "Funktioniert nur mit sichtbarem Leckerli in der Hand; ohne Leckerli tut er es nicht",
+      "solution": "Das Leckerli schrittweise ausblenden: zuerst in der Hand, dann in der Tasche, aber herausnehmen zum Belohnen, dann in einem Futtergürtel. Der Hund muss lernen, dass die Belohnung jederzeit erscheinen kann."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheit 1–3",
+      "goal": "Der Hund folgt der linken Hand in korrekter Position für 5–10 Schritte"
+    },
+    {
+      "stage": "Einheit 4–7",
+      "goal": "Hält die Position auf gerader Strecke für 20–30 Schritte mit häufiger Verstärkung"
+    },
+    {
+      "stage": "Woche 2–3",
+      "goal": "Führt 'Fuß' einschließlich Stopps (mit automatischem Sitz) und sanften Wendungen aus"
+    },
+    {
+      "stage": "Monat 1+",
+      "goal": "Geht draußen mit moderaten Ablenkungen 1–2 Minuten 'bei Fuß' ohne sichtbares Leckerli"
+    }
+  ],
+  "successSigns": [
+    "Der Hund hält beim Gehen an deiner Seite regelmäßig Augenkontakt",
+    "Die Schulter des Hundes bleibt mindestens 30 aufeinanderfolgende Schritte lang auf Höhe deiner linken Hüfte",
+    "Setzt sich automatisch, wenn du anhältst",
+    "Hält die Position bei Wendungen ohne körperliche Führung"
+  ],
+  "variations": [
+    "Fuß mit Tempowechseln (sehr langsam → Trab)",
+    "Fuß zwischen Hindernissen (Hütchen, Stühle)",
+    "Fuß mit anderen Hunden oder Personen, die vorbeigehen",
+    "Fuß ohne Leine in sicherem Bereich (Fortgeschrittene)",
+    "Fuß mit einer Acht zwischen den Beinen des Führers"
+  ],
+  "safetyNotes": [
+    "Verwende niemals Würge-, Stachel- oder Elektrohalsbänder, um 'Fuß' beizubringen: Sie sind kontraproduktiv und schädlich",
+    "Hat der Hund Hüft- oder Gelenkprobleme, konsultiere den Tierarzt vor langen 'Fuß'-Einheiten",
+    "Führe bei Einheiten über 10 Minuten an warmen Tagen immer Wasser mit",
+    "Übe 'Fuß' mit sehr wenig Verstärkung nicht in stark befahrenen Bereichen, bis das Verhalten sehr solide ist"
+  ],
+  "funFact": "Heelwork to Music ist ein Hundesport, bei dem der Hund präzise Choreografien im Takt zur Musik aufführt. Manche Hunde lernen bis zu 20 verschiedene Fußpositionen!",
+  "nextLevel": "Führe 'Fuß' ohne Leine in geschlossenen Räumen ein. Dann 'Fuß' mit vorbeigehenden Hunden oder Personen üben. Abschließend mit anderen Kommandos kombinieren (Fuß → Bleib → Fuß).",
+  "proTip": "Der Blick des Hundes in deine Augen ist der Schlüssel zum fortgeschrittenen 'Fuß'. Belohne gezielt die Momente des Augenkontakts: 'schaut dich an = folgt dir = Belohnung'. Baue Augenkontakt auf, bevor du perfekte Position verlangst."
+}

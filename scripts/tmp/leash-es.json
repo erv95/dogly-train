@@ -1,0 +1,158 @@
+{
+  "title": "Andar con correa sin tirar",
+  "subtitle": "Paseos agradables para ti y tu perro sin tensión en la correa",
+  "level": "Básico",
+  "duration": "10–15 min por sesión",
+  "location": "Calle tranquila, acera o parque",
+  "ageRecommendation": "Desde 10 semanas",
+  "estimatedSessions": "10–15 sesiones para lograr consistencia",
+  "objective": "Enseñar al perro a caminar junto al guía sin tensar la correa, usando el método del árbol y el cambio de dirección con refuerzo positivo.",
+  "why": [
+    "Un perro que tira hace los paseos agotadores y peligrosos para el guía",
+    "La tensión constante en la correa puede lesionar el cuello y la tráquea del perro",
+    "Caminar sin tirar mejora la relación y la confianza mutua",
+    "Es la base para avanzar hacia trabajo sin correa en espacios seguros"
+  ],
+  "benefits": [
+    "Los paseos se vuelven relajantes y placenteros para toda la familia",
+    "Reduce el riesgo de caídas o lesiones, especialmente con perros grandes",
+    "El perro aprende a prestar atención al guía durante el paseo",
+    "Mejora la gestión general del perro en espacios públicos"
+  ],
+  "where": [
+    "🏠 Empieza en casa o jardín antes de salir a la calle",
+    "🛣️ Calle tranquila con pocas distracciones al principio",
+    "🌳 Parque tranquilo una vez haya progreso estable"
+  ],
+  "materials": [
+    "🦮 Arnés en H o Y (NO collar de castigo, horquilla ni eléctrico)",
+    "📏 Correa fija de 1,5–2 metros (NO extensible)",
+    "🫖 Premios de alto valor en bolsillo de fácil acceso",
+    "💛 Paciencia: es un proceso, no una solución inmediata"
+  ],
+  "beforeYouStart": [
+    "Usa siempre arnés de pecho en H o Y: distribuye la presión y no daña el cuello",
+    "NUNCA uses collar de castigo, pincho, eléctrico o de horquilla",
+    "La correa extensible no sirve para este ejercicio: no permite dar señales claras",
+    "Empieza las sesiones en momentos de baja energía del perro (después de juego)",
+    "Ten premios a mano todo el tiempo durante el entrenamiento"
+  ],
+  "methods": [
+    {
+      "id": "tree_and_direction",
+      "title": "Método árbol + cambio de dirección (recomendado)",
+      "description": "Cuando el perro tira, te detienes como un árbol hasta que la correa se suelta. Cuando la correa está floja, avanzas. Cambias de dirección aleatoriamente para mantener su atención en ti.",
+      "bestFor": "Todos los perros, especialmente los que ya tienen hábito de tirar",
+      "steps": [
+        {
+          "title": "Posición de partida y señal de inicio",
+          "description": "El perro a tu lado (izquierdo o derecho, elige uno y mantén siempre el mismo). Di “vamos” o “paseo” como señal de inicio y empieza a caminar.",
+          "tip": "Define siempre el mismo lado. La consistencia es clave para que el perro entienda qué se espera.",
+          "troubleshooting": "Si el perro arranca a tirar desde el inicio, párte como árbol antes del primer paso."
+        },
+        {
+          "title": "Árbol: para cuando tira",
+          "description": "En el momento exacto en que la correa se tensa, para completamente. No jalones, no grites, no te muevas. Espera en silencio hasta que la correa se afloje.",
+          "tip": "La parada debe ser inmediata: cualquier retraso confunde al perro.",
+          "troubleshooting": "Si no afloja la correa, da un paso hacia él (sin jalonear) para crear slack, luego espera que te siga."
+        },
+        {
+          "title": "Premia la correa floja",
+          "description": "En cuanto la correa se afloja (el perro te mira, se acerca o simplemente retrocede), di “sí” con voz alegre y premia. Luego sigue caminando.",
+          "tip": "Premia el momento exacto en que la correa se afloja, no cinco segundos después."
+        },
+        {
+          "title": "Cambio de dirección",
+          "description": "Aleatoriamente, sin avisar, da media vuelta y camina en dirección contraria. Cuando el perro te siga y te alcance con correa floja, prémiale generosamente.",
+          "tip": "Los cambios frecuentes enseñan al perro que eres impredecible y que debe estar atento a ti.",
+          "troubleshooting": "No te preocupes si al principio parece que das vueltas en círculos. Es normal y necesario."
+        },
+        {
+          "title": "Premia proactivamente la atención",
+          "description": "Cuando el perro te mire a los ojos durante el paseo (sin que lo hayas pedido), prémiale de inmediato. Esto refuerza que mirarte es una opción muy rentable.",
+          "tip": "El 'check-in' voluntario es la mejor señal de que el ejercicio funciona."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Usar collar en lugar de arnés",
+      "cause": "Hábito o desconocimiento del daño que produce",
+      "fix": "El collar en el cuello con un perro que tira puede causar daño traqueal, vertebral o en tiroides. Cambia a arnés en H o Y inmediatamente."
+    },
+    {
+      "error": "Ceder y seguir caminando cuando el perro tira",
+      "cause": "Cansancio o querer llegar al destino",
+      "fix": "Cada vez que avanzas mientras tira, refuerzas el tirar. La consistencia es no negociable."
+    },
+    {
+      "error": "Jalonear la correa hacia atrás para corregir",
+      "cause": "Reacción instintiva",
+      "fix": "Los jaloneos generan oposición refleja (el perro tira más). Para sin moverte y espera en silencio."
+    },
+    {
+      "error": "Sesiones demasiado largas en calle muy estimulante",
+      "cause": "Querer avanzar rápido en entornos difíciles",
+      "fix": "Empieza con 5–10 minutos en calle tranquila. Aumenta sólo cuando el perro lo haga bien."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro tira desde el primer segundo que salimos",
+      "solution": "El umbral de excitación es muy alto en la salida. Practica primero en el rellano o portal del edificio. Cuando esté calmado ahí, sal a la calle."
+    },
+    {
+      "problem": "Se para como árbol pero el perro nunca afloja la correa",
+      "solution": "Da un paso hacia el perro para crear algo de holgura, espera que te mire y premia. Luego retoma la marcha."
+    },
+    {
+      "problem": "Funciona bien en calle tranquila pero con otros perros tira muchísimo",
+      "solution": "Los otros perros son distracciones de nivel avanzado. Aumenta la distancia con los otros perros hasta que puedas premiar la correa floja, y sube muy lentamente la dificultad."
+    },
+    {
+      "problem": "Parece que el perro entiende pero al día siguiente olvida",
+      "solution": "Es normal en las primeras semanas. La consistencia diaria es más eficaz que sesiones largas ocasionales. 10 minutos cada día superan 1 hora los sábados."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–3",
+      "goal": "El perro asocia la tensión de correa con la parada. Para al menos el 50% de las veces"
+    },
+    {
+      "stage": "Sesión 4–7",
+      "goal": "Camina 10–20 pasos seguidos con correa floja en calle tranquila"
+    },
+    {
+      "stage": "Sesión 8–12",
+      "goal": "Hace check-in voluntario (te mira) durante el paseo sin que lo pidas"
+    },
+    {
+      "stage": "Mes 2+",
+      "goal": "Mantiene correa floja en entornos moderadamente estimulantes (parque, calle con gente)"
+    }
+  ],
+  "successSigns": [
+    "La correa tiene forma de U relajada durante la mayoría del paseo",
+    "El perro te mira espontáneamente sin que lo pidas",
+    "Se detiene junto a ti sin tirar cuando tú te paras",
+    "Recupera la correa floja en 2–3 segundos tras una distracción"
+  ],
+  "variations": [
+    "Paseo con giros frecuentes en zonas de entrenamiento",
+    "Práctica de “junto” formal: el perro pegado a tu pierna izquierda",
+    "Pausa-sigue: para 3 segundos cada 10 pasos y premia si no se adelanta",
+    "Paseo con otra persona: el perro aprende a ignorar al segundo humano",
+    "Paseo con mochila de perro (aumenta concentración natural)"
+  ],
+  "safetyNotes": [
+    "NUNCA uses collar de estrangulamiento, pincho o eléctrico: causan dolor y daño físico y conductual",
+    "Si tu perro tiene problemas de cuello o traquea, consulta al veterinario antes de iniciar",
+    "En días muy calurosos, reduce la sesión a 5 minutos y evita el asfalto caliente",
+    "Perros muy reactivos (que ladran o lunges a otros perros): busca ayuda profesional antes de trabajar en calle"
+  ],
+  "funFact": "Los perros tiran porque caminar rápido hacia lo que les interesa ha funcionado toda su vida. No es dominancia ni mala educación: es simplemente lo que les ha dado resultado. ¡Ahora les enseñamos que la correa floja funciona mejor!",
+  "nextLevel": "Practica en entornos más estimulantes: mercados, parques concurridos, zonas con perros. Después introduce “junto” formal para paseos más precisos junto a tu pierna.",
+  "proTip": "Cuando el perro haga un check-in voluntario (te mire sin que lo pidas durante el paseo), prémiale como si hubiera ganado la lotería. Ese momento de atención espontánea es lo que hace que el paseo se vuelva colaborativo."
+}

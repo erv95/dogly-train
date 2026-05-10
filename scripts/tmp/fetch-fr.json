@@ -1,0 +1,192 @@
+{
+  "title": "Rapporte",
+  "subtitle": "Jeu, exercice et obéissance en une seule commande",
+  "level": "Basique",
+  "duration": "10–15 min par séance",
+  "location": "Jardin, parc ou long couloir à la maison",
+  "ageRecommendation": "Dès 10 semaines",
+  "estimatedSessions": "6–10 séances pour maîtriser",
+  "objective": "Apprendre au chien à chasser un objet lancé, le ramasser, le rapporter au maître et le lâcher — complétant ainsi le cycle complet de la restitution.",
+  "why": [
+    "L'une des façons les plus efficaces de donner un exercice physique et mental au chien",
+    "Renforce le lien entre le maître et le chien grâce au jeu",
+    "Enseigne le concept d'échange volontaire, base de nombreux autres comportements",
+    "Fournit un canal de décharge énergétique pour les chiens à fort drive"
+  ],
+  "benefits": [
+    "Votre chien est physiquement et mentalement épuisé en 15 minutes, réduisant les comportements destructeurs",
+    "Apprend à lâcher les objets volontairement, réduisant la garde de ressources",
+    "L'anticipation du lancer améliore l'attention et la concentration",
+    "Peut se pratiquer dans de petits espaces avec des objets souples"
+  ],
+  "where": [
+    "🏡 Jardin ou cour fermée pour commencer",
+    "🌳 Parc avec zone clôturée ou en herbe",
+    "🏠 Long couloir à la maison avec une balle souple (début)"
+  ],
+  "materials": [
+    "🎾 Deux jouets ou balles identiques ou similaires",
+    "🫖 Friandises de haute valeur (optionnel, pour les premières séances)",
+    "🦮 Longue laisse de 5–10 m (pour les chiens qui ne reviennent pas)",
+    "💛 Enthousiasme et voix animée"
+  ],
+  "beforeYouStart": [
+    "Vérifiez si votre chien a un instinct de poursuite : lancez une balle et voyez s'il la poursuit",
+    "Choisissez un espace clôturé sans risque d'évasion pour les premières séances",
+    "Ayez deux jouets prêts : c'est essentiel pour la méthode des deux jouets",
+    "Séances de 10–15 minutes maximum pour éviter la fatigue",
+    "Si le chien n'a jamais joué, commencez avec l'objet au sol avant de le lancer"
+  ],
+  "methods": [
+    {
+      "id": "two_toys",
+      "title": "Méthode des deux jouets (recommandée)",
+      "description": "Vous utilisez deux jouets identiques en les alternant : quand le chien rapporte le premier, vous montrez le second avec enthousiasme pour qu'il le lâche. Construit l'habitude de revenir sans enseigner 'lâche' séparément.",
+      "bestFor": "Chiens avec instinct de poursuite qui ne lâchent pas ou ne reviennent pas",
+      "steps": [
+        {
+          "title": "Deux jouets en main",
+          "description": "Commencez avec les deux jouets dans vos mains, derrière votre dos ou cachés. Ne montrez qu'un seul au chien pour créer de l'intérêt.",
+          "tip": "Les jouets doivent être attrayants. Jouez un peu avec le premier avant de lancer pour augmenter sa valeur.",
+          "troubleshooting": "Si le chien ne montre pas d'intérêt, agitez le jouet près de lui avant de lancer."
+        },
+        {
+          "title": "Premier lancer",
+          "description": "Lancez le jouet nº1 avec enthousiasme. Attendez que le chien le poursuive et le prenne.",
+          "tip": "Ne lancez que quelques mètres au début. La distance augmente avec la pratique.",
+          "troubleshooting": "S'il ne le poursuit pas, rendez le jouet plus intéressant : déplacez-le au sol comme une proie avant de lancer."
+        },
+        {
+          "title": "Montrez le jouet nº2",
+          "description": "Quand le chien a le jouet nº1 dans la gueule et commence à revenir (même partiellement), sortez le jouet nº2 avec beaucoup d'enthousiasme : agitez-le, rendez-le intéressant.",
+          "tip": "Votre attitude est essentielle. Le chien doit vouloir le jouet nº2 plus que celui qu'il a dans la gueule.",
+          "troubleshooting": "Si le chien reste sur place avec le jouet, tournez-lui le dos : les chiens veulent ce qu'on ignore."
+        },
+        {
+          "title": "Échange et lâcher",
+          "description": "Quand le chien arrive vers vous en cherchant le jouet nº2, il lâchera le nº1 volontairement. À ce moment, lancez le nº2 comme récompense.",
+          "tip": "Ne demandez pas 'lâche' : l'échange le rend naturel. Dites 'oui' ou 'bien' quand il lâche."
+        },
+        {
+          "title": "Cycle continu",
+          "description": "Ramassez le jouet nº1 et répétez le cycle. Le chien apprend : rapporter = le jeu recommence.",
+          "tip": "Terminez la séance vous-même pendant que le chien veut encore jouer. Cela maintient le drive pour la prochaine séance."
+        }
+      ]
+    },
+    {
+      "id": "shaping",
+      "title": "Méthode de façonnage (pour les chiens sans instinct de retriever)",
+      "description": "Vous récompensez toute approche progressive du jouet : regarder → s'approcher → renifler → toucher → saisir → rapporter d'un pas. Idéal pour les chiens qui ne montrent pas d'intérêt naturel à poursuivre.",
+      "bestFor": "Chiens sans instinct naturel de retriever, races non retrievers, ou chiens âgés",
+      "steps": [
+        {
+          "title": "Regarder le jouet",
+          "description": "Placez le jouet au sol. Chaque fois que le chien le regarde, dites 'oui' et récompensez. Ne demandez pas davantage pour l'instant.",
+          "tip": "Un clicker est très utile dans cette méthode pour marquer exactement le bon comportement.",
+          "troubleshooting": "Si le chien ne regarde pas le jouet, déplacez-le légèrement pour attirer son attention."
+        },
+        {
+          "title": "S'approcher du jouet",
+          "description": "Maintenant, récompensez seulement si le chien se dirige vers le jouet, pas seulement s'il le regarde. Augmentez les critères lentement.",
+          "tip": "Chaque étape doit être petite. Si le chien se frustre, revenez à l'étape précédente."
+        },
+        {
+          "title": "Toucher ou saisir le jouet",
+          "description": "Récompensez quand le chien touche le jouet avec son museau ou le saisit avec sa gueule, même brièvement.",
+          "tip": "Tout contact avec le jouet est un succès à cette étape. Ne demandez pas encore la perfection."
+        },
+        {
+          "title": "Rapporter d'un pas vers vous",
+          "description": "Récompensez seulement quand le chien saisit le jouet ET fait au moins un pas vers vous. Augmentez progressivement la distance requise.",
+          "tip": "Reculez vous-même pour faciliter l'approche du chien. Votre mouvement invite son mouvement."
+        },
+        {
+          "title": "Restitution complète",
+          "description": "Une fois qu'il rapporte le jouet jusqu'à vous de façon consistante, ajoutez l'échange (une friandise en échange du jouet) pour compléter le cycle.",
+          "tip": "Remplacez la friandise par un lancer de jouet quand le chien comprend bien le concept."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Courir après le chien pour récupérer le jouet",
+      "cause": "Frustration quand le chien ne revient pas",
+      "fix": "Ne courez jamais après lui : vous transformez cela en jeu 'attrape-moi si tu peux'. Tournez-lui le dos ou courez en sens inverse."
+    },
+    {
+      "error": "Forcer l'ouverture de la gueule pour prendre le jouet",
+      "cause": "Impatience pour relancer",
+      "fix": "Utilisez toujours l'échange (deuxième jouet ou friandise). L'ouverture forcée peut créer une garde de ressources."
+    },
+    {
+      "error": "Séances trop longues qui épuisent le chien",
+      "cause": "Le chien montre de l'enthousiasme initial et le maître ne s'arrête pas à temps",
+      "fix": "Arrêtez toujours avant que le chien soit fatigué. Les séances courtes maintiennent le drive et l'enthousiasme."
+    },
+    {
+      "error": "Lancer le jouet quand le chien saute ou pousse",
+      "cause": "Céder à la pression du chien",
+      "fix": "Ne lancez que quand le chien est calme ou en position assise. Cela enseigne l'autocontrôle avant le jeu."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien poursuit le jouet mais ne le prend pas",
+      "solution": "Essayez un jouet plus souple et plus attrayant. Vous pouvez aussi faire 'fuir' le jouet en le déplaçant pour activer l'instinct de proie."
+    },
+    {
+      "problem": "Il le prend mais ne revient pas",
+      "solution": "Utilisez une longue laisse pour le guider doucement vers vous tout en montrant beaucoup d'enthousiasme pour le jouet nº2. Ne tirez jamais brusquement."
+    },
+    {
+      "problem": "Il revient mais ne lâche pas le jouet",
+      "solution": "Méthode des deux jouets : le deuxième jouet provoque toujours le lâcher du premier. Sinon, offrez une friandise de très haute valeur."
+    },
+    {
+      "problem": "Perd l'intérêt après 2–3 lancers",
+      "solution": "Les séances sont trop longues ou le jouet n'est pas assez motivant. Essayez un jouet différent et des séances plus courtes (3–5 lancers et arrêt)."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séance 1–2",
+      "goal": "Le chien poursuit le jouet lancé et le prend au moins une fois"
+    },
+    {
+      "stage": "Séance 3–5",
+      "goal": "Revient vers vous avec le jouet dans 50% des tentatives"
+    },
+    {
+      "stage": "Séance 6–8",
+      "goal": "Complète le cycle complet (poursuite, saisie, retour, lâcher) de façon consistante"
+    },
+    {
+      "stage": "Semaine 3+",
+      "goal": "Réalise la restitution complète en extérieur avec des distractions modérées"
+    }
+  ],
+  "successSigns": [
+    "Poursuit le jouet immédiatement quand il est lancé",
+    "Revient vers vous avec le jouet sans que vous ayez à l'appeler",
+    "Lâche le jouet en voyant le second ou en entendant 'lâche'",
+    "Maintient l'enthousiasme pendant toute la séance"
+  ],
+  "variations": [
+    "Rapporter avec le nom de l'objet ('prends la balle', 'prends la corde')",
+    "Rapporter dans l'eau (pour les chiens qui aiment nager)",
+    "Rapporter des objets spécifiques (trouve les clés, trouve la télécommande)",
+    "Rapporter depuis des distances progressivement plus grandes (5m → 20m → 50m)",
+    "Rapporter avec des obstacles ou entre des arbres"
+  ],
+  "safetyNotes": [
+    "Ne lancez jamais de petits objets qui pourraient être avalés",
+    "Évitez de lancer des bâtons : ils peuvent causer de graves blessures à la gueule et à la gorge",
+    "Limitez le jeu intense chez les chiens atteints de dysplasie ou de problèmes articulaires",
+    "Par temps chaud, séances très courtes avec de l'eau disponible : le rapporter est très exigeant"
+  ],
+  "funFact": "Les Golden Retrievers et Labradors ont été sélectionnés génétiquement pour rapporter des proies sans les endommager (gueule douce). C'est pourquoi beaucoup apprennent le rapporter presque instinctivement.",
+  "nextLevel": "Apprenez les noms de différents objets pour que le chien puisse les chercher et rapporter le bon. Ou introduisez le rapporter dans l'eau si votre chien aime nager.",
+  "proTip": "Le rapporter échoue presque toujours pour deux raisons : le chien ne lâche pas ou ne revient pas. Solution universelle : ayez toujours un deuxième jouet et ne courez jamais, jamais après votre chien."
+}

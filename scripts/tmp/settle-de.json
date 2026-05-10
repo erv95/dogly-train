@@ -1,0 +1,157 @@
+{
+  "title": "Entspann dich",
+  "subtitle": "Aktive Ruhe auf Kommando in jeder Situation",
+  "level": "Fortgeschritten Grundlegend",
+  "duration": "10–15 Min. pro Einheit",
+  "location": "Zuhause, Terrasse, Café, Wartezimmer",
+  "ageRecommendation": "Ab 12 Wochen",
+  "estimatedSessions": "8–12 Einheiten zum Beherrschen",
+  "objective": "Den Hund beibringen, auf Kommando aktiv zu entspannen — nicht nur hinzuliegen, sondern Körperspannung loszulassen — in jeder Umgebung. Nützlich in Cafés, bei Besuch zuhause oder bei langen Aufenthalten.",
+  "why": [
+    "Ein Hund, der sich entspannen kann, geht besser mit Stress in neuen Umgebungen um",
+    "Ermöglicht es, den Hund in öffentliche Räume (Terrassen, Läden) mitzunehmen, ohne zu stören",
+    "Reduziert die allgemeine Reaktivität, indem der ruhige Zustand als konkretes Verhalten trainiert wird",
+    "Ergänzt das 'Platz': Entspannung geht über die Körperhaltung hinaus"
+  ],
+  "benefits": [
+    "Dein Hund kann dich in Restaurants, Terrassen und Events begleiten, ohne Probleme zu verursachen",
+    "Besucher fühlen sich wohl, weil der Hund sie nicht ständig belästigt",
+    "Ruhigere Abende zuhause, wenn der Hund lernt, sich nachmittags zu entspannen",
+    "Nützlich beim Tierarzt, Hundefriseur oder bei langen Autofahrten"
+  ],
+  "where": [
+    "🏠 Beginne zuhause im Lieblingszimmer oder Wohnzimmer des Hundes",
+    "☕ Arbeite dich zu ruhigen Terrassen oder Cafés vor",
+    "🐾 Bestimmte Zone mit spezifischer Matte oder Bett für den Hund"
+  ],
+  "materials": [
+    "🛏️ Die spezifische Matte oder das Bett des Hundes (die 'sichere Zone')",
+    "🫖 Hochwertige Leckerlis in kleinen Mengen",
+    "🔇 Sehr ruhige Anfangsumgebung (kein lauter Fernseher, keine Besucher)",
+    "💛 Außergewöhnliche Geduld: Dieses Kommando braucht mehr Zeit als die Grundlagen"
+  ],
+  "beforeYouStart": [
+    "Der Hund sollte bereits 'Platz' flüssig beherrschen, bevor du an der Entspannung arbeitest",
+    "Wähle eine Tageszeit, zu der der Hund natürlich ruhiger ist (nach dem Spaziergang)",
+    "Bestimme eine spezifische Matte oder ein Bett: immer dieselbe, anfangs nicht versetzen",
+    "Einheiten maximal 10–15 Minuten: Entspannung kann nicht erzwungen oder überstürzt werden",
+    "Schalte den Fernseher aus und reduziere Reize während des Anfangstrainings"
+  ],
+  "methods": [
+    {
+      "id": "mat_protocol",
+      "title": "Matten-Protokoll (progressive Entspannungsmethode)",
+      "description": "Die Matte wird zum physischen Signal für Entspannung. Der Hund lernt: auf der Matte sein = Anspannung loslassen und Ruhe empfangen. Du verstärkst echte Entspannungszustände (Seufzer, langsames Blinzeln, Kopf runter) und ignorierst Alarmzustände.",
+      "bestFor": "Alle Hunde, besonders ängstliche, hyperaktive oder reaktive zuhause",
+      "steps": [
+        {
+          "title": "Die Matte als positiven Ort einführen",
+          "description": "Führe den Hund zur Matte und belohne ihn einfach dafür, dort zu sein. Verlange noch nichts mehr. Matte = Leckerli-Regen.",
+          "tip": "Mache das 5–10 Mal, bevor du ein bestimmtes Verhalten verlangst. Die Matte muss der beste Ort der Welt sein.",
+          "troubleshooting": "Meidet der Hund die Matte, belohne ihn schon dafür, sich ihr zu nähern. Baue zuerst die positive Assoziation auf, bevor du weitermachst."
+        },
+        {
+          "title": "'Platz' auf der Matte verlangen",
+          "description": "Sobald der Hund freiwillig auf die Matte geht, verlange 'Platz'. Belohne, wenn er darauf liegt.",
+          "tip": "Führe das Wort 'Entspann dich' noch nicht ein. Baue erst das Verhalten auf, auf der Matte zu liegen."
+        },
+        {
+          "title": "Echte Entspannung beobachten und verstärken",
+          "description": "Bleibe in der Nähe, aber ohne zu reden. Wenn der Hund echte Entspannungszeichen zeigt (hörbares Seufzen, langsames Blinzeln, Kopf fällt auf die Pfoten, Körper 'schmilzt'), sage 'Entspann dich' und belohne sehr sanft.",
+          "tip": "Die Belohnung muss ruhig gegeben werden: nicht mit Begeisterung. Aufregung bricht die Entspannung. Wirf das Leckerli sanft auf den Boden zwischen seine Pfoten.",
+          "troubleshooting": "Steht der Hund auf, sage nichts. Warte, bis er sich wieder hinlegt. Verstärke nur die Ruhe."
+        },
+        {
+          "title": "Dauer der Entspannung verlängern",
+          "description": "Mit der Zeit auf mehr Entspannungszeichen warten, bevor du belohnst: 5 Sekunden → 15 → 30 → 1 Minute kontinuierliche Ruhe vor dem Leckerli.",
+          "tip": "Verwende einen Handy-Timer, damit du nicht zu früh belohnst. Präzises Timing ist entscheidend."
+        },
+        {
+          "title": "Stufenweise Ablenkungen hinzufügen",
+          "description": "Beginne mit kleinen Ablenkungen: telefoniere, schalte den Fernseher leise ein, geh aus dem Zimmer und komm zurück. Belohne immer aufrechterhaltene Ruhe.",
+          "tip": "Steigere Ablenkungen in sehr kleinen Schritten. Ein Rückschritt ist kein Versagen: er ist Information."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Den Hund belohnen, wenn er aufsteht, um das Leckerli zu holen",
+      "cause": "Belohnung auf falscher Höhe anbieten oder aufgeregt zum Hund hingehen",
+      "fix": "Wirf das Leckerli immer auf den Boden zwischen seine Pfoten. Biete es nie aus deiner Hand an, wenn du Entspannung suchst."
+    },
+    {
+      "error": "Versuchen, Entspannung durch intensives Streicheln zu erzwingen",
+      "cause": "'Den Hund beruhigen wollen' mit 'trainierter aktiver Entspannung' verwechseln",
+      "fix": "Ängstliche Hunde werden durch Streicheln weiter überstimuliert, wenn sie bereits aktiviert sind. Verwende ruhige Belohnungen und Stille."
+    },
+    {
+      "error": "In Momenten hoher Aktivierung des Hundes üben",
+      "cause": "Die Aufregung mit dem Kommando lösen wollen",
+      "fix": "'Entspann dich' funktioniert nicht beim Erregungspeak. Übe immer, wenn der Hund bereits in einem neutralen oder sanft ruhigen Zustand ist."
+    },
+    {
+      "error": "Die Matte versetzen, bevor das Verhalten gefestigt ist",
+      "cause": "Wollen, dass es schnell an verschiedenen Orten funktioniert",
+      "fix": "Festige erst zuhause mit der Matte immer am gleichen Ort. Setze die Matte dann schrittweise in andere Zimmer und schließlich nach draußen."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund liegt, entspannt sich aber nicht: beobachtet weiterhin mit den Augen",
+      "solution": "Er ist körperlich in Position, aber nicht in echter Entspannung. Warte weiter und verstärke beim ersten langsamen Blinzeln oder Seufzen. Geduld wird hier in Minuten gemessen, nicht Sekunden."
+    },
+    {
+      "problem": "Er steht auf, jedes Mal wenn ich mich zum Belohnen nähere",
+      "solution": "Ändere die Belohnungslieferung: Anstatt dich anzunähern, wirf das Leckerli sanft vom Standort aus auf den Boden."
+    },
+    {
+      "problem": "Funktioniert zuhause, aber auf der Restaurantterrasse hält er nicht still",
+      "solution": "Du hast das Ablenkungsniveau zu schnell erhöht. Bringe die Matte zuerst an ruhige Orte (Garten, leere Terrasse), bevor du zu belebten öffentlichen Räumen übergehst."
+    },
+    {
+      "problem": "Mein Hund schläft ein, bevor ich die Entspannung belohnen kann",
+      "solution": "Das ist ein voller Erfolg! Ein Hund, der auf der Matte einschläft, hat das Höchstmaß an Entspannung erreicht. Belohne sanft beim Aufwachen."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheit 1–3",
+      "goal": "Der Hund geht freiwillig auf die Matte und legt sich ohne Aufforderung hin"
+    },
+    {
+      "stage": "Einheit 4–6",
+      "goal": "Zeigt mindestens ein echtes Entspannungszeichen (Seufzen, langsames Blinzeln) auf der Matte"
+    },
+    {
+      "stage": "Woche 2–3",
+      "goal": "Entspannt sich 1–2 Minuten auf der Matte mit kleinen Ablenkungen vorhanden"
+    },
+    {
+      "stage": "Monat 1+",
+      "goal": "Geht zur Matte und entspannt sich, wenn er 'Entspann dich' in ruhigen Außenbereichen hört"
+    }
+  ],
+  "successSigns": [
+    "Der Hund seufzt hörbar, wenn er sich auf der Matte hinlegt",
+    "Hält die entspannte Position, auch wenn du aufstehst oder in der Nähe gehst",
+    "Geht freiwillig zur Matte, wenn er leichten Stress erlebt (Besucher, neue Geräusche)",
+    "Die Entspannung dauert mehr als 5 Minuten ohne Eingreifen"
+  ],
+  "variations": [
+    "Entspannen auf einer Restaurantterrasse mit Hintergrundgeräuschen",
+    "Entspannen im Wartezimmer des Tierarztes",
+    "Entspannen bei Besuch zuhause",
+    "Entspannen im fahrenden Auto",
+    "Entspannen ohne Matte (nur mit dem verbalen Signal)"
+  ],
+  "safetyNotes": [
+    "Verwende 'Entspann dich' niemals, um einen Hund in einer Angst- oder Panikattacke zu beruhigen: Er muss sich zuerst vom Stimulus entfernen",
+    "Scheint dein Hund nie zu entspannen, auch nicht zuhause, konsultiere einen Verhaltenstherapeuten: es könnte chronische Angst vorliegen",
+    "Übe dieses Kommando nicht in extrem lauten Räumen oder bei aktiven Angstauslösern",
+    "Nutzt du die Matte als Straf- oder Auszeitzzone, verliert sie jegliche positive Assoziation"
+  ],
+  "funFact": "Hunde haben ein 'Stressgähnen', das sich vom Schlafgähnen unterscheidet. Ein Gähnen während des Trainings bedeutet, dass der Hund sich selbst reguliert — das ist tatsächlich positiv!",
+  "nextLevel": "Führe ein Handsignal (auf die Matte zeigen) zusätzlich zum verbalen Signal ein. Arbeite darauf hin, dass der Hund in öffentlichen Räumen ohne Matte entspannt: nur mit dem verbalen Signal.",
+  "proTip": "Der Entspannungszustand kann nicht eingefordert werden: Er muss kultiviert werden. Deine Ruhe ist ansteckend für den Hund. Sprich weniger, bewege dich langsamer und atme während der Einheiten tiefer."
+}

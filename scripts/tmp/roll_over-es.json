@@ -1,0 +1,159 @@
+{
+  "title": "Date la vuelta",
+  "subtitle": "El truco más impresionante — una vuelta completa desde el suelo",
+  "level": "Avanzado",
+  "duration": "5–10 min por sesión",
+  "location": "Casa (superficie suave)",
+  "ageRecommendation": "Desde 8 meses",
+  "estimatedSessions": "10–15 sesiones para dominar",
+  "objective": "Enseñar al perro a girar 360° desde la posición tumbada, pasando por el lateral y volviendo a tumbarse, respondiendo a la orden “date la vuelta”.",
+  "why": [
+    "Es el truco más espectacular del repertorio básico — siempre genera sorpresa y aplausos",
+    "Requiere que el perro confíe plenamente en su dueño para exponerse en posición vulnerable",
+    "Mejora la flexibilidad, la conciencia corporal y la coordinación",
+    "Demuestra el nivel más alto de comunicación y entendimiento entre perro y dueño"
+  ],
+  "benefits": [
+    "Fortalece el vínculo y la confianza de forma extraordinaria",
+    "Excelente ejercicio físico para la flexibilidad de la columna y los flancos",
+    "Una vez dominado, el perro lo ejecuta con fluidez y elegancia",
+    "Es el punto de partida para trucos de actuación más complejos"
+  ],
+  "where": [
+    "🏠 Exclusivamente en interior sobre una superficie muy suave al principio",
+    "🛏️ Alfombra gruesa, manta en el suelo o colchoneta de yoga — imprescindible",
+    "⛔ Nunca en suelo duro, frío o resbaladizo — el perro debe sentirse cómodo en la posición lateral"
+  ],
+  "materials": [
+    "🫖 Premios de máximo valor (pollo cocido, queso fuerte, salchicha)",
+    "🛟 Colchoneta, alfombra gruesa o manta doblada en el suelo",
+    "🖐️ Tu mano como guía del señuelo",
+    "💛 Paciencia extra — este truco se aprende fase por fase, no de una vez"
+  ],
+  "beforeYouStart": [
+    "Tu perro debe dominar “túmbate” de forma muy fluida — es el punto de partida obligatorio",
+    "Usa la superficie más suave y cómoda que tengas: manta, colchoneta o alfombra gruesa",
+    "Ten premios de altísimo valor — este truco es exigente y merece la mejor recompensa",
+    "Trabaja en fases: no intentes el giro completo desde el primer día",
+    "Sesiones de 5 minutos máximo — el truco requiere mucho esfuerzo físico y mental"
+  ],
+  "methods": [
+    {
+      "id": "lure_over_shoulder",
+      "title": "Método del señuelo por el hombro",
+      "description": "Desde la posición tumbada, guías el señuelo hacia el hombro del perro para que gire la cabeza, luego el cuerpo sigue hasta completar la vuelta. Se trabaja fase por fase: giro de cabeza → hombro en el suelo → vuelta completa.",
+      "bestFor": "Perros que dominan el tumbado y tienen buena confianza con su dueño",
+      "steps": [
+        {
+          "title": "Pide tumbado en la colchoneta",
+          "description": "Pide “túmbate” sobre la superficie suave. El perro debe estar completamente relajado, con los codos y el pecho en el suelo.",
+          "tip": "Espera a que esté realmente cómodo antes de continuar. Un perro tenso no girará bien.",
+          "troubleshooting": "Si el perro se levanta al ver el premio, trabaja primero mantener el tumbado con distracciones."
+        },
+        {
+          "title": "Guía la cabeza hacia el hombro — Fase 1",
+          "description": "Con el premio pegado a su nariz, muévelo lentamente hacia el hombro del lado hacia el que quieres que ruede. El perro girará la cabeza siguiendo el premio. Marca y premia sólo el giro de cabeza.",
+          "tip": "Premia esta fase generosamente durante 3–4 sesiones. No avances hasta que lo haga con naturalidad.",
+          "troubleshooting": "Si el perro se levanta en lugar de girar la cabeza, reinicia el tumbado y ve más despacio."
+        },
+        {
+          "title": "El hombro toca el suelo — Fase 2",
+          "description": "Continúa guiando el premio más allá del hombro, hacia el suelo del lado contrario. El cuerpo del perro seguirá a la cabeza y el hombro tocará el suelo. El perro estará ahora en posición lateral. Marca y premia.",
+          "tip": "Esta es la fase más difícil porque el perro se expone en posición vulnerable. Usa el premio de máximo valor.",
+          "troubleshooting": "Si el perro se resiste a caer de lado, reduce la velocidad del señuelo y premia cada pequeño progreso."
+        },
+        {
+          "title": "El cuerpo completa la vuelta — Fase 3",
+          "description": "Con el perro en posición lateral, continúa el arco del señuelo sobre el dorso hacia el otro lado. El perro rodará completando los 360° y quedará de nuevo en posición tumbada normal. Marca y celebra efusivamente.",
+          "tip": "Cuando el perro complete la vuelta entera por primera vez, celebra como si fuera el mejor momento de tu vida.",
+          "troubleshooting": "Si el perro completa sólo hasta la mitad, premia ahí y trabaja extendiendo un poco más cada sesión."
+        },
+        {
+          "title": "Nombra el truco y reduce el señuelo",
+          "description": "Cuando el giro completo sea consistente, di “date la vuelta” justo antes de iniciar el señuelo. Poco a poco reduce el tamaño del gesto hasta que el perro gire con sólo la voz o un pequeño giro de muñeca.",
+          "tip": "Reduce el señuelo muy gradualmente: premio visible → puño cerrado → sólo gesto → sólo voz.",
+          "troubleshooting": "Si deja de girar al reducir el señuelo, vuelve al señuelo completo y reduce más lentamente."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Intentar el giro completo desde la primera sesión",
+      "cause": "Querer ver el resultado final demasiado pronto",
+      "fix": "Trabaja en fases. Dedica al menos 3–4 sesiones a cada fase antes de pasar a la siguiente."
+    },
+    {
+      "error": "Guiar demasiado rápido y perder al perro a mitad del giro",
+      "cause": "Señuelo demasiado veloz para que el perro siga",
+      "fix": "El señuelo debe moverse al ritmo del perro. Si el perro se levanta, vas demasiado rápido."
+    },
+    {
+      "error": "Practicar en suelo duro o frío",
+      "cause": "No preparar el entorno correctamente",
+      "fix": "La superficie suave es innegociable. El perro necesita sentirse cómodo en la posición lateral."
+    },
+    {
+      "error": "Forzar al perro hacia el lateral con la mano",
+      "cause": "Frustración cuando el señuelo no funciona",
+      "fix": "Nunca uses fuerza física. Si el señuelo no funciona, usa un premio de mayor valor o vuelve a la fase anterior."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "El perro gira la cabeza pero no el cuerpo",
+      "solution": "Estás en la Fase 1 — es normal. Sigue premiando sólo el giro de cabeza hasta que sea automático. El cuerpo seguirá naturalmente después."
+    },
+    {
+      "problem": "El perro se levanta cada vez que acerca el señuelo al hombro",
+      "solution": "Trabaja el tumbado con más distracciones primero. El perro necesita más confianza en mantener la posición."
+    },
+    {
+      "problem": "El perro completa hasta el lateral pero no acaba el giro",
+      "solution": "Premia el lateral generosamente durante varias sesiones. Luego guía el señuelo 10° más cada vez."
+    },
+    {
+      "problem": "Mi perro lo hace sólo hacia un lado",
+      "solution": "Es normal y válido. Muchos perros prefieren un sentido. Consolida bien ese lado antes de intentar el contrario."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–4",
+      "goal": "Gira la cabeza hacia el hombro siguiendo el señuelo desde posición tumbada"
+    },
+    {
+      "stage": "Sesión 5–8",
+      "goal": "El hombro toca el suelo y el perro alcanza la posición lateral completa"
+    },
+    {
+      "stage": "Sesión 9–12",
+      "goal": "Completa la vuelta de 360° siguiendo el señuelo"
+    },
+    {
+      "stage": "Semana 4+",
+      "goal": "Responde a “date la vuelta” con señuelo reducido o sólo con la voz"
+    }
+  ],
+  "successSigns": [
+    "Completa el giro de 360° de forma fluida sin pausa en el lateral",
+    "Termina en posición tumbada y mira al dueño esperando el premio",
+    "Responde a la orden verbal sin necesitar el señuelo completo",
+    "Lo hace sobre diferentes superficies suaves (alfombra, manta, colchoneta)"
+  ],
+  "variations": [
+    "Date la vuelta en sentido contrario (hacia el otro lado)",
+    "Dos vueltas seguidas con una sola orden",
+    "Vuelta lenta y controlada (más difícil que rápida)",
+    "Encadena tumbado → date la vuelta → sentado para una secuencia fluida"
+  ],
+  "safetyNotes": [
+    "Nunca practiques en perros con problemas de espalda, cadera o displasia sin consultar al veterinario",
+    "Nunca fuerces al perro hacia el lateral — si no lo hace voluntariamente, no está listo",
+    "Perros mayores de 8 años: consulta al veterinario antes de enseñar este truco",
+    "Si el perro muestra rigidez, incomodidad o evita la posición lateral, para y observa 48 horas"
+  ],
+  "funFact": "Los perros muestran el vientre como señal máxima de confianza y apaciguamiento. Cuando tu perro rueda para ti, te está diciendo que se siente completamente seguro contigo.",
+  "nextLevel": "Encadena: tumbado → date la vuelta → sentado → choca esos cinco. ¡Cuatro trucos en cadena que dejarán a todos boquiabiertos!",
+  "proTip": "Trabaja siempre en el sentido que el perro elija naturalmente al principio. Una vez que domina un lado, el otro lado llegará mucho más fácil."
+}

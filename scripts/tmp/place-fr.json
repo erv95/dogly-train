@@ -1,0 +1,160 @@
+{
+  "title": "Va à ta place",
+  "subtitle": "Votre chien apprend à aller sur son tapis et y rester jusqu'à ce que vous le libériez",
+  "level": "Intermédiaire",
+  "duration": "5–10 min par séance",
+  "location": "Maison avec tapis ou lit désigné",
+  "ageRecommendation": "À partir de 14 semaines",
+  "estimatedSessions": "8–12 séances pour maîtriser",
+  "objective": "Apprendre au chien à se diriger vers son tapis ou son lit désigné et d'y rester calmement jusqu'à recevoir le signal de libération.",
+  "why": [
+    "Donne au chien un espace propre et sécurisé dans la maison",
+    "Réduit les comportements intrusifs pendant les repas ou quand des invités arrivent",
+    "Apprend au chien à se calmer par lui-même",
+    "Pose les bases de la gestion des distractions à la maison"
+  ],
+  "benefits": [
+    "Votre chien ne vous dérangera plus pendant les repas ni à l'arrivée des invités",
+    "Réduit l'anxiété grâce à un espace prévisible et sécurisé",
+    "Améliore l'autocontrôle et la tolérance à la frustration",
+    "Permet au chien de se reposer sans être constamment dans vos jambes"
+  ],
+  "where": [
+    "🏠 À la maison, avec le tapis toujours au même endroit",
+    "🛋️ Dans le salon ou la zone d'activité principale de la famille",
+    "⛔ Évitez les zones de passage où le chien serait interrompu"
+  ],
+  "materials": [
+    "🛏️ Un lit, une couverture ou un tapis désigné (toujours le même)",
+    "🫖 Friandises de haute valeur pour les premières séances",
+    "🦮 Longue laisse (facultatif, pour le travail à distance au début)",
+    "💛 Patience et régularité quotidienne"
+  ],
+  "beforeYouStart": [
+    "Votre chien doit maîtriser « couché » et « reste » avec une certaine fluidité",
+    "Choisissez un emplacement pour le tapis et ne le changez pas pendant l'apprentissage",
+    "Le lit doit être confortable et assez grand pour que le chien puisse s'y allonger entièrement",
+    "Préparez des friandises de haute valeur : cet exercice exige davantage de concentration",
+    "Pratiquez lors de moments calmes, pas quand le chien est déjà excité"
+  ],
+  "methods": [
+    {
+      "id": "lure_to_mat",
+      "title": "Méthode du leurre vers le tapis (recommandée)",
+      "description": "Vous utilisez une friandise pour guider le chien vers le tapis, puis vous ajoutez progressivement la distance, la durée et les distractions.",
+      "bestFor": "Chiens qui connaissent déjà couché et reste",
+      "steps": [
+        {
+          "title": "Guidez le chien vers le tapis",
+          "description": "Avec une friandise en main, guidez le chien vers le tapis. Quand ses quatre pattes sont dessus, dites « place » et donnez la friandise.",
+          "tip": "Donnez la friandise sur le tapis, pas sur le sol. Cela renforce le fait d'être dessus.",
+          "troubleshooting": "Si le chien ne monte pas, commencez avec la friandise au bord, puis déplacez-la progressivement vers le centre."
+        },
+        {
+          "title": "Demandez couché sur le tapis",
+          "description": "Une fois sur le tapis, demandez « couché ». Quand il s'exécute, récompensez. L'objectif est maintenant d'être couché sur sa place.",
+          "tip": "La position couchée facilite le maintien du calme et l'augmentation de la durée.",
+          "troubleshooting": "S'il ne se couche pas, utilisez la même technique de leurre que dans le cours du couché."
+        },
+        {
+          "title": "Introduire le mot de libération",
+          "description": "Après 2–3 secondes couché, dites « libre » (ou « allez » — toujours le même mot) et encouragez-le à quitter le tapis. Ne récompensez pas hors du tapis à ce stade.",
+          "tip": "Le mot de libération est aussi important que l'ordre lui-même. Sans lui, le chien ne sait pas quand il peut partir.",
+          "troubleshooting": "S'il part avant d'être libéré, ramenez-le calmement sur le tapis sans le réprimander."
+        },
+        {
+          "title": "Ajoutez de la distance",
+          "description": "Quand il va au tapis et se couche de manière cohérente, commencez à reculer d'un pas, puis deux, puis trois. Revenez avant qu'il bouge et récompensez sur le tapis.",
+          "tip": "Revenez toujours vous vers le chien — n'appelez jamais le chien vers vous. Cela renforce le fait de rester.",
+          "troubleshooting": "S'il vous suit, réduisez à un demi-pas et consolidez ce niveau de nombreuses fois."
+        },
+        {
+          "title": "Ajoutez durée et distractions",
+          "description": "Augmentez le temps progressivement (5s → 15s → 30s → 1 min). Puis introduisez de petites distractions : vous déplacer dans la pièce, ouvrir le frigo, toquer à la porte.",
+          "tip": "Augmentez la distance OU la durée OU la distraction — jamais les trois à la fois.",
+          "troubleshooting": "Si l'exercice échoue, simplifiez toujours : réduisez la variable que vous venez d'augmenter."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Appeler le chien depuis sa place plutôt que d'y retourner soi-même",
+      "cause": "Confondre « reste sur le tapis » avec « viens quand je t'appelle »",
+      "fix": "Revenez toujours vous vers le chien pour récompenser et le libérer. Cela renforce le fait de rester sur la place."
+    },
+    {
+      "error": "Augmenter la difficulté trop vite",
+      "cause": "Excès d'optimisme après les premiers succès",
+      "fix": "Appliquez la règle des 80 % : n'augmentez la difficulté que lorsque le chien réussit 8 fois sur 10."
+    },
+    {
+      "error": "Déplacer ou changer le tapis fréquemment",
+      "cause": "Manque de planification de l'environnement",
+      "fix": "L'emplacement du tapis doit rester fixe pendant l'apprentissage. La stabilité de l'environnement facilite l'apprentissage."
+    },
+    {
+      "error": "Gronder le chien quand il quitte le tapis",
+      "cause": "Frustration du guide",
+      "fix": "Ramenez simplement le chien sur le tapis en silence. Le retour sur la place ne doit jamais être une expérience négative."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien va au tapis mais en repart au bout de quelques secondes",
+      "solution": "Vous attendez trop longtemps avant de récompenser. Récompensez toutes les 1–2 secondes au début pour renforcer le fait d'être sur le tapis."
+    },
+    {
+      "problem": "Il ne veut pas monter sur le tapis",
+      "solution": "Rendez le tapis plus attrayant : posez-y sa couverture préférée, un jouet, ou donnez-y ses meilleures friandises pendant plusieurs jours avant d'entraîner."
+    },
+    {
+      "problem": "Il va sur le tapis mais ne se couche pas",
+      "solution": "Travaillez le « couché » sur le tapis comme exercice séparé avant d'introduire la distance."
+    },
+    {
+      "problem": "Fonctionne à la maison mais pas chez des amis ou en vacances",
+      "solution": "Apportez toujours le même tapis ou une couverture portative. L'odeur familière sert de signal de contexte pour le chien."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séance 1–3",
+      "goal": "Le chien va au tapis avec le leurre et se couche à la demande"
+    },
+    {
+      "stage": "Séance 4–6",
+      "goal": "Va au tapis sur l'ordre verbal et reste 15 secondes"
+    },
+    {
+      "stage": "Séance 7–9",
+      "goal": "Reste sur le tapis pendant que vous vous éloignez de 3 mètres pendant 30 secondes"
+    },
+    {
+      "stage": "Semaine 3–4",
+      "goal": "Reste sur le tapis 2–5 minutes avec de légères distractions (sonnette, mouvements dans la pièce)"
+    }
+  ],
+  "successSigns": [
+    "Va sur le tapis sur ordre sans leurre",
+    "Se couche et reste jusqu'à entendre le mot de libération",
+    "Ne bouge pas même quand vous vous éloignez ou quittez brièvement la pièce",
+    "Utilise spontanément son tapis pour se reposer sans qu'on le lui demande"
+  ],
+  "variations": [
+    "Place dans différentes pièces de la maison",
+    "Place chez des proches ou amis (même tapis)",
+    "Place pendant tout un repas en famille",
+    "Place lors de l'accueil des invités",
+    "Place dans le jardin ou sur la terrasse"
+  ],
+  "safetyNotes": [
+    "N'utilisez jamais le tapis comme punition : il doit toujours être un endroit positif",
+    "Assurez-vous que le lit est assez grand pour que le chien soit à l'aise",
+    "N'exigez pas de très longues durées au début — augmentez graduellement",
+    "Si le chien semble anxieux sur le tapis, vérifiez si la zone n'est pas trop isolée"
+  ],
+  "funFact": "Les chiens qui ont un espace bien établi montrent des niveaux de cortisol (hormone du stress) significativement plus bas que ceux qui se promènent librement sans espace défini.",
+  "nextLevel": "Pratiquez « place » avec l'ouverture de la porte d'entrée, des visiteurs qui entrent, puis dans des espaces publics acceptant les animaux avec le tapis portable.",
+  "proTip": "Nourrissez votre chien sur son tapis pendant une semaine avant de commencer l'entraînement. Le tapis sera ainsi déjà le meilleur endroit du monde avant même que vous demandiez quoi que ce soit."
+}

@@ -12,6 +12,10 @@ service firebase.storage {
       return isAuth() && request.auth.uid == uid;
     }
 
+    function isAdmin() {
+      return isAuth() && request.auth.token.admin == true;
+    }
+
     // Max file size: 5 MB
     function isValidImage() {
       return request.resource.size <= 5 * 1024 * 1024
@@ -46,6 +50,95 @@ service firebase.storage {
         && request.resource.size <= 10 * 1024 * 1024 // 10 MB for docs
         && (request.resource.contentType.matches('image/.*')
             || request.resource.contentType == 'application/pdf');
+    }
+
+    // ── Vet documents: vet_documents/{userId}/{dogId}/{fileName} ────────────
+    // Attachments for the dog's digital booklet (vaccine cards, lab results,
+    // prescriptions). Only the owner reads/writes; image or PDF up to 10 MB.
+
+    match /vet_documents/{userId}/{dogId}/{fileName} {
+      allow read: if isUser(userId);
+      allow write: if isUser(userId)
+        && request.resource.size <= 10 * 1024 * 1024
+        && (
+          request.resource.contentType.matches('image/.*')
+          || request.resource.contentType == 'application/pdf'
+        );
+    }
+
+    // ── ID documents: id_documents/{userId}/{fileName} ──────────────────────
+    // Sensitive PII (DNI / passport photos + selfie) for identity verification.
+    // - Only the owner uploads
+    // - Only the owner OR admin reads (admin reviews requests)
+    // - Image only, 5 MB max
+    // - Documents are deleted after admin decision (best-effort, see service)
+
+    match /id_documents/{userId}/{fileName} {
+      allow read: if isUser(userId) || isAdmin();
+      allow write: if isUser(userId) && isValidImage();
+    }
+
+    // ── Breed AI uploads: breed_uploads/{userId}/{fileName} ─────────────────
+    // Photos uploaded for AI breed identification. Only the uploader can write
+    // and read back; the Cloud Function uses admin SDK so isn't bound by these.
+    // Image only, 5 MB max.
+
+    match /breed_uploads/{userId}/{fileName} {
+      allow read: if isUser(userId);
+      allow write: if isUser(userId) && isValidImage();
+    }
+
+    // ── Place photos: place_photos/{userId}/{fileName} ──────────────────────
+    // Photos uploaded with a place proposal. Anyone authenticated can read
+    // (places are a public catalog after admin approval); only the proposer
+    // can upload to their own folder. Image only, 5 MB max.
+
+    match /place_photos/{userId}/{fileName} {
+      allow read: if isAuth();
+      allow write: if isUser(userId) && isValidImage();
+    }
+
+    // ── Chat media: chat_media/{chatId}/{userId}/{type}/{fileName} ──────────
+    // - Authenticated users can read (participant check is at Firestore level)
+    // - Only the uploader (matching userId in path) can write
+    // - Type-specific MIME and size validation
+
+    match /chat_media/{chatId}/{userId}/{mediaType}/{fileName} {
+      allow read: if isAuth();
+      allow write: if isUser(userId)
+        && (
+          // Images: max 5 MB, must be image/*
+          (mediaType == 'images'
+            && request.resource.size <= 5 * 1024 * 1024
+            && request.resource.contentType.matches('image/.*'))
+          ||
+          // Audio: max 10 MB, must be audio/*
+          (mediaType == 'audio'
+            && request.resource.size <= 10 * 1024 * 1024
+            && request.resource.contentType.matches('audio/.*'))
+          ||
+          // Files: max 10 MB, any content type
+          (mediaType == 'files'
+            && request.resource.size <= 10 * 1024 * 1024)
+        );
+    }
+
+    // ── Live session photos: live-sessions/{bookingId}/{fileName} ──────────
+    // Provider uploads mid-service photos that the owner sees in real time.
+    // - Both participants of the booking can READ (uses the parent live-session
+    //   doc to derive who's allowed). The Firestore rules block non-participants
+    //   from even fetching the metadata; reads here can stay simply auth-gated
+    //   because the URLs are unguessable (Firebase download tokens) and the
+    //   metadata write is server-only.
+    // - Only the provider (= matches the path's bookingId session.providerId)
+    //   uploads. Image only, 5 MB max.
+    //
+    // We can't `get()` the Firestore session doc from Storage rules (no Firestore
+    // access from Storage), so the producer is gated by Firestore rules on the
+    // photo metadata creation and an unguessable Storage path.
+    match /live-sessions/{bookingId}/{fileName} {
+      allow read: if isAuth();
+      allow write: if isAuth() && isValidImage();
     }
 
     // Deny everything else

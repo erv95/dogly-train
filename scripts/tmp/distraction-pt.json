@@ -1,0 +1,159 @@
+{
+  "title": "Atenção com distrações",
+  "subtitle": "O seu cão mantém a atenção em si mesmo quando o mundo inteiro o chama",
+  "level": "Avançado",
+  "duration": "5–10 min por sessão",
+  "location": "Progressivo: casa → jardim → rua → parque",
+  "ageRecommendation": "A partir dos 5 meses (pré-requisitos consolidados)",
+  "estimatedSessions": "10–15 sessões para generalizar",
+  "objective": "Ensinar o cão a manter a atenção e a obediência mesmo quando aparecem distrações como outros cães, pessoas, comida no chão ou barulhos fortes.",
+  "why": [
+    "A atenção é a base de toda a obediência no mundo real",
+    "Um cão que olha para si ao sinal é um cão seguro e controlável",
+    "Previne acidentes na rua e situações perigosas",
+    "Reduz a reatividade e o excesso de excitação em ambientes novos"
+  ],
+  "benefits": [
+    "Poderá passear com tranquilidade mesmo quando há outros cães por perto",
+    "O seu cão não se atirará sobre comida caída na rua",
+    "Responderá às ordens mesmo no parque ou em casa de amigos",
+    "Reduzirá a ansiedade do seu cão em ambientes desconhecidos"
+  ],
+  "where": [
+    "🏠 Comece sempre em casa sem distrações",
+    "🌿 Avance para o jardim e depois para uma rua tranquila",
+    "🎯 Termine no parque ou em ambientes com distrações reais"
+  ],
+  "materials": [
+    "🫖 Petiscos de motivação máxima (frango cozido, queijo, salsicha)",
+    "🦮 Trela de 2 metros para as fases exteriores",
+    "🎯 A sua voz, olhar e postura como ferramentas principais",
+    "💛 Paciência para progredir muito devagar no início"
+  ],
+  "beforeYouStart": [
+    "O seu cão deve dominar \"fica\" e \"vem\" em casa sem distrações",
+    "Comece sempre com distrações muito pequenas — nunca com o nível mais difícil",
+    "Use petiscos de alto valor: têm de competir com o que distrai o seu cão",
+    "Sessões de 5 minutos: a atenção sob pressão esgota mentalmente o cão",
+    "Aceite as regressões e os dias maus. A constância resolve-os"
+  ],
+  "methods": [
+    {
+      "id": "gradient_focus",
+      "title": "Método do gradiente com sinal \"olha para mim\" (recomendado)",
+      "description": "Constrói a atenção de forma gradual: primeiro em ambiente neutro, depois com distrações cada vez mais intensas. O sinal \"olha para mim\" ensina o cão a procurá-lo quando aparece algo interessante.",
+      "bestFor": "Cães com alta excitabilidade ou que ficam bloqueados perante estímulos",
+      "steps": [
+        {
+          "title": "Ensine \"olha para mim\" sem distrações",
+          "description": "Em casa, segure um petisco perto do seu olho e aguarde. No momento em que o cão fizer contacto visual consigo, diga \"olha para mim\", recompense e elogie. Repita 10 vezes por sessão.",
+          "tip": "No futuro, não precisará de segurar o petisco perto do olho — basta dizer a palavra e aguardar o contacto visual.",
+          "troubleshooting": "Se olha para o petisco mas não para os seus olhos, mova lentamente o petisco em direção à sua testa."
+        },
+        {
+          "title": "Introduza uma distração muito pequena",
+          "description": "Coloque um brinquedo aborrecido ou objeto neutro a 3 metros. Diga \"olha para mim\". Se olhar para si, recompense generosamente. Se não, aumente a proximidade à distração apenas se o cão já olha bem de longe.",
+          "tip": "A distração deve ser interessante mas não irresistível. Se o cão não conseguir ignorá-la, é demasiado.",
+          "troubleshooting": "Se não conseguir desviar o olhar, afaste a distração ou use uma menos interessante."
+        },
+        {
+          "title": "Pratique com distrações em movimento",
+          "description": "Use agora distrações que se movam: uma bola a rolar, uma pessoa a caminhar, um cão ao longe. Diga \"olha para mim\" mesmo antes de a distração aparecer ou se aproximar.",
+          "tip": "O momento chave é pedir a atenção ANTES de o cão reparar na distração, não depois.",
+          "troubleshooting": "Se já estiver bloqueado na distração, mova-se lateralmente ou dê meia-volta para recuperar a sua atenção."
+        },
+        {
+          "title": "Adicione obediência com distrações",
+          "description": "Quando já se concentra bem perto de distrações, combine \"olha para mim\" com \"senta\" ou \"fica\". O cão deve conseguir cumprir a ordem mesmo com algo interessante por perto.",
+          "tip": "Recompense o sucesso com um JACKPOT: 5–6 petiscos seguidos quando obedece com distração presente.",
+          "troubleshooting": "Se as ordens combinadas falharem, volte a apenas \"olha para mim\" e aumente a dificuldade mais devagar."
+        },
+        {
+          "title": "Generalize em ambientes reais",
+          "description": "Leve o treino ao parque, ruas movimentadas, mercado. Em cada novo ambiente, comece com as distrações mais pequenas e progrida gradualmente.",
+          "tip": "Cada novo ambiente é como começar do zero: o cão precisa de um período de adaptação.",
+          "troubleshooting": "Se no parque for impossível obter atenção, faça uma caminhada de 10 minutos primeiro para o cão descarregar antes de treinar."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Apresentar a distração máxima desde o primeiro momento",
+      "cause": "Querer resultados rápidos",
+      "fix": "Comece sempre abaixo do limiar: o nível onde o cão CONSEGUE ignorar a distração. Suba degrau a degrau."
+    },
+    {
+      "error": "Repetir a ordem quando o cão está bloqueado na distração",
+      "cause": "Acreditar que repetir mais vezes funciona",
+      "fix": "Se estiver bloqueado, mude você de posição (mova-se lateralmente, afaste o cão) e depois peça atenção."
+    },
+    {
+      "error": "Usar petiscos de baixo valor perante distrações fortes",
+      "cause": "Não calibrar o valor do petisco à dificuldade do exercício",
+      "fix": "Quanto maior a distração, maior o valor do petisco. O frango cozido ou o queijo devem superar em atrativo o que distrai o seu cão."
+    },
+    {
+      "error": "Treinar quando o cão já está sobreexcitado",
+      "cause": "Escolher o momento errado (chegada ao parque, jogo intenso anterior)",
+      "fix": "Aguarde 10–15 minutos após chegar a um novo ambiente ou após jogo intenso. A mente assenta com o tempo."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "No parque o meu cão ignora-me completamente",
+      "solution": "O nível de distração é demasiado alto. Faça primeiro uma caminhada de 10 minutos para baixar a excitação, depois encontre um canto tranquilo do parque para começar."
+    },
+    {
+      "problem": "O meu cão fica bloqueado a olhar para outros cães e não reage a nada",
+      "solution": "Está demasiado perto do outro cão. A distância de segurança é aquela em que o seu cão ainda consegue vê-lo com a distração presente. Aumente a distância."
+    },
+    {
+      "problem": "Funciona muito bem em casa mas na rua é como se não soubesse nada",
+      "solution": "Normal: o cão aprende em contexto. Pratique no corredor, depois à porta de casa, depois 5 metros, depois a esquina. Generalize em pequenos passos."
+    },
+    {
+      "problem": "O meu cão melhora e depois parece regredir",
+      "solution": "As regressões são normais, especialmente em fases de crescimento ou mudanças no ambiente. Volte um nível atrás e progrida novamente."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Semana 1–2",
+      "goal": "O cão mantém contacto visual consigo durante 3–5 segundos com pequenas distrações estáticas em casa"
+    },
+    {
+      "stage": "Semana 3–4",
+      "goal": "Responde a \"olha para mim\" no jardim com pessoas ou cães a 10+ metros"
+    },
+    {
+      "stage": "Semana 5–6",
+      "goal": "Consegue fazer senta ou fica na rua mesmo que passem pessoas ou ciclistas"
+    },
+    {
+      "stage": "Semana 7+",
+      "goal": "Mantém atenção no parque com outros cães no ambiente, respondendo às ordens básicas"
+    }
+  ],
+  "successSigns": [
+    "O cão procura-o espontaneamente com o olhar quando aparece algo interessante",
+    "Responde às ordens básicas mesmo com distrações moderadas",
+    "Consegue caminhar ao seu lado sem puxar mesmo com outros cães a 5 metros",
+    "Redireciona a atenção para si quando lhe pede, mesmo no parque"
+  ],
+  "variations": [
+    "Atenção com comida no chão (especialmente útil em cidades)",
+    "Atenção com outros cães a correr por perto",
+    "Atenção com barulhos fortes (fogos de artifício, motas, obras)",
+    "Atenção enquanto espera na sala de espera do veterinário"
+  ],
+  "safetyNotes": [
+    "Nunca coloque o cão em situações que ultrapassem muito o seu limiar: pode gerar trauma ou aumentar a reatividade",
+    "Se o seu cão mostrar sinais de medo (cauda baixa, orelhas para trás, tremor), pare a sessão e afaste a distração",
+    "Cães reativos precisam de ajuda profissional: o método do gradiente sozinho não é suficiente em casos severos",
+    "Não treine atenção com distrações com a trela demasiado tensa: aumenta o stress do cão"
+  ],
+  "funFact": "Os cães podem processar o mundo até 5 vezes mais rápido do que os humanos. O que parece uma distração leve para si pode ser uma avalanche de informação sensorial para o seu cão.",
+  "nextLevel": "Pratique com distrações de alto valor como comida na mão de outra pessoa ou cães em jogo livre. Depois introduza \"larga\" combinado com o trabalho de atenção.",
+  "proTip": "Torne-se a coisa mais interessante do passeio: fale com o seu cão, mude de ritmo, faça viragens inesperadas. Um guia imprevisível e divertido gera atenção natural sem precisar de a pedir."
+}

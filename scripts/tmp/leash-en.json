@@ -1,0 +1,158 @@
+{
+  "title": "Loose-leash walking",
+  "subtitle": "Enjoyable walks for both you and your dog — no more pulling",
+  "level": "Basic",
+  "duration": "10–15 min per session",
+  "location": "Quiet street, pavement, or park",
+  "ageRecommendation": "From 10 weeks",
+  "estimatedSessions": "10–15 sessions to achieve consistency",
+  "objective": "Teach your dog to walk beside you without tightening the leash, using the tree method and direction changes with positive reinforcement.",
+  "why": [
+    "A dog that pulls makes walks exhausting and dangerous for the handler",
+    "Constant leash tension can injure the dog's neck and trachea",
+    "Loose-leash walking improves the relationship and mutual trust",
+    "Foundation for advancing to off-leash work in safe spaces"
+  ],
+  "benefits": [
+    "Walks become relaxing and enjoyable for the whole family",
+    "Reduces the risk of falls or injuries, especially with large dogs",
+    "Your dog learns to pay attention to you during walks",
+    "Improves overall management of the dog in public spaces"
+  ],
+  "where": [
+    "🏠 Start at home or in the garden before heading outside",
+    "🛣️ A quiet street with few distractions at first",
+    "🌳 A quiet park once steady progress has been made"
+  ],
+  "materials": [
+    "🦮 H or Y-harness (NOT a prong, choke, or electric collar)",
+    "📏 Fixed leash 1.5–2 metres (NOT retractable)",
+    "🫖 High-value treats in an easily accessible pocket",
+    "💛 Patience: this is a process, not an instant fix"
+  ],
+  "beforeYouStart": [
+    "Always use a front-clip H or Y harness: distributes pressure and protects the neck",
+    "NEVER use a prong collar, choke chain, electric collar, or slip lead",
+    "A retractable leash won't work for this exercise: it can't give clear signals",
+    "Start sessions when your dog's energy is lower (after play)",
+    "Keep treats on hand at all times during training"
+  ],
+  "methods": [
+    {
+      "id": "tree_and_direction",
+      "title": "Tree method + direction changes (recommended)",
+      "description": "When the dog pulls, you stop like a tree until the leash goes slack. When the leash is loose, you move forward. You change direction randomly to keep their attention on you.",
+      "bestFor": "All dogs, especially those that already have a pulling habit",
+      "steps": [
+        {
+          "title": "Starting position and start cue",
+          "description": "Dog at your side (left or right — pick one and stay consistent). Say 'let's go' or 'walk' as a start cue and begin walking.",
+          "tip": "Always use the same side. Consistency is key for your dog to understand what's expected.",
+          "troubleshooting": "If the dog bolts and pulls from the very first step, stop like a tree before you've even taken one pace."
+        },
+        {
+          "title": "Tree: stop when they pull",
+          "description": "The moment the leash tightens, stop completely. No jerking, no shouting, no movement. Wait in silence until the leash goes slack.",
+          "tip": "The stop must be immediate: any delay confuses the dog.",
+          "troubleshooting": "If they don't release the leash, take one step toward them (no jerking) to create slack, then wait for them to follow."
+        },
+        {
+          "title": "Reward the loose leash",
+          "description": "The instant the leash goes slack (dog looks at you, moves closer, or simply steps back), say 'yes' in a cheerful voice and reward. Then keep walking.",
+          "tip": "Reward the exact moment the leash goes slack, not five seconds later."
+        },
+        {
+          "title": "Change direction",
+          "description": "Randomly, without warning, turn around and walk the other way. When the dog follows and catches up with a loose leash, reward generously.",
+          "tip": "Frequent direction changes teach the dog you are unpredictable and they need to stay attentive to you.",
+          "troubleshooting": "Don't worry if you seem to be going in circles at first. That's normal and necessary."
+        },
+        {
+          "title": "Proactively reward attention",
+          "description": "Whenever your dog looks up at you during the walk (without being asked), reward immediately. This reinforces that looking at you is a very rewarding option.",
+          "tip": "A voluntary check-in is the best sign the exercise is working."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Using a collar instead of a harness",
+      "cause": "Habit or not knowing the damage it causes",
+      "fix": "A collar with a pulling dog can cause tracheal, vertebral, or thyroid damage. Switch to an H or Y harness immediately."
+    },
+    {
+      "error": "Giving in and walking on when the dog pulls",
+      "cause": "Tiredness or wanting to reach a destination",
+      "fix": "Every time you advance while they pull, you reinforce the pulling. Consistency is non-negotiable."
+    },
+    {
+      "error": "Jerking the leash backward to correct",
+      "cause": "Instinctive reaction",
+      "fix": "Jerks create opposition reflex (the dog pulls harder). Stop without moving and wait in silence."
+    },
+    {
+      "error": "Sessions too long in a very stimulating environment",
+      "cause": "Wanting to progress quickly in difficult settings",
+      "fix": "Start with 5–10 minutes on a quiet street. Only increase when the dog is consistently doing well."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My dog pulls from the very second we step outside",
+      "solution": "The excitement threshold is very high at departure. Practise first in the hallway or building entrance. Once calm there, step outside."
+    },
+    {
+      "problem": "I stop like a tree but the dog never slackens the leash",
+      "solution": "Take a step toward the dog to create some slack, wait for them to look at you, and reward. Then resume walking."
+    },
+    {
+      "problem": "It works well on quiet streets but with other dogs they pull like crazy",
+      "solution": "Other dogs are advanced-level distractions. Increase your distance from other dogs until you can reward a loose leash, then very slowly reduce that distance."
+    },
+    {
+      "problem": "The dog seems to understand but seems to forget by the next day",
+      "solution": "Normal in the first weeks. Daily consistency beats occasional long sessions. 10 minutes every day outperforms 1 hour on Saturdays."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessions 1–3",
+      "goal": "Dog associates leash tension with stopping. Stops at least 50% of the time"
+    },
+    {
+      "stage": "Sessions 4–7",
+      "goal": "Walks 10–20 steps continuously with a loose leash on a quiet street"
+    },
+    {
+      "stage": "Sessions 8–12",
+      "goal": "Offers voluntary check-ins (looks at you) during the walk without being asked"
+    },
+    {
+      "stage": "Month 2+",
+      "goal": "Maintains a loose leash in moderately stimulating environments (park, busy street)"
+    }
+  ],
+  "successSigns": [
+    "The leash has a relaxed U-shape for most of the walk",
+    "The dog looks up at you spontaneously without being asked",
+    "Stops next to you without pulling when you stop",
+    "Recovers a loose leash within 2–3 seconds after a distraction"
+  ],
+  "variations": [
+    "Walk with frequent turns in a training area",
+    "Formal 'heel': dog pressed close to your left leg",
+    "Stop-and-go: pause 3 seconds every 10 steps and reward if they don't forge ahead",
+    "Walk with another person: dog learns to ignore the second human",
+    "Walk with a dog backpack (naturally increases focus)"
+  ],
+  "safetyNotes": [
+    "NEVER use a choke chain, prong collar, or electric collar: they cause pain and physical and behavioural damage",
+    "If your dog has neck or trachea issues, consult your vet before starting",
+    "On very hot days, limit sessions to 5 minutes and avoid hot asphalt",
+    "Highly reactive dogs (barking or lunging at other dogs): seek professional help before working in the street"
+  ],
+  "funFact": "Dogs pull because walking fast toward interesting things has worked their entire life. It's not dominance or bad behaviour — it's simply what has always paid off for them. Now we're teaching them that a loose leash works even better!",
+  "nextLevel": "Practise in more stimulating environments: markets, busy parks, areas with other dogs. Then introduce formal heel work for more precise walking at your side.",
+  "proTip": "When your dog offers a voluntary check-in (looks at you unprompted during the walk), reward them like they've just won the lottery. That spontaneous moment of attention is what turns a walk into true teamwork."
+}

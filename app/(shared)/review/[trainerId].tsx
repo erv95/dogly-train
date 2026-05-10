@@ -15,6 +15,7 @@ import { useAuth } from '../../../src/contexts/AuthContext';
 import { getTrainerById } from '../../../src/services/trainers';
 import { hasReviewed, submitReview } from '../../../src/services/reviews';
 import { Avatar, StarRating, Button, Input } from '../../../src/components/ui';
+import { useHaptics } from '../../../src/hooks/useHaptics';
 import { colors, spacing, fontSize, borderRadius } from '../../../src/theme';
 import { TrainerProfile } from '../../../src/types';
 
@@ -25,6 +26,7 @@ export default function ReviewScreen() {
   const navigation = useNavigation();
   const { firebaseUser } = useAuth();
 
+  const haptics = useHaptics();
   const [trainer, setTrainer] = useState<TrainerProfile | null>(null);
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
@@ -60,10 +62,13 @@ export default function ReviewScreen() {
     setLoading(true);
     try {
       await submitReview(firebaseUser.uid, trainerId, rating, comment);
+      if (rating >= 5) haptics.success();
+      else haptics.tap();
       Alert.alert(t('common.ok'), t('reviews.reviewSent'), [
         { text: t('common.ok'), onPress: () => router.back() },
       ]);
     } catch (error) {
+      haptics.error();
       Alert.alert(t('common.error'), t('authErrors.generic'));
     } finally {
       setLoading(false);
@@ -135,6 +140,7 @@ export default function ReviewScreen() {
             placeholder={t('reviews.comment')}
             multiline
             numberOfLines={5}
+            maxLength={500}
           />
         </View>
 

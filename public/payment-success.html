@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful — Dogly Train</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F0FDF4; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+    .card { background: #fff; border-radius: 16px; padding: 48px 32px; max-width: 400px; text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    .icon { font-size: 64px; margin-bottom: 16px; }
+    h1 { font-size: 22px; color: #166534; margin-bottom: 8px; }
+    p { font-size: 15px; color: #374151; margin-bottom: 20px; line-height: 1.6; }
+    .btn { display: inline-block; padding: 14px 32px; background: #F5A623; color: #fff; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: 600; }
+    .hint { font-size: 13px; color: #6B7280; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">&#10003;</div>
+    <h1>Payment Successful!</h1>
+    <p>Your coins have been added to your account. Thank you for your purchase!</p>
+    <a class="btn" href="dogly-train://">Return to Dogly Train</a>
+    <p class="hint">If the button doesn't work, open the Dogly Train app manually.</p>
+  </div>
+  <script>
+    // Auto-redirect to app after 3 seconds
+    setTimeout(function() { window.location.href = 'dogly-train://'; }, 3000);
+  </script>
+</body>
+</html>

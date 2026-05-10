@@ -1,0 +1,158 @@
+{
+  "title": "Rückruf (Komm her)",
+  "subtitle": "Der wichtigste Befehl für die Sicherheit deines Hundes",
+  "level": "Grundlegend",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Zuhause, Garten oder Park mit Schleppleine",
+  "ageRecommendation": "Ab 8 Wochen",
+  "estimatedSessions": "7–10 Einheiten zum Festigen",
+  "objective": "Dem Hund beibringen, sofort zu dir zu kommen, wenn er seinen Namen und das Kommando 'Komm' oder 'Hier' hört – auch bei Ablenkungen.",
+  "why": [
+    "Es ist das wichtigste Sicherheitskommando: Es kann das Leben deines Hundes retten",
+    "Ermöglicht kontrollierte Freiheit in offenen Bereichen",
+    "Stärkt die Bindung und das Vertrauen zwischen Hund und Halter",
+    "Grundlage für Distanzübungen und Arbeit ohne Leine"
+  ],
+  "benefits": [
+    "Du kannst deinen Hund im Park beruhigt laufen lassen",
+    "Bei Gefahr kommt dein Hund sofort zu dir zurück",
+    "Erleichtert den Rückruf, wenn er mit anderen Hunden oder Menschen interagiert",
+    "Verbessert die allgemeine Kommunikation und Aufmerksamkeit dir gegenüber"
+  ],
+  "where": [
+    "🏠 Drinnen (Flur oder Wohnzimmer ohne Ablenkungen)",
+    "🌿 Eingezäunter Garten oder Hof",
+    "🌳 Ruhiger Park mit 5–10 Meter Schleppleine"
+  ],
+  "materials": [
+    "🫖 Sehr hochwertige Leckerlis (Huhn, Käse, Schinken in kleinen Stücken)",
+    "🦮 Schleppleine 5–10 Meter (nicht ausziehbar)",
+    "🔔 Clicker (optional, aber sehr hilfreich)",
+    "💛 Fröhliche, enthusiastische Stimme"
+  ],
+  "beforeYouStart": [
+    "Dein Hund sollte bereits mit gewisser Regelmäßigkeit auf seinen Namen reagieren",
+    "Nutze den Rückruf nie für unangenehme Dinge (Baden, Krallenschneiden, Wegsperren)",
+    "Verwende immer einen festlichen Ton: Zu dir kommen soll die beste Sache der Welt sein",
+    "Beginne drinnen oder im eingezäunten Garten, nie in offenen Bereichen ohne Sicherung",
+    "Halte besonders hochwertige Leckerlis speziell für diese Übung bereit"
+  ],
+  "methods": [
+    {
+      "id": "recall_game",
+      "title": "Progressives Rückrufspiel (empfohlen)",
+      "description": "Du übst den Rückruf wie ein Spiel, beginnst sehr nah und erhöhst schrittweise Distanz und Schwierigkeitsgrad. Der Hund lernt, dass Zurückkommen immer die beste Belohnung bringt.",
+      "bestFor": "Alle Hunde – von Welpen bis zum erwachsenen Tier",
+      "steps": [
+        {
+          "title": "Beginne einen Meter entfernt",
+          "description": "Geh auf Augenhöhe deines Hundes, sag seinen Namen und 'Komm' mit fröhlicher Stimme und öffne die Arme. Wenn er ankommt, gib mehrere Leckerlis hintereinander und ausgelassenes Lob.",
+          "tip": "Sich hinzuhocken und die Arme zu öffnen ist eine unwiderstehliche Einladung für deinen Hund.",
+          "troubleshooting": "Wenn er nicht kommt, geh näher heran. Beginne bei einem halben Meter, falls nötig."
+        },
+        {
+          "title": "Erhöhe die Distanz schrittweise",
+          "description": "Wenn er bei 1 Meter gut reagiert, steigere auf 2, dann 3, dann 5 Meter. Jedes Mal, wenn er kommt: große Feier – mehrere Leckerlis, Streicheln und sehr fröhliche Stimme.",
+          "tip": "Goldene Regel: Wenn er nicht 9 von 10 Mal kommt, ist die Distanz zu groß. Geh zurück.",
+          "troubleshooting": "Wiederhole das Kommando nie, wenn er nicht kommt. Geh näher, zeige das Leckerli und probiere aus kürzerer Distanz."
+        },
+        {
+          "title": "Führe die Schleppleine ein",
+          "description": "Im Garten oder Park mit 5–10 Meter Schleppleine. Lass ihn erkunden und rufe ihn bei moderater Ablenkung. Wenn er kommt: totale Feier.",
+          "tip": "Die Schleppleine ist Sicherheit, kein Werkzeug zum Hereinziehen. Nutze sie nie, um ihn zu zerren.",
+          "troubleshooting": "Wenn er sehr abgelenkt ist, warte, bis die Ablenkung nachlässt, bevor du rufst."
+        },
+        {
+          "title": "Wechsle Rückruf mit Freiheit ab",
+          "description": "Ruf ihn, belohne großzügig und lass ihn danach wieder erkunden. So lernt er, dass Zu-dir-Kommen nicht das Ende des Spaßes bedeutet.",
+          "tip": "Wenn du ihn nur zum Nachhausegehen rufst, lernt er, dich am Ende des Spaziergangs zu ignorieren."
+        },
+        {
+          "title": "Steigere Ablenkungen schrittweise",
+          "description": "Sobald er in ruhiger Umgebung gut reagiert, übe mit anderen Menschen, entfernten Hunden oder Geräuschen. Erhöhe den Leckerliwert mit steigender Schwierigkeit.",
+          "tip": "Mehr Ablenkung = größere Feier bei Ankunft. Extra Aufwand verdient extra Belohnung."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Den Hund für etwas Unangenehmes rufen (Baden, Krallenschneiden, Wegsperren)",
+      "cause": "Wir nutzen den Rückruf für notwendige, aber unangenehme Situationen",
+      "fix": "Geh selbst zu ihm für unangenehme Dinge. Der Rückruf MUSS immer positiv enden."
+    },
+    {
+      "error": "Den Hund schimpfen, wenn er endlich kommt (auch wenn er sehr lange gebraucht hat)",
+      "cause": "Frustration wegen der langen Wartezeit",
+      "fix": "Niemals. Auch wenn er 10 Minuten braucht – wenn er ankommt: feiern. Bestrafen bei Ankunft bedeutet, er kommt nie wieder."
+    },
+    {
+      "error": "Das Kommando mehrmals wiederholen ('Komm, Komm, Komm…')",
+      "cause": "Nervosität oder fehlende Geduld",
+      "fix": "Sage das Kommando EINMAL in fröhlichem Ton. Wenn er nicht kommt, geh näher und probiere beim nächsten Mal aus kürzerer Distanz."
+    },
+    {
+      "error": "Nur zuhause üben, wo es immer klappt",
+      "cause": "Komfortzone des Halters",
+      "fix": "Übe an neuen Orten mit echten Ablenkungen. Das Gelernte muss sich auf verschiedene Umgebungen übertragen."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund schaut mich an, kommt aber nicht",
+      "solution": "Die Leckerlis sind nicht verlockend genug. Nimm Huhn oder Käse und übertreibe deinen Enthusiasmus: hinsetzen, klatschen, sehr fröhliche Stimme."
+    },
+    {
+      "problem": "Er kommt, läuft aber weg, bevor ich ihn erwische",
+      "solution": "Du greifst das Halsband zu schnell. Belohne erst 3 Sekunden lang, dann fasse sanft das Halsband, während du weiter Leckerlis gibst."
+    },
+    {
+      "problem": "Zuhause klappt es, aber im Park ignoriert er mich",
+      "solution": "Normal: Der Park bietet zu viele Ablenkungen. Beginne im Park, wenn er leer ist, und steigere die Schwierigkeit sehr langsam."
+    },
+    {
+      "problem": "Er reagiert nicht mehr, obwohl er es früher gut gemacht hat",
+      "solution": "Du hast die Schwierigkeit möglicherweise zu schnell erhöht oder den Rückruf für etwas Negatives genutzt. Gehe eine Woche lang auf kurze Distanzen mit exzellenten Leckerlis zurück."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheiten 1–3",
+      "goal": "Kommt zuverlässig aus 1–3 Metern drinnen ohne Ablenkungen"
+    },
+    {
+      "stage": "Einheiten 4–6",
+      "goal": "Reagiert aus 5 Metern im Garten bei leichten Ablenkungen"
+    },
+    {
+      "stage": "Einheiten 7–10",
+      "goal": "Kommt aus 10 Metern mit Schleppleine in einem ruhigen Park"
+    },
+    {
+      "stage": "Monat 2+",
+      "goal": "Reagiert in Umgebungen mit echten Ablenkungen (andere Hunde, Menschen)"
+    }
+  ],
+  "successSigns": [
+    "Kommt beim ersten Ruf ohne Wiederholung des Kommandos",
+    "Verlässt moderate Ablenkungen (Schnüffeln, Erkunden) um zu kommen",
+    "Kommt vollständig an deine Seite und bleibt (nähert sich nicht nur an)",
+    "Reagiert in mindestens 3 verschiedenen Umgebungen"
+  ],
+  "variations": [
+    "Rückruf zwischen zwei Personen (Hund geht hin und her)",
+    "Rückruf aus dem Versteck hinter einem Baum oder einer Ecke",
+    "Rückruf beim Spielen mit einem anderen Hund",
+    "Rückruf nur mit Handzeichen (ohne Stimme)",
+    "Rückruf auf lange Distanz von 20–30 Metern"
+  ],
+  "safetyNotes": [
+    "Übe nie ohne Leine in offenen Bereichen, bevor der Rückruf sehr stabil ist",
+    "Vermeide das Üben, wenn der Hund sehr aufgeregt ist: warte, bis das Erregungsniveau sinkt",
+    "Prüfe bei der Schleppleine vor dem Rufen, dass sie nicht verheddert ist",
+    "Behalte den Notfallrückruf (laute, dramatische Stimme) für echte Gefahren – nutze ihn selten, damit er seine Wirkung behält"
+  ],
+  "funFact": "Studien zeigen, dass Hunde besser auf hohe, fröhliche Stimmen reagieren als auf tiefe, ernste. Je alberner du klingst, wenn du rufst, desto besser funktioniert es!",
+  "nextLevel": "Übe den Rückruf mit echten Ablenkungen: spielende Hunde in der Nähe, rennende Menschen, starke Gerüche. Dann führe ein 'Bleib' vor dem Rückruf ein.",
+  "proTip": "Reserviere deine besten Leckerlis NUR für den Rückruf. Wenn Hühnchen nur erscheint, wenn er zu dir kommt, wird er angeflogen kommen. Exklusivität macht das Verhalten stärker."
+}

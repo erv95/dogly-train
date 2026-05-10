@@ -1,0 +1,159 @@
+{
+  "title": "Attention malgré les distractions",
+  "subtitle": "Votre chien reste attentif à vous même quand le monde entier l'appelle",
+  "level": "Avancé",
+  "duration": "5–10 min par séance",
+  "location": "Progressif : maison → jardin → rue → parc",
+  "ageRecommendation": "À partir de 5 mois (prérequis maîtrisés)",
+  "estimatedSessions": "10–15 séances pour généraliser",
+  "objective": "Apprendre au chien à maintenir son attention et son obéissance même quand des distractions apparaissent — autres chiens, personnes, nourriture au sol, bruits forts.",
+  "why": [
+    "L'attention est la base de toute obéissance dans le monde réel",
+    "Un chien qui vous regarde sur signal est un chien sûr et gérable",
+    "Prévient les accidents dans la rue et les situations dangereuses",
+    "Réduit la réactivité et la surexcitation dans les nouveaux environnements"
+  ],
+  "benefits": [
+    "Vous pourrez vous promener sereinement même quand d'autres chiens sont proches",
+    "Votre chien ne se précipitera pas sur la nourriture tombée dans la rue",
+    "Il répondra à vos ordres même au parc ou chez des amis",
+    "Réduira l'anxiété de votre chien dans les environnements inconnus"
+  ],
+  "where": [
+    "🏠 Commencez toujours à la maison sans distractions",
+    "🌿 Progressez vers le jardin puis une rue calme",
+    "🎯 Terminez au parc ou dans des environnements avec de vraies distractions"
+  ],
+  "materials": [
+    "🫖 Friandises à motivation maximale (poulet cuit, fromage, saucisse)",
+    "🦮 Laisse de 2 mètres pour les phases extérieures",
+    "🎯 Votre voix, votre regard et votre posture comme principaux outils",
+    "💛 Patience pour progresser très lentement au début"
+  ],
+  "beforeYouStart": [
+    "Votre chien doit maîtriser « reste » et « viens » à la maison sans distractions",
+    "Commencez toujours par de très petites distractions — jamais le niveau le plus difficile d'emblée",
+    "Utilisez des friandises de très haute valeur : elles doivent concurrencer ce qui distrait votre chien",
+    "Séances de 5 minutes : l'attention sous pression épuise mentalement le chien",
+    "Acceptez les régressions et les mauvais jours. La régularité les résout"
+  ],
+  "methods": [
+    {
+      "id": "gradient_focus",
+      "title": "Méthode du gradient avec signal « regarde-moi » (recommandée)",
+      "description": "Vous construisez l'attention graduellement : d'abord en environnement neutre, puis avec des distractions de plus en plus intenses. Le signal « regarde-moi » apprend au chien à vous chercher quand quelque chose d'intéressant apparaît.",
+      "bestFor": "Chiens à forte excitabilité ou qui se figent face aux stimuli",
+      "steps": [
+        {
+          "title": "Enseigner « regarde-moi » sans distractions",
+          "description": "À la maison, tenez une friandise près de votre œil et attendez. Dès que le chien établit un contact visuel avec vous, dites « regarde-moi », récompensez et félicitez. Répétez 10 fois par séance.",
+          "tip": "À l'avenir, vous n'aurez pas besoin de tenir la friandise près de l'œil — dites juste le mot et attendez le contact visuel.",
+          "troubleshooting": "S'il regarde la friandise mais pas vos yeux, déplacez lentement la friandise vers votre front."
+        },
+        {
+          "title": "Introduire une très petite distraction",
+          "description": "Placez un jouet ennuyeux ou un objet neutre à 3 mètres. Dites « regarde-moi ». S'il vous regarde, récompensez généreusement. Sinon, rapprochez la distraction seulement si le chien regarde bien de loin.",
+          "tip": "La distraction doit être intéressante mais pas irrésistible. S'il ne peut pas l'ignorer, c'est trop fort.",
+          "troubleshooting": "S'il ne peut pas détacher son regard, éloignez la distraction ou utilisez-en une moins intéressante."
+        },
+        {
+          "title": "S'entraîner avec des distractions en mouvement",
+          "description": "Utilisez maintenant des distractions mobiles : une balle qui roule, une personne qui marche, un chien au loin. Dites « regarde-moi » juste avant que la distraction apparaisse ou s'approche.",
+          "tip": "Le moment clé est de demander l'attention AVANT que le chien remarque la distraction, pas après.",
+          "troubleshooting": "S'il est déjà figé sur la distraction, déplacez-vous latéralement ou demi-tour pour récupérer son attention."
+        },
+        {
+          "title": "Ajouter l'obéissance sous distraction",
+          "description": "Quand il se concentre bien malgré les distractions, combinez « regarde-moi » avec « assis » ou « reste ». Le chien doit pouvoir exécuter l'ordre même si quelque chose d'intéressant est à proximité.",
+          "tip": "Récompensez le succès avec un JACKPOT : 5–6 friandises à la suite quand il obéit en présence d'une distraction.",
+          "troubleshooting": "Si les ordres combinés échouent, revenez à « regarde-moi » seul et augmentez la difficulté plus lentement."
+        },
+        {
+          "title": "Généraliser dans des environnements réels",
+          "description": "Emmenez l'entraînement au parc, dans des rues animées, au marché. Dans chaque nouvel environnement, commencez par les plus petites distractions et progressez graduellement.",
+          "tip": "Chaque nouvel environnement est comme un nouveau départ : le chien a besoin d'une période d'adaptation.",
+          "troubleshooting": "Si au parc il est impossible d'obtenir l'attention, promenez d'abord 10 minutes pour que le chien se décharge avant de s'entraîner."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Présenter la distraction maximale dès le premier jour",
+      "cause": "Vouloir des résultats rapides",
+      "fix": "Commencez toujours sous le seuil : le niveau où le chien PEUT ignorer la distraction. Montez marche par marche."
+    },
+    {
+      "error": "Répéter l'ordre quand le chien est figé sur la distraction",
+      "cause": "Croire que répéter davantage fonctionne",
+      "fix": "S'il est figé, changez vous-même de position (déplacez-vous latéralement, éloignez le chien) puis demandez l'attention."
+    },
+    {
+      "error": "Utiliser des friandises de faible valeur face à des distractions fortes",
+      "cause": "Ne pas calibrer la valeur de la friandise à la difficulté de l'exercice",
+      "fix": "Plus la distraction est forte, plus la friandise doit avoir de valeur. Le poulet cuit ou le fromage doit surpasser ce qui distrait votre chien."
+    },
+    {
+      "error": "S'entraîner quand le chien est déjà surstimulé",
+      "cause": "Choisir le mauvais moment (arrivée au parc, jeu intensif préalable)",
+      "fix": "Attendez 10–15 minutes après être arrivé dans un nouvel environnement ou après un jeu intense. L'esprit se pose avec le temps."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Au parc mon chien m'ignore complètement",
+      "solution": "Le niveau de distraction est trop élevé. Promenez d'abord 10 minutes pour baisser l'excitation, puis trouvez un coin calme du parc pour commencer."
+    },
+    {
+      "problem": "Mon chien se fige à regarder les autres chiens et ne réagit à rien",
+      "solution": "Vous êtes trop proche de l'autre chien. La distance de sécurité est celle où votre chien peut encore vous voir malgré la distraction. Augmentez la distance."
+    },
+    {
+      "problem": "Fonctionne très bien à la maison mais dans la rue c'est comme s'il ne savait rien",
+      "solution": "Normal : le chien apprend en contexte. Pratiquez dans le couloir, puis à la porte, puis 5 mètres, puis au coin de la rue. Généralisez par petits pas."
+    },
+    {
+      "problem": "Mon chien progresse puis semble régresser",
+      "solution": "Les régressions sont normales, surtout lors des phases de croissance ou de changements d'environnement. Reculez d'un niveau et reproggressez."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Semaine 1–2",
+      "goal": "Le chien maintient le contact visuel 3–5 secondes avec de petites distractions statiques à la maison"
+    },
+    {
+      "stage": "Semaine 3–4",
+      "goal": "Répond à « regarde-moi » au jardin avec des personnes ou des chiens à 10+ mètres"
+    },
+    {
+      "stage": "Semaine 5–6",
+      "goal": "Peut faire assis ou reste dans la rue même si des personnes ou des cyclistes passent"
+    },
+    {
+      "stage": "Semaine 7+",
+      "goal": "Maintient l'attention au parc avec d'autres chiens dans l'environnement, répondant aux ordres de base"
+    }
+  ],
+  "successSigns": [
+    "Le chien vous cherche spontanément du regard quand quelque chose d'intéressant apparaît",
+    "Répond aux ordres de base malgré des distractions modérées",
+    "Peut marcher à vos côtés sans tirer même si d'autres chiens se trouvent à 5 mètres",
+    "Redirige son attention vers vous quand vous le demandez, même au parc"
+  ],
+  "variations": [
+    "Attention avec de la nourriture au sol (très utile en ville)",
+    "Attention avec d'autres chiens qui courent à proximité",
+    "Attention avec des bruits forts (pétards, motos, travaux)",
+    "Attention en salle d'attente chez le vétérinaire"
+  ],
+  "safetyNotes": [
+    "Ne placez jamais le chien dans des situations qui dépassent largement son seuil : cela peut générer un traumatisme ou augmenter la réactivité",
+    "Si votre chien montre des signaux de peur (queue basse, oreilles en arrière, tremblement), arrêtez la séance et éloignez la distraction",
+    "Les chiens réactifs ont besoin d'un professionnel : la méthode du gradient seule ne suffit pas dans les cas sévères",
+    "N'entraînez pas l'attention avec une laisse trop tendue : cela augmente le stress du chien"
+  ],
+  "funFact": "Les chiens peuvent traiter le monde jusqu'à 5 fois plus vite que les humains. Ce qui vous semble une légère distraction peut être une avalanche d'informations sensorielles pour votre chien.",
+  "nextLevel": "Pratiquez avec des distractions de très haute valeur comme de la nourriture dans la main d'une autre personne ou des chiens en jeu libre. Introduisez ensuite « lâche » combiné au travail d'attention.",
+  "proTip": "Devenez la chose la plus intéressante de la promenade : parlez à votre chien, changez de rythme, faites des virages inattendus. Un guide imprévisible et amusant génère naturellement l'attention sans avoir à la demander."
+}

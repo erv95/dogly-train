@@ -1,6 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import Stripe from "stripe";
+import { applyPremium } from "./premium";
 
 const db = admin.firestore();
 
@@ -27,11 +28,12 @@ const COIN_PACKAGES: Record<string, { coins: number; priceInCents: number }> = {
  * Client calls this, gets a URL, redirects user to Stripe.
  */
 export const createCheckoutSession = functions.https.onRequest(async (req, res) => {
-  // CORS
-  res.set("Access-Control-Allow-Origin", "*");
+  // CORS — restricted to app origin
+  const allowedOrigin = process.env.APP_ORIGIN ?? "https://dogly-train.web.app";
+  res.set("Access-Control-Allow-Origin", allowedOrigin);
   if (req.method === "OPTIONS") {
     res.set("Access-Control-Allow-Methods", "POST");
-    res.set("Access-Control-Allow-Headers", "Content-Type");
+    res.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
     res.status(204).send("");
     return;
   }
@@ -41,10 +43,32 @@ export const createCheckoutSession = functions.https.onRequest(async (req, res) 
     return;
   }
 
+  // Verify Firebase ID token — caller must be the userId they claim
+  const authHeader = req.headers.authorization ?? "";
+  const idToken = authHeader.startsWith("Bearer ") ? authHeader.slice(7) : "";
+  if (!idToken) {
+    res.status(401).json({ error: "Unauthorized" });
+    return;
+  }
+  let verifiedUid: string;
+  try {
+    const decoded = await admin.auth().verifyIdToken(idToken);
+    verifiedUid = decoded.uid;
+  } catch {
+    res.status(401).json({ error: "Invalid token" });
+    return;
+  }
+
   const { userId, packageId } = req.body;
 
-  if (!userId || !packageId) {
-    res.status(400).json({ error: "Missing userId or packageId" });
+  if (!userId || typeof userId !== "string" || !packageId || typeof packageId !== "string") {
+    res.status(400).json({ error: "Missing or invalid userId/packageId" });
+    return;
+  }
+
+  // Prevent creating sessions on behalf of another user
+  if (verifiedUid !== userId) {
+    res.status(403).json({ error: "Forbidden" });
     return;
   }
 
@@ -52,6 +76,25 @@ export const createCheckoutSession = functions.https.onRequest(async (req, res) 
   if (!pkg) {
     res.status(400).json({ error: "Invalid package" });
     return;
+  }
+
+  // Rate limit: max 5 checkout sessions per user per minute
+  const rateLimitRef = db.collection("rate_limits").doc(`stripe_${userId}`);
+  const rateLimitSnap = await rateLimitRef.get();
+  if (rateLimitSnap.exists) {
+    const lastAt = rateLimitSnap.data()?.lastAt?.toDate?.();
+    const count = rateLimitSnap.data()?.count ?? 0;
+    if (lastAt && (Date.now() - lastAt.getTime()) < 60_000 && count >= 5) {
+      res.status(429).json({ error: "Too many requests. Please wait a moment." });
+      return;
+    }
+    if (lastAt && (Date.now() - lastAt.getTime()) >= 60_000) {
+      await rateLimitRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
+    } else {
+      await rateLimitRef.update({ count: admin.firestore.FieldValue.increment(1) });
+    }
+  } else {
+    await rateLimitRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
   }
 
   try {
@@ -107,7 +150,12 @@ export const stripeWebhook = functions.https.onRequest(async (req, res) => {
   }
 
   const stripe = getStripe();
-  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET ?? "";
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  if (!webhookSecret) {
+    functions.logger.error("STRIPE_WEBHOOK_SECRET not configured");
+    res.status(500).send("Server misconfiguration");
+    return;
+  }
 
   let event: Stripe.Event;
   try {
@@ -121,53 +169,92 @@ export const stripeWebhook = functions.https.onRequest(async (req, res) => {
 
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
-    const { userId, packageId, coins } = session.metadata || {};
+    const { userId, packageId, coins, productType } = session.metadata || {};
 
-    if (!userId || !coins) {
-      functions.logger.error("Missing metadata in session", session.id);
+    if (!userId) {
+      functions.logger.error("Missing userId in session metadata", session.id);
+      res.status(400).send("Missing metadata");
+      return;
+    }
+
+    // Premium one-time purchase
+    if (productType === "premium") {
+      try {
+        await applyPremium(userId, session.id, "stripe");
+      } catch (err: any) {
+        functions.logger.error("Premium activation failed", { sessionId: session.id, err: err.message });
+        res.status(500).send("Premium activation failed");
+        return;
+      }
+      res.status(200).send("OK");
+      return;
+    }
+
+    // Coin pack (default flow)
+    if (!coins) {
+      functions.logger.error("Missing coins in session metadata", session.id);
       res.status(400).send("Missing metadata");
       return;
     }
 
     const coinsAmount = parseInt(coins, 10);
-    const txId = `stripe_${session.id}`;
-
-    // Idempotency check
-    const existingTx = await db.collection("coin_transactions").doc(txId).get();
-    if (existingTx.exists) {
-      functions.logger.info("Transaction already processed", txId);
-      res.status(200).send("Already processed");
+    if (isNaN(coinsAmount) || coinsAmount <= 0) {
+      functions.logger.error("Invalid coins value", coins);
+      res.status(400).send("Invalid coins value");
       return;
     }
 
-    // Credit coins in a transaction
-    await db.runTransaction(async (transaction) => {
-      const userRef = db.collection("users").doc(userId);
-      const userDoc = await transaction.get(userRef);
+    const txId = `stripe_${session.id}`;
+    const txRef = db.collection("coin_transactions").doc(txId);
 
-      if (!userDoc.exists) {
-        throw new Error(`User ${userId} not found`);
-      }
+    // Idempotency check is INSIDE the transaction to prevent race conditions
+    // between two concurrent webhook deliveries for the same event.
+    try {
+      await db.runTransaction(async (transaction) => {
+        const existingTx = await transaction.get(txRef);
+        if (existingTx.exists) {
+          // Already processed — abort transaction silently
+          return;
+        }
 
-      const currentBalance = userDoc.data()?.coinBalance ?? 0;
-      const newBalance = currentBalance + coinsAmount;
+        const userRef = db.collection("users").doc(userId);
+        const userDoc = await transaction.get(userRef);
 
-      // Update user balance
-      transaction.update(userRef, {
-        coinBalance: newBalance,
-        updatedAt: admin.firestore.Timestamp.now(),
+        if (!userDoc.exists) {
+          // User deleted after purchase — log and return 200 to stop webhook retries
+          functions.logger.warn("User not found for webhook, skipping", { userId, sessionId: session.id });
+          return;
+        }
+
+        const userData = userDoc.data()!;
+        if (userData.status === "suspended" || userData.status === "banned") {
+          functions.logger.warn("Webhook for inactive user, skipping coin credit", { userId, status: userData.status });
+          return;
+        }
+
+        const currentBalance = userData.coinBalance ?? 0;
+        const newBalance = currentBalance + coinsAmount;
+
+        transaction.update(userRef, {
+          coinBalance: newBalance,
+          updatedAt: admin.firestore.Timestamp.now(),
+        });
+
+        transaction.set(txRef, {
+          userId,
+          type: "purchase",
+          amount: coinsAmount,
+          balanceAfter: newBalance,
+          reference: session.id,
+          packageId: packageId ?? null,
+          createdAt: admin.firestore.Timestamp.now(),
+        });
       });
-
-      // Create transaction record
-      transaction.set(db.collection("coin_transactions").doc(txId), {
-        userId,
-        type: "purchase",
-        amount: coinsAmount,
-        balanceAfter: newBalance,
-        reference: session.id,
-        createdAt: admin.firestore.Timestamp.now(),
-      });
-    });
+    } catch (err: any) {
+      functions.logger.error("Transaction failed for session", session.id, err.message);
+      res.status(500).send("Transaction failed");
+      return;
+    }
 
     functions.logger.info("Coins credited", { userId, coins: coinsAmount, txId });
   }

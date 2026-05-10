@@ -1,0 +1,157 @@
+{
+  "title": "Relaxa",
+  "subtitle": "Calma ativa sob demanda em qualquer situação",
+  "level": "Intermediário",
+  "duration": "10–15 min por sessão",
+  "location": "Casa, terraço, café, sala de espera",
+  "ageRecommendation": "A partir de 12 semanas",
+  "estimatedSessions": "8–12 sessões para dominar",
+  "objective": "Ensinar o cão a relaxar ativamente sob demanda — não apenas se deitar, mas soltar a tensão corporal — em qualquer ambiente. Útil em cafés, com visitas em casa ou durante longas permanências.",
+  "why": [
+    "Um cão que sabe relaxar lida melhor com o estresse em ambientes novos",
+    "Permite levar o cão a espaços públicos (terraços, lojas) sem causar problemas",
+    "Reduz a reatividade geral ao ensinar o estado de calma como comportamento concreto",
+    "Complementa o 'deita': o relaxamento vai além da postura"
+  ],
+  "benefits": [
+    "O seu cão pode acompanhá-lo a restaurantes, terraços e eventos sem criar problemas",
+    "As visitas sentem-se confortáveis porque o cão não as incomoda continuamente",
+    "Noites mais tranquilas em casa quando o cão aprende a relaxar durante as tardes",
+    "Útil em consultas veterinárias, grooming ou viagens longas de carro"
+  ],
+  "where": [
+    "🏠 Comece em casa, na sala ou no quarto favorito do cão",
+    "☕ Progrida para terraços ou cafés tranquilos",
+    "🐾 Zona designada com tapete ou cama específica para o cão"
+  ],
+  "materials": [
+    "🛏️ O tapete ou cama específica do cão (a 'zona segura')",
+    "🫖 Petiscos de alto valor em pequenas quantidades",
+    "🔇 Ambiente inicial muito tranquilo (sem TV alta, sem visitas)",
+    "💛 Paciência excepcional: este comando demora mais do que os básicos"
+  ],
+  "beforeYouStart": [
+    "O cão deve conhecer 'deita' com fluidez antes de trabalhar o relaxamento",
+    "Escolha um momento do dia em que o cão já esteja naturalmente mais calmo (após o passeio)",
+    "Designe um tapete ou cama específica: sempre o mesmo, não o mova no início",
+    "Sessões de no máximo 10–15 minutos: o relaxamento não pode ser forçado nem apressado",
+    "Desligue a TV e reduza os estímulos durante o treino inicial"
+  ],
+  "methods": [
+    {
+      "id": "mat_protocol",
+      "title": "Protocolo do tapete (método de relaxamento progressivo)",
+      "description": "O tapete torna-se o sinal físico de relaxamento. O cão aprende que estar no tapete = soltar a tensão e receber calma. Você reforça os estados de relaxamento real (suspiro, piscar lento, cabeça baixa) e ignora os estados de alerta.",
+      "bestFor": "Todos os cães, especialmente os ansiosos, hiperativos ou reativos em casa",
+      "steps": [
+        {
+          "title": "Introduza o tapete como lugar positivo",
+          "description": "Leve o cão ao tapete e recompense simplesmente por estar nele. Não peça nada mais. Tapete = chuva de petiscos.",
+          "tip": "Faça isso 5–10 vezes antes de pedir qualquer comportamento específico. O tapete deve ser o melhor lugar do mundo.",
+          "troubleshooting": "Se o cão evitar o tapete, recompense até por se aproximar. Construa primeiro a associação positiva antes de continuar."
+        },
+        {
+          "title": "Peça 'deita' no tapete",
+          "description": "Uma vez que o cão suba voluntariamente ao tapete, peça 'deita'. Recompense quando estiver deitado nele.",
+          "tip": "Não introduza ainda a palavra 'relaxa'. Primeiro construa o comportamento de estar deitado no tapete."
+        },
+        {
+          "title": "Observe e reforce o relaxamento real",
+          "description": "Fique perto mas sem falar. Quando o cão mostrar sinais reais de relaxamento (suspiro audível, piscar lento, cabeça caindo sobre as patas, corpo que 'derrete'), diga 'relaxa' e recompense muito suavemente.",
+          "tip": "A recompensa deve ser dada com calma: não com excitação. A excitação quebra o relaxamento. Jogue suavemente o petisco ao chão entre as patas.",
+          "troubleshooting": "Se o cão se levantar, não diga nada. Espere ele se deitar novamente. Reforce apenas a calma."
+        },
+        {
+          "title": "Aumente a duração do relaxamento",
+          "description": "Com o tempo, espere mais sinais de relaxamento antes de recompensar: 5 segundos → 15 → 30 → 1 minuto de calma contínua antes do petisco.",
+          "tip": "Use um temporizador no celular para não recompensar antes do tempo. A precisão do timing é fundamental."
+        },
+        {
+          "title": "Adicione distrações graduais",
+          "description": "Comece a praticar com pequenas distrações: fale ao telefone, ligue a TV no baixo volume, entre e saia da sala. Sempre recompense a calma mantida.",
+          "tip": "Aumente as distrações em passos muito pequenos. Um retrocesso não é um fracasso: é informação."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Recompensar o cão quando ele se levanta para buscar o petisco",
+      "cause": "Oferecer a recompensa na altura errada ou aproximar-se do cão com entusiasmo",
+      "fix": "Jogue sempre o petisco ao chão entre as patas. Nunca o ofereça da sua mão quando buscar relaxamento."
+    },
+    {
+      "error": "Tentar forçar o relaxamento com carícias intensas",
+      "cause": "Confundir 'querer acalmar o cão' com 'relaxamento ativo treinado'",
+      "fix": "Cães ansiosos ficam mais superestimulados com carícias quando já estão ativados. Use recompensas calmas e silêncio."
+    },
+    {
+      "error": "Praticar em momentos de alta ativação do cão",
+      "cause": "Querer resolver a excitação com o comando",
+      "fix": "'Relaxa' não funciona no pico de ativação. Pratique sempre quando o cão já estiver em estado neutro ou suavemente calmo."
+    },
+    {
+      "error": "Mudar o tapete de lugar antes de o comportamento estar consolidado",
+      "cause": "Querer que funcione em lugares diferentes muito rapidamente",
+      "fix": "Consolide primeiro em casa com o tapete sempre no mesmo lugar. Depois mova o tapete progressivamente para outros cômodos e por fim para o exterior."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão se deita mas não relaxa: continua a vigiar com os olhos",
+      "solution": "Está em posição física mas não em relaxamento real. Continue esperando e reforce quando vir o primeiro piscar lento ou suspiro. A paciência aqui se mede em minutos, não segundos."
+    },
+    {
+      "problem": "Levanta-se cada vez que me aproximo para recompensar",
+      "solution": "Mude como entrega a recompensa: em vez de se aproximar, jogue suavemente o petisco ao chão de onde está."
+    },
+    {
+      "problem": "Funciona em casa mas no terraço do restaurante não fica quieto",
+      "solution": "Subiu o nível de distração rapidamente demais. Leve o tapete a lugares tranquilos primeiro (jardim, terraço sem pessoas) antes de passar a espaços públicos movimentados."
+    },
+    {
+      "problem": "O meu cão adormece antes de eu conseguir recompensar o relaxamento",
+      "solution": "É um sucesso total! Um cão que adormece no tapete atingiu o nível máximo de relaxamento. Recompense suavemente ao acordar."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessão 1–3",
+      "goal": "O cão sobe voluntariamente ao tapete e se deita sem ser pedido"
+    },
+    {
+      "stage": "Sessão 4–6",
+      "goal": "Mostra pelo menos um sinal real de relaxamento (suspiro, piscar lento) no tapete"
+    },
+    {
+      "stage": "Semana 2–3",
+      "goal": "Relaxa por 1–2 minutos no tapete com pequenas distrações presentes"
+    },
+    {
+      "stage": "Mês 1+",
+      "goal": "Dirige-se ao tapete e relaxa ao ouvir 'relaxa' em ambientes externos tranquilos"
+    }
+  ],
+  "successSigns": [
+    "O cão suspira audível ao deitar-se no tapete",
+    "Mantém a posição relaxada mesmo quando você se levanta ou caminha perto",
+    "Vai ao tapete voluntariamente quando sente estresse leve (visitas, sons novos)",
+    "O relaxamento dura mais de 5 minutos sem intervenção"
+  ],
+  "variations": [
+    "Relaxar em terraço de restaurante com barulho de fundo",
+    "Relaxar na sala de espera do veterinário",
+    "Relaxar enquanto tem visitas em casa",
+    "Relaxar no carro em movimento",
+    "Relaxar sem tapete (apenas com o sinal verbal)"
+  ],
+  "safetyNotes": [
+    "Nunca use 'relaxa' para acalmar um cão em crise de medo ou pânico: ele precisa primeiro se afastar do estímulo",
+    "Se o seu cão nunca parece relaxar, mesmo em casa, consulte um etologista: pode haver ansiedade crónica",
+    "Não pratique este comando em espaços extremamente barulhentos ou com gatilhos de medo ativos",
+    "Se usar o tapete como zona de punição ou isolamento, ele perderá toda a sua associação positiva"
+  ],
+  "funFact": "Os cães têm um 'bocejo de estresse' diferente do bocejo de sono. Um bocejo durante o treino é sinal de que o cão está se autorregulando — é algo positivo!",
+  "nextLevel": "Introduza o sinal de mão (apontar para o tapete) junto ao sinal verbal. Progrida para o cão relaxar em espaços públicos sem tapete: usando apenas o sinal verbal.",
+  "proTip": "O estado de relaxamento não pode ser exigido: tem de ser cultivado. A sua calma é contagiante para o cão. Fale menos, mova-se mais devagar e respire mais fundo durante as sessões."
+}

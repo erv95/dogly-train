@@ -1,0 +1,158 @@
+{
+  "title": "Roda (360°)",
+  "subtitle": "O truque mais espetacular e fácil de aprender — uma volta completa sobre si mesmo!",
+  "level": "Intermediário",
+  "duration": "5–10 min por sessão",
+  "location": "Casa ou jardim",
+  "ageRecommendation": "A partir dos 4 meses",
+  "estimatedSessions": "5–8 sessões para dominar",
+  "objective": "Ensinar o cão a girar 360° sobre si mesmo na direção indicada, respondendo à ordem “roda” ou a um gesto circular de mão.",
+  "why": [
+    "É um dos truques mais divertidos e vistosos para mostrar em público",
+    "Melhora a consciência corporal e o equilíbrio do cão",
+    "Pode ser ensinado tanto para a direita como para a esquerda",
+    "Requer muito pouco espaço e nenhum equipamento especial"
+  ],
+  "benefits": [
+    "Estimula mentalmente o cão e combate o tédio",
+    "Melhora a flexibilidade e a coordenação motora",
+    "Pode ser usado como exercício de aquecimento antes de outras atividades",
+    "Torna o cão mais atento e motivado nas sessões de treino"
+  ],
+  "where": [
+    "🏠 Em casa, em qualquer divisão com espaço suficiente para o cão rodar",
+    "🌿 No jardim ou parque quando já dominar em interior",
+    "🔇 Sempre sem distrações no início"
+  ],
+  "materials": [
+    "🫖 Petiscos pequenos de alto valor (frango, queijo)",
+    "🖐️ Uma mão para guiar o movimento circular",
+    "🛟 Superfície plana sem obstáculos à volta",
+    "💛 Entusiasmo e celebração vocal"
+  ],
+  "beforeYouStart": [
+    "O seu cão não precisa de saber nenhuma ordem prévia — este é um truque relativamente fácil para começar",
+    "Certifique-se de que há pelo menos 1 metro de espaço livre à volta do cão",
+    "Prepare 20 petiscos pequenos por sessão",
+    "Decida desde o início se ensina primeiro para a direita ou para a esquerda",
+    "Sessões de no máximo 5–7 minutos"
+  ],
+  "methods": [
+    {
+      "id": "lure_circle",
+      "title": "Método do isco circular",
+      "description": "Guie o cão com o petisco descrevendo um círculo horizontal lento à volta do seu corpo. Quando completar a volta, marque e recompense. Depois reduza gradualmente o isco até que apenas o gesto ou a voz sejam suficientes.",
+      "bestFor": "Qualquer cão a partir dos 4 meses, especialmente os motivados por comida",
+      "steps": [
+        {
+          "title": "Petisco no focinho",
+          "description": "Com o cão em pé à sua frente, coloque o petisco mesmo no focinho para captar a atenção. O cão deve seguir o petisco com a cabeça.",
+          "tip": "Se o cão saltar para apanhar o petisco, espere que esteja calmo antes de começar.",
+          "troubleshooting": "Se o cão não mostrar interesse no petisco, experimente um de maior valor (frango, salsicha)."
+        },
+        {
+          "title": "Inicie o arco circular",
+          "description": "Mova o petisco lentamente para um lado (por exemplo, para a direita do cão) mantendo-o à altura do focinho. O cão rodará a cabeça seguindo o isco.",
+          "tip": "O movimento deve ser lento e contínuo. Demasiado rápido e o cão perderá o fio.",
+          "troubleshooting": "Se o cão se sentar, recomece em pé com o petisco um pouco mais alto."
+        },
+        {
+          "title": "Complete o círculo",
+          "description": "Continue o movimento circular à volta do corpo do cão, ao longo do dorso e depois pelo outro flanco, até o cão ter completado os 360° e estar novamente a olhar para si.",
+          "tip": "Mantenha o petisco sempre à altura do focinho — nunca mais alto nem mais baixo."
+        },
+        {
+          "title": "Nomeie o truque",
+          "description": "Quando o cão completar o círculo inteiro, diga “roda” com um tom alegre e dê o petisco imediatamente.",
+          "tip": "Não diga “roda” antes de ele tentar — espere pelo movimento completo e depois nomeie-o."
+        },
+        {
+          "title": "Reduza o isco",
+          "description": "Após 5–6 sessões, comece a fazer o gesto circular sem petisco na mão. Quando o cão rodar, recompense do bolso. Por fim, use apenas o dedo ou a voz.",
+          "tip": "Reduza o isco muito gradualmente: punho fechado (sem petisco visível) e depois apenas o gesto.",
+          "troubleshooting": "Se o cão parar de rodar sem o isco, recue dois passos e reduza mais devagar."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Mover o isco demasiado rápido",
+      "cause": "Entusiasmo por ver o resultado final",
+      "fix": "O isco deve mover-se ao ritmo do cão. Se ele perder o fio, recomece mais devagar."
+    },
+    {
+      "error": "Dizer “roda” antes de o cão começar a mover-se",
+      "cause": "Querer que a ordem preceda o comportamento",
+      "fix": "Obtenha primeiro a volta completa com o isco. Adicione a palavra apenas quando for feito de forma consistente."
+    },
+    {
+      "error": "Recompensar a meio da volta em vez de no final",
+      "cause": "Celebrar demasiado cedo",
+      "fix": "Guarde o petisco até o cão ter completado o círculo inteiro e estar de frente para si."
+    },
+    {
+      "error": "Ensinar os dois sentidos ao mesmo tempo",
+      "cause": "Querer progredir mais depressa",
+      "fix": "Domine primeiro um sentido (por ex. direita) durante 3–4 sessões antes de introduzir o outro."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O cão só roda meia volta e para",
+      "solution": "Recompense a meia volta no início (reforço por aproximação) e vá alargando o arco sessão a sessão até atingir os 360°."
+    },
+    {
+      "problem": "O cão senta-se durante a volta",
+      "solution": "O isco está demasiado alto. Mantenha o petisco à altura do focinho durante todo o arco."
+    },
+    {
+      "problem": "O meu cão não quer rodar num sentido específico",
+      "solution": "Normal — os cães têm um lado preferido. Trabalhe mais o lado difícil em sessões separadas."
+    },
+    {
+      "problem": "Já sabe rodar mas só com o isco na mão",
+      "solution": "Comece a usar o punho fechado (sem petisco visível) e recompense do bolso. Reduza o tamanho do gesto cada semana."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessões 1–2",
+      "goal": "O cão segue o isco e completa pelo menos meia volta"
+    },
+    {
+      "stage": "Sessões 3–5",
+      "goal": "Completa a volta de 360° seguindo o isco em 70% das tentativas"
+    },
+    {
+      "stage": "Sessões 6–8",
+      "goal": "Responde a “roda” com isco reduzido (punho fechado)"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Volta completa apenas com a voz ou um pequeno gesto circular do dedo"
+    }
+  ],
+  "successSigns": [
+    "Completa a volta de 360° de forma fluente e sem pausas",
+    "Responde a “roda” antes de ver o gesto da mão",
+    "Consegue rodar tanto para a direita como para a esquerda com sinais diferentes",
+    "Faz-o em diferentes divisões e com pessoas presentes"
+  ],
+  "variations": [
+    "Rodar para a direita com um sinal e para a esquerda com outro diferente",
+    "Duas voltas seguidas com uma única ordem",
+    "Rodar em movimento (enquanto caminha consigo)",
+    "Rodar à distância (sem estar mesmo à sua frente)",
+    "Encadear roda + reverência para um final espetacular"
+  ],
+  "safetyNotes": [
+    "Não pratique em superfícies escorregadias — a volta implica pivotar nas patas traseiras",
+    "Cães com problemas de anca ou joelho: consulte um veterinário antes de ensinar este truque",
+    "Se o cão mostrar sinais de tonturas (movimentos de cabeça estranhos), comece com meias voltas",
+    "Cachorros com menos de 5 meses: voltas suaves e sessões muito curtas para proteger as articulações"
+  ],
+  "funFact": "Quando um cão roda em círculos antes de se deitar, está a seguir um instinto ancestral para achatar a erva e verificar se não há perigos. O seu cão já faz voltas naturalmente!",
+  "nextLevel": "Ensine a volta no sentido contrário com uma palavra diferente. Depois combine: “roda para a direita — roda para a esquerda” em sequência. Parece uma coreografia de dança!",
+  "proTip": "O segredo está no ritmo do isco: nem demasiado lento (perde o interesse) nem demasiado rápido (perde-se). Mova a mão ao ritmo de uma valsa lenta e o seu cão rodará perfeitamente."
+}

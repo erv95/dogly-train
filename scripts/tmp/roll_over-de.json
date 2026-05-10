@@ -1,0 +1,159 @@
+{
+  "title": "Roll dich um",
+  "subtitle": "Der beeindruckendste Trick — eine vollständige Rolle vom Boden aus!",
+  "level": "Fortgeschritten",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Drinnen (weicher Untergrund)",
+  "ageRecommendation": "Ab 8 Monaten",
+  "estimatedSessions": "10–15 Einheiten zum Beherrschen",
+  "objective": "Den Hund beibringen, sich aus der Liegepositon um 360° zu drehen, über die Seite zu gehen und wieder zu liegen, als Reaktion auf den Befehl „roll dich um“.",
+  "why": [
+    "Der spektakulärste Trick im Grundrepertoire — überrascht und begeistert immer",
+    "Der Hund muss dem Halter vollständig vertrauen, um sich in einer verletzlichen Position zu zeigen",
+    "Verbessert Flexibilität, Körperbewusstsein und Koordination",
+    "Zeigt das höchste Niveau der Kommunikation und des Verständnisses zwischen Hund und Halter"
+  ],
+  "benefits": [
+    "Stärkt die Bindung und das Vertrauen auf außergewöhnliche Weise",
+    "Ausgezeichnete körperliche Übung für die Flexibilität von Wirbelsäule und Flanken",
+    "Einmal beherrscht, führt der Hund ihn fließend und elegant aus",
+    "Ausgangspunkt für komplexere Vorführungstricks"
+  ],
+  "where": [
+    "🏠 Ausschließlich drinnen auf einem sehr weichen Untergrund am Anfang",
+    "🛏️ Dicker Teppich, gefaltete Decke oder Yogamatte — unverzichtbar",
+    "⛔ Niemals auf hartem, kaltem oder rutschigem Boden — der Hund muss sich in der Seitenlage wohl fühlen"
+  ],
+  "materials": [
+    "🫖 Leckerlis mit maximalem Wert (gekochtes Hühnchen, kräftiger Käse, Wurst)",
+    "🛟 Yogamatte, dicker Teppich oder gefaltete Decke",
+    "🖐️ Ihre Hand zum Führen des Lockfutters",
+    "💛 Zusätzliche Geduld — dieser Trick wird Phase für Phase erlernt"
+  ],
+  "beforeYouStart": [
+    "Ihr Hund muss „Platz“ sehr zuverlässig beherrschen — es ist der obligatorische Ausgangspunkt",
+    "Verwenden Sie den weichsten, komfortabelsten Untergrund, den Sie haben: Decke, Teppich oder dicke Matte",
+    "Bringen Sie Leckerlis mit dem höchsten Wert — dieser Trick ist anspruchsvoll und verdient die beste Belohnung",
+    "Arbeiten Sie in Phasen: versuchen Sie die vollständige Rolle nicht am ersten Tag",
+    "Maximal 5 Minuten pro Einheit — der Trick erfordert erheblichen körperlichen und geistigen Aufwand"
+  ],
+  "methods": [
+    {
+      "id": "lure_over_shoulder",
+      "title": "Über-die-Schulter-Lockfutter-Methode",
+      "description": "Aus der Liegeposition das Lockfutter zur Schulter des Hundes führen, damit er den Kopf dreht, dann folgt der Körper bis zur vollständigen Rolle. Phase für Phase arbeiten: Kopfdrehen → Schulter am Boden → vollständige Rolle.",
+      "bestFor": "Hunde, die „Platz“ beherrschen und gutes Vertrauen zum Halter haben",
+      "steps": [
+        {
+          "title": "„Platz“ auf der Matte",
+          "description": "„Platz“ auf dem weichen Untergrund sagen. Der Hund soll vollständig entspannt liegen, mit Ellbogen und Brust am Boden.",
+          "tip": "Warten Sie, bis er wirklich bequem liegt, bevor Sie fortfahren. Ein angespannter Hund rollt nicht gut.",
+          "troubleshooting": "Wenn der Hund aufsteht, wenn er das Leckerli sieht, zuerst das Behalten des „Platz“ mit Ablenkungen üben."
+        },
+        {
+          "title": "Kopf zur Schulter führen — Phase 1",
+          "description": "Mit dem Leckerli an seiner Schnauze, es langsam zur Schulter auf der Seite bewegen, zu der er sich rollen soll. Der Hund dreht den Kopf, indem er dem Lockfutter folgt. Nur die Kopfdrehung markieren und belohnen.",
+          "tip": "Diese Phase großzügig für 3–4 Einheiten belohnen. Nicht fortfahren, bis es natürlich geschieht.",
+          "troubleshooting": "Wenn der Hund aufsteht statt den Kopf zu drehen, „Platz“ neu beginnen und langsamer vorgehen."
+        },
+        {
+          "title": "Schulter berührt den Boden — Phase 2",
+          "description": "Das Leckerli weiter über die Schulter, zum Boden auf der anderen Seite führen. Der Körper folgt dem Kopf und die Schulter berührt den Boden. Der Hund liegt nun auf der Seite. Markieren und belohnen.",
+          "tip": "Das ist die schwierigste Phase, weil der Hund sich in einer verletzlichen Position zeigt. Das wertvollste Leckerli verwenden.",
+          "troubleshooting": "Wenn der Hund widersteht, auf die Seite zu fallen, das Lockfutter verlangsamen und jeden kleinen Fortschritt belohnen."
+        },
+        {
+          "title": "Körper vervollständigt die Rolle — Phase 3",
+          "description": "Mit dem auf der Seite liegenden Hund den Bogen des Lockfutters über den Rücken zur anderen Seite fortsetzen. Der Hund rollt durch, vervollständigt die 360° und landet wieder in normaler Liegeposition. Markieren und begeistert feiern.",
+          "tip": "Wenn der Hund die vollständige Rolle zum ersten Mal abschließt, feiern Sie, als wäre es das Beste überhaupt.",
+          "troubleshooting": "Wenn der Hund nur bis zur Hälfte kommt, dort belohnen und jede Einheit etwas weiter ausdehnen."
+        },
+        {
+          "title": "Trick benennen und Lockfutter reduzieren",
+          "description": "Wenn die vollständige Rolle konsistent ist, „roll dich um“ kurz vor dem Starten des Lockfutters sagen. Die Geste schrittweise reduzieren, bis der Hund nur auf die Stimme oder eine kleine Handgelenksbewegung rollt.",
+          "tip": "Das Lockfutter sehr schrittweise reduzieren: sichtbares Leckerli → geschlossene Faust → nur Geste → nur Stimme.",
+          "troubleshooting": "Wenn der Hund aufhört zu rollen, wenn das Lockfutter reduziert wird, zum vollständigen Lockfutter zurückgehen und langsamer reduzieren."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Die vollständige Rolle bereits in der ersten Einheit versuchen",
+      "cause": "Das Endergebnis zu früh sehen wollen",
+      "fix": "In Phasen arbeiten. Mindestens 3–4 Einheiten jeder Phase widmen, bevor weitergegangen wird."
+    },
+    {
+      "error": "Das Lockfutter zu schnell führen und den Hund auf halbem Weg verlieren",
+      "cause": "Lockfutter bewegt sich schneller als der Hund folgen kann",
+      "fix": "Das Lockfutter muss sich im Tempo des Hundes bewegen. Wenn der Hund aufsteht, geht es zu schnell."
+    },
+    {
+      "error": "Auf hartem oder kaltem Boden üben",
+      "cause": "Die Umgebung nicht richtig vorbereiten",
+      "fix": "Ein weicher Untergrund ist nicht verhandelbar. Der Hund muss sich in der Seitenlage wohl fühlen."
+    },
+    {
+      "error": "Den Hund mit der Hand auf die Seite zwingen",
+      "cause": "Frustration, wenn das Lockfutter nicht funktioniert",
+      "fix": "Niemals körperlichen Zwang anwenden. Wenn das Lockfutter nicht funktioniert, ein wertvolleres Leckerli verwenden oder zur vorherigen Phase zurückkehren."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Der Hund dreht den Kopf, aber nicht den Körper",
+      "solution": "Sie sind in Phase 1 — das ist normal. Nur die Kopfdrehung belohnen, bis sie automatisch ist. Der Körper folgt danach natürlich."
+    },
+    {
+      "problem": "Der Hund steht jedes Mal auf, wenn das Lockfutter sich der Schulter nähert",
+      "solution": "Erst „Platz“ mit mehr Ablenkungen üben. Der Hund braucht mehr Vertrauen, um die Position zu halten."
+    },
+    {
+      "problem": "Der Hund kommt bis zur Seite, beendet die Rolle aber nicht",
+      "solution": "Die Seitenposition mehrere Einheiten lang großzügig belohnen. Dann das Lockfutter jedes Mal 10° weiter führen."
+    },
+    {
+      "problem": "Mein Hund rollt nur in eine Richtung",
+      "solution": "Das ist normal und gültig. Viele Hunde bevorzugen eine Seite. Diese Seite gut festigen, bevor die andere Richtung versucht wird."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheiten 1–4",
+      "goal": "Dreht den Kopf zur Schulter, indem er dem Lockfutter aus der Liegeposition folgt"
+    },
+    {
+      "stage": "Einheiten 5–8",
+      "goal": "Schulter berührt den Boden und der Hund erreicht die vollständige Seitenlage"
+    },
+    {
+      "stage": "Einheiten 9–12",
+      "goal": "Vervollständigt die vollständige 360°-Rolle, indem er dem Lockfutter folgt"
+    },
+    {
+      "stage": "Woche 4+",
+      "goal": "Reagiert auf „roll dich um“ mit reduziertem Lockfutter oder nur mit der Stimme"
+    }
+  ],
+  "successSigns": [
+    "Vervollständigt die 360°-Rolle fließend ohne Pause in der Seitenlage",
+    "Endet in Liegeposition und schaut den Halter an, während er auf die Belohnung wartet",
+    "Reagiert auf das verbale Signal ohne das vollständige Lockfutter zu benötigen",
+    "Macht es auf verschiedenen weichen Oberflächen (Teppich, Decke, Yogamatte)"
+  ],
+  "variations": [
+    "Rollen in die entgegengesetzte Richtung",
+    "Zwei Rollen hintereinander auf ein einziges Signal",
+    "Langsames, kontrolliertes Rollen (schwieriger als schnelles)",
+    "„Platz“ → Rollen → „Sitz” für eine fließende Sequenz kombinieren"
+  ],
+  "safetyNotes": [
+    "Niemals mit Hunden mit Rücken-, Hüft- oder Dysplasieproblemen ohne Rücksprache mit einem Tierarzt üben",
+    "Den Hund niemals auf die Seite zwingen — wenn er es nicht freiwillig tut, ist er noch nicht bereit",
+    "Hunde über 8 Jahren: vor dem Erlernen dieses Tricks einen Tierarzt aufsuchen",
+    "Wenn der Hund Steifheit, Unbehagen zeigt oder die Seitenlage meidet, aufhören und 48 Stunden beobachten"
+  ],
+  "funFact": "Hunde zeigen den Bauch als ultimatives Signal des Vertrauens und der Beschwichtigung. Wenn Ihr Hund für Sie rollt, sagt er Ihnen, dass er sich in Ihrer Gegenwart vollständig sicher fühlt.",
+  "nextLevel": "Kombinieren: „Platz“ → rollen → „Sitz” → High Five. Vier Tricks hintereinander, die jeden sprachlos machen werden!",
+  "proTip": "Immer in die Richtung arbeiten, die der Hund am Anfang natürlich wählt. Sobald diese Seite beherrscht wird, kommt die gegenüberliegende Seite viel leichter."
+}

@@ -1,0 +1,158 @@
+{
+  "title": "Reste",
+  "subtitle": "Maîtriser l'impulsivité : votre chien apprend à attendre en position",
+  "level": "Basique",
+  "duration": "5–10 min par séance",
+  "location": "Maison ou jardin tranquille",
+  "ageRecommendation": "À partir de 10 semaines",
+  "estimatedSessions": "8–12 séances pour maîtriser les 3D",
+  "objective": "Apprendre au chien à maintenir une position (assis ou couché) jusqu'à recevoir le signal de libération, en augmentant progressivement la durée, la distance et les distractions.",
+  "why": [
+    "Développe l'autocontrôle et la gestion des impulsions, compétences clés au quotidien",
+    "Permet de gérer des situations courantes en toute sécurité (traversée de rue, porte d'entrée)",
+    "Complément essentiel de « assis » et « couché » pour les rendre plus utiles",
+    "Réduit l'hyperactivité et l'impulsivité du chien"
+  ],
+  "benefits": [
+    "Votre chien attend tranquillement pendant que vous préparez sa nourriture ou ouvrez la porte",
+    "Peut rester immobile en terrasse de restaurant ou chez le vétérinaire",
+    "Évite les fugues dangereuses par la porte d'entrée",
+    "Facilite la gestion en présence de personnes, voitures ou vélos"
+  ],
+  "where": [
+    "🏠 En intérieur (salon ou couloir sans distractions)",
+    "🌿 Jardin tranquille une fois l'exercice consolidé en intérieur",
+    "⛔ Jamais en zone ouverte sans sécurité tant que ce n'est pas très solide"
+  ],
+  "materials": [
+    "🫖 Petites friandises molles de haute valeur",
+    "🦮 Laisse courte (optionnel pour les chiens très actifs)",
+    "🛏️ Tapis ou couverture comme référence de position",
+    "💛 Patience : cet exercice demande plus de temps que d'autres"
+  ],
+  "beforeYouStart": [
+    "Votre chien doit maîtriser « assis » ou « couché » avec fluidité avant de commencer",
+    "Choisissez un mot de libération clair : « ok », « libre » ou « allez » et utilisez-le toujours",
+    "Commencez avec 1 seconde de durée seulement : les premières réussites sont essentielles",
+    "N'augmentez jamais la distance et la durée en même temps",
+    "Terminez toujours la séance avec un « reste » que le chien réussit parfaitement"
+  ],
+  "methods": [
+    {
+      "id": "three_d_progression",
+      "title": "Progression des 3D (recommandé)",
+      "description": "Vous travaillez les trois dimensions du « reste » séparément et dans l'ordre : d'abord la Durée, puis la Distance, et enfin les Distractions. Les mélanger trop tôt est l'erreur la plus courante.",
+      "bestFor": "Tous les chiens qui connaissent déjà « assis » ou « couché »",
+      "steps": [
+        {
+          "title": "Phase 1 – Durée (sans bouger)",
+          "description": "Demandez « assis » ou « couché », dites « reste » calmement et attendez 1 seconde avant de récompenser. Puis libérez avec « ok ». Montez progressivement de 1 à 3, 5, 10, 30 secondes.",
+          "tip": "S'il rompt la position, ne le grondez pas. Redemandez simplement la position et réduisez le temps.",
+          "troubleshooting": "S'il ne tient pas plus d'une seconde, récompensez à 0,5 seconde et augmentez très lentement."
+        },
+        {
+          "title": "Phase 2 – Distance (quand il tient 30 secondes sans que vous bougez)",
+          "description": "Faites un pas en arrière pendant que le chien est en « reste ». Revenez avant qu'il bouge et récompensez. Augmentez à 2, 3, 5 pas progressivement.",
+          "tip": "Revenez TOUJOURS récompenser auprès du chien. Ne l'appelez pas — allez vers lui.",
+          "troubleshooting": "S'il se lève quand vous vous éloignez, réduisez la distance. Un pas suffit au début."
+        },
+        {
+          "title": "Phase 3 – Combiner durée et distance",
+          "description": "Quand il tient à 5 pas sans bouger, commencez à combiner : éloignez-vous et attendez quelques secondes avant de revenir récompenser.",
+          "tip": "La règle : s'il échoue, simplifiez. Revenez à ce qui fonctionnait."
+        },
+        {
+          "title": "Phase 4 – Distractions légères",
+          "description": "Avec le chien en « reste », introduisez de petites distractions : laissez tomber quelque chose, bougez latéralement, applaudissez doucement. S'il maintient, récompensez beaucoup.",
+          "tip": "Plus la distraction est forte, plus la récompense doit être grande si le chien maintient le « reste ».",
+          "troubleshooting": "Si la distraction est trop forte et qu'il rompt, revenez à une distraction plus légère."
+        },
+        {
+          "title": "Signal de libération",
+          "description": "Terminez toujours le « reste » avec votre mot de libération (« ok », « libre »). Le chien apprend qu'il ne peut bouger que lorsque vous le signallez, pas quand il en a envie.",
+          "tip": "La libération est aussi importante que le « reste » lui-même. Enseignez-la dès le premier jour."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Augmenter la durée et la distance en même temps",
+      "cause": "Vouloir progresser trop vite",
+      "fix": "Travaillez une dimension à la fois. Plus de distance = moins de durée. Plus de durée = moins de distance."
+    },
+    {
+      "error": "Appeler le chien depuis loin pour terminer le « reste »",
+      "cause": "Confort du maître",
+      "fix": "Revenez toujours auprès du chien pour récompenser. L'appeler depuis loin entraîne le rappel, pas le « reste »."
+    },
+    {
+      "error": "Ne pas utiliser de mot de libération",
+      "cause": "Oubli ou méconnaissance",
+      "fix": "Sans mot de libération, le chien décide quand bouger. Définissez « ok » ou « libre » dès le premier jour."
+    },
+    {
+      "error": "Gronder le chien quand il rompt la position",
+      "cause": "Frustration",
+      "fix": "Redemandez simplement la position. La rupture indique que l'exercice était trop difficile, pas que le chien est désobéissant."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien bouge dès que je recule d'un pas",
+      "solution": "La distance est venue trop tôt. Revenez à la phase 1 (durée uniquement, sans bouger) jusqu'à ce qu'il tienne 30 secondes confortablement."
+    },
+    {
+      "problem": "Il maintient le « reste » à la maison mais pas dans la rue",
+      "solution": "Normal : les distractions extérieures sont plus puissantes. Recommencez depuis 1 seconde dans le nouvel environnement."
+    },
+    {
+      "problem": "Il se lève juste au moment où je vais le récompenser",
+      "solution": "Le mouvement de votre main vers la poche de friandises lui signale qu'il peut bouger. Variez le moment où vous prenez la friandise."
+    },
+    {
+      "problem": "Mon chien reste en position mais semble très anxieux",
+      "solution": "Réduisez beaucoup le temps et la distance. Le « reste » doit être confortable, pas stressant. Si l'anxiété est présente, l'exercice est trop exigeant."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séances 1–3",
+      "goal": "Maintient assis ou couché pendant 5–10 secondes sans que vous bougez"
+    },
+    {
+      "stage": "Séances 4–7",
+      "goal": "Maintient la position à 3–5 pas de distance pendant 10 secondes"
+    },
+    {
+      "stage": "Séances 8–10",
+      "goal": "Tient 30 secondes à 5 pas de distance en intérieur"
+    },
+    {
+      "stage": "Semaine 3+",
+      "goal": "Maintient le « reste » avec des distractions légères (bruits, mouvements latéraux)"
+    }
+  ],
+  "successSigns": [
+    "Reste en position jusqu'à entendre le mot de libération",
+    "Ne bouge pas quand vous vous éloignez de 5 pas ou plus",
+    "Maintient la position avec de petites distractions à proximité",
+    "Le « reste » fonctionne en position assise et couchée"
+  ],
+  "variations": [
+    "Reste pendant que vous ouvrez et fermez la porte d'entrée",
+    "Reste pendant que vous préparez sa nourriture (autocontrôle)",
+    "Reste pendant que d'autres personnes marchent à proximité",
+    "Reste pendant que vous vous accroupissez ou vous asseyez",
+    "Reste à l'extérieur dans un espace clôturé"
+  ],
+  "safetyNotes": [
+    "N'utilisez jamais « reste » pour laisser le chien seul dans une zone dangereuse (rue ouverte, balcon)",
+    "Si votre chien se stresse beaucoup pendant l'exercice, faites une pause et simplifiez",
+    "Les chiens très actifs ou anxieux ont besoin de plus de temps : ne les comparez pas aux autres",
+    "Chiots de moins de 14 semaines : 3 minutes maximum par séance"
+  ],
+  "funFact": "Les Bergers Allemands et les Border Collies apprennent « reste » en quelques séances, mais les terriers et les spaniels peuvent avoir besoin du double de temps en raison de leur forte impulsivité naturelle. La race compte !",
+  "nextLevel": "Pratiquez le « reste » avec de vraies distractions : autres chiens, vélos, personnes qui courent. Puis combinez-le avec « place » pour que votre chien aille et reste à un endroit précis.",
+  "proTip": "Le « reste » se rompt quand le chien perd la motivation ou que l'environnement est trop difficile. S'il échoue trois fois de suite, l'exercice est trop dur : revenez un niveau en arrière et terminez sur une réussite."
+}

@@ -19,7 +19,11 @@ export default function StarRating({
   const stars = [1, 2, 3, 4, 5];
 
   return (
-    <View style={styles.container}>
+    <View
+      style={styles.container}
+      accessible={!editable}
+      accessibilityLabel={!editable ? `${Math.round(rating)} de 5 estrellas` : undefined}
+    >
       {stars.map((star) => {
         const filled = star <= Math.round(rating);
         const StarWrapper = editable ? TouchableOpacity : View;
@@ -28,6 +32,10 @@ export default function StarRating({
           <StarWrapper
             key={star}
             onPress={editable ? () => onRate?.(star) : undefined}
+            accessible={editable}
+            accessibilityRole={editable ? 'button' : undefined}
+            accessibilityLabel={editable ? `Puntuar con ${star} estrella${star > 1 ? 's' : ''}` : undefined}
+            accessibilityState={editable ? { selected: filled } : undefined}
           >
             <Ionicons
               name={filled ? 'star' : 'star-outline'}

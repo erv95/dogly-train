@@ -10,7 +10,7 @@ import {
   Platform,
   KeyboardAvoidingView,
 } from 'react-native';
-import { useRouter, useLocalSearchParams, useNavigation } from 'expo-router';
+import { useRouter, useLocalSearchParams, useNavigation, useFocusEffect } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { doc, getDoc } from 'firebase/firestore';
@@ -48,36 +48,75 @@ export default function DogFormScreen() {
   const [issues, setIssues] = useState<DogIssue[]>([]);
   const [photoURL, setPhotoURL] = useState<string | null>(null);
 
+  // Field-level errors
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const validate = (): boolean => {
+    const newErrors: Record<string, string> = {};
+    const trimName = name.trim();
+    const trimBreed = breed.trim();
+    const trimBehavior = behavior.trim();
+    const ageNum = Number(age);
+    const weightNum = Number(weight);
+
+    if (!trimName) newErrors.name = t('dogs.validation.nameRequired');
+    else if (trimName.length < 2) newErrors.name = t('dogs.validation.nameTooShort');
+    else if (trimName.length > 40) newErrors.name = t('dogs.validation.nameTooLong');
+
+    if (!trimBreed) newErrors.breed = t('dogs.validation.breedRequired');
+    else if (trimBreed.length < 2) newErrors.breed = t('dogs.validation.breedTooShort');
+    else if (trimBreed.length > 50) newErrors.breed = t('dogs.validation.breedTooLong');
+
+    if (age === '') newErrors.age = t('dogs.validation.ageRequired');
+    else if (!Number.isInteger(ageNum) || ageNum < 0 || ageNum > 30) newErrors.age = t('dogs.validation.ageInvalid');
+
+    if (weight === '') newErrors.weight = t('dogs.validation.weightRequired');
+    else if (isNaN(weightNum) || weightNum < 0.5 || weightNum > 120) newErrors.weight = t('dogs.validation.weightInvalid');
+
+    if (trimBehavior.length > 300) newErrors.behavior = t('dogs.validation.behaviorTooLong');
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   useEffect(() => {
     navigation.setOptions({
       title: isEditing ? t('dogs.editDog') : t('dogs.addDog'),
     });
   }, [isEditing, t, navigation]);
 
-  // Load existing dog data for editing
-  useEffect(() => {
-    if (!dogId) return;
-    (async () => {
-      try {
-        const dogDoc = await getDoc(doc(db, 'dogs', dogId));
-        if (dogDoc.exists()) {
-          const data = dogDoc.data() as Omit<Dog, 'id'>;
-          setName(data.name);
-          setBreed(data.breed);
-          setAge(String(data.age));
-          setWeight(String(data.weight));
-          setSex(data.sex);
-          setBehavior(data.behavior);
-          setIssues(data.issues);
-          setPhotoURL(data.photoURL);
+  // Load (or reload) the dog whenever the screen gains focus. This ensures
+  // changes made in nested screens (e.g. AI breed identifier applies a new
+  // breed) are reflected when the user returns here, since the form keeps
+  // its state in plain useState (no Firestore listener).
+  useFocusEffect(
+    React.useCallback(() => {
+      if (!dogId) { setInitialLoading(false); return; }
+      let cancelled = false;
+      (async () => {
+        try {
+          const dogDoc = await getDoc(doc(db, 'dogs', dogId));
+          if (cancelled) return;
+          if (dogDoc.exists()) {
+            const data = dogDoc.data() as Omit<Dog, 'id'>;
+            setName(data.name);
+            setBreed(data.breed);
+            setAge(String(data.age));
+            setWeight(String(data.weight));
+            setSex(data.sex);
+            setBehavior(data.behavior);
+            setIssues(data.issues);
+            setPhotoURL(data.photoURL);
+          }
+        } catch (error) {
+          console.error('Error loading dog:', error);
+        } finally {
+          if (!cancelled) setInitialLoading(false);
         }
-      } catch (error) {
-        console.error('Error loading dog:', error);
-      } finally {
-        setInitialLoading(false);
-      }
-    })();
-  }, [dogId]);
+      })();
+      return () => { cancelled = true; };
+    }, [dogId])
+  );
 
   const toggleIssue = (issue: DogIssue) => {
     setIssues((prev) =>
@@ -101,16 +140,13 @@ export default function DogFormScreen() {
 
   const handleSave = async () => {
     if (!firebaseUser) return;
-    if (!name.trim() || !breed.trim()) {
-      Alert.alert(t('common.error'), t('authErrors.generic'));
-      return;
-    }
+    if (!validate()) return;
 
     const formData: DogFormData = {
       name: name.trim(),
       breed: breed.trim(),
-      age: Number(age) || 0,
-      weight: Number(weight) || 0,
+      age: Number(age),
+      weight: Number(weight),
       sex,
       behavior: behavior.trim(),
       issues,
@@ -171,15 +207,30 @@ export default function DogFormScreen() {
         <Input
           label={t('dogs.name')}
           value={name}
-          onChangeText={setName}
+          onChangeText={(v) => { setName(v); setErrors((e) => ({ ...e, name: '' })); }}
           placeholder="Max"
+          maxLength={40}
         />
+        {!!errors.name && <Text style={styles.errorText}>{errors.name}</Text>}
+
         <Input
           label={t('dogs.breed')}
           value={breed}
-          onChangeText={setBreed}
+          onChangeText={(v) => { setBreed(v); setErrors((e) => ({ ...e, breed: '' })); }}
           placeholder="Labrador Retriever"
+          maxLength={50}
         />
+        {!!errors.breed && <Text style={styles.errorText}>{errors.breed}</Text>}
+        {isEditing && dogId && (
+          <TouchableOpacity
+            style={styles.aiBreedBtn}
+            onPress={() => router.push(`/(shared)/breed-identifier/${dogId}`)}
+            activeOpacity={0.85}
+          >
+            <Ionicons name="sparkles" size={14} color={colors.primary} />
+            <Text style={styles.aiBreedBtnText}>{t('breedAi.identifyCta')}</Text>
+          </TouchableOpacity>
+        )}
 
         {/* Age & Weight row */}
         <View style={styles.row}>
@@ -187,19 +238,23 @@ export default function DogFormScreen() {
             <Input
               label={t('dogs.age')}
               value={age}
-              onChangeText={setAge}
+              onChangeText={(v) => { setAge(v); setErrors((e) => ({ ...e, age: '' })); }}
               keyboardType="numeric"
               placeholder="3"
+              maxLength={2}
             />
+            {!!errors.age && <Text style={styles.errorText}>{errors.age}</Text>}
           </View>
           <View style={styles.halfField}>
             <Input
               label={t('dogs.weight')}
               value={weight}
-              onChangeText={setWeight}
-              keyboardType="numeric"
+              onChangeText={(v) => { setWeight(v); setErrors((e) => ({ ...e, weight: '' })); }}
+              keyboardType="decimal-pad"
               placeholder="25"
+              maxLength={5}
             />
+            {!!errors.weight && <Text style={styles.errorText}>{errors.weight}</Text>}
           </View>
         </View>
 
@@ -238,11 +293,13 @@ export default function DogFormScreen() {
         <Input
           label={t('dogs.behavior')}
           value={behavior}
-          onChangeText={setBehavior}
+          onChangeText={(v) => { setBehavior(v); setErrors((e) => ({ ...e, behavior: '' })); }}
           placeholder={t('dogs.behavior')}
           multiline
           numberOfLines={3}
+          maxLength={300}
         />
+        {!!errors.behavior && <Text style={styles.errorText}>{errors.behavior}</Text>}
 
         {/* Issues */}
         <Text style={styles.label}>{t('dogs.issues')}</Text>
@@ -269,7 +326,7 @@ export default function DogFormScreen() {
           onPress={handleSave}
           loading={loading}
           size="lg"
-          disabled={!name.trim() || !breed.trim()}
+          disabled={loading}
         />
       </ScrollView>
     </KeyboardAvoidingView>
@@ -319,6 +376,23 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
     fontWeight: '600',
   },
+  errorText: {
+    fontSize: fontSize.xs,
+    color: colors.error,
+    marginTop: -spacing.sm,
+    marginBottom: spacing.sm,
+    marginLeft: 2,
+  },
+  aiBreedBtn: {
+    flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start',
+    gap: 4,
+    paddingHorizontal: spacing.sm, paddingVertical: 6,
+    borderRadius: borderRadius.full,
+    backgroundColor: colors.primary + '15',
+    marginTop: -spacing.sm,
+    marginBottom: spacing.sm,
+  },
+  aiBreedBtnText: { color: colors.primary, fontSize: fontSize.xs, fontWeight: '700' },
   row: {
     flexDirection: 'row',
     gap: spacing.md,

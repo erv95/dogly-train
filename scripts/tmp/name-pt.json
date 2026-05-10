@@ -1,0 +1,150 @@
+{
+  "title": "Responder ao seu nome",
+  "subtitle": "A base de toda a comunicação com o seu cão",
+  "level": "Muito básico",
+  "duration": "3–5 min por sessão",
+  "location": "Casa sem distrações → jardim → exterior",
+  "ageRecommendation": "A partir das 8 semanas",
+  "estimatedSessions": "2–4 sessões para a associação inicial",
+  "objective": "Conseguir que o cão olhe imediatamente para o tutor ao ouvir o seu nome, em qualquer contexto.",
+  "why": [
+    "Sem resposta ao nome não pode ensinar mais nada",
+    "Necessário para controlar o cão na rua",
+    "Reforça o vínculo e a atenção mútua",
+    "É a base do chamamento e de todas as ordens à distância"
+  ],
+  "benefits": [
+    "O seu cão virá quando o chamar em parques ou casa de amigos",
+    "Reduz sustos: virar-se ao nome evita perigos (carros, outros cães)",
+    "Imprescindível para um chamamento de emergência fiável",
+    "Constrói um cão atento a si, não ao ambiente"
+  ],
+  "where": [
+    "🏠 Em casa, numa divisão tranquila (sessões 1–3)",
+    "🛋️ Diferentes divisões (sessões 4–6)",
+    "🌿 Jardim ou varanda (sessão 7+)",
+    "🌳 Exterior pouco distrativo (parque vazio)"
+  ],
+  "materials": [
+    "🫖 Petiscos de altíssimo valor (queijo, salsicha, frango)",
+    "🦮 Trela longa 5–10 m (para exterior)",
+    "🔇 Ambiente silencioso no início",
+    "💛 Voz alegre e entusiástica"
+  ],
+  "beforeYouStart": [
+    "Garanta que não usou o nome como repreensão anteriormente",
+    "Se o cão tem associações negativas, considere mudar o nome",
+    "Petiscos do mais alto valor: aqui não usamos ração normal",
+    "Sessões curtas: 3–5 minutos, várias vezes ao dia",
+    "Nunca use o nome seguido de algo desagradável (banho, corte de unhas)"
+  ],
+  "methods": [
+    {
+      "id": "name_game",
+      "title": "O jogo do nome (clássico)",
+      "description": "Associar o nome a algo extremamente positivo de forma repetida.",
+      "bestFor": "Qualquer cão, especialmente cachorros e cães recém-adoptados",
+      "steps": [
+        {
+          "title": "Capte a atenção mútua",
+          "description": "Sente-se no chão numa divisão tranquila. Espere que o cão esteja relaxado mas não a dormir.",
+          "tip": "Não fale nem olhe para ele no início."
+        },
+        {
+          "title": "Diga o nome UMA vez",
+          "description": "Com voz alegre e suave, pronuncie o nome claramente. Apenas uma vez.",
+          "tip": "O tom deve soar entusiasmante, não a ordem.",
+          "troubleshooting": "Se não reagir, NÃO repita o nome: passe ao passo 3."
+        },
+        {
+          "title": "Recompense de imediato",
+          "description": "Mal o olhe (mesmo que um microssegundo!), diga “muito bem!” e dê um petisco de alto valor.",
+          "tip": "Se não olhar em 2 segundos, faça um som para chamar atenção e recompense."
+        },
+        {
+          "title": "Espace as recompensas",
+          "description": "Não dê outro petisco até voltar a dizer o nome. Espere 10–30 segundos.",
+          "tip": "Se as fizer seguidas, o cão começa a olhar sozinho."
+        },
+        {
+          "title": "Mude de divisão",
+          "description": "Após 5 sessões bem-sucedidas, vá a outra. Repita todo o processo.",
+          "tip": "A mudança de contexto é onde se aprende de verdade."
+        },
+        {
+          "title": "Sobe de nível: distrações",
+          "description": "Quando funcionar em toda a casa, prove com TV ligada, outras pessoas, comida perto.",
+          "tip": "Cada novo contexto = começar com recompensas fáceis."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Repetir o nome muitas vezes (“Toby, Toby, Toby”)",
+      "cause": "Frustração quando não responde",
+      "fix": "Se não responde à primeira, NÃO repita. Chame atenção com som e recompense quando olhar."
+    },
+    {
+      "error": "Usar o nome antes de algo mau (banho, ida ao vet)",
+      "cause": "Hábito inconsciente",
+      "fix": "Para coisas desagradáveis, vá buscá-lo fisicamente sem dizer o nome. O nome deve ser SEMPRE positivo."
+    },
+    {
+      "error": "Petiscos de baixa qualidade (ração seca)",
+      "cause": "Comodidade",
+      "fix": "Para ensinar o nome use os petiscos MAIS saborosos. É um investimento inicial."
+    },
+    {
+      "error": "Sessões de 30 minutos",
+      "cause": "Pensar “quanto mais, melhor”",
+      "fix": "3–5 minutos máximo. A concentração esgota-se rápido."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão tem nome longo e não reage",
+      "solution": "Use uma alcunha curta de 1–2 sílabas para treino. Por exemplo, “Maximiliano” → “Max”."
+    },
+    {
+      "problem": "Funciona em casa mas na rua passa de mim",
+      "solution": "Precisa de trela longa + petiscos MUITO altos. Comece em zonas vazias."
+    },
+    {
+      "problem": "Olha para mim mas não se aproxima",
+      "solution": "Isso já é sucesso neste curso. Aproximar-se é o nível seguinte: o curso “Chamamento (vem)”."
+    },
+    {
+      "problem": "Vivo com vários cães e não sei qual chamar",
+      "solution": "Treine cada um em sessões separadas primeiro. Depois use nomes claramente distintos em sílabas."
+    }
+  ],
+  "progressMilestones": [
+    { "stage": "Sessão 1–2", "goal": "Olha ao ouvir o nome em divisão tranquila" },
+    { "stage": "Sessão 3–5", "goal": "Reação imediata (em menos de 1 segundo) em diferentes divisões" },
+    { "stage": "Semana 1", "goal": "Responde ao nome em jardim com baixa distração" },
+    { "stage": "Semana 2+", "goal": "Responde em parque com outros cães e pessoas a 5 metros" }
+  ],
+  "successSigns": [
+    "Vira a cabeça imediatamente ao ouvir o nome",
+    "Fá-lo sem petisco visível",
+    "Funciona mesmo com distrações médias (outros cães longe)",
+    "Mantém contacto visual uns segundos esperando instruções"
+  ],
+  "variations": [
+    "Dizer o nome de diferentes lados (deve virar à sua procura)",
+    "Dizer o nome quando está distraído a cheirar",
+    "Dizer o nome de outra divisão (deve vir ou espreitar)",
+    "Dizer o nome quando brinca com outros cães",
+    "Combinar nome + gesto silencioso (bater palmas)"
+  ],
+  "safetyNotes": [
+    "NUNCA use o nome em tom de repreensão: arruinaria meses de trabalho",
+    "Para algo desagradável, faça-o sem nomear o cão",
+    "Cães com surdez parcial: use também gestos visuais e vibrações do chão",
+    "Se o cão foi maltratado verbalmente, considere um novo nome e comece do zero"
+  ],
+  "funFact": "Os cães distinguem o seu nome do resto das palavras humanas em apenas 2 semanas de exposição consistente. Mas podem esquecê-lo se associado a coisas negativas em 3-4 episódios.",
+  "nextLevel": "Passar ao curso “Chamamento (vem)”: que não só olhe, mas se aproxime de si.",
+  "proTip": "Para manter o nome “fresco” toda a vida, continue a recompensar esporadicamente quando responder — mesmo anos depois. Uma vez por mês basta."
+}

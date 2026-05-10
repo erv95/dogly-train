@@ -1,0 +1,187 @@
+{
+  "title": "Al pie",
+  "subtitle": "Caminar con precisión al lado del guía, atento y controlado",
+  "level": "Intermedio",
+  "duration": "10–15 min por sesión",
+  "location": "Casa, jardín, calle tranquila",
+  "ageRecommendation": "Desde 12 semanas",
+  "estimatedSessions": "10–15 sesiones para dominar",
+  "objective": "Enseñar al perro a caminar con precisión al lado izquierdo del guía, mirándole, sin tirar, incluyendo paradas y giros. Más preciso y exigente que el paseo con correa floja.",
+  "why": [
+    "Permite control total en entornos concurridos o peligrosos sin depender de la fuerza",
+    "Desarrolla la atención y el vínculo: el perro te mira a ti, no al mundo",
+    "Es la base para deportes caninos (obediencia, Rally-O, agility) y paseos tranquilos",
+    "Un perro que camina 'al pie' no tira nunca y hace el paseo placentero"
+  ],
+  "benefits": [
+    "Paseos sin tensión en la correa incluso con distracciones fuertes",
+    "Mayor seguridad al cruzar calles o en zonas de mucho tráfico",
+    "El perro aprende a enfocarse en ti como fuente de información y recompensas",
+    "Sirve de base para una excelente comunicación durante cualquier actividad"
+  ],
+  "where": [
+    "🏠 Empieza en casa o pasillo largo sin distracciones",
+    "🌿 Progresa al jardín o zona cercada",
+    "🛣️ Finalmente practica en la calle con distracciones reales"
+  ],
+  "materials": [
+    "🫖 Premios de muy alto valor (pollo cocido, salchicha, queso)",
+    "🦮 Correa corta de 1–1,5 m para el inicio",
+    "🎯 Clicker o marcador verbal consistente ('sí' o 'bien')",
+    "💛 Paciencia y muchos descansos"
+  ],
+  "beforeYouStart": [
+    "El perro debe conocer 'sentado' con fluidez antes de empezar el pie",
+    "Decide desde el inicio que el pie será siempre a tu lado IZQUIERDO: sé consistente",
+    "Sesiones cortas de 5–10 minutos con muchos descansos: el pie es cognitivamente exigente",
+    "Ten premios de máximo valor en tu mano izquierda: el perro aprende a seguir esa mano",
+    "No practiques después de un paseo largo de ejercicio: el perro debe estar alerta"
+  ],
+  "methods": [
+    {
+      "id": "left_lure",
+      "title": "Método de señuelo con mano izquierda (inicio recomendado)",
+      "description": "Sostienes el premio en tu mano izquierda a la altura de tu cadera. El perro aprende que mantenerse junto a tu lado izquierdo produce premios continuos. Construye la posición de pie antes de añadir movimiento.",
+      "bestFor": "Perros sin experiencia en 'al pie' o cachorros que empiezan desde cero",
+      "steps": [
+        {
+          "title": "Posición de inicio: perro sentado a tu izquierda",
+          "description": "El perro sentado a tu lado izquierdo, mirando en la misma dirección que tú. Esta es la posición de 'al pie' inicial.",
+          "tip": "Premia varias veces simplemente por estar en esa posición. El espacio junto a tu cadera izquierda = lugar de premios.",
+          "troubleshooting": "Si el perro se pone delante de ti, usa una pared a tu derecha para limitar su espacio."
+        },
+        {
+          "title": "Premio a la altura de la cadera izquierda",
+          "description": "Sostén el premio en tu mano izquierda a la altura de tu cadera. El perro estirará el cuello hacia arriba buscando el premio.",
+          "tip": "Tu mano izquierda es el 'ancla' del perro. Debe estar siempre en el mismo lugar.",
+          "troubleshooting": "Si el perro salta para coger el premio, baja la mano muy ligeramente. Premia solo cuando sus patas estén en el suelo."
+        },
+        {
+          "title": "Primer paso juntos",
+          "description": "Da un solo paso hacia adelante con tu pie izquierdo y di 'al pie'. Si el perro te sigue en posición, premia inmediatamente.",
+          "tip": "Un paso, una recompensa. No pidas más distancia de lo que el perro puede mantener en posición.",
+          "troubleshooting": "Si se adelanta, para en seco y espera a que vuelva a tu lado antes de continuar."
+        },
+        {
+          "title": "Aumenta los pasos progresivamente",
+          "description": "De 1 paso → 3 → 5 → 10 → media vuelta a la manzana. Premia al menos cada 3–5 pasos en posición correcta.",
+          "tip": "La frecuencia de refuerzo es clave al principio: premia a menudo para mantener el perro enganchado a tu lado."
+        },
+        {
+          "title": "Introduce paradas y giros",
+          "description": "Añade una parada: cuando te pares, el perro debe sentarse automáticamente a tu lado. Introduce giros: curvas suaves a la izquierda y derecha.",
+          "tip": "Anticipa los giros con una ligera ralentización para dar tiempo al perro a ajustarse."
+        }
+      ]
+    },
+    {
+      "id": "circles",
+      "title": "Método de círculos (para mantener el ritmo y la atención)",
+      "description": "Caminas en círculos cerrados hacia el lado del perro (izquierda), lo que le obliga a acelerar el paso para mantenerse en posición. Excelente para aumentar la atención y el ritmo.",
+      "bestFor": "Perros que se quedan rezagados o que tienen tendencia a perder la posición en línea recta",
+      "steps": [
+        {
+          "title": "Círculos pequeños hacia la izquierda",
+          "description": "Empieza caminando en círculos pequeños girados a la izquierda. El perro tiene que acelerar para quedarse a tu lado.",
+          "tip": "Los círculos hacia la izquierda son más exigentes para el perro (tiene que hacer más camino). Los de la derecha son más fáciles.",
+          "troubleshooting": "Si el perro se adelanta, reduce el radio del círculo para que tenga menos espacio para ir delante."
+        },
+        {
+          "title": "Premia la posición correcta en el círculo",
+          "description": "Cada vez que el perro esté en la posición correcta (hombro junto a tu cadera izquierda), premia.",
+          "tip": "El premio llega desde tu mano izquierda hacia abajo. No hagas que el perro salte para obtenerlo."
+        },
+        {
+          "title": "Alterna círculos y línea recta",
+          "description": "Después de los círculos, camina en línea recta unos pasos. El perro ya habrá aprendido el ritmo y la posición de los círculos.",
+          "tip": "La transición de círculos a recta es el momento de consolidar el comportamiento."
+        },
+        {
+          "title": "Reduce el refuerzo gradualmente",
+          "description": "Con el tiempo, premia cada 10, 20 y luego 50 pasos en lugar de cada pocos pasos. Mantén el perro incertidumbre positiva sobre cuándo llega el premio.",
+          "tip": "Premia de forma variable: a veces 5 pasos, a veces 20. La variabilidad mantiene la atención mejor que la rutina."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Tirar de la correa para mantener al perro en posición",
+      "cause": "Querer resultados rápidos sin trabajo de posicionamiento",
+      "fix": "El 'al pie' se enseña con premios y posición, nunca con presión de correa. La correa debe ser un accesorio de seguridad, no de control."
+    },
+    {
+      "error": "Sesiones demasiado largas que aburren o agotan al perro",
+      "cause": "Querer avanzar rápido",
+      "fix": "El 'al pie' es mentalmente intenso. Sesiones de 5–10 minutos con muchos descansos de juego libre."
+    },
+    {
+      "error": "Introducir la calle antes de consolidar en casa",
+      "cause": "Saltar demasiado rápido al entorno real",
+      "fix": "Primero consolida dentro de casa, luego jardín, luego calle tranquila, luego calle con distracciones. Cada contexto requiere refuerzo adicional."
+    },
+    {
+      "error": "Cambiar entre lado izquierdo y derecho según el día",
+      "cause": "Falta de consistencia en la posición",
+      "fix": "Elige UN lado (convencionalmente izquierdo) y sé consistente. El perro aprende una posición específica, no 'a cualquier lado'."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro me mira pero se queda rezagado",
+      "solution": "La velocidad es demasiado lenta para él. Aumenta el ritmo ligeramente. Los perros rezagados frecuentemente mejoran al acelerar el paso."
+    },
+    {
+      "problem": "Se mantiene en posición 10 pasos pero luego se distrae y se adelanta",
+      "solution": "El refuerzo se ha espaciado demasiado pronto. Vuelve a premiar cada 3–5 pasos hasta que la posición sea más sólida."
+    },
+    {
+      "problem": "Funciona en línea recta pero pierde la posición en los giros",
+      "solution": "Los giros son más difíciles. Practica solo giros durante una sesión entera, premiando cada giro correcto independientemente."
+    },
+    {
+      "problem": "Solo funciona con el premio visible en la mano, sin premio no lo hace",
+      "solution": "Gradúa la presencia del premio: primero en la mano, luego en el bolsillo pero sacándolo al premiar, luego en una bolsa de cintura. El perro debe aprender que el premio puede aparecer en cualquier momento."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–3",
+      "goal": "El perro sigue la mano izquierda en posición correcta durante 5–10 pasos"
+    },
+    {
+      "stage": "Sesión 4–7",
+      "goal": "Mantiene la posición en línea recta durante 20–30 pasos con refuerzo frecuente"
+    },
+    {
+      "stage": "Semana 2–3",
+      "goal": "Ejecuta 'al pie' incluyendo paradas (con sentado automático) y giros suaves"
+    },
+    {
+      "stage": "Mes 1+",
+      "goal": "Camina 'al pie' en exterior con distracciones moderadas durante 1–2 minutos sin premio visible"
+    }
+  ],
+  "successSigns": [
+    "El perro te mira a los ojos regularmente mientras camina a tu lado",
+    "El hombro del perro está alineado con tu cadera izquierda durante al menos 30 pasos seguidos",
+    "Se sienta automáticamente cuando te detienes",
+    "Mantiene la posición en giros sin necesitar guía física"
+  ],
+  "variations": [
+    "Al pie con cambios de ritmo (muy lento → trote)",
+    "Al pie entre obstáculos (conos, sillas)",
+    "Al pie con otros perros o personas al pasar cerca",
+    "Al pie sin correa en zona segura (avanzado)",
+    "Al pie con ocho entre las piernas del guía"
+  ],
+  "safetyNotes": [
+    "Nunca uses collares de ahogo, pinchos o eléctricos para enseñar el pie: son contraproducentes y dañinos",
+    "Si el perro tiene problemas de caderas o articulaciones, consulta al veterinario antes de sesiones largas de pie",
+    "Lleva siempre agua en sesiones de más de 10 minutos en días cálidos",
+    "No practiques el pie con refuerzo muy escaso en zonas de mucho tráfico hasta que el comportamiento sea muy sólido"
+  ],
+  "funFact": "El 'al pie' como deporte (Heelwork to Music) es una disciplina en la que el perro realiza coreografías precisas al ritmo de música. ¡Algunos perros aprenden hasta 20 posiciones distintas!",
+  "nextLevel": "Introduce el 'al pie' sin correa en espacios cerrados. Luego practica 'al pie' junto a otros perros o personas que pasen. Por último, combínalo con otros comandos (al pie → quieto → al pie).",
+  "proTip": "La mirada del perro a tus ojos es la clave del 'al pie' avanzado. Premia específicamente los momentos de contacto visual: 'te mira = te sigue = premio'. Construye el contacto visual antes que la posición perfecta."
+}

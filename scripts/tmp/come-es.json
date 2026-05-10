@@ -1,0 +1,158 @@
+{
+  "title": "Llamada (Ven aquí)",
+  "subtitle": "El comando más importante para la seguridad de tu perro",
+  "level": "Básico",
+  "duration": "5–10 min por sesión",
+  "location": "Casa, jardín o parque con correa larga",
+  "ageRecommendation": "Desde 8 semanas",
+  "estimatedSessions": "7–10 sesiones para consolidar",
+  "objective": "Enseñar al perro a acudir inmediatamente a tu lado cuando escucha su nombre seguido de “ven” o “aquí”, incluso con distracciones.",
+  "why": [
+    "Es el comando de seguridad más crítico: puede salvar la vida de tu perro",
+    "Permite dar libertad controlada en espacios abiertos",
+    "Refuerza el vínculo y la confianza entre perro y guía",
+    "Base para ejercicios de distancia y trabajo sin correa"
+  ],
+  "benefits": [
+    "Podrás soltar a tu perro en el parque con confianza",
+    "En caso de peligro, tu perro regresará contigo de inmediato",
+    "Facilita llamarle cuando interactúa con otros perros o personas",
+    "Mejora la comunicación general y la atención hacia ti"
+  ],
+  "where": [
+    "🏠 En casa (pasillo o salón sin distracciones)",
+    "🌿 Jardín o patio vallado",
+    "🌳 Parque tranquilo con correa larga de 5–10 metros"
+  ],
+  "materials": [
+    "🫖 Premios de muy alto valor (pollo, queso, jamón en trocitos)",
+    "🦮 Correa larga de 5–10 metros (no extensible)",
+    "🔔 Clicker (opcional pero muy útil)",
+    "💛 Tono de voz alegre y entusiasta"
+  ],
+  "beforeYouStart": [
+    "Tu perro ya debe responder a su nombre con cierta consistencia",
+    "Nunca uses la llamada para algo desagradable (baño, cortar uñas, encerrar)",
+    "Usa siempre tono festivo: la llegada a tu lado debe ser la mejor cosa del mundo",
+    "Empieza en interiores o jardín vallado, nunca en zona abierta sin seguridad",
+    "Ten preparados premios de alto valor específicamente para este ejercicio"
+  ],
+  "methods": [
+    {
+      "id": "recall_game",
+      "title": "Juego de llamada progresiva (recomendado)",
+      "description": "Practicas la llamada como un juego, empezando muy cerca y aumentando distancia y dificultad gradualmente. El perro aprende que acudir siempre genera la mejor recompensa.",
+      "bestFor": "Todos los perros desde cachorros hasta adultos",
+      "steps": [
+        {
+          "title": "Empieza a un metro de distancia",
+          "description": "Agáchate al nivel del perro, di su nombre y “ven” con voz alegre y abre los brazos. Cuando llegue, dale varios premios seguidos y elogio entusiasta.",
+          "tip": "Agacharse y abrir brazos es una invitación irresistible para el perro.",
+          "troubleshooting": "Si no viene, acércate más. Empieza con medio metro si es necesario."
+        },
+        {
+          "title": "Aumenta la distancia gradualmente",
+          "description": "Cuando responda bien a 1 metro, pasa a 2, luego 3, luego 5. Cada vez que acuda, fiesta enorme: varios premios, caricias y voz muy alegre.",
+          "tip": "La regla de oro: si no viene al 90%, la distancia es demasiado grande. Vuelve atrás.",
+          "troubleshooting": "Nunca repitas la orden si no viene. Acércate, muéstrale el premio y vuelve a intentarlo más cerca."
+        },
+        {
+          "title": "Introduce la correa larga",
+          "description": "En el jardín o parque, con correa larga de 5–10 metros. Deja que explore y en momentos de distracción moderada, llámale. Cuando venga, fiesta total.",
+          "tip": "La correa larga es seguridad, no trampa. No la uses para jalarlo si no viene.",
+          "troubleshooting": "Si se distrae mucho, espera a que baje la distracción antes de llamar."
+        },
+        {
+          "title": "Alterna llamada con libertad",
+          "description": "Llámalo, prémialo generosamente y vuélvelo a soltar para que siga explorando. Así aprende que venir no significa que se acaba la diversión.",
+          "tip": "Si sólo le llamas para irse a casa, aprenderá a ignorarte al final del paseo."
+        },
+        {
+          "title": "Añade distracciones progresivas",
+          "description": "Cuando responda bien en zona tranquila, practica con otras personas, perros lejanos o sonidos. Aumenta el valor del premio a medida que sube la dificultad.",
+          "tip": "Más distracción = más fiesta al llegar. El esfuerzo merece mayor recompensa."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Llamar al perro para algo que no le gusta (baño, cortarle las uñas, encerrarlo)",
+      "cause": "Aprovechamos la llamada para situaciones necesarias pero desagradables",
+      "fix": "Ve tú a buscarle para las cosas desagradables. La llamada SIEMPRE debe terminar en algo positivo."
+    },
+    {
+      "error": "Regañar al perro cuando finalmente llega (aunque haya tardado mucho)",
+      "cause": "Frustración por la tardanza",
+      "fix": "Nunca. Aunque tarde 10 minutos en venir, cuando llegue: fiesta. Castiga la tardanza y nunca más volverá."
+    },
+    {
+      "error": "Repetir la orden varias veces (“ven, ven, ven...”)",
+      "cause": "Nerviosismo o falta de paciencia",
+      "fix": "Di la orden UNA sola vez en tono alegre. Si no viene, acércate y prueba más cerca la próxima vez."
+    },
+    {
+      "error": "Practicar sólo en casa donde siempre funciona",
+      "cause": "Comodidad del entrenador",
+      "fix": "Practica en lugares nuevos con distracciones reales. El aprendizaje debe generalizarse."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro me mira pero no viene",
+      "solution": "Los premios no son suficientemente atractivos. Usa pollo o queso y exagera tu entusiasmo: agáchate, palmadas, voz muy alegre."
+    },
+    {
+      "problem": "Viene pero luego huye antes de que le alcance",
+      "solution": "Estás alcanzándole el collar demasiado rápido. Premia primero durante 3 segundos, luego sujeta suavemente el collar mientras sigues premiando."
+    },
+    {
+      "problem": "Funciona en casa pero en el parque no me hace caso",
+      "solution": "Normal: el parque tiene demasiadas distracciones. Empieza en el parque cuando esté vacío y sube la dificultad muy lento."
+    },
+    {
+      "problem": "Ha dejado de responder aunque antes lo hacía bien",
+      "solution": "Puede que hayas subido demasiado rápido la dificultad, o usaste la llamada para algo negativo. Vuelve a distancias cortas con premios excelentes durante una semana."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–3",
+      "goal": "Acude consistentemente a 1–3 metros en casa sin distracciones"
+    },
+    {
+      "stage": "Sesión 4–6",
+      "goal": "Responde a 5 metros en jardín con distracciones leves"
+    },
+    {
+      "stage": "Sesión 7–10",
+      "goal": "Acude desde 10 metros con correa larga en parque tranquilo"
+    },
+    {
+      "stage": "Mes 2+",
+      "goal": "Responde en entornos con distracciones reales (otros perros, personas)"
+    }
+  ],
+  "successSigns": [
+    "Viene a la primera llamada sin necesidad de repetir la orden",
+    "Abandona distracciones moderadas (oler, explorar) para acudir",
+    "Llega hasta tu lado y se queda (no sólo se acerca)",
+    "Responde en al menos 3 entornos diferentes"
+  ],
+  "variations": [
+    "Llamada entre dos personas (el perro va y viene entre ambas)",
+    "Llamada escondido detrás de un árbol o esquina",
+    "Llamada durante el juego con otro perro",
+    "Llamada con señal de mano únicamente (sin voz)",
+    "Llamada larga desde 20–30 metros"
+  ],
+  "safetyNotes": [
+    "Nunca practiques sin correa en zonas abiertas hasta tener una llamada muy sólida",
+    "Evita practicar cuando el perro está muy excitado: espera a que baje el nivel de activación",
+    "Si usas correa larga, comprueba que no esté enredada antes de llamarle",
+    "La llamada de emergencia (voz muy alta y dramática) resérvala para peligros reales, úsala poco para que mantenga su impacto"
+  ],
+  "funFact": "Los estudios demuestran que los perros responden mejor a voces agudas y alegres que a voces graves y serias. ¡Cuanto más ridículo suenes llamándole, mejor!",
+  "nextLevel": "Practica la llamada con distracciones reales: otros perros jugando cerca, personas corriendo, olores intensos. Luego introduce tiempo de quieto antes de llamar.",
+  "proTip": "Reserva los mejores premios SÓLO para la llamada. Si el pollo sólo aparece cuando viene a ti, vendrá volando. La exclusividad del premio hace que el comportamiento sea más fuerte."
+}

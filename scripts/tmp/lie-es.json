@@ -1,0 +1,195 @@
+{
+  "title": "Tumbarse",
+  "subtitle": "El siguiente paso tras aprender a sentarse",
+  "level": "Muy básico",
+  "duration": "5–10 min por sesión",
+  "location": "Casa o jardín tranquilo",
+  "ageRecommendation": "Desde 10 semanas",
+  "estimatedSessions": "5–7 sesiones para dominar",
+  "objective": "Enseñar al perro a tumbarse cuando se le da la orden “túmbate” o “abajo”, manteniendo la posición varios segundos.",
+  "why": [
+    "Calmar al perro en momentos de excitación",
+    "Controlar situaciones en espacios públicos",
+    "Mejorar la obediencia general",
+    "Es el paso natural después de “sentado”"
+  ],
+  "benefits": [
+    "Tu perro se relaja en restaurantes, terrazas o visitas largas",
+    "Posición ideal para el descanso prolongado y el control de ladridos",
+    "Base para enseñar “quieto” durante minutos sin moverse",
+    "Reduce reactividad: un perro tumbado no salta ni embiste"
+  ],
+  "where": [
+    "🏠 En casa (suelo cómodo, alfombra o salón)",
+    "🌿 Jardín tranquilo",
+    "⛔ Evitar superficies frías, duras o resbaladizas al inicio"
+  ],
+  "materials": [
+    "🫖 Premios pequeños y blandos",
+    "🛏️ Alfombra o cama del perro (recomendado)",
+    "🦮 Correa corta (opcional)",
+    "💛 Paciencia y voz tranquila"
+  ],
+  "beforeYouStart": [
+    "Tu perro ya debe saber “sentado” con fluidez",
+    "Asegúrate de que la superficie es cómoda (no parquet frío)",
+    "Sesión después de un paseo corto: el perro ligeramente cansado aprende mejor",
+    "Ten preparados al menos 15 premios pequeños",
+    "Sesiones de máximo 5 minutos"
+  ],
+  "methods": [
+    {
+      "id": "lure_l",
+      "title": "Método del señuelo en L (recomendado)",
+      "description": "Guías al perro con el premio formando una L: primero hacia abajo entre sus patas, luego hacia delante.",
+      "bestFor": "Cachorros y perros que ya saben sentado",
+      "steps": [
+        {
+          "title": "Posición inicial: sentado",
+          "description": "Pide a tu perro que se siente. Esta posición es el punto de partida ideal porque las caderas ya están bajas.",
+          "tip": "Si no responde a “sentado” de forma fluida, vuelve primero a ese curso.",
+          "troubleshooting": "Si rompe la posición sentado, vuelve a pedirla con calma sin reñirle."
+        },
+        {
+          "title": "Movimiento hacia abajo",
+          "description": "Pon el premio en su nariz y bájalo lentamente hasta el suelo entre sus patas delanteras.",
+          "tip": "Movimiento lento y continuo, sin pausas.",
+          "troubleshooting": "Si se levanta, vuelve a pedir “sentado” y empieza de nuevo más despacio."
+        },
+        {
+          "title": "Movimiento hacia delante",
+          "description": "Cuando el premio esté en el suelo, deslízalo hacia adelante en línea recta. El perro estirará el cuerpo y se tumbará.",
+          "tip": "El movimiento total dibuja una L mayúscula."
+        },
+        {
+          "title": "Introduce la orden",
+          "description": "Cuando esté completamente tumbado (vientre tocando el suelo), di claramente “túmbate” o “abajo”.",
+          "tip": "Sólo di la palabra cuando esté completamente tumbado, no a mitad."
+        },
+        {
+          "title": "Recompensa y refuerza",
+          "description": "Dale el premio al instante, en el suelo entre sus patas. Acompaña con voz alegre.",
+          "tip": "Premiar en el suelo refuerza la posición y evita que se levante."
+        },
+        {
+          "title": "Aumenta duración",
+          "description": "Cuando lo haga al primer intento, espera 1 segundo antes de premiar. Sube a 3, 5, 10 segundos progresivamente.",
+          "tip": "Si rompe la posición antes, vuelve al tiempo anterior."
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "title": "Método con plataforma elevada",
+      "description": "Usas un escalón o cojín bajo: el perro ya está medio elevado, lo que facilita que las patas delanteras se deslicen hacia adelante.",
+      "bestFor": "Perros grandes, ansiosos o que no responden bien al señuelo",
+      "steps": [
+        {
+          "title": "Coloca al perro sobre un cojín bajo",
+          "description": "Una plataforma de 5–10 cm de altura. Cojín firme, escalón bajo o yoga block.",
+          "tip": "El borde delantero de la plataforma debe quedar libre."
+        },
+        {
+          "title": "Pide sentado sobre la plataforma",
+          "description": "El perro debe sentarse encima del cojín. Premia.",
+          "tip": "Si no se siente cómodo encima, dedica unos minutos a familiarizarlo."
+        },
+        {
+          "title": "Guía hacia delante",
+          "description": "Con un premio, atrae sus patas delanteras hacia adelante (fuera de la plataforma). Caerá naturalmente en posición tumbado.",
+          "tip": "El truco está en que la plataforma elevada hace que tumbarse sea físicamente más fácil."
+        },
+        {
+          "title": "Marca y premia",
+          "description": "Justo cuando esté completamente tumbado, di “túmbate” y premia.",
+          "tip": "Repite hasta que asocie la palabra."
+        },
+        {
+          "title": "Retira la plataforma",
+          "description": "Tras 5–10 sesiones con plataforma, prueba en suelo plano. Debería funcionar igual.",
+          "tip": "Si no funciona en plano, vuelve a la plataforma 2-3 sesiones más."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Empujar al perro hacia abajo con la mano sobre el lomo",
+      "cause": "Frustración cuando el señuelo no funciona a la primera",
+      "fix": "Nunca uses fuerza física. Mejora el movimiento del señuelo o usa el método de plataforma."
+    },
+    {
+      "error": "Premiar antes de que esté completamente tumbado",
+      "cause": "Anticipar el éxito",
+      "fix": "Espera a ver vientre y codos en el suelo antes de premiar. Si no, refuerzas posiciones intermedias."
+    },
+    {
+      "error": "Practicar en superficies frías o resbaladizas",
+      "cause": "Falta de planificación del entorno",
+      "fix": "Usa siempre alfombra, cama o moqueta. El perro evita tumbarse en frío/duro por instinto."
+    },
+    {
+      "error": "Saltarse el “sentado” como base",
+      "cause": "Querer atajos",
+      "fix": "El “sentado” fluido es prerrequisito. Si no lo domina, no pidas tumbarse aún."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Sigue el premio con la nariz pero no baja el cuerpo",
+      "solution": "Estás moviendo el premio demasiado rápido o muy lejos. Mantenlo pegado al suelo y muévelo muy lentamente hacia adelante."
+    },
+    {
+      "problem": "Se tumba pero se levanta inmediatamente",
+      "solution": "Es normal al principio. Premia más rápido (en menos de 1 segundo) y aumenta duración progresivamente."
+    },
+    {
+      "problem": "Hace una posición “esfinge” pero no se tumba lateralmente",
+      "solution": "La posición esfinge es válida y suficiente. La forma lateral es más relajada pero no necesaria para el comando básico."
+    },
+    {
+      "problem": "Mi perro grande/anciano se resiste",
+      "solution": "Puede ser dolor articular. Consulta al veterinario. Mientras tanto, usa una superficie muy mullida."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–2",
+      "goal": "Sigue el premio hasta el suelo y dobla las patas delanteras"
+    },
+    {
+      "stage": "Sesión 3–5",
+      "goal": "Se tumba completamente con el señuelo en el 60% de los intentos"
+    },
+    {
+      "stage": "Sesión 6–7",
+      "goal": "Se tumba con la palabra “túmbate” sin necesidad del señuelo"
+    },
+    {
+      "stage": "Semana 2–3",
+      "goal": "Mantiene la posición 30 segundos antes de premiar"
+    }
+  ],
+  "successSigns": [
+    "Se tumba al escuchar la orden, sin señuelo visible",
+    "Lo hace en diferentes lugares y posiciones",
+    "Mantiene la posición más de 10 segundos",
+    "Vuelve a tumbarse si rompe la posición y se lo pides una segunda vez"
+  ],
+  "variations": [
+    "Tumbado a distancia (a 1–2 metros)",
+    "Tumbado lateral completo (de costado, no esfinge)",
+    "Tumbado durante el desayuno mientras tú comes",
+    "Tumbado con sólo un gesto de mano hacia abajo",
+    "Tumbado tras un “sentado” en cadena (combinar comandos)"
+  ],
+  "safetyNotes": [
+    "Si tu perro muestra dolor o crujidos al tumbarse, consulta al veterinario antes de continuar",
+    "Razas grandes (mastines, gran daneses) pueden tardar más por anatomía",
+    "Nunca obligues físicamente: puede generar miedo y rechazo a la orden",
+    "Cachorros menores de 14 semanas: máximo 3 minutos por sesión"
+  ],
+  "funFact": "Los perros se tumban de costado (lateral) sólo cuando se sienten 100% seguros. Si tu perro hace esa postura contigo es señal de profunda confianza.",
+  "nextLevel": "Aumentar el tiempo tumbado a 1–2 minutos. Practicar con distracciones y luego en espacios públicos. Después introducir “quieto”.",
+  "proTip": "Si tu perro no se tumba, vuelve a “sentado” y repite más despacio. Algunos perros necesitan más paciencia. Premia siempre tirando el premio al suelo entre sus patas, nunca de la mano: esto refuerza permanecer tumbado."
+}

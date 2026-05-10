@@ -1,0 +1,159 @@
+{
+  "title": "Focus Under Distraction",
+  "subtitle": "Your dog stays attentive to you even when the whole world calls their name",
+  "level": "Advanced",
+  "duration": "5–10 min per session",
+  "location": "Progressive: home → garden → street → park",
+  "ageRecommendation": "From 5 months (with prerequisites solid)",
+  "estimatedSessions": "10–15 sessions to generalize",
+  "objective": "Teach the dog to maintain attention and obedience even when distractions appear — other dogs, people, food on the ground, or loud noises.",
+  "why": [
+    "Attention is the foundation of all real-world obedience",
+    "A dog that looks at you on cue is a safe and manageable dog",
+    "Prevents accidents on the street and dangerous situations",
+    "Reduces reactivity and over-excitement in new environments"
+  ],
+  "benefits": [
+    "You'll be able to walk calmly even when other dogs are nearby",
+    "Your dog won't lunge at dropped food on the street",
+    "They'll respond to commands even at the park or friends' homes",
+    "Reduces your dog's anxiety in unfamiliar environments"
+  ],
+  "where": [
+    "🏠 Always start at home with no distractions",
+    "🌿 Progress to the garden, then a quiet street",
+    "🎯 Finish in the park or environments with real distractions"
+  ],
+  "materials": [
+    "🫖 Maximum-motivation treats (cooked chicken, cheese, sausage)",
+    "🦮 2-meter leash for outdoor phases",
+    "🎯 Your voice, gaze, and body language as your main tools",
+    "💛 Patience to progress very slowly at first"
+  ],
+  "beforeYouStart": [
+    "Your dog must have solid \"stay\" and \"come\" at home with no distractions",
+    "Always start with very small distractions — never the hardest level first",
+    "Use top-quality treats: they need to compete with whatever is distracting your dog",
+    "Keep sessions to 5 minutes: focused attention under pressure is mentally exhausting",
+    "Expect regressions and bad days. Consistency is what fixes them"
+  ],
+  "methods": [
+    {
+      "id": "gradient_focus",
+      "title": "Gradient method with \"watch me\" cue (recommended)",
+      "description": "You build focus gradually: first in a neutral setting, then with progressively more intense distractions. The \"watch me\" cue teaches the dog to look to you when something interesting appears.",
+      "bestFor": "Dogs with high arousal or dogs that get locked onto stimuli",
+      "steps": [
+        {
+          "title": "Teach \"watch me\" without distractions",
+          "description": "At home, hold a treat near your eye and wait. The moment the dog makes eye contact, say \"watch me\", reward, and praise. Repeat 10 times per session.",
+          "tip": "You won't need to hold the treat near your eye later — just say the word and wait for eye contact.",
+          "troubleshooting": "If the dog looks at the treat but not your eyes, slowly move the treat up toward your forehead."
+        },
+        {
+          "title": "Introduce a very small distraction",
+          "description": "Place a boring toy or neutral object 3 meters away. Cue \"watch me\". If they look at you, reward generously. If not, increase distance to the distraction only if the dog looks well from far away.",
+          "tip": "The distraction should be interesting but not irresistible. If the dog can't ignore it, it's too much.",
+          "troubleshooting": "If the dog can't look away, move the distraction farther away or use a less interesting one."
+        },
+        {
+          "title": "Practice with moving distractions",
+          "description": "Now use distractions that move: a rolling ball, a person walking, a dog at a distance. Cue \"watch me\" just before the distraction appears or approaches.",
+          "tip": "The key moment is asking for attention BEFORE the dog notices the distraction, not after.",
+          "troubleshooting": "If the dog is already locked on the distraction, step sideways or turn around to break their focus, then ask for attention."
+        },
+        {
+          "title": "Add obedience under distraction",
+          "description": "Once the dog focuses reliably near distractions, combine \"watch me\" with \"sit\" or \"stay\". The dog should be able to follow commands even with something interesting nearby.",
+          "tip": "Reward success with a JACKPOT: 5–6 treats in a row when they obey with a distraction present.",
+          "troubleshooting": "If combined commands fail, go back to just \"watch me\" and increase difficulty more slowly."
+        },
+        {
+          "title": "Generalize in real environments",
+          "description": "Take the training to the park, busy streets, markets. In each new environment, start with the smallest distractions and progress gradually.",
+          "tip": "Every new environment is like starting over: the dog needs an adjustment period.",
+          "troubleshooting": "If at the park focus is impossible, take a short walk first so the dog releases energy before training."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Starting with maximum distraction from day one",
+      "cause": "Wanting quick results",
+      "fix": "Always start below threshold: the level where the dog CAN ignore the distraction. Move up step by step."
+    },
+    {
+      "error": "Repeating the cue when the dog is locked onto the distraction",
+      "cause": "Believing that repeating more times will work",
+      "fix": "If the dog is locked on, change your own position (move laterally, walk away) then ask for attention."
+    },
+    {
+      "error": "Using low-value treats when distractions are strong",
+      "cause": "Not calibrating treat value to exercise difficulty",
+      "fix": "Higher distraction = higher treat value. Cooked chicken or cheese must beat whatever is distracting your dog."
+    },
+    {
+      "error": "Training when the dog is already over-stimulated",
+      "cause": "Wrong timing (arriving at the park, after intense play)",
+      "fix": "Wait 10–15 minutes after arriving in a new environment or after intense play. The mind settles with time."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "At the park my dog ignores me completely",
+      "solution": "The distraction level is too high. Take a 10-minute walk first to lower arousal, then find a quiet corner of the park to start."
+    },
+    {
+      "problem": "My dog gets locked looking at other dogs and doesn't react to anything",
+      "solution": "You are too close to the other dog. The safe distance is where your dog can still see you even with the distraction present. Increase distance."
+    },
+    {
+      "problem": "Works great at home but on the street it's like they know nothing",
+      "solution": "Normal: dogs learn in context. Practice in the hallway, then at the front door, then 5 meters away, then the corner. Generalize in small steps."
+    },
+    {
+      "problem": "My dog improves and then seems to go backwards",
+      "solution": "Regressions are normal, especially during growth phases or environmental changes. Go back one level and progress again."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Week 1–2",
+      "goal": "Dog maintains eye contact with you for 3–5 seconds with small static distractions at home"
+    },
+    {
+      "stage": "Week 3–4",
+      "goal": "Responds to \"watch me\" in the garden with people or dogs 10+ meters away"
+    },
+    {
+      "stage": "Week 5–6",
+      "goal": "Can perform sit or stay on the street even as people or cyclists pass"
+    },
+    {
+      "stage": "Week 7+",
+      "goal": "Maintains focus at the park with other dogs in the environment, responding to basic commands"
+    }
+  ],
+  "successSigns": [
+    "Dog spontaneously looks at you when something interesting appears",
+    "Responds to basic commands even with moderate distractions",
+    "Can walk at your side without pulling even when other dogs are 5 meters away",
+    "Redirects attention toward you when asked, even at the park"
+  ],
+  "variations": [
+    "Focus with food on the ground (especially useful in cities)",
+    "Focus with other dogs running nearby",
+    "Focus with loud noises (fireworks, motorcycles, construction)",
+    "Focus while waiting at the vet"
+  ],
+  "safetyNotes": [
+    "Never put the dog in situations that far exceed their threshold: it can cause trauma or increase reactivity",
+    "If your dog shows fear signs (tucked tail, ears back, trembling), stop the session and increase distance from the distraction",
+    "Reactive dogs need professional help: the gradient method alone is not enough for severe cases",
+    "Do not train attention under distraction with a tight leash: it increases the dog's stress"
+  ],
+  "funFact": "Dogs process the world at up to 5 times the speed of humans. What seems like a minor distraction to you can be a full sensory avalanche for your dog.",
+  "nextLevel": "Practice with very high-value distractions like food in another person's hand or dogs in free play. Then introduce \"drop it\" combined with attention work.",
+  "proTip": "Become the most interesting thing on the walk: talk to your dog, change pace, make unexpected turns. An unpredictable, fun handler generates natural attention without having to ask for it."
+}

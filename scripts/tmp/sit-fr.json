@@ -1,0 +1,189 @@
+{
+  "title": "S’asseoir",
+  "subtitle": "La première commande que tout chien doit apprendre",
+  "level": "Très basique",
+  "duration": "5–10 min par séance",
+  "location": "Maison ou jardin",
+  "ageRecommendation": "À partir de 8 semaines",
+  "estimatedSessions": "3 à 5 séances pour maîtriser",
+  "objective": "Apprendre au chien à s’asseoir sur l’ordre verbal « assis » et à maintenir la position jusqu’à un autre signal.",
+  "why": [
+    "Contrôler le chien dans les situations du quotidien",
+    "Améliorer l’attention et la concentration",
+    "Sert de base pour tout autre apprentissage"
+  ],
+  "benefits": [
+    "Votre chien se calmera à la traversée des rues ou pour saluer les visiteurs",
+    "Réduit le risque de saut sur les enfants ou les personnes âgées",
+    "Base pour des ordres avancés comme « reste », « couché » ou « patte »",
+    "Crée une confiance mutuelle dès le premier jour de cohabitation"
+  ],
+  "where": [
+    "🏠 À la maison (salon ou pièce calme)",
+    "🌿 Dans le jardin ou sur la terrasse",
+    "🔇 Sans distractions au début"
+  ],
+  "materials": [
+    "🫖 Petites friandises (nourriture molle, taille d’un pois)",
+    "🦮 Laisse courte (optionnel, si votre chien se distrait)",
+    "🛟 Un tapis ou une surface confortable",
+    "💛 Patience et voix calme"
+  ],
+  "beforeYouStart": [
+    "Votre chien doit être calme, pas surexcité après une promenade intense",
+    "Pratiquez avant les repas (avec un appétit modéré, jamais affamé)",
+    "Choisissez un lieu silencieux, sans TV, autres animaux ni visiteurs",
+    "Gardez les friandises prêtes dans une pochette à la ceinture",
+    "Séances de 5 minutes maximum : préférez la qualité à la quantité"
+  ],
+  "methods": [
+    {
+      "id": "lure",
+      "title": "Méthode du leurre (recommandée)",
+      "description": "Vous guidez le chien vers la position avec une friandise comme leurre. La méthode la plus rapide et claire pour les débutants.",
+      "bestFor": "Chiots et chiens sans entraînement préalable",
+      "steps": [
+        {
+          "title": "Attirer l’attention",
+          "description": "Placez-vous face à votre chien. Montrez la friandise près de son nez pour capter son attention.",
+          "tip": "Assurez-vous qu’il vous regarde avant de continuer.",
+          "troubleshooting": "S’il ne regarde pas, augmentez la valeur de la friandise (fromage, saucisse)."
+        },
+        {
+          "title": "Mouvement guidé",
+          "description": "Montez lentement la friandise vers le haut et vers l’arrière, au-dessus de sa tête. Le chien baissera naturellement les hanches et s’assoira.",
+          "tip": "Ne le poussez pas. Laissez le mouvement le guider.",
+          "troubleshooting": "S’il recule au lieu de s’asseoir, faites-le contre un mur pour qu’il ne puisse pas reculer."
+        },
+        {
+          "title": "Introduire l’ordre",
+          "description": "Dès qu’il s’assoit, dites clairement : « assis ». Utilisez toujours le même mot et le même ton.",
+          "tip": "Le timing est essentiel : dites le mot au moment exact où il s’assoit."
+        },
+        {
+          "title": "Récompense immédiate",
+          "description": "Donnez la friandise instantanément et félicitez-le avec une voix joyeuse et positive.",
+          "tip": "La récompense doit arriver en moins de 2 secondes."
+        },
+        {
+          "title": "Répéter et progresser",
+          "description": "Faites 5–10 répétitions par séance et 2–3 séances par jour. Réduisez progressivement les friandises.",
+          "tip": "Des séances courtes = meilleur apprentissage."
+        }
+      ]
+    },
+    {
+      "id": "capture",
+      "title": "Méthode de capture (chiens qui s’assoient déjà seuls)",
+      "description": "Vous récompensez le chien chaque fois qu’il s’assoit spontanément, sans le demander. Fonctionne si votre chien a déjà tendance à s’asseoir.",
+      "bestFor": "Chiens adultes, recueillis ou ayant peur de la main près du visage",
+      "steps": [
+        {
+          "title": "Observer et attendre",
+          "description": "Marchez tranquillement chez vous avec des friandises à portée. Ignorez le chien et vaquez à vos occupations.",
+          "tip": "Important de ne pas parler ni fixer le chien."
+        },
+        {
+          "title": "Marquer l’instant",
+          "description": "Dès que le chien s’assoit de sa propre initiative, dites un « oui » clair ou utilisez le clicker à cet instant.",
+          "tip": "Le « oui » ou le clic doit arriver AU moment exact où le derrière touche le sol."
+        },
+        {
+          "title": "Récompenser instantanément",
+          "description": "Lancez-lui une friandise au sol (pas de la main) pour qu’il se relève et puisse répéter le geste.",
+          "tip": "Lancer la friandise au sol évite la dépendance à votre main."
+        },
+        {
+          "title": "Ajouter le mot",
+          "description": "Quand il s’assoit déjà à plusieurs reprises pour gagner la friandise, commencez à dire « assis » juste avant.",
+          "tip": "N’ajoutez le mot que lorsque le comportement est prévisible."
+        },
+        {
+          "title": "Généraliser",
+          "description": "Pratiquez dans différentes pièces, positions et moments de la journée. La généralisation fait que l’ordre fonctionne toujours.",
+          "tip": "Comptez combien de fois sur 10 il réussit. À 8/10, changez de contexte."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Répéter l’ordre plusieurs fois de suite (« assis, assis, assis »)",
+      "cause": "Frustration du tuteur quand il ne répond pas du premier coup",
+      "fix": "Dites l’ordre UNE fois et attendez 5 secondes en silence. Sans réponse, revenez au leurre."
+    },
+    {
+      "error": "Récompenser tard, quand le chien s’est déjà relevé",
+      "cause": "Réflexes lents ou friandise hors de portée",
+      "fix": "Entraînez le timing sans chien : lancez une friandise et attrapez-la en moins de 2 secondes."
+    },
+    {
+      "error": "Pousser le dos ou les hanches pour forcer la position",
+      "cause": "Anxiété de voir des résultats rapides",
+      "fix": "Ne touchez jamais physiquement. Améliorez le leurre (friandise plus près du nez, mouvement plus lent)."
+    },
+    {
+      "error": "Séances trop longues qui épuisent le chien",
+      "cause": "Plus d’entraînement ≠ meilleur apprentissage",
+      "fix": "5 minutes maximum par séance. Terminez toujours sur une réussite, pas sur un échec."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien me regarde mais ne fait rien",
+      "solution": "Rapprochez la friandise de son nez, presque en le touchant, et bougez plus lentement. Sinon, essayez une friandise de plus haute valeur."
+    },
+    {
+      "problem": "Il saute pour attraper la friandise au lieu de s’asseoir",
+      "solution": "Vous baissez trop la main puis remontez trop. Maintenez la friandise juste au-dessus de sa tête."
+    },
+    {
+      "problem": "Fonctionne à la maison mais pas dans la rue",
+      "solution": "C’est normal. Reprenez toutes les étapes depuis le début dans le nouvel environnement, avec moins de distractions d’abord."
+    },
+    {
+      "problem": "Il s’assoit mais se relève tout de suite",
+      "solution": "Récompensez plus vite (en moins d’1 seconde) et augmentez progressivement les secondes avant la récompense (1s → 3s → 5s)."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séance 1–2",
+      "goal": "Votre chien suit la friandise avec son nez et s’assoit spontanément au moins une fois"
+    },
+    {
+      "stage": "Séance 3–5",
+      "goal": "S’assoit sur le mot « assis » dans 70% des essais à la maison au calme"
+    },
+    {
+      "stage": "Semaine 2",
+      "goal": "S’assoit sans friandise visible, uniquement sur la voix"
+    },
+    {
+      "stage": "Semaine 3+",
+      "goal": "Maintient la position 5–10 secondes avant la récompense, à la maison et au jardin"
+    }
+  ],
+  "successSigns": [
+    "S’assoit en entendant l’ordre sans friandise visible",
+    "Le fait dans différents endroits (maison, jardin, rue calme)",
+    "Répond même avec de petites distractions",
+    "Maintient la position jusqu’à un autre signal"
+  ],
+  "variations": [
+    "Assis à 1 mètre de distance (sans être en face)",
+    "Assis uniquement avec un geste de la main, sans voix",
+    "Assis latéral (à côté de vous, pas en face)",
+    "Assis pendant que vous vous asseyez ou vous levez",
+    "Assis pendant 30 secondes avant de manger (auto-contrôle)"
+  ],
+  "safetyNotes": [
+    "Ne forcez jamais un chien âgé ou souffrant d’arthrose à répéter s’il montre de la douleur",
+    "Si votre chien halète beaucoup, s’éloigne ou évite le contact visuel, faites une pause de 24h",
+    "Évitez les surfaces très froides, chaudes ou glissantes (parquet récemment ciré)",
+    "Chiots de moins de 12 semaines : 3 minutes maximum par séance"
+  ],
+  "funFact": "Les Border Collies et Caniches apprennent « assis » en moins de 5 répétitions. Les Bulldogs et Mastiffs peuvent en avoir besoin de 30 ou plus.",
+  "nextLevel": "Pratiquer « assis » dans la rue avec distractions (autres chiens, bruit). Ensuite introduire « reste » plusieurs minutes.",
+  "proTip": "Entraînez toujours le chien avec un peu de faim (avant les repas). Si très distrait, augmentez la valeur de la friandise (croquettes → fromage ou poulet bouilli)."
+}

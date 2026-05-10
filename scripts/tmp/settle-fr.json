@@ -1,0 +1,157 @@
+{
+  "title": "Calme-toi",
+  "subtitle": "Calme actif sur demande dans n'importe quelle situation",
+  "level": "Intermédiaire",
+  "duration": "10–15 min par séance",
+  "location": "Maison, terrasse, café, salle d'attente",
+  "ageRecommendation": "Dès 12 semaines",
+  "estimatedSessions": "8–12 séances pour maîtriser",
+  "objective": "Apprendre au chien à se détendre activement sur commande — pas seulement se coucher, mais relâcher la tension corporelle — dans n'importe quel environnement. Utile dans les cafés, avec des visiteurs à la maison ou lors de longues sorties.",
+  "why": [
+    "Un chien qui sait se calmer gère mieux le stress dans les nouveaux environnements",
+    "Permet d'emmener le chien dans des espaces publics (terrasses, boutiques) sans perturber",
+    "Réduit la réactivité générale en enseignant l'état de calme comme comportement concret",
+    "Complète le 'couché' : la relaxation va au-delà de la posture"
+  ],
+  "benefits": [
+    "Votre chien peut vous accompagner dans les restaurants, terrasses et événements sans poser de problèmes",
+    "Les visiteurs se sentent à l'aise car le chien ne les dérange pas continuellement",
+    "Des soirées plus tranquilles à la maison quand le chien apprend à se détendre l'après-midi",
+    "Utile aux consultations vétérinaires, chez le toiletteur ou lors de longs trajets en voiture"
+  ],
+  "where": [
+    "🏠 Commencez à la maison dans le salon ou la pièce préférée du chien",
+    "☕ Progressez vers des terrasses ou cafés tranquilles",
+    "🐾 Zone désignée avec un tapis ou un lit spécifique pour le chien"
+  ],
+  "materials": [
+    "🛏️ Le tapis ou lit spécifique du chien (la 'zone sécurisée')",
+    "🫖 Friandises de haute valeur en petites quantités",
+    "🔇 Environnement initial très calme (pas de TV forte, pas de visiteurs)",
+    "💛 Patience exceptionnelle : cette commande prend plus de temps que les bases"
+  ],
+  "beforeYouStart": [
+    "Le chien doit déjà connaître 'couché' avec fluidité avant de travailler la relaxation",
+    "Choisissez un moment de la journée où le chien est naturellement plus calme (après la promenade)",
+    "Désignez un tapis ou lit spécifique : toujours le même, ne le déplacez pas au début",
+    "Séances de 10–15 minutes maximum : la relaxation ne peut pas être forcée ni précipitée",
+    "Éteignez la TV et réduisez les stimuli pendant l'entraînement initial"
+  ],
+  "methods": [
+    {
+      "id": "mat_protocol",
+      "title": "Protocole du tapis (méthode de relaxation progressive)",
+      "description": "Le tapis devient le signal physique de relaxation. Le chien apprend que être sur le tapis = relâcher la tension et recevoir du calme. Vous renforcez les vrais états de relaxation (soupir, clignement lent, tête basse) et ignorez les états d'alerte.",
+      "bestFor": "Tous les chiens, surtout les anxieux, hyperactifs ou réactifs à la maison",
+      "steps": [
+        {
+          "title": "Introduire le tapis comme lieu positif",
+          "description": "Emmenez le chien sur le tapis et récompensez simplement pour y être. Ne demandez rien de plus. Tapis = pluie de friandises.",
+          "tip": "Faites cela 5–10 fois avant de demander un comportement spécifique. Le tapis doit être le meilleur endroit au monde.",
+          "troubleshooting": "Si le chien évite le tapis, récompensez même pour s'en approcher. Construisez d'abord l'association positive avant de continuer."
+        },
+        {
+          "title": "Demandez 'couché' sur le tapis",
+          "description": "Une fois que le chien monte volontairement sur le tapis, demandez 'couché'. Récompensez quand il est allongé dessus.",
+          "tip": "N'introduisez pas encore le mot 'calme-toi'. Construisez d'abord le comportement d'être couché sur le tapis."
+        },
+        {
+          "title": "Observez et renforcez la vraie relaxation",
+          "description": "Restez à proximité sans parler. Quand le chien montre de vraies signes de relaxation (soupir audible, clignement lent, tête tombant sur les pattes, corps qui 'fond'), dites 'calme-toi' et récompensez très doucement.",
+          "tip": "La récompense doit être donnée calmement : pas avec enthousiasme. L'excitation rompt la relaxation. Jetez doucement la friandise au sol entre ses pattes.",
+          "troubleshooting": "Si le chien se lève, ne dites rien. Attendez qu'il se recouche. Renforcez uniquement le calme."
+        },
+        {
+          "title": "Augmentez la durée de la relaxation",
+          "description": "Avec le temps, attendez plus de signes de relaxation avant de récompenser : 5 secondes → 15 → 30 → 1 minute de calme continu avant la friandise.",
+          "tip": "Utilisez un minuteur de téléphone pour ne pas récompenser trop tôt. La précision du timing est essentielle."
+        },
+        {
+          "title": "Ajoutez des distractions graduelles",
+          "description": "Commencez à pratiquer avec de petites distractions : parlez au téléphone, allumez la TV à faible volume, entrez et sortez de la pièce. Récompensez toujours le calme maintenu.",
+          "tip": "Augmentez les distractions par très petits pas. Un recul n'est pas un échec : c'est une information."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Récompenser le chien quand il se lève pour aller chercher la friandise",
+      "cause": "Offrir la récompense à la mauvaise hauteur ou s'approcher du chien avec enthousiasme",
+      "fix": "Jetez toujours la friandise au sol entre ses pattes. Ne l'offrez jamais de votre main quand vous cherchez la relaxation."
+    },
+    {
+      "error": "Essayer de forcer la relaxation avec des caresses intenses",
+      "cause": "Confondre 'vouloir calmer le chien' avec 'relaxation active entraînée'",
+      "fix": "Les chiens anxieux sont encore plus surstimulés par les caresses quand ils sont déjà activés. Utilisez des récompenses calmes et le silence."
+    },
+    {
+      "error": "Pratiquer lors de moments de haute activation du chien",
+      "cause": "Vouloir résoudre l'excitation avec la commande",
+      "fix": "'Calme-toi' ne fonctionne pas au pic d'activation. Pratiquez toujours quand le chien est déjà dans un état neutre ou doucement calme."
+    },
+    {
+      "error": "Déplacer le tapis avant que le comportement soit consolidé",
+      "cause": "Vouloir que ça fonctionne dans différents endroits trop vite",
+      "fix": "Consolidez d'abord à la maison avec le tapis toujours au même endroit. Puis déplacez le tapis progressivement dans d'autres pièces et enfin en extérieur."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien se couche mais ne se détend pas : il continue à surveiller",
+      "solution": "Il est en position physique mais pas en vraie relaxation. Continuez à attendre et renforcez au premier clignement lent ou soupir. La patience ici se mesure en minutes, pas en secondes."
+    },
+    {
+      "problem": "Il se lève chaque fois que je m'approche pour récompenser",
+      "solution": "Changez la façon de donner la récompense : au lieu de vous approcher, jetez doucement la friandise au sol depuis là où vous êtes."
+    },
+    {
+      "problem": "Ça fonctionne à la maison mais sur la terrasse du restaurant il ne tient pas en place",
+      "solution": "Vous avez augmenté le niveau de distraction trop vite. Emmenez le tapis dans des endroits tranquilles d'abord (jardin, terrasse vide) avant de passer aux espaces publics fréquentés."
+    },
+    {
+      "problem": "Mon chien s'endort avant que je puisse récompenser la relaxation",
+      "solution": "C'est un succès total ! Un chien qui s'endort sur le tapis a atteint le niveau maximum de relaxation. Récompensez doucement à son réveil."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séance 1–3",
+      "goal": "Le chien monte volontairement sur le tapis et se couche sans être demandé"
+    },
+    {
+      "stage": "Séance 4–6",
+      "goal": "Montre au moins un vrai signe de relaxation (soupir, clignement lent) sur le tapis"
+    },
+    {
+      "stage": "Semaine 2–3",
+      "goal": "Se détend pendant 1–2 minutes sur le tapis avec de petites distractions présentes"
+    },
+    {
+      "stage": "Mois 1+",
+      "goal": "Se dirige vers le tapis et se détend en entendant 'calme-toi' dans des espaces extérieurs tranquilles"
+    }
+  ],
+  "successSigns": [
+    "Le chien soupire audiblement en se couchant sur le tapis",
+    "Maintient la position détendue même quand vous vous levez ou marchez à proximité",
+    "Va sur le tapis volontairement quand il ressent un stress léger (visiteurs, nouveaux sons)",
+    "La relaxation dure plus de 5 minutes sans intervention"
+  ],
+  "variations": [
+    "Se calmer sur une terrasse de restaurant avec bruit de fond",
+    "Se calmer dans la salle d'attente du vétérinaire",
+    "Se calmer quand vous avez des visiteurs à la maison",
+    "Se calmer dans la voiture en mouvement",
+    "Se calmer sans tapis (avec seulement le signal verbal)"
+  ],
+  "safetyNotes": [
+    "N'utilisez jamais 'calme-toi' pour apaiser un chien en crise de peur ou panique : il doit d'abord s'éloigner du stimulus",
+    "Si votre chien ne semble jamais se détendre, même à la maison, consultez un comportementaliste : il peut y avoir une anxiété chronique",
+    "Ne pratiquez pas cette commande dans des espaces extrêmement bruyants ou avec des déclencheurs de peur actifs",
+    "Si vous utilisez le tapis comme zone de punition ou d'isolement, il perdra toute son association positive"
+  ],
+  "funFact": "Les chiens ont un 'bâillement de stress' différent du bâillement de sommeil. Un bâillement pendant l'entraînement signifie que le chien s'autorégule — c'est en fait quelque chose de positif !",
+  "nextLevel": "Introduisez un signal de la main (pointer le tapis) en plus du signal verbal. Progressez vers le fait que le chien se calme dans des espaces publics sans tapis : avec seulement le signal verbal.",
+  "proTip": "L'état de relaxation ne peut pas être exigé : il doit être cultivé. Votre calme est contagieux pour le chien. Parlez moins, bougez plus lentement et respirez plus profondément pendant les séances."
+}

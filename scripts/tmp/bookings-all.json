@@ -1,0 +1,522 @@
+{
+  "es": {
+    "bizumLabel": "Número Bizum",
+    "bizumHelper": "Aparece sólo en las reservas confirmadas para que tus clientes te paguen. Lo puedes dejar vacío y coordinar el pago por chat.",
+    "weekday": {
+      "short": { "mon": "Lun", "tue": "Mar", "wed": "Mié", "thu": "Jue", "fri": "Vie", "sat": "Sáb", "sun": "Dom" }
+    },
+    "service": {
+      "training": "Entrenamiento",
+      "walk": "Paseo",
+      "day_care": "Guardería",
+      "overnight": "Estancia",
+      "home_care": "A domicilio"
+    },
+    "status": {
+      "confirmed": "Confirmada",
+      "completed": "Completada",
+      "cancelled_by_owner": "Cancelada",
+      "cancelled_by_provider": "Cancelada",
+      "expired": "Expirada"
+    },
+    "editor": {
+      "title": "Mi agenda",
+      "intro": "Define tus horarios disponibles cada día. Los huecos libres aparecerán para los clientes al reservar.",
+      "addWindow": "+ horario",
+      "blocked": "Bloqueado",
+      "windowHint": "Elige hora de inicio y fin (en pasos de 30 min).",
+      "startTime": "Inicio",
+      "endTime": "Fin",
+      "saveChanges": "Guardar cambios",
+      "saved": "Tu agenda se actualizó.",
+      "tapChipToRemove": "Toca un horario para eliminarlo.",
+      "providersOnly": "Esta sección es sólo para entrenadores y cuidadores.",
+      "bizumWarningTitle": "Configura tu Bizum",
+      "bizumWarningBody": "Sin Bizum, los clientes coordinarán el pago contigo por chat.",
+      "bizumWarningCta": "Configurar"
+    },
+    "picker": {
+      "pickDay": "Elige día",
+      "pickTime": "Elige hora",
+      "noSlots": "No hay huecos libres ese día."
+    },
+    "flow": {
+      "title": "Reservar",
+      "bookCta": "Reservar",
+      "providerNotFound": "Este proveedor ya no existe.",
+      "noAvailabilityTitle": "Aún no tiene agenda",
+      "noAvailabilityBody": "Este profesional todavía no ha publicado sus horarios. Escríbele por chat para coordinar.",
+      "noDogsTitle": "Añade tu peludo primero",
+      "noDogsBody": "Necesitas registrar al menos un perro antes de reservar.",
+      "addDogCta": "Añadir perro",
+      "serviceLabel": "Servicio",
+      "durationLabel": "Duración",
+      "dogLabel": "¿Para qué perro?",
+      "notesLabel": "Notas (opcional)",
+      "notesPlaceholder": "Algo que el profesional debería saber…",
+      "priceInfoLine": "Tarifa indicativa: {{amount}} €",
+      "paymentDisclaimer": "El pago se hace fuera de la app (Bizum, transferencia, etc.). Tras confirmar verás los datos del pago.",
+      "continueCta": "Continuar",
+      "confirmCta": "Confirmar reserva"
+    },
+    "list": {
+      "title": "Mis reservas",
+      "tabs": { "upcoming": "Próximas", "past": "Pasadas", "cancelled": "Canceladas" },
+      "empty": {
+        "upcoming": { "title": "Aún no tienes reservas", "body": "Cuando reserves o te reserven, aparecerán aquí." },
+        "past": { "title": "Sin reservas pasadas", "body": "Tus servicios completados aparecerán aquí." },
+        "cancelled": { "title": "Sin cancelaciones", "body": "Las reservas canceladas o expiradas aparecerán aquí." }
+      }
+    },
+    "detail": {
+      "title": "Reserva",
+      "notFound": "Esta reserva ya no existe.",
+      "notesLabel": "Notas",
+      "priceLabel": "Tarifa",
+      "markCompleted": "Marcar completada",
+      "completeAfterEnds": "Podrás marcar como completada cuando termine el servicio.",
+      "cancelTitle": "Cancelar reserva",
+      "cancelBody": "El hueco volverá a estar disponible. ¿Seguro?",
+      "cancelCta": "Cancelar reserva"
+    },
+    "bizum": {
+      "title": "Pago por Bizum",
+      "fallbackTitle": "Coordinar pago por chat",
+      "fallbackBody": "{{name}} no ha configurado su Bizum. Hablad por chat para acordar la forma de pago.",
+      "openChat": "Abrir chat",
+      "call": "Llamar",
+      "disclaimer": "El pago se realiza fuera de Dogly Train. La app sólo facilita la conexión.",
+      "copiedTitle": "Copiado",
+      "copiedBody": "Número de teléfono copiado al portapapeles.",
+      "whatsappPrefilled": "Hola {{name}}, te paso por Bizum los {{amount}} € de la reserva."
+    },
+    "errors": {
+      "unauthenticated": "Inicia sesión para reservar.",
+      "invalid_input": "Faltan datos en la reserva.",
+      "rate_limited": "Demasiados intentos seguidos. Espera un momento.",
+      "provider_not_active": "Este proveedor ya no acepta reservas.",
+      "dog_not_found": "Ese perro no se encuentra en tu cuenta.",
+      "slot_taken": "Ese hueco se acaba de coger. Elige otro.",
+      "slot_outside_availability": "Ese hueco no está disponible en su agenda.",
+      "too_close_to_now": "Reserva con más antelación, por favor.",
+      "too_far_in_future": "Esa fecha está demasiado lejos.",
+      "unknown": "Algo no salió bien. Inténtalo de nuevo."
+    }
+  },
+  "en": {
+    "bizumLabel": "Bizum / phone number",
+    "bizumHelper": "Shown only in confirmed bookings so clients can pay you. Optional — you can also coordinate payment by chat.",
+    "weekday": {
+      "short": { "mon": "Mon", "tue": "Tue", "wed": "Wed", "thu": "Thu", "fri": "Fri", "sat": "Sat", "sun": "Sun" }
+    },
+    "service": {
+      "training": "Training",
+      "walk": "Walk",
+      "day_care": "Day care",
+      "overnight": "Overnight",
+      "home_care": "Home care"
+    },
+    "status": {
+      "confirmed": "Confirmed",
+      "completed": "Completed",
+      "cancelled_by_owner": "Cancelled",
+      "cancelled_by_provider": "Cancelled",
+      "expired": "Expired"
+    },
+    "editor": {
+      "title": "My calendar",
+      "intro": "Set your availability. Free slots will appear to clients when they book.",
+      "addWindow": "+ window",
+      "blocked": "Blocked",
+      "windowHint": "Pick start and end time (30-min steps).",
+      "startTime": "Start",
+      "endTime": "End",
+      "saveChanges": "Save changes",
+      "saved": "Your calendar was updated.",
+      "tapChipToRemove": "Tap a window to remove it.",
+      "providersOnly": "This section is for trainers and caretakers only.",
+      "bizumWarningTitle": "Set up your Bizum",
+      "bizumWarningBody": "Without it, clients will coordinate payment with you via chat.",
+      "bizumWarningCta": "Set up"
+    },
+    "picker": {
+      "pickDay": "Pick a day",
+      "pickTime": "Pick a time",
+      "noSlots": "No free slots that day."
+    },
+    "flow": {
+      "title": "Book",
+      "bookCta": "Book",
+      "providerNotFound": "This provider no longer exists.",
+      "noAvailabilityTitle": "No calendar yet",
+      "noAvailabilityBody": "This professional hasn't published their hours yet. Message them to arrange.",
+      "noDogsTitle": "Add your pup first",
+      "noDogsBody": "You need at least one registered dog before booking.",
+      "addDogCta": "Add dog",
+      "serviceLabel": "Service",
+      "durationLabel": "Duration",
+      "dogLabel": "For which dog?",
+      "notesLabel": "Notes (optional)",
+      "notesPlaceholder": "Anything the professional should know…",
+      "priceInfoLine": "Indicative price: {{amount}} €",
+      "paymentDisclaimer": "Payment happens off-app (Bizum, transfer, etc.). You'll see the payment details after confirming.",
+      "continueCta": "Continue",
+      "confirmCta": "Confirm booking"
+    },
+    "list": {
+      "title": "My bookings",
+      "tabs": { "upcoming": "Upcoming", "past": "Past", "cancelled": "Cancelled" },
+      "empty": {
+        "upcoming": { "title": "No bookings yet", "body": "When you book or get booked, it'll show up here." },
+        "past": { "title": "No past bookings", "body": "Completed services will appear here." },
+        "cancelled": { "title": "Nothing cancelled", "body": "Cancelled or expired bookings will appear here." }
+      }
+    },
+    "detail": {
+      "title": "Booking",
+      "notFound": "This booking no longer exists.",
+      "notesLabel": "Notes",
+      "priceLabel": "Price",
+      "markCompleted": "Mark completed",
+      "completeAfterEnds": "You'll be able to mark it completed once the service ends.",
+      "cancelTitle": "Cancel booking",
+      "cancelBody": "The slot will become available again. Sure?",
+      "cancelCta": "Cancel booking"
+    },
+    "bizum": {
+      "title": "Bizum payment",
+      "fallbackTitle": "Coordinate via chat",
+      "fallbackBody": "{{name}} hasn't set up Bizum. Chat with them to agree on payment.",
+      "openChat": "Open chat",
+      "call": "Call",
+      "disclaimer": "Payment happens outside Dogly Train. The app only facilitates the connection.",
+      "copiedTitle": "Copied",
+      "copiedBody": "Phone number copied to clipboard.",
+      "whatsappPrefilled": "Hi {{name}}, sending you the {{amount}} € for the booking via Bizum."
+    },
+    "errors": {
+      "unauthenticated": "Sign in to book.",
+      "invalid_input": "Booking details are missing.",
+      "rate_limited": "Too many attempts. Wait a moment.",
+      "provider_not_active": "This provider no longer accepts bookings.",
+      "dog_not_found": "That dog isn't on your account.",
+      "slot_taken": "That slot was just taken. Pick another.",
+      "slot_outside_availability": "That slot isn't on their calendar.",
+      "too_close_to_now": "Please book with more notice.",
+      "too_far_in_future": "That date is too far away.",
+      "unknown": "Something went wrong. Try again."
+    }
+  },
+  "fr": {
+    "bizumLabel": "Bizum / téléphone",
+    "bizumHelper": "Visible uniquement dans les réservations confirmées pour que les clients te paient. Tu peux aussi coordonner le paiement par chat.",
+    "weekday": {
+      "short": { "mon": "Lun", "tue": "Mar", "wed": "Mer", "thu": "Jeu", "fri": "Ven", "sat": "Sam", "sun": "Dim" }
+    },
+    "service": {
+      "training": "Dressage",
+      "walk": "Balade",
+      "day_care": "Garde de jour",
+      "overnight": "Nuit",
+      "home_care": "À domicile"
+    },
+    "status": {
+      "confirmed": "Confirmée",
+      "completed": "Terminée",
+      "cancelled_by_owner": "Annulée",
+      "cancelled_by_provider": "Annulée",
+      "expired": "Expirée"
+    },
+    "editor": {
+      "title": "Mon agenda",
+      "intro": "Définis tes disponibilités. Les créneaux libres apparaîtront aux clients.",
+      "addWindow": "+ créneau",
+      "blocked": "Bloqué",
+      "windowHint": "Choisis début et fin (par pas de 30 min).",
+      "startTime": "Début",
+      "endTime": "Fin",
+      "saveChanges": "Enregistrer",
+      "saved": "Agenda mis à jour.",
+      "tapChipToRemove": "Appuie sur un créneau pour le supprimer.",
+      "providersOnly": "Réservé aux dresseurs et gardiens.",
+      "bizumWarningTitle": "Configure ton Bizum",
+      "bizumWarningBody": "Sans Bizum, les clients coordonneront le paiement par chat.",
+      "bizumWarningCta": "Configurer"
+    },
+    "picker": {
+      "pickDay": "Choisir un jour",
+      "pickTime": "Choisir une heure",
+      "noSlots": "Aucun créneau libre ce jour."
+    },
+    "flow": {
+      "title": "Réserver",
+      "bookCta": "Réserver",
+      "providerNotFound": "Ce profil n'existe plus.",
+      "noAvailabilityTitle": "Pas encore d'agenda",
+      "noAvailabilityBody": "Ce professionnel n'a pas encore publié ses horaires. Contacte-le par chat.",
+      "noDogsTitle": "Ajoute ton chien d'abord",
+      "noDogsBody": "Tu dois enregistrer au moins un chien avant de réserver.",
+      "addDogCta": "Ajouter chien",
+      "serviceLabel": "Service",
+      "durationLabel": "Durée",
+      "dogLabel": "Pour quel chien ?",
+      "notesLabel": "Notes (facultatif)",
+      "notesPlaceholder": "Quelque chose à savoir…",
+      "priceInfoLine": "Tarif indicatif : {{amount}} €",
+      "paymentDisclaimer": "Le paiement se fait hors-app (Bizum, virement, etc.). Tu verras les coordonnées après confirmation.",
+      "continueCta": "Continuer",
+      "confirmCta": "Confirmer la réservation"
+    },
+    "list": {
+      "title": "Mes réservations",
+      "tabs": { "upcoming": "À venir", "past": "Passées", "cancelled": "Annulées" },
+      "empty": {
+        "upcoming": { "title": "Pas de réservation", "body": "Tes futures réservations apparaîtront ici." },
+        "past": { "title": "Pas de réservation passée", "body": "Tes services terminés apparaîtront ici." },
+        "cancelled": { "title": "Rien d'annulé", "body": "Les réservations annulées apparaîtront ici." }
+      }
+    },
+    "detail": {
+      "title": "Réservation",
+      "notFound": "Cette réservation n'existe plus.",
+      "notesLabel": "Notes",
+      "priceLabel": "Tarif",
+      "markCompleted": "Marquer terminée",
+      "completeAfterEnds": "Tu pourras marquer comme terminé une fois le service achevé.",
+      "cancelTitle": "Annuler la réservation",
+      "cancelBody": "Le créneau redeviendra disponible. Confirmer ?",
+      "cancelCta": "Annuler"
+    },
+    "bizum": {
+      "title": "Paiement Bizum",
+      "fallbackTitle": "Coordonner par chat",
+      "fallbackBody": "{{name}} n'a pas configuré Bizum. Discutez du paiement par chat.",
+      "openChat": "Ouvrir le chat",
+      "call": "Appeler",
+      "disclaimer": "Le paiement se fait hors de Dogly Train. L'app facilite uniquement la mise en contact.",
+      "copiedTitle": "Copié",
+      "copiedBody": "Numéro copié dans le presse-papiers.",
+      "whatsappPrefilled": "Salut {{name}}, je t'envoie les {{amount}} € de la réservation par Bizum."
+    },
+    "errors": {
+      "unauthenticated": "Connecte-toi pour réserver.",
+      "invalid_input": "Données de réservation manquantes.",
+      "rate_limited": "Trop de tentatives. Patiente un instant.",
+      "provider_not_active": "Ce profil n'accepte plus de réservations.",
+      "dog_not_found": "Ce chien n'est pas sur ton compte.",
+      "slot_taken": "Ce créneau vient d'être pris. Choisis-en un autre.",
+      "slot_outside_availability": "Ce créneau n'est pas dans son agenda.",
+      "too_close_to_now": "Réserve un peu plus tôt.",
+      "too_far_in_future": "Cette date est trop éloignée.",
+      "unknown": "Une erreur est survenue. Réessaie."
+    }
+  },
+  "pt": {
+    "bizumLabel": "Bizum / telefone",
+    "bizumHelper": "Aparece apenas em reservas confirmadas para os clientes te pagarem. Podes deixar vazio e combinar pagamento por chat.",
+    "weekday": {
+      "short": { "mon": "Seg", "tue": "Ter", "wed": "Qua", "thu": "Qui", "fri": "Sex", "sat": "Sáb", "sun": "Dom" }
+    },
+    "service": {
+      "training": "Treino",
+      "walk": "Passeio",
+      "day_care": "Creche",
+      "overnight": "Pernoita",
+      "home_care": "Ao domicílio"
+    },
+    "status": {
+      "confirmed": "Confirmada",
+      "completed": "Concluída",
+      "cancelled_by_owner": "Cancelada",
+      "cancelled_by_provider": "Cancelada",
+      "expired": "Expirada"
+    },
+    "editor": {
+      "title": "A minha agenda",
+      "intro": "Define a tua disponibilidade. Os horários livres aparecerão aos clientes.",
+      "addWindow": "+ horário",
+      "blocked": "Bloqueado",
+      "windowHint": "Escolhe início e fim (passos de 30 min).",
+      "startTime": "Início",
+      "endTime": "Fim",
+      "saveChanges": "Guardar",
+      "saved": "Agenda atualizada.",
+      "tapChipToRemove": "Toca num horário para removê-lo.",
+      "providersOnly": "Apenas treinadores e cuidadores.",
+      "bizumWarningTitle": "Configura o teu Bizum",
+      "bizumWarningBody": "Sem ele, os clientes coordenarão o pagamento por chat.",
+      "bizumWarningCta": "Configurar"
+    },
+    "picker": {
+      "pickDay": "Escolher dia",
+      "pickTime": "Escolher hora",
+      "noSlots": "Sem horários livres nesse dia."
+    },
+    "flow": {
+      "title": "Reservar",
+      "bookCta": "Reservar",
+      "providerNotFound": "Este perfil já não existe.",
+      "noAvailabilityTitle": "Ainda sem agenda",
+      "noAvailabilityBody": "Este profissional ainda não publicou os horários. Escreve-lhe pelo chat.",
+      "noDogsTitle": "Adiciona o teu cão primeiro",
+      "noDogsBody": "Precisas de registar pelo menos um cão antes de reservar.",
+      "addDogCta": "Adicionar cão",
+      "serviceLabel": "Serviço",
+      "durationLabel": "Duração",
+      "dogLabel": "Para que cão?",
+      "notesLabel": "Notas (opcional)",
+      "notesPlaceholder": "Algo que o profissional deva saber…",
+      "priceInfoLine": "Tarifa indicativa: {{amount}} €",
+      "paymentDisclaimer": "O pagamento é fora da app (Bizum, transferência, etc.). Após confirmar verás os dados.",
+      "continueCta": "Continuar",
+      "confirmCta": "Confirmar reserva"
+    },
+    "list": {
+      "title": "Minhas reservas",
+      "tabs": { "upcoming": "Próximas", "past": "Passadas", "cancelled": "Canceladas" },
+      "empty": {
+        "upcoming": { "title": "Sem reservas", "body": "As tuas reservas aparecerão aqui." },
+        "past": { "title": "Sem reservas passadas", "body": "Os serviços concluídos aparecerão aqui." },
+        "cancelled": { "title": "Nada cancelado", "body": "As reservas canceladas aparecerão aqui." }
+      }
+    },
+    "detail": {
+      "title": "Reserva",
+      "notFound": "Esta reserva já não existe.",
+      "notesLabel": "Notas",
+      "priceLabel": "Tarifa",
+      "markCompleted": "Marcar concluída",
+      "completeAfterEnds": "Poderás marcar como concluída quando o serviço terminar.",
+      "cancelTitle": "Cancelar reserva",
+      "cancelBody": "O horário voltará a ficar disponível. Tens a certeza?",
+      "cancelCta": "Cancelar"
+    },
+    "bizum": {
+      "title": "Pagamento Bizum",
+      "fallbackTitle": "Coordenar pelo chat",
+      "fallbackBody": "{{name}} não configurou Bizum. Combinem o pagamento por chat.",
+      "openChat": "Abrir chat",
+      "call": "Ligar",
+      "disclaimer": "O pagamento é fora da Dogly Train. A app só facilita a ligação.",
+      "copiedTitle": "Copiado",
+      "copiedBody": "Número copiado para o clipboard.",
+      "whatsappPrefilled": "Olá {{name}}, envio-te os {{amount}} € da reserva por Bizum."
+    },
+    "errors": {
+      "unauthenticated": "Inicia sessão para reservar.",
+      "invalid_input": "Dados em falta.",
+      "rate_limited": "Demasiadas tentativas. Espera um momento.",
+      "provider_not_active": "Este perfil já não aceita reservas.",
+      "dog_not_found": "Esse cão não está na tua conta.",
+      "slot_taken": "Esse horário acabou de ser apanhado. Escolhe outro.",
+      "slot_outside_availability": "Esse horário não está na agenda dele.",
+      "too_close_to_now": "Reserva com mais antecedência.",
+      "too_far_in_future": "Essa data está demasiado longe.",
+      "unknown": "Algo correu mal. Tenta novamente."
+    }
+  },
+  "de": {
+    "bizumLabel": "Bizum / Telefonnummer",
+    "bizumHelper": "Erscheint nur in bestätigten Buchungen, damit Kunden dich bezahlen können. Optional — du kannst Zahlung auch per Chat absprechen.",
+    "weekday": {
+      "short": { "mon": "Mo", "tue": "Di", "wed": "Mi", "thu": "Do", "fri": "Fr", "sat": "Sa", "sun": "So" }
+    },
+    "service": {
+      "training": "Training",
+      "walk": "Spaziergang",
+      "day_care": "Tagesbetreuung",
+      "overnight": "Übernachtung",
+      "home_care": "Zuhause"
+    },
+    "status": {
+      "confirmed": "Bestätigt",
+      "completed": "Abgeschlossen",
+      "cancelled_by_owner": "Storniert",
+      "cancelled_by_provider": "Storniert",
+      "expired": "Abgelaufen"
+    },
+    "editor": {
+      "title": "Mein Kalender",
+      "intro": "Lege deine Verfügbarkeit fest. Freie Zeiten werden Kunden angezeigt.",
+      "addWindow": "+ Zeitfenster",
+      "blocked": "Blockiert",
+      "windowHint": "Wähle Start und Ende (30-Min-Schritte).",
+      "startTime": "Start",
+      "endTime": "Ende",
+      "saveChanges": "Speichern",
+      "saved": "Kalender aktualisiert.",
+      "tapChipToRemove": "Tippe auf ein Zeitfenster zum Entfernen.",
+      "providersOnly": "Nur für Trainer und Betreuer.",
+      "bizumWarningTitle": "Bizum einrichten",
+      "bizumWarningBody": "Ohne Bizum erfolgt die Zahlungsabsprache per Chat.",
+      "bizumWarningCta": "Einrichten"
+    },
+    "picker": {
+      "pickDay": "Tag wählen",
+      "pickTime": "Uhrzeit wählen",
+      "noSlots": "Keine freien Slots an diesem Tag."
+    },
+    "flow": {
+      "title": "Buchen",
+      "bookCta": "Buchen",
+      "providerNotFound": "Dieser Anbieter existiert nicht mehr.",
+      "noAvailabilityTitle": "Noch kein Kalender",
+      "noAvailabilityBody": "Dieser Anbieter hat seine Zeiten noch nicht veröffentlicht. Schreibe per Chat.",
+      "noDogsTitle": "Füge zuerst deinen Hund hinzu",
+      "noDogsBody": "Du brauchst mindestens einen registrierten Hund.",
+      "addDogCta": "Hund hinzufügen",
+      "serviceLabel": "Service",
+      "durationLabel": "Dauer",
+      "dogLabel": "Für welchen Hund?",
+      "notesLabel": "Notizen (optional)",
+      "notesPlaceholder": "Was sollte der Anbieter wissen…",
+      "priceInfoLine": "Richtpreis: {{amount}} €",
+      "paymentDisclaimer": "Zahlung erfolgt außerhalb der App (Bizum, Überweisung, etc.). Nach der Bestätigung siehst du die Daten.",
+      "continueCta": "Weiter",
+      "confirmCta": "Buchung bestätigen"
+    },
+    "list": {
+      "title": "Meine Buchungen",
+      "tabs": { "upcoming": "Kommend", "past": "Vergangene", "cancelled": "Storniert" },
+      "empty": {
+        "upcoming": { "title": "Keine Buchungen", "body": "Deine Buchungen erscheinen hier." },
+        "past": { "title": "Keine vergangenen Buchungen", "body": "Abgeschlossene Services erscheinen hier." },
+        "cancelled": { "title": "Nichts storniert", "body": "Stornierte Buchungen erscheinen hier." }
+      }
+    },
+    "detail": {
+      "title": "Buchung",
+      "notFound": "Diese Buchung existiert nicht mehr.",
+      "notesLabel": "Notizen",
+      "priceLabel": "Preis",
+      "markCompleted": "Als abgeschlossen markieren",
+      "completeAfterEnds": "Du kannst nach Ende des Services als abgeschlossen markieren.",
+      "cancelTitle": "Buchung stornieren",
+      "cancelBody": "Der Slot wird wieder frei. Sicher?",
+      "cancelCta": "Stornieren"
+    },
+    "bizum": {
+      "title": "Bizum-Zahlung",
+      "fallbackTitle": "Per Chat absprechen",
+      "fallbackBody": "{{name}} hat kein Bizum eingerichtet. Klärt die Zahlung per Chat.",
+      "openChat": "Chat öffnen",
+      "call": "Anrufen",
+      "disclaimer": "Zahlung erfolgt außerhalb von Dogly Train. Die App vermittelt nur den Kontakt.",
+      "copiedTitle": "Kopiert",
+      "copiedBody": "Telefonnummer in die Zwischenablage kopiert.",
+      "whatsappPrefilled": "Hi {{name}}, ich schicke dir die {{amount}} € für die Buchung per Bizum."
+    },
+    "errors": {
+      "unauthenticated": "Bitte anmelden.",
+      "invalid_input": "Buchungsdaten fehlen.",
+      "rate_limited": "Zu viele Versuche. Bitte warten.",
+      "provider_not_active": "Dieser Anbieter nimmt keine Buchungen mehr an.",
+      "dog_not_found": "Dieser Hund ist nicht in deinem Konto.",
+      "slot_taken": "Dieser Slot wurde gerade vergeben. Wähle einen anderen.",
+      "slot_outside_availability": "Dieser Slot ist nicht im Kalender.",
+      "too_close_to_now": "Bitte mit mehr Vorlauf buchen.",
+      "too_far_in_future": "Dieses Datum ist zu weit weg.",
+      "unknown": "Etwas ist schiefgelaufen. Erneut versuchen."
+    }
+  }
+}

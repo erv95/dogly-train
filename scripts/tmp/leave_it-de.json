@@ -1,0 +1,186 @@
+{
+  "title": "Lass es",
+  "subtitle": "Das wichtigste Sicherheitskommando, das dein Hund lernen kann",
+  "level": "Grundlegend",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Zuhause oder ruhiger Garten",
+  "ageRecommendation": "Ab 8 Wochen",
+  "estimatedSessions": "5–8 Einheiten zum Beherrschen",
+  "objective": "Den Hund beibringen, jeden Gegenstand am Boden oder in der Hand zu ignorieren, wenn er das Signal 'lass es' hört, und ihn so vor dem Verschlucken gefährlicher Dinge zu schützen.",
+  "why": [
+    "Schützt den Hund davor, gefährliche Lebensmittel, Müll oder Giftstoffe auf der Straße zu fressen",
+    "Kontrolliert Impulse bei verlockenden Gegenständen ohne Leinenruck",
+    "Stärkt das Vertrauen zwischen Hund und Halter durch Selbstkontrolle",
+    "Legt die Grundlage für besseres Erkundungsverhalten in neuen Umgebungen"
+  ],
+  "benefits": [
+    "Dein Hund ignoriert Futter, das auf den Boden fällt, bevor du es aufheben kannst",
+    "Verhindert Ressourcenkonflikte mit anderen Hunden",
+    "Reduziert das Risiko versehentlicher Vergiftungen beim Spaziergang",
+    "Entwickelt Selbstkontrolle als übertragbare Fähigkeit für andere Situationen"
+  ],
+  "where": [
+    "🏠 Beginne zuhause in einem ablenkungsfreien Raum",
+    "🌿 Gehe in den Garten oder auf die Terrasse, wenn der Hund es drinnen beherrscht",
+    "🛣️ Übe schließlich auf der Straße mit echten Ablenkungen"
+  ],
+  "materials": [
+    "🫖 Zwei Leckerli-Typen: niedriger Wert (Trockenfutter) und hoher Wert (Huhn, Käse)",
+    "✋ Deine Hände als 'Versteck' für die Leckerlis",
+    "🦮 Lange Leine (optional für das Training im Freien)",
+    "💛 Geduld und Gelassenheit"
+  ],
+  "beforeYouStart": [
+    "Bereite zwei Leckerli-Typen vor: eines als 'Versuchung' und ein besseres zum Belohnen",
+    "Stelle sicher, dass dein Hund ein Mindestmaß an Aufmerksamkeit dir gegenüber zeigt",
+    "Übe zuhause ohne Leine, bevor du nach draußen gehst",
+    "Begrenze die Einheiten auf maximal 5 Minuten, um den Hund nicht zu überfordern",
+    "Nicht üben, wenn der Hund sehr hungrig oder übermäßig aufgeregt ist"
+  ],
+  "methods": [
+    {
+      "id": "closed_fist",
+      "title": "Methode der geschlossenen Faust (empfohlen für den Anfang)",
+      "description": "Du versteckst ein Leckerli in deiner geschlossenen Hand, der Hund versucht es zu bekommen, und wenn er zurückweicht, belohnst du ihn mit einem anderen und besseren Leckerli. Lehrt: Ignorieren = etwas Besseres bekommen.",
+      "bestFor": "Welpen und Hunde ohne Vorerfahrung mit dem Kommando",
+      "steps": [
+        {
+          "title": "Die Faust formen",
+          "description": "Lege ein minderwertiges Leckerli in deine Hand und schließe sie zur Faust. Halte die geschlossene Faust auf Nasenhöhe vor den Hund.",
+          "tip": "Verwende hier ein minderwertiges Leckerli (normales Trockenfutter); das gute Leckerli kommt in die andere Hand oder Tasche.",
+          "troubleshooting": "Wenn der Hund bellt oder intensiv kratzt, halte durch. Ziehe die Hand nicht zurück und schimpfe nicht."
+        },
+        {
+          "title": "Beobachten und warten",
+          "description": "Der Hund wird an deiner Faust schnüffeln, lecken und drücken, um das Leckerli zu bekommen. Öffne die Hand nicht. Warte in Stille.",
+          "tip": "Geduld ist entscheidend. Beim ersten Mal kann es von 10 Sekunden bis 2 Minuten dauern.",
+          "troubleshooting": "Verliert er das Interesse und läuft weg, versuche einen verlockendereren Geruch, aber belohne nur, wenn er zurückweicht."
+        },
+        {
+          "title": "Das Zurückweichen erfassen",
+          "description": "In dem Moment, in dem der Hund seine Nase von der Faust wegzieht (auch nur einen Zentimeter), sage 'lass es' und belohne SOFORT mit dem guten Leckerli aus der anderen Hand.",
+          "tip": "Das Timing ist entscheidend: Die Belohnung muss innerhalb von 2 Sekunden nach dem Zurückweichen ankommen."
+        },
+        {
+          "title": "Wiederholen und Schwierigkeit steigern",
+          "description": "Wiederhole 5–8 Mal pro Einheit. Wenn es flüssig klappt, beginne, einen Gegenstand auf dem Boden unter deinem Fuß zu platzieren.",
+          "tip": "Steigere die Schwierigkeit schrittweise: Faust → bedeckter Boden → sichtbarer Boden → Straße."
+        },
+        {
+          "title": "Das Kommando generalisieren",
+          "description": "Nachdem er es mit der Faust beherrscht, übe mit Gegenständen auf dem Boden, heruntergefallener Nahrung und dann draußen mit echten Ablenkungen.",
+          "tip": "In jeder neuen Umgebung kehre zur einfachsten Stufe zurück, bevor du die Schwierigkeit erhöhst."
+        }
+      ]
+    },
+    {
+      "id": "ground_progression",
+      "title": "Methode der Bodenfortschreitung",
+      "description": "Du beginnst mit dem Leckerli unter deinem Fuß und deckst es allmählich auf, während der Hund lernt, der Versuchung zu widerstehen. Ideal zur Festigung des Kommandos.",
+      "bestFor": "Hunde, die das Grundkonzept der Faust bereits verstehen oder einen höheren Impuls haben",
+      "steps": [
+        {
+          "title": "Leckerli unter dem Fuß",
+          "description": "Lege ein Leckerli auf den Boden und bedecke es vollständig mit deiner Fußspitze. Lass den Hund rund um deinen Fuß schnüffeln.",
+          "tip": "Dein Fuß muss das Leckerli vollständig bedecken, damit er es nicht stehlen kann.",
+          "troubleshooting": "Kratzt er intensiv am Boden, reagiere nicht. Warte ruhig, bis er zurückweicht."
+        },
+        {
+          "title": "Sage 'lass es' und warte",
+          "description": "Wenn der Hund auch nur leicht von deinem Fuß zurückweicht, sage ruhig 'lass es' und belohne mit einem Leckerli aus deiner Hand (nicht das vom Boden).",
+          "tip": "Belohne niemals mit dem Leckerli vom Boden: Der Hund muss lernen, dass 'lass es' bedeutet: 'dieses Leckerli ist nicht für dich, aber du bekommst ein besseres'."
+        },
+        {
+          "title": "Schrittweise aufdecken",
+          "description": "Wenn der Hund wartet, ohne das Bodenleckerli greifen zu wollen, bewege den Fuß sehr leicht, um einen kleinen Teil zu enthüllen. Wiederhole das Kommando.",
+          "tip": "Stürzt er sich darauf, bedecke es wieder mit dem Fuß. Kein Schimpfen — einfach neu starten."
+        },
+        {
+          "title": "Leckerli vollständig sichtbar",
+          "description": "Das Endziel ist, dass der Hund das Leckerli auf dem Boden sehen und es ignorieren kann, wenn er 'lass es' hört, und stattdessen auf dich schaut und auf die Belohnung wartet.",
+          "tip": "Dieser Schritt kann 3–5 zusätzliche Einheiten erfordern. Keine Eile."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "'Lass es' mehrmals hintereinander wiederholen",
+      "cause": "Frustration des Halters, wenn der Hund beim ersten Versuch nicht reagiert",
+      "fix": "Sage das Kommando EINMAL und warte in Stille. Wiederholungen lehren den Hund, es zu ignorieren."
+    },
+    {
+      "error": "Mit dem Gegenstand belohnen, den er lassen sollte",
+      "cause": "Das nächste Leckerli zur Hand nehmen",
+      "fix": "Belohne immer mit einem ANDEREN Leckerli von höherem Wert. Der verbotene Gegenstand darf niemals zur Belohnung werden."
+    },
+    {
+      "error": "Das Kommando in echten Gefahrensituationen ohne vorheriges Training verwenden",
+      "cause": "Annehmen, der Hund wisse es ohne systematisches Üben",
+      "fix": "Übe wochenlang zuhause, bevor du es auf der Straße brauchst. In echten Notfällen entferne den Hund körperlich."
+    },
+    {
+      "error": "Den Hund schimpfen, wenn er den Gegenstand nimmt",
+      "cause": "Impulsive Frustrationsreaktion",
+      "fix": "Niemals bestrafen. Hat er ihn genommen, braucht das Training mehr Grundlagenschritte. Gehe zu einer früheren Stufe zurück."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund nimmt das Leckerli, bevor ich 'lass es' sagen kann",
+      "solution": "Der Gegenstand ist zu leicht erreichbar. Kehre zur geschlossenen Faust zurück und stelle sicher, dass du den Zugang kontrollierst, bevor du weitermachst."
+    },
+    {
+      "problem": "Er macht 'lass es' zuhause, aber auf der Straße funktioniert es nicht",
+      "solution": "Normal: Die Straße hat mehr Reize. Starte das Training draußen von der einfachsten Stufe neu, zunächst mit weniger Ablenkungen."
+    },
+    {
+      "problem": "Mein Hund frustriert sich und bellt, wenn ich 'lass es' sage",
+      "solution": "Der Impuls ist hoch. Übe in kürzeren Einheiten (2–3 Minuten) mit wertvolleren Belohnungen und reduziere den Reiz des verbotenen Gegenstands."
+    },
+    {
+      "problem": "Funktioniert gut mit Futter, aber nicht mit Gegenständen (Socken, Spielzeug)",
+      "solution": "Für den Hund sind das verschiedene Kategorien. Trainiere gezielt mit jedem Gegenstandstyp, beginnend mit denen von geringerem Wert für ihn."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheit 1–2",
+      "goal": "Der Hund zieht die Nase mindestens einmal pro Einheit von der geschlossenen Faust zurück"
+    },
+    {
+      "stage": "Einheit 3–5",
+      "goal": "Ignoriert die Faust bei 7 von 10 Versuchen und schaut dich nach dem guten Leckerli an"
+    },
+    {
+      "stage": "Woche 2",
+      "goal": "Ignoriert ein sichtbares Leckerli auf dem Boden, das vom Fuß bedeckt wird, wenn er 'lass es' hört"
+    },
+    {
+      "stage": "Woche 3–4",
+      "goal": "Ignoriert Gegenstände auf dem Boden ohne Fußabdeckung, zuhause und im Garten"
+    }
+  ],
+  "successSigns": [
+    "Entfernt sich vom Gegenstand und schaut dich spontan an, wenn er 'lass es' hört",
+    "Funktioniert mit verschiedenen Gegenstandstypen (Futter, Spielzeug, Müll)",
+    "Klappt draußen mit moderaten Ablenkungen",
+    "Hält Abstand vom Gegenstand für 5 oder mehr Sekunden"
+  ],
+  "variations": [
+    "Lass es mit Futter in deiner offenen Handfläche (Fortgeschrittene)",
+    "Lass es mit einem anderen Hund als Ablenkung",
+    "Lass es mit einem plötzlich auf den Boden geworfenen Gegenstand",
+    "Lass es beim Gehen (ohne stehen zu bleiben)",
+    "Lass es mit einer Wartezeit vor der Alternativbelohnung"
+  ],
+  "safetyNotes": [
+    "In echten Gefahrensituationen (Gift, Glas) verlasse dich nicht auf das Kommando: handle direkt",
+    "Verwende bei Misserfolgen niemals körperliche oder verbale Strafe: starte die Übung neu",
+    "Stelle sicher, dass Belohnungsleckerlis nicht giftig für Hunde sind (kein Xylitol, Trauben, Zwiebeln)",
+    "Wenn dein Hund Ressourcenschutz oder Knurren zeigt, wenn du dich dem Gegenstand näherst, konsultiere vor dem Weitermachen einen Verhaltenstherapeuten"
+  ],
+  "funFact": "Hunde, die 'lass es' in ihren ersten Lebenswochen lernen, haben bis zu 40 % weniger Tierarztbesuche wegen Fremdkörperingestionen.",
+  "nextLevel": "Übe 'lass es' in Bewegung beim Spaziergang. Dann das Kommando mit anderen Hunden oder Tieren als Ablenkung einführen.",
+  "proTip": "Das Geheimnis von 'lass es' ist, dass der Hund lernt: Etwas ignorieren bringt immer etwas Besseres. Spare niemals an der Qualität des Belohnungsleckerlis — es muss dem verbotenen Gegenstand klar überlegen sein."
+}

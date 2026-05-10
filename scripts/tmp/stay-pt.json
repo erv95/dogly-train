@@ -1,0 +1,158 @@
+{
+  "title": "Quieto / Fica",
+  "subtitle": "Desenvolva o autocontrolo: o seu cão aprende a aguardar na posição",
+  "level": "Básico",
+  "duration": "5–10 min por sessão",
+  "location": "Casa ou jardim sossegado",
+  "ageRecommendation": "A partir das 10 semanas",
+  "estimatedSessions": "8–12 sessões para dominar os 3Ds",
+  "objective": "Ensinar o cão a manter uma posição (sentado ou deitado) até receber o sinal de libertação, aumentando gradualmente a duração, a distância e as distrações.",
+  "why": [
+    "Desenvolve o autocontrolo e a gestão de impulsos — competências essenciais para o dia a dia",
+    "Permite gerir situações comuns com segurança (atravessar a rua, porta de entrada)",
+    "Complemento essencial de 'senta' e 'deita' para os tornar mais úteis",
+    "Reduz a hiperatividade e a impulsividade do cão"
+  ],
+  "benefits": [
+    "O seu cão aguarda tranquilo enquanto prepara a comida ou abre a porta",
+    "Consegue ficar quieto em esplanadas de restaurantes ou no veterinário",
+    "Previne fugas perigosas pela porta de entrada",
+    "Facilita o maneio em situações com pessoas, carros ou bicicletas"
+  ],
+  "where": [
+    "🏠 Em casa (sala ou corredor sem distrações)",
+    "🌿 Jardim sossegado depois de consolidado em interiores",
+    "⛔ Nunca em zona aberta sem segurança até estar muito sólido"
+  ],
+  "materials": [
+    "🫖 Petiscos pequenos, macios e de alto valor",
+    "🦮 Trela curta (opcional para cães muito ativos)",
+    "🛏️ Tapete ou manta como referência de posição",
+    "💛 Paciência: este exercício exige mais tempo do que outros"
+  ],
+  "beforeYouStart": [
+    "O seu cão deve dominar 'senta' ou 'deita' de forma fluida antes de começar",
+    "Escolha uma palavra de libertação clara: 'ok', 'livre' ou 'vai' e use-a sempre",
+    "Comece com apenas 1 segundo de duração: o sucesso inicial é fundamental",
+    "Nunca aumente distância e duração ao mesmo tempo",
+    "Termine sempre a sessão com um 'quieto' que o cão consiga perfeitamente"
+  ],
+  "methods": [
+    {
+      "id": "three_d_progression",
+      "title": "Progressão dos 3Ds (recomendado)",
+      "description": "Trabalha as três dimensões do 'quieto' separadamente e por ordem: primeiro Duração, depois Distância e por fim Distrações. Misturá-las demasiado cedo é o erro mais comum.",
+      "bestFor": "Todos os cães que já conhecem senta ou deita",
+      "steps": [
+        {
+          "title": "Fase 1 – Duração (sem se mover)",
+          "description": "Peça 'senta' ou 'deita', diga 'quieto' com calma e espere 1 segundo antes de recompensar. Depois liberte com 'ok'. Suba de 1 para 3, 5, 10, 30 segundos gradualmente.",
+          "tip": "Se quebrar a posição, não ralhe. Simplesmente peça a posição novamente e reduza o tempo.",
+          "troubleshooting": "Se não aguentar mais de 1 segundo, recompense aos 0,5 segundos e suba muito devagar."
+        },
+        {
+          "title": "Fase 2 – Distância (quando aguentar 30 segundos sem se mover)",
+          "description": "Dê um passo para trás enquanto o cão está em 'quieto'. Regresse antes que ele se mova e recompense. Aumente para 2, 3, 5 passos gradualmente.",
+          "tip": "Regresse SEMPRE junto ao cão para recompensar. Não o chame — vá você até ele.",
+          "troubleshooting": "Se se levantar quando se afastar, reduza a distância. Um passo já é suficiente no início."
+        },
+        {
+          "title": "Fase 3 – Combinar duração e distância",
+          "description": "Quando aguentar 5 passos sem se mover, comece a combinar: afaste-se e espere também alguns segundos antes de regressar a recompensar.",
+          "tip": "A regra: se falhar, simplifique. Regresse ao que funcionava."
+        },
+        {
+          "title": "Fase 4 – Distrações ligeiras",
+          "description": "Com o cão em 'quieto', introduza pequenas distrações: deixe cair algo, mova-se lateralmente, bata palmas suavemente. Se mantiver, recompense muito.",
+          "tip": "Quanto maior a distração, maior deve ser a recompensa por manter o 'quieto'.",
+          "troubleshooting": "Se a distração for demasiada e quebrar, regresse a uma mais suave."
+        },
+        {
+          "title": "Sinal de libertação",
+          "description": "Termine sempre o 'quieto' com a sua palavra de libertação ('ok', 'livre'). O cão aprende que só pode mover-se quando você sinaliza, não quando ele quiser.",
+          "tip": "A libertação é tão importante quanto o próprio 'quieto'. Ensine-a desde o primeiro dia."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Aumentar duração e distância ao mesmo tempo",
+      "cause": "Querer avançar demasiado depressa",
+      "fix": "Trabalhe uma dimensão de cada vez. Mais distância = menos tempo. Mais tempo = menos distância."
+    },
+    {
+      "error": "Chamar o cão de longe para terminar o 'quieto'",
+      "cause": "Conveniência do dono",
+      "fix": "Regresse sempre junto a ele para recompensar. Chamá-lo de longe treina a chamada, não o 'quieto'."
+    },
+    {
+      "error": "Não usar palavra de libertação",
+      "cause": "Descuido ou desconhecimento",
+      "fix": "Sem palavra de libertação, o cão decide quando se mover. Defina 'ok' ou 'livre' desde o primeiro dia."
+    },
+    {
+      "error": "Ralhar com o cão quando quebra a posição",
+      "cause": "Frustração",
+      "fix": "Simplesmente peça a posição novamente. A quebra indica que o exercício era difícil demais, não que o cão é desobediente."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão move-se assim que dou um passo atrás",
+      "solution": "A distância chegou cedo demais. Regresse à fase 1 (apenas duração sem se mover) até aguentar 30 segundos confortavelmente."
+    },
+    {
+      "problem": "Mantém o 'quieto' em casa mas na rua não",
+      "solution": "Normal: as distrações externas são mais poderosas. Comece de novo desde 1 segundo no novo ambiente."
+    },
+    {
+      "problem": "Levanta-se mesmo quando vou recompensá-lo",
+      "solution": "O movimento da sua mão para o bolso dos petiscos é o sinal para se mover. Varie o momento em que tira o petisco."
+    },
+    {
+      "problem": "O meu cão fica quieto mas parece muito ansioso",
+      "solution": "Reduza muito o tempo e a distância. O 'quieto' deve ser confortável, não stressante. Ansiedade significa que o exercício é exigente demais."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessões 1–3",
+      "goal": "Mantém sentado ou deitado durante 5–10 segundos sem se mover"
+    },
+    {
+      "stage": "Sessões 4–7",
+      "goal": "Mantém a posição com 3–5 passos de distância durante 10 segundos"
+    },
+    {
+      "stage": "Sessões 8–10",
+      "goal": "Aguenta 30 segundos com 5 passos de distância em casa"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Mantém o 'quieto' com distrações ligeiras (ruídos, movimentos laterais)"
+    }
+  ],
+  "successSigns": [
+    "Fica na posição até ouvir a palavra de libertação",
+    "Não se move quando se afasta 5 ou mais passos",
+    "Mantém a posição com pequenas distrações perto",
+    "O 'quieto' funciona tanto em sentado como em deitado"
+  ],
+  "variations": [
+    "Quieto enquanto abre e fecha a porta de casa",
+    "Quieto enquanto prepara a comida (autocontrolo)",
+    "Quieto enquanto outras pessoas caminham perto",
+    "Quieto enquanto se agacha ou se senta no chão",
+    "Quieto lá fora numa zona vedada"
+  ],
+  "safetyNotes": [
+    "Nunca use 'quieto' para deixar o cão sozinho numa zona de risco (rua aberta, varanda)",
+    "Se o seu cão ficar muito stressado durante o exercício, faça uma pausa e simplifique",
+    "Cães muito ativos ou ansiosos precisam de mais tempo: não os compare com outros",
+    "Cachorros com menos de 14 semanas: máximo 3 minutos por sessão"
+  ],
+  "funFact": "Os Pastores Alemães e os Border Collies aprendem 'quieto' em poucas sessões, mas os terriers e spaniels podem precisar do dobro do tempo pela sua alta impulsividade natural. A raça importa!",
+  "nextLevel": "Pratique o 'quieto' com distrações reais: outros cães, bicicletas, pessoas a correr. Depois combine-o com 'lugar' para que o cão vá e fique num sítio específico.",
+  "proTip": "O 'quieto' quebra quando o cão perde motivação ou o ambiente é difícil demais. Se falhar três vezes seguidas, o exercício é duro demais — recue um nível e termine com sucesso."
+}

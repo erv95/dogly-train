@@ -1,0 +1,158 @@
+{
+  "title": "Quieto",
+  "subtitle": "Controla el impulso: tu perro aprende a esperar en su lugar",
+  "level": "Básico",
+  "duration": "5–10 min por sesión",
+  "location": "Casa o jardín tranquilo",
+  "ageRecommendation": "Desde 10 semanas",
+  "estimatedSessions": "8–12 sesiones para dominar las 3D",
+  "objective": "Enseñar al perro a mantener la posición (sentado o tumbado) hasta recibir la señal de liberación, incrementando gradualmente duración, distancia y distracciones.",
+  "why": [
+    "Desarrolla el autocontrol e impulso: habilidades clave para la convivencia",
+    "Permite gestionar situaciones cotidianas con seguridad (cruce de calle, puerta de entrada)",
+    "Complemento esencial de “sentado” y “tumbado” para hacerlos más útiles",
+    "Reduce la hiperactividad y la impulsividad en el perro"
+  ],
+  "benefits": [
+    "Tu perro espera tranquilo mientras preparas su comida o abres la puerta",
+    "Puede quedarse quieto en terrazas de restaurantes o en el veterinario",
+    "Previene escapadas peligrosas por la puerta de casa",
+    "Facilita el manejo en situaciones con personas, coches o bicicletas"
+  ],
+  "where": [
+    "🏠 En casa (salón o pasillo sin distracciones)",
+    "🌿 Jardín tranquilo una vez consolidado en interiores",
+    "⛔ Nunca en zona abierta sin seguridad hasta que sea muy sólido"
+  ],
+  "materials": [
+    "🫖 Premios pequeños y blandos de alto valor",
+    "🦮 Correa corta (opcional para perros muy activos)",
+    "🛏️ Alfombra o manta como referencia de posición",
+    "💛 Paciencia: este ejercicio requiere más tiempo que otros"
+  ],
+  "beforeYouStart": [
+    "Tu perro debe dominar “sentado” o “tumbado” con fluidez antes de empezar",
+    "Define una palabra de liberación clara: “ok”, “libre” o “vamos” y úsala siempre",
+    "Empieza con sólo 1 segundo de duración: el éxito temprano es clave",
+    "Nunca aumentes distancia y duración al mismo tiempo",
+    "Termina siempre la sesión con un “quieto” que el perro logre perfectamente"
+  ],
+  "methods": [
+    {
+      "id": "three_d_progression",
+      "title": "Progresión de las 3D (recomendado)",
+      "description": "Trabajas las tres dimensiones del 'quieto' de forma separada y ordenada: primero Duración, luego Distancia y finalmente Distracciones. Mezclarlas demasiado pronto es el error más común.",
+      "bestFor": "Todos los perros que ya conocen sentado o tumbado",
+      "steps": [
+        {
+          "title": "Fase 1 – Duración (sin moverte)",
+          "description": "Pide “sentado” o “tumbado”, di “quieto” con calma y espera 1 segundo antes de premiar. Luego libera con “ok”. Sube de 1 a 3, 5, 10, 30 segundos gradualmente.",
+          "tip": "Si rompe la posición, no le riñas. Simplemente vuelve a pedir la posición y reduce el tiempo.",
+          "troubleshooting": "Si no aguanta más de 1 segundo, entrégate: premia a los 0.5 segundos y sube muy despacio."
+        },
+        {
+          "title": "Fase 2 – Distancia (cuando aguanta 30 segundos sin moverte)",
+          "description": "Da un paso hacia atrás mientras el perro está en “quieto”. Regresa antes de que se mueva y premia. Aumenta a 2, 3, 5 pasos gradualmente.",
+          "tip": "Regresa SIEMPRE a premiar junto al perro. No le llames, ve tú a él.",
+          "troubleshooting": "Si se levanta al alejarte, reduce la distancia. Un paso ya es suficiente al principio."
+        },
+        {
+          "title": "Fase 3 – Combinar duración y distancia",
+          "description": "Cuando aguante 5 pasos sin moverse, empieza a combinar: aléjate y además espera algunos segundos antes de regresar a premiar.",
+          "tip": "La regla: si falla, simplifica. Vuelve a lo que funcionaba antes."
+        },
+        {
+          "title": "Fase 4 – Distracciones leves",
+          "description": "Con el perro en “quieto”, introduce pequeñas distracciones: dejar caer algo, moverte lateralmente, aplaudir suavemente. Si mantiene, premia mucho.",
+          "tip": "Cuanto mayor la distracción, mayor debe ser la recompensa al mantener el “quieto”.",
+          "troubleshooting": "Si la distracción es demasiado fuerte y rompe, vuelve a una más suave."
+        },
+        {
+          "title": "Señal de liberación",
+          "description": "Siempre termina el “quieto” con tu palabra de liberación (“ok”, “libre”). El perro aprende que sólo puede moverse cuando tú lo indicas, no cuando quiere.",
+          "tip": "La liberación es tan importante como el propio “quieto”. Enséñala desde el primer día."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Aumentar duración y distancia al mismo tiempo",
+      "cause": "Querer avanzar demasiado rápido",
+      "fix": "Trabaja una dimensión cada vez. Más distancia = menos tiempo. Más tiempo = menos distancia."
+    },
+    {
+      "error": "Llamar al perro desde lejos para terminar el “quieto”",
+      "cause": "Comodidad del entrenador",
+      "fix": "Regresa siempre junto a él para premiar. Llamarlo desde lejos entrena la llamada, no el “quieto”."
+    },
+    {
+      "error": "No usar palabra de liberación",
+      "cause": "Descuido o desconocimiento",
+      "fix": "Sin palabra de liberación, el perro decide cuándo moverse. Define “ok” o “libre” desde el primer día."
+    },
+    {
+      "error": "Reñir al perro cuando rompe la posición",
+      "cause": "Frustración",
+      "fix": "Simplemente vuelve a pedir la posición. La ruptura indica que el ejercicio era demasiado difícil, no que el perro es desobediente."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro se mueve en cuanto me alejo un paso",
+      "solution": "La distancia llegó demasiado pronto. Vuelve a fase 1 (solo duración sin moverte) hasta que aguante 30 segundos cómodamente."
+    },
+    {
+      "problem": "Mantiene el “quieto” en casa pero en la calle no",
+      "solution": "Normal: las distracciones externas son más poderosas. Vuelve a empezar desde 1 segundo en el nuevo entorno."
+    },
+    {
+      "problem": "Se levanta justo cuando le voy a premiar",
+      "solution": "El movimiento de tu mano hacia el bolsillo de premios es la señal de que puede moverse. Varía el momento de sacar el premio."
+    },
+    {
+      "problem": "Mi perro se queda quieto pero se pone muy ansioso",
+      "solution": "Reduce mucho el tiempo y la distancia. El “quieto” debe ser cómodo, no estresante. Si hay ansiedad, el ejercicio es demasiado exigente."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–3",
+      "goal": "Mantiene sentado o tumbado durante 5–10 segundos sin que te muevas"
+    },
+    {
+      "stage": "Sesión 4–7",
+      "goal": "Mantiene la posición con 3–5 pasos de distancia durante 10 segundos"
+    },
+    {
+      "stage": "Sesión 8–10",
+      "goal": "Aguanta 30 segundos con 5 pasos de distancia en casa"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Mantiene el “quieto” con distracciones leves (ruidos, movimientos laterales)"
+    }
+  ],
+  "successSigns": [
+    "Se queda quieto hasta escuchar la palabra de liberación",
+    "No se mueve cuando te alejas 5 pasos o más",
+    "Mantiene la posición con pequeñas distracciones cerca",
+    "El “quieto” funciona tanto en sentado como en tumbado"
+  ],
+  "variations": [
+    "Quieto mientras abres y cierras la puerta de casa",
+    "Quieto mientras preparas su comida (autocontrol)",
+    "Quieto con otras personas caminando cerca",
+    "Quieto mientras tú te agachas o te sientas",
+    "Quieto fuera de casa en zona vallada"
+  ],
+  "safetyNotes": [
+    "Nunca uses “quieto” para dejar al perro solo en zona de riesgo (calle abierta, balcón)",
+    "Si tu perro se estresa mucho durante el ejercicio, haz una pausa y simplifica",
+    "Perros muy activos o ansiosos necesitan más tiempo: no compares con otros",
+    "Cachorros menores de 14 semanas: máximo 3 minutos por sesión"
+  ],
+  "funFact": "Los pastores alemanes y border collies aprenden “quieto” en pocas sesiones, pero los terriers y spaniels pueden necesitar el doble de tiempo por su alta impulsividad natural. ¡La raza importa!",
+  "nextLevel": "Practica el “quieto” con distracciones reales: otros perros, bicicletas, personas corriendo. Luego combínalo con “lugar” para que el perro vaya y se quede en un sitio específico.",
+  "proTip": "El “quieto” se rompe cuando el perro pierde la motivación o el entorno es demasiado difícil. Si falla tres veces seguidas, el ejercicio es demasiado duro: retrocede un paso y termina con éxito."
+}

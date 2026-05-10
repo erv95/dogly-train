@@ -1,0 +1,160 @@
+{
+  "title": "Drop It",
+  "subtitle": "The command that can save your dog's life",
+  "level": "Advanced",
+  "duration": "5–10 min per session",
+  "location": "Home, garden, and any environment",
+  "ageRecommendation": "From 12 weeks (adapt difficulty)",
+  "estimatedSessions": "8–12 sessions for a reliable response",
+  "objective": "Teach the dog to immediately release any object — toy, food, dangerous item — on the cue \"drop it\", using the trade-up game as the foundation.",
+  "why": [
+    "Can save the dog's life if they pick up something dangerous or toxic",
+    "Prevents chase games that reinforce holding on",
+    "Reduces resource guarding behavior (growling when you approach)",
+    "A safety skill every dog must know"
+  ],
+  "benefits": [
+    "You can safely retrieve any dangerous object from your dog's mouth",
+    "Fetch and retrieve games become much smoother and more fun",
+    "Reduces tension and conflict around valued objects",
+    "Builds trust: the dog learns that dropping always brings something good"
+  ],
+  "where": [
+    "🏠 At home, always the first training environment",
+    "🌿 In the garden once solid at home",
+    "🎯 Any environment with real objects once generalized"
+  ],
+  "materials": [
+    "🫖 Very high-value treats (chicken, cheese, sausage — the best you have)",
+    "🦴 A low-value toy to start (not the dog's favorite)",
+    "🦮 Optional leash for the first phase",
+    "💛 Complete calm — no anger or frustration ever"
+  ],
+  "beforeYouStart": [
+    "Your dog should have some impulse control from previous courses",
+    "Never attempt to pull an object from your dog's mouth by force",
+    "If your dog growls defensively over objects, consult a professional before continuing",
+    "Always have the trade (the treat) ready before approaching the dog",
+    "Accept that early on the dog may learn to drop quickly to get the treat before you even ask"
+  ],
+  "methods": [
+    {
+      "id": "trade_up",
+      "title": "Trade-up method (recommended)",
+      "description": "You offer something of higher value than what the dog has in exchange for dropping it. You never snatch the object. The dog learns that dropping always means getting something better.",
+      "bestFor": "All dogs, especially those prone to resource guarding",
+      "steps": [
+        {
+          "title": "Start with a low-value toy",
+          "description": "Give the dog a toy they like moderately (not their favorite). Let them have it and enjoy it for a moment.",
+          "tip": "If there's no starting object, try one with treat scent or that has been rewarded near before.",
+          "troubleshooting": "If the dog won't pick up the toy, try a more interesting one or play with it yourself for a few seconds first."
+        },
+        {
+          "title": "Calmly approach with the treat visible",
+          "description": "Without rushing, walk toward the dog with the treat in your open hand, clearly visible. Don't try to take the toy yet — just let the dog see what you have.",
+          "tip": "Calm is key. If you approach fast or tensely, the dog will grip harder.",
+          "troubleshooting": "If the dog moves away when you approach, practice walking toward and away without asking anything for several days first."
+        },
+        {
+          "title": "Offer the trade — don't demand the object",
+          "description": "Bring the treat to the dog's nose while they hold the toy. When they open their mouth to sniff or take the treat, the toy will fall naturally. Say \"drop it\" at that exact moment.",
+          "tip": "The key: the toy falls because the dog opens their mouth for the treat. You don't pull it out.",
+          "troubleshooting": "If the dog grips tighter, remove the treat, wait a few seconds, and try again more slowly."
+        },
+        {
+          "title": "Reward generously and return the toy",
+          "description": "Give several treats in a row while the toy is on the floor. Then hand the toy back to the dog. This teaches that dropping is not permanent loss.",
+          "tip": "Returning the toy is essential: if you always keep it, the dog will learn to never drop it.",
+          "troubleshooting": "If the dog doesn't want the toy back, that's fine. The trade was a success regardless."
+        },
+        {
+          "title": "Generalize with more challenging objects",
+          "description": "Over time, practice \"drop it\" with favorite toys, found food, socks, or any object the dog picks up. For dangerous objects, the response must be automatic.",
+          "tip": "Always trade: even if you later let them keep the toy, the trade must happen first.",
+          "troubleshooting": "If the dog learns to pick things up just to get the trade, also practice \"leave it\" (don't touch a specific object) as a complement."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Trying to pull the object out of the dog's mouth",
+      "cause": "Instinct to solve the problem quickly",
+      "fix": "Never put your hand in or pull. Always use the trade. Forcing can cause defensive biting."
+    },
+    {
+      "error": "Chasing the dog when they have something they shouldn't",
+      "cause": "Panic at seeing the dangerous object",
+      "fix": "Don't run after the dog. Sit on the floor, show the treat and wait. Chasing turns this into an irresistible game."
+    },
+    {
+      "error": "Never returning the toy after the trade",
+      "cause": "Thinking \"if they drop it, we take it\"",
+      "fix": "Always return the object when safe. The dog must learn that dropping is temporary and neutral, not a permanent loss."
+    },
+    {
+      "error": "Using low-value treats to trade for something highly prized",
+      "cause": "Not calibrating the value of the trade",
+      "fix": "The trade must always be \"better\". For the favorite toy, use the absolute best treat available."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My dog opens their mouth but takes a long time to drop",
+      "solution": "That is progress. Keep rewarding generously and response time will reduce with practice."
+    },
+    {
+      "problem": "The dog growls when I approach to take the object",
+      "solution": "This is resource guarding: never force it. Consult a professional trainer. In the meantime, don't approach objects that cause tension."
+    },
+    {
+      "problem": "Works fine with toys but not with food found on the ground",
+      "solution": "Food is extremely high value. Practice first with lower-value treats near the food, increasing the challenge very slowly."
+    },
+    {
+      "problem": "Dog quickly learns to grab things just to get the trade",
+      "solution": "Sign of intelligence. Add \"leave it\" (don't touch a neutral object) as a complement so the dog learns both sides of the behavior."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Session 1–3",
+      "goal": "Dog opens mouth and releases the toy when seeing the treat, even if it takes 3–5 seconds"
+    },
+    {
+      "stage": "Session 4–6",
+      "goal": "Drops within 2 seconds of hearing \"drop it\" with medium-value toys"
+    },
+    {
+      "stage": "Session 7–9",
+      "goal": "Drops immediately even with the favorite toy in exchange for the treat"
+    },
+    {
+      "stage": "Week 3–4",
+      "goal": "Drops objects found on the street on hearing the cue, without you needing to show the treat first"
+    }
+  ],
+  "successSigns": [
+    "Releases the object on cue without needing to see the treat first",
+    "Does not growl or move away when you approach while they have something in their mouth",
+    "Responds equally with toys, food, and found objects",
+    "Turns toward you after dropping, expecting the trade"
+  ],
+  "variations": [
+    "Drop it in water (practice in pool or tub)",
+    "Drop it with food in mouth (snacks found on the street)",
+    "Drop it during tug-of-war play",
+    "Drop it with fabric objects (socks, clothing)",
+    "Drop it at a distance (when the dog is far from you)"
+  ],
+  "safetyNotes": [
+    "Never put your fingers in the mouth of an unknown or tense dog holding an object",
+    "If the dog frequently swallows objects, consult the vet (possible pica)",
+    "Do not use this technique as an excuse to always give food when the dog has something — the response must generalize",
+    "With a toxic or life-threatening object, use the trade without hesitation and move the dog away from the area"
+  ],
+  "funFact": "Dogs that learn \"drop it\" correctly tend to play more confidently and spontaneously release objects during play, because they've learned that doing so brings good things.",
+  "nextLevel": "Combine \"drop it\" with \"fetch\" for a completely smooth retrieve game. Also practice \"leave it\" (don't pick up an object from the floor) as an essential complement.",
+  "proTip": "Practice \"drop it\" with objects your dog is allowed to have (toys), not just forbidden items. If the trade only appears when something bad is happening, the dog will learn to hide with whatever they find."
+}

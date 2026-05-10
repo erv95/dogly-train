@@ -1,0 +1,160 @@
+{
+  "title": "Go to Your Place",
+  "subtitle": "Your dog learns to go to their mat and stay until you release them",
+  "level": "Intermediate",
+  "duration": "5–10 min per session",
+  "location": "Home with a designated mat or bed",
+  "ageRecommendation": "From 14 weeks",
+  "estimatedSessions": "8–12 sessions to master",
+  "objective": "Teach the dog to go to a designated mat or bed and remain calmly there until given a release cue.",
+  "why": [
+    "Gives the dog their own safe space in the home",
+    "Reduces intrusive behavior during meals or when guests arrive",
+    "Teaches the dog to self-settle",
+    "Lays the foundation for distraction management at home"
+  ],
+  "benefits": [
+    "Your dog won't bother you during meals or when guests come over",
+    "Reduces anxiety by providing a predictable, safe space",
+    "Improves self-control and frustration tolerance",
+    "Allows the dog to rest without being constantly underfoot"
+  ],
+  "where": [
+    "🏠 At home, with the mat always in the same spot",
+    "🛋️ In the living room or main family activity area",
+    "⛔ Avoid high-traffic areas where the dog will be disturbed"
+  ],
+  "materials": [
+    "🛏️ A designated bed, blanket or mat (always the same one)",
+    "🫖 High-value treats for the first sessions",
+    "🦮 Long leash (optional, for early distance work)",
+    "💛 Patience and daily consistency"
+  ],
+  "beforeYouStart": [
+    "Your dog should have a solid \"down\" and \"stay\" before starting",
+    "Choose one spot for the mat and don't change it during training",
+    "The bed must be comfortable and large enough to lie down fully",
+    "Have high-value treats ready: this exercise demands more focus",
+    "Practice in calm moments, not when the dog is already excited"
+  ],
+  "methods": [
+    {
+      "id": "lure_to_mat",
+      "title": "Lure-to-mat method (recommended)",
+      "description": "You use a treat to guide the dog to the mat, then progressively add distance, duration, and distractions.",
+      "bestFor": "Dogs that already know down and stay",
+      "steps": [
+        {
+          "title": "Lure the dog onto the mat",
+          "description": "With a treat in your hand, guide the dog toward the mat. When all four paws are on it, say \"place\" and deliver the treat.",
+          "tip": "Drop the treat on the mat, not on the floor. This reinforces being on the mat.",
+          "troubleshooting": "If the dog won't step on the mat, start with the treat at the edge, then gradually move it to the center."
+        },
+        {
+          "title": "Ask for a down on the mat",
+          "description": "Once on the mat, ask for \"down\". When the dog lies down, reward. The goal is now lying down on their place.",
+          "tip": "The down position makes it much easier to maintain calm and build duration.",
+          "troubleshooting": "If the dog won't lie down, use the same lure technique from the down course."
+        },
+        {
+          "title": "Introduce the release word",
+          "description": "After 2–3 seconds of lying down, say \"free\" (or \"okay\" — always the same word) and encourage the dog off the mat. Do not reward outside the mat at this stage.",
+          "tip": "The release word is as important as the command itself. Without it, the dog doesn't know when they can leave.",
+          "troubleshooting": "If the dog leaves before being released, calmly return them to the mat without scolding."
+        },
+        {
+          "title": "Add distance",
+          "description": "Once the dog goes to the mat and lies down consistently, start stepping back one step, then two, then three. Return before the dog moves and reward on the mat.",
+          "tip": "Always walk back to the dog — never call them to you. This reinforces staying, not coming.",
+          "troubleshooting": "If the dog follows you, reduce to half a step and practice that level many times."
+        },
+        {
+          "title": "Add duration and distractions",
+          "description": "Build time progressively (5s → 15s → 30s → 1 min). Then introduce small distractions: moving around the room, opening the fridge, knocking on the door.",
+          "tip": "Increase distance OR duration OR distraction — never all three at once.",
+          "troubleshooting": "If the exercise falls apart, always simplify: reduce whichever variable you just increased."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Calling the dog away from their place instead of going back to them",
+      "cause": "Confusing \"stay on mat\" with \"come when called\"",
+      "fix": "Always walk back to the dog to reward and release. This reinforces staying on the mat."
+    },
+    {
+      "error": "Increasing difficulty too fast",
+      "cause": "Overconfidence after early successes",
+      "fix": "Follow the 80% rule: only increase difficulty when the dog succeeds 8 out of 10 times."
+    },
+    {
+      "error": "Moving or changing the mat frequently",
+      "cause": "Lack of environmental planning",
+      "fix": "The mat location should be consistent during training. Environmental stability supports learning."
+    },
+    {
+      "error": "Scolding the dog when they leave the mat",
+      "cause": "Handler frustration",
+      "fix": "Simply return the dog to the mat in silence. Going back should never be a negative experience."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My dog goes to the mat but leaves after a few seconds",
+      "solution": "You're waiting too long before rewarding. Reward every 1–2 seconds initially to reinforce being on the mat."
+    },
+    {
+      "problem": "The dog won't step onto the mat at all",
+      "solution": "Make the mat more appealing: put their favorite blanket, a toy, or give their best treats there for several days before training."
+    },
+    {
+      "problem": "Goes to the mat but won't lie down",
+      "solution": "Practice \"down\" on the mat as a separate exercise before introducing distance."
+    },
+    {
+      "problem": "Works at home but not at friends' houses or on trips",
+      "solution": "Always bring the same mat or portable blanket. The familiar scent serves as a contextual cue for the dog."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Session 1–3",
+      "goal": "Dog goes to the mat with a lure and lies down when asked"
+    },
+    {
+      "stage": "Session 4–6",
+      "goal": "Goes to the mat on the verbal cue and stays for 15 seconds"
+    },
+    {
+      "stage": "Session 7–9",
+      "goal": "Stays on the mat while you move 3 meters away for 30 seconds"
+    },
+    {
+      "stage": "Week 3–4",
+      "goal": "Remains on the mat for 2–5 minutes with mild distractions (doorbell, movement in room)"
+    }
+  ],
+  "successSigns": [
+    "Goes to the mat on cue without a lure",
+    "Lies down and stays until hearing the release word",
+    "Doesn't move even when you step away or briefly leave the room",
+    "Voluntarily uses the mat to rest without being asked"
+  ],
+  "variations": [
+    "Place in different rooms of the house",
+    "Place at relatives' or friends' homes (same mat)",
+    "Place during a full family dinner",
+    "Place while receiving guests",
+    "Place in the garden or on the patio"
+  ],
+  "safetyNotes": [
+    "Never use the mat as punishment: it must always be a positive place",
+    "Make sure the bed is large enough for the dog to be comfortable",
+    "Do not expect very long stays initially — build duration gradually",
+    "If the dog seems anxious on the mat, check whether the spot is too isolated"
+  ],
+  "funFact": "Dogs that have a well-established place of their own show significantly lower cortisol (stress hormone) levels than dogs that roam freely without a defined space.",
+  "nextLevel": "Practice \"place\" with the front door opening, guests entering, and finally in pet-friendly public spaces with a portable mat.",
+  "proTip": "Feed your dog on their mat for one week before starting training. This way, the mat becomes the best place in the world before you even start asking for anything."
+}

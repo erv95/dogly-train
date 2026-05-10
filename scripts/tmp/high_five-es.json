@@ -1,0 +1,158 @@
+{
+  "title": "Choca esos cinco",
+  "subtitle": "El saludo más cool entre perro y dueño — ¡pata contra palma!",
+  "level": "Intermedio",
+  "duration": "5–10 min por sesión",
+  "location": "Casa o jardín",
+  "ageRecommendation": "Desde 5 meses",
+  "estimatedSessions": "6–10 sesiones para dominar",
+  "objective": "Enseñar al perro a levantar una pata hacia arriba y tocar la palma abierta del dueño, respondiendo a la señal verbal “choca” o la palma extendida verticalmente.",
+  "why": [
+    "Es uno de los trucos más fotogénicos y divertidos para compartir",
+    "Requiere que el perro diferencie entre “dame la pata” (horizontal) y “choca” (vertical)",
+    "Refuerza la coordinación y la conciencia de la posición de las patas",
+    "Genera interacción cercana y positiva con el dueño y con otras personas"
+  ],
+  "benefits": [
+    "Potencia la concentración y la atención porque el perro debe mirar la palma",
+    "Crea un ritual de celebración compartida — ideal para premiar buenas conductas",
+    "Es un trampolín para trucos más complejos como aplaudir o tocar objetos con la pata",
+    "Encanta a los niños y facilita la socialización positiva con personas nuevas"
+  ],
+  "where": [
+    "🏠 En casa, en el salón o la cocina",
+    "🌿 En el jardín o parque cuando ya lo domina bien",
+    "🔇 Sin distracciones al inicio — el truco requiere precisión"
+  ],
+  "materials": [
+    "🫖 Premios de alto valor (pollo cocido, queso, salchicha)",
+    "🖐️ Tu palma abierta como señal visual",
+    "🛟 Superficie antideslizante para mayor estabilidad",
+    "💛 Una celebración vocal entusiasta en cada éxito"
+  ],
+  "beforeYouStart": [
+    "Tu perro debe conocer “dame la pata” con buena fluidez antes de empezar",
+    "Asegúrate de que la superficie es antideslizante para que el perro se sienta seguro al alzar la pata",
+    "Ten 20 premios pequeños preparados por sesión",
+    "Practica primero con la pata dominante del perro (normalmente la izquierda)",
+    "Sesiones de 5–7 minutos máximo"
+  ],
+  "methods": [
+    {
+      "id": "paw_to_vertical",
+      "title": "Método de elevación progresiva de la pata",
+      "description": "Partes de “dame la pata” en posición baja y vas subiendo la palma de forma gradual sesión a sesión hasta que quede completamente vertical. El perro aprende que debe elevar la pata cada vez más alto para conseguir el contacto.",
+      "bestFor": "Perros que ya conocen dame la pata",
+      "steps": [
+        {
+          "title": "Dame la pata en posición normal",
+          "description": "Pide “dame la pata” con la palma hacia arriba a la altura habitual. Marca y premia cuando toque tu mano.",
+          "tip": "Este es el punto de partida. Haz 5 repeticiones para calentar.",
+          "troubleshooting": "Si no responde bien a dame la pata, dedica primero 2–3 sesiones a consolidarlo."
+        },
+        {
+          "title": "Sube la palma gradualmente",
+          "description": "En cada sesión, sube unos centímetros la posición de tu palma. El perro tendrá que levantar más la pata para tocarla. Mantén la palma horizontal al principio.",
+          "tip": "No subas más de 3–5 cm por sesión. La progresión gradual es la clave.",
+          "troubleshooting": "Si el perro no puede alcanzar la mano, baja un poco y trabaja más esa altura antes de subir."
+        },
+        {
+          "title": "Gira la palma hacia vertical",
+          "description": "Cuando el perro lleve la pata hasta la altura del pecho, empieza a rotar tu palma hacia una posición vertical (como cuando le das la mano a alguien). El perro deberá tocar la palma de frente.",
+          "tip": "El gesto visual de la palma vertical será la señal definitiva para “choca”."
+        },
+        {
+          "title": "Introduce la señal “choca”",
+          "description": "Cuando el perro toque tu palma vertical de forma consistente, añade la palabra “choca” justo antes de extender la mano. Marca el contacto y premia con entusiasmo.",
+          "tip": "Usa un tono festivo y celebrador — este truco merece mucha fiesta.",
+          "troubleshooting": "Si confunde “choca” con “dame la pata”, trabaja en contextos distintos y usa gestos claramente diferentes."
+        },
+        {
+          "title": "Diferencia entre dame la pata y choca",
+          "description": "Practica alternando ambas señales para que el perro las diferencie: palma horizontal hacia abajo = “dame la pata”; palma vertical hacia él = “choca”. Premia la correcta con mayor valor.",
+          "tip": "La diferenciación entre señales es el nivel más avanzado de este truco. No te apresures."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Subir la mano demasiado rápido antes de que el perro consolide cada altura",
+      "cause": "Impaciencia por llegar al high five completo",
+      "fix": "Dedica al menos 2 sesiones a cada altura antes de subir más. La calidad importa más que la velocidad."
+    },
+    {
+      "error": "Aceptar que el perro raspe la mano en lugar de tocarla con la pata plana",
+      "cause": "No marcar con precisión qué tipo de contacto se quiere",
+      "fix": "Marca sólo el contacto limpio de la pata plana. Ignora los rasguños sin recompensarlos."
+    },
+    {
+      "error": "No diferenciar las señales visuales entre “dame la pata” y “choca”",
+      "cause": "Usar el mismo gesto para ambos trucos",
+      "fix": "Palma horizontal para “dame la pata”, palma vertical para “choca”. Entrena esta diferencia activamente."
+    },
+    {
+      "error": "Premiar con poca emoción — el truco parece aburrido",
+      "cause": "Celebración escasa o monótona",
+      "fix": "¡Choca esos cinco merece euforia! Sube el volumen, sonríe y añade “¡bien hecho!” con convicción."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "El perro toca la mano con la nariz en lugar de con la pata",
+      "solution": "Retira la mano cuando acerque la nariz y ofrécela de nuevo. Marca sólo el contacto con la pata."
+    },
+    {
+      "problem": "El perro pierde el equilibrio al levantar la pata muy alto",
+      "solution": "Trabaja en una superficie antideslizante y no subas la mano tan alto por ahora. El equilibrio mejorará con la práctica."
+    },
+    {
+      "problem": "No diferencia entre “dame la pata” y “choca”",
+      "solution": "Exagera la diferencia de los gestos y trabaja cada señal en sesiones separadas durante una semana antes de mezclarlas."
+    },
+    {
+      "problem": "Lo hace bien en casa pero no con otras personas",
+      "solution": "Empieza presentando el truco con familiares en casa. Luego con amigos. La generalización lleva su tiempo."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–2",
+      "goal": "Levanta la pata al menos hasta la altura del codo en respuesta a la palma"
+    },
+    {
+      "stage": "Sesión 3–5",
+      "goal": "Toca la palma vertical a la altura del pecho de forma consistente"
+    },
+    {
+      "stage": "Sesión 6–8",
+      "goal": "Responde a “choca” con la palma a altura de high five completo"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Diferencia claramente entre “dame la pata” y “choca” y lo hace con otras personas"
+    }
+  ],
+  "successSigns": [
+    "Levanta la pata hasta la palma vertical sin dudar",
+    "Responde a “choca” antes incluso de ver la palma",
+    "Lo hace con otras personas además de su dueño",
+    "Diferencia claramente entre “dame la pata” y “choca”"
+  ],
+  "variations": [
+    "High five con la pata izquierda y con la derecha",
+    "High five a diferentes alturas (bajo, medio, alto)",
+    "High five a distancia (desde 50 cm)",
+    "Encadena choca + saludo para una rutina completa",
+    "High ten: ambas patas a la vez contra tus dos palmas"
+  ],
+  "safetyNotes": [
+    "No fuerces la pata hacia arriba con la mano — deja que el perro la levante solo",
+    "Perros con problemas en el hombro o el codo: consulta al veterinario antes de practicar",
+    "Si el perro muestra incomodidad al levantar la pata, para la sesión y observa si cojea",
+    "Cachorros menores de 6 meses: limita la altura para proteger las articulaciones en desarrollo"
+  ],
+  "funFact": "Los perros que aprenden “choca esos cinco” suelen iniciarlo solos cuando quieren atención — tu perro puede volverse adicto a darte high fives espontáneos.",
+  "nextLevel": "Enseña el high ten (las dos patas a la vez). Después, encadena: saluda → choca → reverencia. ¡Tienes una actuación completa de tres trucos!",
+  "proTip": "Cuando el perro dé el high five perfecto, celebra con la mayor emoción que puedas. Los perros aprenden más rápido cuando la recompensa emocional es enorme."
+}

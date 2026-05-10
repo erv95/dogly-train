@@ -1,6 +1,7 @@
 import {
   collection,
   doc,
+  setDoc,
   addDoc,
   getDoc,
   getDocs,
@@ -11,30 +12,53 @@ import {
   limit,
   startAfter,
   onSnapshot,
+  increment,
   Timestamp,
   QueryDocumentSnapshot,
 } from 'firebase/firestore';
 import { db } from '../config/firebase';
-import { Chat, Message } from '../types';
+import { Chat, Message, MessageType } from '../types';
 
 const CHATS = 'chats';
 const MESSAGES = 'messages';
 const PAGE_SIZE = 30;
 
-// --- Offensive language filter (basic) ---
+// --- Offensive language filter ---
+// Multi-language baseline list. For production-grade moderation, integrate
+// a moderation API (Perspective, OpenAI Moderation) — this is best-effort.
 
 const BLOCKED_WORDS = [
-  // Add offensive words here per language
-  'spam', 'scam',
+  // Spam / scam (multi-lang)
+  'spam', 'scam', 'estafa', 'arnaque', 'golpe', 'betrug',
+  // English profanity
+  'fuck', 'shit', 'bitch', 'asshole', 'cunt', 'dick', 'pussy', 'whore', 'slut', 'faggot', 'nigger', 'retard',
+  // Spanish profanity
+  'puta', 'puto', 'mierda', 'cabron', 'cabrón', 'pendejo', 'gilipollas', 'coño', 'cono', 'joder', 'maricón', 'maricon',
+  // French profanity
+  'putain', 'salope', 'connard', 'enculé', 'encule', 'merde', 'pédé', 'pede', 'bite',
+  // Portuguese profanity
+  'merda', 'caralho', 'porra', 'foda', 'puta', 'cu', 'viado',
+  // German profanity
+  'scheisse', 'scheiße', 'arschloch', 'fotze', 'hurensohn', 'schwuchtel',
+  // Common scam keywords
+  'paypal.me', 'bitcoin', 'wire transfer', 'western union', 'send money',
 ];
 
+// Pre-compile regex once for performance
+const BLOCKED_REGEX = new RegExp(
+  `\\b(${BLOCKED_WORDS.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`,
+  'gi'
+);
+
 export function filterOffensiveText(text: string): string {
-  let filtered = text;
-  for (const word of BLOCKED_WORDS) {
-    const regex = new RegExp(`\\b${word}\\b`, 'gi');
-    filtered = filtered.replace(regex, '***');
-  }
-  return filtered;
+  return text.replace(BLOCKED_REGEX, '***');
+}
+
+// --- Deterministic chat ID: sorted UIDs joined with '_' ---
+// Eliminates race condition: two concurrent calls produce the same ID,
+// and setDoc with merge:true is idempotent.
+function chatDocId(a: string, b: string): string {
+  return [a, b].sort().join('_');
 }
 
 // --- Get or create chat ---
@@ -47,21 +71,14 @@ export async function getOrCreateChat(
   userPhoto: string | null,
   otherUserPhoto: string | null
 ): Promise<Chat> {
-  // Check if chat already exists between these two users
-  const q = query(
-    collection(db, CHATS),
-    where('participants', 'array-contains', userId)
-  );
-  const snapshot = await getDocs(q);
+  const chatId = chatDocId(userId, otherUserId);
+  const chatRef = doc(db, CHATS, chatId);
+  const existing = await getDoc(chatRef);
 
-  for (const docSnap of snapshot.docs) {
-    const data = docSnap.data();
-    if (data.participants.includes(otherUserId)) {
-      return { id: docSnap.id, ...data } as Chat;
-    }
+  if (existing.exists()) {
+    return { id: existing.id, ...existing.data() } as Chat;
   }
 
-  // Create new chat
   const chatData = {
     participants: [userId, otherUserId],
     participantNames: {
@@ -75,20 +92,23 @@ export async function getOrCreateChat(
     lastMessage: '',
     lastMessageAt: Timestamp.now(),
     lastMessageBy: '',
+    unreadCounts: { [userId]: 0, [otherUserId]: 0 },
     createdAt: Timestamp.now(),
   };
 
-  const docRef = await addDoc(collection(db, CHATS), chatData);
-  return { id: docRef.id, ...chatData } as Chat;
+  // setDoc is idempotent — concurrent calls with the same ID are safe
+  await setDoc(chatRef, chatData, { merge: true });
+  return { id: chatId, ...chatData } as Chat;
 }
 
 // --- Get user's chats ---
 
-export async function getUserChats(userId: string): Promise<Chat[]> {
+export async function getUserChats(userId: string, maxResults = 100): Promise<Chat[]> {
   const q = query(
     collection(db, CHATS),
     where('participants', 'array-contains', userId),
-    orderBy('lastMessageAt', 'desc')
+    orderBy('lastMessageAt', 'desc'),
+    limit(maxResults)
   );
   const snapshot = await getDocs(q);
   return snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as Chat));
@@ -99,27 +119,116 @@ export async function getUserChats(userId: string): Promise<Chat[]> {
 export async function sendMessage(
   chatId: string,
   senderId: string,
-  text: string
+  text: string,
+  recipientId?: string
 ): Promise<Message> {
-  const filteredText = filterOffensiveText(text.trim());
+  // Cap to 1000 chars to match the Firestore security rule, otherwise the
+  // write fails silently with permission-denied and the user sees no error.
+  const trimmed = text.trim().slice(0, 1000);
+  const filteredText = filterOffensiveText(trimmed);
 
   const msgData = {
     chatId,
     senderId,
     text: filteredText,
+    type: 'text' as MessageType,
     createdAt: Timestamp.now(),
   };
 
   const docRef = await addDoc(collection(db, MESSAGES), msgData);
 
-  // Update chat's last message (denormalized)
-  await updateDoc(doc(db, CHATS, chatId), {
+  const chatUpdate: Record<string, any> = {
     lastMessage: filteredText,
     lastMessageAt: Timestamp.now(),
     lastMessageBy: senderId,
-  });
+  };
+  if (recipientId) {
+    chatUpdate[`unreadCounts.${recipientId}`] = increment(1);
+  }
+  await updateDoc(doc(db, CHATS, chatId), chatUpdate);
 
   return { id: docRef.id, ...msgData } as Message;
+}
+
+export async function sendMediaMessage(
+  chatId: string,
+  senderId: string,
+  type: 'image' | 'file' | 'audio',
+  mediaURL: string,
+  options: {
+    fileName?: string;
+    mimeType?: string;
+    fileSize?: number;
+    audioDuration?: number;
+  } = {},
+  recipientId?: string
+): Promise<Message> {
+  const previewMap: Record<string, string> = {
+    image: '📷 Foto',
+    file: `📄 ${options.fileName ?? 'Archivo'}`,
+    audio: '🎤 Audio',
+  };
+
+  const msgData = {
+    chatId,
+    senderId,
+    text: '',
+    type,
+    mediaURL,
+    ...(options.fileName && { fileName: options.fileName }),
+    ...(options.mimeType && { mimeType: options.mimeType }),
+    ...(options.fileSize && { fileSize: options.fileSize }),
+    ...(options.audioDuration !== undefined && { audioDuration: options.audioDuration }),
+    createdAt: Timestamp.now(),
+  };
+
+  const docRef = await addDoc(collection(db, MESSAGES), msgData);
+
+  const chatUpdate: Record<string, any> = {
+    lastMessage: previewMap[type],
+    lastMessageAt: Timestamp.now(),
+    lastMessageBy: senderId,
+  };
+  if (recipientId) {
+    chatUpdate[`unreadCounts.${recipientId}`] = increment(1);
+  }
+  await updateDoc(doc(db, CHATS, chatId), chatUpdate);
+
+  return { id: docRef.id, ...msgData } as Message;
+}
+
+// --- Mark chat as read ---
+
+export async function markChatAsRead(chatId: string, userId: string): Promise<void> {
+  await updateDoc(doc(db, CHATS, chatId), {
+    [`unreadCounts.${userId}`]: 0,
+  });
+}
+
+// --- Subscribe to total unread count ---
+
+export function subscribeToUnreadCount(
+  userId: string,
+  callback: (count: number) => void,
+  onError?: (err: Error) => void
+): () => void {
+  const q = query(
+    collection(db, CHATS),
+    where('participants', 'array-contains', userId)
+  );
+  return onSnapshot(q,
+    (snapshot) => {
+      let total = 0;
+      snapshot.docs.forEach((d) => {
+        total += (d.data().unreadCounts?.[userId] ?? 0);
+      });
+      callback(total);
+    },
+    (err) => {
+      console.error('subscribeToUnreadCount error:', err);
+      onError?.(err);
+    }
+  );
 }
 
 // --- Get messages (paginated) ---
@@ -128,16 +237,16 @@ export async function getMessages(
   chatId: string,
   lastDoc?: QueryDocumentSnapshot
 ): Promise<{ messages: Message[]; lastVisible: QueryDocumentSnapshot | null }> {
-  let q = query(
-    collection(db, MESSAGES),
+  const constraints: any[] = [
     where('chatId', '==', chatId),
     orderBy('createdAt', 'desc'),
-    limit(PAGE_SIZE)
-  );
-
+  ];
   if (lastDoc) {
-    q = query(q, startAfter(lastDoc));
+    constraints.push(startAfter(lastDoc));
   }
+  constraints.push(limit(PAGE_SIZE));
+
+  const q = query(collection(db, MESSAGES), ...constraints);
 
   const snapshot = await getDocs(q);
   const messages = snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as Message));
@@ -150,7 +259,8 @@ export async function getMessages(
 
 export function subscribeToMessages(
   chatId: string,
-  callback: (messages: Message[]) => void
+  callback: (messages: Message[]) => void,
+  onError?: (err: Error) => void
 ) {
   const q = query(
     collection(db, MESSAGES),
@@ -159,8 +269,14 @@ export function subscribeToMessages(
     limit(PAGE_SIZE)
   );
 
-  return onSnapshot(q, (snapshot) => {
-    const messages = snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as Message));
-    callback(messages);
-  });
+  return onSnapshot(q,
+    (snapshot) => {
+      const messages = snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as Message));
+      callback(messages);
+    },
+    (err) => {
+      console.error('subscribeToMessages error:', err);
+      onError?.(err);
+    }
+  );
 }

@@ -1,0 +1,160 @@
+{
+  "title": "Donne la patte",
+  "subtitle": "Le tour classique qui renforce le lien et facilite les soins",
+  "level": "Intermédiaire",
+  "duration": "5–10 min par séance",
+  "location": "Maison ou jardin calme",
+  "ageRecommendation": "À partir de 12 semaines",
+  "estimatedSessions": "5–8 séances pour maîtriser",
+  "objective": "Apprendre au chien à lever une patte avant et à la poser dans la main du guide sur l'ordre « donne la patte ».",
+  "why": [
+    "Facilite la coupe des griffes et les contrôles vétérinaires",
+    "Renforce le lien entre le chien et son guide",
+    "Développe la conscience corporelle du chien",
+    "Base pour des tours plus avancés comme « tape là » ou « au revoir »"
+  ],
+  "benefits": [
+    "Votre chien sera plus calme chez le vétérinaire et au toilettage",
+    "Renforce la confiance mutuelle de façon ludique",
+    "Améliore la coordination et l'équilibre du chien",
+    "Un tour spectaculaire qui ravit toute la famille"
+  ],
+  "where": [
+    "🏠 À la maison sur une surface antidérapante",
+    "🌿 Dans le jardin sur herbe ou sol ferme",
+    "🔇 Sans distractions au début"
+  ],
+  "materials": [
+    "🫖 Friandises très appétissantes (poulet, fromage, saucisse)",
+    "🛏️ Tapis antidérapant ou moquette",
+    "✋ Votre main ouverte comme cible",
+    "💛 Patience et séances courtes"
+  ],
+  "beforeYouStart": [
+    "Votre chien doit maîtriser « assis » de façon fiable avant de commencer",
+    "Choisissez des friandises très motivantes — ce tour le mérite",
+    "Assurez-vous que la surface est antidérapante pour que le chien se sente en sécurité",
+    "Limitez les séances à 5 minutes pour éviter la fatigue mentale",
+    "Travaillez toujours la même patte au début (souvent la droite)"
+  ],
+  "methods": [
+    {
+      "id": "capture_touch",
+      "title": "Méthode de capture avec légère impulsion (recommandée)",
+      "description": "Vous attendez que le chien lève naturellement la patte depuis la position assise, aidé par un léger toucher de l'épaule, et vous récompensez ce mouvement.",
+      "bestFor": "Chiots et chiens de toute taille qui savent déjà s'asseoir",
+      "steps": [
+        {
+          "title": "Demandez assis et présentez la main",
+          "description": "Demandez au chien de s'asseoir. Tendez votre main ouverte, paume vers le haut, à la hauteur de son poitrail. Ne dites rien d'autre — attendez simplement.",
+          "tip": "La main ouverte est le signal visuel. Restez détendu et attentif.",
+          "troubleshooting": "S'il ignore votre main, rapprochez-la légèrement de ses pattes sans le toucher."
+        },
+        {
+          "title": "Léger toucher de l'épaule",
+          "description": "Si le chien n'a pas levé la patte après 5 secondes, effleurez doucement son épaule ou le côté extérieur de sa patte avant avec un doigt. La plupart des chiens lèvent instinctivement la patte.",
+          "tip": "Le toucher doit être très léger, comme un chatouillement — pas une poussée.",
+          "troubleshooting": "S'il se lève, demandez à nouveau assis calmement et recommencez."
+        },
+        {
+          "title": "Capturez le mouvement et récompensez",
+          "description": "Au moment exact où la patte quitte le sol et touche votre main, dites « oui ! » d'une voix joyeuse et donnez la friandise immédiatement.",
+          "tip": "Le timing est essentiel. Récompensez la patte touchant votre main, pas avant ni après.",
+          "troubleshooting": "Si la patte n'atteint pas la main, récompensez d'abord tout soulèvement et exigez progressivement davantage."
+        },
+        {
+          "title": "Introduire l'ordre verbal",
+          "description": "Quand le chien lève la patte de manière cohérente (7 fois sur 10), ajoutez « donne la patte » juste avant de tendre la main.",
+          "tip": "D'abord le geste, ensuite le mot. N'ajoutez le mot que lorsque le comportement est stable.",
+          "troubleshooting": "S'il paraît confus, supprimez le mot pendant 2 séances et revenez au seul geste."
+        },
+        {
+          "title": "Réduire l'impulsion et prolonger le contact",
+          "description": "Supprimez progressivement le toucher de l'épaule. Puis commencez à refermer doucement la main autour de la patte pendant 2–3 secondes avant de récompenser.",
+          "tip": "L'objectif final est que le chien maintienne sa patte dans votre main jusqu'à ce que vous la relâchiez.",
+          "troubleshooting": "S'il retire la patte trop vite, récompensez plus souvent et augmentez la durée très graduellement."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Saisir la patte de force",
+      "cause": "Impatience quand le chien ne comprend pas ce qu'on lui demande",
+      "fix": "Ne prenez jamais la patte sans que le chien l'offre. Utilisez le léger toucher et attendez."
+    },
+    {
+      "error": "Récompenser après que la patte est déjà en train de redescendre",
+      "cause": "Timing de récompense trop lent",
+      "fix": "Entraînez votre timing seul : lancez une friandise en l'air et attrapez-la en moins d'1 seconde."
+    },
+    {
+      "error": "Changer de patte à chaque essai",
+      "cause": "Manque de cohérence du guide",
+      "fix": "Travaillez la même patte pendant les premières semaines. Introduisez l'autre patte ensuite."
+    },
+    {
+      "error": "Demander le tour sans que le chien soit assis",
+      "cause": "Sauter des étapes du processus d'apprentissage",
+      "fix": "Un assis solide est indispensable pour ce tour. Commencez toujours de là."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien ne lève pas la patte même après une longue attente",
+      "solution": "Essayez de tenir une friandise dans un poing fermé devant son poitrail. Beaucoup de chiens tapotent avec la patte pour l'ouvrir."
+    },
+    {
+      "problem": "Il lève la patte mais ne la pose pas dans ma main",
+      "solution": "Rapprochez votre main de ses pattes. La bonne distance est presque sans effort de sa part."
+    },
+    {
+      "problem": "Fonctionne à la maison mais pas à l'extérieur",
+      "solution": "C'est normal. Pratiquez d'abord au jardin, puis dans une rue calme. Augmentez la valeur des friandises dans les nouveaux environnements."
+    },
+    {
+      "problem": "Il confond « donne la patte » et « assis »",
+      "solution": "Différenciez clairement le signal de main : pour assis, pointez vers le bas ; pour la patte, tendez la paume à l'horizontale."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séance 1–2",
+      "goal": "Le chien lève la patte même d'un centimètre en voyant votre main ou en sentant le toucher"
+    },
+    {
+      "stage": "Séance 3–5",
+      "goal": "Pose la patte dans votre main ouverte au moins 6 fois sur 10"
+    },
+    {
+      "stage": "Séance 6–7",
+      "goal": "Répond à l'ordre verbal « donne la patte » sans avoir besoin du toucher de l'épaule"
+    },
+    {
+      "stage": "Semaine 3+",
+      "goal": "Maintient la patte dans votre main 3–5 secondes jusqu'à ce que vous la relâchiez"
+    }
+  ],
+  "successSigns": [
+    "Lève la patte dès qu'il entend l'ordre",
+    "La pose doucement sans griffer",
+    "Reste assis tout en offrant la patte",
+    "Le fait dans différents endroits et avec différentes personnes"
+  ],
+  "variations": [
+    "Donne la patte gauche (apprendre l'autre patte)",
+    "Tape là (patte plus haute, paume verticale)",
+    "Donne la patte sur geste uniquement, sans ordre verbal",
+    "Donne la patte quand le guide est accroupi ou debout",
+    "Enchaîner : assis → donne la patte → reste"
+  ],
+  "safetyNotes": [
+    "Arrêtez si votre chien montre de la douleur en levant la patte — possible problème articulaire",
+    "Grandes races ou chiens avec dysplasie de hanche : séances plus courtes sur surface très douce",
+    "Ne pénalisez jamais l'échec ; revenez simplement à l'étape précédente",
+    "Chiots de moins de 16 semaines : os en développement — ne forcez aucune posture"
+  ],
+  "funFact": "Le tour « donne la patte » est l'un des plus anciens documentés : des gravures européennes du XVIIe siècle montrent déjà des chiens saluant leurs maîtres de cette façon.",
+  "nextLevel": "Apprenez la patte gauche pour que le chien distingue les deux. Ensuite, construisez vers « tape là » en élevant progressivement la paume.",
+  "proTip": "Si votre chien est méfiant envers la main, commencez avec un poing fermé contenant une friandise. Il cessera de voir votre main comme une menace et la verra comme une distributrice de récompenses."
+}

@@ -1,0 +1,160 @@
+{
+  "title": "Ve a tu sitio",
+  "subtitle": "Tu perro aprende a ir y quedarse en su cama hasta que lo liberes",
+  "level": "Intermedio",
+  "duration": "5–10 min por sesión",
+  "location": "Casa con cama o manta designada",
+  "ageRecommendation": "Desde 14 semanas",
+  "estimatedSessions": "8–12 sesiones para dominar",
+  "objective": "Enseñar al perro a dirigirse a su cama o manta designada y permanecer allí en calma hasta recibir la señal de liberación.",
+  "why": [
+    "Da al perro un lugar propio y seguro en el hogar",
+    "Reduce el comportamiento intrusivo durante las comidas o visitas",
+    "Enseña al perro a calmarse por sí mismo",
+    "Sienta las bases para la gestión de distracciones en casa"
+  ],
+  "benefits": [
+    "Tu perro no molestará durante las comidas ni cuando lleguen visitas",
+    "Reduce la ansiedad al tener un espacio predecible y seguro",
+    "Mejora el autocontrol y la tolerancia a la frustración",
+    "Permite que el perro descanse sin estar constantemente encima de ti"
+  ],
+  "where": [
+    "🏠 En casa, con la cama o manta siempre en el mismo lugar",
+    "🛋️ En el salón o zona de mayor actividad familiar",
+    "⛔ Evitar zonas de paso donde el perro sea interrumpido"
+  ],
+  "materials": [
+    "🛏️ Cama, manta o alfombra designada (siempre la misma)",
+    "🫖 Premios de alta motivación para las primeras sesiones",
+    "🦮 Correa larga (opcional, para primeras fases con distancia)",
+    "💛 Paciencia y constancia diaria"
+  ],
+  "beforeYouStart": [
+    "Tu perro debe saber “tumbado” y “quieto” con cierta fluidez",
+    "Decide cuál será su sitio y no lo cambies durante el entrenamiento",
+    "La cama debe ser cómoda y lo suficientemente grande para que pueda tumbarse",
+    "Ten preparados premios de alto valor: este ejercicio exige más concentración",
+    "Practica primero en momentos tranquilos, no cuando el perro esté excitado"
+  ],
+  "methods": [
+    {
+      "id": "lure_to_mat",
+      "title": "Método del señuelo hacia la cama (recomendado)",
+      "description": "Usas un premio para guiar al perro hasta la cama, luego añades distancia, duración y distracciones de forma progresiva.",
+      "bestFor": "Perros que ya saben tumbado y quieto",
+      "steps": [
+        {
+          "title": "Guía al perro hasta la cama",
+          "description": "Con un premio en la mano, guía al perro hacia la cama. Cuando sus cuatro patas estén sobre ella, di “sitio” y dale el premio.",
+          "tip": "El premio debe caer sobre la cama, no en el suelo. Esto refuerza estar encima.",
+          "troubleshooting": "Si no sube a la cama, coloca el premio en el borde y luego en el centro progresivamente."
+        },
+        {
+          "title": "Pide que se tumbe en la cama",
+          "description": "Una vez en la cama, pide “túmbate”. Cuando lo haga, premia. Ahora tiene que estar tumbado en su sitio.",
+          "tip": "La posición tumbada hace que sea más fácil mantener la calma y la duración.",
+          "troubleshooting": "Si no se tumba, usa el señuelo hacia abajo igual que en el curso de tumbado."
+        },
+        {
+          "title": "Introduce la palabra de liberación",
+          "description": "Tras 2–3 segundos tumbado, di “libre” (o “ya”, siempre la misma palabra) y anímale a salir de la cama. No premies fuera de la cama en esta fase.",
+          "tip": "La palabra de liberación es tan importante como la de la orden. Sin ella el perro no sabe cuándo puede irse.",
+          "troubleshooting": "Si sale antes de que lo liberes, llévalo de vuelta calmadamente sin reñirle."
+        },
+        {
+          "title": "Añade distancia",
+          "description": "Cuando vaya a la cama y se tumbe con consistencia, empieza a alejarte un paso, luego dos, luego tres. Vuelve antes de que salga y premia en la cama.",
+          "tip": "Vuelve tú hacia el perro, no llames al perro hacia ti. Así refuerzas quedarse, no venir.",
+          "troubleshooting": "Si te sigue, reduce la distancia a medio paso y consolida ese nivel muchas veces."
+        },
+        {
+          "title": "Añade duración y distracciones",
+          "description": "Aumenta el tiempo progresivamente (5s → 15s → 30s → 1min). Luego introduce pequeñas distracciones: moverte por la habitación, abrir la nevera, llamar a la puerta.",
+          "tip": "Aumenta distancia O duración O distracción, nunca los tres a la vez.",
+          "troubleshooting": "Si el ejercicio falla, siempre simplifica: reduce la variable que acabas de aumentar."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Llamar al perro desde su sitio en lugar de ir tú a él",
+      "cause": "Confundir “quieto en la cama” con “ven cuando te llame”",
+      "fix": "Siempre vuelve tú al perro para premiar y liberarlo. Así refuerzas quedarse en el sitio."
+    },
+    {
+      "error": "Avanzar demasiado rápido en distancia o duración",
+      "cause": "Exceso de optimismo tras los primeros éxitos",
+      "fix": "Sigue la regla del 80%: solo aumenta la dificultad cuando el perro tenga éxito 8 de cada 10 veces."
+    },
+    {
+      "error": "Cambiar la cama o el lugar del sitio frecuentemente",
+      "cause": "Falta de planificación del entorno",
+      "fix": "El sitio debe ser siempre el mismo durante el aprendizaje. La estabilidad del entorno facilita el aprendizaje."
+    },
+    {
+      "error": "Reñir al perro cuando sale de la cama",
+      "cause": "Frustración del guía",
+      "fix": "Simplemente lleva al perro de vuelta en silencio. El regreso a la cama no debe ser nunca una experiencia negativa."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro va a la cama pero sale a los pocos segundos",
+      "solution": "Estás esperando demasiado antes de premiar. Premia cada 1–2 segundos al principio para reforzar el hecho de estar en la cama."
+    },
+    {
+      "problem": "No quiere entrar a la cama",
+      "solution": "Haz la cama más atractiva: pon su manta favorita, un juguete o dale sus mejores premios allí durante días antes de entrenar."
+    },
+    {
+      "problem": "Va a la cama cuando se lo pido pero no se tumba",
+      "solution": "Practica “tumbado” en la cama como ejercicio separado antes de introducir la distancia."
+    },
+    {
+      "problem": "Funciona bien en casa pero no en casa de amigos o en el camping",
+      "solution": "Lleva siempre la misma manta o cama portátil. El olor familiar actúa como señal de contexto para el perro."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–3",
+      "goal": "El perro va a la cama con señuelo y se tumba al pedírselo"
+    },
+    {
+      "stage": "Sesión 4–6",
+      "goal": "Va a la cama con la orden verbal y permanece 15 segundos"
+    },
+    {
+      "stage": "Sesión 7–9",
+      "goal": "Se queda en la cama mientras te alejas 3 metros durante 30 segundos"
+    },
+    {
+      "stage": "Semana 3–4",
+      "goal": "Permanece en la cama 2–5 minutos con distracciones suaves (timbre, movimiento en la habitación)"
+    }
+  ],
+  "successSigns": [
+    "Va a su cama solo al escuchar la orden, sin señuelo",
+    "Se tumba y se queda hasta escuchar la palabra de liberación",
+    "No se mueve aunque te alejes o salgas de la habitación brevemente",
+    "Usa su cama voluntariamente para descansar, sin que se lo pidas"
+  ],
+  "variations": [
+    "Sitio en diferentes habitaciones de la casa",
+    "Sitio en casa de familiares o amigos (misma manta)",
+    "Sitio durante la cena familiar completa",
+    "Sitio mientras recibes visitas",
+    "Sitio en el jardín o terraza"
+  ],
+  "safetyNotes": [
+    "Nunca uses el sitio como castigo: debe ser siempre un lugar positivo",
+    "Asegúrate de que la cama es lo suficientemente grande para que el perro esté cómodo",
+    "No exijas sitio durante periodos muy largos al principio: aumenta gradualmente",
+    "Si el perro parece ansioso o agitado en la cama, revisa si la zona es demasiado aislada"
+  ],
+  "funFact": "Los perros que tienen un lugar propio bien establecido muestran niveles de cortisol (hormona del estrés) significativamente menores que los que deambulan libremente sin espacio definido.",
+  "nextLevel": "Practica “sitio” con la puerta de casa abriéndose, con visitas entrando, y finalmente en espacios públicos pet-friendly con su manta portátil.",
+  "proTip": "Alimenta a tu perro en su cama durante una semana antes de empezar el entrenamiento. Así la cama ya será el mejor lugar del mundo antes de que empieces a pedir nada."
+}

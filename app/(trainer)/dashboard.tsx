@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { Card, Button, StarRating } from '../../src/components/ui';
+import { CoinBalancePill } from '../../src/components/CoinBalancePill';
+import BookingStatsCard from '../../src/components/BookingStatsCard';
 import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 import { TrainerProfile } from '../../src/types';
 
@@ -26,7 +28,10 @@ export default function TrainerDashboardScreen() {
   const router = useRouter();
   const trainer = userData as TrainerProfile | null;
 
-  const boostTime = getBoostTimeRemaining(trainer?.boostedUntil);
+  const boostTime = useMemo(
+    () => getBoostTimeRemaining(trainer?.boostedUntil),
+    [trainer?.boostedUntil]
+  );
   const isBoosted = boostTime !== null;
 
   return (
@@ -34,11 +39,14 @@ export default function TrainerDashboardScreen() {
       <ScrollView contentContainerStyle={styles.scrollContent}>
         {/* Header greeting */}
         <View style={styles.header}>
-          <Text style={styles.greeting}>
-            {t('auth.welcome').split(' ').slice(0, 1).join('')},{' '}
-            {trainer?.displayName?.split(' ')[0] ?? ''}
-          </Text>
-          <Text style={styles.subtitle}>{t('trainer.dashboard')}</Text>
+          <View style={{ flex: 1 }}>
+            <Text style={styles.greeting}>
+              {t('auth.welcome').split(' ').slice(0, 1).join('')},{' '}
+              {trainer?.displayName?.split(' ')[0] ?? ''}
+            </Text>
+            <Text style={styles.subtitle}>{t('trainer.dashboard')}</Text>
+          </View>
+          <CoinBalancePill />
         </View>
 
         {/* Pending approval banner */}
@@ -81,6 +89,11 @@ export default function TrainerDashboardScreen() {
             <Text style={styles.statValue}>{trainer?.coinBalance ?? 0}</Text>
             <Text style={styles.statLabel}>{t('trainer.coins')}</Text>
           </Card>
+        </View>
+
+        {/* Booking stats */}
+        <View style={{ marginBottom: spacing.lg }}>
+          <BookingStatsCard />
         </View>
 
         {/* Rating display */}
@@ -135,16 +148,21 @@ const styles = StyleSheet.create({
   },
   header: {
     marginBottom: spacing.lg,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
   },
   greeting: {
     fontSize: fontSize.xxl,
     fontWeight: '700',
     color: colors.text,
+    textAlign: 'center',
   },
   subtitle: {
     fontSize: fontSize.md,
     color: colors.textSecondary,
     marginTop: spacing.xs,
+    textAlign: 'center',
   },
   pendingBanner: {
     flexDirection: 'row',

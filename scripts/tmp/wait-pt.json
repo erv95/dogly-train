@@ -1,0 +1,157 @@
+{
+  "title": "Espera",
+  "subtitle": "Pausa breve com autocontrole em situações do dia a dia",
+  "level": "Básico",
+  "duration": "5–10 min por sessão",
+  "location": "Casa, soleira de porta, área de alimentação",
+  "ageRecommendation": "A partir de 8 semanas",
+  "estimatedSessions": "4–6 sessões para dominar",
+  "objective": "Ensinar o cão a pausar momentaneamente mediante um sinal verbal, aplicável antes de atravessar a rua, antes de receber a tigela de comida ou ao cruzar soleiras. Diferente do 'fica' — é mais breve e contextual.",
+  "why": [
+    "Previne acidentes em travessias ao impedir que o cão corra na frente",
+    "Ensina autocontrole em momentos de alta excitação (hora da refeição, entrar no parque)",
+    "Estabelece um protocolo seguro de portas para evitar fugas",
+    "É uma habilidade de segurança real com aplicação imediata na vida diária"
+  ],
+  "benefits": [
+    "O seu cão para antes de cruzar qualquer soleira perigosa",
+    "Aprende a controlar a excitação na hora de comer",
+    "Reduz a ansiedade em transições (dentro-fora, carro-rua)",
+    "Melhora a comunicação e a confiança entre cão e tutor"
+  ],
+  "where": [
+    "🚪 Soleiras de portas internas e externas",
+    "🍽️ Área de alimentação do cão",
+    "🛣️ Antes de atravessar faixas de pedestres ou ruas"
+  ],
+  "materials": [
+    "🍗 Tigela de comida do cão ou petiscos de alto valor",
+    "🚪 Porta ou soleira real para praticar",
+    "🦮 Guia (opcional para prática na rua)",
+    "💛 Consistência e calma"
+  ],
+  "beforeYouStart": [
+    "Escolha uma situação concreta para começar: a tigela de comida é ideal pois acontece diariamente",
+    "Siga sempre o mesmo protocolo nessa situação para que o cão o antecipe",
+    "Certifique-se de que o cão não está num estado de excitação extrema ao começar",
+    "Sessões curtas: 3–5 repetições por contexto é suficiente",
+    "Tenha os petiscos prontos ou a tigela de comida real à mão"
+  ],
+  "methods": [
+    {
+      "id": "food_bowl_protocol",
+      "title": "Protocolo da tigela de comida",
+      "description": "Você usa a hora da refeição como treino diário natural. A tigela desce → o cão espera → a tigela sobe se ele se mover → recompense quando for paciente. Simples, repetível e com impacto imediato.",
+      "bestFor": "Todos os cães, especialmente os que se lançam na tigela ou empurram o tutor na hora de comer",
+      "steps": [
+        {
+          "title": "Cão na posição sentado",
+          "description": "Antes de preparar a tigela, peça ao cão que se sente. Se não souber 'senta' com fluidez, comece por esse curso primeiro.",
+          "tip": "O sentado não é obrigatório, mas ajuda: um cão sentado tem mais autocontrole do que um em pé.",
+          "troubleshooting": "Se o cão não se sentar, espere de pé com a tigela na mão até ele se acalmar, mesmo que seja por um segundo."
+        },
+        {
+          "title": "Diga 'espera' e comece a baixar a tigela",
+          "description": "Com a tigela nas mãos, diga 'espera' com calma e comece a descer a tigela lentamente em direção ao chão.",
+          "tip": "O sinal verbal deve vir antes do movimento, não depois. O cão deve aprender que 'espera' prediz comida se for paciente."
+        },
+        {
+          "title": "Se ele se mover, levante a tigela",
+          "description": "Se o cão se levantar, avançar ou tocar na tigela antes da permissão, levante a tigela imediatamente sem dizer nada. Volte ao passo anterior.",
+          "tip": "Sem repreensão: a tigela que sobe é informação suficiente. Sem drama.",
+          "troubleshooting": "Se repetir o movimento constantemente, baixe a tigela apenas 5 cm e recompense a partir daí. Aumente a distância pouco a pouco."
+        },
+        {
+          "title": "Tigela no chão, cão espera",
+          "description": "Quando a tigela tocar o chão e o cão esperar sem se mover, faça uma pausa de 1–2 segundos e então diga 'vai' ou 'pode' para dar a permissão.",
+          "tip": "A palavra de permissão é tão importante quanto 'espera'. Use sempre a mesma."
+        },
+        {
+          "title": "Aumente o tempo de espera progressivamente",
+          "description": "Comece com 1–2 segundos de espera com a tigela no chão. Aumente progressivamente para 5, 10, 15 segundos antes da permissão.",
+          "tip": "Se falhar em algum momento, volte a um tempo menor. O progresso não é linear e isso é normal."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Repetir 'espera' enquanto a tigela já está no chão",
+      "cause": "Nervosismo do tutor ao ver o cão se aproximar da tigela",
+      "fix": "Diga 'espera' UMA vez antes de baixar a tigela. Se o cão se mover, levante a tigela sem dizer nada."
+    },
+    {
+      "error": "Dar a permissão antes de o cão estar completamente imóvel",
+      "cause": "Pressa ou querer evitar o conflito",
+      "fix": "Espere até o cão estar claramente imóvel por pelo menos 1 segundo antes de dar a permissão."
+    },
+    {
+      "error": "Confundir 'espera' com 'fica'",
+      "cause": "Usar os dois comandos de forma intercambiável",
+      "fix": "'Espera' é breve e contextual (segundos). 'Fica' implica manter a posição até nova ordem. Use-os em contextos distintos."
+    },
+    {
+      "error": "Não praticar a soleira da porta como situação separada",
+      "cause": "Assumir que o aprendido com a tigela se transfere automaticamente",
+      "fix": "Pratique 'espera' especificamente em portas, portões e travessias de rua. Cada contexto precisa de treino próprio."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão espera, mas me olha com ansiedade extrema",
+      "solution": "A espera está longa demais para o nível atual dele. Reduza o tempo de espera ao que consegue fazer sem estresse (mesmo que seja 1 segundo) e aumente muito devagar."
+    },
+    {
+      "problem": "Aprende bem com a tigela mas ainda dispara pela porta",
+      "solution": "Normal: são contextos distintos. Pratique o protocolo de porta assim como o da tigela: se avançar, feche a porta. Se esperar, abra e dê a permissão."
+    },
+    {
+      "problem": "O meu cão espera mas se arrasta lentamente em direção à tigela",
+      "solution": "Arrastar conta como movimento. Levante a tigela. Recompense apenas quando estiver completamente imóvel."
+    },
+    {
+      "problem": "Só funciona quando tenho a tigela na mão, não com petiscos no chão",
+      "solution": "Treine primeiro a tigela até consolidar. Depois pratique com petiscos no chão usando a mesma progressão: mão → chão coberto → chão visível."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessão 1–2",
+      "goal": "O cão espera pelo menos 1–2 segundos com a tigela no chão antes da permissão"
+    },
+    {
+      "stage": "Sessão 3–4",
+      "goal": "Espera 10 segundos com a tigela no chão sem se mover"
+    },
+    {
+      "stage": "Semana 2",
+      "goal": "Aplica 'espera' também na soleira da porta"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Espera de forma consistente em travessias e antes de sair do carro"
+    }
+  ],
+  "successSigns": [
+    "O cão para ao ouvir 'espera' antes de avançar em direção à tigela ou à porta",
+    "Espera sem mover o corpo mesmo com a tigela no chão",
+    "Reage da mesma forma a 'espera' na porta, no carro e na rua",
+    "Não avança até ouvir o sinal de permissão"
+  ],
+  "variations": [
+    "Esperar antes de sair do carro",
+    "Esperar antes de entrar no parque para cães",
+    "Esperar na calçada antes de atravessar a rua",
+    "Esperar ao receber brinquedos ou petiscos da mão",
+    "Esperar com comida no chão antes de dar a permissão"
+  ],
+  "safetyNotes": [
+    "Não use 'espera' como substituto de 'fica': em situações de longa duração, use o comando correto",
+    "Pratique 'espera' na porta desde o primeiro dia em casa para prevenir hábitos de fuga para toda a vida",
+    "Nunca faça o seu cão esperar se ele estiver em estado de estresse ou medo extremo: piorará a situação",
+    "Certifique-se sempre de dar o sinal de permissão antes de o cão se mover por conta própria"
+  ],
+  "funFact": "Cães que aprendem a esperar antes de comer desenvolvem maior capacidade de autocontrole em geral. É como o teste do marshmallow para cães: os que esperam, aprendem melhor.",
+  "nextLevel": "Combine 'espera' com 'fica' para situações mais longas. Introduza o sinal de mão (palma voltada para o cão) para trabalhar 'espera' à distância.",
+  "proTip": "O segredo do 'espera' é a consistência: permita ao cão avançar mesmo uma única vez sem dar o sinal de permissão e ele aprenderá que 'espera' nem sempre é obrigatório. Seja absolutamente consistente."
+}

@@ -1,0 +1,160 @@
+{
+  "title": "Aus / Lass los",
+  "subtitle": "Das Kommando, das das Leben Ihres Hundes retten kann",
+  "level": "Fortgeschritten",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Zuhause, Garten und jede Umgebung",
+  "ageRecommendation": "Ab 12 Wochen (Schwierigkeitsgrad anpassen)",
+  "estimatedSessions": "8–12 Einheiten für eine zuverlässige Reaktion",
+  "objective": "Den Hund beibringen, auf das Kommando \"Aus\" jeden Gegenstand sofort loszulassen — Spielzeug, Futter, gefährlicher Gegenstand — unter Verwendung des Tauschspiels als Grundlage.",
+  "why": [
+    "Kann das Leben des Hundes retten, wenn er etwas Gefährliches oder Giftiges aufnimmt",
+    "Verhindert Jagdspiele, die das Nichtloslassen verstärken",
+    "Reduziert Ressourcen-Bewachungsverhalten (Knurren beim Nähern)",
+    "Eine Sicherheitsfähigkeit, die jeder Hund beherrschen muss"
+  ],
+  "benefits": [
+    "Sie können jeden gefährlichen Gegenstand sicher aus dem Maul Ihres Hundes holen",
+    "Apporter- und Loslassspiele werden viel flüssiger und spaßiger",
+    "Reduziert Spannungen und Konflikte rund um wertvolle Gegenstände",
+    "Baut Vertrauen auf: der Hund lernt, dass Loslassen immer etwas Besseres bringt"
+  ],
+  "where": [
+    "🏠 Zuhause, immer die erste Trainingsumgebung",
+    "🌿 Im Garten, sobald es zuhause gefestigt ist",
+    "🎯 In jeder Umgebung mit echten Gegenständen nach der Generalisierung"
+  ],
+  "materials": [
+    "🫖 Sehr hochwertige Leckerlis (Hühnchen, Käse, Wurst — das Beste was Sie haben)",
+    "🦴 Ein Spielzeug mit geringem Wert für den Anfang (nicht das Lieblingsding des Hundes)",
+    "🦮 Optionale Leine für die erste Phase",
+    "💛 Absolute Ruhe — niemals Ärger oder Frustration"
+  ],
+  "beforeYouStart": [
+    "Ihr Hund sollte durch frühere Kurse etwas Impulskontrolle haben",
+    "Versuchen Sie niemals, einen Gegenstand mit Gewalt aus dem Maul des Hundes zu ziehen",
+    "Knurrt Ihr Hund defensiv bei Gegenständen, konsultieren Sie einen Fachmann, bevor Sie weitermachen",
+    "Halten Sie immer den Tausch (das Leckerli) bereit, bevor Sie sich nähern",
+    "Akzeptieren Sie, dass der Hund anfangs lernen kann, schnell loszulassen, um das Leckerli zu bekommen, bevor Sie es verlangen"
+  ],
+  "methods": [
+    {
+      "id": "trade_up",
+      "title": "Aufwärtstausch-Methode (empfohlen)",
+      "description": "Sie bieten etwas von höherem Wert als das, was der Hund hat, im Austausch fürs Loslassen. Sie entreißen den Gegenstand nie. Der Hund lernt, dass Loslassen immer etwas Besseres bedeutet.",
+      "bestFor": "Alle Hunde, besonders jene mit Neigung zum Ressourcenbewachen",
+      "steps": [
+        {
+          "title": "Mit einem geringwertigen Spielzeug beginnen",
+          "description": "Geben Sie dem Hund ein Spielzeug, das er mäßig mag (nicht sein Lieblingsding). Lassen Sie ihn es einen Moment haben und genießen.",
+          "tip": "Gibt es keinen Ausgangsobjekt, versuchen Sie eines, das nach Leckerli riecht oder zuvor belohnt wurde.",
+          "troubleshooting": "Nimmt er das Spielzeug nicht, versuchen Sie ein interessanteres oder spielen Sie selbst kurz damit."
+        },
+        {
+          "title": "Ruhig mit sichtbarem Leckerli nähern",
+          "description": "Ohne Hast nähern Sie sich dem Hund mit dem Leckerli in der offenen Hand, gut sichtbar. Er soll klar sehen, was Sie haben. Versuchen Sie noch nicht, das Spielzeug zu nehmen.",
+          "tip": "Ruhe ist entscheidend. Nähern Sie sich schnell oder angespannt, wird der Hund fester beißen.",
+          "troubleshooting": "Weicht der Hund beim Nähern zurück, üben Sie erst mehrere Tage lang das Nähern und Entfernen, ohne etwas zu verlangen."
+        },
+        {
+          "title": "Tausch anbieten — Gegenstand nicht fordern",
+          "description": "Halten Sie das Leckerli an die Schnauze des Hundes, während er das Spielzeug hält. Wenn er das Maul öffnet, um zu schnüffeln oder das Leckerli zu nehmen, fällt das Spielzeug natürlich. Sagen Sie \"Aus\" in genau diesem Moment.",
+          "tip": "Das Spielzeug fällt, weil der Hund das Maul für das Leckerli öffnet. Sie ziehen es nicht heraus.",
+          "troubleshooting": "Beißt er fester zu, ziehen Sie das Leckerli zurück, warten einige Sekunden und versuchen es langsamer."
+        },
+        {
+          "title": "Großzügig belohnen und Spielzeug zurückgeben",
+          "description": "Geben Sie mehrere Leckerlis hintereinander, während das Spielzeug auf dem Boden liegt. Dann geben Sie das Spielzeug dem Hund zurück. So lernt er, dass Loslassen kein permanenter Verlust ist.",
+          "tip": "Das Zurückgeben des Spielzeugs ist wesentlich: behalten Sie es immer, lernt der Hund, es nie loszulassen.",
+          "troubleshooting": "Will der Hund das Spielzeug nicht zurück, ist das in Ordnung. Der Tausch war trotzdem erfolgreich."
+        },
+        {
+          "title": "Mit anspruchsvolleren Gegenständen generalisieren",
+          "description": "Mit der Zeit \"Aus\" mit Lieblingsspielzeug, gefundenem Futter, Socken oder jedem aufgenommenen Gegenstand üben. Bei gefährlichen Gegenständen muss die Reaktion automatisch sein.",
+          "tip": "Immer tauschen: auch wenn Sie das Spielzeug danach zurückgeben, muss der Tausch zuerst stattfinden.",
+          "troubleshooting": "Lernt der Hund, Dinge nur aufzunehmen, um den Tausch zu fordern, üben Sie auch \"Lass es\" (Neutralobjekt nicht berühren) als Ergänzung."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Versuchen, den Gegenstand mit Gewalt aus dem Maul zu ziehen",
+      "cause": "Instinkt, das Problem schnell zu lösen",
+      "fix": "Niemals die Hand hineinstecken oder ziehen. Immer den Tausch nutzen. Zwang kann defensive Bisse auslösen."
+    },
+    {
+      "error": "Den Hund verfolgen, wenn er etwas hat, was er nicht haben sollte",
+      "cause": "Panik beim Anblick des gefährlichen Gegenstands",
+      "fix": "Nicht nach dem Hund laufen. Auf den Boden setzen, Leckerli zeigen und warten. Verfolgung macht daraus ein unwiderstehliches Spiel."
+    },
+    {
+      "error": "Das Spielzeug nach dem Tausch nie zurückgeben",
+      "cause": "Denken, dass \"loslassen = wegnehmen\"",
+      "fix": "Geben Sie den Gegenstand immer zurück, wenn es sicher ist. Der Hund muss lernen, dass Loslassen vorübergehend und neutral ist, kein permanenter Verlust."
+    },
+    {
+      "error": "Minderwertige Leckerlis für etwas sehr Geschätztes verwenden",
+      "cause": "Den Wert des Tauschs nicht kalibrieren",
+      "fix": "Der Tausch muss immer \"höherwertiger\" sein. Für das Lieblingsspielzeug das absolut beste Leckerli verwenden."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mein Hund öffnet das Maul, braucht aber lange zum Loslassen",
+      "solution": "Das ist Fortschritt. Weiter großzügig belohnen — die Reaktionszeit wird mit der Übung abnehmen."
+    },
+    {
+      "problem": "Der Hund knurrt, wenn ich mich nähere, um den Gegenstand zu nehmen",
+      "solution": "Zeichen von Ressourcenbewachen: niemals erzwingen. Fachmann konsultieren. In der Zwischenzeit nicht an Gegenständen nähern, die Spannung erzeugen."
+    },
+    {
+      "problem": "Klappt gut mit Spielzeug, aber nicht mit Futter auf dem Boden",
+      "solution": "Futter hat extrem hohen Wert. Erst mit weniger wertvollen Leckerlis in der Nähe des Futters üben, Ablenkung sehr langsam steigern."
+    },
+    {
+      "problem": "Hund lernt schnell, Dinge aufzunehmen, nur um den Tausch zu bekommen",
+      "solution": "Zeichen von Intelligenz. \"Lass es\" (Neutralobjekt nicht berühren) als Ergänzung einführen, damit der Hund beide Verhaltensseiten lernt."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheit 1–3",
+      "goal": "Hund öffnet das Maul und lässt das Spielzeug beim Anblick des Leckerlis los, auch wenn es 3–5 Sekunden dauert"
+    },
+    {
+      "stage": "Einheit 4–6",
+      "goal": "Lässt innerhalb von 2 Sekunden auf \"Aus\" bei mittelwertigen Spielzeugen los"
+    },
+    {
+      "stage": "Einheit 7–9",
+      "goal": "Lässt sofort auch das Lieblingsspielzeug im Austausch gegen das Leckerli los"
+    },
+    {
+      "stage": "Woche 3–4",
+      "goal": "Lässt auf der Straße gefundene Gegenstände auf Kommando los, ohne dass Sie das Leckerli zuerst zeigen müssen"
+    }
+  ],
+  "successSigns": [
+    "Lässt den Gegenstand auf Kommando los, ohne das Leckerli sehen zu müssen",
+    "Knurrt nicht und weicht nicht zurück, wenn Sie sich nähern, während er etwas im Maul hat",
+    "Reagiert gleichermaßen auf Spielzeug, Futter und gefundene Gegenstände",
+    "Dreht sich nach dem Loslassen zu Ihnen, den Tausch erwartend"
+  ],
+  "variations": [
+    "Aus im Wasser (im Pool oder in der Wanne üben)",
+    "Aus mit Futter im Maul (Snacks auf der Straße gefunden)",
+    "Aus während des Tauziehspiels",
+    "Aus mit Textilgegenständen (Socken, Kleidung)",
+    "Aus auf Distanz (wenn der Hund weit von Ihnen entfernt ist)"
+  ],
+  "safetyNotes": [
+    "Niemals Finger in das Maul eines unbekannten oder angespannten Hundes mit einem Gegenstand stecken",
+    "Schluckt der Hund häufig Gegenstände, Tierarzt aufsuchen (mögliche Pica)",
+    "Nutzen Sie diese Technik nicht als Ausrede, dem Hund immer Futter zu geben, wenn er etwas hat — die Reaktion muss sich generalisieren",
+    "Bei einem giftigen oder lebensbedrohlichen Gegenstand den Tausch ohne Zögern anwenden und den Hund vom Bereich entfernen"
+  ],
+  "funFact": "Hunde, die \"Aus\" korrekt lernen, neigen dazu, selbstbewusster zu spielen und Gegenstände während des Spiels spontan loszulassen, weil sie gelernt haben, dass es gute Dinge bringt.",
+  "nextLevel": "Kombinieren Sie \"Aus\" mit \"Bring\" für ein vollständig flüssiges Apportierspiel. Üben Sie auch \"Lass es\" (Gegenstand nicht vom Boden aufnehmen) als wesentliche Ergänzung.",
+  "proTip": "Üben Sie \"Aus\" mit Gegenständen, die Ihr Hund ohne Gefahr haben kann (Spielzeug), nicht nur bei verbotenen Dingen. Wenn der Tausch nur erscheint, wenn etwas Schlechtes passiert, lernt der Hund, sich mit dem zu verstecken, was er aufnimmt."
+}

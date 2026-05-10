@@ -1,0 +1,183 @@
+{
+  "title": "Lie down",
+  "subtitle": "The next step after learning to sit",
+  "level": "Very basic",
+  "duration": "5–10 min per session",
+  "location": "Home or quiet garden",
+  "ageRecommendation": "From 10 weeks",
+  "estimatedSessions": "5–7 sessions to master",
+  "objective": "Teach the dog to lie down on the command “down”, holding the position for several seconds.",
+  "why": [
+    "Calms the dog during exciting moments",
+    "Helps control situations in public spaces",
+    "Improves overall obedience",
+    "Natural progression after “sit”"
+  ],
+  "benefits": [
+    "Your dog will relax in restaurants, terraces or long visits",
+    "Ideal posture for prolonged rest and barking control",
+    "Foundation to teach “stay” for several minutes",
+    "Reduces reactivity: a dog lying down doesn't jump or lunge"
+  ],
+  "where": [
+    "🏠 At home (comfortable floor, rug or living room)",
+    "🌿 Quiet garden",
+    "⛔ Avoid cold, hard or slippery surfaces at first"
+  ],
+  "materials": [
+    "🫖 Small soft treats",
+    "🛏️ Mat or dog bed (recommended)",
+    "🦮 Short leash (optional)",
+    "💛 Patience and calm voice"
+  ],
+  "beforeYouStart": [
+    "Your dog must already know “sit” fluently",
+    "Make sure the surface is comfortable (no cold floor)",
+    "Train after a short walk: a slightly tired dog learns better",
+    "Have at least 15 small treats ready",
+    "Sessions of max 5 minutes"
+  ],
+  "methods": [
+    {
+      "id": "lure_l",
+      "title": "L-shaped lure method (recommended)",
+      "description": "You guide the dog with a treat tracing an L: first downward between their paws, then forward.",
+      "bestFor": "Puppies and dogs that already know sit",
+      "steps": [
+        {
+          "title": "Starting position: sit",
+          "description": "Ask your dog to sit. This is the ideal starting point because the hips are already lowered.",
+          "tip": "If they don't respond fluently to sit, go back to that course first.",
+          "troubleshooting": "If they break the sit, calmly ask again without scolding."
+        },
+        {
+          "title": "Downward motion",
+          "description": "Place the treat on their nose and slowly lower it to the floor between their front paws.",
+          "tip": "Slow, continuous motion, no pauses.",
+          "troubleshooting": "If they stand up, ask for sit again and restart slower."
+        },
+        {
+          "title": "Forward motion",
+          "description": "Once the treat is on the floor, slide it forward in a straight line. The dog will stretch and lie down.",
+          "tip": "The full motion traces a capital L."
+        },
+        {
+          "title": "Introduce the command",
+          "description": "Once fully lying (belly touching the floor), say clearly: “down”.",
+          "tip": "Only say the word when fully lying, not halfway."
+        },
+        {
+          "title": "Reward and reinforce",
+          "description": "Give the treat immediately, on the floor between their paws. Praise with happy voice.",
+          "tip": "Rewarding on the floor reinforces the position and prevents standing."
+        },
+        {
+          "title": "Increase duration",
+          "description": "When done on first try, wait 1 second before rewarding. Build to 3, 5, 10 seconds gradually.",
+          "tip": "If they break the position early, drop back to the previous duration."
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "title": "Raised platform method",
+      "description": "You use a low step or cushion: the dog is half-elevated, making it easier for front paws to slide forward.",
+      "bestFor": "Large dogs, anxious dogs, or those that don't respond to lure",
+      "steps": [
+        {
+          "title": "Place dog on a low cushion",
+          "description": "A 5–10 cm tall platform. Firm cushion, low step or yoga block.",
+          "tip": "The front edge must be free."
+        },
+        {
+          "title": "Ask for sit on the platform",
+          "description": "The dog should sit on the cushion. Reward.",
+          "tip": "If uncomfortable on it, spend a few minutes familiarizing them."
+        },
+        {
+          "title": "Lure forward",
+          "description": "Lure their front paws forward (off the platform). They'll naturally fall into the down position.",
+          "tip": "The trick: the elevated platform makes lying down physically easier."
+        },
+        {
+          "title": "Mark and reward",
+          "description": "Once fully down, say “down” and reward.",
+          "tip": "Repeat until they associate the word."
+        },
+        {
+          "title": "Remove the platform",
+          "description": "After 5–10 sessions with platform, try on flat ground. Should work the same.",
+          "tip": "If not, return to the platform 2–3 more sessions."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Pushing the dog down with your hand on the back",
+      "cause": "Frustration when the lure doesn't work first try",
+      "fix": "Never use physical force. Improve the lure motion or use the platform method."
+    },
+    {
+      "error": "Rewarding before fully down",
+      "cause": "Anticipating success",
+      "fix": "Wait until belly and elbows are on the floor before rewarding. Otherwise you reinforce intermediate positions."
+    },
+    {
+      "error": "Practicing on cold or slippery surfaces",
+      "cause": "Lack of environmental planning",
+      "fix": "Always use rug, bed or carpet. Dogs instinctively avoid lying on cold/hard surfaces."
+    },
+    {
+      "error": "Skipping “sit” as the foundation",
+      "cause": "Wanting shortcuts",
+      "fix": "Fluent “sit” is a prerequisite. If not mastered, don't ask for down yet."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Follows the treat with nose but doesn't lower body",
+      "solution": "You're moving the treat too fast or too far. Keep it stuck to the floor and move very slowly forward."
+    },
+    {
+      "problem": "Lies down but stands up immediately",
+      "solution": "Normal at first. Reward faster (within 1 second) and gradually increase duration."
+    },
+    {
+      "problem": "Does a “sphinx” pose but doesn't lie laterally",
+      "solution": "Sphinx is valid and sufficient. Lateral form is more relaxed but not required for the basic command."
+    },
+    {
+      "problem": "My large/old dog resists",
+      "solution": "May be joint pain. Consult the vet. Meanwhile, use a very padded surface."
+    }
+  ],
+  "progressMilestones": [
+    { "stage": "Session 1–2", "goal": "Follows treat to the floor and bends front legs" },
+    { "stage": "Session 3–5", "goal": "Fully lies down with the lure 60% of attempts" },
+    { "stage": "Session 6–7", "goal": "Lies down on “down” command without needing the lure" },
+    { "stage": "Week 2–3", "goal": "Holds the position 30 seconds before reward" }
+  ],
+  "successSigns": [
+    "Lies down on command with no visible lure",
+    "Does it in different places and positions",
+    "Holds the position more than 10 seconds",
+    "Returns to lying if they break the position when asked again"
+  ],
+  "variations": [
+    "Down at distance (1–2 meters away)",
+    "Full lateral down (on side, not sphinx)",
+    "Down during your breakfast while you eat",
+    "Down with only a downward hand gesture",
+    "Down after a chained sit (combining commands)"
+  ],
+  "safetyNotes": [
+    "If your dog shows pain or cracking when lying, consult the vet before continuing",
+    "Large breeds (Mastiffs, Great Danes) may take longer due to anatomy",
+    "Never force physically: it can create fear and command rejection",
+    "Puppies under 14 weeks: max 3 minutes per session"
+  ],
+  "funFact": "Dogs only lie laterally (on their side) when they feel 100% safe. If yours does this with you, it's a sign of deep trust.",
+  "nextLevel": "Increase duration to 1–2 minutes. Practice with distractions and in public. Then introduce “stay”.",
+  "proTip": "If your dog won't lie, go back to “sit” and repeat slower. Always toss the treat to the floor between paws, never hand-feed: this reinforces staying down."
+}

@@ -1,0 +1,159 @@
+{
+  "title": "Atención con distracciones",
+  "subtitle": "Tu perro mantiene la atención en ti aunque el mundo entero lo llame",
+  "level": "Avanzado",
+  "duration": "5–10 min por sesión",
+  "location": "Progresivo: casa → jardín → calle → parque",
+  "ageRecommendation": "Desde 5 meses (con prereqs consolidados)",
+  "estimatedSessions": "10–15 sesiones para generalizar",
+  "objective": "Enseñar al perro a mantener la atención y la obediencia incluso cuando aparecen distracciones como otros perros, personas, comida en el suelo o ruidos fuertes.",
+  "why": [
+    "La atención es la base de toda obediencia en el mundo real",
+    "Un perro que te mira cuando se lo pides es un perro seguro y controlable",
+    "Previene accidentes en la calle y situaciones peligrosas",
+    "Reduce la reactividad y la sobreexcitación en ambientes nuevos"
+  ],
+  "benefits": [
+    "Podrás pasear con tu perro con tranquilidad aunque haya otros perros cerca",
+    "Tu perro no se lanzará sobre comida tirada en la calle",
+    "Responderá a sus órdenes incluso en el parque o en casa de amigos",
+    "Reducirás la ansiedad de tu perro en entornos desconocidos"
+  ],
+  "where": [
+    "🏠 Empieza siempre en casa sin distracciones",
+    "🌿 Avanza al jardín y luego a la calle tranquila",
+    "🎯 Finaliza en el parque o entornos con distracciones reales"
+  ],
+  "materials": [
+    "🫖 Premios de máxima motivación (pollo cocido, queso, salchicha)",
+    "🦮 Correa de 2 metros para las fases exteriores",
+    "🎯 Tu voz, tu mirada y tu postura como herramientas principales",
+    "💛 Paciencia para avanzar muy despacio al principio"
+  ],
+  "beforeYouStart": [
+    "Tu perro debe dominar “quieto” y “ven” en casa sin distracciones",
+    "Empieza con distracciones muy pequeñas: nunca con el nivel más difícil",
+    "Usa premios de máxima calidad: las distracciones deben competir contra algo muy valioso",
+    "Sesiones cortas de 5 minutos: la atención bajo presión agota mentalmente al perro",
+    "Acepta que habrá regresiones y días malos. La constancia lo soluciona"
+  ],
+  "methods": [
+    {
+      "id": "gradient_focus",
+      "title": "Método de gradiente con señal “mírame” (recomendado)",
+      "description": "Construyes la atención de forma gradual: primero en ambiente neutral, luego con distracciones cada vez más intensas. La señal “mírame” enseña al perro a buscarte a ti cuando aparece algo interesante.",
+      "bestFor": "Perros con excitación alta o que se quedan bloqueados ante estímulos",
+      "steps": [
+        {
+          "title": "Enseña “mírame” sin distracciones",
+          "description": "En casa, sostén un premio cerca de tu ojo y espera. En cuanto el perro haga contacto visual contigo, di “mírame”, premia y felicita. Repite 10 veces por sesión.",
+          "tip": "No necesitas mover el premio hasta tu ojo en el futuro: solo di la palabra y espera contacto visual.",
+          "troubleshooting": "Si el perro mira el premio pero no tus ojos, mueve el premio hasta tu frente lentamente."
+        },
+        {
+          "title": "Introduce una distracción muy pequeña",
+          "description": "Coloca un juguete aburrido o un objeto neutro a 3 metros. Pide “mírame”. Si te mira, premia generosamente. Si no, acércate más a la distracción solo si el perro ya mira bien de lejos.",
+          "tip": "La distracción debe ser interesante pero no irresistible. Si el perro no puede ignorarla, es demasiado grande.",
+          "troubleshooting": "Si el perro no puede apartar la mirada, aleja la distracción o usa una menos interesante."
+        },
+        {
+          "title": "Practica con distracciones en movimiento",
+          "description": "Ahora usa distracciones que se muevan: una pelota rodando, una persona caminando, otro perro a distancia. Pide “mírame” justo antes de que la distracción aparezca o se acerque.",
+          "tip": "El momento clave es pedir la atención ANTES de que el perro se fije en la distracción, no después.",
+          "troubleshooting": "Si el perro ya está bloqueado mirando la distracción, muévete tú lateralmente o da media vuelta para recuperar su atención."
+        },
+        {
+          "title": "Añade obediencia bajo distracción",
+          "description": "Cuando ya mire bien ante distracciones, combina “mírame” con “sentado” o “quieto”. El perro debe poder hacer la orden aunque haya algo interesante cerca.",
+          "tip": "Premia el éxito con MUCHOS premios (jackpot): 5–6 premios seguidos cuando logra obedecer con distracción.",
+          "troubleshooting": "Si falla las órdenes combinadas, vuelve a solo “mírame” y aumenta la dificultad más despacio."
+        },
+        {
+          "title": "Generaliza en entornos reales",
+          "description": "Lleva el entrenamiento al parque, la calle concurrida, el mercado. En cada nuevo entorno, empieza con las distracciones más pequeñas y avanza progresivamente.",
+          "tip": "Cada nuevo ambiente es como empezar de cero: el perro necesita un periodo de adaptación.",
+          "troubleshooting": "Si en el parque no hay forma de conseguir atención, da un paseo corto primero para que el perro se descargue antes de entrenar."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Presentar la distracción máxima desde el primer momento",
+      "cause": "Querer resultados rápidos",
+      "fix": "Siempre empieza por debajo del umbral: el nivel donde el perro PUEDE ignorar la distracción. Ve subiendo peldaño a peldaño."
+    },
+    {
+      "error": "Repetir la orden cuando el perro está bloqueado en la distracción",
+      "cause": "Creer que repetir más veces funciona",
+      "fix": "Si está bloqueado, cambia de posición tú mismo (muévete lateralmente, aleja al perro) y luego pide atención."
+    },
+    {
+      "error": "Usar premios de baja motivación ante distracciones fuertes",
+      "cause": "No calibrar el valor del premio a la dificultad del ejercicio",
+      "fix": "A mayor distracción, mayor valor del premio. El pollo cocido o el queso deben superar en atractivo a lo que distrae al perro."
+    },
+    {
+      "error": "Entrenar cuando el perro está sobrestimulado",
+      "cause": "Elegir el momento equivocado (llegada al parque, juego previo intenso)",
+      "fix": "Espera 10–15 minutos tras llegar a un entorno nuevo o tras juego intenso. La mente se asienta con el tiempo."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "En el parque el perro me ignora completamente",
+      "solution": "El nivel de distracción es demasiado alto. Da un paseo de 10 minutos primero para bajar la excitación, luego busca un rincón tranquilo del parque para empezar."
+    },
+    {
+      "problem": "Mi perro se queda bloqueado mirando a otros perros y no reacciona a nada",
+      "solution": "Estás demasiado cerca del otro perro. La distancia de seguridad es donde tu perro puede verte aunque exista la distracción. Aumenta la distancia."
+    },
+    {
+      "problem": "Funciona muy bien en casa pero en la calle es como si no supiera nada",
+      "solution": "Normal: el perro aprende en contexto. Practica en el rellano, luego en la puerta de casa, luego 5 metros, luego la esquina. Generaliza en pasos pequeños."
+    },
+    {
+      "problem": "Mi perro mejora y luego parece retroceder",
+      "solution": "Las regresiones son normales, especialmente en etapas de crecimiento o cambios en el entorno. Vuelve un nivel atrás y progresa de nuevo."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Semana 1–2",
+      "goal": "El perro mantiene contacto visual contigo durante 3–5 segundos con distracciones estáticas pequeñas en casa"
+    },
+    {
+      "stage": "Semana 3–4",
+      "goal": "Responde a “mírame” en el jardín con personas o perros a 10+ metros"
+    },
+    {
+      "stage": "Semana 5–6",
+      "goal": "Puede hacer sentado o quieto en la calle aunque pasen personas o ciclistas"
+    },
+    {
+      "stage": "Semana 7+",
+      "goal": "Mantiene la atención en el parque con otros perros en el entorno, respondiendo a órdenes básicas"
+    }
+  ],
+  "successSigns": [
+    "El perro te busca con la mirada espontáneamente cuando aparece algo interesante",
+    "Responde a sus órdenes básicas aunque haya distracciones moderadas",
+    "Puede pasear a tu lado sin tirar aunque haya otros perros a 5 metros",
+    "Redirige su atención hacia ti cuando se lo pides, incluso en el parque"
+  ],
+  "variations": [
+    "Atención con comida en el suelo (especialmente útil en ciudades)",
+    "Atención con otros perros corriendo cerca",
+    "Atención con ruidos fuertes (petardos, motos, obras)",
+    "Atención mientras esperas en la consulta veterinaria"
+  ],
+  "safetyNotes": [
+    "Nunca pongas al perro en situaciones que superen con creces su umbral: puede generar trauma o aumentar la reactividad",
+    "Si tu perro muestra señales de miedo (cola baja, orejas hacia atrás, temblor), para la sesión y aleja la distracción",
+    "Los perros reactivos necesitan ayuda de un profesional: el gradiente solo no es suficiente en casos severos",
+    "No entrenes atención bajo distracciones en correa demasiado tensa: aumenta el estrés del perro"
+  ],
+  "funFact": "Los perros pueden procesar el mundo a una velocidad 5 veces superior a los humanos. Lo que a ti te parece una distracción leve puede ser una avalancha de información sensorial para tu perro.",
+  "nextLevel": "Practica con distracciones de muy alto valor como comida en la mano de otra persona o perros en juego libre. Luego introduce “suéltalo” combinado con atención.",
+  "proTip": "Conviértete en la cosa más interesante del paseo: habla con tu perro, cambia de ritmo, haz giros inesperados. Un guía impredecible y divertido genera atención natural sin tener que pedirla."
+}

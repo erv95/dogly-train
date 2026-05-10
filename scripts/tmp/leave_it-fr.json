@@ -1,0 +1,186 @@
+{
+  "title": "Laisse",
+  "subtitle": "La commande de sécurité la plus importante que votre chien puisse apprendre",
+  "level": "Basique",
+  "duration": "5–10 min par séance",
+  "location": "Maison ou jardin calme",
+  "ageRecommendation": "Dès 8 semaines",
+  "estimatedSessions": "5–8 séances pour maîtriser",
+  "objective": "Apprendre au chien à ignorer tout objet au sol ou dans votre main lorsqu'il entend le signal 'laisse', le protégeant ainsi d'ingérer des objets dangereux.",
+  "why": [
+    "Protège le chien de manger des aliments dangereux, des déchets ou des toxines dans la rue",
+    "Contrôle les impulsions face aux objets tentants sans avoir besoin de tirer sur la laisse",
+    "Renforce la confiance entre le chien et le maître grâce à l'autocontrôle",
+    "Constitue la base pour améliorer le comportement d'exploration dans de nouveaux environnements"
+  ],
+  "benefits": [
+    "Votre chien ignore la nourriture tombée par terre avant que vous puissiez la ramasser",
+    "Évite les conflits de ressources avec d'autres chiens",
+    "Réduit le risque d'intoxication accidentelle lors des promenades",
+    "Développe l'autocontrôle comme compétence transférable à d'autres situations"
+  ],
+  "where": [
+    "🏠 Commencez à la maison dans une pièce sans distractions",
+    "🌿 Progressez vers le jardin ou la terrasse une fois maîtrisé en intérieur",
+    "🛣️ Pratiquez finalement dans la rue avec de vraies distractions"
+  ],
+  "materials": [
+    "🫖 Deux types de friandises : faible valeur (croquettes) et haute valeur (poulet, fromage)",
+    "✋ Vos mains comme 'cachette' pour les friandises",
+    "🦮 Longue laisse (optionnelle pour la pratique en extérieur)",
+    "💛 Patience et calme"
+  ],
+  "beforeYouStart": [
+    "Préparez deux types de friandises : une pour la 'tentation' et une meilleure pour récompenser",
+    "Assurez-vous que votre chien a un niveau minimal d'attention envers vous",
+    "Pratiquez sans laisse à la maison avant de passer à l'extérieur",
+    "Limitez les séances à 5 minutes maximum pour ne pas saturer le chien",
+    "Ne pratiquez pas si le chien est très affamé ou trop excité"
+  ],
+  "methods": [
+    {
+      "id": "closed_fist",
+      "title": "Méthode du poing fermé (recommandée pour commencer)",
+      "description": "Vous cachez une friandise dans votre main fermée, le chien essaie de l'obtenir et quand il recule, vous le récompensez avec une friandise différente et meilleure. Apprend que ignorer = gagner quelque chose de mieux.",
+      "bestFor": "Chiots et chiens sans expérience préalable de la commande",
+      "steps": [
+        {
+          "title": "Préparez le poing",
+          "description": "Placez une friandise de faible valeur dans votre main et fermez-la en poing. Présentez le poing fermé au chien à hauteur de son museau.",
+          "tip": "Utilisez une friandise de faible valeur ici (croquettes normales) ; la bonne friandise va dans l'autre main ou dans votre poche.",
+          "troubleshooting": "Si le chien aboie ou gratte intensément, tenez bon. Ne retirez pas votre main et ne le grondez pas."
+        },
+        {
+          "title": "Observez et attendez",
+          "description": "Le chien va sentir, lécher et pousser votre poing pour essayer d'obtenir la friandise. N'ouvrez pas la main. Attendez en silence.",
+          "tip": "La patience est essentielle. La première fois, cela peut prendre de 10 secondes à 2 minutes.",
+          "troubleshooting": "S'il se désintéresse et s'éloigne, essayez une odeur plus alléchante mais récompensez toujours seulement quand il recule."
+        },
+        {
+          "title": "Capturez le recul",
+          "description": "Au moment où le chien retire son museau de votre poing (même d'un centimètre), dites 'laisse' et récompensez IMMÉDIATEMENT avec la bonne friandise de l'autre main.",
+          "tip": "Le timing est critique : la récompense doit arriver dans les 2 secondes qui suivent le recul."
+        },
+        {
+          "title": "Répétez et augmentez la difficulté",
+          "description": "Répétez 5–8 fois par séance. Une fois qu'il le fait avec fluidité, commencez à poser un objet au sol couvert par votre pied.",
+          "tip": "Augmentez la difficulté graduellement : poing → sol couvert → sol visible → rue."
+        },
+        {
+          "title": "Généralisez la commande",
+          "description": "Une fois qu'il maîtrise avec votre poing, pratiquez avec des objets au sol, de la nourriture tombée, puis en extérieur avec de vraies distractions.",
+          "tip": "Dans chaque nouvel environnement, revenez au niveau le plus facile avant d'augmenter la difficulté."
+        }
+      ]
+    },
+    {
+      "id": "ground_progression",
+      "title": "Méthode de progression au sol",
+      "description": "Vous commencez avec la friandise couverte par votre pied et vous la découvrez progressivement tandis que le chien apprend à résister à la tentation. Idéal pour consolider la commande.",
+      "bestFor": "Chiens qui comprennent déjà le concept de base ou qui ont une impulsivité plus élevée",
+      "steps": [
+        {
+          "title": "Friandise sous le pied",
+          "description": "Placez une friandise au sol et couvrez-la complètement avec la pointe de votre pied. Permettez au chien de la flairer autour de votre pied.",
+          "tip": "Votre pied doit couvrir entièrement la friandise pour qu'il ne puisse pas la voler.",
+          "troubleshooting": "S'il gratte le sol avec force, ne réagissez pas. Attendez calmement qu'il s'éloigne."
+        },
+        {
+          "title": "Dites 'laisse' et attendez",
+          "description": "Quand le chien recule même légèrement de votre pied, dites 'laisse' calmement et récompensez avec une friandise de votre main (pas celle au sol).",
+          "tip": "Ne récompensez jamais avec la friandise du sol : le chien doit apprendre que 'laisse' signifie 'cette friandise n'est pas pour toi, mais tu en gagnes une meilleure'."
+        },
+        {
+          "title": "Découvrez progressivement",
+          "description": "Quand le chien attend sans essayer de prendre la friandise au sol, déplacez très légèrement votre pied pour révéler une petite partie. Répétez la commande.",
+          "tip": "S'il se précipite, recouvrez avec le pied. Sans gronder — recommencez simplement."
+        },
+        {
+          "title": "Friandise complètement visible",
+          "description": "L'objectif final est que le chien puisse voir la friandise au sol et l'ignorer quand il entend 'laisse', vous regardant dans l'attente de la récompense.",
+          "tip": "Cette étape peut nécessiter 3–5 séances supplémentaires. Ne vous précipitez pas."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Répéter 'laisse' plusieurs fois de suite",
+      "cause": "Frustration du maître quand le chien ne réagit pas du premier coup",
+      "fix": "Dites la commande UNE seule fois et attendez en silence. La répéter apprend au chien à l'ignorer."
+    },
+    {
+      "error": "Récompenser avec l'objet qu'on lui a dit de laisser",
+      "cause": "Utiliser ce qui est le plus à portée de main pour récompenser",
+      "fix": "Récompensez toujours avec une friandise DIFFÉRENTE et de plus grande valeur. L'objet interdit ne doit jamais devenir la récompense."
+    },
+    {
+      "error": "Utiliser la commande dans de vraies situations dangereuses sans entraînement préalable",
+      "cause": "Supposer que le chien le sait sans pratique systématique",
+      "fix": "Pratiquez à la maison des semaines avant d'en avoir besoin dans la rue. En vraies urgences, éloignez physiquement votre chien."
+    },
+    {
+      "error": "Gronder le chien quand il attrape l'objet",
+      "cause": "Réaction impulsive de frustration",
+      "fix": "Ne punissez jamais. S'il l'a attrapé, c'est que l'entraînement nécessite des étapes plus préparatoires. Revenez à un niveau antérieur."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien attrape la friandise avant que je puisse dire 'laisse'",
+      "solution": "L'objet est trop accessible. Revenez au poing fermé et assurez-vous de contrôler l'accès avant d'avancer."
+    },
+    {
+      "problem": "Il fait 'laisse' à la maison mais ça ne fonctionne pas dans la rue",
+      "solution": "Normal : la rue a plus de stimuli. Recommencez l'entraînement en extérieur depuis l'étape la plus facile, avec moins de distractions d'abord."
+    },
+    {
+      "problem": "Mon chien se frustre et aboie quand je dis 'laisse'",
+      "solution": "L'impulsivité est élevée. Pratiquez dans des séances plus courtes (2–3 minutes) avec des récompenses de plus grande valeur et réduisez l'attrait de l'objet interdit."
+    },
+    {
+      "problem": "Fonctionne bien avec la nourriture mais pas avec les objets (chaussettes, jouets)",
+      "solution": "Ce sont des catégories différentes pour le chien. Entraînez-vous spécifiquement avec chaque type d'objet, en commençant par ceux de moindre valeur pour lui."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séance 1–2",
+      "goal": "Le chien retire son museau du poing fermé au moins une fois par séance"
+    },
+    {
+      "stage": "Séance 3–5",
+      "goal": "Ignore le poing dans 7 tentatives sur 10 et commence à vous regarder pour la bonne friandise"
+    },
+    {
+      "stage": "Semaine 2",
+      "goal": "Ignore une friandise visible au sol couverte par le pied en entendant 'laisse'"
+    },
+    {
+      "stage": "Semaine 3–4",
+      "goal": "Ignore les objets au sol sans que le pied les couvre, à la maison et dans le jardin"
+    }
+  ],
+  "successSigns": [
+    "S'éloigne de l'objet et vous regarde spontanément en entendant 'laisse'",
+    "Fonctionne avec différents types d'objets (nourriture, jouets, déchets)",
+    "Réalise en extérieur avec des distractions modérées",
+    "Maintient la distance de l'objet pendant 5 secondes ou plus"
+  ],
+  "variations": [
+    "Laisse avec de la nourriture dans votre paume ouverte (niveau avancé)",
+    "Laisse avec un autre chien comme distraction",
+    "Laisse avec un objet jeté soudainement au sol",
+    "Laisse en marchant (sans s'arrêter)",
+    "Laisse avec une période d'attente avant de recevoir la récompense alternative"
+  ],
+  "safetyNotes": [
+    "Dans de vraies situations de danger (toxique, verre), ne dépendez pas de la commande : agissez directement",
+    "N'utilisez jamais de punition physique ou verbale en cas d'échec : recommencez simplement l'exercice",
+    "Assurez-vous que les friandises de récompense ne sont pas toxiques pour les chiens (sans xylitol, raisins, oignon)",
+    "Si votre chien montre une garde de ressources ou grogne quand vous approchez l'objet, consultez un comportementaliste avant de continuer"
+  ],
+  "funFact": "Les chiens qui apprennent 'laisse' dans leurs premières semaines de vie ont jusqu'à 40 % moins de visites chez le vétérinaire pour ingestion de corps étrangers.",
+  "nextLevel": "Pratiquez 'laisse' en mouvement lors des promenades. Introduisez ensuite la commande avec d'autres chiens ou animaux comme distraction.",
+  "proTip": "Le secret de 'laisse' est que le chien apprenne qu'ignorer quelque chose produit toujours quelque chose de mieux. Ne lésinez jamais sur la qualité de la friandise de récompense — elle doit être clairement supérieure à l'objet interdit."
+}

@@ -38,9 +38,12 @@ export default function TrainerProfileScreen() {
   );
   const [currency, setCurrency] = useState(trainer?.currency ?? 'EUR');
   const [city, setCity] = useState(trainer?.city ?? '');
+  const [bizumPhone, setBizumPhone] = useState(trainer?.bizumPhone ?? '');
   const [certifications, setCertifications] = useState<string[]>(
     trainer?.certifications ?? []
   );
+  const [certPhotos, setCertPhotos] = useState<Record<number, string>>({}); // index → URL
+  const [certPhotoLoading, setCertPhotoLoading] = useState<number | null>(null);
   const [specialties, setSpecialties] = useState<string[]>(
     trainer?.specialties ?? []
   );
@@ -54,7 +57,7 @@ export default function TrainerProfileScreen() {
   const handleSignOut = () => {
     Alert.alert(
       t('settings.logout'),
-      '¿Seguro que quieres cerrar sesión?',
+      t('settings.logoutConfirm'),
       [
         { text: t('common.cancel'), style: 'cancel' },
         {
@@ -90,7 +93,7 @@ export default function TrainerProfileScreen() {
     try {
       const { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
-        Alert.alert(t('common.error'), 'Permiso de ubicación denegado. Actívalo en Ajustes.');
+        Alert.alert(t('common.error'), t('trainer.locationDenied'));
         return;
       }
       const location = await Location.getCurrentPositionAsync({
@@ -141,6 +144,35 @@ export default function TrainerProfileScreen() {
 
   const removeCertification = (index: number) => {
     setCertifications((prev) => prev.filter((_, i) => i !== index));
+    setCertPhotos((prev) => {
+      const next = { ...prev };
+      delete next[index];
+      // Re-index photos after removed item
+      const reindexed: Record<number, string> = {};
+      Object.entries(next).forEach(([k, v]) => {
+        const ki = Number(k);
+        reindexed[ki > index ? ki - 1 : ki] = v;
+      });
+      return reindexed;
+    });
+  };
+
+  const handleUploadCertPhoto = async (index: number) => {
+    if (!firebaseUser) return;
+    setCertPhotoLoading(index);
+    try {
+      const url = await pickAndUploadImage(
+        `certifications/${firebaseUser.uid}/cert_${index}_${Date.now()}.jpg`
+      );
+      if (url) {
+        setCertPhotos((prev) => ({ ...prev, [index]: url }));
+        Alert.alert(t('common.ok'), t('trainer.certPhotoAdded'));
+      }
+    } catch {
+      Alert.alert(t('common.error'), t('authErrors.generic'));
+    } finally {
+      setCertPhotoLoading(null);
+    }
   };
 
   const addSpecialty = () => {
@@ -164,6 +196,7 @@ export default function TrainerProfileScreen() {
         pricePerSession: Number(pricePerSession) || 0,
         currency,
         city: city.trim(),
+        bizumPhone: bizumPhone.trim() || null,
         certifications,
         specialties,
       };
@@ -204,6 +237,13 @@ export default function TrainerProfileScreen() {
               <Ionicons name="camera" size={16} color={colors.textOnPrimary} />
             </View>
           </TouchableOpacity>
+
+          {userData?.displayId && (
+            <View style={styles.idBadge}>
+              <Ionicons name="id-card-outline" size={13} color={colors.primary} />
+              <Text style={styles.idText}>#{userData.displayId}</Text>
+            </View>
+          )}
 
           {/* Basic info */}
           <Input
@@ -259,11 +299,42 @@ export default function TrainerProfileScreen() {
             />
           </View>
 
+          {/* Bizum (off-platform payment) */}
+          <Input
+            label={t('bookings.bizumLabel')}
+            value={bizumPhone}
+            onChangeText={setBizumPhone}
+            placeholder="+34 6XX XXX XXX"
+            keyboardType="phone-pad"
+            maxLength={20}
+          />
+          <Text style={styles.helperText}>{t('bookings.bizumHelper')}</Text>
+
           {/* Certifications */}
           <Text style={styles.sectionLabel}>{t('trainer.certifications')}</Text>
           {certifications.map((cert, i) => (
             <View key={i} style={styles.tagRow}>
-              <Text style={styles.tagText}>{cert}</Text>
+              <Ionicons
+                name={certPhotos[i] ? 'checkmark-circle' : 'document-outline'}
+                size={18}
+                color={certPhotos[i] ? colors.success : colors.textLight}
+              />
+              <Text style={[styles.tagText, { flex: 1 }]}>{cert}</Text>
+              <TouchableOpacity
+                onPress={() => handleUploadCertPhoto(i)}
+                disabled={certPhotoLoading === i}
+                style={styles.certPhotoBtn}
+              >
+                {certPhotoLoading === i ? (
+                  <Ionicons name="cloud-upload" size={18} color={colors.textLight} />
+                ) : (
+                  <Ionicons
+                    name={certPhotos[i] ? 'image' : 'camera-outline'}
+                    size={18}
+                    color={certPhotos[i] ? colors.primary : colors.textSecondary}
+                  />
+                )}
+              </TouchableOpacity>
               <TouchableOpacity onPress={() => removeCertification(i)}>
                 <Ionicons name="close-circle" size={20} color={colors.error} />
               </TouchableOpacity>
@@ -317,11 +388,58 @@ export default function TrainerProfileScreen() {
             size="lg"
           />
 
-          {/* Logout */}
-          <TouchableOpacity style={styles.logoutButton} onPress={handleSignOut}>
-            <Ionicons name="log-out-outline" size={20} color={colors.error} />
-            <Text style={styles.logoutText}>{t('settings.logout')}</Text>
+          {/* My bookings */}
+          <TouchableOpacity
+            style={styles.settingsButton}
+            onPress={() => router.push('/(trainer)/bookings')}
+            activeOpacity={0.7}
+          >
+            <Ionicons name="list-outline" size={20} color={colors.primary} />
+            <Text style={styles.settingsText}>{t('bookings.list.title')}</Text>
+            <Ionicons name="chevron-forward" size={16} color={colors.textLight} style={{ marginLeft: 'auto' }} />
           </TouchableOpacity>
+
+          {/* My availability */}
+          <TouchableOpacity
+            style={styles.settingsButton}
+            onPress={() => router.push('/(shared)/availability')}
+            activeOpacity={0.7}
+          >
+            <Ionicons name="calendar-outline" size={20} color={colors.primary} />
+            <Text style={styles.settingsText}>{t('bookings.editor.title')}</Text>
+            <Ionicons name="chevron-forward" size={16} color={colors.textLight} style={{ marginLeft: 'auto' }} />
+          </TouchableOpacity>
+
+          {/* Identity verification */}
+          <TouchableOpacity
+            style={styles.settingsButton}
+            onPress={() => router.push('/(shared)/identity-verification')}
+            activeOpacity={0.7}
+          >
+            <Ionicons
+              name={userData?.verified ? 'shield-checkmark' : 'shield-outline'}
+              size={20}
+              color={userData?.verified ? colors.success : colors.primary}
+            />
+            <Text style={styles.settingsText}>
+              {userData?.verified
+                ? t('identityVerification.entryVerified')
+                : t('identityVerification.entry')}
+            </Text>
+            <Ionicons name="chevron-forward" size={16} color={colors.textLight} style={{ marginLeft: 'auto' }} />
+          </TouchableOpacity>
+
+          {/* Settings (includes Premium / Remove ads) */}
+          <TouchableOpacity
+            style={styles.settingsButton}
+            onPress={() => router.push('/(shared)/settings')}
+            activeOpacity={0.7}
+          >
+            <Ionicons name="settings-outline" size={20} color={colors.primary} />
+            <Text style={styles.settingsText}>{t('settings.title')}</Text>
+            <Ionicons name="chevron-forward" size={16} color={colors.textLight} style={{ marginLeft: 'auto' }} />
+          </TouchableOpacity>
+
         </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
@@ -342,6 +460,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: colors.text,
     marginBottom: spacing.lg,
+    textAlign: 'center',
   },
   avatarSection: {
     alignSelf: 'center',
@@ -370,6 +489,13 @@ const styles = StyleSheet.create({
     color: colors.text,
     marginTop: spacing.md,
     marginBottom: spacing.sm,
+  },
+  helperText: {
+    fontSize: fontSize.xs,
+    color: colors.textSecondary,
+    marginTop: -spacing.sm,
+    marginBottom: spacing.md,
+    fontStyle: 'italic',
   },
   locationRow: {
     flexDirection: 'row',
@@ -405,6 +531,9 @@ const styles = StyleSheet.create({
   addBtn: {
     paddingTop: spacing.sm,
   },
+  certPhotoBtn: {
+    paddingHorizontal: spacing.xs,
+  },
   chipContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -427,6 +556,25 @@ const styles = StyleSheet.create({
     color: colors.secondary,
     fontWeight: '600',
   },
+  idBadge: {
+    alignSelf: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: colors.primary + '15',
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.xs,
+    borderRadius: borderRadius.full,
+    borderWidth: 1,
+    borderColor: colors.primary + '30',
+    marginBottom: spacing.sm,
+  },
+  idText: {
+    fontSize: fontSize.sm,
+    fontWeight: '700',
+    color: colors.primary,
+    letterSpacing: 1,
+  },
   logoutButton: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -438,6 +586,23 @@ const styles = StyleSheet.create({
   logoutText: {
     fontSize: fontSize.md,
     color: colors.error,
+    fontWeight: '600',
+  },
+  settingsButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+    marginTop: spacing.md,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.md,
+    borderRadius: borderRadius.md,
+    borderWidth: 1,
+    borderColor: colors.border,
+    backgroundColor: colors.background,
+  },
+  settingsText: {
+    fontSize: fontSize.md,
+    color: colors.text,
     fontWeight: '600',
   },
 });

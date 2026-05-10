@@ -1,0 +1,158 @@
+{
+  "title": "Wave Hello",
+  "subtitle": "The crowd-pleasing trick everyone loves — saying hi with both paws!",
+  "level": "Intermediate",
+  "duration": "5–10 min per session",
+  "location": "Home or quiet garden",
+  "ageRecommendation": "From 5 months",
+  "estimatedSessions": "8–12 sessions to master",
+  "objective": "Teach the dog to offer both paws alternately in a waving motion, responding to the verbal cue “wave” or a hand gesture.",
+  "why": [
+    "It's a showstopper trick that impresses family and friends",
+    "Builds confidence and deepens the bond between dog and owner",
+    "Develops body awareness — the dog learns to control each paw independently",
+    "Opens the door to more advanced tricks like high five"
+  ],
+  "benefits": [
+    "Your dog learns to channel excitement into a specific, controlled behaviour",
+    "Improves coordination and balance in young dogs",
+    "Reduces uncontrolled jumping by redirecting energy into a precise action",
+    "Creates positive interaction moments that reinforce overall obedience"
+  ],
+  "where": [
+    "🏠 Indoors, in the living room or kitchen without distractions",
+    "🌿 In the garden once it's well mastered indoors",
+    "🔇 Always in a calm space at the beginning"
+  ],
+  "materials": [
+    "🫖 Small, high-value treats (chicken, cheese, sausage)",
+    "🛟 Non-slip surface so the dog feels secure",
+    "🖐️ Your open hands as the visual cue",
+    "💛 Patience and enthusiasm for every success"
+  ],
+  "beforeYouStart": [
+    "Your dog should reliably know “shake” with at least one paw before starting",
+    "Choose a calm moment — not right after an exciting walk and not when overtired",
+    "Prepare at least 20 small treats per session",
+    "Work on a non-slip surface (rug or carpet)",
+    "Keep sessions to 7 minutes maximum to maintain motivation"
+  ],
+  "methods": [
+    {
+      "id": "alternate_paws",
+      "title": "Alternating paws wave method",
+      "description": "First consolidate shake with each paw separately, then alternate paws and speed up the motion until it looks like a natural wave.",
+      "bestFor": "Dogs that already know shake with one or both paws",
+      "steps": [
+        {
+          "title": "Consolidate the right paw",
+          "description": "Extend your right hand open and cue “right” (or whatever cue you use). When the dog offers the right paw, mark with “yes!” and reward immediately.",
+          "tip": "If the dog only knows one paw, repeat 5 times until the response is fluent.",
+          "troubleshooting": "If the dog offers the wrong paw, ignore it silently and cue again."
+        },
+        {
+          "title": "Consolidate the left paw",
+          "description": "Extend your left hand and cue “left”. Mark and reward every time the correct paw is offered. Spend 2–3 sessions on each side separately.",
+          "tip": "Keep hands symmetrical — same height, same gesture for each side."
+        },
+        {
+          "title": "Alternate the paws",
+          "description": "Once both sides respond reliably, start alternating: right hand → “right”, reward; left hand → “left”, reward. Gradually increase the pace.",
+          "tip": "Start alternating every 3–4 seconds. Then reduce to 1–2 seconds.",
+          "troubleshooting": "If the dog gets confused, go back to working each paw separately for a couple more sessions."
+        },
+        {
+          "title": "Introduce the “wave” cue",
+          "description": "Once the dog alternates well, start saying “wave” before moving your hands. The dog will associate the word with the alternating motion.",
+          "tip": "Use an upbeat, festive tone when saying “wave” — the excitement is contagious."
+        },
+        {
+          "title": "Speed up — the real wave",
+          "description": "Move your hands faster and lighter, mimicking a human wave. The dog will follow the rhythm and the result will look like a genuine wave with its paws.",
+          "tip": "Celebrate enthusiastically when the motion looks smooth and natural.",
+          "troubleshooting": "If the dog loses rhythm, slow down again and build speed gradually."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Jumping to alternating before each paw is solid individually",
+      "cause": "Rushing toward the final result",
+      "fix": "Spend at least 3 sessions on each paw separately before combining them."
+    },
+    {
+      "error": "Using the same hand gesture for both paws",
+      "cause": "Not visually distinguishing left from right",
+      "fix": "Extend the hand on the same side as the paw you want. The visual signal is key."
+    },
+    {
+      "error": "Rewarding too late, after the paw has already come down",
+      "cause": "Slow reflexes or treats not ready",
+      "fix": "Hold treats in your free hand. Mark and reward at the moment of contact."
+    },
+    {
+      "error": "Sessions that are too long and bore the dog",
+      "cause": "Trying to teach everything in one long session",
+      "fix": "7 minutes maximum. Always end on an easy success so the dog wants more."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My dog always offers the same paw",
+      "solution": "Work exclusively on the forgotten paw for 2–3 sessions. Only reward that paw until it balances out."
+    },
+    {
+      "problem": "The dog lies down when I try to get the second paw",
+      "solution": "It's losing balance. Work on a firmer surface and ask for each paw with the dog well-planted on the other three."
+    },
+    {
+      "problem": "The motion doesn't look like a wave — it's too slow",
+      "solution": "Use a smaller treat so the dog is more alert and active. Speed up your own hand and the dog will follow."
+    },
+    {
+      "problem": "The dog gets overexcited and starts jumping",
+      "solution": "Stop the session, cue a “sit” to calm down, and restart. Lower your voice tone and reduce reward frequency."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessions 1–3",
+      "goal": "Offers each paw separately in a fluid way in response to the correct hand"
+    },
+    {
+      "stage": "Sessions 4–7",
+      "goal": "Alternates both paws when you switch hands, with small pauses between each"
+    },
+    {
+      "stage": "Sessions 8–10",
+      "goal": "Responds to “wave” and alternates paws with increasing rhythm"
+    },
+    {
+      "stage": "Week 3+",
+      "goal": "Performs the wave smoothly in front of any familiar person"
+    }
+  ],
+  "successSigns": [
+    "Offers both paws alternately without confusion",
+    "Responds to “wave” before even seeing the hand gesture",
+    "The motion is fluid and has a natural wave rhythm",
+    "Does it in front of other people besides the owner"
+  ],
+  "variations": [
+    "Wave with only the right paw (classic shake)",
+    "Wave to different people (family members, friends)",
+    "Wave in rhythm to music",
+    "Wave from sitting and from standing position",
+    "Chain wave + bow for a complete performance"
+  ],
+  "safetyNotes": [
+    "Do not practice if the dog has any paw or joint injury",
+    "Large breed dogs: monitor they are not putting excessive weight on a single paw",
+    "If the dog shows resistance or limps, stop and consult a vet",
+    "Puppies under 6 months: sessions of 5 minutes maximum to protect developing joints"
+  ],
+  "funFact": "Dogs naturally offer a paw as a social appeasement signal. When your dog gives you its paw, it's essentially saying: “I like you, I trust you.”",
+  "nextLevel": "Once the wave is mastered, try teaching high five and then chain them: wave → high five → bow. A complete three-trick performance!",
+  "proTip": "Use the highest-value treats for this trick because it requires more coordination. Your dog needs to feel it's really worth the effort."
+}

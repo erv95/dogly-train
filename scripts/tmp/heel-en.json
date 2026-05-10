@@ -1,0 +1,187 @@
+{
+  "title": "Heel",
+  "subtitle": "Walk precisely by the handler's side, attentive and controlled",
+  "level": "Intermediate",
+  "duration": "10–15 min per session",
+  "location": "Home, garden, quiet street",
+  "ageRecommendation": "From 12 weeks",
+  "estimatedSessions": "10–15 sessions to master",
+  "objective": "Teach the dog to walk precisely at the handler's left side, looking up at them, without pulling, including stops and turns. More precise and demanding than loose-leash walking.",
+  "why": [
+    "Allows full control in crowded or dangerous environments without relying on force",
+    "Develops attention and the bond: the dog looks at you, not at the world",
+    "Foundation for dog sports (obedience, Rally-O, agility) and calm walks",
+    "A dog that walks in heel never pulls and makes walks enjoyable"
+  ],
+  "benefits": [
+    "Tension-free walks on the leash even with strong distractions",
+    "Greater safety when crossing streets or in heavy traffic areas",
+    "The dog learns to focus on you as the source of information and rewards",
+    "Builds a foundation for excellent communication during any activity"
+  ],
+  "where": [
+    "🏠 Start at home or in a long distraction-free hallway",
+    "🌿 Progress to the garden or an enclosed area",
+    "🛣️ Finally practise on the street with real distractions"
+  ],
+  "materials": [
+    "🫖 Very high-value treats (cooked chicken, sausage, cheese)",
+    "🦮 Short 1–1.5 m leash for the start",
+    "🎯 Clicker or consistent verbal marker ('yes' or 'good')",
+    "💛 Patience and plenty of breaks"
+  ],
+  "beforeYouStart": [
+    "The dog should know 'sit' fluently before starting heel",
+    "Decide from the start that heel will always be on your LEFT side: be consistent",
+    "Short sessions of 5–10 minutes with many breaks: heel is cognitively demanding",
+    "Have top-value treats in your left hand: the dog learns to follow that hand",
+    "Don't practise after a long exercise walk: the dog must be alert"
+  ],
+  "methods": [
+    {
+      "id": "left_lure",
+      "title": "Left-hand lure method (recommended starting point)",
+      "description": "You hold the treat in your left hand at hip level. The dog learns that staying at your left side produces continuous rewards. Builds the heel position before adding movement.",
+      "bestFor": "Dogs with no heel experience or puppies starting from scratch",
+      "steps": [
+        {
+          "title": "Starting position: dog sitting at your left",
+          "description": "The dog sits at your left side, facing the same direction as you. This is the initial heel position.",
+          "tip": "Reward several times simply for being in that position. The space beside your left hip = reward zone.",
+          "troubleshooting": "If the dog positions in front of you, use a wall to your right to limit their space."
+        },
+        {
+          "title": "Treat at left hip level",
+          "description": "Hold the treat in your left hand at your hip. The dog will stretch their neck upward looking for the treat.",
+          "tip": "Your left hand is the dog's 'anchor'. It should always be in the same place.",
+          "troubleshooting": "If the dog jumps for the treat, lower your hand very slightly. Only reward when all four paws are on the floor."
+        },
+        {
+          "title": "First step together",
+          "description": "Take one step forward with your left foot and say 'heel'. If the dog follows in position, reward immediately.",
+          "tip": "One step, one reward. Don't ask for more distance than the dog can maintain in position.",
+          "troubleshooting": "If they forge ahead, stop completely and wait for them to return to your side before continuing."
+        },
+        {
+          "title": "Progressively increase steps",
+          "description": "From 1 step → 3 → 5 → 10 → around the block. Reward at least every 3–5 steps in correct position.",
+          "tip": "Reward frequency is key at first: reward often to keep the dog engaged at your side."
+        },
+        {
+          "title": "Introduce stops and turns",
+          "description": "Add a stop: when you halt, the dog should automatically sit at your side. Introduce turns: gentle curves to the left and right.",
+          "tip": "Anticipate turns with a slight slow-down to give the dog time to adjust."
+        }
+      ]
+    },
+    {
+      "id": "circles",
+      "title": "Circle method (to maintain pace and attention)",
+      "description": "You walk in tight circles toward the dog's side (left), which forces them to speed up to maintain position. Excellent for building attention and pace.",
+      "bestFor": "Dogs that lag behind or tend to lose position in a straight line",
+      "steps": [
+        {
+          "title": "Small circles to the left",
+          "description": "Start walking in small circles turning left. The dog has to speed up to stay at your side.",
+          "tip": "Left circles are more demanding for the dog (they cover more ground). Right circles are easier.",
+          "troubleshooting": "If the dog forges ahead, reduce the circle radius so they have less space to get in front."
+        },
+        {
+          "title": "Reward correct position in the circle",
+          "description": "Whenever the dog is in the correct position (shoulder beside your left hip), reward.",
+          "tip": "The reward comes from your left hand downward. Don't make the dog jump to get it."
+        },
+        {
+          "title": "Alternate circles and straight lines",
+          "description": "After the circles, walk in a straight line for a few steps. The dog will have already learned the pace and position from the circles.",
+          "tip": "The transition from circles to straight is the moment to consolidate the behaviour."
+        },
+        {
+          "title": "Gradually reduce reinforcement",
+          "description": "Over time, reward every 10, 20 then 50 steps instead of every few steps. Keep the dog in positive uncertainty about when the reward arrives.",
+          "tip": "Reward variably: sometimes 5 steps, sometimes 20. Variability maintains attention better than routine."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Yanking the leash to keep the dog in position",
+      "cause": "Wanting quick results without position work",
+      "fix": "Heel is taught with treats and positioning, never with leash pressure. The leash must be a safety accessory, not a control tool."
+    },
+    {
+      "error": "Sessions too long that bore or exhaust the dog",
+      "cause": "Wanting to advance quickly",
+      "fix": "Heel is mentally intense. Sessions of 5–10 minutes with plenty of free-play breaks."
+    },
+    {
+      "error": "Moving to the street before consolidating indoors",
+      "cause": "Jumping too quickly to the real environment",
+      "fix": "First consolidate indoors, then garden, then quiet street, then street with distractions. Each context needs additional reinforcement."
+    },
+    {
+      "error": "Alternating between left and right side depending on the day",
+      "cause": "Lack of consistency in position",
+      "fix": "Choose ONE side (conventionally left) and be consistent. The dog learns a specific position, not 'either side'."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My dog looks at me but lags behind",
+      "solution": "The pace is too slow for them. Increase it slightly. Dogs that lag frequently improve when you speed up."
+    },
+    {
+      "problem": "Holds position for 10 steps but then gets distracted and forges ahead",
+      "solution": "Reinforcement was spaced out too soon. Go back to rewarding every 3–5 steps until the position is more solid."
+    },
+    {
+      "problem": "Works in a straight line but loses position on turns",
+      "solution": "Turns are harder. Practise only turns for an entire session, rewarding every correct turn independently."
+    },
+    {
+      "problem": "Only works with the treat visibly in my hand; without treat they won't do it",
+      "solution": "Phase out the treat hand: first in hand, then in pocket but producing it when rewarding, then in a bait bag. The dog must learn the reward can appear at any moment."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Session 1–3",
+      "goal": "The dog follows the left hand in correct position for 5–10 steps"
+    },
+    {
+      "stage": "Session 4–7",
+      "goal": "Maintains position in a straight line for 20–30 steps with frequent reinforcement"
+    },
+    {
+      "stage": "Week 2–3",
+      "goal": "Executes heel including stops (with automatic sit) and gentle turns"
+    },
+    {
+      "stage": "Month 1+",
+      "goal": "Walks in heel outdoors with moderate distractions for 1–2 minutes without visible treat"
+    }
+  ],
+  "successSigns": [
+    "The dog makes regular eye contact while walking at your side",
+    "The dog's shoulder stays aligned with your left hip for at least 30 consecutive steps",
+    "Sits automatically when you stop",
+    "Maintains position through turns without physical guidance"
+  ],
+  "variations": [
+    "Heel with pace changes (very slow → trot)",
+    "Heel through obstacles (cones, chairs)",
+    "Heel with other dogs or people passing nearby",
+    "Off-leash heel in a safe area (advanced)",
+    "Heel with a figure-eight between the handler's legs"
+  ],
+  "safetyNotes": [
+    "Never use choke, prong or electric collars to teach heel: they are counterproductive and harmful",
+    "If the dog has hip or joint problems, consult the vet before long heel sessions",
+    "Always carry water for sessions over 10 minutes on warm days",
+    "Don't practise heel with very sparse reinforcement in heavy traffic areas until the behaviour is very solid"
+  ],
+  "funFact": "Heelwork to Music is a dog sport in which the dog performs precise choreography in time with music. Some dogs learn up to 20 different heel positions!",
+  "nextLevel": "Introduce off-leash heel in enclosed spaces. Then practise heel with other dogs or people passing by. Finally, combine it with other commands (heel → stay → heel).",
+  "proTip": "The dog's gaze into your eyes is the key to advanced heel. Reward specifically the moments of eye contact: 'looks at you = follows you = reward'. Build eye contact before you demand perfect position."
+}

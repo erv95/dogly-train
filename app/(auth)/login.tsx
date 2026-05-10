@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   View,
   Text,
@@ -9,31 +9,90 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useRouter, useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { signIn, signOut, resetPassword, resendVerificationEmail, getAuthErrorKey } from '../../src/services/auth';
+import * as WebBrowser from 'expo-web-browser';
+import * as AuthSession from 'expo-auth-session';
+import { signIn, signOut, resetPassword, resendVerificationEmail, firebaseGoogleSignIn, userProfileExists, getAuthErrorKey } from '../../src/services/auth';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { Button, Input } from '../../src/components/ui';
 import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
+
+WebBrowser.maybeCompleteAuthSession();
 
 export default function LoginScreen() {
   const router = useRouter();
   const { t } = useTranslation();
   const { userData, role, initialized } = useAuth();
-  const [email, setEmail] = useState('');
+  const params = useLocalSearchParams<{ email?: string }>();
+  // Pre-fill email when arriving from a "your account already exists" prompt.
+  const [email, setEmail] = useState(params.email || '');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [awaitingAuth, setAwaitingAuth] = useState(false);
 
   // Navigate once AuthContext confirms user data is loaded
   useEffect(() => {
-    if (!awaitingAuth || !initialized || !userData || !role) return;
-    setLoading(false);
-    setAwaitingAuth(false);
-    if (role === 'owner') router.replace('/(owner)/home');
-    else if (role === 'trainer') router.replace('/(trainer)/dashboard');
+    if (!awaitingAuth || !initialized) return;
+    if (userData && role) {
+      setLoading(false);
+      setAwaitingAuth(false);
+      if (role === 'owner') router.replace('/(owner)/home');
+      else if (role === 'trainer') router.replace('/(trainer)/dashboard');
+      else if (role === 'caretaker') router.replace('/(caretaker)/dashboard');
+      return;
+    }
+    // Timeout: if user data doesn't load within 10s, reset loading state
+    const timeout = setTimeout(() => {
+      if (awaitingAuth) {
+        setLoading(false);
+        setAwaitingAuth(false);
+        Alert.alert(t('common.error'), t('authErrors.generic'));
+      }
+    }, 10000);
+    return () => clearTimeout(timeout);
   }, [awaitingAuth, initialized, userData, role]);
+
+  // Google Sign-In
+  const googleDiscovery = AuthSession.useAutoDiscovery('https://accounts.google.com');
+  const [googleRequest, googleResponse, googlePromptAsync] = AuthSession.useAuthRequest(
+    {
+      clientId: '768086625029-vj1k0u5oagv0vg0o8r6a8s9lqk5c0g5h.apps.googleusercontent.com',
+      scopes: ['openid', 'profile', 'email'],
+      redirectUri: AuthSession.makeRedirectUri({ scheme: 'dogly-train' }),
+      responseType: AuthSession.ResponseType.IdToken,
+    },
+    googleDiscovery
+  );
+
+  const handleGoogleAuth = useCallback(async (idToken: string) => {
+    setLoading(true);
+    try {
+      const credential = await firebaseGoogleSignIn(idToken);
+      const hasProfile = await userProfileExists(credential.user.uid);
+      if (!hasProfile) {
+        router.replace({ pathname: '/(auth)/complete-profile', params: {
+          uid: credential.user.uid,
+          email: credential.user.email || '',
+          displayName: credential.user.displayName || '',
+        }});
+        setLoading(false);
+        return;
+      }
+      setAwaitingAuth(true);
+    } catch (error: any) {
+      setLoading(false);
+      Alert.alert(t('common.error'), t(getAuthErrorKey(error)));
+    }
+  }, [router, t]);
+
+  useEffect(() => {
+    if (googleResponse?.type === 'success') {
+      const idToken = googleResponse.params.id_token;
+      if (idToken) handleGoogleAuth(idToken);
+    }
+  }, [googleResponse, handleGoogleAuth]);
 
   // Forgot password modal
   const [showResetModal, setShowResetModal] = useState(false);
@@ -50,16 +109,16 @@ export default function LoginScreen() {
         await signOut();
         setLoading(false);
         Alert.alert(
-          'Email no verificado',
-          'Revisa tu bandeja de entrada y confirma tu email antes de iniciar sesión.',
+          t('authErrors.emailNotVerified'),
+          t('authErrors.checkInboxVerify'),
           [
             { text: 'OK', style: 'cancel' },
             {
-              text: 'Reenviar correo',
+              text: t('authErrors.resendEmail'),
               onPress: async () => {
                 try {
                   await resendVerificationEmail(email, password);
-                  Alert.alert('Correo enviado', 'Revisa tu bandeja de entrada.');
+                  Alert.alert(t('authErrors.emailSent'), t('authErrors.checkInbox'));
                 } catch {
                   Alert.alert(t('common.error'), t('authErrors.generic'));
                 }
@@ -144,13 +203,9 @@ export default function LoginScreen() {
         <View style={styles.socialButtons}>
           <Button
             title={t('auth.loginWith', { provider: 'Google' })}
-            onPress={() => Alert.alert('', 'Disponible próximamente')}
+            onPress={() => googlePromptAsync()}
             variant="outline"
-          />
-          <Button
-            title={t('auth.loginWith', { provider: 'Apple' })}
-            onPress={() => Alert.alert('', 'Disponible próximamente')}
-            variant="outline"
+            disabled={!googleRequest}
           />
         </View>
 

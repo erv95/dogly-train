@@ -1,0 +1,157 @@
+{
+  "title": "Relájate",
+  "subtitle": "Calma activa a demanda en cualquier situación",
+  "level": "Intermedio",
+  "duration": "10–15 min por sesión",
+  "location": "Casa, terraza, cafetería, sala de espera",
+  "ageRecommendation": "Desde 12 semanas",
+  "estimatedSessions": "8–12 sesiones para dominar",
+  "objective": "Enseñar al perro a relajarse activamente bajo demanda, no solo a tumbarse, sino a soltar tensión corporal, en cualquier entorno. Útil en cafeterías, visitas en casa, o cuando tienes visitas que se quedan largo tiempo.",
+  "why": [
+    "Un perro que sabe relajarse gestiona mejor el estrés en entornos nuevos",
+    "Permite llevar al perro a espacios públicos (terrazas, tiendas) sin molestias",
+    "Reduce la reactividad general al enseñar el estado de calma como comportamiento concreto",
+    "Complementa el tumbarse: la relajación va más allá de la postura"
+  ],
+  "benefits": [
+    "Tu perro puede acompañarte a restaurantes, terrazas y eventos sin crear problemas",
+    "Los visitantes se sienten cómodos porque el perro no molesta continuamente",
+    "Noches más tranquilas en casa cuando el perro aprende a relajarse por las tardes",
+    "Útil en consultas veterinarias, peluquerías caninas o viajes en coche largos"
+  ],
+  "where": [
+    "🏠 Empieza en casa, en el salón o habitación favorita del perro",
+    "☕ Progresa a terrazas o cafeterías tranquilas",
+    "🐾 Zona designada con alfombra o cama específica para el perro"
+  ],
+  "materials": [
+    "🛏️ Alfombra o cama específica del perro (la 'zona segura')",
+    "🫖 Premios de alto valor en pequeñas cantidades",
+    "🔇 Ambiente inicial muy tranquilo (sin TV fuerte, sin visitas)",
+    "💛 Paciencia excepcional: este comando lleva más tiempo que los básicos"
+  ],
+  "beforeYouStart": [
+    "El perro debe conocer ya 'tumbado' con fluidez antes de trabajar la relajación",
+    "Elige un momento del día en que el perro ya esté naturalmente más tranquilo (post-paseo)",
+    "Designa una alfombra o cama específica: siempre la misma, que no se mueva de lugar al inicio",
+    "Sesiones de no más de 10–15 minutos: la relajación no se puede forzar ni apresurar",
+    "Apaga el TV y reduce estímulos durante el entrenamiento inicial"
+  ],
+  "methods": [
+    {
+      "id": "mat_protocol",
+      "title": "Protocolo de la alfombra (método de relajación progresiva)",
+      "description": "La alfombra se convierte en la señal física de relajación. El perro aprende que estar en la alfombra = soltar tensión y recibir calma. Refuerzas los estados de relajación real (suspiro, pestañeo lento, cabeza baja) e ignoras los de alerta.",
+      "bestFor": "Todos los perros, especialmente los ansiosos, hiperactivos o reactivos en casa",
+      "steps": [
+        {
+          "title": "Introduce la alfombra como lugar positivo",
+          "description": "Lleva al perro a la alfombra y premia simplemente por estar en ella. Sin pedir nada más. La alfombra = lluvia de premios.",
+          "tip": "Haz esto 5–10 veces antes de pedir ningún comportamiento específico. La alfombra debe ser el mejor lugar del mundo.",
+          "troubleshooting": "Si el perro evita la alfombra, premia incluso por acercarse a ella. Ve construyendo la asociación positiva antes de seguir."
+        },
+        {
+          "title": "Pide 'tumbado' en la alfombra",
+          "description": "Una vez que el perro sube voluntariamente a la alfombra, pide 'tumbado'. Premia cuando esté tumbado sobre ella.",
+          "tip": "No introduzcas la palabra 'relájate' aún. Primero construye el comportamiento de estar tumbado en la alfombra."
+        },
+        {
+          "title": "Observa y refuerza la relajación real",
+          "description": "Mantente cerca pero sin hablar. Cuando el perro muestre señales de relajación (suspiro audible, parpadeo lento, cabeza que cae sobre las patas, cuerpo que se 'derrite'), di 'relájate' y premia muy suavemente.",
+          "tip": "El premio debe darse con calma: no con emoción. La excitación rompe la relajación. Tira el premio suavemente al suelo entre sus patas.",
+          "troubleshooting": "Si el perro se levanta, no digas nada. Espera a que vuelva a tumbarse. Refuerza solo la calma."
+        },
+        {
+          "title": "Aumenta la duración de la relajación",
+          "description": "Con el tiempo, espera más señales de relajación antes de premiar: 5 segundos → 15 → 30 → 1 minuto de calma continua antes del premio.",
+          "tip": "Usa un temporizador en el móvil para no premiar antes de tiempo. La precisión en el timing es clave."
+        },
+        {
+          "title": "Añade distracciones graduales",
+          "description": "Empieza a practicar con pequeñas distracciones: habla por teléfono, enciende el TV bajo, entra y sale de la habitación. Siempre premia la calma mantenida.",
+          "tip": "Aumenta las distracciones en pasos muy pequeños. Un retroceso no es un fracaso: es información."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Premiar al perro cuando se levanta para ir a buscar el premio",
+      "cause": "Ofrecer el premio a la altura incorrecta o acercarse al perro emocionalmente",
+      "fix": "Tira siempre el premio al suelo entre sus patas. Nunca lo ofrezcas desde tu mano cuando busques relajación."
+    },
+    {
+      "error": "Intentar forzar la relajación con caricias intensas",
+      "cause": "Confundir 'querer calmar al perro' con 'relajación activa entrenada'",
+      "fix": "Los perros ansiosos se sobreestimulan más con las caricias cuando ya están activados. Usa premios suaves y silencio."
+    },
+    {
+      "error": "Practicar en momentos de alta activación del perro",
+      "cause": "Querer resolver la excitación con el comando",
+      "fix": "El 'relájate' no funciona en el pico de activación. Practica siempre cuando el perro ya esté en un estado neutro o suavemente tranquilo."
+    },
+    {
+      "error": "Cambiar la alfombra de sitio antes de que el comportamiento esté consolidado",
+      "cause": "Querer que funcione en distintos lugares muy rápido",
+      "fix": "Primero consolida en casa con la alfombra siempre en el mismo lugar. Luego mueve la alfombra progresivamente a otras habitaciones y por último a exteriores."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro se tumba pero no se relaja: sigue vigilando con los ojos",
+      "solution": "Está en posición física pero no en relajación real. Sigue esperando y refuerza cuando veas el primer pestañeo lento o suspiro. La paciencia aquí se mide en minutos, no segundos."
+    },
+    {
+      "problem": "Se levanta cada vez que me acerco a premiar",
+      "solution": "Cambia cómo entregas el premio: en vez de acercarte, tira el premio suavemente al suelo desde donde estás."
+    },
+    {
+      "problem": "Funciona en casa pero en la terraza del restaurante no para quieto",
+      "solution": "Has subido demasiado rápido el nivel de distracción. Lleva la alfombra a lugares tranquilos primero (jardín, terraza sin gente) antes de pasar a espacios públicos concurridos."
+    },
+    {
+      "problem": "Mi perro se queda dormido antes de que pueda premiar la relajación",
+      "solution": "¡Es un éxito total! Un perro que se duerme en la alfombra ha alcanzado el máximo nivel de relajación. Premia suavemente al despertar."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–3",
+      "goal": "El perro sube voluntariamente a la alfombra y se tumba sin ser pedido"
+    },
+    {
+      "stage": "Sesión 4–6",
+      "goal": "Muestra al menos una señal de relajación real (suspiro, pestañeo lento) en la alfombra"
+    },
+    {
+      "stage": "Semana 2–3",
+      "goal": "Se relaja durante 1–2 minutos en la alfombra con pequeñas distracciones presentes"
+    },
+    {
+      "stage": "Mes 1+",
+      "goal": "Se dirige a la alfombra y se relaja cuando escucha 'relájate' en exteriores tranquilos"
+    }
+  ],
+  "successSigns": [
+    "El perro suspira audiblemente al tumbarse en la alfombra",
+    "Mantiene la posición relajada aunque te levantes o camines cerca",
+    "Va a la alfombra voluntariamente cuando siente estrés leve (visitas, sonidos nuevos)",
+    "La relajación dura más de 5 minutos sin intervención"
+  ],
+  "variations": [
+    "Relájate en terraza de restaurante con ruido de fondo",
+    "Relájate en la sala de espera del veterinario",
+    "Relájate mientras tienes visitas en casa",
+    "Relájate en el coche en marcha",
+    "Relájate sin alfombra (solo con la señal verbal)"
+  ],
+  "safetyNotes": [
+    "Nunca uses el 'relájate' para calmar a un perro en crisis de miedo o pánico: necesita primero alejarse del estímulo",
+    "Si tu perro nunca parece relajarse, incluso en casa, consulta con un etólogo: puede haber ansiedad crónica",
+    "No practiques este comando en espacios extremadamente ruidosos o con estímulos de miedo activos",
+    "Si usas la alfombra como zona de tiempo fuera o castigo, perderá toda su asociación positiva"
+  ],
+  "funFact": "Los perros tienen un 'bostezo de estrés' diferente al bostezo de sueño. El bostezo durante el entrenamiento es señal de que el perro se está autorregulando, ¡es algo positivo!",
+  "nextLevel": "Introduce la señal de mano (señalar la alfombra) junto a la verbal. Progresa a que el perro se relaje en espacios públicos sin alfombra: solo con la señal verbal.",
+  "proTip": "El estado de relajación no se puede pedir: se cultiva. Tu calma es contagiosa para el perro. Habla menos, muévete más despacio y respira más profundo durante las sesiones."
+}

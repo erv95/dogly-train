@@ -1,0 +1,183 @@
+{
+  "title": "Se coucher",
+  "subtitle": "Étape naturelle après avoir appris à s’asseoir",
+  "level": "Très basique",
+  "duration": "5–10 min par séance",
+  "location": "Maison ou jardin calme",
+  "ageRecommendation": "À partir de 10 semaines",
+  "estimatedSessions": "5 à 7 séances pour maîtriser",
+  "objective": "Apprendre au chien à se coucher sur l’ordre « couché », et maintenir la position plusieurs secondes.",
+  "why": [
+    "Calmer le chien dans les moments d’excitation",
+    "Contrôler les situations dans les espaces publics",
+    "Améliorer l’obéissance générale",
+    "Étape naturelle après « assis »"
+  ],
+  "benefits": [
+    "Votre chien se détend dans les restaurants, terrasses ou longues visites",
+    "Posture idéale pour le repos prolongé et le contrôle des aboiements",
+    "Base pour enseigner « reste » plusieurs minutes",
+    "Réduit la réactivité : un chien couché ne saute pas"
+  ],
+  "where": [
+    "🏠 À la maison (sol confortable, tapis ou salon)",
+    "🌿 Jardin calme",
+    "⛔ Évitez les surfaces froides, dures ou glissantes au début"
+  ],
+  "materials": [
+    "🫖 Petites friandises molles",
+    "🛏️ Tapis ou panier (recommandé)",
+    "🦮 Laisse courte (optionnel)",
+    "💛 Patience et voix calme"
+  ],
+  "beforeYouStart": [
+    "Votre chien doit déjà connaître « assis » couramment",
+    "Assurez-vous que la surface est confortable (pas de parquet froid)",
+    "Entraînez après une courte promenade : un chien légèrement fatigué apprend mieux",
+    "Préparez au moins 15 petites friandises",
+    "Séances de 5 minutes maximum"
+  ],
+  "methods": [
+    {
+      "id": "lure_l",
+      "title": "Méthode du leurre en L (recommandée)",
+      "description": "Vous guidez le chien avec une friandise traçant un L : d’abord vers le bas entre ses pattes, puis vers l’avant.",
+      "bestFor": "Chiots et chiens connaissant déjà « assis »",
+      "steps": [
+        {
+          "title": "Position de départ : assis",
+          "description": "Demandez à votre chien de s’asseoir. Point de départ idéal car les hanches sont déjà basses.",
+          "tip": "S’il ne répond pas couramment à « assis », revenez d’abord à ce cours.",
+          "troubleshooting": "S’il rompt la position assise, redemandez-la calmement sans gronder."
+        },
+        {
+          "title": "Mouvement vers le bas",
+          "description": "Mettez la friandise sur son nez et abaissez-la lentement jusqu’au sol entre ses pattes avant.",
+          "tip": "Mouvement lent et continu, sans pauses.",
+          "troubleshooting": "S’il se lève, redemandez « assis » et reprenez plus lentement."
+        },
+        {
+          "title": "Mouvement vers l’avant",
+          "description": "Quand la friandise est au sol, glissez-la vers l’avant en ligne droite. Le chien étirera son corps et se couchera.",
+          "tip": "Le mouvement total dessine un L majuscule."
+        },
+        {
+          "title": "Introduire l’ordre",
+          "description": "Quand il est complètement couché (ventre au sol), dites clairement « couché ».",
+          "tip": "Ne dites le mot que lorsqu’il est complètement couché."
+        },
+        {
+          "title": "Récompense et renforcement",
+          "description": "Donnez la friandise immédiatement, au sol entre ses pattes. Félicitez avec voix joyeuse.",
+          "tip": "Récompenser au sol renforce la position et évite qu’il se relève."
+        },
+        {
+          "title": "Augmenter la durée",
+          "description": "Quand il le fait au premier essai, attendez 1 seconde avant de récompenser. Montez à 3, 5, 10 secondes progressivement.",
+          "tip": "S’il rompt avant, revenez à la durée précédente."
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "title": "Méthode avec plateforme surélevée",
+      "description": "Utilisez une marche basse ou un coussin : le chien est mi-élevé, ce qui facilite le glissement des pattes avant.",
+      "bestFor": "Grands chiens, chiens anxieux ou ne répondant pas au leurre",
+      "steps": [
+        {
+          "title": "Placer le chien sur un coussin bas",
+          "description": "Plateforme de 5–10 cm. Coussin ferme, marche basse ou bloc de yoga.",
+          "tip": "Le bord avant doit être libre."
+        },
+        {
+          "title": "Demander assis sur la plateforme",
+          "description": "Le chien doit s’asseoir dessus. Récompensez.",
+          "tip": "S’il n’est pas à l’aise dessus, prenez quelques minutes pour le familiariser."
+        },
+        {
+          "title": "Leurrer vers l’avant",
+          "description": "Avec une friandise, attirez ses pattes avant vers l’avant (hors de la plateforme). Il tombera naturellement en position couchée.",
+          "tip": "L’astuce : la plateforme rend le coucher physiquement plus facile."
+        },
+        {
+          "title": "Marquer et récompenser",
+          "description": "Dès qu’il est complètement couché, dites « couché » et récompensez.",
+          "tip": "Répétez jusqu’à ce qu’il associe le mot."
+        },
+        {
+          "title": "Retirer la plateforme",
+          "description": "Après 5–10 séances avec plateforme, essayez sur sol plat. Devrait fonctionner pareil.",
+          "tip": "Sinon, revenez à la plateforme 2–3 séances de plus."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Pousser le chien vers le bas avec la main sur le dos",
+      "cause": "Frustration quand le leurre ne fonctionne pas du premier coup",
+      "fix": "N’utilisez jamais la force physique. Améliorez le mouvement du leurre ou utilisez la plateforme."
+    },
+    {
+      "error": "Récompenser avant qu’il soit complètement couché",
+      "cause": "Anticiper le succès",
+      "fix": "Attendez de voir le ventre et les coudes au sol avant de récompenser."
+    },
+    {
+      "error": "Pratiquer sur surfaces froides ou glissantes",
+      "cause": "Manque de planification de l’environnement",
+      "fix": "Utilisez toujours tapis, panier ou moquette. Le chien évite par instinct le froid/dur."
+    },
+    {
+      "error": "Sauter « assis » comme base",
+      "cause": "Vouloir des raccourcis",
+      "fix": "« Assis » courant est prérequis. S’il ne le maîtrise pas, ne demandez pas couché encore."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Suit la friandise du nez mais ne baisse pas le corps",
+      "solution": "Vous bougez la friandise trop vite ou trop loin. Gardez-la collée au sol et bougez très lentement vers l’avant."
+    },
+    {
+      "problem": "Se couche mais se relève immédiatement",
+      "solution": "Normal au début. Récompensez plus vite (en moins d’1 seconde) et augmentez progressivement la durée."
+    },
+    {
+      "problem": "Fait une posture « sphinx » mais pas latérale",
+      "solution": "Le sphinx est valide et suffisant. La forme latérale est plus relaxée mais pas nécessaire."
+    },
+    {
+      "problem": "Mon grand chien/chien âgé résiste",
+      "solution": "Ce peut être de la douleur articulaire. Consultez le vétérinaire. En attendant, utilisez une surface très moelleuse."
+    }
+  ],
+  "progressMilestones": [
+    { "stage": "Séance 1–2", "goal": "Suit la friandise jusqu’au sol et plie les pattes avant" },
+    { "stage": "Séance 3–5", "goal": "Se couche complètement avec le leurre 60% des essais" },
+    { "stage": "Séance 6–7", "goal": "Se couche sur « couché » sans avoir besoin du leurre" },
+    { "stage": "Semaine 2–3", "goal": "Maintient la position 30 secondes avant la récompense" }
+  ],
+  "successSigns": [
+    "Se couche sur l’ordre sans leurre visible",
+    "Le fait dans différents endroits et positions",
+    "Maintient la position plus de 10 secondes",
+    "Recouche s’il rompt la position et qu’on lui redemande"
+  ],
+  "variations": [
+    "Couché à distance (1–2 mètres)",
+    "Couché latéral complet (sur le côté, pas sphinx)",
+    "Couché pendant votre petit-déjeuner pendant que vous mangez",
+    "Couché uniquement avec un geste de la main vers le bas",
+    "Couché après un assis enchaîné (combinaison de commandes)"
+  ],
+  "safetyNotes": [
+    "Si votre chien montre douleur ou craquements en se couchant, consultez le vétérinaire",
+    "Grandes races (Mastiffs, Dogues Allemands) peuvent prendre plus longtemps",
+    "Ne forcez jamais physiquement : peut créer peur et rejet de l’ordre",
+    "Chiots de moins de 14 semaines : 3 minutes maximum par séance"
+  ],
+  "funFact": "Les chiens ne se couchent latéralement (sur le côté) que lorsqu’ils se sentent 100% en sécurité. Si le vôtre le fait avec vous, c’est un signe de profonde confiance.",
+  "nextLevel": "Augmenter la durée à 1–2 minutes. Pratiquer avec distractions et en public. Puis introduire « reste ».",
+  "proTip": "Si votre chien refuse, revenez à « assis » et reprenez plus lentement. Lancez toujours la friandise au sol entre ses pattes, jamais à la main : cela renforce le maintien de la position."
+}

@@ -1,0 +1,158 @@
+{
+  "title": "Verbeugung (Hallo sagen)",
+  "subtitle": "Die eleganteste Geste — als würde Ihr Hund das Publikum begrüßen",
+  "level": "Mittelstufe",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Zuhause oder Garten",
+  "ageRecommendation": "Ab 4 Monaten",
+  "estimatedSessions": "6–10 Einheiten zum Beherrschen",
+  "objective": "Den Hund beibringen, die Brust in Richtung Boden zu senken, während das Hinterteil oben bleibt (die Verbeugungspose oder Spielaufforderung), als Reaktion auf das Signal „verbeug“ oder „hallo”.",
+  "why": [
+    "Die Verbeugung ist eine Pose, die Hunde von Natur aus machen, wenn sie zum Spielen einladen",
+    "Es ist der visuell eleganteste Trick — er sieht aus wie ein Schauspieler, der das Publikum begrüßt",
+    "Stärkt das Körperbewusstsein, indem die Bewegung des Vorderlaufs vom Hinterlauf getrennt wird",
+    "Der perfekte Abschluss für jede Trick-Sequenz"
+  ],
+  "benefits": [
+    "Hervorragende Dehnung für Rücken und Schultern — es wirkt wie Hunde-Yoga",
+    "Erlaubt dem Hund, seinen Spielwunsch auf natürliche Weise zu kommunizieren",
+    "Leicht zu erlernen, da es ein instinktives Verhalten aufgreift",
+    "Erzeugt sehr positive Reaktionen bei allen, die es sehen"
+  ],
+  "where": [
+    "🏠 Zuhause, in jedem Raum mit genug Platz",
+    "🌿 Im Garten oder draußen, wenn es drinnen beherrscht wird",
+    "🔇 Am Anfang ohne Ablenkungen, damit sich der Hund konzentrieren kann"
+  ],
+  "materials": [
+    "🫖 Kleine, hochwertige Leckerlis",
+    "🖐️ Ihre Hand als Lockfutter (Leckerli zwischen den Fingern)",
+    "🛟 Flache, bequeme Oberfläche",
+    "💛 Geduld und aufmerksame Augen, um das natürliche Verhalten aufzugreifen"
+  ],
+  "beforeYouStart": [
+    "Beobachten Sie Ihren Hund tagsüber — er macht die Verbeugung sicher schon natürlich beim Strecken oder beim Einladen zum Spielen",
+    "Der Trick kann durch Einfangen (das natürliche Verhalten nutzen) oder durch Lockfutter gelehrt werden",
+    "Halten Sie Leckerlis tagsüber immer bereit, um den Moment zu nutzen",
+    "Maximal 5 Minuten pro Einheit — kurz und häufig",
+    "Ihr Hund braucht keine Vorkenntnisse, um diesen Trick zu lernen"
+  ],
+  "methods": [
+    {
+      "id": "capture_or_lure",
+      "title": "Kombinierte Einfang- und Lockfutter-Methode",
+      "description": "Versuchen Sie zunächst, die natürlichen Verbeugungen aufzugreifen, die der Hund bereits macht. Wenn sie häufig vorkommen, markieren und belohnen Sie sie, bis Sie sie benennen können. Wenn der Hund nicht oft spontan verbeugt, verwenden Sie Lockfutter, indem Sie das Leckerli zwischen die Vorderpfoten zum Boden führen, während Sie die Hüfte sanft mit dem Unterarm blockieren.",
+      "bestFor": "Jeder Hund — die Methode je nach Häufigkeit natürlicher Verbeugungen anpassen",
+      "steps": [
+        {
+          "title": "Natürliche Verbeugungen beobachten",
+          "description": "2–3 Tage lang bemerken, wann Ihr Hund allein verbeugt (beim Aufwachen, beim Einladen zum Spielen). Wenn es passiert, „Ja!“ sagen und schnell ein Leckerli geben.",
+          "tip": "Leckerlis in der Tasche oder in der Nähe des üblichen Streckplatzes am Morgen haben.",
+          "troubleshooting": "Wenn der Hund kaum spontan verbeugt, direkt zur Lockfutter-Methode übergehen."
+        },
+        {
+          "title": "Verhalten einfangen und markieren",
+          "description": "Jedes Mal, wenn eine natürliche Verbeugung aufgegriffen wird, mit „Ja!“ im genauen Moment markieren, wenn die Brust unten und das Hinterteil oben ist, und sofort belohnen.",
+          "tip": "Timing-Präzision ist grundlegend: markieren, wenn die Brust am tiefsten ist, nicht wenn sie sich bereits hebt."
+        },
+        {
+          "title": "Lockfutter zwischen den Vorderpfoten (wenn Einfangen nicht funktioniert)",
+          "description": "Mit stehendem Hund das Lockfutter von seiner Schnauze zum Boden zwischen die Vorderpfoten führen. Mit dem freien Unterarm sanft die Hüfte blockieren, damit er sich nicht hinlegt. Der Hund senkt die Brust, indem er dem Leckerli folgt.",
+          "tip": "Der Unterarm unter dem Bauch wirkt als sanfte Führung — niemals als erzwungene Einschränkung.",
+          "troubleshooting": "Wenn der Hund sich vollständig hinlegt, das Lockfutter zurückziehen und mit weniger Abwärtsbewegung erneut versuchen."
+        },
+        {
+          "title": "Den Trick benennen",
+          "description": "Wenn der Hund die richtige Pose (Brust unten, Hinterteil oben) konsistent einnimmt, das Wort „verbeug“ oder „hallo” kurz vor dem Starten des Lockfutters hinzufügen.",
+          "tip": "Einen sanften, eleganten Ton verwenden — die Verbeugung ist ein Trick mit Klasse."
+        },
+        {
+          "title": "Lockfutter reduzieren und generalisieren",
+          "description": "Das Lockfutter schrittweise reduzieren: zuerst mit Leckerli in der Hand, dann nur die leere Geste, schließlich nur das Wort. In verschiedenen Orten und mit verschiedenen anwesenden Personen üben.",
+          "tip": "Die Verbeugungspose lässt sich leicht 2–3 Sekunden halten. Während der Haltung belohnen, um die Dauer zu verlängern.",
+          "troubleshooting": "Wenn der Hund wieder zu liegen beginnt, zum Lockfutter mit dem stützenden Unterarm für weitere Einheiten zurückkehren."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Das Lockfutter so schnell senken, dass der Hund sich hinlegt statt zu verbeugen",
+      "cause": "Zu direkte Bewegung zum Boden",
+      "fix": "Das Lockfutter sehr langsam zwischen die Vorderpfoten senken. Bei Bedarf die Hüfte sanft mit dem Unterarm blockieren."
+    },
+    {
+      "error": "Den genauen Moment der Verbeugung nicht markieren",
+      "cause": "Unpräzises Timing der Belohnung",
+      "fix": "Markieren, wenn die Brust am tiefsten ist und das Hinterteil oben. Zu spätes Markieren verstärkt das Aufstehen."
+    },
+    {
+      "error": "Natürliche Verbeugungen tagsüber verpassen, weil keine Leckerlis bereit sind",
+      "cause": "Keine Leckerlis in der Nähe",
+      "fix": "Die ersten Wochen Leckerlis in der Tasche tragen, um spontane Verbeugungen aufzugreifen."
+    },
+    {
+      "error": "Die Verbeugung mit dem Hinlegen verwechseln",
+      "cause": "Das Lockfutter geht zu weit nach vorne statt zwischen den Pfoten zu bleiben",
+      "fix": "Das Lockfutter geht zum Boden zwischen den Vorderpfoten, nicht nach vorne. Das zwingt die Brust nach unten, ohne das Hinterteil zu senken."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Der Hund legt sich immer vollständig hin statt zu verbeugen",
+      "solution": "Den Unterarm unter dem Bauch als sanfte Führung verwenden. Man kann auch mit dem Hund vor einer niedrigen Couch üben, damit die Hinterbeine leicht erhöht bleiben."
+    },
+    {
+      "problem": "Die Verbeugung dauert nur einen Augenblick und der Hund steht sofort auf",
+      "solution": "Während der Pose belohnen (nicht nur beim Einnehmen). Bei 0,5 Sekunden beginnen und schrittweise auf 1, 2, 3 Sekunden steigern."
+    },
+    {
+      "problem": "Der Hund verbeugt sich natürlich, wenn er spielen möchte, aber nicht auf Aufforderung",
+      "solution": "Diese Momente nutzen, um es zu benennen. Dann das Lockfutter verwenden, um es außerhalb des Spielkontexts kontrolliert auszulösen."
+    },
+    {
+      "problem": "Kann das Hinterteil beim Senken der Brust nicht oben halten",
+      "solution": "Der Unterarm unter dem Bauch ist die wirksamste Lösung. Oder auf einer niedrigen Stufe üben, mit erhöhten Hinterbeinen."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Tage 1–3",
+      "goal": "Der Hund verbeugt sich natürlich mindestens 3 Mal pro Tag und Sie markieren und belohnen es"
+    },
+    {
+      "stage": "Einheiten 3–5",
+      "goal": "Senkt die Brust, indem er dem Lockfutter folgt, während das Hinterteil oben bleibt"
+    },
+    {
+      "stage": "Einheiten 6–8",
+      "goal": "Reagiert auf „verbeug“ mit reduziertem Lockfutter"
+    },
+    {
+      "stage": "Woche 3+",
+      "goal": "Hält die Pose 3–5 Sekunden und macht es nur mit der Stimme oder einer kleinen Geste"
+    }
+  ],
+  "successSigns": [
+    "Senkt die Brust zum Boden, während das Hinterteil klar oben bleibt",
+    "Hält die Pose mindestens 2 Sekunden vor der Belohnung",
+    "Reagiert auf „verbeug“ ohne das vollständige Lockfutter zu benötigen",
+    "Macht es an verschiedenen Orten und vor verschiedenen Personen"
+  ],
+  "variations": [
+    "Langsame, anhaltende Verbeugung (theatralischer und eleganter)",
+    "Verbeugung mit Kopfneigung (zweites Lockfutter hinzufügen, um den Kopf zu senken)",
+    "Verbeugung vor einem Spiegel, damit der Hund seine eigene Pose sieht",
+    "Verbeugung am Anfang und Ende einer Trick-Sequenz einbauen",
+    "Verbeugung + direkter Blick in die Kamera (perfekt für Fotos)"
+  ],
+  "safetyNotes": [
+    "Hunde mit Wirbelsäulen- oder Schulterproblemen: vor dem Üben einen Tierarzt aufsuchen",
+    "Wenn der Hund beim Senken der Brust Steifheit oder Unbehagen zeigt, die Einheit stoppen",
+    "Den Unterarm nicht als Einschränkung verwenden — nur als sanfte, passive Führung",
+    "Welpen unter 5 Monaten: sehr kurze Einheiten und Pose nicht erzwingen"
+  ],
+  "funFact": "Die Spielaufforderungsverbeugung (play bow) ist eines der universellsten Signale der Hundesprache. Alle Hunde weltweit verwenden sie, um zu sagen „spielen wir?“ — Sie geben ihr einfach einen Namen.",
+  "nextLevel": "Kombinieren: Sitz → High Five → Verbeugung. Eine vollständige Drei-Schritt-Begrüßung, die jeder Hund in 3 Wochen erlernen kann.",
+  "proTip": "Wenn Ihr Hund sich jeden Morgen beim Aufwachen natürlich verbeugt, ist das der perfekte Moment, um es aufzugreifen und zu benennen. Leckerlis auf dem Nachttisch bereitlegen — im Ernst!"
+}

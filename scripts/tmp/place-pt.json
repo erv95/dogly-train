@@ -1,0 +1,160 @@
+{
+  "title": "Vai para o teu lugar",
+  "subtitle": "O seu cão aprende a ir para a cama e ficar lá até ser libertado",
+  "level": "Intermediário",
+  "duration": "5–10 min por sessão",
+  "location": "Casa com cama ou tapete designado",
+  "ageRecommendation": "A partir das 14 semanas",
+  "estimatedSessions": "8–12 sessões para dominar",
+  "objective": "Ensinar o cão a dirigir-se à sua cama ou tapete designado e permanecer calmamente até receber o sinal de libertação.",
+  "why": [
+    "Dá ao cão um espaço próprio e seguro em casa",
+    "Reduz o comportamento intrusivo durante as refeições ou quando chegam visitas",
+    "Ensina o cão a acalmar-se por si próprio",
+    "Estabelece as bases para a gestão de distrações em casa"
+  ],
+  "benefits": [
+    "O seu cão não o incomodará durante as refeições nem com a chegada de visitas",
+    "Reduz a ansiedade ao ter um espaço previsível e seguro",
+    "Melhora o autocontrolo e a tolerância à frustração",
+    "Permite que o cão descanse sem estar constantemente a seus pés"
+  ],
+  "where": [
+    "🏠 Em casa, com a cama sempre no mesmo lugar",
+    "🛋️ Na sala de estar ou área principal de atividade familiar",
+    "⛔ Evite zonas de passagem onde o cão seja perturbado"
+  ],
+  "materials": [
+    "🛏️ Uma cama, cobertor ou tapete designado (sempre o mesmo)",
+    "🫖 Petiscos de alto valor para as primeiras sessões",
+    "🦮 Trela comprida (opcional, para o trabalho inicial de distância)",
+    "💛 Paciência e consistência diária"
+  ],
+  "beforeYouStart": [
+    "O seu cão deve saber \"deita\" e \"fica\" com alguma fluidez",
+    "Escolha um local para a cama e não o altere durante o treino",
+    "A cama deve ser confortável e suficientemente grande para deitar completamente",
+    "Tenha petiscos de alto valor prontos: este exercício exige mais concentração",
+    "Pratique em momentos calmos, não quando o cão já estiver excitado"
+  ],
+  "methods": [
+    {
+      "id": "lure_to_mat",
+      "title": "Método do isca para a cama (recomendado)",
+      "description": "Usa um petisco para guiar o cão até à cama, depois acrescenta distância, duração e distrações de forma progressiva.",
+      "bestFor": "Cães que já sabem deitar e ficar",
+      "steps": [
+        {
+          "title": "Guie o cão até à cama",
+          "description": "Com um petisco na mão, guie o cão em direção à cama. Quando as quatro patas estiverem nela, diga \"lugar\" e dê o petisco.",
+          "tip": "O petisco deve cair sobre a cama, não no chão. Isto reforça estar em cima dela.",
+          "troubleshooting": "Se o cão não subir, comece com o petisco na borda e mova-o progressivamente para o centro."
+        },
+        {
+          "title": "Peça que se deite na cama",
+          "description": "Uma vez na cama, peça \"deita\". Quando o fizer, recompense. O objetivo é agora estar deitado no seu lugar.",
+          "tip": "A posição deitada facilita muito a manutenção da calma e o aumento de duração.",
+          "troubleshooting": "Se não se deitar, use a mesma técnica de isca do curso de deitar."
+        },
+        {
+          "title": "Introduza a palavra de libertação",
+          "description": "Após 2–3 segundos deitado, diga \"livre\" (ou \"vai\" — sempre a mesma palavra) e encoraje-o a sair da cama. Não recompense fora da cama nesta fase.",
+          "tip": "A palavra de libertação é tão importante quanto o comando. Sem ela, o cão não sabe quando pode sair.",
+          "troubleshooting": "Se sair antes de ser libertado, leve-o de volta calmamente sem o repreender."
+        },
+        {
+          "title": "Adicione distância",
+          "description": "Quando o cão for à cama e se deitar consistentemente, comece a afastar-se um passo, depois dois, depois três. Regresse antes que ele se mova e recompense na cama.",
+          "tip": "Volte sempre você até ao cão — nunca chame o cão até si. Assim reforça o ficar, não o vir.",
+          "troubleshooting": "Se o cão o seguir, reduza para meio passo e consolide esse nível muitas vezes."
+        },
+        {
+          "title": "Adicione duração e distrações",
+          "description": "Aumente o tempo progressivamente (5s → 15s → 30s → 1 min). Depois introduza pequenas distrações: mover-se pela divisão, abrir o frigorífico, bater à porta.",
+          "tip": "Aumente distância OU duração OU distração — nunca as três ao mesmo tempo.",
+          "troubleshooting": "Se o exercício falhar, simplifica sempre: reduza a variável que acabou de aumentar."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Chamar o cão do seu lugar em vez de ir ter com ele",
+      "cause": "Confundir \"fica na cama\" com \"vem quando te chamo\"",
+      "fix": "Regresse sempre você até ao cão para recompensar e libertá-lo. Assim reforça o ficar no lugar."
+    },
+    {
+      "error": "Aumentar a dificuldade demasiado depressa",
+      "cause": "Excesso de otimismo após os primeiros sucessos",
+      "fix": "Siga a regra dos 80%: só aumente a dificuldade quando o cão tiver sucesso 8 em cada 10 vezes."
+    },
+    {
+      "error": "Mudar ou deslocar a cama frequentemente",
+      "cause": "Falta de planeamento do ambiente",
+      "fix": "O local da cama deve ser sempre o mesmo durante o aprendizado. A estabilidade ambiental facilita a aprendizagem."
+    },
+    {
+      "error": "Repreender o cão quando sai da cama",
+      "cause": "Frustração do guia",
+      "fix": "Simplesmente leve-o de volta em silêncio. Regressar à cama nunca deve ser uma experiência negativa."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão vai à cama mas sai passados poucos segundos",
+      "solution": "Está a esperar tempo demais antes de recompensar. Recompense a cada 1–2 segundos no início para reforçar o facto de estar na cama."
+    },
+    {
+      "problem": "Não quer entrar na cama",
+      "solution": "Torne a cama mais atrativa: ponha o seu cobertor favorito, um brinquedo ou dê-lhe os melhores petiscos lá durante alguns dias antes de treinar."
+    },
+    {
+      "problem": "Vai à cama mas não se deita",
+      "solution": "Pratique \"deita\" na cama como exercício separado antes de introduzir a distância."
+    },
+    {
+      "problem": "Funciona em casa mas não em casa de amigos ou em viagem",
+      "solution": "Leve sempre o mesmo tapete ou cobertor portátil. O cheiro familiar serve como sinal de contexto para o cão."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessão 1–3",
+      "goal": "O cão vai à cama com isca e deita quando lhe é pedido"
+    },
+    {
+      "stage": "Sessão 4–6",
+      "goal": "Vai à cama com o comando verbal e fica 15 segundos"
+    },
+    {
+      "stage": "Sessão 7–9",
+      "goal": "Fica na cama enquanto você se afasta 3 metros durante 30 segundos"
+    },
+    {
+      "stage": "Semana 3–4",
+      "goal": "Permanece na cama 2–5 minutos com distrações suaves (campainha, movimentos na divisão)"
+    }
+  ],
+  "successSigns": [
+    "Vai à sua cama ao ouvir o comando, sem isca",
+    "Deita-se e fica até ouvir a palavra de libertação",
+    "Não se move mesmo quando se afasta ou sai brevemente da divisão",
+    "Usa a cama voluntariamente para descansar sem que lho peça"
+  ],
+  "variations": [
+    "Lugar em diferentes divisões da casa",
+    "Lugar em casa de familiares ou amigos (mesmo tapete)",
+    "Lugar durante um jantar familiar completo",
+    "Lugar ao receber visitas",
+    "Lugar no jardim ou na varanda"
+  ],
+  "safetyNotes": [
+    "Nunca use a cama como castigo: deve ser sempre um lugar positivo",
+    "Certifique-se de que a cama é suficientemente grande para que o cão esteja confortável",
+    "Não exija estadias muito longas no início — aumente gradualmente",
+    "Se o cão parecer ansioso na cama, verifique se a zona não está demasiado isolada"
+  ],
+  "funFact": "Os cães que têm um lugar bem estabelecido mostram níveis de cortisol (hormona do stress) significativamente mais baixos do que os que deambulam livremente sem espaço definido.",
+  "nextLevel": "Pratique \"lugar\" com a porta de entrada a abrir, com visitas a entrar e, finalmente, em espaços públicos pet-friendly com o tapete portátil.",
+  "proTip": "Alimente o seu cão na cama durante uma semana antes de começar o treino. Assim, a cama já será o melhor lugar do mundo antes de começar a pedir seja o que for."
+}

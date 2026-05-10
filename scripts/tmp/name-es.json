@@ -1,0 +1,162 @@
+{
+  "title": "Responder a su nombre",
+  "subtitle": "La base de toda comunicación con tu perro",
+  "level": "Muy básico",
+  "duration": "3–5 min por sesión",
+  "location": "Casa sin distracciones → jardín → exterior",
+  "ageRecommendation": "Desde 8 semanas",
+  "estimatedSessions": "2–4 sesiones para asociación inicial",
+  "objective": "Conseguir que el perro mire al tutor inmediatamente al escuchar su nombre, en cualquier contexto.",
+  "why": [
+    "Sin respuesta al nombre no puedes enseñarle nada más",
+    "Necesario para controlar al perro en la calle",
+    "Refuerza el vínculo y la atención mutua",
+    "Es la base de la llamada (“ven”) y todas las órdenes a distancia"
+  ],
+  "benefits": [
+    "Tu perro vendrá cuando le llames en parques o casa de amigos",
+    "Reduces sustos: girarse a tu nombre evita peligros (coches, otros perros)",
+    "Imprescindible para una llamada de emergencia confiable",
+    "Construye un perro pendiente de ti, no del entorno"
+  ],
+  "where": [
+    "🏠 En casa, en una habitación tranquila (sesión 1–3)",
+    "🛋️ Distintas habitaciones (sesión 4–6)",
+    "🌿 Jardín o terraza (sesión 7+)",
+    "🌳 Exterior con baja distracción (parque vacío)"
+  ],
+  "materials": [
+    "🫖 Premios de muy alto valor (queso, salchicha, pollo)",
+    "🦮 Correa larga 5–10 m (para exterior)",
+    "🔇 Entorno silencioso al inicio",
+    "💛 Voz alegre y entusiasta"
+  ],
+  "beforeYouStart": [
+    "Asegúrate de no haber usado el nombre como reñimina anteriormente",
+    "Si tu perro tiene asociaciones negativas con su nombre, puedes plantearte cambiarlo",
+    "Premios de altísimo valor: aquí no usamos el pienso normal",
+    "Sesiones cortas: 3–5 minutos, varias veces al día",
+    "Nunca uses el nombre seguido de algo desagradable (baño, recortar uñas)"
+  ],
+  "methods": [
+    {
+      "id": "name_game",
+      "title": "El juego del nombre (clásico)",
+      "description": "Asociar el nombre con algo extremadamente positivo de forma repetida.",
+      "bestFor": "Cualquier perro, especialmente cachorros y perros recién adoptados",
+      "steps": [
+        {
+          "title": "Captura tu atención mutua",
+          "description": "Siéntate en el suelo en una habitación tranquila. Espera a que tu perro esté relajado pero no dormido.",
+          "tip": "No le hables ni le mires al principio."
+        },
+        {
+          "title": "Di su nombre UNA vez",
+          "description": "Con voz alegre y suave, pronuncia su nombre claramente. Sólo una vez.",
+          "tip": "El tono debe sonar emocionante, no de orden.",
+          "troubleshooting": "Si no reacciona, NO repitas el nombre: pasa al paso 3."
+        },
+        {
+          "title": "Premia inmediatamente",
+          "description": "En cuanto te mire (¡incluso si es un microsegundo!), di “¡muy bien!” y dale un premio de alto valor.",
+          "tip": "Si no te mira en 2 segundos, haz un ruido (chasquido) para llamar su atención y premia cuando te mire."
+        },
+        {
+          "title": "Aleja el premio entre repeticiones",
+          "description": "No le des otro premio hasta volver a repetir el nombre. Espera 10–30 segundos entre repeticiones.",
+          "tip": "Si lo haces seguido, el perro empieza a mirarte solo, sin tu nombre."
+        },
+        {
+          "title": "Cambia de habitación",
+          "description": "Tras 5 sesiones exitosas en la misma habitación, ve a otra. Repite todo el proceso.",
+          "tip": "El cambio de contexto es donde se aprende de verdad."
+        },
+        {
+          "title": "Sube nivel: distracciones",
+          "description": "Cuando funcione en toda la casa, prueba con la TV encendida, otras personas presentes, comida cerca.",
+          "tip": "Cada nuevo contexto = empezar con premios fáciles."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Repetir el nombre múltiples veces (“Toby, Toby, Toby”)",
+      "cause": "Frustración cuando no responde",
+      "fix": "Si no responde a la primera, NO repitas. Llama su atención con un ruido y premia cuando mire. La próxima vez, di el nombre desde más cerca."
+    },
+    {
+      "error": "Usar el nombre antes de algo malo (baño, viaje al vet)",
+      "cause": "Costumbre inconsciente",
+      "fix": "Para cosas desagradables, ve a por él físicamente sin decir su nombre. El nombre debe ser SIEMPRE positivo."
+    },
+    {
+      "error": "Premios de baja calidad (pienso seco)",
+      "cause": "Comodidad",
+      "fix": "Para enseñar el nombre usa los premios MÁS sabrosos que tengas. Es una inversión inicial."
+    },
+    {
+      "error": "Sesiones de 30 minutos seguidos",
+      "cause": "Pensar “cuanto más, mejor”",
+      "fix": "3–5 minutos máximo. La concentración del perro se agota rápido. Mejor 5 sesiones cortas que 1 larga."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro tiene un nombre largo y no reacciona",
+      "solution": "Usa un “mote” corto de 1–2 sílabas para entrenamiento. Por ejemplo, “Maximiliano” → “Max”. Mantén siempre el mismo."
+    },
+    {
+      "problem": "Funciona en casa pero en la calle pasa de mí",
+      "solution": "Necesitas correa larga + premios MUY altos. Empieza en zonas vacías. La calle es nivel “experto” respecto a casa."
+    },
+    {
+      "problem": "Me mira pero no se acerca",
+      "solution": "Eso ya es éxito en este curso. Acercarse es el siguiente nivel: el curso “Llamada (ven)”."
+    },
+    {
+      "problem": "Vivo con varios perros y no sé a cuál llamar",
+      "solution": "Entrena cada uno en sesiones separadas primero. Después usa nombres claramente distintos en sílabas."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–2",
+      "goal": "Mira al escuchar su nombre en habitación tranquila"
+    },
+    {
+      "stage": "Sesión 3–5",
+      "goal": "Reacción inmediata (en menos de 1 segundo) en distintas habitaciones"
+    },
+    {
+      "stage": "Semana 1",
+      "goal": "Responde al nombre en jardín con baja distracción"
+    },
+    {
+      "stage": "Semana 2+",
+      "goal": "Responde en parque con otros perros y personas a 5 metros"
+    }
+  ],
+  "successSigns": [
+    "Gira la cabeza inmediatamente al escuchar su nombre",
+    "Lo hace sin necesidad de premio visible",
+    "Funciona incluso con distracciones medias (otros perros lejos)",
+    "Mantiene el contacto visual unos segundos esperando instrucciones"
+  ],
+  "variations": [
+    "Decir el nombre desde distintos lados (debe girar buscándote)",
+    "Decir el nombre cuando está distraído olisqueando",
+    "Decir el nombre desde otra habitación (debe venir o asomarse)",
+    "Decir el nombre cuando juega con otros perros",
+    "Combinar nombre + gesto silencioso (dar palmadas)"
+  ],
+  "safetyNotes": [
+    "NUNCA uses el nombre en tono de regañina: arruinarías meses de trabajo",
+    "Si vas a hacer algo desagradable, hazlo sin nombrar al perro",
+    "Perros con sordera parcial: usa también gestos visuales y vibraciones del suelo",
+    "Si el perro fue maltratado verbalmente, considera un nombre nuevo y empieza de cero"
+  ],
+  "funFact": "Los perros distinguen su nombre del resto de palabras humanas en sólo 2 semanas de exposición consistente. Pero pueden olvidarlo si se asocia con cosas negativas en sólo 3-4 episodios.",
+  "nextLevel": "Pasar al curso de “Llamada (ven)”: que no sólo mire, sino que se acerque hasta ti.",
+  "proTip": "Para mantener el nombre “fresco” durante toda la vida del perro, sigue premiando esporádicamente cuando responda — incluso años después. Una vez al mes basta para mantener la respuesta sólida."
+}

@@ -1,0 +1,158 @@
+{
+  "title": "High Five!",
+  "subtitle": "Die coolste Begrüßung zwischen Hund und Halter — Pfote trifft Handfläche!",
+  "level": "Mittelstufe",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Zuhause oder Garten",
+  "ageRecommendation": "Ab 5 Monaten",
+  "estimatedSessions": "6–10 Einheiten zum Beherrschen",
+  "objective": "Den Hund beibringen, eine Pfote vertikal zu heben und die offene Handfläche des Halters zu berühren, als Reaktion auf den verbalen Befehl „High Five“ oder eine vertikal ausgestreckte Handfläche.",
+  "why": [
+    "Einer der fotogensten und lustigsten Tricks zum Teilen",
+    "Der Hund muss zwischen „Pfote geben“ (horizontal) und „High Five” (vertikal) unterscheiden",
+    "Entwickelt Koordination und Bewusstsein für die Pfotenpositionen",
+    "Schafft enge, positive Interaktion mit dem Halter und mit neuen Personen"
+  ],
+  "benefits": [
+    "Verbessert die Konzentration, da der Hund auf die Handfläche achten muss",
+    "Schafft ein gemeinsames Feierritual — ideal, um gutes Verhalten zu verstärken",
+    "Sprungbrett für komplexere Tricks wie Klatschen oder Objekte mit der Pfote berühren",
+    "Kinder lieben es und erleichtert eine positive Sozialisierung mit neuen Menschen"
+  ],
+  "where": [
+    "🏠 Zuhause, im Wohnzimmer oder in der Küche",
+    "🌿 Im Garten oder Park, wenn er gut beherrscht wird",
+    "🔇 Am Anfang ohne Ablenkungen — der Trick erfordert Präzision"
+  ],
+  "materials": [
+    "🫖 Hochwertige Leckerlis (gekochtes Hühnchen, Käse, Wurst)",
+    "🖐️ Ihre offene Handfläche als visuelles Signal",
+    "🛟 Rutschfester Untergrund für mehr Stabilität",
+    "💛 Eine begeisterte mündliche Feier bei jedem Erfolg"
+  ],
+  "beforeYouStart": [
+    "Ihr Hund sollte „Pfote geben“ zuverlässig beherrschen, bevor er beginnt",
+    "Sorgen Sie für rutschfesten Untergrund, damit sich der Hund beim Heben der Pfote sicher fühlt",
+    "Bereiten Sie 20 kleine Leckerlis pro Einheit vor",
+    "Beginnen Sie mit der dominanten Pfote des Hundes (meistens die linke)",
+    "Maximal 5–7 Minuten pro Einheit"
+  ],
+  "methods": [
+    {
+      "id": "paw_to_vertical",
+      "title": "Methode der schrittweisen Pfotenhebung",
+      "description": "Beginnen Sie mit „Pfote geben“ in der normalen niedrigen Position und heben Sie die Handfläche Einheit für Einheit schrittweise an, bis sie vollständig vertikal ist. Der Hund lernt, die Pfote jedes Mal höher zu heben, um den Kontakt zu erreichen.",
+      "bestFor": "Hunde, die „Pfote geben“ bereits kennen",
+      "steps": [
+        {
+          "title": "Pfote geben in normaler Höhe",
+          "description": "Sagen Sie „Pfote“ mit der nach oben gerichteten Handfläche in der gewohnten Höhe. Markieren und belohnen, wenn die Pfote die Hand berührt.",
+          "tip": "Das ist der Ausgangspunkt. Machen Sie 5 Wiederholungen zum Aufwärmen.",
+          "troubleshooting": "Wenn „Pfote geben“ nicht zuverlässig ist, widmen Sie zuerst 2–3 Einheiten dem Festigen."
+        },
+        {
+          "title": "Handfläche schrittweise anheben",
+          "description": "Heben Sie in jeder Einheit die Handfläche einige Zentimeter an. Der Hund muss die Pfote höher heben, um sie zu berühren. Lassen Sie die Handfläche am Anfang horizontal.",
+          "tip": "Nicht mehr als 3–5 cm pro Einheit anheben. Schrittweiser Fortschritt ist der Schlüssel.",
+          "troubleshooting": "Wenn der Hund die Hand nicht erreicht, etwas absenken und diese Höhe mehr üben, bevor weiter angehoben wird."
+        },
+        {
+          "title": "Handfläche auf vertikal drehen",
+          "description": "Wenn der Hund die Pfote bis auf Brusthöhe hebt, beginnen Sie, die Handfläche in eine vertikale Position zu drehen (wie beim Händeschütteln). Der Hund berührt die Handfläche von vorne.",
+          "tip": "Das visuelle Signal der vertikalen Handfläche wird das endgültige Signal für „High Five“."
+        },
+        {
+          "title": "Signal „High Five“ einführen",
+          "description": "Wenn der Hund die vertikale Handfläche konsistent berührt, fügen Sie „High Five“ genau vor dem Ausstrecken der Hand hinzu. Den Kontakt markieren und begeistert belohnen.",
+          "tip": "Verwenden Sie einen festlichen, fröhlichen Ton — dieser Trick verdient eine Party.",
+          "troubleshooting": "Wenn er „High Five“ und „Pfote geben” verwechselt, in verschiedenen Kontexten mit klar unterschiedlichen Gesten üben."
+        },
+        {
+          "title": "„Pfote geben“ und „High Five” unterscheiden",
+          "description": "Üben Sie abwechselnd beide Signale, damit der Hund sie unterscheidet: horizontale Handfläche nach unten = „Pfote“; vertikale Handfläche zum Hund = „High Five”. Die richtige Antwort mit höherem Wert belohnen.",
+          "tip": "Die Signaldifferenzierung ist die fortgeschrittenste Stufe. Nicht hetzen."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Hand zu schnell anheben, bevor der Hund jede Höhe gefestigt hat",
+      "cause": "Ungeduld, das vollständige High Five zu erreichen",
+      "fix": "Mindestens 2 Einheiten auf jeder Höhe verbringen, bevor weiter angehoben wird. Qualität vor Geschwindigkeit."
+    },
+    {
+      "error": "Akzeptieren, dass der Hund die Hand kratzt anstatt sie mit der flachen Pfote zu berühren",
+      "cause": "Nicht präzise markieren, welche Art von Kontakt gewünscht ist",
+      "fix": "Nur den sauberen Kontakt der flachen Pfote markieren. Kratzer ignorieren, ohne sie zu belohnen."
+    },
+    {
+      "error": "Die visuellen Signale zwischen „Pfote geben“ und „High Five” nicht unterscheiden",
+      "cause": "Dieselbe Geste für beide Tricks verwenden",
+      "fix": "Horizontale Handfläche für „Pfote geben“, vertikale Handfläche für „High Five”. Diesen Unterschied aktiv trainieren."
+    },
+    {
+      "error": "Mit wenig Emotion belohnen — der Trick wirkt langweilig",
+      "cause": "Sparsame oder eintönige Feier",
+      "fix": "High Five verdient Euphorie! Stimme anheben, lächeln und „Bravo!“ mit Überzeugung hinzufügen."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Der Hund berührt die Hand mit der Schnauze statt mit der Pfote",
+      "solution": "Hand zurückziehen, wenn die Schnauze sich nähert, und erneut anbieten. Nur Pfotenkontakt markieren."
+    },
+    {
+      "problem": "Der Hund verliert das Gleichgewicht, wenn er die Pfote sehr hoch hebt",
+      "solution": "Auf rutschfestem Untergrund arbeiten und die Hand vorerst nicht so hoch heben. Das Gleichgewicht verbessert sich mit der Übung."
+    },
+    {
+      "problem": "Unterscheidet nicht zwischen „Pfote geben“ und „High Five”",
+      "solution": "Den Unterschied der Gesten übertreiben und jedes Signal eine Woche lang in separaten Einheiten üben, bevor sie gemischt werden."
+    },
+    {
+      "problem": "Macht es zuhause gut, aber nicht mit anderen Personen",
+      "solution": "Zunächst den Trick Familienmitgliedern zuhause zeigen. Dann Freunden. Generalisierung braucht Zeit."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheiten 1–2",
+      "goal": "Hebt die Pfote mindestens bis Ellbogenhöhe als Reaktion auf die Handfläche"
+    },
+    {
+      "stage": "Einheiten 3–5",
+      "goal": "Berührt die vertikale Handfläche auf Brusthöhe konsistent"
+    },
+    {
+      "stage": "Einheiten 6–8",
+      "goal": "Reagiert auf „High Five“ mit der Handfläche auf vollständiger High-Five-Höhe"
+    },
+    {
+      "stage": "Woche 3+",
+      "goal": "Unterscheidet klar zwischen „Pfote geben“ und „High Five” und macht es mit anderen Personen"
+    }
+  ],
+  "successSigns": [
+    "Hebt die Pfote zur vertikalen Handfläche ohne zu zögern",
+    "Reagiert auf „High Five“, bevor er die Handfläche sieht",
+    "Macht es mit anderen Personen außer dem Halter",
+    "Unterscheidet klar zwischen „Pfote geben“ und „High Five”"
+  ],
+  "variations": [
+    "High Five mit linker und rechter Pfote",
+    "High Five in verschiedenen Höhen (niedrig, mittel, hoch)",
+    "High Five auf Distanz (50 cm entfernt)",
+    "High Five + Verbeugung für eine vollständige Routine kombinieren",
+    "High Ten: beide Pfoten gleichzeitig gegen beide Handflächen"
+  ],
+  "safetyNotes": [
+    "Niemals die Pfote mit der Hand nach oben zwingen — den Hund selbst heben lassen",
+    "Hunde mit Schulter- oder Ellbogenproblemen: vor dem Üben einen Tierarzt aufsuchen",
+    "Wenn der Hund Unbehagen beim Heben der Pfote zeigt, die Einheit stoppen und auf Hinken prüfen",
+    "Welpen unter 6 Monaten: Höhe begrenzen, um die sich entwickelnden Gelenke zu schützen"
+  ],
+  "funFact": "Hunde, die „High Five“ lernen, bieten es oft spontan an, wenn sie Aufmerksamkeit möchten — Ihr Hund könnte süchtig nach spontanen High Fives werden.",
+  "nextLevel": "High Ten beibringen (beide Pfoten gleichzeitig). Dann kombinieren: Winken → High Five → Verbeugung. Eine vollständige Drei-Tricks-Vorstellung!",
+  "proTip": "Wenn der Hund ein perfektes High Five macht, feiern Sie mit der größten Reaktion, die Sie aufbringen können. Hunde lernen am schnellsten, wenn die emotionale Belohnung enorm ist."
+}

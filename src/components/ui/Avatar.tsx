@@ -24,6 +24,9 @@ export default function Avatar({ uri, name, size = 48 }: AvatarProps) {
           styles.image,
           { width: size, height: size, borderRadius: size / 2 },
         ]}
+        accessible
+        accessibilityLabel={name}
+        accessibilityRole="image"
       />
     );
   }
@@ -34,6 +37,9 @@ export default function Avatar({ uri, name, size = 48 }: AvatarProps) {
         styles.placeholder,
         { width: size, height: size, borderRadius: size / 2 },
       ]}
+      accessible
+      accessibilityLabel={name}
+      accessibilityRole="image"
     >
       <Text style={[styles.initials, { fontSize: size * 0.35 }]}>
         {initials}

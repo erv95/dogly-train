@@ -1,0 +1,160 @@
+{
+  "title": "Dá a pata",
+  "subtitle": "O truque clássico que fortalece o vínculo e facilita os cuidados",
+  "level": "Intermediário",
+  "duration": "5–10 min por sessão",
+  "location": "Casa ou jardim tranquilo",
+  "ageRecommendation": "A partir das 12 semanas",
+  "estimatedSessions": "5–8 sessões para dominar",
+  "objective": "Ensinar o cão a levantar uma pata dianteira e colocá-la na mão do guia quando ouvir o comando \"dá a pata\".",
+  "why": [
+    "Facilita o corte de unhas e as consultas veterinárias",
+    "Fortalece o vínculo entre o cão e o guia",
+    "Desenvolve a consciência corporal do cão",
+    "Base para truques mais avançados como \"bate cá\" ou \"tchau\""
+  ],
+  "benefits": [
+    "O seu cão ficará mais calmo no veterinário e nos cuidados de higiene",
+    "Reforça a confiança mútua de forma lúdica",
+    "Melhora a coordenação e o equilíbrio",
+    "Um truque adorável que encanta toda a família"
+  ],
+  "where": [
+    "🏠 Em casa, numa superfície antiderrapante",
+    "🌿 No jardim, em relva ou solo firme",
+    "🔇 Sem distrações no início"
+  ],
+  "materials": [
+    "🫖 Petiscos muito apetitosos (frango, queijo, salsicha)",
+    "🛏️ Tapete antiderrapante ou carpete",
+    "✋ A sua mão aberta como alvo",
+    "💛 Paciência e sessões curtas"
+  ],
+  "beforeYouStart": [
+    "O seu cão deve saber \"senta\" com fiabilidade antes de começar",
+    "Escolha petiscos de alta motivação — este truque merece o melhor",
+    "Certifique-se de que a superfície é antiderrapante para que o cão se sinta seguro",
+    "Limite as sessões a 5 minutos para evitar a fadiga mental",
+    "Trabalhe sempre a mesma pata no início (normalmente a direita)"
+  ],
+  "methods": [
+    {
+      "id": "capture_touch",
+      "title": "Método de captura com toque suave no ombro (recomendado)",
+      "description": "Aguarda que o cão levante naturalmente a pata da posição sentado, auxiliado por um leve toque no ombro, e recompensa esse movimento.",
+      "bestFor": "Cachorros e cães de qualquer tamanho que já sabem sentar",
+      "steps": [
+        {
+          "title": "Peça sentado e apresente a mão",
+          "description": "Peça ao seu cão que se sente. Estenda a mão aberta, palma virada para cima, à altura do peito dele. Não diga mais nada — apenas aguarde.",
+          "tip": "A mão aberta é o sinal visual. Mantenha uma postura relaxada e expectante.",
+          "troubleshooting": "Se ignorar a sua mão, aproxime-a ligeiramente das patas sem o tocar."
+        },
+        {
+          "title": "Toque suave no ombro",
+          "description": "Se o cão não levantar a pata após 5 segundos, roze levemente o ombro ou a parte exterior da pata dianteira com um dedo. A maioria dos cães levanta a pata por instinto.",
+          "tip": "O toque deve ser muito suave, como uma cócegas — não um empurrão.",
+          "troubleshooting": "Se o cão se levantar, peça sentado novamente com calma e comece de novo."
+        },
+        {
+          "title": "Capture o movimento e recompense",
+          "description": "No momento exato em que a pata sai do chão e toca a sua mão, diga \"sim!\" com voz alegre e dê o petisco imediatamente.",
+          "tip": "O timing é tudo. Recompense a pata a tocar a sua mão, nem antes nem depois.",
+          "troubleshooting": "Se a pata não chegar à mão, recompense primeiro qualquer levantamento de pata e vá exigindo progressivamente mais."
+        },
+        {
+          "title": "Introduza o comando verbal",
+          "description": "Quando o cão levantar a pata de forma consistente (7 em cada 10 vezes), adicione \"dá a pata\" mesmo antes de estender a mão.",
+          "tip": "Primeiro o gesto, depois a palavra. Não adicione o comando até o comportamento ser estável.",
+          "troubleshooting": "Se parecer confuso, elimine a palavra durante 2 sessões e volte apenas ao gesto."
+        },
+        {
+          "title": "Reduza o toque e prolongue o contacto",
+          "description": "Elimine gradualmente o toque no ombro. Depois comece a fechar suavemente a mão em torno da pata durante 2–3 segundos antes de recompensar.",
+          "tip": "O objetivo final é que o cão mantenha a pata na sua mão até você a soltar.",
+          "troubleshooting": "Se retirar a pata muito depressa, recompense com mais frequência e aumente o tempo muito gradualmente."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Agarrar a pata à força",
+      "cause": "Impaciência quando o cão não entende o que lhe é pedido",
+      "fix": "Nunca pegue a pata sem que o cão a ofereça. Use o toque suave e aguarde."
+    },
+    {
+      "error": "Recompensar quando a pata já está a descer",
+      "cause": "Timing de recompensa lento",
+      "fix": "Pratique o seu timing sozinho: atire um petisco ao ar e agarre-o em menos de 1 segundo."
+    },
+    {
+      "error": "Mudar de pata em cada tentativa",
+      "cause": "Falta de consistência do guia",
+      "fix": "Trabalhe a mesma pata nas primeiras semanas. Introduza a outra pata depois."
+    },
+    {
+      "error": "Pedir o truque sem o cão estar sentado",
+      "cause": "Saltar etapas do processo de aprendizagem",
+      "fix": "Um sentado sólido é essencial para este truque. Comece sempre a partir daí."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão não levanta a pata mesmo esperando muito tempo",
+      "solution": "Tente segurar um petisco num punho fechado à altura do peito dele. Muitos cães tentam abri-lo com a pata."
+    },
+    {
+      "problem": "Levanta a pata mas não a coloca na minha mão",
+      "solution": "Aproxime mais a mão das patas dele. A distância correta é quase sem esforço da parte dele."
+    },
+    {
+      "problem": "Funciona em casa mas não lá fora",
+      "solution": "É normal. Pratique primeiro no jardim, depois numa rua calma. Use petiscos de maior valor em ambientes novos."
+    },
+    {
+      "problem": "Confunde \"dá a pata\" com \"senta\"",
+      "solution": "Diferencie o sinal de mão: para sentar, aponte para baixo; para a pata, estenda a palma na horizontal."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessão 1–2",
+      "goal": "O cão levanta a pata mesmo que apenas um centímetro ao ver a sua mão ou sentir o toque"
+    },
+    {
+      "stage": "Sessão 3–5",
+      "goal": "Coloca a pata na mão aberta pelo menos 6 em cada 10 vezes"
+    },
+    {
+      "stage": "Sessão 6–7",
+      "goal": "Responde ao comando verbal \"dá a pata\" sem precisar do toque no ombro"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Mantém a pata na sua mão 3–5 segundos até você a soltar"
+    }
+  ],
+  "successSigns": [
+    "Levanta a pata assim que ouve o comando",
+    "Coloca-a suavemente sem arranhar",
+    "Mantém-se sentado enquanto oferece a pata",
+    "Faz o truque em diferentes locais e com diferentes pessoas"
+  ],
+  "variations": [
+    "Dá a pata esquerda (ensinar a outra pata)",
+    "Bate cá (pata mais alta, palma vertical)",
+    "Dá a pata apenas com gesto, sem comando verbal",
+    "Dá a pata com o guia agachado ou de pé",
+    "Encadear: senta → dá a pata → fica"
+  ],
+  "safetyNotes": [
+    "Pare se o seu cão mostrar dor ao levantar a pata — pode indicar um problema articular",
+    "Raças grandes ou cães com displasia da anca: sessões mais curtas em superfícies muito macias",
+    "Nunca puna o fracasso; simplesmente volte ao passo anterior",
+    "Cachorros com menos de 16 semanas têm ossos em desenvolvimento — nunca force posturas"
+  ],
+  "funFact": "O truque \"dá a pata\" é um dos mais antigos documentados: gravuras europeias do século XVII já mostram cães a cumprimentar os seus donos desta forma.",
+  "nextLevel": "Ensine a pata esquerda para que o cão aprenda a distinguir as duas. Depois evolua para \"bate cá\" elevando progressivamente a palma.",
+  "proTip": "Se o seu cão tem receio da mão perto do rosto, comece com um punho fechado com petisco dentro. Deixará de ver a mão como uma ameaça e passará a vê-la como uma máquina de recompensas."
+}

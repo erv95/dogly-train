@@ -1,0 +1,192 @@
+{
+  "title": "Busca a bolinha",
+  "subtitle": "Brincadeira, exercício e obediência em um único comando",
+  "level": "Básico",
+  "duration": "10–15 min por sessão",
+  "location": "Jardim, parque ou corredor longo em casa",
+  "ageRecommendation": "A partir de 10 semanas",
+  "estimatedSessions": "6–10 sessões para dominar",
+  "objective": "Ensinar o cão a perseguir um objeto arremessado, apanhá-lo, trazê-lo de volta ao tutor e soltá-lo — completando o ciclo completo de busca e entrega.",
+  "why": [
+    "Uma das formas mais eficientes de dar exercício físico e mental ao cão",
+    "Reforça o vínculo entre tutor e cão através da brincadeira",
+    "Ensina o conceito de troca voluntária, base de muitos outros comportamentos",
+    "Proporciona um canal de descarga de energia para cães com alto drive"
+  ],
+  "benefits": [
+    "O seu cão fica fisicamente e mentalmente cansado em 15 minutos, reduzindo comportamentos destrutivos",
+    "Aprende a soltar objetos voluntariamente, reduzindo a guarda de recursos",
+    "A antecipação do arremesso melhora a atenção e o foco",
+    "Pode ser praticado em espaços pequenos com objetos macios"
+  ],
+  "where": [
+    "🏡 Jardim ou quintal fechado para começar",
+    "🌳 Parque com área vedada ou gramada",
+    "🏠 Corredor longo em casa com bolinha macia (início)"
+  ],
+  "materials": [
+    "🎾 Dois brinquedos ou bolinhas idênticos ou similares",
+    "🫖 Petiscos de alto valor (opcional, para as primeiras sessões)",
+    "🦮 Guia longa de 5–10 m (para cães que não voltam)",
+    "💛 Entusiasmo e voz animada"
+  ],
+  "beforeYouStart": [
+    "Identifique se o seu cão tem instinto de perseguição: jogue uma bolinha e veja se ele a persegue",
+    "Escolha um espaço fechado sem risco de fuga nas primeiras sessões",
+    "Tenha dois brinquedos prontos: isso é essencial para o método dos dois brinquedos",
+    "Sessões de no máximo 10–15 minutos para evitar o cansaço",
+    "Se o cão nunca brincou, comece com o objeto no chão antes de arremessá-lo"
+  ],
+  "methods": [
+    {
+      "id": "two_toys",
+      "title": "Método dos dois brinquedos (recomendado)",
+      "description": "Você usa dois brinquedos idênticos alternando-os: quando o cão traz o primeiro de volta, você mostra o segundo com entusiasmo para ele soltar. Constrói o hábito de voltar sem ensinar 'larga' separadamente.",
+      "bestFor": "Cães com instinto de perseguição que não soltam ou não voltam",
+      "steps": [
+        {
+          "title": "Dois brinquedos na mão",
+          "description": "Comece com os dois brinquedos nas mãos, atrás das costas ou escondidos. Mostre apenas um ao cão para gerar interesse.",
+          "tip": "Os brinquedos devem ser atraentes. Brinque um pouco com o primeiro antes de arremessar para aumentar seu valor.",
+          "troubleshooting": "Se o cão não mostrar interesse, agite o brinquedo perto dele antes de arremessar."
+        },
+        {
+          "title": "Primeiro arremesso",
+          "description": "Arremesse o brinquedo nº1 com entusiasmo. Espere o cão persegui-lo e apanhá-lo.",
+          "tip": "Arremesse apenas alguns metros no início. A distância aumenta com a prática.",
+          "troubleshooting": "Se não perseguir, torne o brinquedo mais interessante: mova-o no chão como uma presa antes de arremessar."
+        },
+        {
+          "title": "Mostre o brinquedo nº2",
+          "description": "Quando o cão tiver o brinquedo nº1 na boca e começar a voltar (mesmo que parcialmente), mostre o brinquedo nº2 com muita animação: agite-o, torne-o interessante.",
+          "tip": "A sua atitude é fundamental. O cão deve querer o brinquedo nº2 mais do que o que tem na boca.",
+          "troubleshooting": "Se o cão ficar parado com o brinquedo, vire-se de costas: os cães querem o que ignoramos."
+        },
+        {
+          "title": "Troca e largada",
+          "description": "Quando o cão chegar até você em busca do brinquedo nº2, vai soltar o nº1 voluntariamente. Nesse momento, arremesse o nº2 como recompensa.",
+          "tip": "Não peça 'larga': a troca torna isso natural. Diga 'isso' ou 'muito bem' quando ele soltar."
+        },
+        {
+          "title": "Ciclo contínuo",
+          "description": "Apanhe o brinquedo nº1 e repita o ciclo. O cão aprende: trazer de volta = a diversão recomeça.",
+          "tip": "Encerre a sessão você mesmo enquanto o cão ainda quer brincar mais. Isso mantém o drive para a próxima sessão."
+        }
+      ]
+    },
+    {
+      "id": "shaping",
+      "title": "Método de modelagem (para cães sem instinto de busca)",
+      "description": "Você reforça qualquer aproximação progressiva ao brinquedo: olhar → aproximar → farejar → tocar → apanhar → trazer um passo. Ideal para cães que não mostram interesse natural em perseguir.",
+      "bestFor": "Cães sem instinto natural de busca, raças não retrievers, ou cães mais velhos",
+      "steps": [
+        {
+          "title": "Olhar para o brinquedo",
+          "description": "Coloque o brinquedo no chão. Cada vez que o cão olhar para ele, diga 'isso' e recompense. Não peça mais por enquanto.",
+          "tip": "O clicker é muito útil neste método para marcar exatamente o comportamento correto.",
+          "troubleshooting": "Se o cão não olhar para o brinquedo, mova-o levemente para atrair sua atenção."
+        },
+        {
+          "title": "Aproximar do brinquedo",
+          "description": "Agora, recompense somente se o cão se dirigir ao brinquedo, não apenas olhar para ele. Aumente os critérios lentamente.",
+          "tip": "Cada passo deve ser pequeno. Se o cão se frustrar, volte ao passo anterior."
+        },
+        {
+          "title": "Tocar ou apanhar o brinquedo",
+          "description": "Recompense quando o cão tocar o brinquedo com o focinho ou apanhá-lo com a boca, mesmo que brevemente.",
+          "tip": "Qualquer contato com o brinquedo é um sucesso nesta fase. Não exija perfeição ainda."
+        },
+        {
+          "title": "Trazer um passo em sua direção",
+          "description": "Recompense somente quando o cão apanhar o brinquedo E der pelo menos um passo em sua direção. Aumente gradualmente a distância requerida.",
+          "tip": "Recue você mesmo para facilitar que o cão se aproxime. O seu movimento convida ao movimento do cão."
+        },
+        {
+          "title": "Busca completa",
+          "description": "Quando ele trazer o brinquedo até você de forma consistente, adicione a troca (um petisco em troca do brinquedo) para completar o ciclo.",
+          "tip": "Substitua o petisco pelo arremesso do brinquedo quando o cão entender bem o conceito."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Correr atrás do cão para recuperar o brinquedo",
+      "cause": "Frustração quando o cão não volta",
+      "fix": "Nunca corra atrás dele: você transforma isso em um jogo de 'pega-me se puder'. Vire-se de costas ou corra na direção oposta."
+    },
+    {
+      "error": "Forçar a abertura da boca para pegar o brinquedo",
+      "cause": "Impaciência para voltar a arremessar",
+      "fix": "Use sempre a troca (segundo brinquedo ou petisco). A abertura forçada pode gerar guarda de recursos."
+    },
+    {
+      "error": "Sessões muito longas que cansam o cão",
+      "cause": "O cão mostra entusiasmo inicial e o tutor não para a tempo",
+      "fix": "Pare sempre antes de o cão se cansar. Sessões curtas mantêm o drive e o entusiasmo."
+    },
+    {
+      "error": "Arremessar o brinquedo quando o cão pula ou empurra",
+      "cause": "Ceder à pressão do cão",
+      "fix": "Só arremesse quando o cão estiver calmo ou na posição sentado. Isso ensina autocontrole antes da brincadeira."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão persegue o brinquedo mas não o apanha",
+      "solution": "Tente um brinquedo mais macio e atraente. Também pode fazer o brinquedo 'fugir' movendo-o para ativar o instinto de presa."
+    },
+    {
+      "problem": "Apanha o brinquedo mas não volta",
+      "solution": "Use a guia longa para guiá-lo suavemente em sua direção enquanto demonstra muito entusiasmo pelo brinquedo nº2. Nunca puxe com força."
+    },
+    {
+      "problem": "Volta mas não solta o brinquedo",
+      "solution": "Método dos dois brinquedos: o segundo brinquedo sempre provoca a largada do primeiro. Se não funcionar, ofereça um petisco de muito alto valor."
+    },
+    {
+      "problem": "Perde o interesse após 2–3 arremessos",
+      "solution": "As sessões estão muito longas ou o brinquedo não é motivador o suficiente. Tente um brinquedo diferente e sessões mais curtas (3–5 arremessos e pare)."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessão 1–2",
+      "goal": "O cão persegue o brinquedo arremessado e o apanha pelo menos uma vez"
+    },
+    {
+      "stage": "Sessão 3–5",
+      "goal": "Volta em sua direção com o brinquedo em 50% das tentativas"
+    },
+    {
+      "stage": "Sessão 6–8",
+      "goal": "Completa o ciclo completo (perseguir, apanhar, voltar, soltar) de forma consistente"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Realiza a busca completa em exterior com distrações moderadas"
+    }
+  ],
+  "successSigns": [
+    "Persegue o brinquedo imediatamente quando arremessado",
+    "Volta em sua direção com o brinquedo sem precisar ser chamado",
+    "Solta o brinquedo ao ver o segundo ou ao ouvir 'larga'",
+    "Mantém o entusiasmo durante toda a sessão"
+  ],
+  "variations": [
+    "Busca com nome do objeto ('pega a bolinha', 'pega a corda')",
+    "Busca na água (para cães que gostam de nadar)",
+    "Busca de objetos específicos (encontra a chave, encontra o controle)",
+    "Busca de distâncias progressivamente maiores (5m → 20m → 50m)",
+    "Busca com obstáculos ou entre árvores"
+  ],
+  "safetyNotes": [
+    "Nunca arremesse objetos pequenos que possam ser engolidos",
+    "Evite arremessar galhos: podem causar graves ferimentos na boca e na garganta",
+    "Limite o jogo intenso em cães com displasia ou problemas articulares",
+    "Em dias quentes, sessões muito curtas com água disponível: a busca é muito exigente"
+  ],
+  "funFact": "Golden Retrievers e Labradors foram selecionados geneticamente para recuperar presas sem danificá-las (boca mole). Por isso muitos aprendem a busca quase que instintivamente.",
+  "nextLevel": "Ensine os nomes de diferentes objetos para que o cão possa buscar e trazer o correto. Ou introduza a busca na água se o seu cão gosta de nadar.",
+  "proTip": "A busca falha quase sempre por dois motivos: o cão não solta ou não volta. Solução universal: tenha sempre um segundo brinquedo e nunca, jamais, corra atrás do seu cão."
+}

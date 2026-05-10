@@ -1,0 +1,158 @@
+{
+  "title": "La révérence",
+  "subtitle": "Le geste le plus élégant — comme si votre chien saluait le public",
+  "level": "Intermédiaire",
+  "duration": "5–10 min par séance",
+  "location": "Maison ou jardin",
+  "ageRecommendation": "À partir de 4 mois",
+  "estimatedSessions": "6–10 séances pour maîtriser",
+  "objective": "Apprendre au chien à baisser la poitrine vers le sol tout en gardant le postérieur levé (la posture de révérence ou play bow), en répondant au signal “révérence” ou “salue”.",
+  "why": [
+    "La révérence est une posture que les chiens adoptent naturellement pour inviter au jeu",
+    "C'est le tour visuellement le plus élégant — on dirait un acteur saluant le public",
+    "Renforce la conscience corporelle en dissociant le mouvement du train avant et du train arrière",
+    "C'est la touche finale parfaite pour conclure n'importe quelle séquence de tours"
+  ],
+  "benefits": [
+    "Excellent étirement pour le dos et les épaules — c'est comme du yoga canin",
+    "Permet au chien de communiquer naturellement son envie de jouer",
+    "Facile à apprendre car il capture un comportement instinctif",
+    "Génère des réactions très positives chez toutes les personnes qui le voient"
+  ],
+  "where": [
+    "🏠 À la maison, dans n'importe quelle pièce avec assez d'espace",
+    "🌿 Au jardin ou en extérieur une fois maîtrisé en intérieur",
+    "🔇 Sans distractions au début pour que le chien se concentre"
+  ],
+  "materials": [
+    "🫖 Petites friandises de haute valeur",
+    "🖐️ Votre main comme leurre (friandise entre les doigts)",
+    "🛟 Surface plane et confortable",
+    "💛 Patience et regard attentif pour capturer le comportement naturel"
+  ],
+  "beforeYouStart": [
+    "Observez votre chien pendant la journée — il fait presque certainement la révérence naturellement en s'étirant ou en invitant au jeu",
+    "Le tour peut s'apprendre par capture (en profitant du comportement naturel) ou par leurre",
+    "Ayez toujours des friandises à portée pendant la journée pour capturer le moment",
+    "Séances de 5 minutes maximum — courtes et fréquentes",
+    "Votre chien n'a besoin d'aucun tour préalable pour apprendre celui-ci"
+  ],
+  "methods": [
+    {
+      "id": "capture_or_lure",
+      "title": "Méthode de capture et leurre combinés",
+      "description": "Essayez d'abord de capturer les révérences naturelles que le chien fait déjà. Si elles sont fréquentes, marquez-les et récompensez-les jusqu'à pouvoir les nommer. Si le chien ne fait pas souvent de révérences spontanées, utilisez le leurre en guidant la friandise entre ses pattes avant vers le sol, tout en bloquant doucement la hanche avec l'avant-bras.",
+      "bestFor": "Tout chien — adaptez la méthode selon si le chien fait souvent des révérences naturelles ou rarement",
+      "steps": [
+        {
+          "title": "Observez les révérences naturelles",
+          "description": "Pendant 2–3 jours, remarquez quand votre chien fait la révérence seul (au réveil, en invitant au jeu). Quand ça arrive, dites “oui !” et courez lui donner une friandise.",
+          "tip": "Ayez des friandises en poche ou près de l'endroit où il s'étire habituellement le matin.",
+          "troubleshooting": "Si le chien fait rarement des révérences spontanées, passez directement au leurre."
+        },
+        {
+          "title": "Capturez et marquez le comportement",
+          "description": "Chaque fois que vous captez une révérence naturelle, marquez avec “oui !” au moment exact où la poitrine est basse et le postérieur haut, et récompensez immédiatement.",
+          "tip": "La précision du timing est fondamentale : marquez quand la poitrine est au plus bas, pas quand il se relève déjà."
+        },
+        {
+          "title": "Leurre entre les pattes avant (si la capture ne fonctionne pas)",
+          "description": "Le chien debout, guidez le leurre depuis son museau vers le sol entre ses pattes avant. Avec l'avant-bras libre, bloquez doucement sa hanche pour qu'il ne se couche pas. Le chien baissera la poitrine en suivant la friandise.",
+          "tip": "L'avant-bras sous le ventre agit comme un guide doux — jamais comme une contrainte forcée.",
+          "troubleshooting": "Si le chien se couche complètement, retirez le leurre et recommencez avec moins de mouvement vers le bas."
+        },
+        {
+          "title": "Nommez le tour",
+          "description": "Quand le chien adopte correctement la posture (poitrine basse, postérieur haut) de façon régulière, ajoutez le mot “révérence” ou “salue” juste avant de commencer le leurre.",
+          "tip": "Utilisez un ton doux et élégant — la révérence est un tour avec de la classe."
+        },
+        {
+          "title": "Réduisez le leurre et généralisez",
+          "description": "Réduisez progressivement le mouvement du leurre : d'abord avec friandise en main, puis seulement le geste vide, finalement seulement le mot. Pratiquez dans différents endroits et avec différentes personnes.",
+          "tip": "La posture de révérence est facile à tenir 2–3 secondes. Récompensez pendant qu'il la maintient pour allonger la durée.",
+          "troubleshooting": "Si le chien recommence à se coucher, revenez au leurre avec l'avant-bras d'appui pour davantage de séances."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Descendre le leurre si vite que le chien se couche plutôt que de faire la révérence",
+      "cause": "Mouvement trop direct vers le sol",
+      "fix": "Descendez le leurre très lentement entre les pattes avant. Bloquez la hanche avec l'avant-bras si nécessaire."
+    },
+    {
+      "error": "Ne pas marquer le moment exact de la révérence",
+      "cause": "Timing imprécis de la récompense",
+      "fix": "Marquez quand la poitrine est au plus bas et le postérieur haut. Si vous marquez trop tard, vous renforcez le fait de se relever."
+    },
+    {
+      "error": "Manquer les révérences naturelles pendant la journée",
+      "cause": "Ne pas avoir de friandises à portée",
+      "fix": "Portez des friandises en poche pendant les premières semaines pour capturer les révérences spontanées."
+    },
+    {
+      "error": "Confondre la révérence avec le couché",
+      "cause": "Le leurre va trop en avant au lieu de rester entre les pattes",
+      "fix": "Le leurre descend vers le sol entre les pattes avant, pas en avant. Cela force la poitrine bas sans baisser le postérieur."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Le chien se couche complètement au lieu de faire la révérence",
+      "solution": "Utilisez l'avant-bras sous son ventre comme guide doux. Vous pouvez aussi pratiquer le chien face à un canapé bas pour que ses pattes arrière restent légèrement élevées."
+    },
+    {
+      "problem": "La révérence ne dure qu'un instant et le chien se relève immédiatement",
+      "solution": "Récompensez pendant qu'il maintient la posture (pas seulement quand il l'adopte). Commencez à récompenser à 0,5 seconde et montez progressivement à 1, 2, 3 secondes."
+    },
+    {
+      "problem": "Le chien fait la révérence naturellement quand il veut jouer mais pas quand on lui demande",
+      "solution": "Profitez de ces moments pour la nommer. Puis utilisez le leurre pour la provoquer de façon contrôlée hors contexte de jeu."
+    },
+    {
+      "problem": "N'arrive pas à garder le postérieur haut en baissant la poitrine",
+      "solution": "L'avant-bras sous le ventre est la solution la plus efficace. Ou pratiquez sur une marche basse avec les pattes arrière surélevées."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Jours 1–3",
+      "goal": "Le chien fait la révérence naturelle au moins 3 fois par jour et vous la marquez et récompensez"
+    },
+    {
+      "stage": "Séances 3–5",
+      "goal": "Baisse la poitrine en suivant le leurre tout en gardant le postérieur haut"
+    },
+    {
+      "stage": "Séances 6–8",
+      "goal": "Répond à “révérence” avec un leurre réduit"
+    },
+    {
+      "stage": "Semaine 3+",
+      "goal": "Maintient la posture 3–5 secondes et la fait avec seulement la voix ou un petit geste"
+    }
+  ],
+  "successSigns": [
+    "Baisse la poitrine au sol en gardant clairement le postérieur haut",
+    "Maintient la posture au moins 2 secondes avant la récompense",
+    "Répond à “révérence” sans avoir besoin du leurre complet",
+    "Le fait dans différents endroits et devant différentes personnes"
+  ],
+  "variations": [
+    "Révérence lente et soutenue (plus théâtrale et élégante)",
+    "Révérence avec inclinaison de tête (ajouter un deuxième leurre pour baisser la tête)",
+    "Révérence devant un miroir pour que le chien voit sa posture",
+    "Enchaîner la révérence au début et à la fin d'une séquence de tours",
+    "Révérence + regard à la caméra (parfaite pour les photos)"
+  ],
+  "safetyNotes": [
+    "Chiens avec problèmes de colonne ou d'épaules : consultez un vétérinaire avant de pratiquer",
+    "Si le chien montre de la raideur ou de l'inconfort en baissant la poitrine, arrêtez la séance",
+    "N'utilisez pas l'avant-bras comme une contrainte — seulement comme un guide doux et passif",
+    "Chiots de moins de 5 mois : séances très courtes et ne forcez pas la posture"
+  ],
+  "funFact": "La révérence (play bow) est l'un des signaux les plus universels du langage corporel canin. Tous les chiens du monde l'utilisent pour dire “on joue ?” — vous lui donnez simplement un nom.",
+  "nextLevel": "Enchaînez : assis → tope-là → révérence. Un salut complet en trois étapes que n'importe quel chien peut apprendre en 3 semaines.",
+  "proTip": "Si votre chien fait la révérence naturellement chaque matin en se levant, c'est le meilleur moment pour la capturer et la nommer. Gardez des friandises sur la table de chevet — sérieusement !"
+}

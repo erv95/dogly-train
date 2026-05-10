@@ -1,0 +1,158 @@
+{
+  "title": "Marche en laisse sans tirer",
+  "subtitle": "Des promenades agréables pour vous et votre chien sans tension sur la laisse",
+  "level": "Basique",
+  "duration": "10–15 min par séance",
+  "location": "Rue tranquille, trottoir ou parc",
+  "ageRecommendation": "À partir de 10 semaines",
+  "estimatedSessions": "10–15 séances pour obtenir une cohérence",
+  "objective": "Apprendre au chien à marcher aux côtés du maître sans tendre la laisse, en utilisant la méthode de l'arbre et les changements de direction avec renforcement positif.",
+  "why": [
+    "Un chien qui tire rend les promenades épuisantes et dangereuses pour le maître",
+    "La tension constante de la laisse peut blesser le cou et la trachée du chien",
+    "Marcher sans tirer améliore la relation et la confiance mutuelle",
+    "Base indispensable pour progresser vers le travail sans laisse dans des espaces sécurisés"
+  ],
+  "benefits": [
+    "Les promenades deviennent détendues et agréables pour toute la famille",
+    "Réduit le risque de chutes ou de blessures, surtout avec les grands chiens",
+    "Votre chien apprend à vous prêter attention pendant la promenade",
+    "Améliore la gestion générale du chien dans les espaces publics"
+  ],
+  "where": [
+    "🏠 Commencez à la maison ou dans le jardin avant de sortir",
+    "🛣️ Rue tranquille avec peu de distractions au début",
+    "🌳 Parc calme une fois des progrès stables obtenus"
+  ],
+  "materials": [
+    "🦮 Harnais en H ou Y (PAS de collier étrangleur, de picots ni électrique)",
+    "📏 Laisse fixe de 1,5–2 mètres (PAS extensible)",
+    "🫖 Friandises de haute valeur dans une poche accessible",
+    "💛 Patience : c'est un processus, pas une solution instantanée"
+  ],
+  "beforeYouStart": [
+    "Utilisez toujours un harnais de poitrine en H ou Y : il répartit la pression et protège le cou",
+    "N'utilisez JAMAIS de collier étrangleur, de collier à piques, électrique ou de type glissant",
+    "La laisse extensible ne convient pas à cet exercice : elle ne permet pas de donner des signaux clairs",
+    "Commencez les séances quand votre chien a peu d'énergie (après le jeu)",
+    "Ayez toujours des friandises à portée de main pendant l'entraînement"
+  ],
+  "methods": [
+    {
+      "id": "tree_and_direction",
+      "title": "Méthode de l'arbre + changements de direction (recommandé)",
+      "description": "Quand le chien tire, vous vous arrêtez comme un arbre jusqu'à ce que la laisse se détende. Quand la laisse est détendue, vous avancez. Vous changez de direction aléatoirement pour maintenir son attention sur vous.",
+      "bestFor": "Tous les chiens, surtout ceux qui ont déjà pris l'habitude de tirer",
+      "steps": [
+        {
+          "title": "Position de départ et signal de départ",
+          "description": "Le chien à votre côté (gauche ou droit, choisissez et gardez toujours le même). Dites « allons-y » ou « marche » comme signal de départ et commencez à marcher.",
+          "tip": "Gardez toujours le même côté. La cohérence est essentielle pour que le chien comprenne ce que vous attendez.",
+          "troubleshooting": "Si le chien tire dès le premier pas, arrêtez-vous comme un arbre avant même d'avoir commencé."
+        },
+        {
+          "title": "L'arbre : arrêtez-vous quand il tire",
+          "description": "Au moment exact où la laisse se tend, arrêtez-vous complètement. Pas de saccades, pas de cris, pas de mouvement. Attendez en silence que la laisse se détende.",
+          "tip": "L'arrêt doit être immédiat : le moindre délai déroute le chien.",
+          "troubleshooting": "S'il ne détend pas la laisse, faites un pas vers lui (sans saccade) pour créer du mou, puis attendez qu'il vous suive."
+        },
+        {
+          "title": "Récompensez la laisse détendue",
+          "description": "Dès que la laisse se détend (le chien vous regarde, se rapproche ou recule), dites « oui » avec une voix joyeuse et récompensez. Puis continuez à marcher.",
+          "tip": "Récompensez au moment exact où la laisse se détend, pas cinq secondes après."
+        },
+        {
+          "title": "Changement de direction",
+          "description": "De manière aléatoire, sans prévenir, faites demi-tour et marchez dans la direction opposée. Quand le chien vous suit et vous rejoint avec la laisse détendue, récompensez généreusement.",
+          "tip": "Les changements fréquents apprennent au chien que vous êtes imprévisible et qu'il doit rester attentif à vous.",
+          "troubleshooting": "Ne vous inquiétez pas si vous semblez tourner en rond au début. C'est normal et nécessaire."
+        },
+        {
+          "title": "Récompensez proactivement l'attention",
+          "description": "Quand votre chien vous regarde dans les yeux pendant la promenade (sans que vous le demandiez), récompensez immédiatement. Cela renforce l'idée que vous regarder est très rentable.",
+          "tip": "Le « check-in » volontaire est le meilleur signe que l'exercice fonctionne."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Utiliser un collier à la place d'un harnais",
+      "cause": "Habitude ou méconnaissance des dommages causés",
+      "fix": "Un collier avec un chien qui tire peut causer des lésions trachéales, vertébrales ou thyroïdiennes. Passez immédiatement à un harnais en H ou Y."
+    },
+    {
+      "error": "Céder et continuer à marcher quand le chien tire",
+      "cause": "Fatigue ou envie d'arriver à destination",
+      "fix": "Chaque fois que vous avancez pendant qu'il tire, vous renforcez le comportement. La cohérence est non négociable."
+    },
+    {
+      "error": "Donner des saccades sur la laisse pour corriger",
+      "cause": "Réaction instinctive",
+      "fix": "Les saccades créent un réflexe d'opposition (le chien tire encore plus). Arrêtez-vous sans bouger et attendez en silence."
+    },
+    {
+      "error": "Séances trop longues dans un environnement très stimulant",
+      "cause": "Vouloir progresser rapidement dans des contextes difficiles",
+      "fix": "Commencez par 5–10 minutes dans une rue tranquille. N'augmentez que quand le chien réussit régulièrement."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien tire dès la première seconde où nous sortons",
+      "solution": "Le seuil d'excitation est très élevé au départ. Pratiquez d'abord dans le couloir ou le porche de l'immeuble. Quand il est calme là, sortez dans la rue."
+    },
+    {
+      "problem": "Je m'arrête comme un arbre mais le chien ne détend jamais la laisse",
+      "solution": "Faites un pas vers le chien pour créer un peu de mou, attendez qu'il vous regarde et récompensez. Reprenez ensuite la marche."
+    },
+    {
+      "problem": "Ça marche bien dans une rue calme mais avec d'autres chiens, il tire énormément",
+      "solution": "Les autres chiens sont des distractions de niveau avancé. Augmentez la distance par rapport aux autres chiens jusqu'à pouvoir récompenser la laisse détendue, puis réduisez très lentement."
+    },
+    {
+      "problem": "Le chien semble comprendre mais paraît oublier le lendemain",
+      "solution": "C'est normal les premières semaines. La régularité quotidienne est plus efficace que des séances longues et occasionnelles. 10 minutes par jour surpassent 1 heure le samedi."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séances 1–3",
+      "goal": "Le chien associe la tension de la laisse à l'arrêt. S'arrête au moins 50 % du temps"
+    },
+    {
+      "stage": "Séances 4–7",
+      "goal": "Marche 10–20 pas consécutifs avec laisse détendue dans une rue calme"
+    },
+    {
+      "stage": "Séances 8–12",
+      "goal": "Propose des check-ins volontaires (vous regarde) pendant la promenade sans qu'on le demande"
+    },
+    {
+      "stage": "Mois 2+",
+      "goal": "Maintient la laisse détendue dans des environnements modérément stimulants (parc, rue passante)"
+    }
+  ],
+  "successSigns": [
+    "La laisse forme un U détendu pendant la plupart de la promenade",
+    "Le chien vous regarde spontanément sans qu'on le lui demande",
+    "S'arrête à vos côtés sans tirer quand vous vous arrêtez",
+    "Retrouve la laisse détendue en 2–3 secondes après une distraction"
+  ],
+  "variations": [
+    "Promenade avec virages fréquents dans une zone d'entraînement",
+    "« Au pied » formel : le chien collé à votre jambe gauche",
+    "Pause-reprise : arrêtez-vous 3 secondes toutes les 10 foulées et récompensez si le chien ne tire pas",
+    "Promenade avec une deuxième personne : le chien apprend à l'ignorer",
+    "Promenade avec un sac à dos pour chien (augmente naturellement la concentration)"
+  ],
+  "safetyNotes": [
+    "N'utilisez JAMAIS de collier étrangleur, à picots ou électrique : ils causent douleur et dommages physiques et comportementaux",
+    "Si votre chien a des problèmes de cou ou de trachée, consultez le vétérinaire avant de commencer",
+    "Par temps très chaud, limitez la séance à 5 minutes et évitez le bitume brûlant",
+    "Chiens très réactifs (qui aboient ou bondissent vers d'autres chiens) : cherchez l'aide d'un professionnel avant de travailler en rue"
+  ],
+  "funFact": "Les chiens tirent parce que marcher vite vers ce qui les intéresse a fonctionné toute leur vie. Ce n'est pas de la dominance ni de la mauvaise éducation : c'est simplement ce qui leur a toujours réussi. On leur apprend maintenant que la laisse détendue fonctionne encore mieux !",
+  "nextLevel": "Pratiquez dans des environnements plus stimulants : marchés, parcs animés, zones avec des chiens. Ensuite, introduisez le « au pied » formel pour une marche plus précise à votre côté.",
+  "proTip": "Quand votre chien propose un check-in volontaire (vous regarde sans y être invité pendant la promenade), récompensez-le comme s'il venait de gagner le gros lot. Ce moment d'attention spontanée est ce qui transforme une promenade en véritable travail d'équipe."
+}

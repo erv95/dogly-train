@@ -6,7 +6,7 @@ import {
   orderBy,
   limit,
 } from 'firebase/firestore';
-import { db } from '../config/firebase';
+import { db, auth } from '../config/firebase';
 import { CoinTransaction } from '../types';
 
 /**
@@ -37,12 +37,18 @@ export async function createCheckoutSession(
   userId: string,
   packageId: string
 ): Promise<string> {
-  // Cloud Function URL — will be set after deploying functions
   const CLOUD_FUNCTION_URL = 'https://us-central1-dogly-train.cloudfunctions.net/createCheckoutSession';
+
+  const user = auth.currentUser;
+  if (!user) throw new Error('Not authenticated');
+  const idToken = await user.getIdToken();
 
   const response = await fetch(CLOUD_FUNCTION_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${idToken}`,
+    },
     body: JSON.stringify({ userId, packageId }),
   });
 
@@ -55,20 +61,71 @@ export async function createCheckoutSession(
 }
 
 /**
+ * Request a PayPal order from Cloud Function.
+ * Returns the PayPal approval URL to redirect the user.
+ */
+export async function createPaypalOrder(
+  userId: string,
+  packageId: string
+): Promise<string> {
+  const CLOUD_FUNCTION_URL = 'https://us-central1-dogly-train.cloudfunctions.net/createPaypalOrder';
+
+  const user = auth.currentUser;
+  if (!user) throw new Error('Not authenticated');
+  const idToken = await user.getIdToken();
+
+  const response = await fetch(CLOUD_FUNCTION_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${idToken}`,
+    },
+    body: JSON.stringify({ userId, packageId }),
+  });
+
+  if (!response.ok) throw new Error('Failed to create PayPal order');
+  const data = await response.json();
+  return data.url;
+}
+
+/**
  * Request boost activation from Cloud Function.
  * Server checks balance, deducts coins, sets boostedUntil.
  */
 export async function activateBoost(userId: string): Promise<void> {
   const CLOUD_FUNCTION_URL = 'https://us-central1-dogly-train.cloudfunctions.net/activateBoost';
 
-  const response = await fetch(CLOUD_FUNCTION_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId }),
-  });
+  const user = auth.currentUser;
+  if (!user) throw new Error('unauthenticated');
+  const idToken = await user.getIdToken();
+
+  let response: Response;
+  try {
+    response = await fetch(CLOUD_FUNCTION_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${idToken}`,
+      },
+      body: JSON.stringify({ userId }),
+    });
+  } catch (err: any) {
+    // Network failure — request never reached the server (offline, DNS,
+    // captive portal, etc). Surface a distinct code so the UI can show a
+    // helpful message AND we know server logs won't have anything.
+    console.warn('activateBoost network error', err?.message ?? err);
+    throw new Error('network_error');
+  }
 
   if (!response.ok) {
-    const data = await response.json().catch(() => ({}));
-    throw new Error(data.error || 'Failed to activate boost');
+    let raw = '';
+    let code = 'boost_failed';
+    try {
+      raw = await response.text();
+      const data = JSON.parse(raw);
+      if (typeof data?.error === 'string') code = data.error;
+    } catch { /* not JSON */ }
+    console.warn('activateBoost failed', { status: response.status, code, body: raw.slice(0, 200) });
+    throw new Error(code);
   }
 }

@@ -1,0 +1,160 @@
+{
+  "title": "Dame la pata",
+  "subtitle": "El truco clásico que fortalece el vínculo y facilita el cuidado",
+  "level": "Intermedio",
+  "duration": "5–10 min por sesión",
+  "location": "Casa o jardín tranquilo",
+  "ageRecommendation": "Desde 12 semanas",
+  "estimatedSessions": "5–8 sesiones para dominar",
+  "objective": "Enseñar al perro a levantar una pata delantera y colocarla en la mano del guía cuando se da la orden “dame la pata”.",
+  "why": [
+    "Facilita el corte de uñas y revisiones veterinarias",
+    "Fortalece el vínculo entre perro y guía",
+    "Desarrolla la conciencia corporal del perro",
+    "Es la base para trucos más avanzados como “saluda” o “choca esos cinco”"
+  ],
+  "benefits": [
+    "Tu perro estará más tranquilo en la consulta veterinaria",
+    "Refuerza la confianza mutua de forma lúdica",
+    "Mejora la coordinación y el equilibrio del perro",
+    "Es un truco llamativo que deleita a toda la familia"
+  ],
+  "where": [
+    "🏠 En casa, en un suelo cómodo y antideslizante",
+    "🌿 En el jardín sobre hierba o suelo firme",
+    "🔇 Sin distracciones al principio"
+  ],
+  "materials": [
+    "🫖 Premios pequeños y muy apetecibles (pollo, queso)",
+    "🛏️ Superficie antideslizante o alfombra",
+    "✋ Tu mano abierta como señal de blanco",
+    "💛 Paciencia y sesiones cortas"
+  ],
+  "beforeYouStart": [
+    "Tu perro debe saber “sentado” con fluidez antes de empezar",
+    "Elige premios de alta motivación: este truco requiere algo especial",
+    "Asegúrate de que la superficie es antideslizante para que se sienta seguro",
+    "Sesiones de 5 minutos máximo para no cansar el perro",
+    "Trabaja siempre con la misma pata al principio (normalmente la derecha)"
+  ],
+  "methods": [
+    {
+      "id": "capture_touch",
+      "title": "Método de captura con toque suave (recomendado)",
+      "description": "Esperas a que el perro levante la pata de forma natural desde la posición sentado, ayudado por un ligero toque en el hombro, y premias ese movimiento.",
+      "bestFor": "Cachorros y perros de cualquier tamaño que ya saben sentarse",
+      "steps": [
+        {
+          "title": "Pide sentado y presenta la mano",
+          "description": "Pide a tu perro que se siente. Extiende tu mano abierta, palma hacia arriba, a la altura de su pecho. No digas nada más, solo espera.",
+          "tip": "La mano abierta es la señal visual. Mantén una postura relajada y expectante.",
+          "troubleshooting": "Si ignora tu mano, acércala un poco más a sus patas delanteras sin tocarle."
+        },
+        {
+          "title": "Toque suave en el hombro",
+          "description": "Si tras 5 segundos no levanta la pata, roza suavemente el hombro o la parte exterior de su pata delantera con un dedo. Muchos perros levantarán la pata por instinto.",
+          "tip": "El toque debe ser muy ligero, como un cosquilleo. No es un empuje.",
+          "troubleshooting": "Si se levanta del sentado, vuelve a pedirle que se siente y empieza de nuevo."
+        },
+        {
+          "title": "Captura el movimiento y premia",
+          "description": "En el momento exacto en que la pata se despega del suelo y toca tu mano, di “¡bien!” con voz alegre y dale el premio al instante.",
+          "tip": "El timing es todo. Premia la pata tocando tu mano, no antes ni después.",
+          "troubleshooting": "Si no toca tu mano, acepta primero cualquier elevación de pata y ve exigiendo más poco a poco."
+        },
+        {
+          "title": "Introduce la orden verbal",
+          "description": "Cuando levante la pata de forma consistente (7 de cada 10 veces), añade la frase “dame la pata” justo antes de extender tu mano.",
+          "tip": "Primero el gesto, luego la palabra. Nunca al revés hasta que el comportamiento sea estable.",
+          "troubleshooting": "Si parece confuso, elimina la palabra durante 2 sesiones y vuelve solo al gesto."
+        },
+        {
+          "title": "Reduce el toque y alarga el contacto",
+          "description": "Ve eliminando el toque en el hombro progresivamente. Luego empieza a cerrar suavemente la mano alrededor de su pata y mantén el contacto 2–3 segundos antes de premiar.",
+          "tip": "El objetivo final es que aguante la pata en tu mano hasta que tú la sueltes.",
+          "troubleshooting": "Si retira la pata muy rápido, vuelve a premiar con más frecuencia y aumenta el tiempo muy gradualmente."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Tomar la pata por la fuerza",
+      "cause": "Impaciencia cuando el perro no entiende qué se le pide",
+      "fix": "Nunca cojas la pata sin que el perro la ofrezca. Usa el toque suave y espera."
+    },
+    {
+      "error": "Premiar cuando la pata ya está bajando",
+      "cause": "Timing lento en la recompensa",
+      "fix": "Practica tu timing solo: lanza un premio al aire y cógelo en menos de 1 segundo."
+    },
+    {
+      "error": "Cambiar de pata en cada intento",
+      "cause": "Falta de consistencia",
+      "fix": "Trabaja siempre la misma pata durante las primeras semanas. Añade la otra después."
+    },
+    {
+      "error": "Pedir el truco sin que el perro esté sentado",
+      "cause": "Saltar pasos del aprendizaje",
+      "fix": "La posición sentado es imprescindible para este truco. Siempre parte de ahí."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro no levanta la pata aunque espero mucho tiempo",
+      "solution": "Prueba a sostener un premio en el puño cerrado frente a su pecho. Muchos perros intentan abrirlo con la pata."
+    },
+    {
+      "problem": "Levanta la pata pero no la coloca en mi mano",
+      "solution": "Acerca más tu mano a sus patas. La distancia correcta es que casi tenga que tocarla sin esfuerzo."
+    },
+    {
+      "problem": "Responde bien en casa pero no fuera",
+      "solution": "Normal. Practica primero en el jardín, luego en la calle tranquila. Aumenta el valor del premio en ambientes nuevos."
+    },
+    {
+      "problem": "Confunde “dame la pata” con “sentado”",
+      "solution": "Diferencia claramente la señal de mano: para sentado, señala hacia el suelo; para la pata, extiende la palma horizontalmente."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–2",
+      "goal": "El perro levanta la pata aunque sea un centímetro al ver tu mano o sentir el toque"
+    },
+    {
+      "stage": "Sesión 3–5",
+      "goal": "Coloca la pata en tu mano abierta al menos 6 de cada 10 veces"
+    },
+    {
+      "stage": "Sesión 6–7",
+      "goal": "Responde a la orden verbal “dame la pata” sin necesitar el toque en el hombro"
+    },
+    {
+      "stage": "Semana 3+",
+      "goal": "Mantiene la pata en tu mano 3–5 segundos hasta que la sueltas tú"
+    }
+  ],
+  "successSigns": [
+    "Levanta la pata nada más escuchar la orden",
+    "La coloca suavemente sobre tu mano sin rasguñar",
+    "Mantiene la posición sentado mientras ofrece la pata",
+    "Lo hace en diferentes lugares y con diferentes personas"
+  ],
+  "variations": [
+    "Dame la pata izquierda (añadir la otra pata)",
+    "Choca esos cinco (pata más alta, palma vertical)",
+    "Dame la pata sin orden verbal, solo con gesto",
+    "Dame la pata con el guía en cuclillas o de pie",
+    "Encadenar: sentado → dame la pata → quieto"
+  ],
+  "safetyNotes": [
+    "No insistas si tu perro muestra dolor al levantar la pata (posible problema articular)",
+    "Razas grandes o con displasia de cadera: sesiones más cortas y superficie muy suave",
+    "Nunca castigues si no lo hace; simplemente vuelve al paso anterior",
+    "Los cachorros menores de 16 semanas tienen huesos en desarrollo: no fuerces posturas"
+  ],
+  "funFact": "El truco de “dame la pata” es uno de los más antiguos documentados: aparece en grabados europeos del siglo XVII mostrando perros saludando a sus amos.",
+  "nextLevel": "Enseña la pata izquierda para que aprenda a distinguir las dos. Luego combina con “choca esos cinco” elevando la mano progresivamente.",
+  "proTip": "Si tu perro es muy reactivo a la mano cerca de su cara, empieza con el puño cerrado con premio dentro. Dejará de ver la mano como una amenaza y empezará a verla como una máquina expendedora."
+}

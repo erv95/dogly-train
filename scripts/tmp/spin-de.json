@@ -1,0 +1,158 @@
+{
+  "title": "Dreh dich (360°)",
+  "subtitle": "Der spektakulärste und einfachste Trick — eine komplette Drehung auf der Stelle!",
+  "level": "Mittelstufe",
+  "duration": "5–10 Min. pro Einheit",
+  "location": "Zuhause oder Garten",
+  "ageRecommendation": "Ab 4 Monaten",
+  "estimatedSessions": "5–8 Einheiten zum Beherrschen",
+  "objective": "Den Hund beibringen, sich auf Kommando um 360° im Kreis zu drehen, als Reaktion auf das Wort „dreh“ oder eine kreisförmige Handgeste.",
+  "why": [
+    "Einer der lustigsten und auffälligsten Tricks für die Öffentlichkeit",
+    "Verbessert das Körperbewusstsein und das Gleichgewicht",
+    "Kann in beide Richtungen gelehrt werden",
+    "Braucht kaum Platz und keinerlei Spezialausrüstung"
+  ],
+  "benefits": [
+    "Stimuliert den Hund geistig und bekämpft Langeweile",
+    "Verbessert Flexibilität und motorische Koordination",
+    "Kann als Aufwärmübung vor anderen Aktivitäten genutzt werden",
+    "Macht den Hund aufmerksamer und motivierter bei Trainingseinheiten"
+  ],
+  "where": [
+    "🏠 Drinnen, in jedem Raum mit genug Platz für die Drehung",
+    "🌿 Im Garten oder Park, wenn drinnen beherrscht",
+    "🔇 Immer am Anfang ohne Ablenkungen"
+  ],
+  "materials": [
+    "🫖 Kleine Leckerlis mit hohem Wert (Hühnchen, Käse)",
+    "🖐️ Eine Hand, um die Kreisbewegung zu führen",
+    "🛟 Flacher Untergrund ohne Hindernisse rundherum",
+    "💛 Begeisterung und mündliche Feier"
+  ],
+  "beforeYouStart": [
+    "Ihr Hund braucht keine Vorkenntnisse — das ist ein relativ einfacher Einstiegstrick",
+    "Achten Sie auf mindestens 1 Meter freien Platz um den Hund herum",
+    "Bereiten Sie 20 kleine Leckerlis pro Einheit vor",
+    "Entscheiden Sie von Anfang an, ob Sie zuerst rechts oder links lehren",
+    "Maximal 5–7 Minuten pro Einheit"
+  ],
+  "methods": [
+    {
+      "id": "lure_circle",
+      "title": "Methode mit kreisförmigem Lockfutter",
+      "description": "Führen Sie den Hund mit dem Leckerli, indem Sie einen langsamen horizontalen Kreis um seinen Körper beschreiben. Wenn er die Drehung abschließt, markieren und belohnen Sie. Dann das Lockfutter schrittweise reduzieren.",
+      "bestFor": "Jeder Hund ab 4 Monaten, besonders futterorientierte Hunde",
+      "steps": [
+        {
+          "title": "Leckerli an der Schnauze",
+          "description": "Mit dem Hund stehend vor Ihnen, halten Sie das Leckerli genau an seine Schnauze, um die Aufmerksamkeit zu gewinnen. Der Hund soll dem Leckerli mit dem Kopf folgen.",
+          "tip": "Wenn der Hund nach dem Leckerli springt, warten Sie, bis er ruhig ist.",
+          "troubleshooting": "Wenn der Hund kein Interesse am Leckerli zeigt, probieren Sie eines mit höherem Wert (Hühnchen, Wurst)."
+        },
+        {
+          "title": "Kreisbogen beginnen",
+          "description": "Bewegen Sie das Leckerli langsam zu einer Seite (z. B. zur rechten Seite des Hundes), dabei auf Schnauzhöhe halten. Der Hund dreht den Kopf, indem er dem Lockfutter folgt.",
+          "tip": "Die Bewegung muss langsam und kontinuierlich sein. Zu schnell und der Hund verliert den Faden.",
+          "troubleshooting": "Wenn der Hund sich setzt, starten Sie neu im Stehen mit dem Leckerli etwas höher."
+        },
+        {
+          "title": "Kreis vervollständigen",
+          "description": "Setzen Sie die Kreisbewegung um den Hundekörper fort, entlang des Rückens, dann des anderen Flanks, bis der Hund die 360° vollendet hat und Sie wieder anschaut.",
+          "tip": "Halten Sie das Leckerli die ganze Zeit auf Schnauzhöhe — nie höher oder tiefer."
+        },
+        {
+          "title": "Den Trick benennen",
+          "description": "Wenn der Hund den vollständigen Kreis abschließt, sagen Sie fröhlich „dreh“ und geben Sie das Leckerli sofort.",
+          "tip": "Sagen Sie „dreh“ nicht, bevor er es versucht — warten Sie auf die vollständige Bewegung und benennen Sie sie dann."
+        },
+        {
+          "title": "Lockfutter reduzieren",
+          "description": "Nach 5–6 Einheiten beginnen Sie, die Kreisbewegung ohne Leckerli in der Hand zu machen. Wenn der Hund dreht, belohnen Sie aus der Tasche. Schließlich nur noch Finger oder Stimme verwenden.",
+          "tip": "Das Lockfutter sehr schrittweise reduzieren: geschlossene Faust (kein sichtbares Leckerli), dann nur die Geste.",
+          "troubleshooting": "Wenn der Hund aufhört zu drehen ohne das Lockfutter, zwei Schritte zurückgehen und langsamer reduzieren."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Das Lockfutter zu schnell bewegen",
+      "cause": "Begeisterung, das Endergebnis zu sehen",
+      "fix": "Das Lockfutter muss sich im Tempo des Hundes bewegen. Wenn er den Faden verliert, langsamer neu beginnen."
+    },
+    {
+      "error": "„Dreh“ sagen, bevor der Hund sich zu bewegen beginnt",
+      "cause": "Das Signal soll dem Verhalten vorausgehen",
+      "fix": "Zuerst die vollständige Drehung mit dem Lockfutter erreichen. Das Wort erst hinzufügen, wenn es konsistent gelingt."
+    },
+    {
+      "error": "In der Mitte der Drehung belohnen statt am Ende",
+      "cause": "Zu früh feiern",
+      "fix": "Das Leckerli behalten, bis der Hund den vollständigen Kreis abgeschlossen hat und Sie wieder anschaut."
+    },
+    {
+      "error": "Beide Richtungen gleichzeitig beibringen",
+      "cause": "Schneller vorankommen wollen",
+      "fix": "Zuerst eine Richtung (z. B. rechts) über 3–4 Einheiten beherrschen, bevor die andere eingeführt wird."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Der Hund dreht sich nur halb und hält an",
+      "solution": "Die halbe Drehung zunächst belohnen (Shaping) und den Bogen von Einheit zu Einheit schrittweise bis auf 360° ausdehnen."
+    },
+    {
+      "problem": "Der Hund setzt sich während der Drehung",
+      "solution": "Das Lockfutter ist zu hoch. Das Leckerli während des gesamten Bogens auf Schnauzhöhe halten."
+    },
+    {
+      "problem": "Mein Hund dreht sich nicht in eine bestimmte Richtung",
+      "solution": "Normal — Hunde haben eine bevorzugte Seite. Die schwierige Seite in separaten Einheiten üben."
+    },
+    {
+      "problem": "Kann sich drehen, aber nur mit dem Lockfutter in der Hand",
+      "solution": "Mit geschlossener Faust beginnen (kein sichtbares Leckerli) und aus der Tasche belohnen. Die Gestengröße jede Woche reduzieren."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Einheiten 1–2",
+      "goal": "Der Hund folgt dem Lockfutter und vollführt mindestens eine halbe Drehung"
+    },
+    {
+      "stage": "Einheiten 3–5",
+      "goal": "Schließt die vollständige 360°-Drehung in 70% der Versuche ab"
+    },
+    {
+      "stage": "Einheiten 6–8",
+      "goal": "Reagiert auf „dreh“ mit reduziertem Lockfutter (geschlossene Faust)"
+    },
+    {
+      "stage": "Woche 3+",
+      "goal": "Vollständige Drehung nur mit der Stimme oder einer kleinen kreisförmigen Fingergeste"
+    }
+  ],
+  "successSigns": [
+    "Schließt die 360°-Drehung fließend und ohne Pause ab",
+    "Reagiert auf „dreh“, bevor er die Handgeste sieht",
+    "Kann sich rechts und links unter verschiedenen Signalen drehen",
+    "Macht es in verschiedenen Räumen und in Anwesenheit von Personen"
+  ],
+  "variations": [
+    "Rechts drehen auf ein Signal, links auf ein anderes",
+    "Zwei Drehungen hintereinander auf ein einziges Kommando",
+    "Drehen beim Gehen an Ihrer Seite",
+    "Drehen auf Distanz (ohne direkt davor zu stehen)",
+    "Drehen + Verbeugung für einen spektakulären Abschluss kombinieren"
+  ],
+  "safetyNotes": [
+    "Nicht auf rutschigen Untergründen üben — die Drehung erfordert Pivotieren auf den Hinterbeinen",
+    "Hunde mit Hüft- oder Knieproblemen: vor dem Erlernen dieses Tricks einen Tierarzt aufsuchen",
+    "Wenn der Hund Schwindelsymptome zeigt (seltsame Kopfbewegungen), mit halben Drehungen beginnen",
+    "Welpen unter 5 Monaten: sanfte Drehungen und sehr kurze Einheiten zum Schutz der Gelenke"
+  ],
+  "funFact": "Wenn ein Hund sich vor dem Hinlegen im Kreis dreht, folgt er einem uralten Instinkt, das Gras zu glätten und nach Gefahren zu suchen. Ihr Hund dreht sich bereits von Natur aus!",
+  "nextLevel": "Bringen Sie die Drehung in die entgegengesetzte Richtung mit einem anderen Wort bei. Dann kombinieren: „dreh rechts — dreh links“ in Folge. Das sieht aus wie eine Choreographie!",
+  "proTip": "Das Geheimnis liegt im Tempo des Lockfutters: nicht zu langsam (verliert das Interesse) und nicht zu schnell (verliert den Faden). Bewegen Sie die Hand im Tempo eines langsamen Walzers und Ihr Hund dreht sich perfekt."
+}

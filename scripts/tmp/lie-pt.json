@@ -1,0 +1,183 @@
+{
+  "title": "Deitar",
+  "subtitle": "O passo seguinte após aprender a sentar",
+  "level": "Muito básico",
+  "duration": "5–10 min por sessão",
+  "location": "Casa ou jardim tranquilo",
+  "ageRecommendation": "A partir das 10 semanas",
+  "estimatedSessions": "5–7 sessões para dominar",
+  "objective": "Ensinar o cão a deitar-se quando recebe o comando “deita-te”, mantendo a posição vários segundos.",
+  "why": [
+    "Acalmar o cão em momentos de excitação",
+    "Controlar situações em espaços públicos",
+    "Melhorar a obediência geral",
+    "É o passo natural depois de “sentado”"
+  ],
+  "benefits": [
+    "O seu cão relaxa em restaurantes, esplanadas ou visitas longas",
+    "Postura ideal para descanso prolongado e controlo de latidos",
+    "Base para ensinar “fica” durante minutos sem se mexer",
+    "Reduz a reatividade: um cão deitado não salta nem arremete"
+  ],
+  "where": [
+    "🏠 Em casa (chão confortável, tapete ou sala)",
+    "🌿 Jardim tranquilo",
+    "⛔ Evitar superfícies frias, duras ou escorregadias no início"
+  ],
+  "materials": [
+    "🫖 Petiscos pequenos e moles",
+    "🛏️ Tapete ou cama do cão (recomendado)",
+    "🦮 Trela curta (opcional)",
+    "💛 Paciência e voz tranquila"
+  ],
+  "beforeYouStart": [
+    "O seu cão já deve saber “sentado” com fluidez",
+    "Garanta que a superfície é confortável (não parquet frio)",
+    "Sessão depois de um passeio curto: cão ligeiramente cansado aprende melhor",
+    "Tenha pelo menos 15 petiscos pequenos preparados",
+    "Sessões de 5 minutos no máximo"
+  ],
+  "methods": [
+    {
+      "id": "lure_l",
+      "title": "Método do isco em L (recomendado)",
+      "description": "Guia o cão com o petisco formando um L: primeiro para baixo entre as suas patas, depois para a frente.",
+      "bestFor": "Cachorros e cães que já sabem sentar",
+      "steps": [
+        {
+          "title": "Posição inicial: sentado",
+          "description": "Peça ao seu cão para sentar. É o ponto de partida ideal porque as ancas já estão baixas.",
+          "tip": "Se não responde fluentemente a “sentado”, volte primeiro a esse curso.",
+          "troubleshooting": "Se quebra a posição sentado, peça-a calmamente sem ralhar."
+        },
+        {
+          "title": "Movimento para baixo",
+          "description": "Coloque o petisco no nariz e baixe-o lentamente até ao chão entre as patas dianteiras.",
+          "tip": "Movimento lento e contínuo, sem pausas.",
+          "troubleshooting": "Se se levantar, peça novamente “sentado” e recomece mais devagar."
+        },
+        {
+          "title": "Movimento para a frente",
+          "description": "Quando o petisco estiver no chão, deslize-o para a frente em linha reta. O cão estica o corpo e deita-se.",
+          "tip": "O movimento total desenha um L maiúsculo."
+        },
+        {
+          "title": "Introduza o comando",
+          "description": "Quando estiver completamente deitado (barriga a tocar o chão), diga claramente “deita-te”.",
+          "tip": "Só diga a palavra quando estiver completamente deitado, nunca a meio."
+        },
+        {
+          "title": "Recompensa e reforço",
+          "description": "Dê o petisco no instante, no chão entre as patas. Acompanhe com voz alegre.",
+          "tip": "Recompensar no chão reforça a posição e evita que se levante."
+        },
+        {
+          "title": "Aumente a duração",
+          "description": "Quando o fizer à primeira, espere 1 segundo antes de recompensar. Suba a 3, 5, 10 segundos progressivamente.",
+          "tip": "Se quebrar antes, volte ao tempo anterior."
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "title": "Método com plataforma elevada",
+      "description": "Usa um degrau ou almofada baixa: o cão fica meio elevado, facilitando que as patas dianteiras deslizem para a frente.",
+      "bestFor": "Cães grandes, ansiosos ou que não respondem ao isco",
+      "steps": [
+        {
+          "title": "Coloque o cão sobre uma almofada baixa",
+          "description": "Plataforma de 5–10 cm. Almofada firme, degrau baixo ou bloco de yoga.",
+          "tip": "A borda dianteira deve ficar livre."
+        },
+        {
+          "title": "Peça sentado sobre a plataforma",
+          "description": "O cão deve sentar-se em cima. Recompense.",
+          "tip": "Se não estiver à vontade, dedique alguns minutos para o familiarizar."
+        },
+        {
+          "title": "Atraia para a frente",
+          "description": "Com um petisco, atraia as patas dianteiras para a frente (fora da plataforma). Cairá naturalmente em deitado.",
+          "tip": "O truque: a plataforma elevada torna o deitar fisicamente mais fácil."
+        },
+        {
+          "title": "Marque e recompense",
+          "description": "Mal esteja totalmente deitado, diga “deita-te” e recompense.",
+          "tip": "Repita até associar a palavra."
+        },
+        {
+          "title": "Retire a plataforma",
+          "description": "Após 5–10 sessões, prove em chão plano. Deve funcionar igual.",
+          "tip": "Se não funcionar, volte à plataforma 2–3 sessões mais."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Empurrar o cão para baixo com a mão sobre o lombo",
+      "cause": "Frustração quando o isco não funciona à primeira",
+      "fix": "Nunca use força física. Melhore o movimento do isco ou use a plataforma."
+    },
+    {
+      "error": "Recompensar antes de estar completamente deitado",
+      "cause": "Antecipar o sucesso",
+      "fix": "Espere ver barriga e cotovelos no chão antes de recompensar."
+    },
+    {
+      "error": "Praticar em superfícies frias ou escorregadias",
+      "cause": "Falta de planeamento do ambiente",
+      "fix": "Use sempre tapete, cama ou alcatifa. O cão evita por instinto deitar-se em frio/duro."
+    },
+    {
+      "error": "Saltar “sentado” como base",
+      "cause": "Querer atalhos",
+      "fix": "“Sentado” fluente é pré-requisito. Se não o domina, ainda não peça deitado."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Segue o petisco com o nariz mas não baixa o corpo",
+      "solution": "Está a mover o petisco demasiado rápido ou longe. Mantenha-o colado ao chão e mova muito devagar para a frente."
+    },
+    {
+      "problem": "Deita-se mas levanta-se imediatamente",
+      "solution": "É normal no início. Recompense mais rápido (em menos de 1 segundo) e aumente gradualmente a duração."
+    },
+    {
+      "problem": "Faz uma pose “esfinge” mas não se deita lateralmente",
+      "solution": "A esfinge é válida e suficiente. A forma lateral é mais relaxada mas não necessária."
+    },
+    {
+      "problem": "O meu cão grande/idoso resiste",
+      "solution": "Pode ser dor articular. Consulte o veterinário. Entretanto, use uma superfície bem almofadada."
+    }
+  ],
+  "progressMilestones": [
+    { "stage": "Sessão 1–2", "goal": "Segue o petisco até ao chão e dobra as patas dianteiras" },
+    { "stage": "Sessão 3–5", "goal": "Deita-se completamente com o isco em 60% das tentativas" },
+    { "stage": "Sessão 6–7", "goal": "Deita-se com a palavra “deita-te” sem precisar do isco" },
+    { "stage": "Semana 2–3", "goal": "Mantém a posição 30 segundos antes de recompensar" }
+  ],
+  "successSigns": [
+    "Deita-se ao ouvir o comando, sem isco visível",
+    "Fá-lo em diferentes lugares e posições",
+    "Mantém a posição mais de 10 segundos",
+    "Volta a deitar-se se quebrar a posição quando lhe é pedido novamente"
+  ],
+  "variations": [
+    "Deitado à distância (1–2 metros)",
+    "Deitado lateral completo (de lado, não esfinge)",
+    "Deitado durante o seu pequeno-almoço enquanto come",
+    "Deitado apenas com gesto da mão para baixo",
+    "Deitado após um sentado em cadeia (combinar comandos)"
+  ],
+  "safetyNotes": [
+    "Se o seu cão mostra dor ou estalidos ao deitar, consulte o veterinário antes de continuar",
+    "Raças grandes (Mastins, Grandes Dinamarqueses) podem demorar mais",
+    "Nunca obrigue fisicamente: pode gerar medo e rejeição do comando",
+    "Cachorros com menos de 14 semanas: 3 minutos no máximo por sessão"
+  ],
+  "funFact": "Os cães só se deitam de lado quando se sentem 100% seguros. Se o seu o faz consigo, é sinal de profunda confiança.",
+  "nextLevel": "Aumentar o tempo deitado para 1–2 minutos. Praticar com distrações e em espaços públicos. Depois introduzir “fica”.",
+  "proTip": "Se o seu cão não se deita, volte a “sentado” e repita mais devagar. Atire sempre o petisco ao chão entre as patas, nunca da mão: isto reforça permanecer deitado."
+}

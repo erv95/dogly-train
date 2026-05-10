@@ -1,0 +1,159 @@
+{
+  "title": "Roll Over",
+  "subtitle": "The most impressive trick — a complete flip from the ground up!",
+  "level": "Advanced",
+  "duration": "5–10 min per session",
+  "location": "Indoors (soft surface)",
+  "ageRecommendation": "From 8 months",
+  "estimatedSessions": "10–15 sessions to master",
+  "objective": "Teach the dog to roll a full 360° from the down position, passing through the side and returning to the down position, responding to the cue “roll over”.",
+  "why": [
+    "It's the most spectacular trick in the basic repertoire — always surprises and delights",
+    "Requires the dog to fully trust its owner to expose itself in a vulnerable position",
+    "Improves flexibility, body awareness, and coordination",
+    "Demonstrates the highest level of communication and understanding between dog and owner"
+  ],
+  "benefits": [
+    "Builds the bond and trust in an extraordinary way",
+    "Excellent physical exercise for the flexibility of the spine and flanks",
+    "Once mastered, the dog performs it smoothly and elegantly",
+    "The starting point for more complex performance tricks"
+  ],
+  "where": [
+    "🏠 Exclusively indoors on a very soft surface at first",
+    "🛏️ Thick rug, folded blanket, or yoga mat — essential",
+    "⛔ Never on hard, cold, or slippery floors — the dog must feel comfortable in the side-lying position"
+  ],
+  "materials": [
+    "🫖 Maximum-value treats (cooked chicken, strong cheese, sausage)",
+    "🛟 Yoga mat, thick rug, or folded blanket",
+    "🖐️ Your hand to guide the lure",
+    "💛 Extra patience — this trick is learned phase by phase, not all at once"
+  ],
+  "beforeYouStart": [
+    "Your dog must master “down” very reliably — it is the mandatory starting point",
+    "Use the softest, most comfortable surface you have: blanket, mat, or thick rug",
+    "Bring the highest-value treats — this trick is demanding and deserves the best reward",
+    "Work in phases: don't attempt the full roll on the first day",
+    "Maximum 5-minute sessions — the trick requires significant physical and mental effort"
+  ],
+  "methods": [
+    {
+      "id": "lure_over_shoulder",
+      "title": "Over-the-shoulder lure method",
+      "description": "From the down position, guide the lure toward the dog's shoulder so it turns its head, then the body follows through to complete the roll. Work phase by phase: head turn → shoulder on floor → full roll.",
+      "bestFor": "Dogs that master the down and have good trust with their owner",
+      "steps": [
+        {
+          "title": "Ask for down on the mat",
+          "description": "Cue “down” on the soft surface. The dog should be completely relaxed, with elbows and chest on the floor.",
+          "tip": "Wait until it is genuinely comfortable before continuing. A tense dog will not roll well.",
+          "troubleshooting": "If the dog gets up when it sees the treat, first work on maintaining the down with distractions."
+        },
+        {
+          "title": "Guide the head toward the shoulder — Phase 1",
+          "description": "With the treat at its nose, move it slowly toward the shoulder on the side you want it to roll. The dog will turn its head following the lure. Mark and reward the head turn only.",
+          "tip": "Reward this phase generously for 3–4 sessions. Don't move on until it happens naturally.",
+          "troubleshooting": "If the dog gets up instead of turning its head, restart the down and go slower."
+        },
+        {
+          "title": "Shoulder touches the floor — Phase 2",
+          "description": "Continue guiding the treat past the shoulder, toward the floor on the opposite side. The body will follow the head and the shoulder will touch the floor. The dog is now in the full side-lying position. Mark and reward.",
+          "tip": "This is the hardest phase because the dog exposes itself in a vulnerable position. Use the highest-value treat.",
+          "troubleshooting": "If the dog resists going onto its side, slow the lure down and reward every small bit of progress."
+        },
+        {
+          "title": "Body completes the roll — Phase 3",
+          "description": "With the dog on its side, continue the arc of the lure over the back toward the other side. The dog will roll through, completing 360° and landing back in the normal down position. Mark and celebrate enthusiastically.",
+          "tip": "When the dog completes the full roll for the first time, celebrate as if it's the best thing you've ever seen.",
+          "troubleshooting": "If the dog only gets halfway, reward there and extend a little more each session."
+        },
+        {
+          "title": "Name the trick and fade the lure",
+          "description": "When the full roll is consistent, say “roll over” just before starting the lure. Gradually reduce the gesture until the dog rolls with just the voice or a small wrist rotation.",
+          "tip": "Fade the lure very gradually: visible treat → closed fist → gesture only → voice only.",
+          "troubleshooting": "If the dog stops rolling when you reduce the lure, go back to the full lure and fade more slowly."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Attempting the full roll from the very first session",
+      "cause": "Wanting to see the final result too soon",
+      "fix": "Work in phases. Spend at least 3–4 sessions on each phase before moving on."
+    },
+    {
+      "error": "Moving the lure too fast and losing the dog halfway",
+      "cause": "Lure moving faster than the dog can follow",
+      "fix": "The lure must move at the dog's pace. If the dog gets up, you're going too fast."
+    },
+    {
+      "error": "Practicing on a hard or cold floor",
+      "cause": "Not preparing the environment properly",
+      "fix": "A soft surface is non-negotiable. The dog needs to feel comfortable in the side-lying position."
+    },
+    {
+      "error": "Forcing the dog onto its side with your hand",
+      "cause": "Frustration when the lure is not working",
+      "fix": "Never use physical force. If the lure isn't working, use a higher-value treat or return to the previous phase."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The dog turns its head but not its body",
+      "solution": "You're in Phase 1 — this is normal. Keep rewarding only the head turn until it's automatic. The body will follow naturally after."
+    },
+    {
+      "problem": "The dog gets up every time the lure approaches the shoulder",
+      "solution": "Work on maintaining the down with more distractions first. The dog needs more confidence in holding the position."
+    },
+    {
+      "problem": "The dog makes it to the side but won't complete the roll",
+      "solution": "Reward the side position generously for several sessions. Then guide the lure 10° further each time."
+    },
+    {
+      "problem": "My dog only rolls in one direction",
+      "solution": "This is normal and valid. Many dogs prefer one side. Consolidate that side well before attempting the other direction."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessions 1–4",
+      "goal": "Turns its head toward the shoulder following the lure from the down position"
+    },
+    {
+      "stage": "Sessions 5–8",
+      "goal": "Shoulder touches the floor and the dog reaches the full side-lying position"
+    },
+    {
+      "stage": "Sessions 9–12",
+      "goal": "Completes the full 360° roll following the lure"
+    },
+    {
+      "stage": "Week 4+",
+      "goal": "Responds to “roll over” with a reduced lure or voice only"
+    }
+  ],
+  "successSigns": [
+    "Completes the full 360° roll smoothly without pausing in the side position",
+    "Ends in the down position and looks at the owner waiting for the reward",
+    "Responds to the verbal cue without needing the full lure",
+    "Does it on different soft surfaces (rug, blanket, mat)"
+  ],
+  "variations": [
+    "Roll over to the other direction",
+    "Two rolls in a row on a single cue",
+    "Slow, controlled roll (harder than a fast one)",
+    "Chain down → roll over → sit for a smooth sequence"
+  ],
+  "safetyNotes": [
+    "Never practice with dogs with back, hip, or dysplasia issues without consulting a vet",
+    "Never force the dog onto its side — if it doesn't do it voluntarily, it's not ready",
+    "Dogs over 8 years: consult a vet before teaching this trick",
+    "If the dog shows stiffness, discomfort, or avoids the side-lying position, stop and observe for 48 hours"
+  ],
+  "funFact": "Dogs show their belly as the ultimate signal of trust and appeasement. When your dog rolls over for you, it's saying it feels completely safe in your presence.",
+  "nextLevel": "Chain: down → roll over → sit → high five. Four tricks in a row that will leave everyone speechless!",
+  "proTip": "Always work in the direction the dog naturally chooses at first. Once that side is mastered, the opposite side will come much more easily."
+}

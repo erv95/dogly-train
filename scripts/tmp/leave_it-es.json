@@ -1,0 +1,186 @@
+{
+  "title": "Déjalo",
+  "subtitle": "El comando de seguridad más importante que puede aprender tu perro",
+  "level": "Básico",
+  "duration": "5–10 min por sesión",
+  "location": "Casa o jardín tranquilo",
+  "ageRecommendation": "Desde 8 semanas",
+  "estimatedSessions": "5–8 sesiones para dominar",
+  "objective": "Enseñar al perro a ignorar cualquier objeto en el suelo o en tu mano cuando escucha la señal 'déjalo', protegiéndolo de ingerir cosas peligrosas.",
+  "why": [
+    "Protege al perro de comer alimentos peligrosos, basura o tóxicos en la calle",
+    "Controla impulsos ante objetos tentadores sin necesidad de jalones",
+    "Refuerza la confianza entre perro y dueño al aprender el autocontrol",
+    "Es la base para mejorar la conducta de exploración en ambientes nuevos"
+  ],
+  "benefits": [
+    "Tu perro ignora comida caída al suelo antes de que puedas recogerla",
+    "Evita peleas con otros perros por recursos u objetos",
+    "Reduce el riesgo de intoxicaciones accidentales en paseos",
+    "Desarrolla el autocontrol como habilidad transferible a otras situaciones"
+  ],
+  "where": [
+    "🏠 Empieza en casa, en una habitación sin distracciones",
+    "🌿 Progresa al jardín o terraza cuando lo domine en interior",
+    "🛣️ Finalmente practica en la calle con distracciones reales"
+  ],
+  "materials": [
+    "🫖 Dos tipos de premios: uno de bajo valor (pienso) y otro de alto valor (pollo, queso)",
+    "✋ Tus manos como 'escondite' del premio",
+    "🦮 Correa larga (opcional para práctica al aire libre)",
+    "💛 Paciencia y mucha calma"
+  ],
+  "beforeYouStart": [
+    "Ten preparados dos tipos de premios: el que vas a ofrecer para 'tentarlo' y otro mejor para recompensar",
+    "Asegúrate de que tu perro tiene un nivel mínimo de atención contigo",
+    "Practica primero sin correa en casa antes de pasar a la calle",
+    "Sesiones de máximo 5 minutos para no saturar al perro",
+    "No practiques si el perro está muy hambriento o muy excitado"
+  ],
+  "methods": [
+    {
+      "id": "closed_fist",
+      "title": "Método del puño cerrado (recomendado para empezar)",
+      "description": "Ocultas un premio en tu mano cerrada, el perro intenta conseguirlo y cuando retrocede, lo recompensas con un premio diferente y mejor. Enseña que ignorar = ganar algo mejor.",
+      "bestFor": "Cachorros y perros sin experiencia previa con el comando",
+      "steps": [
+        {
+          "title": "Prepara el puño",
+          "description": "Pon un premio de bajo valor en tu mano y ciérrala en puño. Ofrece el puño cerrado al perro a la altura de su nariz.",
+          "tip": "Usa un premio de poco valor aquí (pienso normal), el premio bueno va en la otra mano o en tu bolsillo.",
+          "troubleshooting": "Si el perro ladra o araña con intensidad, aguanta quieto. No retires la mano ni le regañes."
+        },
+        {
+          "title": "Observa y espera",
+          "description": "El perro olerá, lamará y empujará tu puño intentando conseguir el premio. No abras la mano. Espera en silencio.",
+          "tip": "La clave es la paciencia. Puede tardar de 10 segundos a 2 minutos la primera vez.",
+          "troubleshooting": "Si se aburre y se va, redúcelo: usa una estrategia aún más tentadora acercando el olor pero sin recompensar hasta el retroceso."
+        },
+        {
+          "title": "Captura el alejamiento",
+          "description": "En el momento en que el perro retire la nariz del puño (aunque sea un centímetro), di 'déjalo' y premia INMEDIATAMENTE con el premio bueno de tu otra mano.",
+          "tip": "El timing es crítico: el premio debe llegar en menos de 2 segundos desde que se aleja."
+        },
+        {
+          "title": "Repite y aumenta la dificultad",
+          "description": "Repite 5–8 veces por sesión. Cuando lo haga de forma fluida, empieza a añadir un objeto en el suelo cubierto por tu pie.",
+          "tip": "Aumenta la dificultad gradualmente: puño → suelo cubierto → suelo visible → calle."
+        },
+        {
+          "title": "Generaliza el comando",
+          "description": "Una vez que lo hace con tu puño, práctica con objetos en el suelo, comida caída y luego en exteriores con distracciones reales.",
+          "tip": "En cada nuevo entorno, vuelve al nivel más fácil antes de aumentar la dificultad."
+        }
+      ]
+    },
+    {
+      "id": "ground_progression",
+      "title": "Método de progresión en el suelo",
+      "description": "Empiezas con el premio tapado por tu pie y poco a poco lo vas descubriendo mientras el perro aprende a resistir la tentación. Ideal para consolidar el comando.",
+      "bestFor": "Perros que ya entienden el concepto básico del puño o con mayor impulso",
+      "steps": [
+        {
+          "title": "Premio bajo el pie",
+          "description": "Coloca un premio en el suelo y cúbrelo completamente con la punta de tu pie. Permite que el perro lo olfatee alrededor de tu pie.",
+          "tip": "Tu pie debe cubrir completamente el premio para que no pueda robarlo.",
+          "troubleshooting": "Si rasca el suelo con mucha fuerza, no reacciones. Espera quieto hasta que se aleje."
+        },
+        {
+          "title": "Di 'déjalo' y espera",
+          "description": "Cuando el perro se retire aunque sea ligeramente de tu pie, di 'déjalo' con calma y premia con un premio de tu mano (no el del suelo).",
+          "tip": "Nunca recompenses con el premio del suelo: el perro debe aprender que 'déjalo' significa 'ese premio no es tuyo, pero ganas uno mejor'."
+        },
+        {
+          "title": "Descubre progresivamente",
+          "description": "Cuando el perro espere sin intentar coger el premio del suelo, mueve muy poco el pie dejando ver una parte pequeña del premio. Repite el comando.",
+          "tip": "Si se lanza, vuelve a cubrir con el pie. Sin regañar, simplemente reinicia."
+        },
+        {
+          "title": "Premio completamente visible",
+          "description": "El objetivo final es que el perro pueda ver el premio en el suelo y lo ignore al escuchar 'déjalo', mirándote a ti en espera de la recompensa.",
+          "tip": "Este paso puede requerir 3–5 sesiones adicionales. No tengas prisa."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Repetir 'déjalo' múltiples veces seguidas",
+      "cause": "Frustración del dueño cuando el perro no reacciona al primer intento",
+      "fix": "Di el comando UNA sola vez y espera en silencio. Repetirlo enseña al perro a ignorarlo."
+    },
+    {
+      "error": "Recompensar con el objeto que se le dijo que dejara",
+      "cause": "Querer premiar con lo más a mano",
+      "fix": "Siempre recompensa con un premio DIFERENTE y de mayor valor. El objeto prohibido nunca debe ser la recompensa."
+    },
+    {
+      "error": "Usar el comando en situaciones de peligro real sin haberlo entrenado antes",
+      "cause": "Asumir que el perro ya lo sabe sin práctica sistemática",
+      "fix": "Practica en casa primero, semanas antes de necesitarlo en la calle. En emergencias reales, coge al perro directamente."
+    },
+    {
+      "error": "Regañar al perro cuando coge el objeto",
+      "cause": "Reacción impulsiva de frustración",
+      "fix": "Nunca castigues. Si lo cogió, es que el entrenamiento necesita más pasos previos. Vuelve al nivel anterior."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mi perro coge el premio antes de que pueda decir 'déjalo'",
+      "solution": "El objeto está demasiado accesible. Vuelve al puño cerrado y asegúrate de controlar el acceso antes de avanzar."
+    },
+    {
+      "problem": "Hace 'déjalo' en casa pero en la calle no funciona",
+      "solution": "Normal: la calle tiene más estímulos. Vuelve a empezar el entrenamiento en exteriores desde el paso más fácil, con menos distracciones primero."
+    },
+    {
+      "problem": "Mi perro se frustra y ladra cuando le digo 'déjalo'",
+      "solution": "El impulso es alto. Practica en sesiones más cortas (2–3 minutos) con premios de mayor valor para la recompensa y reduce el valor del objeto prohibido."
+    },
+    {
+      "problem": "Lo hace bien con comida pero no con objetos (calcetines, juguetes)",
+      "solution": "Son categorías distintas para el perro. Entrena específicamente con cada tipo de objeto, empezando por los de menor valor para él."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sesión 1–2",
+      "goal": "El perro retira la nariz del puño cerrado al menos una vez en la sesión"
+    },
+    {
+      "stage": "Sesión 3–5",
+      "goal": "Ignora el puño en 7 de cada 10 intentos y empieza a mirarte buscando el premio bueno"
+    },
+    {
+      "stage": "Semana 2",
+      "goal": "Ignora un premio visible en el suelo tapado por el pie al escuchar 'déjalo'"
+    },
+    {
+      "stage": "Semana 3–4",
+      "goal": "Ignora objetos en el suelo sin que el pie los cubra, en casa y en el jardín"
+    }
+  ],
+  "successSigns": [
+    "Se aleja del objeto y te mira espontáneamente al escuchar 'déjalo'",
+    "Funciona con diferentes tipos de objetos (comida, juguetes, basura)",
+    "Lo hace en exteriores con distracciones moderadas",
+    "Mantiene la distancia del objeto durante 5 o más segundos"
+  ],
+  "variations": [
+    "Déjalo con comida en la palma de tu mano abierta (nivel avanzado)",
+    "Déjalo con otro perro como distractor",
+    "Déjalo con un objeto tirado repentinamente al suelo",
+    "Déjalo mientras caminas (sin detenerte)",
+    "Déjalo con tiempo de espera antes de recibir el premio alternativo"
+  ],
+  "safetyNotes": [
+    "En situaciones de peligro real (tóxico, cristal) no dependas del comando: actúa directamente",
+    "Nunca uses castigo físico ni verbal cuando el perro falle: reinicia el ejercicio",
+    "Asegúrate de que los premios de recompensa no sean tóxicos para perros (sin xilitol, uvas, cebolla)",
+    "Si el perro muestra guardia de recursos o gruñidos al acercarte al objeto, consulta a un etólogo antes de continuar"
+  ],
+  "funFact": "Los perros que aprenden 'déjalo' en las primeras semanas de vida tienen hasta un 40% menos de visitas al veterinario por ingestión de objetos extraños.",
+  "nextLevel": "Practica 'déjalo' en movimiento durante el paseo. Después introduce 'déjalo' con otros perros o animales como distractor.",
+  "proTip": "El secreto de 'déjalo' es que el perro aprenda que ignorar algo siempre produce algo mejor. Nunca escatimes en la calidad del premio de recompensa: debe ser claramente superior al objeto prohibido."
+}

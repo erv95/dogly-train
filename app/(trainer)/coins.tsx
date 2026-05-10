@@ -12,9 +12,14 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../src/config/firebase';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { getTransactionHistory, activateBoost } from '../../src/services/coins';
+import { User } from '../../src/types';
 import { Card, Button } from '../../src/components/ui';
+import { Confetti } from '../../src/components/Confetti';
+import { useHaptics } from '../../src/hooks/useHaptics';
 import { colors, spacing, fontSize, borderRadius, BOOST_COST } from '../../src/theme';
 import { TrainerProfile, CoinTransaction } from '../../src/types';
 
@@ -36,10 +41,12 @@ export default function CoinsScreen() {
   const router = useRouter();
   const trainer = userData as TrainerProfile | null;
 
+  const haptics = useHaptics();
   const [transactions, setTransactions] = useState<CoinTransaction[]>([]);
   const [loading, setLoading] = useState(true);
   const [boostLoading, setBoostLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
+  const [confetti, setConfetti] = useState(false);
 
   const boostTime = getBoostTimeRemaining(trainer?.boostedUntil);
   const isBoosted = boostTime !== null;
@@ -82,15 +89,24 @@ export default function CoinsScreen() {
             setBoostLoading(true);
             try {
               await activateBoost(firebaseUser.uid);
-              // Optimistic update
-              setUserData({
-                ...userData!,
-                coinBalance: (trainer.coinBalance ?? 0) - BOOST_COST,
-              } as any);
+              // Refetch from server — single source of truth (no client-side math drift)
+              const fresh = await getDoc(doc(db, 'users', firebaseUser.uid));
+              if (fresh.exists()) {
+                setUserData({ id: fresh.id, ...fresh.data() } as User);
+              }
+              haptics.success();
+              setConfetti(true);
               Alert.alert(t('common.ok'), t('trainer.boostActive'));
               loadTransactions();
             } catch (error: any) {
-              Alert.alert(t('common.error'), error.message || t('authErrors.generic'));
+              haptics.error();
+              const code = (error?.message ?? 'boost_failed') as string;
+              // Map known server codes to localized strings; fall back to a
+              // generic message + log so we can debug unexpected codes.
+              const msg = t(`coins.boostErrors.${code}`, {
+                defaultValue: t('coins.boostErrors.boost_failed'),
+              });
+              Alert.alert(t('common.error'), msg);
             } finally {
               setBoostLoading(false);
             }
@@ -117,6 +133,7 @@ export default function CoinsScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Confetti trigger={confetti} onDone={() => setConfetti(false)} />
       <ScrollView
         contentContainerStyle={styles.scrollContent}
         refreshControl={
@@ -213,6 +230,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: colors.text,
     marginBottom: spacing.lg,
+    textAlign: 'center',
   },
   balanceCard: {
     alignItems: 'center',

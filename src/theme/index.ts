@@ -98,3 +98,8 @@ export const COIN_PACKAGES = [
 
 export const BOOST_COST = 20; // coins
 export const BOOST_DURATION_HOURS = 24;
+
+// Premium (remove ads) — one-time purchase
+export const PREMIUM_PRICE_EUR = 9.95;
+export const PREMIUM_PRICE_CENTS = 995; // for Stripe
+export const PREMIUM_CURRENCY = 'EUR';

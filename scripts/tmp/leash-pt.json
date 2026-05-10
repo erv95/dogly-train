@@ -1,0 +1,158 @@
+{
+  "title": "Andar com trela sem puxar",
+  "subtitle": "Passeios agradáveis para si e o seu cão sem tensão na trela",
+  "level": "Básico",
+  "duration": "10–15 min por sessão",
+  "location": "Rua sossegada, passeio ou parque",
+  "ageRecommendation": "A partir das 10 semanas",
+  "estimatedSessions": "10–15 sessões para obter consistência",
+  "objective": "Ensinar o cão a caminhar ao lado do dono sem tensionar a trela, usando o método da árvore e as mudanças de direção com reforço positivo.",
+  "why": [
+    "Um cão que puxa torna os passeios extenuantes e perigosos para o dono",
+    "A tensão constante na trela pode lesionar o pescoço e a traqueia do cão",
+    "Andar sem puxar melhora a relação e a confiança mútua",
+    "Base para avançar para o trabalho sem trela em espaços seguros"
+  ],
+  "benefits": [
+    "Os passeios tornam-se relaxantes e agradáveis para toda a família",
+    "Reduz o risco de quedas ou lesões, especialmente com cães grandes",
+    "O seu cão aprende a prestar atenção a si durante o passeio",
+    "Melhora a gestão geral do cão em espaços públicos"
+  ],
+  "where": [
+    "🏠 Comece em casa ou no jardim antes de sair para a rua",
+    "🛣️ Rua sossegada com poucas distrações no início",
+    "🌳 Parque tranquilo assim que houver progresso estável"
+  ],
+  "materials": [
+    "🦮 Peitoral em H ou Y (NÃO coleira de enforcamento, de pontas ou elétrica)",
+    "📏 Trela fixa de 1,5–2 metros (NÃO extensível)",
+    "🫖 Petiscos de alto valor em bolso de fácil acesso",
+    "💛 Paciência: é um processo, não uma solução imediata"
+  ],
+  "beforeYouStart": [
+    "Use sempre peitoral de peito em H ou Y: distribui a pressão e protege o pescoço",
+    "NUNCA use coleira de enforcamento, de pontas, elétrica ou slip lead",
+    "A trela extensível não serve para este exercício: não permite dar sinais claros",
+    "Comece as sessões em momentos de baixa energia do cão (depois do jogo)",
+    "Tenha petiscos sempre à mão durante o treino"
+  ],
+  "methods": [
+    {
+      "id": "tree_and_direction",
+      "title": "Método da árvore + mudança de direção (recomendado)",
+      "description": "Quando o cão puxa, para como uma árvore até a trela afrouxar. Quando a trela está frouxa, avança. Muda de direção aleatoriamente para manter a atenção dele em si.",
+      "bestFor": "Todos os cães, especialmente os que já têm hábito de puxar",
+      "steps": [
+        {
+          "title": "Posição de partida e sinal de início",
+          "description": "O cão ao seu lado (esquerdo ou direito — escolha um e mantenha sempre o mesmo). Diga 'vamos' ou 'passeio' como sinal de início e comece a caminhar.",
+          "tip": "Defina sempre o mesmo lado. A consistência é fundamental para que o cão perceba o que se espera.",
+          "troubleshooting": "Se o cão arrancar a puxar desde o primeiro passo, pare como árvore antes mesmo de dar o primeiro passo."
+        },
+        {
+          "title": "Árvore: pare quando ele puxar",
+          "description": "No momento exato em que a trela se tensa, pare completamente. Sem puxões, sem gritos, sem movimento. Aguarde em silêncio até a trela afrouxar.",
+          "tip": "A paragem deve ser imediata: qualquer atraso confunde o cão.",
+          "troubleshooting": "Se não afrouxar a trela, dê um passo em direção a ele (sem puxar) para criar folga, depois aguarde que ele o siga."
+        },
+        {
+          "title": "Recompense a trela frouxa",
+          "description": "Assim que a trela afrouxa (o cão olha para si, aproxima-se ou simplesmente recua), diga 'sim' com voz alegre e recompense. Depois continue a caminhar.",
+          "tip": "Recompense o momento exato em que a trela afrouxa, não cinco segundos depois."
+        },
+        {
+          "title": "Mudança de direção",
+          "description": "Aleatoriamente, sem avisar, meia volta e caminhe na direção oposta. Quando o cão o seguir e o alcançar com trela frouxa, recompense generosamente.",
+          "tip": "As mudanças frequentes ensinam o cão que é imprevisível e que deve estar atento a si.",
+          "troubleshooting": "Não se preocupe se no início parecer que está a andar em círculos. É normal e necessário."
+        },
+        {
+          "title": "Recompense proativamente a atenção",
+          "description": "Quando o cão olhar para si durante o passeio (sem que o tenha pedido), recompense de imediato. Isto reforça que olhar para si é uma opção muito rentável.",
+          "tip": "O check-in voluntário é o melhor sinal de que o exercício está a funcionar."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Usar coleira em vez de peitoral",
+      "cause": "Hábito ou desconhecimento do dano que causa",
+      "fix": "Uma coleira com um cão que puxa pode causar danos na traqueia, vértebras ou tiroide. Mude para peitoral em H ou Y imediatamente."
+    },
+    {
+      "error": "Ceder e continuar a caminhar quando o cão puxa",
+      "cause": "Cansaço ou querer chegar ao destino",
+      "fix": "Cada vez que avança enquanto ele puxa, reforça o puxar. A consistência não é negociável."
+    },
+    {
+      "error": "Dar puxões na trela para corrigir",
+      "cause": "Reação instintiva",
+      "fix": "Os puxões geram reflexo de oposição (o cão puxa mais). Pare sem se mover e aguarde em silêncio."
+    },
+    {
+      "error": "Sessões muito longas em ambiente muito estimulante",
+      "cause": "Querer avançar rápido em ambientes difíceis",
+      "fix": "Comece com 5–10 minutos numa rua tranquila. Aumente só quando o cão o fizer bem de forma consistente."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "O meu cão puxa desde o primeiro segundo que saímos",
+      "solution": "O limiar de excitação é muito alto na saída. Pratique primeiro na entrada do prédio ou no patamar. Quando estiver calmo aí, saia para a rua."
+    },
+    {
+      "problem": "Paro como árvore mas o cão nunca afrouxa a trela",
+      "solution": "Dê um passo em direção ao cão para criar alguma folga, aguarde que ele olhe para si e recompense. Depois retome a marcha."
+    },
+    {
+      "problem": "Funciona bem na rua tranquila mas com outros cães puxa imenso",
+      "solution": "Outros cães são distrações de nível avançado. Aumente a distância em relação aos outros cães até conseguir recompensar a trela frouxa, e suba a dificuldade muito devagar."
+    },
+    {
+      "problem": "O cão parece perceber mas parece esquecer no dia seguinte",
+      "solution": "Normal nas primeiras semanas. A consistência diária é mais eficaz do que sessões longas ocasionais. 10 minutos todos os dias superam 1 hora ao sábado."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Sessões 1–3",
+      "goal": "O cão associa a tensão da trela à paragem. Para pelo menos 50% das vezes"
+    },
+    {
+      "stage": "Sessões 4–7",
+      "goal": "Anda 10–20 passos seguidos com trela frouxa numa rua tranquila"
+    },
+    {
+      "stage": "Sessões 8–12",
+      "goal": "Faz check-ins voluntários (olha para si) durante o passeio sem que o peça"
+    },
+    {
+      "stage": "Mês 2+",
+      "goal": "Mantém trela frouxa em ambientes moderadamente estimulantes (parque, rua com pessoas)"
+    }
+  ],
+  "successSigns": [
+    "A trela forma um U relaxado durante a maior parte do passeio",
+    "O cão olha para si espontaneamente sem que o peça",
+    "Para ao seu lado sem puxar quando você para",
+    "Recupera a trela frouxa em 2–3 segundos após uma distração"
+  ],
+  "variations": [
+    "Passeio com viragens frequentes em zona de treino",
+    "'Junto' formal: o cão colado à sua perna esquerda",
+    "Para-continua: pare 3 segundos a cada 10 passos e recompense se não avançar",
+    "Passeio com outra pessoa: o cão aprende a ignorar a segunda pessoa",
+    "Passeio com mochila de cão (aumenta a concentração natural)"
+  ],
+  "safetyNotes": [
+    "NUNCA use coleira de enforcamento, de pontas ou elétrica: causam dor e danos físicos e comportamentais",
+    "Se o seu cão tiver problemas de pescoço ou traqueia, consulte o veterinário antes de começar",
+    "Em dias muito quentes, limite a sessão a 5 minutos e evite o asfalto quente",
+    "Cães muito reativos (que ladram ou saltam para outros cães): procure ajuda profissional antes de trabalhar na rua"
+  ],
+  "funFact": "Os cães puxam porque andar depressa em direção ao que os interessa resultou durante toda a sua vida. Não é dominância nem má educação: é simplesmente o que sempre funcionou. Agora ensinamo-los que a trela frouxa funciona ainda melhor!",
+  "nextLevel": "Pratique em ambientes mais estimulantes: mercados, parques movimentados, zonas com cães. Depois introduza o 'junto' formal para passeios mais precisos ao seu lado.",
+  "proTip": "Quando o cão fizer um check-in voluntário (olhar para si sem ser pedido durante o passeio), recompense-o como se tivesse ganho o euromilhões. Esse momento de atenção espontânea é o que transforma o passeio em verdadeiro trabalho de equipa."
+}

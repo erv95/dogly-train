@@ -1,0 +1,158 @@
+{
+  "title": "Salue avec les deux pattes",
+  "subtitle": "Le tour qui enchante tout le monde — comme dire bonjour avec les mains !",
+  "level": "Intermédiaire",
+  "duration": "5–10 min par séance",
+  "location": "Maison ou jardin calme",
+  "ageRecommendation": "À partir de 5 mois",
+  "estimatedSessions": "8–12 séances pour maîtriser",
+  "objective": "Apprendre au chien à offrir les deux pattes en alternance avec un mouvement de salut, en répondant au signal verbal “salue” ou à un geste de la main.",
+  "why": [
+    "C'est un tour très impressionnant qui bluffera famille et amis",
+    "Renforce la confiance et le lien entre le chien et son maître",
+    "Développe la conscience corporelle : le chien apprend à contrôler chaque patte indépendamment",
+    "Ouvre la porte à des tours plus complexes comme le tope-là"
+  ],
+  "benefits": [
+    "Votre chien apprend à canaliser son excitation dans un comportement précis et contrôlé",
+    "Améliore la coordination et l'équilibre chez les jeunes chiens",
+    "Réduit les sauts incontrôlés en redirigeant l'énergie vers une action spécifique",
+    "Crée des moments d'interaction positive qui renforcent l'obéissance générale"
+  ],
+  "where": [
+    "🏠 À la maison, dans le salon ou la cuisine sans distractions",
+    "🌿 Au jardin une fois bien maîtrisé en intérieur",
+    "🔇 Toujours dans un espace calme au début"
+  ],
+  "materials": [
+    "🫖 Petites friandises très appétissantes (poulet, fromage, saucisse)",
+    "🛟 Surface antidérapante pour que le chien se sente en sécurité",
+    "🖐️ Vos mains ouvertes comme signal visuel",
+    "💛 Patience et envie de fêter chaque succès"
+  ],
+  "beforeYouStart": [
+    "Votre chien doit maîtriser “donne la patte” avec au moins une patte avant de commencer",
+    "Choisissez un moment calme : ni trop excité après la balade ni trop fatigué",
+    "Préparez au moins 20 petites friandises par séance",
+    "Travaillez sur une surface antidérapante (tapis ou moquette)",
+    "Séances de 7 minutes maximum pour maintenir la motivation"
+  ],
+  "methods": [
+    {
+      "id": "alternate_paws",
+      "title": "Méthode des pattes alternées avec salut",
+      "description": "Consolidez d'abord “donne la patte” avec chaque côté séparément, puis alternez les pattes et accélérez le mouvement jusqu'à obtenir un salut naturel.",
+      "bestFor": "Chiens qui connaissent déjà donne la patte avec une ou les deux pattes",
+      "steps": [
+        {
+          "title": "Consolider la patte droite",
+          "description": "Tendez votre main droite ouverte et demandez “droite” (ou le signal que vous utilisez). Quand le chien offre la patte droite, marquez avec “oui !” et récompensez immédiatement.",
+          "tip": "Si le chien ne connaît qu'une patte, répétez 5 fois jusqu'à ce que la réponse soit fluide.",
+          "troubleshooting": "Si le chien offre la mauvaise patte, ignorez-la en silence et recommencez."
+        },
+        {
+          "title": "Consolider la patte gauche",
+          "description": "Tendez votre main gauche et demandez “gauche”. Marquez et récompensez chaque fois que la bonne patte est offerte. Consacrez 2–3 séances à chaque côté séparément.",
+          "tip": "Gardez les mains symétriques : même hauteur, même geste pour chaque côté."
+        },
+        {
+          "title": "Alterner les pattes",
+          "description": "Une fois que les deux côtés répondent bien, commencez à alterner : main droite → “droite”, récompense ; main gauche → “gauche”, récompense. Augmentez progressivement le rythme.",
+          "tip": "Commencez en alternant toutes les 3–4 secondes. Réduisez ensuite à 1–2 secondes.",
+          "troubleshooting": "Si le chien se confond, reprenez chaque patte séparément quelques séances de plus."
+        },
+        {
+          "title": "Introduire le signal unifié “salue”",
+          "description": "Quand le chien alterne bien les deux pattes, commencez à dire “salue” avant de bouger les mains. Le chien associera le mot au mouvement alterné.",
+          "tip": "Utilisez un ton joyeux et festif en disant “salue” — l'enthousiasme est communicatif."
+        },
+        {
+          "title": "Accélérer le mouvement — le vrai salut",
+          "description": "Bougez les mains plus vite et plus légèrement, en imitant un salut humain. Le chien suivra le rythme et le résultat ressemblera à un vrai salut avec les pattes.",
+          "tip": "Célébrez avec enthousiasme quand le mouvement est fluide et naturel.",
+          "troubleshooting": "Si le chien perd le rythme, ralentissez et remontez progressivement en vitesse."
+        }
+      ]
+    }
+  ],
+  "commonErrors": [
+    {
+      "error": "Passer à l'alternance avant que chaque patte soit bien consolidée séparément",
+      "cause": "Vouloir arriver trop vite au résultat final",
+      "fix": "Consacrez au moins 3 séances à chaque patte séparément avant de les combiner."
+    },
+    {
+      "error": "Utiliser le même geste pour les deux pattes",
+      "cause": "Ne pas différencier visuellement la droite de la gauche",
+      "fix": "Tendez la main du même côté que la patte souhaitée. Le signal visuel est essentiel."
+    },
+    {
+      "error": "Récompenser trop tard, quand la patte est déjà redescendue",
+      "cause": "Réflexes lents ou friandises pas prêtes",
+      "fix": "Tenez les friandises dans la main libre. Marquez et récompensez au moment du contact."
+    },
+    {
+      "error": "Séances trop longues qui ennuient le chien",
+      "cause": "Vouloir tout apprendre en une longue séance",
+      "fix": "7 minutes maximum. Terminez toujours sur un succès facile pour qu'il en redemande."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "Mon chien n'offre toujours que la même patte",
+      "solution": "Travaillez exclusivement la patte oubliée pendant 2–3 séances. Ne récompensez que cette patte jusqu'à rééquilibrer."
+    },
+    {
+      "problem": "Le chien se couche quand j'essaie de demander la deuxième patte",
+      "solution": "Il perd l'équilibre. Travaillez sur une surface plus ferme et demandez chaque patte avec le chien bien appuyé sur les trois autres."
+    },
+    {
+      "problem": "Le mouvement ne ressemble pas à un salut, il est trop lent",
+      "solution": "Réduisez la taille de la friandise pour que le chien soit plus alerte. Accélérez votre propre main et il suivra."
+    },
+    {
+      "problem": "Le chien s'excite trop et commence à sauter",
+      "solution": "Arrêtez la séance, demandez un “assis” pour le calmer et recommencez. Baissez le ton de voix et réduisez la fréquence des récompenses."
+    }
+  ],
+  "progressMilestones": [
+    {
+      "stage": "Séances 1–3",
+      "goal": "Offre chaque patte séparément de façon fluide en réponse au geste correspondant"
+    },
+    {
+      "stage": "Séances 4–7",
+      "goal": "Alterne les deux pattes quand vous changez de main, avec de petites pauses entre chaque"
+    },
+    {
+      "stage": "Séances 8–10",
+      "goal": "Répond à “salue” et alterne les pattes avec un rythme croissant"
+    },
+    {
+      "stage": "Semaine 3+",
+      "goal": "Exécute le salut avec fluidité devant n'importe quelle personne connue"
+    }
+  ],
+  "successSigns": [
+    "Offre les deux pattes en alternance sans se tromper",
+    "Répond à “salue” avant même de voir le geste",
+    "Le mouvement est fluide et a un rythme de salut naturel",
+    "Le fait devant d'autres personnes que son maître"
+  ],
+  "variations": [
+    "Saluer seulement avec la patte droite (classique “donne la patte”)",
+    "Saluer différentes personnes (famille, amis)",
+    "Saluer au rythme d'une musique",
+    "Saluer depuis la position assise et debout",
+    "Enchaîner salut + révérence pour un spectacle complet"
+  ],
+  "safetyNotes": [
+    "Ne pratiquez pas si le chien a une blessure à une patte ou une articulation",
+    "Grandes races : vérifiez qu'elles ne chargent pas trop de poids sur une seule patte",
+    "Si le chien montre de la résistance ou boite, arrêtez et consultez un vétérinaire",
+    "Chiots de moins de 6 mois : séances de 5 minutes maximum pour protéger les articulations en développement"
+  ],
+  "funFact": "Les chiens offrent naturellement la patte comme signal social d'apaisement. Quand votre chien vous la donne, il vous dit au fond : “tu me plais, j'ai confiance en toi”.",
+  "nextLevel": "Une fois le salut maîtrisé, apprenez le tope-là (high five) puis enchaînez : salut → tope-là → révérence. Un spectacle complet en trois tours !",
+  "proTip": "Utilisez des friandises de très haute valeur (poulet cuit, saucisse) pour ce tour car il demande plus de coordination. Votre chien a besoin de sentir que l'effort en vaut la peine."
+}
