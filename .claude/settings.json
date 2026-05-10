@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+
+      "Bash(npx tsc --noEmit:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run serve:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npm test:*)",
+      "Bash(npm run test:*)",
+
+      "Bash(firebase functions:log:*)",
+      "Bash(firebase functions:list:*)",
+      "Bash(firebase projects:list:*)",
+      "Bash(firebase use:*)",
+
+      "Bash(ls:*)",
+      "Bash(pwd:*)",
+      "Bash(echo:*)",
+      "Bash(cat package.json:*)",
+      "Bash(cat firestore.indexes.json:*)",
+      "Bash(cat firebase.json:*)",
+      "Bash(wc -l:*)",
+      "Bash(find:*)",
+
+      "Bash(cd functions && npm run build:*)",
+      "Bash(cd functions && npx tsc:*)",
+      "Bash(cd functions && npm run lint:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(rm -rf /:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean -fd:*)",
+      "Bash(git checkout --:*)",
+      "Bash(git restore .:*)",
+      "Bash(firebase deploy --force:*)"
+    ]
+  }
+}
