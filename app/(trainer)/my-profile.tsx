@@ -222,6 +222,23 @@ export default function TrainerProfileScreen() {
         >
           <Text style={styles.title}>{t('trainer.myProfile')}</Text>
 
+          {/* Verification banner — providers MUST verify ID before appearing
+              in marketplace. Visible only when not yet verified. */}
+          {userData?.verified !== true && (
+            <TouchableOpacity
+              style={styles.verifyBanner}
+              onPress={() => router.push('/(shared)/identity-verification')}
+              activeOpacity={0.85}
+            >
+              <Ionicons name="alert-circle" size={20} color={colors.warning} />
+              <View style={{ flex: 1 }}>
+                <Text style={styles.verifyBannerTitle}>{t('verified.providerNotYetTitle')}</Text>
+                <Text style={styles.verifyBannerBody}>{t('verified.providerNotYetBody')}</Text>
+              </View>
+              <Ionicons name="chevron-forward" size={16} color={colors.warning} />
+            </TouchableOpacity>
+          )}
+
           {/* Avatar */}
           <TouchableOpacity
             style={styles.avatarSection}
@@ -462,6 +479,19 @@ const styles = StyleSheet.create({
     marginBottom: spacing.lg,
     textAlign: 'center',
   },
+  verifyBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+    backgroundColor: colors.warning + '15',
+    borderWidth: 1,
+    borderColor: colors.warning + '40',
+    borderRadius: 12,
+    padding: spacing.md,
+    marginBottom: spacing.lg,
+  },
+  verifyBannerTitle: { fontSize: 14, fontWeight: '800', color: colors.text },
+  verifyBannerBody: { fontSize: 12, color: colors.textSecondary, marginTop: 2 },
   avatarSection: {
     alignSelf: 'center',
     marginBottom: spacing.lg,

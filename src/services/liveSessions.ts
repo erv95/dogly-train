@@ -2,6 +2,8 @@ import {
   collection,
   doc,
   getDoc,
+  getDocs,
+  limit,
   onSnapshot,
   orderBy,
   query,
@@ -152,4 +154,23 @@ export async function getLiveSessionOnce(bookingId: string): Promise<LiveSession
   const snap = await getDoc(doc(db, 'booking_live_sessions', bookingId));
   if (!snap.exists()) return null;
   return { id: snap.id, ...snap.data() } as LiveSession;
+}
+
+/** Returns the URL of the most recent live-session photo for a booking, or
+ *  null if the session has no photos / doesn't exist. Used by booking
+ *  completion flow to reuse an existing photo as proof. */
+export async function getLatestLivePhotoUrl(bookingId: string): Promise<string | null> {
+  try {
+    const snap = await getDocs(query(
+      collection(db, 'booking_live_sessions', bookingId, 'photos'),
+      orderBy('takenAt', 'desc'),
+      limit(1),
+    ));
+    const first = snap.docs[0];
+    if (!first) return null;
+    const url = (first.data() as any)?.url;
+    return typeof url === 'string' ? url : null;
+  } catch {
+    return null;
+  }
 }

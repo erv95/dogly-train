@@ -3803,6 +3803,22 @@
     "historyEmpty": "Aucune transaction pour l'instant",
     "refund": "Remboursement"
   },
+  "reauth": {
+    "passwordPlaceholder": "Ton mot de passe",
+    "noUser": "Ta session a expiré. Reconnecte-toi.",
+    "wrongPassword": "Mot de passe incorrect. Réessaie.",
+    "failed": "Nous n'avons pas pu vérifier ton identité. Réessaie.",
+    "deleteAccountBody": "Pour supprimer ton compte, confirme ton mot de passe. Cette action est définitive.",
+    "revokeBody": "Nous allons te déconnecter sur tous tes appareils (y compris celui-ci). Confirme ton mot de passe pour continuer."
+  },
+  "verified": {
+    "short": "Vérifié",
+    "badgeLabel": "Identité vérifiée par l'équipe",
+    "filterLabel": "Vérifiés uniquement",
+    "filterHint": "Afficher uniquement les pros à l'identité vérifiée",
+    "providerNotYetTitle": "Vérification en attente",
+    "providerNotYetBody": "Ton profil n'apparaîtra pas dans la marketplace tant que tu n'as pas vérifié ton identité. Fais-le depuis Profil → Vérification d'identité."
+  },
   "reviews": {
     "writeReview": "Écrire un avis",
     "rating": "Note",
@@ -3823,6 +3839,9 @@
     "adminPanel": "Panneau d'administration",
     "sectionAccount": "Compte",
     "sectionPreferences": "Préférences",
+    "sectionSecurity": "Sécurité",
+    "revokeAllSessions": "Déconnecter tous les appareils",
+    "revokeAllSessionsConfirm": "Nous allons te déconnecter sur TOUS tes appareils (y compris celui-ci). Tu devras te reconnecter avec ton mot de passe.",
     "hapticsLabel": "Retour haptique",
     "hapticsHint": "Vibration lors des appuis sur les boutons",
     "sectionDangerZone": "Zone de danger",
@@ -5542,6 +5561,8 @@
       "priceLabel": "Tarif",
       "markCompleted": "Marquer terminée",
       "completeAfterEnds": "Tu pourras marquer comme terminé une fois le service achevé.",
+      "completePhotoPermBody": "L'autorisation caméra est nécessaire pour prendre la photo qui confirme le service.",
+      "completionPhotoTitle": "Photo du service",
       "cancelTitle": "Annuler la réservation",
       "cancelBody": "Le créneau redeviendra disponible. Confirmer ?",
       "cancelCta": "Annuler"
@@ -5573,6 +5594,7 @@
       "not_cancellable": "Cette réservation ne peut plus être annulée.",
       "not_completable": "Cette réservation ne peut pas être marquée comme terminée.",
       "too_early": "Tu pourras marquer comme terminée une fois le service achevé.",
+      "photo_required": "Tu dois joindre une photo du service pour marquer la réservation terminée.",
       "method_not_allowed": "Opération non autorisée."
     },
     "stats": {

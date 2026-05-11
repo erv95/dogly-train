@@ -129,6 +129,9 @@ export async function searchCaretakers(
   const useGeo = filters.radiusKm > 0 && center !== null;
 
   if (useGeo && center) {
+    // Marketplace visibility requires BOTH `isActive` (admin moderation) AND
+    // `verified` (ID document approved). Defense in depth alongside the rules
+    // constraint that `isActive=true` implies `verified=true`.
     const radiusM = filters.radiusKm * 1000;
     const bounds = geohashQueryBounds(center, radiusM);
     const snapshots = await Promise.all(
@@ -137,6 +140,7 @@ export async function searchCaretakers(
           collection(db, 'users'),
           where('role', '==', 'caretaker'),
           where('isActive', '==', true),
+          where('verified', '==', true),
           where('geoHash', '>=', start),
           where('geoHash', '<=', end)
         ))
@@ -153,12 +157,13 @@ export async function searchCaretakers(
       }
     }
   } else {
-    // Global query — capped at 200 to prevent OOM
+    // Global query — verified+active only, capped at 200
     const snap = await getDocs(
       query(
         collection(db, 'users'),
         where('role', '==', 'caretaker'),
         where('isActive', '==', true),
+        where('verified', '==', true),
         limit(200)
       )
     );

@@ -34,6 +34,7 @@ import { CaretakerService, Dog } from '../../src/types';
 import { Avatar, StarRating } from '../../src/components/ui';
 import { TrainerCardSkeleton } from '../../src/components/skeletons';
 import { CoinBalancePill } from '../../src/components/CoinBalancePill';
+import { VerifiedBadge } from '../../src/components/VerifiedBadge';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { getDogsByOwner } from '../../src/services/dogs';
 import DailyTipsRail from '../../src/components/DailyTipsRail';
@@ -250,11 +251,9 @@ export default function OwnerHomeScreen() {
             <Avatar uri={item.photoURL} name={item.displayName} size={60} />
 
             <View style={styles.cardInfo}>
-              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
                 <Text style={styles.trainerName} numberOfLines={1}>{item.displayName}</Text>
-                {(item as any).verified && (
-                  <Ionicons name="shield-checkmark" size={14} color="#2D9CDB" />
-                )}
+                <VerifiedBadge visible={(item as any).verified === true} size="sm" showLabel={false} />
               </View>
 
               {/* Stats row */}
@@ -342,9 +341,7 @@ export default function OwnerHomeScreen() {
                 {isBusiness && (
                   <Ionicons name="business" size={14} color={colors.secondary} />
                 )}
-                {(item as any).verified && (
-                  <Ionicons name="shield-checkmark" size={14} color="#2D9CDB" />
-                )}
+                <VerifiedBadge visible={(item as any).verified === true} size="sm" showLabel={false} />
               </View>
 
               {/* Stats row */}

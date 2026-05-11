@@ -12,6 +12,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { getCaretakerById } from '../../../src/services/caretakers';
 import { useAuth } from '../../../src/contexts/AuthContext';
 import { Avatar, StarRating, Card, Button, Skeleton, SkeletonList } from '../../../src/components/ui';
+import { VerifiedBadge } from '../../../src/components/VerifiedBadge';
 import { colors, spacing, fontSize, borderRadius } from '../../../src/theme';
 import { CaretakerProfile, CaretakerService, CaretakerPricing } from '../../../src/types';
 
@@ -131,17 +132,8 @@ export default function CaretakerDetailScreen() {
       {/* Header */}
       <View style={styles.profileHeader}>
         <Avatar uri={caretaker.photoURL} name={displayTitle} size={100} />
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-          <Text style={styles.name}>{displayTitle}</Text>
-          {caretaker.verified && (
-            <Ionicons name="shield-checkmark" size={20} color="#2D9CDB" />
-          )}
-        </View>
-        {caretaker.verified && (
-          <Text style={{ fontSize: 11, color: '#2D9CDB', fontWeight: '700', marginTop: 2 }}>
-            {t('identityVerification.verifiedBadge')}
-          </Text>
-        )}
+        <Text style={styles.name}>{displayTitle}</Text>
+        <VerifiedBadge visible={caretaker.verified === true} size="md" style={{ marginTop: 4 }} />
         {isBusiness && (
           <View style={styles.businessTag}>
             <Ionicons name="business" size={12} color={colors.secondary} />

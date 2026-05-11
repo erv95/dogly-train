@@ -84,7 +84,10 @@ export async function searchTrainers(
   const useGeo = filters.radiusKm > 0 && center !== null;
 
   if (useGeo && center) {
-    // GeoHash query within radius
+    // GeoHash query within radius. Marketplace visibility requires BOTH
+    // `isActive` (admin moderation) AND `verified` (ID document approved).
+    // Defense in depth alongside the rules constraint that `isActive=true`
+    // implies `verified=true`.
     const radiusM = filters.radiusKm * 1000;
     const bounds = geohashQueryBounds(center, radiusM);
     const snapshots = await Promise.all(
@@ -93,6 +96,7 @@ export async function searchTrainers(
           collection(db, 'users'),
           where('role', '==', 'trainer'),
           where('isActive', '==', true),
+          where('verified', '==', true),
           where('geoHash', '>=', start),
           where('geoHash', '<=', end)
         ))
@@ -109,12 +113,13 @@ export async function searchTrainers(
       }
     }
   } else {
-    // Global query — active trainers, capped to prevent OOM on large datasets
+    // Global query — verified+active trainers, capped to prevent OOM
     const snap = await getDocs(
       query(
         collection(db, 'users'),
         where('role', '==', 'trainer'),
         where('isActive', '==', true),
+        where('verified', '==', true),
         limit(200)
       )
     );

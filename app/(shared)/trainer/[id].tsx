@@ -13,6 +13,7 @@ import { getTrainerById } from '../../../src/services/trainers';
 import { useAuth } from '../../../src/contexts/AuthContext';
 import { Avatar, StarRating, Card, Button } from '../../../src/components/ui';
 import { ProfileSkeleton } from '../../../src/components/skeletons';
+import { VerifiedBadge } from '../../../src/components/VerifiedBadge';
 import { colors, spacing, fontSize, borderRadius } from '../../../src/theme';
 import { TrainerProfile } from '../../../src/types';
 
@@ -83,17 +84,8 @@ export default function TrainerDetailScreen() {
       {/* Header */}
       <View style={styles.profileHeader}>
         <Avatar uri={trainer.photoURL} name={trainer.displayName} size={100} />
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-          <Text style={styles.name}>{trainer.displayName}</Text>
-          {trainer.verified && (
-            <Ionicons name="shield-checkmark" size={20} color="#2D9CDB" />
-          )}
-        </View>
-        {trainer.verified && (
-          <Text style={{ fontSize: 11, color: '#2D9CDB', fontWeight: '700', marginTop: 2 }}>
-            {t('identityVerification.verifiedBadge')}
-          </Text>
-        )}
+        <Text style={styles.name}>{trainer.displayName}</Text>
+        <VerifiedBadge visible={trainer.verified === true} size="md" style={{ marginTop: 4 }} />
         {trainer.city ? (
           <View style={styles.locationRow}>
             <Ionicons name="location-outline" size={16} color={colors.textSecondary} />

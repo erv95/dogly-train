@@ -3803,6 +3803,22 @@
     "historyEmpty": "No transactions yet",
     "refund": "Refund"
   },
+  "reauth": {
+    "passwordPlaceholder": "Your password",
+    "noUser": "Your session has expired. Please sign in again.",
+    "wrongPassword": "Wrong password. Try again.",
+    "failed": "We couldn't verify your identity. Try again.",
+    "deleteAccountBody": "To delete your account, confirm your password. This action is permanent.",
+    "revokeBody": "We'll log you out on all your devices (including this one). Confirm your password to continue."
+  },
+  "verified": {
+    "short": "Verified",
+    "badgeLabel": "Identity verified by the team",
+    "filterLabel": "Verified only",
+    "filterHint": "Show only providers with verified identity",
+    "providerNotYetTitle": "Pending verification",
+    "providerNotYetBody": "Your profile won't appear in the marketplace until you verify your identity. Do it from Profile → Identity verification."
+  },
   "reviews": {
     "writeReview": "Write review",
     "rating": "Rating",
@@ -3823,6 +3839,9 @@
     "adminPanel": "Admin Panel",
     "sectionAccount": "Account",
     "sectionPreferences": "Preferences",
+    "sectionSecurity": "Security",
+    "revokeAllSessions": "Log out of all devices",
+    "revokeAllSessionsConfirm": "We'll log you out on ALL your devices (including this one). You'll have to sign in again with your password.",
     "hapticsLabel": "Haptic feedback",
     "hapticsHint": "Vibrate on button taps",
     "sectionDangerZone": "Danger zone",
@@ -5542,6 +5561,8 @@
       "priceLabel": "Price",
       "markCompleted": "Mark completed",
       "completeAfterEnds": "You'll be able to mark it completed once the service ends.",
+      "completePhotoPermBody": "Camera permission is needed to take the photo proof of the service.",
+      "completionPhotoTitle": "Service photo",
       "cancelTitle": "Cancel booking",
       "cancelBody": "The slot will become available again. Sure?",
       "cancelCta": "Cancel booking"
@@ -5573,6 +5594,7 @@
       "not_cancellable": "This booking can no longer be cancelled.",
       "not_completable": "This booking cannot be marked completed.",
       "too_early": "You can mark completed once the service ends.",
+      "photo_required": "You need to attach a photo of the service to mark the booking completed.",
       "method_not_allowed": "Operation not allowed."
     },
     "stats": {

@@ -50,3 +50,6 @@ export { startLiveSession, endLiveSession, pruneStaleLiveSessions } from "./live
 
 // Recurring bookings (weekly series, single-tx atomic creation)
 export { createRecurringBookings, cancelRecurringSeries, previewRecurringSeries } from "./recurringBookings";
+
+// Security (sensitive account actions: revoke sessions, soft-delete, etc.)
+export { revokeAllSessions } from "./security";

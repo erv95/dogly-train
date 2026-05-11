@@ -16,8 +16,12 @@ import {
   getBooking,
   cancelBooking,
   markBookingCompleted,
+  uploadCompletionPhoto,
 } from '../../../src/services/bookings';
 import { cancelRecurringSeries } from '../../../src/services/recurringBookings';
+import { getLatestLivePhotoUrl } from '../../../src/services/liveSessions';
+import * as ImagePicker from 'expo-image-picker';
+import { Image } from 'react-native';
 import { Booking } from '../../../src/types';
 import { BOOKING_TIMEZONE } from '../../../src/config/booking';
 import { useAuth } from '../../../src/contexts/AuthContext';
@@ -204,9 +208,35 @@ export default function BookingDetailScreen() {
   };
 
   const doComplete = async () => {
+    if (!booking) return;
     setWorking('complete');
     try {
-      await markBookingCompleted(booking.id);
+      // Step 1: photo proof. Reuse the latest live-session photo if any,
+      // otherwise prompt the camera. Anti-fraud: server requires a photo URL.
+      let photoUrl = await getLatestLivePhotoUrl(booking.id);
+      if (!photoUrl) {
+        // No live session photo → take one now
+        const perm = await ImagePicker.requestCameraPermissionsAsync();
+        if (perm.status !== 'granted') {
+          Alert.alert(t('common.error'), t('bookings.detail.completePhotoPermBody'));
+          setWorking(null);
+          return;
+        }
+        const result = await ImagePicker.launchCameraAsync({
+          mediaTypes: ['images'],
+          quality: 0.8,
+          allowsEditing: false,
+        });
+        if (result.canceled || !result.assets[0]) {
+          // User cancelled — abort completion silently, no error
+          setWorking(null);
+          return;
+        }
+        photoUrl = await uploadCompletionPhoto(booking.id, result.assets[0].uri);
+      }
+
+      // Step 2: send to server with the photo URL
+      await markBookingCompleted(booking.id, photoUrl);
       haptics.success();
       setConfetti(true);
       await load();
@@ -273,6 +303,18 @@ export default function BookingDetailScreen() {
             counterpartName={counterpartName}
             priceEurInfo={booking.priceEurInfo}
           />
+        )}
+
+        {/* Completion photo proof — visible to both parties once completed */}
+        {booking.status === 'completed' && booking.completionPhotoURL && (
+          <View style={styles.completionBlock}>
+            <Text style={styles.sectionTitle}>{t('bookings.detail.completionPhotoTitle')}</Text>
+            <Image
+              source={{ uri: booking.completionPhotoURL }}
+              style={styles.completionPhoto}
+              resizeMode="cover"
+            />
+          </View>
         )}
 
         {/* Notes */}
@@ -407,6 +449,20 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase', letterSpacing: 0.5,
   },
   notesText: { fontSize: fontSize.sm, color: colors.text, lineHeight: 20 },
+
+  completionBlock: {
+    backgroundColor: colors.background,
+    padding: spacing.md,
+    borderRadius: borderRadius.lg,
+    gap: spacing.sm,
+    ...shadow.sm,
+  },
+  completionPhoto: {
+    width: '100%',
+    aspectRatio: 4 / 3,
+    borderRadius: borderRadius.md,
+    backgroundColor: colors.borderLight,
+  },
 
   actionsRow: { flexDirection: 'row', gap: spacing.sm },
   btn: {

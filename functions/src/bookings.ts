@@ -654,9 +654,16 @@ export const markBookingCompleted = functions
     const callerUid = await verifyBookingCallerToken(req);
     if (!callerUid) { res.status(401).json({ error: "unauthenticated" }); return; }
 
-    const { bookingId } = req.body ?? {};
+    const { bookingId, completionPhotoURL } = req.body ?? {};
     if (!bookingId || typeof bookingId !== "string") {
       res.status(400).json({ error: "invalid_input" });
+      return;
+    }
+    // Anti-fraud: provider must attach photo proof of completed service.
+    // Either reused from a live session or freshly captured at completion time.
+    if (!completionPhotoURL || typeof completionPhotoURL !== "string"
+        || !completionPhotoURL.startsWith("https://")) {
+      res.status(400).json({ error: "photo_required" });
       return;
     }
 
@@ -703,6 +710,8 @@ export const markBookingCompleted = functions
         tx.update(bookingRef, {
           status: "completed",
           completedAt: now,
+          completionPhotoURL,
+          completionPhotoTakenAt: now,
           updatedAt: now,
         });
         tx.set(transitionRef, {

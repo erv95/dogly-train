@@ -3803,6 +3803,22 @@
     "historyEmpty": "Noch keine Transaktionen",
     "refund": "Erstattung"
   },
+  "reauth": {
+    "passwordPlaceholder": "Dein Passwort",
+    "noUser": "Deine Sitzung ist abgelaufen. Melde dich erneut an.",
+    "wrongPassword": "Falsches Passwort. Versuche es nochmal.",
+    "failed": "Wir konnten deine Identität nicht bestätigen. Versuche es nochmal.",
+    "deleteAccountBody": "Um dein Konto zu löschen, bestätige dein Passwort. Diese Aktion ist endgültig.",
+    "revokeBody": "Wir melden dich auf allen Geräten ab (einschließlich diesem). Bestätige dein Passwort, um fortzufahren."
+  },
+  "verified": {
+    "short": "Verifiziert",
+    "badgeLabel": "Identität vom Team verifiziert",
+    "filterLabel": "Nur verifizierte",
+    "filterHint": "Nur Profis mit verifizierter Identität anzeigen",
+    "providerNotYetTitle": "Verifizierung ausstehend",
+    "providerNotYetBody": "Dein Profil erscheint erst im Marketplace, wenn du deine Identität verifizierst. Mache das unter Profil → Identitätsverifizierung."
+  },
   "reviews": {
     "writeReview": "Bewertung schreiben",
     "rating": "Bewertung",
@@ -3823,6 +3839,9 @@
     "adminPanel": "Admin-Bereich",
     "sectionAccount": "Konto",
     "sectionPreferences": "Einstellungen",
+    "sectionSecurity": "Sicherheit",
+    "revokeAllSessions": "Auf allen Geräten abmelden",
+    "revokeAllSessionsConfirm": "Wir melden dich auf ALLEN Geräten ab (einschließlich diesem). Du musst dich mit deinem Passwort neu anmelden.",
     "hapticsLabel": "Haptisches Feedback",
     "hapticsHint": "Vibration beim Tippen auf Schaltflächen",
     "sectionDangerZone": "Gefahrenzone",
@@ -5542,6 +5561,8 @@
       "priceLabel": "Preis",
       "markCompleted": "Als abgeschlossen markieren",
       "completeAfterEnds": "Du kannst nach Ende des Services als abgeschlossen markieren.",
+      "completePhotoPermBody": "Wir brauchen die Kameraerlaubnis, um das Service-Foto aufzunehmen.",
+      "completionPhotoTitle": "Service-Foto",
       "cancelTitle": "Buchung stornieren",
       "cancelBody": "Der Slot wird wieder frei. Sicher?",
       "cancelCta": "Stornieren"
@@ -5573,6 +5594,7 @@
       "not_cancellable": "Diese Buchung kann nicht mehr storniert werden.",
       "not_completable": "Diese Buchung kann nicht als abgeschlossen markiert werden.",
       "too_early": "Du kannst nach Ende des Services als abgeschlossen markieren.",
+      "photo_required": "Du musst ein Service-Foto anhängen, um die Buchung als abgeschlossen zu markieren.",
       "method_not_allowed": "Vorgang nicht erlaubt."
     },
     "stats": {

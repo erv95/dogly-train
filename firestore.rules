@@ -74,7 +74,17 @@ service cloud.firestore {
       allow update: if (
         isUser(userId)
         && !request.resource.data.diff(resource.data).affectedKeys().hasAny(protectedUserFields())
-      ) || isAdmin();
+      ) || (
+        isAdmin()
+        // Marketplace gate: a provider can only be `isActive=true` if their
+        // identity has been `verified=true`. Prevents an admin from
+        // accidentally publishing an unverified profile.
+        && (
+          !('isActive' in request.resource.data)
+          || request.resource.data.isActive != true
+          || request.resource.data.verified == true
+        )
+      );
 
       allow delete: if isAdmin();
     }

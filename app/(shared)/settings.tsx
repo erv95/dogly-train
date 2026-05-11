@@ -27,6 +27,8 @@ import {
   AlreadyPremiumError,
 } from '../../src/services/premium';
 import { useAuth } from '../../src/contexts/AuthContext';
+import { ReauthModal } from '../../src/components/ReauthModal';
+import { revokeAllSessions } from '../../src/services/security';
 import { colors, spacing, fontSize, borderRadius, PREMIUM_PRICE_EUR } from '../../src/theme';
 import { User } from '../../src/types';
 
@@ -174,6 +176,44 @@ export default function SettingsScreen() {
     ]);
   };
 
+  // Two-step flow: confirm intent (Alert) → re-auth gate (ReauthModal) →
+  // actually delete. The re-auth ensures someone with a stolen unlocked phone
+  // can't wipe the account in one tap.
+  const [reauthForDelete, setReauthForDelete] = useState(false);
+  const [reauthForRevoke, setReauthForRevoke] = useState(false);
+  const [revoking, setRevoking] = useState(false);
+
+  const handleRevokeAllSessions = () => {
+    Alert.alert(
+      t('settings.revokeAllSessions'),
+      t('settings.revokeAllSessionsConfirm'),
+      [
+        { text: t('common.cancel'), style: 'cancel' },
+        {
+          text: t('settings.revokeAllSessions'),
+          style: 'destructive',
+          onPress: () => setReauthForRevoke(true),
+        },
+      ],
+    );
+  };
+
+  const performRevokeAfterReauth = async () => {
+    setReauthForRevoke(false);
+    setRevoking(true);
+    try {
+      await revokeAllSessions();
+      // Local sign-out so this device returns to login immediately rather
+      // than waiting for the ID token to expire.
+      await signOut();
+      router.replace('/');
+    } catch {
+      Alert.alert(t('common.error'), t('authErrors.generic'));
+    } finally {
+      setRevoking(false);
+    }
+  };
+
   const handleDeleteAccount = () => {
     Alert.alert(
       t('settings.deleteAccount'),
@@ -183,34 +223,37 @@ export default function SettingsScreen() {
         {
           text: t('settings.deleteAccount'),
           style: 'destructive',
-          onPress: async () => {
-            if (!firebaseUser) return;
-            setDeleting(true);
-            try {
-              const CLOUD_FUNCTION_URL =
-                'https://us-central1-dogly-train.cloudfunctions.net/deleteUserAccount';
-              const idToken = await auth.currentUser?.getIdToken();
-              if (!idToken) throw new Error('Not authenticated');
-              const response = await fetch(CLOUD_FUNCTION_URL, {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                  'Authorization': `Bearer ${idToken}`,
-                },
-                body: JSON.stringify({ userId: firebaseUser.uid }),
-              });
-              if (!response.ok) throw new Error('Delete failed');
-              await signOut();
-              router.replace('/');
-            } catch (error) {
-              Alert.alert(t('common.error'), t('authErrors.generic'));
-            } finally {
-              setDeleting(false);
-            }
-          },
+          onPress: () => setReauthForDelete(true),
         },
       ]
     );
+  };
+
+  const performDeleteAfterReauth = async () => {
+    setReauthForDelete(false);
+    if (!firebaseUser) return;
+    setDeleting(true);
+    try {
+      const CLOUD_FUNCTION_URL =
+        'https://us-central1-dogly-train.cloudfunctions.net/deleteUserAccount';
+      const idToken = await auth.currentUser?.getIdToken();
+      if (!idToken) throw new Error('Not authenticated');
+      const response = await fetch(CLOUD_FUNCTION_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${idToken}`,
+        },
+        body: JSON.stringify({ userId: firebaseUser.uid }),
+      });
+      if (!response.ok) throw new Error('Delete failed');
+      await signOut();
+      router.replace('/');
+    } catch (error) {
+      Alert.alert(t('common.error'), t('authErrors.generic'));
+    } finally {
+      setDeleting(false);
+    }
   };
 
   return (
@@ -333,6 +376,16 @@ export default function SettingsScreen() {
           />
         </View>
 
+        {/* Security section */}
+        <Text style={styles.sectionHeader}>{t('settings.sectionSecurity')}</Text>
+        <View style={styles.card}>
+          <SettingsRow
+            icon="phone-portrait-outline"
+            label={revoking ? t('common.loading') : t('settings.revokeAllSessions')}
+            onPress={revoking ? () => {} : handleRevokeAllSessions}
+          />
+        </View>
+
         {/* Danger zone */}
         <Text style={styles.sectionHeader}>{t('settings.sectionDangerZone')}</Text>
         <View style={styles.card}>
@@ -441,6 +494,27 @@ export default function SettingsScreen() {
           </View>
         </View>
       </Modal>
+
+      {/* Re-auth gate before destructive account actions */}
+      <ReauthModal
+        visible={reauthForDelete}
+        title={t('settings.deleteAccount')}
+        body={t('reauth.deleteAccountBody')}
+        confirmLabel={t('settings.deleteAccount')}
+        destructive
+        onCancel={() => setReauthForDelete(false)}
+        onSuccess={performDeleteAfterReauth}
+      />
+
+      <ReauthModal
+        visible={reauthForRevoke}
+        title={t('settings.revokeAllSessions')}
+        body={t('reauth.revokeBody')}
+        confirmLabel={t('settings.revokeAllSessions')}
+        destructive
+        onCancel={() => setReauthForRevoke(false)}
+        onSuccess={performRevokeAfterReauth}
+      />
     </SafeAreaView>
   );
 }

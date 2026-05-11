@@ -346,6 +346,11 @@ export interface Booking {
   priceEurInfo: number;
   status: BookingStatus;
   notes?: string;            // owner → provider, max 280 chars
+  /** Photo proof of service completion. Required by `markBookingCompleted`.
+   *  Either reused from a live session photo, or taken at completion time
+   *  with the in-app camera. Visible to both parties on booking detail. */
+  completionPhotoURL?: string | null;
+  completionPhotoTakenAt?: Timestamp | null;
   /** When set, this booking is part of a recurring weekly series. seriesIndex
    *  is 1..seriesTotal. Cancelling a single occurrence keeps the rest intact;
    *  cancelling the series cascades. */

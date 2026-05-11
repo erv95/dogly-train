@@ -3803,6 +3803,22 @@
     "historyEmpty": "Sem transações ainda",
     "refund": "Reembolso"
   },
+  "reauth": {
+    "passwordPlaceholder": "A tua palavra-passe",
+    "noUser": "A tua sessão expirou. Inicia sessão de novo.",
+    "wrongPassword": "Palavra-passe incorreta. Tenta novamente.",
+    "failed": "Não conseguimos verificar a tua identidade. Tenta novamente.",
+    "deleteAccountBody": "Para apagar a tua conta, confirma a palavra-passe. Esta ação é definitiva.",
+    "revokeBody": "Vamos terminar a tua sessão em todos os teus dispositivos (incluindo este). Confirma a palavra-passe para continuar."
+  },
+  "verified": {
+    "short": "Verificado",
+    "badgeLabel": "Identidade verificada pela equipa",
+    "filterLabel": "Apenas verificados",
+    "filterHint": "Mostrar apenas profissionais com identidade verificada",
+    "providerNotYetTitle": "Verificação pendente",
+    "providerNotYetBody": "O teu perfil não aparecerá no marketplace até verificares a tua identidade. Fá-lo a partir de Perfil → Verificação de identidade."
+  },
   "reviews": {
     "writeReview": "Escrever avaliação",
     "rating": "Nota",
@@ -3823,6 +3839,9 @@
     "adminPanel": "Painel de administração",
     "sectionAccount": "Conta",
     "sectionPreferences": "Preferências",
+    "sectionSecurity": "Segurança",
+    "revokeAllSessions": "Terminar sessão em todos os dispositivos",
+    "revokeAllSessionsConfirm": "Vamos terminar a tua sessão em TODOS os teus dispositivos (incluindo este). Terás de iniciar sessão de novo com a palavra-passe.",
     "hapticsLabel": "Vibração háptica",
     "hapticsHint": "Vibrar ao tocar nos botões",
     "sectionDangerZone": "Zona de perigo",
@@ -5542,6 +5561,8 @@
       "priceLabel": "Tarifa",
       "markCompleted": "Marcar concluída",
       "completeAfterEnds": "Poderás marcar como concluída quando o serviço terminar.",
+      "completePhotoPermBody": "Precisamos de permissão da câmara para tirar a foto que confirma o serviço.",
+      "completionPhotoTitle": "Foto do serviço",
       "cancelTitle": "Cancelar reserva",
       "cancelBody": "O horário voltará a ficar disponível. Tens a certeza?",
       "cancelCta": "Cancelar"
@@ -5573,6 +5594,7 @@
       "not_cancellable": "Esta reserva já não pode ser cancelada.",
       "not_completable": "Esta reserva não pode ser marcada como concluída.",
       "too_early": "Poderás marcar como concluída quando o serviço terminar.",
+      "photo_required": "Tens de anexar uma foto do serviço para marcar a reserva como concluída.",
       "method_not_allowed": "Operação não permitida."
     },
     "stats": {

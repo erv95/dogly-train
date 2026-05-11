@@ -3803,6 +3803,22 @@
     "historyEmpty": "Aún no tienes transacciones",
     "refund": "Reembolso"
   },
+  "reauth": {
+    "passwordPlaceholder": "Tu contraseña",
+    "noUser": "Tu sesión ha expirado. Vuelve a iniciar sesión.",
+    "wrongPassword": "Contraseña incorrecta. Inténtalo de nuevo.",
+    "failed": "No se pudo verificar tu identidad. Inténtalo de nuevo.",
+    "deleteAccountBody": "Para borrar tu cuenta, confirma tu contraseña. Esta acción es definitiva.",
+    "revokeBody": "Vamos a cerrar tu sesión en todos tus dispositivos (incluido este). Confirma tu contraseña para continuar."
+  },
+  "verified": {
+    "short": "Verificado",
+    "badgeLabel": "Identidad verificada por el equipo",
+    "filterLabel": "Solo verificados",
+    "filterHint": "Muestra solo profesionales con identidad verificada",
+    "providerNotYetTitle": "Pendiente de verificación",
+    "providerNotYetBody": "Tu perfil no aparecerá en el marketplace hasta que verifiques tu identidad. Hazlo desde tu perfil → Verificación de identidad."
+  },
   "reviews": {
     "writeReview": "Escribir reseña",
     "rating": "Valoración",
@@ -3823,6 +3839,9 @@
     "adminPanel": "Panel de Administración",
     "sectionAccount": "Cuenta",
     "sectionPreferences": "Preferencias",
+    "sectionSecurity": "Seguridad",
+    "revokeAllSessions": "Cerrar sesión en todos los dispositivos",
+    "revokeAllSessionsConfirm": "Cerraremos tu sesión en TODOS tus dispositivos (incluido este). Tendrás que volver a entrar con tu contraseña.",
     "hapticsLabel": "Vibración háptica",
     "hapticsHint": "Activa la vibración al pulsar botones",
     "sectionDangerZone": "Zona de peligro",
@@ -5542,6 +5561,8 @@
       "priceLabel": "Tarifa",
       "markCompleted": "Marcar completada",
       "completeAfterEnds": "Podrás marcar como completada cuando termine el servicio.",
+      "completePhotoPermBody": "Necesitamos permiso de cámara para tomar la foto que confirma el servicio.",
+      "completionPhotoTitle": "Foto del servicio",
       "cancelTitle": "Cancelar reserva",
       "cancelBody": "El hueco volverá a estar disponible. ¿Seguro?",
       "cancelCta": "Cancelar reserva"
@@ -5573,6 +5594,7 @@
       "not_cancellable": "Esta reserva ya no se puede cancelar.",
       "not_completable": "Esta reserva no se puede marcar como completada.",
       "too_early": "Aún no puedes marcarla como completada — espera a que termine el servicio.",
+      "photo_required": "Para marcar la reserva como completada necesitas subir una foto del servicio.",
       "method_not_allowed": "Operación no permitida."
     },
     "stats": {

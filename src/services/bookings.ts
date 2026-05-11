@@ -12,7 +12,9 @@ import {
   type QueryDocumentSnapshot,
   type DocumentData,
 } from 'firebase/firestore';
-import { auth, db } from '../config/firebase';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import * as ImageManipulator from 'expo-image-manipulator';
+import { auth, db, storage } from '../config/firebase';
 import {
   Booking,
   BookingService,
@@ -99,14 +101,14 @@ export async function createBooking(input: CreateBookingInput): Promise<CreateBo
   return (await res.json()) as CreateBookingResult;
 }
 
-async function callBookingFunction(url: string, bookingId: string, label: string): Promise<void> {
+async function callBookingFunction(url: string, body: any, label: string): Promise<void> {
   const user = auth.currentUser;
   if (!user) throw new Error('unauthenticated');
   const idToken = await user.getIdToken();
   const res = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${idToken}` },
-    body: JSON.stringify({ bookingId }),
+    body: JSON.stringify(body),
   });
   if (!res.ok) {
     let code = 'unknown';
@@ -122,11 +124,35 @@ async function callBookingFunction(url: string, bookingId: string, label: string
 }
 
 export async function cancelBooking(bookingId: string): Promise<void> {
-  await callBookingFunction(FUNCTION_URL_CANCEL, bookingId, 'cancelBooking');
+  await callBookingFunction(FUNCTION_URL_CANCEL, { bookingId }, 'cancelBooking');
 }
 
-export async function markBookingCompleted(bookingId: string): Promise<void> {
-  await callBookingFunction(FUNCTION_URL_COMPLETE, bookingId, 'markBookingCompleted');
+/** Mark a confirmed booking as completed. Requires `completionPhotoURL`
+ *  (https URL of a photo proof) — server rejects calls without it. The UI
+ *  should either reuse the latest live-session photo or capture a new one
+ *  before calling this. */
+export async function markBookingCompleted(bookingId: string, completionPhotoURL: string): Promise<void> {
+  await callBookingFunction(
+    FUNCTION_URL_COMPLETE,
+    { bookingId, completionPhotoURL },
+    'markBookingCompleted',
+  );
+}
+
+/** Compress a photo URI to ~1024px and upload to Storage at
+ *  `booking_completion_photos/{bookingId}/photo.jpg`. Returns the download URL. */
+export async function uploadCompletionPhoto(bookingId: string, sourceUri: string): Promise<string> {
+  // Compress to keep storage costs low — 1024px is plenty for proof-of-service
+  const compressed = await ImageManipulator.manipulateAsync(
+    sourceUri,
+    [{ resize: { width: 1024 } }],
+    { compress: 0.7, format: ImageManipulator.SaveFormat.JPEG },
+  );
+  const path = `booking_completion_photos/${bookingId}/photo.jpg`;
+  const response = await fetch(compressed.uri);
+  const blob = await response.blob();
+  await uploadBytes(ref(storage, path), blob, { contentType: 'image/jpeg' });
+  return await getDownloadURL(ref(storage, path));
 }
 
 // ── Read-side helpers ────────────────────────────────────────────────────────

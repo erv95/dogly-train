@@ -123,6 +123,15 @@ service firebase.storage {
         );
     }
 
+    // ── Booking completion photo: booking_completion_photos/{bookingId}/photo.jpg
+    // Provider uploads a single photo as proof of service when marking a booking
+    // completed. Both parties read it (URL is unguessable; metadata enforced via
+    // Firestore rules on the booking doc). 5MB max, image only.
+    match /booking_completion_photos/{bookingId}/{fileName} {
+      allow read: if isAuth();
+      allow write: if isAuth() && isValidImage();
+    }
+
     // ── Live session photos: live-sessions/{bookingId}/{fileName} ──────────
     // Provider uploads mid-service photos that the owner sees in real time.
     // - Both participants of the booking can READ (uses the parent live-session
