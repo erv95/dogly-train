@@ -1,4 +1,97 @@
 {
+  "dispute": {
+    "openCta": "Reportar um problema",
+    "modalTitle": "Reportar um problema",
+    "modalIntro": "Diz-nos o que aconteceu. Analisamos cada reclamação manualmente e respondemos em 48 h.",
+    "reasonLabel": "Motivo",
+    "descriptionLabel": "Descrição",
+    "descriptionPlaceholder": "Descreve o sucedido com o máximo detalhe possível.",
+    "submit": "Enviar reclamação",
+    "fineprint": "A outra parte verá que abriste uma reclamação, mas não a tua descrição. O moderador vê os dois lados.",
+    "successTitle": "Reclamação enviada",
+    "successBody": "Obrigado. Vamos analisar em 48 h e notificar-te pela app e email.",
+    "reasons": {
+      "no_show": "Não compareceu",
+      "poor_service": "Serviço deficiente",
+      "safety_concern": "Segurança ou bem-estar",
+      "payment_issue": "Problema com o pagamento",
+      "inappropriate_behavior": "Comportamento inadequado",
+      "other": "Outro"
+    },
+    "statusYours": {
+      "open": "A tua reclamação está aberta",
+      "resolved": "A tua reclamação foi resolvida",
+      "rejected": "A tua reclamação foi indeferida"
+    },
+    "statusOther": {
+      "open": "A outra parte abriu uma reclamação",
+      "resolved": "A reclamação da outra parte foi resolvida",
+      "rejected": "A reclamação da outra parte foi indeferida"
+    },
+    "errors": {
+      "tooShort": "Descreve o que aconteceu com pelo menos 5 caracteres.",
+      "rateLimited": "Enviaste demasiadas reclamações recentemente. Tenta mais tarde.",
+      "generic": "Não foi possível enviar a tua reclamação. Tenta de novo."
+    }
+  },
+  "profile": {
+    "photoTitle": "Foto de perfil",
+    "photoOptionalHint": "A tua foto é opcional. Se a removeres mostramos as tuas iniciais.",
+    "photoOptionalLabel": "Opcional",
+    "photoChange": "Mudar foto",
+    "photoRemove": "Remover foto"
+  },
+  "security": {
+    "heroTitle": "Como protegemos a tua conta e os teus dados",
+    "heroBody": "Medidas concretas que aplicamos. Sem marketing, sem promessas vagas: o que o código realmente faz.",
+    "sectionAccount": "Conta",
+    "account": {
+      "verifiedTitle": "Cuidadores com identidade verificada",
+      "verifiedBody": "Só aparecem nas pesquisas os adestradores e cuidadores que enviaram identificação e foram aprovados manualmente.",
+      "sessionsTitle": "Terminar sessão em todos os dispositivos",
+      "sessionsBody": "Se perderes o telemóvel ou suspeitares de acesso indevido, podes invalidar todas as sessões ativas com um toque.",
+      "reauthTitle": "Re-autenticação para ações críticas",
+      "reauthBody": "Apagar a conta ou encerrar todas as sessões pede de novo a tua palavra-passe. Um telemóvel desbloqueado não chega.",
+      "softDeleteTitle": "Eliminação com 30 dias de prazo",
+      "softDeleteBody": "Se apagares a conta podes restaurá-la nos 30 dias seguintes ao iniciar sessão. Depois é definitivo.",
+      "emailAlertsTitle": "Alertas por email de eventos críticos",
+      "emailAlertsBody": "Enviamos email quando alguém encerra todas as tuas sessões ou pede para apagar a conta, para reagires se não foste tu."
+    },
+    "sectionChat": "Chat",
+    "chat": {
+      "piiTitle": "Aviso antes de partilhar dados pessoais",
+      "piiBody": "Se a tua mensagem contém um email, telefone ou o nome de outra app de mensagens, avisamos antes de enviar. A escolha é tua.",
+      "onPlatformTitle": "Conversas dentro da app",
+      "onPlatformBody": "Manter o chat aqui permite-nos rever denúncias, guardar provas e proteger ambas as partes em caso de disputa.",
+      "reportTitle": "Denúncias num toque",
+      "reportBody": "Se alguém te ofende, assedia ou tenta tirar-te da plataforma, denuncia. Revemos manualmente."
+    },
+    "sectionLocation": "Localização",
+    "location": {
+      "foregroundTitle": "GPS só durante o serviço",
+      "foregroundBody": "A localização ao vivo só está ativa enquanto o cuidador tem o serviço aberto em primeiro plano. Nunca em segundo plano.",
+      "anonymizedTitle": "Último ponto anonimizado",
+      "anonymizedBody": "Ao terminar o passeio arredondamos o último ponto GPS para uma zona de ~500 m. O dono vê o trajeto mas não a casa do cuidador.",
+      "photoTitle": "Fotos do serviço cifradas em trânsito",
+      "photoBody": "As fotos enviadas pelo cuidador viajam por HTTPS e só são visíveis para as duas partes da reserva."
+    },
+    "sectionData": "Os teus dados",
+    "data": {
+      "exportTitle": "Descarrega todos os teus dados (RGPD Art. 20)",
+      "exportBody": "Em Definições → Descarregar os meus dados obténs um JSON com perfil, cães, reservas, avaliações, transações e mais.",
+      "deleteTitle": "Eliminação total a pedido",
+      "deleteBody": "Apagar a conta remove o teu perfil, cães, fotos, avaliações e mensagens associadas dos servidores Firebase.",
+      "photoTitle": "Foto de perfil opcional",
+      "photoBody": "Podes registar-te e reservar sem foto. Mostramos as tuas iniciais. Se carregaste uma e te arrependeste, podes retirá-la.",
+      "storageTitle": "Servidores europeus",
+      "storageBody": "Dados armazenados em Firebase (Google Cloud) com cifragem em repouso. Região principal europe-west para reduzir transferências internacionais."
+    },
+    "contactTitle": "Contacto",
+    "contactEmailTitle": "Algo não bate certo? Escreve-nos",
+    "contactSettingsTitle": "Abrir Definições",
+    "contactSettingsBody": "Terminar sessões, descarregar dados, apagar conta e mais.",
+    "footer": "Este documento é atualizado sempre que adicionamos ou alteramos uma medida de segurança. Última revisão: 11 de maio de 2026."
+  },
   "common": {
     "loading": "Carregando...",
     "loadMore": "Ver mais",
@@ -41,6 +134,7 @@
   "auth": {
     "welcome": "Bem-vindo ao Dogly Train",
     "welcomeSubtitle": "Conecte-se com os melhores adestradores",
+    "howWeProtectYou": "Como protegemos os teus dados",
     "login": "Entrar",
     "register": "Cadastrar",
     "email": "E-mail",
@@ -3635,6 +3729,15 @@
   },
   "chat": {
     "typeMessage": "Digite uma mensagem...",
+    "piiWarning": {
+      "title": "Melhor manter a conversa aqui",
+      "body": "A tua mensagem contém informação sensível:",
+      "phone": "Um número de telefone",
+      "email": "Um endereço de email",
+      "externalApp": "Uma menção a outra app de mensagens",
+      "tip": "Se a conversa sair do Dogly Train, perdemos a capacidade de mediar se houver um problema. Lembra-te que o profissional já tem o teu Bizum quando a reserva for confirmada.",
+      "sendAnyway": "Enviar mesmo assim"
+    },
     "noChats": "Você ainda não tem conversas",
     "startChat": "Iniciar conversa",
     "newChat": "Nova mensagem",
@@ -3803,6 +3906,18 @@
     "historyEmpty": "Sem transações ainda",
     "refund": "Reembolso"
   },
+  "accountPending": {
+    "title": "Conta pendente de exclusão",
+    "body": "A tua conta será excluída automaticamente a {{date}}. Podes restaurá-la antes dessa data e continuar a usar a app com os teus dados intactos.",
+    "info": "Durante este período o teu perfil está oculto nas pesquisas e não podes fazer nem receber novas reservas.",
+    "restoreCta": "Restaurar a minha conta",
+    "restoredTitle": "Conta restaurada",
+    "restoredBody": "A tua conta está ativa de novo. Bem-vindo de volta!",
+    "errors": {
+      "grace_expired": "O prazo de 30 dias expirou. A tua conta não pode ser restaurada.",
+      "unknown": "Não foi possível restaurar a tua conta. Tenta mais tarde."
+    }
+  },
   "reauth": {
     "passwordPlaceholder": "A tua palavra-passe",
     "noUser": "A tua sessão expirou. Inicia sessão de novo.",
@@ -3825,7 +3940,12 @@
     "comment": "Comentário (opcional)",
     "submitReview": "Enviar avaliação",
     "reviewSent": "Avaliação enviada",
-    "alreadyReviewed": "Você já avaliou este adestrador"
+    "alreadyReviewed": "Você já avaliou este adestrador",
+    "publicSectionTitle": "Avaliações",
+    "noReviewsYet": "Ainda não há avaliações. Seja o primeiro a deixar uma.",
+    "viewAll": "Ver as {{count}} avaliações",
+    "collapseAll": "Ver menos",
+    "anonymousReviewer": "Utilizador"
   },
   "settings": {
     "title": "Configurações",
@@ -3833,15 +3953,20 @@
     "notifications": "Notificações",
     "privacy": "Privacidade",
     "deleteAccount": "Excluir conta",
-    "deleteConfirm": "Tem certeza? Esta ação não pode ser desfeita.",
+    "deleteConfirm": "A tua conta entrará num período de exclusão de 30 dias. Podes restaurá-la iniciando sessão e tocando em \"Restaurar conta\" dentro desse prazo. Após 30 dias a exclusão é definitiva.",
     "logoutConfirm": "Tem certeza que deseja sair?",
     "logout": "Sair",
     "adminPanel": "Painel de administração",
     "sectionAccount": "Conta",
     "sectionPreferences": "Preferências",
     "sectionSecurity": "Segurança",
+    "securityCenter": "Centro de segurança",
     "revokeAllSessions": "Terminar sessão em todos os dispositivos",
     "revokeAllSessionsConfirm": "Vamos terminar a tua sessão em TODOS os teus dispositivos (incluindo este). Terás de iniciar sessão de novo com a palavra-passe.",
+    "exportData": "Descarregar os meus dados",
+    "exportDataInProgress": "A preparar o download…",
+    "exportDataRateLimited": "Demasiados pedidos. Aguarda uma hora e tenta de novo.",
+    "exportDataError": "Não foi possível gerar o ficheiro. Tenta de novo.",
     "hapticsLabel": "Vibração háptica",
     "hapticsHint": "Vibrar ao tocar nos botões",
     "sectionDangerZone": "Zona de perigo",

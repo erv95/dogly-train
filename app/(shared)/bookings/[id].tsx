@@ -26,6 +26,7 @@ import { Booking } from '../../../src/types';
 import { BOOKING_TIMEZONE } from '../../../src/config/booking';
 import { useAuth } from '../../../src/contexts/AuthContext';
 import BizumPaymentBlock from '../../../src/components/BizumPaymentBlock';
+import { DisputeBlock } from '../../../src/components/DisputeBlock';
 import { Avatar } from '../../../src/components/ui';
 import { Confetti } from '../../../src/components/Confetti';
 import { useHaptics } from '../../../src/hooks/useHaptics';
@@ -390,6 +391,15 @@ export default function BookingDetailScreen() {
          && !canComplete
          && (
           <Text style={styles.providerHint}>{t('bookings.detail.completeAfterEnds')}</Text>
+        )}
+
+        {/* Dispute resolution: status + "Report a problem" button */}
+        {firebaseUser && (
+          <DisputeBlock
+            bookingId={booking.id}
+            currentUserId={firebaseUser.uid}
+            bookingStatus={booking.status}
+          />
         )}
       </ScrollView>
     </SafeAreaView>

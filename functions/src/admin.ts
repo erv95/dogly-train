@@ -1,5 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
+import { sendSecurityEmail } from "./_shared";
 
 const db = admin.firestore();
 
@@ -62,6 +63,95 @@ export const checkBoostExpiration = functions.pubsub
  * Deletes: Firestore documents, Firebase Auth account, Storage files.
  * Order: data first, Auth account last (token stays valid during cleanup).
  */
+/** Full account purge — Firestore docs, Storage files, Auth identity.
+ *  Used by both the daily cron (`processPendingDeletions`) and as the final
+ *  step of an immediate-delete admin action. Idempotent: if the user doc is
+ *  already gone, still cleans up Auth in case it lingered. */
+async function purgeUserAccount(userId: string): Promise<void> {
+  // Verify user exists in Firestore before starting deletion
+  const userDoc = await db.collection("users").doc(userId).get();
+  if (!userDoc.exists) {
+    try { await admin.auth().deleteUser(userId); } catch {}
+    return;
+  }
+
+  // 1. Dogs + dog stats
+  const [dogsSnapshot, dogStatsSnapshot] = await Promise.all([
+    db.collection("dogs").where("ownerId", "==", userId).get(),
+    db.collection("dog_stats").where("ownerId", "==", userId).get(),
+  ]);
+  const batch1 = db.batch();
+  dogsSnapshot.forEach((d) => batch1.delete(d.ref));
+  dogStatsSnapshot.forEach((d) => batch1.delete(d.ref));
+  if (!dogsSnapshot.empty || !dogStatsSnapshot.empty) await batch1.commit();
+
+  // 2. Reviews (given and received)
+  const [reviewsGiven, reviewsReceived] = await Promise.all([
+    db.collection("reviews").where("fromUserId", "==", userId).get(),
+    db.collection("reviews").where("toUserId", "==", userId).get(),
+  ]);
+  const batch2 = db.batch();
+  reviewsGiven.forEach((d) => batch2.delete(d.ref));
+  reviewsReceived.forEach((d) => batch2.delete(d.ref));
+  if (!reviewsGiven.empty || !reviewsReceived.empty) await batch2.commit();
+
+  // 3. Coin transactions + course progress
+  const [txSnapshot, progressSnapshot] = await Promise.all([
+    db.collection("coin_transactions").where("userId", "==", userId).get(),
+    db.collection("course_progress").where("userId", "==", userId).get(),
+  ]);
+  const batch3 = db.batch();
+  txSnapshot.forEach((d) => batch3.delete(d.ref));
+  progressSnapshot.forEach((d) => batch3.delete(d.ref));
+  if (!txSnapshot.empty || !progressSnapshot.empty) await batch3.commit();
+
+  // 3b. Walk logs + health reminders (GDPR right-to-erasure)
+  const [walksSnapshot, remindersSnapshot] = await Promise.all([
+    db.collection("dog_walks").where("userId", "==", userId).get(),
+    db.collection("dog_reminders").where("userId", "==", userId).get(),
+  ]);
+  const batch3b = db.batch();
+  walksSnapshot.forEach((d) => batch3b.delete(d.ref));
+  remindersSnapshot.forEach((d) => batch3b.delete(d.ref));
+  if (!walksSnapshot.empty || !remindersSnapshot.empty) await batch3b.commit();
+
+  // 4. Anonymize participant info in shared chats
+  const chatsSnapshot = await db
+    .collection("chats")
+    .where("participants", "array-contains", userId)
+    .get();
+  const batch4 = db.batch();
+  chatsSnapshot.forEach((chatDoc) => {
+    const data = chatDoc.data();
+    batch4.update(chatDoc.ref, {
+      participantNames: { ...data.participantNames, [userId]: "Deleted User" },
+      participantPhotos: { ...data.participantPhotos, [userId]: null },
+    });
+  });
+  if (!chatsSnapshot.empty) await batch4.commit();
+
+  // ── Storage cleanup (GDPR: remove all user files) ──────────────────────
+  await Promise.allSettled([
+    deleteStorageFolder(`users/${userId}/`),
+    deleteStorageFolder(`dogs/${userId}/`),
+    deleteStorageFolder(`certs/${userId}/`),
+  ]);
+
+  // ── Identity deletion (last) ──────────────────────────────────────────
+  await db.collection("users").doc(userId).delete();
+  await admin.auth().deleteUser(userId);
+
+  functions.logger.info("User account fully purged", { userId });
+}
+
+/** Soft-delete: mark the account for deletion with a 30-day grace period.
+ *  The user can `restoreAccount` during that window to undo. After 30 days
+ *  the `processPendingDeletions` cron calls `purgeUserAccount`.
+ *
+ *  This replaces the previous immediate-delete behavior so a stolen phone
+ *  or buyer's remorse have a recovery window. */
+const DELETION_GRACE_DAYS = 30;
+
 export const deleteUserAccount = functions.https.onRequest(async (req, res) => {
   // CORS — restricted to app origin
   const allowedOrigin = process.env.APP_ORIGIN ?? "https://dogly-train.web.app";
@@ -107,95 +197,158 @@ export const deleteUserAccount = functions.https.onRequest(async (req, res) => {
   }
 
   try {
-    // Verify user exists in Firestore before starting deletion
-    const userDoc = await db.collection("users").doc(userId).get();
+    const userRef = db.collection("users").doc(userId);
+    const userDoc = await userRef.get();
     if (!userDoc.exists) {
-      // Already deleted — still clean up Auth in case it lingered
+      // Edge case: user doc already gone but Auth still exists. Treat as
+      // success — caller just wants their account gone.
       try { await admin.auth().deleteUser(userId); } catch {}
       res.status(200).json({ success: true });
       return;
     }
 
-    // ── Firestore cleanup ────────────────────────────────────────────────────
-    // All steps run before deleting the user doc/Auth so the token stays valid.
+    const now = admin.firestore.Timestamp.now();
+    const scheduledFor = admin.firestore.Timestamp.fromMillis(
+      Date.now() + DELETION_GRACE_DAYS * 24 * 60 * 60 * 1000,
+    );
 
-    // 1. Dogs + dog stats
-    const [dogsSnapshot, dogStatsSnapshot] = await Promise.all([
-      db.collection("dogs").where("ownerId", "==", userId).get(),
-      db.collection("dog_stats").where("ownerId", "==", userId).get(),
-    ]);
-    const batch1 = db.batch();
-    dogsSnapshot.forEach((d) => batch1.delete(d.ref));
-    dogStatsSnapshot.forEach((d) => batch1.delete(d.ref));
-    if (!dogsSnapshot.empty || !dogStatsSnapshot.empty) await batch1.commit();
-
-    // 2. Reviews (given and received)
-    const [reviewsGiven, reviewsReceived] = await Promise.all([
-      db.collection("reviews").where("fromUserId", "==", userId).get(),
-      db.collection("reviews").where("toUserId", "==", userId).get(),
-    ]);
-    const batch2 = db.batch();
-    reviewsGiven.forEach((d) => batch2.delete(d.ref));
-    reviewsReceived.forEach((d) => batch2.delete(d.ref));
-    if (!reviewsGiven.empty || !reviewsReceived.empty) await batch2.commit();
-
-    // 3. Coin transactions + course progress
-    const [txSnapshot, progressSnapshot] = await Promise.all([
-      db.collection("coin_transactions").where("userId", "==", userId).get(),
-      db.collection("course_progress").where("userId", "==", userId).get(),
-    ]);
-    const batch3 = db.batch();
-    txSnapshot.forEach((d) => batch3.delete(d.ref));
-    progressSnapshot.forEach((d) => batch3.delete(d.ref));
-    if (!txSnapshot.empty || !progressSnapshot.empty) await batch3.commit();
-
-    // 3b. Walk logs + health reminders (GDPR right-to-erasure)
-    const [walksSnapshot, remindersSnapshot] = await Promise.all([
-      db.collection("dog_walks").where("userId", "==", userId).get(),
-      db.collection("dog_reminders").where("userId", "==", userId).get(),
-    ]);
-    const batch3b = db.batch();
-    walksSnapshot.forEach((d) => batch3b.delete(d.ref));
-    remindersSnapshot.forEach((d) => batch3b.delete(d.ref));
-    if (!walksSnapshot.empty || !remindersSnapshot.empty) await batch3b.commit();
-
-    // 4. Anonymize participant info in shared chats
-    const chatsSnapshot = await db
-      .collection("chats")
-      .where("participants", "array-contains", userId)
-      .get();
-    const batch4 = db.batch();
-    chatsSnapshot.forEach((chatDoc) => {
-      const data = chatDoc.data();
-      batch4.update(chatDoc.ref, {
-        participantNames: { ...data.participantNames, [userId]: "Deleted User" },
-        participantPhotos: { ...data.participantPhotos, [userId]: null },
-      });
+    // Soft-delete: flip status + record schedule. User can still log in to
+    // restore within the grace window.
+    await userRef.update({
+      status: "pending_deletion",
+      deletionRequestedAt: now,
+      deletionScheduledFor: scheduledFor,
+      updatedAt: now,
     });
-    if (!chatsSnapshot.empty) await batch4.commit();
 
-    // ── Storage cleanup (GDPR: remove all user files) ────────────────────────
-    // Run in parallel — failures are logged but do not block account deletion.
-    await Promise.allSettled([
-      deleteStorageFolder(`users/${userId}/`),   // avatar
-      deleteStorageFolder(`dogs/${userId}/`),    // dog photos
-      deleteStorageFolder(`certs/${userId}/`),   // trainer certificates
-    ]);
+    // Audit log
+    await db.collection("security_events").add({
+      userId,
+      type: "account_deletion_requested",
+      scheduledFor,
+      createdAt: now,
+    });
 
-    // ── Identity deletion (last) ──────────────────────────────────────────────
-    // 5. Firestore user document
-    await db.collection("users").doc(userId).delete();
+    // Email notification so the user has paper trail outside the app.
+    await sendSecurityEmail(userId, "account_deletion_requested", {
+      scheduledDate: scheduledFor.toDate().toLocaleDateString("es-ES", {
+        day: "numeric", month: "long", year: "numeric",
+      }),
+    });
 
-    // 6. Firebase Auth account — very last so token stays valid throughout
-    await admin.auth().deleteUser(userId);
-
-    functions.logger.info("User account fully deleted", { userId });
-    res.status(200).json({ success: true });
+    functions.logger.info("Account soft-delete scheduled", {
+      userId, scheduledFor: scheduledFor.toDate().toISOString(),
+    });
+    res.status(200).json({
+      success: true,
+      scheduledFor: scheduledFor.toMillis(),
+      graceDays: DELETION_GRACE_DAYS,
+    });
   } catch (error: any) {
-    functions.logger.error("Error deleting user", { userId, message: error.message });
-    res.status(500).json({ error: "Failed to delete account" });
+    functions.logger.error("Error scheduling deletion", { userId, message: error.message });
+    res.status(500).json({ error: "Failed to schedule account deletion" });
   }
 });
+
+/** Reverse a pending soft-delete. Only allowed while the account is in
+ *  `pending_deletion` status AND the scheduled date hasn't passed yet. */
+export const restoreAccount = functions.https.onRequest(async (req, res) => {
+  const allowedOrigin = process.env.APP_ORIGIN ?? "https://dogly-train.web.app";
+  res.set("Access-Control-Allow-Origin", allowedOrigin);
+  if (req.method === "OPTIONS") {
+    res.set("Access-Control-Allow-Methods", "POST");
+    res.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    res.status(204).send("");
+    return;
+  }
+  if (req.method !== "POST") {
+    res.status(405).json({ error: "method_not_allowed" });
+    return;
+  }
+
+  const authHeader = req.headers.authorization ?? "";
+  const idToken = authHeader.startsWith("Bearer ") ? authHeader.slice(7) : "";
+  if (!idToken) { res.status(401).json({ error: "unauthenticated" }); return; }
+  let uid: string;
+  try {
+    const decoded = await admin.auth().verifyIdToken(idToken);
+    uid = decoded.uid;
+  } catch {
+    res.status(401).json({ error: "unauthenticated" });
+    return;
+  }
+
+  try {
+    const userRef = db.collection("users").doc(uid);
+    const snap = await userRef.get();
+    if (!snap.exists) {
+      res.status(404).json({ error: "user_not_found" });
+      return;
+    }
+    const data = snap.data() ?? {};
+    if (data.status !== "pending_deletion") {
+      res.status(400).json({ error: "not_pending" });
+      return;
+    }
+    const scheduledMs = data.deletionScheduledFor?.toMillis?.() ?? 0;
+    if (scheduledMs && Date.now() > scheduledMs) {
+      res.status(400).json({ error: "grace_expired" });
+      return;
+    }
+
+    await userRef.update({
+      status: "active",
+      deletionRequestedAt: admin.firestore.FieldValue.delete(),
+      deletionScheduledFor: admin.firestore.FieldValue.delete(),
+      updatedAt: admin.firestore.Timestamp.now(),
+    });
+
+    await db.collection("security_events").add({
+      userId: uid,
+      type: "account_deletion_cancelled",
+      createdAt: admin.firestore.Timestamp.now(),
+    });
+
+    await sendSecurityEmail(uid, "account_deletion_cancelled");
+
+    functions.logger.info("Account deletion cancelled by user", { uid });
+    res.status(200).json({ success: true });
+  } catch (err: any) {
+    functions.logger.error("restoreAccount failed", { uid, err: err?.message });
+    res.status(500).json({ error: "restore_failed" });
+  }
+});
+
+/** Daily cron — purges users whose `deletionScheduledFor` is now in the past.
+ *  Processes up to 50 per run; backlog drains over consecutive days. */
+export const processPendingDeletions = functions.pubsub
+  .schedule("every 24 hours")
+  .onRun(async () => {
+    const now = admin.firestore.Timestamp.now();
+    const snap = await db.collection("users")
+      .where("status", "==", "pending_deletion")
+      .where("deletionScheduledFor", "<=", now)
+      .limit(50)
+      .get();
+
+    if (snap.empty) {
+      functions.logger.info("processPendingDeletions: nothing to purge");
+      return;
+    }
+
+    let purged = 0;
+    let failed = 0;
+    for (const doc of snap.docs) {
+      try {
+        await purgeUserAccount(doc.id);
+        purged++;
+      } catch (err: any) {
+        functions.logger.error("purgeUserAccount failed", { uid: doc.id, err: err?.message });
+        failed++;
+      }
+    }
+    functions.logger.info("processPendingDeletions done", { purged, failed, total: snap.size });
+  });
 
 /**
  * Admin-only: grant (or revoke) coins to a user. Used for support/compensation

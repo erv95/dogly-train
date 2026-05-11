@@ -65,6 +65,10 @@ export default function RootLayout() {
             <Stack.Screen name="(owner)" />
             <Stack.Screen name="(trainer)" />
             <Stack.Screen name="(shared)" />
+            <Stack.Screen
+              name="security"
+              options={{ headerShown: true, title: 'Seguridad' }}
+            />
           </Stack>
         </AuthProvider>
       </QueryClientProvider>

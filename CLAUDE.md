@@ -228,6 +228,74 @@ Do NOT change this to use KAV on Android. Do NOT use `Dimensions.get('window').h
 
 - `firebase.ts`: `getReactNativePersistence` export mismatch with firebase SDK types. Safe to ignore.
 
+## Security roadmap — external dependencies
+
+The in-code security work (Fases A–D) covers everything we can build with what we already have: Firebase Auth, Firestore, Cloud Functions, Storage. The items below close further gaps but each one needs an **external service**, a **business decision**, or a **platform/config change** that can't ship from a code commit alone. Document them here as we make calls on each.
+
+### 1. Phone number verification
+
+- **Why**: today email is the only proof of contact. SMS verification raises the cost of creating throwaway accounts (the #1 source of harassment + fraud on marketplaces).
+- **Options**: Firebase Phone Auth (free up to 10K/month) or Twilio Verify (~$0.05/verification).
+- **Decision needed**: do we *gate registration* on it (high friction, lowest fraud) or make it *optional, with a trust badge* (low friction, moderate fraud).
+- **Touch points**: `src/services/auth.ts` (linkWithCredential after signup), `User.phoneVerified` flag in the user doc, badge in profile cards next to `verified`.
+
+### 2. Two-factor auth (TOTP / authenticator apps)
+
+- **Why**: defends against credential stuffing once we have meaningful accounts (providers with bookings, owners with payment info on file).
+- **Blocker**: Firebase Auth MFA requires upgrading to the **Identity Platform** SKU (paid). Not available on the free Spark plan.
+- **Decision needed**: when is the user base large enough to justify the SKU upgrade.
+- **Touch points**: enrollment flow in settings → `multiFactor.getSession()` → enroll TOTP, MFA challenge during login, re-auth screen needs to handle the MFA step too.
+
+### 3. Background checks (provider screening)
+
+- **Why**: identity verification proves *who* but not *whether they have a criminal record*. Rover/Wag run pro-level providers through Checkr.
+- **Options for Spain market**: ID-Pal (~€8/check, EU-focused), Onfido (~€10/check), Veriff (~€2/check).
+- **Decision needed**: gate "Pro" status on a passed check; absorb cost or pass to provider (typical: provider pays one-time fee to upgrade).
+- **Touch points**: extend `id_verifications` collection with `backgroundCheckStatus` + `vendorRef`, CF webhook to receive vendor results, admin sees both in one view, search ranks providers with both checks higher.
+
+### 4. Liability insurance
+
+- **Why**: every booking is a potential injury claim (dog bites, lost dog, property damage). Rover bundles $1M of insurance into every reservation; we don't have any. This is a moat as much as a safety net.
+- **Options**: partner with a broker (Hiscox, Liberty Specialty Markets) offering "marketplace pooled coverage" — they charge per booking, we pass cost to the buyer.
+- **Decision needed**: legal (Spanish insurance regulator authorisation), pricing model (per-booking surcharge vs. eaten by us), claim flow.
+- **Touch points**: post-launch — needs lawyer + broker before any code.
+
+### 5. Suspicious login / impossible-travel detection
+
+- **Why**: detect "logged in from Spain at 10:00 and from Russia at 10:05" — classic account takeover signal.
+- **Options**:
+  - **Cheapest**: write our own — log every successful auth with IP + UA in `security_events` (we already do for some events). On each login, fetch the previous one; if geo distance / time delta is "impossible", flag the account and force re-auth.
+  - **Hosted**: Firebase Auth's built-in *Identity Risk Detection* (Identity Platform feature, same SKU upgrade as MFA).
+- **Decision needed**: ship the custom solution now (a few hours of code, no extra cost) or wait until the MFA upgrade and use the hosted one.
+
+### 6. Firebase Trigger Email extension
+
+- **Why**: B.4 wired `sendSecurityEmail` to write rows into the `mail/` collection following the Trigger Email schema, but the actual SMTP send only happens if the extension is **installed in the Firebase console**.
+- **Status**: code is ready, extension is not installed.
+- **Action**: install via Firebase console → Extensions → "Trigger Email" → configure SMTP (Brevo, SendGrid, or Gmail SMTP for testing). Until then `mail/` docs serve as an audit trail only.
+
+### 7. App Store / Play Store data-safety declarations
+
+- **Why**: both stores require declaring every data category we collect. Inaccurate disclosure → app removal.
+- **Touch points outside code**: App Store Connect → Privacy details; Play Console → Data safety form. Re-do on every major data-collection change (e.g., when we add phone verification we need to add "Phone number" to the declared list).
+
+### 8. Production SMTP for email verification
+
+- **Status today**: `sendEmailVerification` works via Firebase's default SMTP (limited deliverability, generic "Firebase" sender).
+- **Action**: in Firebase console → Authentication → Templates, override sender + reply-to with our domain and configure SPF/DKIM. Improves deliverability and brand trust.
+
+### 9. Stricter `firestore.rules` simulation tests
+
+- **Why**: rules are 680+ lines, and a single typo can leak a collection publicly.
+- **Action**: write `@firebase/rules-unit-testing` test suite covering at least: reviews public read, disputes both-party read, security_events admin-only, mail/ admin-only. Run on CI. We don't have CI yet either.
+
+### 10. Logging + alerting on `security_events`
+
+- **Why**: `dispute_opened`, `revoke_all_sessions`, `data_export`, `account_deletion_requested` all land in `security_events` but nobody is watching the collection.
+- **Action**: either a daily digest function (sums by type, emails admin) or wire Pub/Sub → Cloud Logging → an alerting policy when the rate of `revoke_all_sessions` doubles week-over-week.
+
+Each of these is its own ticket. Bundle them as needed; don't gate the launch on any single one beyond what the privacy policy promises.
+
 ## Deploy Workflow
 
 1. **Indexes first** (always): `firebase deploy --only firestore:indexes`. Wait for "Enabled" in console (build can take 5-30 min).

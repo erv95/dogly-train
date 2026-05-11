@@ -48,7 +48,7 @@ export default function OwnerProfileScreen() {
     }
   };
 
-  const handleChangePhoto = async () => {
+  const doPickPhoto = async () => {
     if (!firebaseUser) return;
     setPhotoLoading(true);
     try {
@@ -61,6 +61,33 @@ export default function OwnerProfileScreen() {
       Alert.alert(t('common.error'), t('authErrors.generic'));
     } finally {
       setPhotoLoading(false);
+    }
+  };
+
+  const doRemovePhoto = async () => {
+    if (!firebaseUser) return;
+    setPhotoLoading(true);
+    try {
+      await updateUserProfile(firebaseUser.uid, { photoURL: null });
+      setUserData({ ...userData!, photoURL: null });
+    } catch (error) {
+      Alert.alert(t('common.error'), t('authErrors.generic'));
+    } finally {
+      setPhotoLoading(false);
+    }
+  };
+
+  // If a photo exists, offer change vs. remove. Otherwise go straight to
+  // picker. Mirrors the "photo is optional" UX from Wag/Rover.
+  const handleChangePhoto = () => {
+    if (userData?.photoURL) {
+      Alert.alert(t('profile.photoTitle'), t('profile.photoOptionalHint'), [
+        { text: t('common.cancel'), style: 'cancel' },
+        { text: t('profile.photoRemove'), style: 'destructive', onPress: doRemovePhoto },
+        { text: t('profile.photoChange'), onPress: doPickPhoto },
+      ]);
+    } else {
+      doPickPhoto();
     }
   };
 
@@ -84,6 +111,9 @@ export default function OwnerProfileScreen() {
             <Ionicons name="camera" size={16} color={colors.textOnPrimary} />
           </View>
         </TouchableOpacity>
+        {!userData?.photoURL && (
+          <Text style={styles.optionalHint}>{t('profile.photoOptionalLabel')}</Text>
+        )}
 
         {/* Name */}
         {editing ? (
@@ -198,6 +228,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderWidth: 2,
     borderColor: colors.background,
+  },
+  optionalHint: {
+    fontSize: fontSize.xs,
+    color: colors.textLight,
+    marginTop: spacing.xs,
+    fontStyle: 'italic',
   },
   nameRow: {
     flexDirection: 'row',

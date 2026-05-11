@@ -1,4 +1,97 @@
 {
+  "dispute": {
+    "openCta": "Report a problem",
+    "modalTitle": "Report a problem",
+    "modalIntro": "Tell us what happened. We review every dispute manually and reply within 48 h.",
+    "reasonLabel": "Reason",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Describe what happened in as much detail as possible.",
+    "submit": "Submit dispute",
+    "fineprint": "The other party will see that you opened a dispute, but not your description. The moderator sees both sides.",
+    "successTitle": "Dispute submitted",
+    "successBody": "Thanks. We'll review it within 48 h and notify you via the app and email.",
+    "reasons": {
+      "no_show": "No-show",
+      "poor_service": "Poor service",
+      "safety_concern": "Safety / welfare concern",
+      "payment_issue": "Payment issue",
+      "inappropriate_behavior": "Inappropriate behavior",
+      "other": "Other"
+    },
+    "statusYours": {
+      "open": "Your dispute is open",
+      "resolved": "Your dispute was resolved",
+      "rejected": "Your dispute was dismissed"
+    },
+    "statusOther": {
+      "open": "The other party opened a dispute",
+      "resolved": "The other party's dispute was resolved",
+      "rejected": "The other party's dispute was dismissed"
+    },
+    "errors": {
+      "tooShort": "Please describe what happened with at least 5 characters.",
+      "rateLimited": "You've submitted too many disputes recently. Try again later.",
+      "generic": "We couldn't submit your dispute. Please try again."
+    }
+  },
+  "profile": {
+    "photoTitle": "Profile photo",
+    "photoOptionalHint": "Your photo is optional. If you remove it we'll show your initials instead.",
+    "photoOptionalLabel": "Optional",
+    "photoChange": "Change photo",
+    "photoRemove": "Remove photo"
+  },
+  "security": {
+    "heroTitle": "How we protect your account and your data",
+    "heroBody": "Concrete measures we apply. No marketing, no vague promises: what the code actually does.",
+    "sectionAccount": "Account",
+    "account": {
+      "verifiedTitle": "Identity-verified caregivers",
+      "verifiedBody": "Only trainers and caretakers who submitted an ID and were manually approved appear in search.",
+      "sessionsTitle": "Log out of all devices",
+      "sessionsBody": "If you lose your phone or suspect access, you can invalidate every active session with one tap.",
+      "reauthTitle": "Re-authentication for critical actions",
+      "reauthBody": "Deleting your account or revoking sessions asks for your password again. An unlocked phone is not enough.",
+      "softDeleteTitle": "30-day grace deletion",
+      "softDeleteBody": "If you delete your account you can restore it for the next 30 days by signing back in. After that it's permanent.",
+      "emailAlertsTitle": "Email alerts for critical events",
+      "emailAlertsBody": "We email you when someone revokes all your sessions or requests account deletion, so you can react if it wasn't you."
+    },
+    "sectionChat": "Chat",
+    "chat": {
+      "piiTitle": "Warning before sharing personal info",
+      "piiBody": "If your message contains an email, phone number, or the name of another messaging app, we warn you before sending. Your call.",
+      "onPlatformTitle": "Conversations stay in the app",
+      "onPlatformBody": "Keeping chats here lets us review reports, retain evidence, and protect both sides in any dispute.",
+      "reportTitle": "One-tap reports",
+      "reportBody": "If someone offends you, harasses you, or tries to pull you off-platform, report it. We review manually."
+    },
+    "sectionLocation": "Location",
+    "location": {
+      "foregroundTitle": "GPS only during the service",
+      "foregroundBody": "Live location is only active while the provider has the service open in the foreground. Never in the background.",
+      "anonymizedTitle": "Last point anonymised",
+      "anonymizedBody": "When the walk ends we round the last GPS point to a ~500 m zone. The owner sees the route but not the carer's home.",
+      "photoTitle": "In-service photos encrypted in transit",
+      "photoBody": "Photos the carer sends during the walk travel over HTTPS and are visible only to the two parties on the booking."
+    },
+    "sectionData": "Your data",
+    "data": {
+      "exportTitle": "Download all your data (GDPR Art. 20)",
+      "exportBody": "From Settings → Download my data you get a JSON with your profile, dogs, bookings, reviews, transactions and more.",
+      "deleteTitle": "Full deletion on request",
+      "deleteBody": "Deleting your account removes your profile, dogs, photos, reviews and associated messages from Firebase servers.",
+      "photoTitle": "Optional profile photo",
+      "photoBody": "You can sign up and book without a photo. We show your initials. If you uploaded one and changed your mind, you can remove it.",
+      "storageTitle": "European servers",
+      "storageBody": "Data stored on Firebase (Google Cloud) with at-rest encryption. Primary region is europe-west to limit international transfers."
+    },
+    "contactTitle": "Contact",
+    "contactEmailTitle": "Something off? Write to us",
+    "contactSettingsTitle": "Open Settings",
+    "contactSettingsBody": "Revoke sessions, download data, delete account and more.",
+    "footer": "This document is updated every time we add or change a security measure. Last review: May 11, 2026."
+  },
   "common": {
     "loading": "Loading...",
     "loadMore": "Show more",
@@ -41,6 +134,7 @@
   "auth": {
     "welcome": "Welcome to Dogly Train",
     "welcomeSubtitle": "Connect with the best dog trainers",
+    "howWeProtectYou": "How we protect your data",
     "login": "Log in",
     "register": "Sign up",
     "email": "Email",
@@ -3635,6 +3729,15 @@
   },
   "chat": {
     "typeMessage": "Type a message...",
+    "piiWarning": {
+      "title": "Better keep the conversation here",
+      "body": "Your message contains sensitive info:",
+      "phone": "A phone number",
+      "email": "An email address",
+      "externalApp": "A reference to another messaging app",
+      "tip": "If the conversation leaves Dogly Train, we lose the ability to mediate if something goes wrong. Remember the provider already has your Bizum after the booking is confirmed.",
+      "sendAnyway": "Send anyway"
+    },
     "noChats": "You don't have any conversations yet",
     "startChat": "Start chat",
     "newChat": "New message",
@@ -3803,6 +3906,18 @@
     "historyEmpty": "No transactions yet",
     "refund": "Refund"
   },
+  "accountPending": {
+    "title": "Account pending deletion",
+    "body": "Your account will be deleted automatically on {{date}}. You can restore it before that date and keep using the app with all your data intact.",
+    "info": "During this period your profile is hidden from search and you can't make or receive new bookings.",
+    "restoreCta": "Restore my account",
+    "restoredTitle": "Account restored",
+    "restoredBody": "Your account is active again. Welcome back!",
+    "errors": {
+      "grace_expired": "The 30-day grace period has expired. Your account can't be restored.",
+      "unknown": "We couldn't restore your account. Try again later."
+    }
+  },
   "reauth": {
     "passwordPlaceholder": "Your password",
     "noUser": "Your session has expired. Please sign in again.",
@@ -3825,7 +3940,12 @@
     "comment": "Comment (optional)",
     "submitReview": "Submit review",
     "reviewSent": "Review sent",
-    "alreadyReviewed": "You already reviewed this trainer"
+    "alreadyReviewed": "You already reviewed this trainer",
+    "publicSectionTitle": "Reviews",
+    "noReviewsYet": "No reviews yet. Be the first to leave one.",
+    "viewAll": "See all {{count}} reviews",
+    "collapseAll": "Show less",
+    "anonymousReviewer": "User"
   },
   "settings": {
     "title": "Settings",
@@ -3833,15 +3953,20 @@
     "notifications": "Notifications",
     "privacy": "Privacy",
     "deleteAccount": "Delete account",
-    "deleteConfirm": "Are you sure? This action cannot be undone.",
+    "deleteConfirm": "Your account will enter a 30-day deletion grace period. You can restore it by logging in and tapping \"Restore account\" within that window. After 30 days the deletion is permanent.",
     "logoutConfirm": "Are you sure you want to log out?",
     "logout": "Log out",
     "adminPanel": "Admin Panel",
     "sectionAccount": "Account",
     "sectionPreferences": "Preferences",
     "sectionSecurity": "Security",
+    "securityCenter": "Security center",
     "revokeAllSessions": "Log out of all devices",
     "revokeAllSessionsConfirm": "We'll log you out on ALL your devices (including this one). You'll have to sign in again with your password.",
+    "exportData": "Download my data",
+    "exportDataInProgress": "Preparing download…",
+    "exportDataRateLimited": "Too many export requests. Wait an hour and try again.",
+    "exportDataError": "We couldn't generate the file. Please try again.",
     "hapticsLabel": "Haptic feedback",
     "hapticsHint": "Vibrate on button taps",
     "sectionDangerZone": "Danger zone",

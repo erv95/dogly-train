@@ -24,11 +24,14 @@ import { Avatar } from './ui';
 import { colors, spacing, fontSize, borderRadius, shadow } from '../theme';
 
 const STATUS_META: Record<UserStatus, { color: string; icon: keyof typeof Ionicons.glyphMap; emoji: string }> = {
-  active:    { color: colors.success, icon: 'checkmark-circle', emoji: '🟢' },
-  suspended: { color: colors.warning, icon: 'pause-circle',     emoji: '🟡' },
-  banned:    { color: colors.error,   icon: 'ban',              emoji: '🔴' },
+  active:            { color: colors.success, icon: 'checkmark-circle', emoji: '🟢' },
+  suspended:         { color: colors.warning, icon: 'pause-circle',     emoji: '🟡' },
+  banned:            { color: colors.error,   icon: 'ban',              emoji: '🔴' },
+  pending_deletion:  { color: colors.error,   icon: 'time-outline',     emoji: '⏳' },
 };
 
+// Admin can manually flip status between these three. `pending_deletion` is
+// user-initiated (soft-delete) so it isn't a valid manual choice here.
 const STATUS_OPTIONS: UserStatus[] = ['active', 'suspended', 'banned'];
 const ROLE_OPTIONS: UserRole[] = ['owner', 'trainer', 'caretaker'];
 

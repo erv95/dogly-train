@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -79,6 +79,14 @@ export default function WelcomeScreen() {
             variant="outline"
             size="lg"
           />
+          <TouchableOpacity
+            style={styles.securityLink}
+            onPress={() => router.push('/security')}
+            activeOpacity={0.7}
+          >
+            <Ionicons name="shield-checkmark-outline" size={14} color={colors.textSecondary} />
+            <Text style={styles.securityLinkText}>{t('auth.howWeProtectYou')}</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
@@ -156,5 +164,17 @@ const styles = StyleSheet.create({
   buttons: {
     gap: spacing.md,
     paddingBottom: spacing.md,
+  },
+  securityLink: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: spacing.xs,
+    paddingVertical: spacing.sm,
+  },
+  securityLinkText: {
+    fontSize: fontSize.xs,
+    color: colors.textSecondary,
+    textDecorationLine: 'underline',
   },
 });

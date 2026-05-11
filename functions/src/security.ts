@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { setupCors, verifyCallerToken, notifyByPush } from "./_shared";
+import { setupCors, verifyCallerToken, notifyByPush, sendSecurityEmail } from "./_shared";
 
 const db = admin.firestore();
 
@@ -46,6 +46,8 @@ export const revokeAllSessions = functions.https.onRequest(async (req, res) => {
       body: "Hemos cerrado tu sesión en todos los dispositivos.",
       data: { type: "security_sessions_revoked" },
     });
+    // Email audit trail. Best-effort — won't fail the call.
+    await sendSecurityEmail(caller.uid, "sessions_revoked");
 
     functions.logger.info("Sessions revoked", { uid: caller.uid });
     res.status(200).json({ success: true });

@@ -49,6 +49,10 @@ export default function Index() {
             displayName: firebaseUser.displayName ?? '',
           },
         });
+      } else if (userData.status === 'pending_deletion') {
+        // Account in 30-day soft-delete grace window. Block in-app routes
+        // until the user either restores or signs out.
+        router.replace('/(auth)/account-pending');
       } else if (role === 'owner') {
         router.replace('/(owner)/home');
       } else if (role === 'trainer') {

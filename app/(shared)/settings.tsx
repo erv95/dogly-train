@@ -29,6 +29,7 @@ import {
 import { useAuth } from '../../src/contexts/AuthContext';
 import { ReauthModal } from '../../src/components/ReauthModal';
 import { revokeAllSessions } from '../../src/services/security';
+import { exportMyData } from '../../src/services/dataExport';
 import { colors, spacing, fontSize, borderRadius, PREMIUM_PRICE_EUR } from '../../src/theme';
 import { User } from '../../src/types';
 
@@ -182,6 +183,26 @@ export default function SettingsScreen() {
   const [reauthForDelete, setReauthForDelete] = useState(false);
   const [reauthForRevoke, setReauthForRevoke] = useState(false);
   const [revoking, setRevoking] = useState(false);
+  const [exporting, setExporting] = useState(false);
+
+  const handleExportData = async () => {
+    if (exporting) return;
+    setExporting(true);
+    try {
+      const { bytes } = await exportMyData();
+      // Light success ping. The share sheet is the real UX; this just
+      // confirms the file was produced if the user cancels the sheet.
+      console.log('Data export bytes:', bytes);
+    } catch (err: any) {
+      const code = err?.message ?? 'unknown';
+      const msg = code === 'rate_limited'
+        ? t('settings.exportDataRateLimited')
+        : t('settings.exportDataError');
+      Alert.alert(t('common.error'), msg);
+    } finally {
+      setExporting(false);
+    }
+  };
 
   const handleRevokeAllSessions = () => {
     Alert.alert(
@@ -380,9 +401,21 @@ export default function SettingsScreen() {
         <Text style={styles.sectionHeader}>{t('settings.sectionSecurity')}</Text>
         <View style={styles.card}>
           <SettingsRow
+            icon="shield-checkmark-outline"
+            label={t('settings.securityCenter')}
+            onPress={() => router.push('/security')}
+          />
+          <View style={styles.divider} />
+          <SettingsRow
             icon="phone-portrait-outline"
             label={revoking ? t('common.loading') : t('settings.revokeAllSessions')}
             onPress={revoking ? () => {} : handleRevokeAllSessions}
+          />
+          <View style={styles.divider} />
+          <SettingsRow
+            icon="download-outline"
+            label={exporting ? t('settings.exportDataInProgress') : t('settings.exportData')}
+            onPress={exporting ? () => {} : handleExportData}
           />
         </View>
 

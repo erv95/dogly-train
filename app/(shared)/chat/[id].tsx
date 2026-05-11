@@ -42,6 +42,7 @@ import { SYSTEM_UID } from '../../../src/types';
 import { colors, spacing, fontSize, borderRadius, shadow } from '../../../src/theme';
 import { Chat, Message } from '../../../src/types';
 import { useHaptics } from '../../../src/hooks/useHaptics';
+import { detectPII } from '../../../src/utils/piiDetect';
 import ServiceReportCard from '../../../src/components/ServiceReportCard';
 import ServiceReportModal from '../../../src/components/ServiceReportModal';
 
@@ -312,6 +313,31 @@ export default function ChatDetailScreen() {
   const handleSend = async () => {
     if (!inputText.trim() || !chat || !firebaseUser || isBusy) return;
     const text = inputText.trim();
+
+    // PII / leave-platform nudge: warn before sending phone numbers, emails
+    // or mentions of external messaging apps. Owner+provider can still send
+    // anything — we only educate, never block.
+    const pii = detectPII(text);
+    if (pii.hasPhone || pii.hasEmail || pii.hasExternalApp) {
+      // Build a body that lists what we detected so the warning is concrete.
+      const bullets: string[] = [];
+      if (pii.hasPhone) bullets.push(`• ${t('chat.piiWarning.phone')}`);
+      if (pii.hasEmail) bullets.push(`• ${t('chat.piiWarning.email')}`);
+      if (pii.hasExternalApp) bullets.push(`• ${t('chat.piiWarning.externalApp')}`);
+      const body = `${t('chat.piiWarning.body')}\n\n${bullets.join('\n')}\n\n${t('chat.piiWarning.tip')}`;
+
+      Alert.alert(t('chat.piiWarning.title'), body, [
+        { text: t('common.cancel'), style: 'cancel' },
+        { text: t('chat.piiWarning.sendAnyway'), onPress: () => doSendText(text) },
+      ]);
+      return;
+    }
+
+    await doSendText(text);
+  };
+
+  const doSendText = async (text: string) => {
+    if (!chat || !firebaseUser) return;
     setInputText('');
     setSending(true);
     haptics.tap();

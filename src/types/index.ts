@@ -2,7 +2,7 @@ import { Timestamp } from 'firebase/firestore';
 
 // ============ USER ============
 export type UserRole = 'owner' | 'trainer' | 'caretaker';
-export type UserStatus = 'active' | 'suspended' | 'banned';
+export type UserStatus = 'active' | 'suspended' | 'banned' | 'pending_deletion';
 
 export interface User {
   id: string;
@@ -58,6 +58,11 @@ export interface User {
   /** Mirror of Firebase Auth `emailVerified`, synced into Firestore so server
    *  triggers (referrals claim, etc) can gate on it without a token. */
   emailVerified?: boolean;
+  /** Set when the user requested account deletion. Account stays in
+   *  `pending_deletion` state for 30 days during which the user can restore
+   *  it; after that the cron purges everything. */
+  deletionScheduledFor?: Timestamp | null;
+  deletionRequestedAt?: Timestamp | null;
   createdAt: Timestamp;
   updatedAt: Timestamp;
 }
@@ -793,6 +798,36 @@ export interface Review {
   rating: number; // 1-5
   comment: string;
   createdAt: Timestamp;
+  // Denormalised reviewer info for public review lists. Kept in sync by the
+  // onUserUpdate trigger when the reviewer changes their name / photo.
+  fromUserDisplayName?: string;
+  fromUserPhotoURL?: string | null;
+}
+
+// ============ DISPUTES ============
+export type DisputeReason =
+  | 'no_show'             // provider didn't show up / owner didn't show up
+  | 'poor_service'        // service was unsatisfactory
+  | 'safety_concern'      // dog/person at risk
+  | 'payment_issue'       // off-platform payment dispute
+  | 'inappropriate_behavior'
+  | 'other';
+
+export type DisputeStatus = 'open' | 'resolved' | 'rejected';
+
+export interface Dispute {
+  id: string;
+  bookingId: string;
+  ownerId: string;
+  providerId: string;
+  openedBy: string;            // uid of whoever filed it
+  reason: DisputeReason;
+  description: string;
+  status: DisputeStatus;
+  createdAt: Timestamp;
+  resolvedAt?: Timestamp | null;
+  resolvedBy?: string | null;  // admin uid
+  resolution?: string | null;  // admin-visible note
 }
 
 // ============ REPORTS ============

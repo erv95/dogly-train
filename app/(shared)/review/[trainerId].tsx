@@ -24,7 +24,7 @@ export default function ReviewScreen() {
   const { t } = useTranslation();
   const router = useRouter();
   const navigation = useNavigation();
-  const { firebaseUser } = useAuth();
+  const { firebaseUser, userData } = useAuth();
 
   const haptics = useHaptics();
   const [trainer, setTrainer] = useState<TrainerProfile | null>(null);
@@ -61,7 +61,14 @@ export default function ReviewScreen() {
 
     setLoading(true);
     try {
-      await submitReview(firebaseUser.uid, trainerId, rating, comment);
+      await submitReview(
+        firebaseUser.uid,
+        trainerId,
+        rating,
+        comment,
+        userData?.displayName ?? firebaseUser.displayName ?? '',
+        userData?.photoURL ?? null,
+      );
       if (rating >= 5) haptics.success();
       else haptics.tap();
       Alert.alert(t('common.ok'), t('reviews.reviewSent'), [

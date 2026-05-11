@@ -72,7 +72,7 @@ export default function TrainerProfileScreen() {
     );
   };
 
-  const handleChangePhoto = async () => {
+  const doPickPhoto = async () => {
     if (!firebaseUser) return;
     setPhotoLoading(true);
     try {
@@ -85,6 +85,31 @@ export default function TrainerProfileScreen() {
       Alert.alert(t('common.error'), t('authErrors.generic'));
     } finally {
       setPhotoLoading(false);
+    }
+  };
+
+  const doRemovePhoto = async () => {
+    if (!firebaseUser) return;
+    setPhotoLoading(true);
+    try {
+      await updateTrainerProfile(firebaseUser.uid, { photoURL: null });
+      setUserData({ ...userData!, photoURL: null });
+    } catch (error) {
+      Alert.alert(t('common.error'), t('authErrors.generic'));
+    } finally {
+      setPhotoLoading(false);
+    }
+  };
+
+  const handleChangePhoto = () => {
+    if (userData?.photoURL) {
+      Alert.alert(t('profile.photoTitle'), t('profile.photoOptionalHint'), [
+        { text: t('common.cancel'), style: 'cancel' },
+        { text: t('profile.photoRemove'), style: 'destructive', onPress: doRemovePhoto },
+        { text: t('profile.photoChange'), onPress: doPickPhoto },
+      ]);
+    } else {
+      doPickPhoto();
     }
   };
 
@@ -254,6 +279,9 @@ export default function TrainerProfileScreen() {
               <Ionicons name="camera" size={16} color={colors.textOnPrimary} />
             </View>
           </TouchableOpacity>
+          {!userData?.photoURL && (
+            <Text style={styles.optionalHint}>{t('profile.photoOptionalLabel')}</Text>
+          )}
 
           {userData?.displayId && (
             <View style={styles.idBadge}>
@@ -508,6 +536,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderWidth: 2,
     borderColor: colors.background,
+  },
+  optionalHint: {
+    fontSize: fontSize.xs,
+    color: colors.textLight,
+    marginTop: spacing.xs,
+    fontStyle: 'italic',
+    textAlign: 'center',
   },
   row: {
     flexDirection: 'row',

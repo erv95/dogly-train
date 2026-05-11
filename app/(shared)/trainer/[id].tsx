@@ -14,6 +14,7 @@ import { useAuth } from '../../../src/contexts/AuthContext';
 import { Avatar, StarRating, Card, Button } from '../../../src/components/ui';
 import { ProfileSkeleton } from '../../../src/components/skeletons';
 import { VerifiedBadge } from '../../../src/components/VerifiedBadge';
+import { PublicReviewsList } from '../../../src/components/PublicReviewsList';
 import { colors, spacing, fontSize, borderRadius } from '../../../src/theme';
 import { TrainerProfile } from '../../../src/types';
 
@@ -163,6 +164,9 @@ export default function TrainerDetailScreen() {
           ))}
         </Card>
       )}
+
+      {/* Public reviews */}
+      <PublicReviewsList providerId={trainer.id} totalReviews={trainer.totalReviews} />
 
       {/* Actions — only for owners */}
       {isOwner && (

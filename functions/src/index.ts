@@ -12,7 +12,13 @@ export { activateBoost } from "./coins";
 export { onReviewWrite } from "./reviews";
 
 // Admin & GDPR
-export { checkBoostExpiration, deleteUserAccount, adminGrantCoins } from "./admin";
+export {
+  checkBoostExpiration,
+  deleteUserAccount,
+  restoreAccount,
+  processPendingDeletions,
+  adminGrantCoins,
+} from "./admin";
 
 // Push notifications + welcome + broadcast
 export { onNewMessage, onUserCreate, sendBroadcastMessage } from "./notifications";
@@ -53,3 +59,9 @@ export { createRecurringBookings, cancelRecurringSeries, previewRecurringSeries 
 
 // Security (sensitive account actions: revoke sessions, soft-delete, etc.)
 export { revokeAllSessions } from "./security";
+
+// GDPR data export (Article 20 — right to data portability)
+export { exportUserData } from "./dataExport";
+
+// Dispute resolution (booking-scoped, admin-moderated)
+export { openDispute, adminResolveDispute } from "./disputes";

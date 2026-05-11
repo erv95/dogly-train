@@ -11,6 +11,36 @@ const db = admin.firestore();
 const START_WINDOW_MS = 2 * 60 * 60 * 1000;   // ±2h around serviceAt
 const STALE_PING_MS = 30 * 60 * 1000;          // 30 min no ping → mark ended
 
+// Round to nearest ~0.005° (≈500 m at 40° N). Applied to the LAST GPS point of
+// a live session so the polyline doesn't reveal that the provider walked back
+// to their own house at the end (overnight stays, doggy-day-care drop-offs).
+const ANON_GRID = 0.005;
+function snapToGrid(n: number): number {
+  return Math.round(n / ANON_GRID) * ANON_GRID;
+}
+
+async function anonymizeLastPathPoint(bookingId: string): Promise<void> {
+  try {
+    const pathSnap = await db
+      .collection("booking_live_sessions").doc(bookingId)
+      .collection("path")
+      .orderBy("recordedAt", "desc")
+      .limit(1)
+      .get();
+    if (pathSnap.empty) return;
+    const doc = pathSnap.docs[0];
+    const d = doc.data();
+    if (typeof d.lat !== "number" || typeof d.lng !== "number") return;
+    await doc.ref.update({
+      lat: snapToGrid(d.lat),
+      lng: snapToGrid(d.lng),
+      anonymized: true,
+    });
+  } catch (err) {
+    functions.logger.warn("anonymizeLastPathPoint failed", { bookingId, err: String(err) });
+  }
+}
+
 // ── startLiveSession ─────────────────────────────────────────────────────────
 // Provider-only. Booking must be in `confirmed` and we must be within ±2h of
 // serviceAt. Creates booking_live_sessions/{bookingId} with status=active.
@@ -120,6 +150,7 @@ export const endLiveSession = functions.https.onRequest(async (req, res) => {
 
   try {
     let ownerId: string | null = null;
+    let alreadyEnded = false;
     await db.runTransaction(async (tx) => {
       const sessionRef = db.collection("booking_live_sessions").doc(bookingId);
       const snap = await tx.get(sessionRef);
@@ -131,12 +162,19 @@ export const endLiveSession = functions.https.onRequest(async (req, res) => {
         const e = new Error("forbidden"); (e as any).code = "forbidden"; throw e;
       }
       ownerId = s.ownerId;
-      if (s.status === "ended") return; // idempotent
+      if (s.status === "ended") { alreadyEnded = true; return; }
       tx.update(sessionRef, {
         status: "ended",
         endedAt: admin.firestore.Timestamp.now(),
       });
     });
+
+    // After commit, snap the last GPS point to a coarse grid so the polyline
+    // doesn't end exactly at the provider's home. Skip if the session was
+    // already ended (we already anonymized on the first end).
+    if (!alreadyEnded) {
+      await anonymizeLastPathPoint(bookingId);
+    }
 
     if (ownerId && ownerId !== caller.uid) {
       await notifyByPush(ownerId, {
@@ -175,14 +213,20 @@ export const pruneStaleLiveSessions = functions.pubsub
 
     const batch = db.batch();
     const ownerIds: string[] = [];
+    const bookingIds: string[] = [];
     snap.docs.forEach((d) => {
       batch.update(d.ref, {
         status: "ended",
         endedAt: admin.firestore.Timestamp.now(),
       });
       ownerIds.push(d.data().ownerId);
+      bookingIds.push(d.id);
     });
     await batch.commit();
+
+    // Anonymize the last GPS point of each ended session (best-effort, in
+    // parallel). Same privacy reason as endLiveSession: hide provider's home.
+    await Promise.allSettled(bookingIds.map((id) => anonymizeLastPathPoint(id)));
 
     functions.logger.info("pruneStaleLiveSessions ended", { count: snap.size });
 

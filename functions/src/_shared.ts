@@ -150,6 +150,81 @@ export async function notifyByPush(
   }
 }
 
+// ── Security email helper ───────────────────────────────────────────────────
+
+/**
+ * Writes a document to the `mail/` collection following the schema expected
+ * by the official **Firebase Trigger Email extension**:
+ *   https://firebase.google.com/products/extensions/firestore-send-email
+ *
+ * If the extension is installed and configured in the Firebase project, the
+ * doc is consumed and an email is sent through the configured SMTP. If the
+ * extension is NOT installed, the doc still serves as an audit trail of what
+ * "should have been emailed".
+ *
+ * Used for security-critical events (account deletion, sessions revoked, etc).
+ * Best-effort — never blocks the caller. Silently skips if the user doesn't
+ * have an email on file.
+ */
+type SecurityEventType =
+  | "account_deletion_requested"
+  | "account_deletion_cancelled"
+  | "sessions_revoked";
+
+export async function sendSecurityEmail(
+  userId: string,
+  type: SecurityEventType,
+  params: { scheduledDate?: string } = {},
+): Promise<void> {
+  try {
+    const snap = await db.collection("users").doc(userId).get();
+    if (!snap.exists) return;
+    const data = snap.data() ?? {};
+    const email: string | undefined = data.email;
+    const name: string = data.displayName ?? "";
+    if (!email || typeof email !== "string") return;
+
+    const { subject, html, text } = renderSecurityEmail(type, name, params);
+    await db.collection("mail").add({
+      to: [email],
+      message: { subject, html, text },
+      meta: { userId, type, createdAt: admin.firestore.Timestamp.now() },
+    });
+  } catch (err) {
+    functions.logger.warn("sendSecurityEmail failed", {
+      userId, type, err: (err as any)?.message,
+    });
+  }
+}
+
+function renderSecurityEmail(
+  type: SecurityEventType,
+  name: string,
+  params: { scheduledDate?: string },
+): { subject: string; html: string; text: string } {
+  const greeting = name ? `Hola ${name},` : "Hola,";
+  switch (type) {
+    case "account_deletion_requested":
+      return {
+        subject: "Solicitud de borrado de cuenta — Dogly Train",
+        text: `${greeting}\n\nHemos recibido tu solicitud de borrado de cuenta. Se ejecutará el ${params.scheduledDate}.\n\nSi cambias de opinión, inicia sesión antes de esa fecha y pulsa "Restaurar mi cuenta".\n\nSi no fuiste tú, cambia tu contraseña inmediatamente y contacta con soporte.\n\n— Equipo Dogly Train`,
+        html: `<p>${greeting}</p><p>Hemos recibido tu solicitud de <b>borrado de cuenta</b>. Se ejecutará el <b>${params.scheduledDate}</b>.</p><p>Si cambias de opinión, inicia sesión antes de esa fecha y pulsa <b>"Restaurar mi cuenta"</b>.</p><p style="color:#EF4444"><b>Si no fuiste tú</b>, cambia tu contraseña inmediatamente y contacta con soporte.</p><p>— Equipo Dogly Train 🐾</p>`,
+      };
+    case "account_deletion_cancelled":
+      return {
+        subject: "Borrado de cuenta cancelado — Dogly Train",
+        text: `${greeting}\n\nHas cancelado el borrado de tu cuenta. Tu cuenta vuelve a estar activa.\n\n— Equipo Dogly Train`,
+        html: `<p>${greeting}</p><p>Has cancelado el borrado de tu cuenta. Tu cuenta vuelve a estar <b>activa</b>.</p><p>— Equipo Dogly Train 🐾</p>`,
+      };
+    case "sessions_revoked":
+      return {
+        subject: "Sesión cerrada en todos los dispositivos — Dogly Train",
+        text: `${greeting}\n\nHemos cerrado tu sesión en todos los dispositivos a petición tuya. Para volver a entrar usa tu contraseña.\n\nSi no fuiste tú, cambia tu contraseña inmediatamente y contacta con soporte.\n\n— Equipo Dogly Train`,
+        html: `<p>${greeting}</p><p>Hemos cerrado tu sesión en <b>todos los dispositivos</b> a petición tuya. Para volver a entrar usa tu contraseña.</p><p style="color:#EF4444"><b>Si no fuiste tú</b>, cambia tu contraseña inmediatamente y contacta con soporte.</p><p>— Equipo Dogly Train 🐾</p>`,
+      };
+  }
+}
+
 // ── Shared constants ─────────────────────────────────────────────────────────
 
 /** Coins granted to BOTH referrer and referred when a referral is claimed. */

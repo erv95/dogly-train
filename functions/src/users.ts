@@ -27,9 +27,9 @@ async function commitInChunks(
 async function syncUserDenormalized(
   userId: string,
   fields: { displayName: boolean; photoURL: boolean; bizumPhone: boolean },
-): Promise<{ chats: number; bookings: number }> {
+): Promise<{ chats: number; bookings: number; reviews: number }> {
   const userSnap = await db.collection("users").doc(userId).get();
-  if (!userSnap.exists) return { chats: 0, bookings: 0 };
+  if (!userSnap.exists) return { chats: 0, bookings: 0, reviews: 0 };
 
   const u = userSnap.data() ?? {};
   const newName: string = u.displayName ?? "";
@@ -98,7 +98,29 @@ async function syncUserDenormalized(
     bookingsUpdated = ops.length;
   }
 
-  return { chats: chatsUpdated, bookings: bookingsUpdated };
+  // ── Reviews (as author) ─────────────────────────────────────────────────
+  // Reviews are public-facing, so we mirror displayName/photoURL of the
+  // reviewer when they change so old reviews keep showing the latest name.
+  let reviewsUpdated = 0;
+  if (fields.displayName || fields.photoURL) {
+    const reviewsSnap = await db
+      .collection("reviews")
+      .where("fromUserId", "==", userId)
+      .get();
+    const reviewOps: Array<(batch: admin.firestore.WriteBatch) => void> = [];
+    for (const r of reviewsSnap.docs) {
+      const update: Record<string, unknown> = {};
+      if (fields.displayName) update.fromUserDisplayName = newName;
+      if (fields.photoURL) update.fromUserPhotoURL = newPhoto;
+      reviewOps.push((batch) => batch.update(r.ref, update as any));
+    }
+    if (reviewOps.length > 0) {
+      await commitInChunks(reviewOps);
+      reviewsUpdated = reviewOps.length;
+    }
+  }
+
+  return { chats: chatsUpdated, bookings: bookingsUpdated, reviews: reviewsUpdated };
 }
 
 /** When a user updates their displayName, photoURL or bizumPhone, propagate

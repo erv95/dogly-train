@@ -13,6 +13,7 @@ import { getCaretakerById } from '../../../src/services/caretakers';
 import { useAuth } from '../../../src/contexts/AuthContext';
 import { Avatar, StarRating, Card, Button, Skeleton, SkeletonList } from '../../../src/components/ui';
 import { VerifiedBadge } from '../../../src/components/VerifiedBadge';
+import { PublicReviewsList } from '../../../src/components/PublicReviewsList';
 import { colors, spacing, fontSize, borderRadius } from '../../../src/theme';
 import { CaretakerProfile, CaretakerService, CaretakerPricing } from '../../../src/types';
 
@@ -253,6 +254,9 @@ export default function CaretakerDetailScreen() {
           ))}
         </Card>
       )}
+
+      {/* Public reviews */}
+      <PublicReviewsList providerId={caretaker.id} totalReviews={caretaker.totalReviews} />
 
       {/* Actions — only for owners */}
       {isOwner && (

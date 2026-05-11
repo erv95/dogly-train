@@ -100,7 +100,7 @@ export default function CaretakerProfileScreen() {
     }));
   };
 
-  const handleChangePhoto = async () => {
+  const doPickPhoto = async () => {
     if (!firebaseUser) return;
     const result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ['images'],
@@ -123,6 +123,31 @@ export default function CaretakerProfileScreen() {
       Alert.alert(t('common.error'), t('authErrors.generic'));
     } finally {
       setPhotoLoading(false);
+    }
+  };
+
+  const doRemovePhoto = async () => {
+    if (!firebaseUser) return;
+    setPhotoLoading(true);
+    try {
+      await updateCaretakerProfile(firebaseUser.uid, { photoURL: null });
+      setUserData({ ...userData!, photoURL: null });
+    } catch {
+      Alert.alert(t('common.error'), t('authErrors.generic'));
+    } finally {
+      setPhotoLoading(false);
+    }
+  };
+
+  const handleChangePhoto = () => {
+    if (caretaker?.photoURL) {
+      Alert.alert(t('profile.photoTitle'), t('profile.photoOptionalHint'), [
+        { text: t('common.cancel'), style: 'cancel' },
+        { text: t('profile.photoRemove'), style: 'destructive', onPress: doRemovePhoto },
+        { text: t('profile.photoChange'), onPress: doPickPhoto },
+      ]);
+    } else {
+      doPickPhoto();
     }
   };
 
@@ -265,6 +290,9 @@ export default function CaretakerProfileScreen() {
               )}
             </View>
           </TouchableOpacity>
+          {!caretaker?.photoURL && (
+            <Text style={styles.optionalHint}>{t('profile.photoOptionalLabel')}</Text>
+          )}
         </View>
 
         {/* Account type selector */}
@@ -499,6 +527,13 @@ const styles = StyleSheet.create({
   verifyBannerTitle: { fontSize: 14, fontWeight: '800', color: colors.text },
   verifyBannerBody: { fontSize: 12, color: colors.textSecondary, marginTop: 2 },
   avatarSection: { alignItems: 'center', marginBottom: spacing.lg },
+  optionalHint: {
+    fontSize: fontSize.xs,
+    color: colors.textLight,
+    marginTop: spacing.xs,
+    fontStyle: 'italic',
+    textAlign: 'center',
+  },
   editPhotoBadge: {
     position: 'absolute', bottom: 0, right: 0,
     backgroundColor: colors.primary, width: 32, height: 32,

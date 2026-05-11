@@ -1,4 +1,97 @@
 {
+  "dispute": {
+    "openCta": "Problem melden",
+    "modalTitle": "Problem melden",
+    "modalIntro": "Erzähl uns, was passiert ist. Wir prüfen jede Beschwerde manuell und antworten innerhalb von 48 h.",
+    "reasonLabel": "Grund",
+    "descriptionLabel": "Beschreibung",
+    "descriptionPlaceholder": "Beschreibe das Geschehen so detailliert wie möglich.",
+    "submit": "Beschwerde senden",
+    "fineprint": "Die Gegenseite sieht, dass du eine Beschwerde geöffnet hast, aber nicht deine Beschreibung. Der Moderator sieht beide Seiten.",
+    "successTitle": "Beschwerde gesendet",
+    "successBody": "Danke. Wir prüfen innerhalb von 48 h und benachrichtigen dich per App und E-Mail.",
+    "reasons": {
+      "no_show": "Nicht erschienen",
+      "poor_service": "Mangelhafter Service",
+      "safety_concern": "Sicherheit oder Wohlergehen",
+      "payment_issue": "Zahlungsproblem",
+      "inappropriate_behavior": "Unangemessenes Verhalten",
+      "other": "Sonstiges"
+    },
+    "statusYours": {
+      "open": "Deine Beschwerde ist offen",
+      "resolved": "Deine Beschwerde wurde geklärt",
+      "rejected": "Deine Beschwerde wurde abgewiesen"
+    },
+    "statusOther": {
+      "open": "Die Gegenseite hat eine Beschwerde geöffnet",
+      "resolved": "Die Beschwerde der Gegenseite wurde geklärt",
+      "rejected": "Die Beschwerde der Gegenseite wurde abgewiesen"
+    },
+    "errors": {
+      "tooShort": "Bitte beschreibe das Geschehen mit mindestens 5 Zeichen.",
+      "rateLimited": "Du hast zu viele Beschwerden gesendet. Versuche es später erneut.",
+      "generic": "Beschwerde konnte nicht gesendet werden. Bitte erneut versuchen."
+    }
+  },
+  "profile": {
+    "photoTitle": "Profilfoto",
+    "photoOptionalHint": "Dein Foto ist optional. Ohne Foto zeigen wir deine Initialen.",
+    "photoOptionalLabel": "Optional",
+    "photoChange": "Foto ändern",
+    "photoRemove": "Foto entfernen"
+  },
+  "security": {
+    "heroTitle": "So schützen wir dein Konto und deine Daten",
+    "heroBody": "Konkrete Maßnahmen, die wir umsetzen. Kein Marketing, keine vagen Versprechen: was der Code wirklich tut.",
+    "sectionAccount": "Konto",
+    "account": {
+      "verifiedTitle": "Identitätsgeprüfte Betreuer",
+      "verifiedBody": "Nur Trainer und Betreuer, die einen Ausweis eingereicht haben und manuell freigegeben wurden, erscheinen in der Suche.",
+      "sessionsTitle": "Auf allen Geräten abmelden",
+      "sessionsBody": "Wenn du dein Handy verlierst oder Zugriff vermutest, kannst du alle aktiven Sitzungen mit einem Tipp ungültig machen.",
+      "reauthTitle": "Re-Authentifizierung für kritische Aktionen",
+      "reauthBody": "Konto löschen oder alle Sitzungen beenden verlangt dein Passwort erneut. Ein entsperrtes Handy reicht nicht.",
+      "softDeleteTitle": "Löschung mit 30 Tagen Karenz",
+      "softDeleteBody": "Wenn du dein Konto löschst, kannst du es 30 Tage lang durch Anmelden wiederherstellen. Danach ist es endgültig.",
+      "emailAlertsTitle": "E-Mail-Benachrichtigung bei kritischen Ereignissen",
+      "emailAlertsBody": "Wir senden eine E-Mail, wenn jemand alle deine Sitzungen beendet oder eine Kontolöschung beantragt, damit du reagieren kannst."
+    },
+    "sectionChat": "Chat",
+    "chat": {
+      "piiTitle": "Warnung vor dem Teilen persönlicher Daten",
+      "piiBody": "Enthält deine Nachricht eine E-Mail, Telefonnummer oder den Namen einer anderen Messaging-App, warnen wir vor dem Senden. Du entscheidest.",
+      "onPlatformTitle": "Gespräche bleiben in der App",
+      "onPlatformBody": "Chat hier zu halten erlaubt es uns, Meldungen zu prüfen, Beweise zu sichern und beide Seiten bei Streit zu schützen.",
+      "reportTitle": "Meldung in einem Tipp",
+      "reportBody": "Wenn jemand dich beleidigt, belästigt oder dich von der Plattform locken will, melde es. Wir prüfen manuell."
+    },
+    "sectionLocation": "Standort",
+    "location": {
+      "foregroundTitle": "GPS nur während des Service",
+      "foregroundBody": "Live-Standort ist nur aktiv, solange der Anbieter den Service im Vordergrund offen hat. Nie im Hintergrund.",
+      "anonymizedTitle": "Letzter Punkt anonymisiert",
+      "anonymizedBody": "Beim Beenden des Spaziergangs runden wir den letzten GPS-Punkt auf eine ~500-m-Zone. Der Besitzer sieht die Route, nicht das Zuhause.",
+      "photoTitle": "Service-Fotos im Transit verschlüsselt",
+      "photoBody": "Fotos, die der Betreuer während des Spaziergangs sendet, reisen per HTTPS und sind nur für beide Parteien der Buchung sichtbar."
+    },
+    "sectionData": "Deine Daten",
+    "data": {
+      "exportTitle": "Lade alle deine Daten herunter (DSGVO Art. 20)",
+      "exportBody": "Über Einstellungen → Meine Daten herunterladen erhältst du ein JSON mit Profil, Hunden, Buchungen, Bewertungen, Transaktionen und mehr.",
+      "deleteTitle": "Vollständige Löschung auf Anfrage",
+      "deleteBody": "Das Löschen deines Kontos entfernt Profil, Hunde, Fotos, Bewertungen und zugehörige Nachrichten von den Firebase-Servern.",
+      "photoTitle": "Optionales Profilfoto",
+      "photoBody": "Du kannst dich ohne Foto registrieren und buchen. Wir zeigen deine Initialen. Falls du ein Foto hochgeladen hast, kannst du es entfernen.",
+      "storageTitle": "Europäische Server",
+      "storageBody": "Daten auf Firebase (Google Cloud) mit Verschlüsselung im Ruhezustand. Hauptregion europe-west zur Begrenzung internationaler Transfers."
+    },
+    "contactTitle": "Kontakt",
+    "contactEmailTitle": "Etwas stimmt nicht? Schreib uns",
+    "contactSettingsTitle": "Einstellungen öffnen",
+    "contactSettingsBody": "Sitzungen beenden, Daten herunterladen, Konto löschen und mehr.",
+    "footer": "Dieses Dokument wird bei jeder neuen oder geänderten Sicherheitsmaßnahme aktualisiert. Letzte Überprüfung: 11. Mai 2026."
+  },
   "common": {
     "loading": "Laden...",
     "loadMore": "Mehr anzeigen",
@@ -41,6 +134,7 @@
   "auth": {
     "welcome": "Willkommen bei Dogly Train",
     "welcomeSubtitle": "Verbinde dich mit den besten Hundetrainern",
+    "howWeProtectYou": "Wie wir deine Daten schützen",
     "login": "Anmelden",
     "register": "Registrieren",
     "email": "E-Mail",
@@ -3635,6 +3729,15 @@
   },
   "chat": {
     "typeMessage": "Nachricht schreiben...",
+    "piiWarning": {
+      "title": "Behalte das Gespräch besser hier",
+      "body": "Deine Nachricht enthält sensible Daten:",
+      "phone": "Eine Telefonnummer",
+      "email": "Eine E-Mail-Adresse",
+      "externalApp": "Erwähnung einer anderen Messaging-App",
+      "tip": "Wenn das Gespräch Dogly Train verlässt, können wir bei Problemen nicht mehr vermitteln. Denke daran: der Profi hat dein Bizum bereits, sobald die Buchung bestätigt ist.",
+      "sendAnyway": "Trotzdem senden"
+    },
     "noChats": "Du hast noch keine Gespräche",
     "startChat": "Chat starten",
     "newChat": "Neue Nachricht",
@@ -3803,6 +3906,18 @@
     "historyEmpty": "Noch keine Transaktionen",
     "refund": "Erstattung"
   },
+  "accountPending": {
+    "title": "Konto wartet auf Löschung",
+    "body": "Dein Konto wird am {{date}} automatisch gelöscht. Du kannst es vorher wiederherstellen und die App mit allen Daten weiternutzen.",
+    "info": "Während dieser Zeit ist dein Profil in der Suche ausgeblendet und du kannst keine neuen Buchungen machen oder erhalten.",
+    "restoreCta": "Konto wiederherstellen",
+    "restoredTitle": "Konto wiederhergestellt",
+    "restoredBody": "Dein Konto ist wieder aktiv. Willkommen zurück!",
+    "errors": {
+      "grace_expired": "Die 30-Tage-Frist ist abgelaufen. Dein Konto kann nicht wiederhergestellt werden.",
+      "unknown": "Wir konnten dein Konto nicht wiederherstellen. Versuche es später."
+    }
+  },
   "reauth": {
     "passwordPlaceholder": "Dein Passwort",
     "noUser": "Deine Sitzung ist abgelaufen. Melde dich erneut an.",
@@ -3825,7 +3940,12 @@
     "comment": "Kommentar (optional)",
     "submitReview": "Bewertung absenden",
     "reviewSent": "Bewertung gesendet",
-    "alreadyReviewed": "Du hast diesen Trainer bereits bewertet"
+    "alreadyReviewed": "Du hast diesen Trainer bereits bewertet",
+    "publicSectionTitle": "Bewertungen",
+    "noReviewsYet": "Noch keine Bewertungen. Sei der Erste, der eine abgibt.",
+    "viewAll": "Alle {{count}} Bewertungen anzeigen",
+    "collapseAll": "Weniger anzeigen",
+    "anonymousReviewer": "Nutzer"
   },
   "settings": {
     "title": "Einstellungen",
@@ -3833,15 +3953,20 @@
     "notifications": "Benachrichtigungen",
     "privacy": "Datenschutz",
     "deleteAccount": "Konto löschen",
-    "deleteConfirm": "Bist du sicher? Diese Aktion kann nicht rückgängig gemacht werden.",
+    "deleteConfirm": "Dein Konto tritt in eine 30-tägige Löschfrist ein. Du kannst es innerhalb dieser Frist durch Anmelden und Tippen auf \"Konto wiederherstellen\" wiederherstellen. Nach 30 Tagen ist die Löschung endgültig.",
     "logoutConfirm": "Bist du sicher, dass du dich abmelden möchtest?",
     "logout": "Abmelden",
     "adminPanel": "Admin-Bereich",
     "sectionAccount": "Konto",
     "sectionPreferences": "Einstellungen",
     "sectionSecurity": "Sicherheit",
+    "securityCenter": "Sicherheits-Center",
     "revokeAllSessions": "Auf allen Geräten abmelden",
     "revokeAllSessionsConfirm": "Wir melden dich auf ALLEN Geräten ab (einschließlich diesem). Du musst dich mit deinem Passwort neu anmelden.",
+    "exportData": "Meine Daten herunterladen",
+    "exportDataInProgress": "Download wird vorbereitet…",
+    "exportDataRateLimited": "Zu viele Anfragen. Warte eine Stunde und versuche es erneut.",
+    "exportDataError": "Datei konnte nicht erzeugt werden. Bitte erneut versuchen.",
     "hapticsLabel": "Haptisches Feedback",
     "hapticsHint": "Vibration beim Tippen auf Schaltflächen",
     "sectionDangerZone": "Gefahrenzone",

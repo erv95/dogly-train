@@ -33,12 +33,18 @@ export async function hasReviewed(fromUserId: string, toUserId: string): Promise
  * Submit or update a review.
  * Uses a deterministic ID so one owner can only review one trainer once.
  * Rating recalculation is handled server-side (Cloud Function).
+ *
+ * `fromUserDisplayName` / `fromUserPhotoURL` are denormalised so the public
+ * review list can render without per-row user fetches. Rules cross-check that
+ * the name matches the auth user's actual displayName to prevent spoofing.
  */
 export async function submitReview(
   fromUserId: string,
   toUserId: string,
   rating: number,
-  comment: string
+  comment: string,
+  fromUserDisplayName: string,
+  fromUserPhotoURL: string | null,
 ): Promise<void> {
   const reviewId = getReviewId(fromUserId, toUserId);
   await setDoc(doc(db, 'reviews', reviewId), {
@@ -47,19 +53,25 @@ export async function submitReview(
     rating,
     comment: comment.trim(),
     createdAt: Timestamp.now(),
+    fromUserDisplayName,
+    fromUserPhotoURL: fromUserPhotoURL ?? null,
   });
 }
 
 /**
- * Get all reviews for a trainer (private — only visible to the trainer)
+ * Public list of reviews for a provider (trainer or caretaker). Shown on the
+ * provider's detail page so prospective clients can see real feedback.
  */
-export async function getReviewsForTrainer(trainerId: string, maxResults = 50): Promise<Review[]> {
+export async function getReviewsForProvider(providerId: string, maxResults = 50): Promise<Review[]> {
   const q = query(
     collection(db, 'reviews'),
-    where('toUserId', '==', trainerId),
+    where('toUserId', '==', providerId),
     orderBy('createdAt', 'desc'),
     limit(maxResults)
   );
   const snapshot = await getDocs(q);
   return snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as Review));
 }
+
+/** @deprecated Use `getReviewsForProvider`. Kept for backwards compatibility. */
+export const getReviewsForTrainer = getReviewsForProvider;
