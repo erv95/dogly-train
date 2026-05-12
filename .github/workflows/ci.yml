@@ -59,10 +59,24 @@ jobs:
       - name: Install client deps
         run: npm install --legacy-peer-deps --no-audit --no-fund
 
+      # Pin firebase-tools to the same version used locally to avoid surprise
+      # behaviour changes between minor releases of the emulator wrapper.
       - name: Install Firebase CLI
-        run: npm install -g firebase-tools@latest
+        run: npm install -g firebase-tools@15.16.0
 
+      # Run jest directly; we'll start the emulator separately so we have
+      # control over its logs and can `cat firestore-debug.log` if tests fail.
+      # The github-actions reporter (configured in jest.config.js) emits
+      # ::error:: annotations for individual test failures.
       - name: Run Firestore rules tests
-        # `--verbose` prints individual test names + stack traces in CI logs.
-        # Without sign-in, annotations are the only diagnostic surface.
+        env:
+          CI: true
         run: npx firebase emulators:exec --only firestore --project=dogly-train-rules-test "npx jest --config jest.config.js --runInBand --verbose"
+
+      - name: Dump emulator log on failure
+        if: failure()
+        run: |
+          echo "=== firestore-debug.log ==="
+          cat firestore-debug.log || echo "(no debug log)"
+          echo "=== firebase-debug.log ==="
+          cat firebase-debug.log || echo "(no debug log)"
