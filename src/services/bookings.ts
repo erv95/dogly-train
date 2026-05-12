@@ -15,6 +15,8 @@ import {
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import * as ImageManipulator from 'expo-image-manipulator';
 import { auth, db, storage } from '../config/firebase';
+import { cfUrl } from '../config/functions';
+import { callCF, CFError } from '../utils/cfClient';
 import {
   Booking,
   BookingService,
@@ -22,10 +24,6 @@ import {
 } from '../types';
 
 const COLLECTION = 'bookings';
-const FUNCTION_URL = 'https://us-central1-dogly-train.cloudfunctions.net/createBooking';
-const FUNCTION_URL_CANCEL = 'https://us-central1-dogly-train.cloudfunctions.net/cancelBooking';
-const FUNCTION_URL_COMPLETE = 'https://us-central1-dogly-train.cloudfunctions.net/markBookingCompleted';
-const FUNCTION_URL_OCCUPIED = 'https://us-central1-dogly-train.cloudfunctions.net/getProviderOccupiedSlots';
 
 export type CreateBookingError =
   | 'unauthenticated'
@@ -54,77 +52,45 @@ export interface CreateBookingResult {
   bookingId: string;
 }
 
-/** Create a new booking via the Cloud Function. Throws Error whose message is
- *  one of `CreateBookingError` for the UI to localise. */
+/** Create a new booking via the Cloud Function. Throws an Error whose
+ *  `message` is one of `CreateBookingError` so the UI can localise it.
+ *
+ *  Special case: on `too_close_to_now` / `too_far_in_future` the server
+ *  includes `minLeadMinutes` / `maxHorizonDays` so the UI can say e.g.
+ *  "minimum 30 min ahead". We surface those as Error fields. */
 export async function createBooking(input: CreateBookingInput): Promise<CreateBookingResult> {
-  const user = auth.currentUser;
-  if (!user) throw new Error('unauthenticated');
-  const idToken = await user.getIdToken();
-
-  const res = await fetch(FUNCTION_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${idToken}`,
-    },
-    body: JSON.stringify(input),
-  });
-
-  if (!res.ok) {
-    let code: CreateBookingError = 'unknown';
-    let raw: string | null = null;
-    let minLeadMinutes: number | undefined;
-    let maxHorizonDays: number | undefined;
-    try {
-      raw = await res.text();
-      const data = JSON.parse(raw);
-      if (typeof data?.error === 'string') {
-        const known: CreateBookingError[] = [
-          'invalid_input', 'rate_limited', 'provider_not_active',
-          'dog_not_found', 'slot_taken', 'slot_outside_availability',
-          'too_close_to_now', 'too_far_in_future',
-        ];
-        if (known.includes(data.error as CreateBookingError)) {
-          code = data.error as CreateBookingError;
-        }
+  try {
+    return await callCF<CreateBookingResult>('createBooking', input);
+  } catch (err) {
+    if (err instanceof CFError) {
+      // Translate the typed CFError into the legacy Error-with-message shape
+      // expected by the UI (consumers switch on `error.message`).
+      const known: CreateBookingError[] = [
+        'invalid_input', 'rate_limited', 'provider_not_active',
+        'dog_not_found', 'slot_taken', 'slot_outside_availability',
+        'too_close_to_now', 'too_far_in_future', 'unauthenticated',
+      ];
+      const code: CreateBookingError =
+        known.includes(err.code as CreateBookingError)
+          ? (err.code as CreateBookingError)
+          : 'unknown';
+      const e = new Error(code) as any;
+      // Parse server hints if present (raw is the unparsed body string).
+      if (err.raw) {
+        try {
+          const data = JSON.parse(err.raw);
+          if (typeof data?.minLeadMinutes === 'number') e.minLeadMinutes = data.minLeadMinutes;
+          if (typeof data?.maxHorizonDays === 'number') e.maxHorizonDays = data.maxHorizonDays;
+        } catch { /* raw wasn't JSON, ignore */ }
       }
-      if (typeof data?.minLeadMinutes === 'number') minLeadMinutes = data.minLeadMinutes;
-      if (typeof data?.maxHorizonDays === 'number') maxHorizonDays = data.maxHorizonDays;
-    } catch { /* response wasn't JSON — keep `unknown` */ }
-    console.warn('createBooking failed', { status: res.status, code, body: raw?.slice(0, 300) });
-    const e = new Error(code) as any;
-    if (minLeadMinutes != null) e.minLeadMinutes = minLeadMinutes;
-    if (maxHorizonDays != null) e.maxHorizonDays = maxHorizonDays;
-    throw e;
-  }
-
-  return (await res.json()) as CreateBookingResult;
-}
-
-async function callBookingFunction(url: string, body: any, label: string): Promise<void> {
-  const user = auth.currentUser;
-  if (!user) throw new Error('unauthenticated');
-  const idToken = await user.getIdToken();
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${idToken}` },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) {
-    let code = 'unknown';
-    let raw: string | null = null;
-    try {
-      raw = await res.text();
-      const d = JSON.parse(raw);
-      if (typeof d?.error === 'string') code = d.error;
-    } catch { /* response wasn't JSON (e.g. 404 HTML) */ }
-    console.warn(`${label} failed`, { status: res.status, code, body: raw?.slice(0, 300) });
-    throw new Error(code);
+      throw e;
+    }
+    throw err;
   }
 }
 
 export async function cancelBooking(bookingId: string): Promise<void> {
-  await callBookingFunction(FUNCTION_URL_CANCEL, { bookingId }, 'cancelBooking');
+  await callCF('cancelBooking', { bookingId });
 }
 
 /** Mark a confirmed booking as completed. Requires `completionPhotoURL`
@@ -132,11 +98,7 @@ export async function cancelBooking(bookingId: string): Promise<void> {
  *  should either reuse the latest live-session photo or capture a new one
  *  before calling this. */
 export async function markBookingCompleted(bookingId: string, completionPhotoURL: string): Promise<void> {
-  await callBookingFunction(
-    FUNCTION_URL_COMPLETE,
-    { bookingId, completionPhotoURL },
-    'markBookingCompleted',
-  );
+  await callCF('markBookingCompleted', { bookingId, completionPhotoURL });
 }
 
 /** Compress a photo URI to ~1024px and upload to Storage at
@@ -256,19 +218,15 @@ export async function getProviderOccupiedSlots(
   fromUtcMillis: number,
   toUtcMillis: number,
 ): Promise<string[]> {
-  const user = auth.currentUser;
-  if (!user) return [];
   try {
-    const idToken = await user.getIdToken();
-    const res = await fetch(FUNCTION_URL_OCCUPIED, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${idToken}` },
-      body: JSON.stringify({ providerId, fromUtcMillis, toUtcMillis }),
-    });
-    if (!res.ok) return [];
-    const data = await res.json();
+    const data = await callCF<{ slotIds?: string[] }>(
+      'getProviderOccupiedSlots',
+      { providerId, fromUtcMillis, toUtcMillis },
+    );
     return Array.isArray(data?.slotIds) ? data.slotIds : [];
   } catch {
+    // Best-effort: a server hiccup here just means the UI shows no
+    // occupied-slot strikethroughs. Don't surface as an error.
     return [];
   }
 }

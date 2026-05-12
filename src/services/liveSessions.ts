@@ -15,35 +15,16 @@ import {
 } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { auth, db, storage } from '../config/firebase';
+import { callCF } from '../utils/cfClient';
 import { LivePathPoint, LivePhoto, LiveSession } from '../types';
 
-const START_URL = 'https://us-central1-dogly-train.cloudfunctions.net/startLiveSession';
-const END_URL = 'https://us-central1-dogly-train.cloudfunctions.net/endLiveSession';
-
-async function callWithToken(url: string, body: any) {
-  const u = auth.currentUser;
-  if (!u) throw new Error('unauthenticated');
-  const idToken = await u.getIdToken();
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${idToken}` },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) {
-    let code = 'unknown';
-    try { const j = await res.json(); code = j?.error ?? code; } catch {}
-    throw new Error(code);
-  }
-  return res.json();
-}
-
 export async function startLiveSession(bookingId: string): Promise<LiveSession> {
-  const data = await callWithToken(START_URL, { bookingId });
-  return data.session as LiveSession;
+  const data = await callCF<{ session: LiveSession }>('startLiveSession', { bookingId });
+  return data.session;
 }
 
 export async function endLiveSession(bookingId: string): Promise<void> {
-  await callWithToken(END_URL, { bookingId });
+  await callCF('endLiveSession', { bookingId });
 }
 
 /**

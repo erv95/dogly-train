@@ -13,7 +13,8 @@ import {
   type QueryDocumentSnapshot,
   type DocumentData,
 } from 'firebase/firestore';
-import { auth, db } from '../config/firebase';
+import { db } from '../config/firebase';
+import { callCF } from '../utils/cfClient';
 import { User, UserRole, UserStatus } from '../types';
 import { normalizeForSearch } from '../utils/search';
 
@@ -162,35 +163,12 @@ export async function updateUserRole(uid: string, newRole: UserRole): Promise<vo
 // displayName/photoURL/bizumPhone to all chats and active bookings of that
 // user. Returns the number of docs updated.
 
-const FUNCTION_URL_SYNC = 'https://us-central1-dogly-train.cloudfunctions.net/adminSyncUserDenormalized';
-
 export type AdminSyncResult = { chats: number; bookings: number };
 
 export async function adminSyncUserDenormalized(userId: string): Promise<AdminSyncResult> {
-  const user = auth.currentUser;
-  if (!user) throw new Error('unauthenticated');
-  const idToken = await user.getIdToken();
-  const res = await fetch(FUNCTION_URL_SYNC, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${idToken}`,
-    },
-    body: JSON.stringify({ userId }),
-  });
-  if (!res.ok) {
-    let code = 'unknown';
-    let raw: string | null = null;
-    try {
-      raw = await res.text();
-      const data = JSON.parse(raw);
-      if (typeof data?.error === 'string') code = data.error;
-    } catch { /* not JSON */ }
-    console.warn('adminSyncUserDenormalized failed', {
-      status: res.status, code, body: raw?.slice(0, 200),
-    });
-    throw new Error(code);
-  }
-  const data = await res.json();
+  const data = await callCF<{ chats?: number; bookings?: number }>(
+    'adminSyncUserDenormalized',
+    { userId },
+  );
   return { chats: data.chats ?? 0, bookings: data.bookings ?? 0 };
 }

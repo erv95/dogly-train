@@ -8,27 +8,15 @@ import {
   getDoc,
   doc,
 } from 'firebase/firestore';
-import { auth, db } from '../config/firebase';
+import { db } from '../config/firebase';
+import { callCF } from '../utils/cfClient';
 import { Referral, User } from '../types';
-
-const RECORD_SIGNUP_URL = 'https://us-central1-dogly-train.cloudfunctions.net/recordReferralSignup';
 
 /** Called from register.tsx right after sign-up to register the referral with
  *  the user's real IP (so the Cloud Function can hash it for the audit). */
 export async function recordReferralSignup(referralCode: string): Promise<void> {
-  const user = auth.currentUser;
-  if (!user) return;
-  const idToken = await user.getIdToken();
-  await fetch(RECORD_SIGNUP_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${idToken}`,
-    },
-    body: JSON.stringify({ referredCode: referralCode }),
-  }).catch(() => {
-    // Silent — referrals are a nice-to-have, never block the signup flow
-  });
+  // Silent failure — referrals are a nice-to-have, never block the signup flow.
+  await callCF('recordReferralSignup', { referredCode: referralCode }).catch(() => {});
 }
 
 /** Look up a user by their `displayId` (referral code). Returns null if no

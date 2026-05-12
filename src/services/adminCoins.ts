@@ -1,6 +1,4 @@
-import { auth } from '../config/firebase';
-
-const FUNCTION_URL = 'https://us-central1-dogly-train.cloudfunctions.net/adminGrantCoins';
+import { callCF, CFError } from '../utils/cfClient';
 
 export type GrantCoinsError =
   | 'unauthenticated'
@@ -18,40 +16,24 @@ export async function adminGrantCoins(
   amount: number,
   reason?: string,
 ): Promise<number> {
-  const user = auth.currentUser;
-  if (!user) throw new Error('unauthenticated');
-  const idToken = await user.getIdToken();
-
-  const res = await fetch(FUNCTION_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${idToken}`,
-    },
-    body: JSON.stringify({ userId, amount, reason }),
-  });
-
-  if (!res.ok) {
-    let code: GrantCoinsError = 'unknown';
-    let raw: string | null = null;
-    try {
-      raw = await res.text();
-      const data = JSON.parse(raw);
-      if (typeof data?.error === 'string') {
-        if (data.error === 'Admin only') code = 'admin_only';
-        else if (data.error === 'user_not_found') code = 'user_not_found';
-        else if (data.error === 'would_go_negative') code = 'would_go_negative';
-        else if (data.error.includes('Amount')) code = 'invalid_amount';
-      }
-    } catch { /* response wasn't JSON (e.g. 404 HTML body) */ }
-    // Log full diagnostic info so console errors show what really failed.
-    console.warn('adminGrantCoins failed', {
-      status: res.status,
-      mappedCode: code,
-      body: raw?.slice(0, 300),
-    });
-    throw new Error(code);
+  try {
+    const data = await callCF<{ newBalance: number }>(
+      'adminGrantCoins',
+      { userId, amount, reason },
+    );
+    return data.newBalance;
+  } catch (err) {
+    if (err instanceof CFError) {
+      // Map server-side error codes / messages to the GrantCoinsError shape
+      // expected by the UI. Keep legacy mappings for older error texts.
+      let code: GrantCoinsError = 'unknown';
+      if (err.code === 'Admin only') code = 'admin_only';
+      else if (err.code === 'user_not_found') code = 'user_not_found';
+      else if (err.code === 'would_go_negative') code = 'would_go_negative';
+      else if (err.code.includes?.('Amount')) code = 'invalid_amount';
+      else if (err.code === 'unauthenticated') code = 'unauthenticated';
+      throw new Error(code);
+    }
+    throw err;
   }
-  const data = await res.json();
-  return data.newBalance as number;
 }

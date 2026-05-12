@@ -1,4 +1,10 @@
 import { initializeApp } from 'firebase/app';
+// `getReactNativePersistence` is exported by Firebase ≥10.7 at runtime via
+// the React Native bundle (selected by Metro), but it's not re-exported by
+// `firebase/auth`'s main `index.d.ts`. Suppress the type error here — if
+// Firebase fixes the typings in a future release, this directive will start
+// to fail and we'll know to remove it.
+// @ts-expect-error — runtime export, missing from main type defs (firebase ≥10.7)
 import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
 import {
   initializeFirestore,

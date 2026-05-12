@@ -84,7 +84,7 @@
       "photoTitle": "Optional profile photo",
       "photoBody": "You can sign up and book without a photo. We show your initials. If you uploaded one and changed your mind, you can remove it.",
       "storageTitle": "European servers",
-      "storageBody": "Data stored on Firebase (Google Cloud) with at-rest encryption. Primary region is europe-west to limit international transfers."
+      "storageBody": "Data stored on Google Cloud — Firestore in EU multi-region eur3 (Belgium + Netherlands) and Storage in europe-west1 (Belgium), encrypted at rest. Zero international transfers in normal operation."
     },
     "contactTitle": "Contact",
     "contactEmailTitle": "Something off? Write to us",
@@ -3924,7 +3924,13 @@
     "wrongPassword": "Wrong password. Try again.",
     "failed": "We couldn't verify your identity. Try again.",
     "deleteAccountBody": "To delete your account, confirm your password. This action is permanent.",
-    "revokeBody": "We'll log you out on all your devices (including this one). Confirm your password to continue."
+    "revokeBody": "We'll log you out on all your devices (including this one). Confirm your password to continue.",
+    "attemptsLeft_one": "{{count}} attempt left before lockout.",
+    "attemptsLeft_other": "{{count}} attempts left before lockout.",
+    "locked": {
+      "title": "Too many attempts",
+      "body": "You've entered the wrong password several times. Try again in {{minutes}} min."
+    }
   },
   "verified": {
     "short": "Verified",

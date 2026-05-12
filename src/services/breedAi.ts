@@ -1,8 +1,7 @@
 import { ref, uploadBytes } from 'firebase/storage';
 import { auth, storage } from '../config/firebase';
+import { callCF, CFError } from '../utils/cfClient';
 import { BreedIdentifyResponse } from '../types';
-
-const FUNCTION_URL = 'https://us-central1-dogly-train.cloudfunctions.net/identifyBreed';
 
 /** How many coins each call costs (kept in sync with the Cloud Function constant). */
 export const BREED_AI_COIN_COST = 10;
@@ -44,27 +43,16 @@ export async function identifyBreed(
   dogId?: string,
   language?: string,
 ): Promise<BreedIdentifyResponse> {
-  const user = auth.currentUser;
-  if (!user) throw new Error('unauthenticated');
-  const idToken = await user.getIdToken();
-
-  const res = await fetch(FUNCTION_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${idToken}`,
-    },
-    body: JSON.stringify({ storagePath, dogId, language }),
-  });
-
-  if (!res.ok) {
-    let code: BreedAiError = 'unknown';
-    try {
-      const data = await res.json();
-      if (typeof data?.error === 'string') code = data.error as BreedAiError;
-    } catch { /* swallow */ }
-    throw new Error(code);
+  try {
+    return await callCF<BreedIdentifyResponse>(
+      'identifyBreed',
+      { storagePath, dogId, language },
+    );
+  } catch (err) {
+    if (err instanceof CFError) {
+      // Preserve BreedAiError-shaped Error.message for the UI.
+      throw new Error(err.code);
+    }
+    throw err;
   }
-
-  return (await res.json()) as BreedIdentifyResponse;
 }

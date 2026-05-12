@@ -1,7 +1,4 @@
-import { auth } from '../config/firebase';
-
-const STRIPE_URL = 'https://us-central1-dogly-train.cloudfunctions.net/createPremiumCheckoutStripe';
-const PAYPAL_URL = 'https://us-central1-dogly-train.cloudfunctions.net/createPremiumOrderPaypal';
+import { callCF, CFError } from '../utils/cfClient';
 
 /**
  * Custom error returned when the user tries to buy premium but already has it.
@@ -14,29 +11,17 @@ export class AlreadyPremiumError extends Error {
   }
 }
 
-async function postWithAuth(url: string, userId: string): Promise<string> {
-  const user = auth.currentUser;
-  if (!user) throw new Error('Not authenticated');
-  const idToken = await user.getIdToken();
-
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${idToken}`,
-    },
-    body: JSON.stringify({ userId }),
-  });
-
-  if (response.status === 409) {
-    throw new AlreadyPremiumError();
+async function callPremium(name: string, userId: string): Promise<string> {
+  try {
+    const data = await callCF<{ url: string }>(name, { userId });
+    return data.url;
+  } catch (err) {
+    // The server returns HTTP 409 when the user is already premium.
+    if (err instanceof CFError && (err.status === 409 || err.code === 'already_premium')) {
+      throw new AlreadyPremiumError();
+    }
+    throw err;
   }
-  if (!response.ok) {
-    throw new Error('Failed to create premium checkout');
-  }
-
-  const data = await response.json();
-  return data.url;
 }
 
 /**
@@ -45,7 +30,7 @@ async function postWithAuth(url: string, userId: string): Promise<string> {
  * Throws AlreadyPremiumError if user already has premium.
  */
 export function createPremiumCheckoutStripe(userId: string): Promise<string> {
-  return postWithAuth(STRIPE_URL, userId);
+  return callPremium('createPremiumCheckoutStripe', userId);
 }
 
 /**
@@ -54,5 +39,5 @@ export function createPremiumCheckoutStripe(userId: string): Promise<string> {
  * Throws AlreadyPremiumError if user already has premium.
  */
 export function createPremiumOrderPaypal(userId: string): Promise<string> {
-  return postWithAuth(PAYPAL_URL, userId);
+  return callPremium('createPremiumOrderPaypal', userId);
 }

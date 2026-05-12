@@ -84,7 +84,7 @@
       "photoTitle": "Foto de perfil opcional",
       "photoBody": "Podes registar-te e reservar sem foto. Mostramos as tuas iniciais. Se carregaste uma e te arrependeste, podes retirá-la.",
       "storageTitle": "Servidores europeus",
-      "storageBody": "Dados armazenados em Firebase (Google Cloud) com cifragem em repouso. Região principal europe-west para reduzir transferências internacionais."
+      "storageBody": "Dados armazenados no Google Cloud — Firestore em multi-região UE eur3 (Bélgica + Países Baixos) e Storage em europe-west1 (Bélgica), cifrados em repouso. Zero transferências internacionais em operação normal."
     },
     "contactTitle": "Contacto",
     "contactEmailTitle": "Algo não bate certo? Escreve-nos",
@@ -3924,7 +3924,13 @@
     "wrongPassword": "Palavra-passe incorreta. Tenta novamente.",
     "failed": "Não conseguimos verificar a tua identidade. Tenta novamente.",
     "deleteAccountBody": "Para apagar a tua conta, confirma a palavra-passe. Esta ação é definitiva.",
-    "revokeBody": "Vamos terminar a tua sessão em todos os teus dispositivos (incluindo este). Confirma a palavra-passe para continuar."
+    "revokeBody": "Vamos terminar a tua sessão em todos os teus dispositivos (incluindo este). Confirma a palavra-passe para continuar.",
+    "attemptsLeft_one": "Resta {{count}} tentativa antes do bloqueio.",
+    "attemptsLeft_other": "Restam {{count}} tentativas antes do bloqueio.",
+    "locked": {
+      "title": "Demasiadas tentativas",
+      "body": "Erraste a palavra-passe várias vezes. Tenta de novo em {{minutes}} min."
+    }
   },
   "verified": {
     "short": "Verificado",

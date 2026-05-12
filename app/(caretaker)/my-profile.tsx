@@ -12,15 +12,14 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
-import * as ImagePicker from 'expo-image-picker';
 import * as Location from 'expo-location';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { geohashForLocation } from 'geofire-common';
-import { storage } from '../../src/config/firebase';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { signOut } from '../../src/services/auth';
 import { updateCaretakerProfile } from '../../src/services/caretakers';
-import { Button, Input, Avatar, Card } from '../../src/components/ui';
+import { useProfilePhoto } from '../../src/hooks/useProfilePhoto';
+import { Button, Input, Card } from '../../src/components/ui';
+import { ProfileAvatar } from '../../src/components/ProfileAvatar';
 import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 import {
   CaretakerProfile,
@@ -80,8 +79,13 @@ export default function CaretakerProfileScreen() {
   const [pricing, setPricing] = useState<CaretakerPricing>(caretaker?.pricing ?? {});
 
   const [saving, setSaving] = useState(false);
-  const [photoLoading, setPhotoLoading] = useState(false);
   const [locationLoading, setLocationLoading] = useState(false);
+
+  const { loading: photoLoading, handleChange: handleChangePhoto } = useProfilePhoto({
+    currentPhoto: caretaker?.photoURL,
+    updateProfile: (patch) => updateCaretakerProfile(firebaseUser!.uid, patch),
+    onUpdated: (newUrl) => setUserData({ ...userData!, photoURL: newUrl }),
+  });
 
   const toggleService = (service: CaretakerService) => {
     setServices((prev) => {
@@ -98,57 +102,6 @@ export default function CaretakerProfileScreen() {
       ...prev,
       [SERVICE_PRICE_KEY[service]]: isNaN(numeric) ? undefined : numeric,
     }));
-  };
-
-  const doPickPhoto = async () => {
-    if (!firebaseUser) return;
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ['images'],
-      allowsEditing: true,
-      aspect: [1, 1],
-      quality: 0.7,
-    });
-    if (result.canceled || !result.assets[0]) return;
-    setPhotoLoading(true);
-    try {
-      const response = await fetch(result.assets[0].uri);
-      const blob = await response.blob();
-      const path = `users/${firebaseUser.uid}/avatar.jpg`;
-      const storageRef = ref(storage, path);
-      await uploadBytes(storageRef, blob, { contentType: 'image/jpeg' });
-      const url = await getDownloadURL(storageRef);
-      await updateCaretakerProfile(firebaseUser.uid, { photoURL: url });
-      setUserData({ ...userData!, photoURL: url });
-    } catch {
-      Alert.alert(t('common.error'), t('authErrors.generic'));
-    } finally {
-      setPhotoLoading(false);
-    }
-  };
-
-  const doRemovePhoto = async () => {
-    if (!firebaseUser) return;
-    setPhotoLoading(true);
-    try {
-      await updateCaretakerProfile(firebaseUser.uid, { photoURL: null });
-      setUserData({ ...userData!, photoURL: null });
-    } catch {
-      Alert.alert(t('common.error'), t('authErrors.generic'));
-    } finally {
-      setPhotoLoading(false);
-    }
-  };
-
-  const handleChangePhoto = () => {
-    if (caretaker?.photoURL) {
-      Alert.alert(t('profile.photoTitle'), t('profile.photoOptionalHint'), [
-        { text: t('common.cancel'), style: 'cancel' },
-        { text: t('profile.photoRemove'), style: 'destructive', onPress: doRemovePhoto },
-        { text: t('profile.photoChange'), onPress: doPickPhoto },
-      ]);
-    } else {
-      doPickPhoto();
-    }
   };
 
   const handleGetLocation = async () => {
@@ -280,19 +233,13 @@ export default function CaretakerProfileScreen() {
 
         {/* Avatar */}
         <View style={styles.avatarSection}>
-          <TouchableOpacity onPress={handleChangePhoto} disabled={photoLoading}>
-            <Avatar uri={caretaker?.photoURL ?? null} name={caretaker?.displayName ?? '?'} size={100} />
-            <View style={styles.editPhotoBadge}>
-              {photoLoading ? (
-                <ActivityIndicator size="small" color="#fff" />
-              ) : (
-                <Ionicons name="camera" size={16} color="#fff" />
-              )}
-            </View>
-          </TouchableOpacity>
-          {!caretaker?.photoURL && (
-            <Text style={styles.optionalHint}>{t('profile.photoOptionalLabel')}</Text>
-          )}
+          <ProfileAvatar
+            photoURL={caretaker?.photoURL ?? null}
+            name={caretaker?.displayName ?? '?'}
+            size={100}
+            onPress={handleChangePhoto}
+            loading={photoLoading}
+          />
         </View>
 
         {/* Account type selector */}
@@ -527,19 +474,6 @@ const styles = StyleSheet.create({
   verifyBannerTitle: { fontSize: 14, fontWeight: '800', color: colors.text },
   verifyBannerBody: { fontSize: 12, color: colors.textSecondary, marginTop: 2 },
   avatarSection: { alignItems: 'center', marginBottom: spacing.lg },
-  optionalHint: {
-    fontSize: fontSize.xs,
-    color: colors.textLight,
-    marginTop: spacing.xs,
-    fontStyle: 'italic',
-    textAlign: 'center',
-  },
-  editPhotoBadge: {
-    position: 'absolute', bottom: 0, right: 0,
-    backgroundColor: colors.primary, width: 32, height: 32,
-    borderRadius: 16, alignItems: 'center', justifyContent: 'center',
-    borderWidth: 2, borderColor: colors.background,
-  },
   sectionTitle: {
     fontSize: fontSize.md, fontWeight: '700', color: colors.text,
     marginTop: spacing.md, marginBottom: spacing.xs,

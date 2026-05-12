@@ -14,8 +14,9 @@ import { Ionicons } from '@expo/vector-icons';
 import { signOut } from '../../src/services/auth';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { updateUserProfile } from '../../src/services/users';
-import { pickAndUploadImage } from '../../src/utils/photo';
-import { Button, Avatar, Input } from '../../src/components/ui';
+import { useProfilePhoto } from '../../src/hooks/useProfilePhoto';
+import { Button, Input } from '../../src/components/ui';
+import { ProfileAvatar } from '../../src/components/ProfileAvatar';
 import { CoinBalancePill } from '../../src/components/CoinBalancePill';
 import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 
@@ -27,7 +28,12 @@ export default function OwnerProfileScreen() {
   const [editing, setEditing] = useState(false);
   const [displayName, setDisplayName] = useState(userData?.displayName ?? '');
   const [saving, setSaving] = useState(false);
-  const [photoLoading, setPhotoLoading] = useState(false);
+
+  const { loading: photoLoading, handleChange: handleChangePhoto } = useProfilePhoto({
+    currentPhoto: userData?.photoURL,
+    updateProfile: (patch) => updateUserProfile(firebaseUser!.uid, patch),
+    onUpdated: (newUrl) => setUserData({ ...userData!, photoURL: newUrl }),
+  });
 
   const handleLogout = async () => {
     await signOut();
@@ -48,49 +54,6 @@ export default function OwnerProfileScreen() {
     }
   };
 
-  const doPickPhoto = async () => {
-    if (!firebaseUser) return;
-    setPhotoLoading(true);
-    try {
-      const url = await pickAndUploadImage(`users/${firebaseUser.uid}/avatar.jpg`);
-      if (url) {
-        await updateUserProfile(firebaseUser.uid, { photoURL: url });
-        setUserData({ ...userData!, photoURL: url });
-      }
-    } catch (error) {
-      Alert.alert(t('common.error'), t('authErrors.generic'));
-    } finally {
-      setPhotoLoading(false);
-    }
-  };
-
-  const doRemovePhoto = async () => {
-    if (!firebaseUser) return;
-    setPhotoLoading(true);
-    try {
-      await updateUserProfile(firebaseUser.uid, { photoURL: null });
-      setUserData({ ...userData!, photoURL: null });
-    } catch (error) {
-      Alert.alert(t('common.error'), t('authErrors.generic'));
-    } finally {
-      setPhotoLoading(false);
-    }
-  };
-
-  // If a photo exists, offer change vs. remove. Otherwise go straight to
-  // picker. Mirrors the "photo is optional" UX from Wag/Rover.
-  const handleChangePhoto = () => {
-    if (userData?.photoURL) {
-      Alert.alert(t('profile.photoTitle'), t('profile.photoOptionalHint'), [
-        { text: t('common.cancel'), style: 'cancel' },
-        { text: t('profile.photoRemove'), style: 'destructive', onPress: doRemovePhoto },
-        { text: t('profile.photoChange'), onPress: doPickPhoto },
-      ]);
-    } else {
-      doPickPhoto();
-    }
-  };
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -101,19 +64,12 @@ export default function OwnerProfileScreen() {
       </View>
       <ScrollView contentContainerStyle={styles.content}>
         {/* Avatar */}
-        <TouchableOpacity onPress={handleChangePhoto} disabled={photoLoading}>
-          <Avatar
-            uri={userData?.photoURL ?? null}
-            name={userData?.displayName ?? '?'}
-            size={80}
-          />
-          <View style={styles.cameraIcon}>
-            <Ionicons name="camera" size={16} color={colors.textOnPrimary} />
-          </View>
-        </TouchableOpacity>
-        {!userData?.photoURL && (
-          <Text style={styles.optionalHint}>{t('profile.photoOptionalLabel')}</Text>
-        )}
+        <ProfileAvatar
+          photoURL={userData?.photoURL ?? null}
+          name={userData?.displayName ?? '?'}
+          onPress={handleChangePhoto}
+          loading={photoLoading}
+        />
 
         {/* Name */}
         {editing ? (
@@ -215,25 +171,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: spacing.xl,
     gap: spacing.sm,
-  },
-  cameraIcon: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    backgroundColor: colors.primary,
-    width: 28,
-    height: 28,
-    borderRadius: 14,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 2,
-    borderColor: colors.background,
-  },
-  optionalHint: {
-    fontSize: fontSize.xs,
-    color: colors.textLight,
-    marginTop: spacing.xs,
-    fontStyle: 'italic',
   },
   nameRow: {
     flexDirection: 'row',

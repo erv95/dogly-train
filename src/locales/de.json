@@ -84,7 +84,7 @@
       "photoTitle": "Optionales Profilfoto",
       "photoBody": "Du kannst dich ohne Foto registrieren und buchen. Wir zeigen deine Initialen. Falls du ein Foto hochgeladen hast, kannst du es entfernen.",
       "storageTitle": "Europäische Server",
-      "storageBody": "Daten auf Firebase (Google Cloud) mit Verschlüsselung im Ruhezustand. Hauptregion europe-west zur Begrenzung internationaler Transfers."
+      "storageBody": "Daten auf Google Cloud — Firestore in der EU-Multi-Region eur3 (Belgien + Niederlande) und Storage in europe-west1 (Belgien), verschlüsselt im Ruhezustand. Null internationale Transfers im Normalbetrieb."
     },
     "contactTitle": "Kontakt",
     "contactEmailTitle": "Etwas stimmt nicht? Schreib uns",
@@ -3924,7 +3924,13 @@
     "wrongPassword": "Falsches Passwort. Versuche es nochmal.",
     "failed": "Wir konnten deine Identität nicht bestätigen. Versuche es nochmal.",
     "deleteAccountBody": "Um dein Konto zu löschen, bestätige dein Passwort. Diese Aktion ist endgültig.",
-    "revokeBody": "Wir melden dich auf allen Geräten ab (einschließlich diesem). Bestätige dein Passwort, um fortzufahren."
+    "revokeBody": "Wir melden dich auf allen Geräten ab (einschließlich diesem). Bestätige dein Passwort, um fortzufahren.",
+    "attemptsLeft_one": "Noch {{count}} Versuch vor der Sperre.",
+    "attemptsLeft_other": "Noch {{count}} Versuche vor der Sperre.",
+    "locked": {
+      "title": "Zu viele Versuche",
+      "body": "Du hast das Passwort mehrmals falsch eingegeben. Versuche es in {{minutes}} Min erneut."
+    }
   },
   "verified": {
     "short": "Verifiziert",

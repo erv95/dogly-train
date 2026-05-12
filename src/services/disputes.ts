@@ -10,13 +10,9 @@ import {
   limit,
   Unsubscribe,
 } from 'firebase/firestore';
-import { auth, db } from '../config/firebase';
+import { db } from '../config/firebase';
+import { callCF } from '../utils/cfClient';
 import { Dispute, DisputeReason, DisputeStatus } from '../types';
-
-const OPEN_DISPUTE_URL =
-  'https://us-central1-dogly-train.cloudfunctions.net/openDispute';
-const RESOLVE_DISPUTE_URL =
-  'https://us-central1-dogly-train.cloudfunctions.net/adminResolveDispute';
 
 export type OpenDisputeError =
   | 'unauthenticated'
@@ -28,32 +24,12 @@ export type OpenDisputeError =
   | 'rate_limited'
   | 'unknown';
 
-async function callCF(url: string, body: any): Promise<any> {
-  const user = auth.currentUser;
-  if (!user) throw new Error('unauthenticated');
-  const idToken = await user.getIdToken();
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${idToken}` },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) {
-    let code = 'unknown';
-    try {
-      const d = await res.json();
-      if (typeof d?.error === 'string') code = d.error;
-    } catch { /* ignore */ }
-    throw new Error(code);
-  }
-  return res.json();
-}
-
 export async function openDispute(
   bookingId: string,
   reason: DisputeReason,
   description: string,
 ): Promise<{ disputeId: string; alreadyOpen?: boolean }> {
-  return callCF(OPEN_DISPUTE_URL, { bookingId, reason, description });
+  return callCF('openDispute', { bookingId, reason, description });
 }
 
 export async function adminResolveDispute(
@@ -61,7 +37,7 @@ export async function adminResolveDispute(
   status: 'resolved' | 'rejected',
   resolution: string,
 ): Promise<void> {
-  await callCF(RESOLVE_DISPUTE_URL, { disputeId, status, resolution });
+  await callCF('adminResolveDispute', { disputeId, status, resolution });
 }
 
 /** Returns all dispute docs that mention this booking (either side could

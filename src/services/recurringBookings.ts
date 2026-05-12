@@ -1,9 +1,5 @@
-import { auth } from '../config/firebase';
+import { callCF, CFError } from '../utils/cfClient';
 import { BookingService } from '../types';
-
-const CREATE_URL = 'https://us-central1-dogly-train.cloudfunctions.net/createRecurringBookings';
-const CANCEL_URL = 'https://us-central1-dogly-train.cloudfunctions.net/cancelRecurringSeries';
-const PREVIEW_URL = 'https://us-central1-dogly-train.cloudfunctions.net/previewRecurringSeries';
 
 export interface CreateRecurringInput {
   providerId: string;
@@ -59,27 +55,29 @@ export interface CreateRecurringResult {
   skipped: OccurrenceAnalysis[];
 }
 
-async function callWithToken(url: string, body: any) {
-  const u = auth.currentUser;
-  if (!u) throw new Error('unauthenticated');
-  const idToken = await u.getIdToken();
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${idToken}` },
-    body: JSON.stringify(body),
-  });
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) {
-    const code = (data?.error as string) ?? 'unknown';
-    const e = new Error(code) as any;
-    e.failedAtIndex = data?.failedAtIndex ?? null;
-    throw e;
+/** Wrap callCF to preserve the legacy `error.message`-based interface used
+ *  by the recurring-bookings UI. Also surfaces `failedAtIndex` (which week
+ *  triggered the slot_taken) as an Error field. */
+async function callRecurring<T>(name: string, body: unknown): Promise<T> {
+  try {
+    return await callCF<T>(name, body);
+  } catch (err) {
+    if (err instanceof CFError) {
+      const e = new Error(err.code) as any;
+      if (err.raw) {
+        try {
+          const data = JSON.parse(err.raw);
+          if (typeof data?.failedAtIndex === 'number') e.failedAtIndex = data.failedAtIndex;
+        } catch { /* not JSON */ }
+      }
+      throw e;
+    }
+    throw err;
   }
-  return data;
 }
 
 export async function previewRecurringSeries(input: Omit<CreateRecurringInput, 'notes' | 'skipUnavailable'>): Promise<PreviewResult> {
-  const data = await callWithToken(PREVIEW_URL, input);
+  const data = await callRecurring<any>('previewRecurringSeries', input);
   return {
     occurrences: data.occurrences ?? [],
     availableCount: data.availableCount ?? 0,
@@ -88,7 +86,7 @@ export async function previewRecurringSeries(input: Omit<CreateRecurringInput, '
 }
 
 export async function createRecurringBookings(input: CreateRecurringInput): Promise<CreateRecurringResult> {
-  const data = await callWithToken(CREATE_URL, input);
+  const data = await callRecurring<any>('createRecurringBookings', input);
   return {
     seriesId: data.seriesId,
     bookingIds: data.bookingIds ?? [],
@@ -97,8 +95,8 @@ export async function createRecurringBookings(input: CreateRecurringInput): Prom
 }
 
 export async function cancelRecurringSeries(seriesId: string, fromIndex?: number): Promise<{ cancelled: number }> {
-  const body: any = { seriesId };
+  const body: Record<string, unknown> = { seriesId };
   if (typeof fromIndex === 'number') body.fromIndex = fromIndex;
-  const data = await callWithToken(CANCEL_URL, body);
+  const data = await callRecurring<any>('cancelRecurringSeries', body);
   return { cancelled: data.cancelled ?? 0 };
 }

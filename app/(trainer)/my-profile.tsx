@@ -19,7 +19,9 @@ import { useAuth } from '../../src/contexts/AuthContext';
 import { updateTrainerProfile } from '../../src/services/trainers';
 import { signOut } from '../../src/services/auth';
 import { pickAndUploadImage } from '../../src/utils/photo';
-import { Button, Input, Avatar } from '../../src/components/ui';
+import { useProfilePhoto } from '../../src/hooks/useProfilePhoto';
+import { Button, Input } from '../../src/components/ui';
+import { ProfileAvatar } from '../../src/components/ProfileAvatar';
 import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 import { TrainerProfile } from '../../src/types';
 
@@ -51,8 +53,13 @@ export default function TrainerProfileScreen() {
   const [newSpecialty, setNewSpecialty] = useState('');
 
   const [saving, setSaving] = useState(false);
-  const [photoLoading, setPhotoLoading] = useState(false);
   const [locationLoading, setLocationLoading] = useState(false);
+
+  const { loading: photoLoading, handleChange: handleChangePhoto } = useProfilePhoto({
+    currentPhoto: trainer?.photoURL,
+    updateProfile: (patch) => updateTrainerProfile(firebaseUser!.uid, patch),
+    onUpdated: (newUrl) => setUserData({ ...userData!, photoURL: newUrl }),
+  });
 
   const handleSignOut = () => {
     Alert.alert(
@@ -70,47 +77,6 @@ export default function TrainerProfileScreen() {
         },
       ]
     );
-  };
-
-  const doPickPhoto = async () => {
-    if (!firebaseUser) return;
-    setPhotoLoading(true);
-    try {
-      const url = await pickAndUploadImage(`users/${firebaseUser.uid}/avatar.jpg`);
-      if (url) {
-        await updateTrainerProfile(firebaseUser.uid, { photoURL: url });
-        setUserData({ ...userData!, photoURL: url });
-      }
-    } catch (error) {
-      Alert.alert(t('common.error'), t('authErrors.generic'));
-    } finally {
-      setPhotoLoading(false);
-    }
-  };
-
-  const doRemovePhoto = async () => {
-    if (!firebaseUser) return;
-    setPhotoLoading(true);
-    try {
-      await updateTrainerProfile(firebaseUser.uid, { photoURL: null });
-      setUserData({ ...userData!, photoURL: null });
-    } catch (error) {
-      Alert.alert(t('common.error'), t('authErrors.generic'));
-    } finally {
-      setPhotoLoading(false);
-    }
-  };
-
-  const handleChangePhoto = () => {
-    if (userData?.photoURL) {
-      Alert.alert(t('profile.photoTitle'), t('profile.photoOptionalHint'), [
-        { text: t('common.cancel'), style: 'cancel' },
-        { text: t('profile.photoRemove'), style: 'destructive', onPress: doRemovePhoto },
-        { text: t('profile.photoChange'), onPress: doPickPhoto },
-      ]);
-    } else {
-      doPickPhoto();
-    }
   };
 
   const handleGetLocation = async () => {
@@ -265,23 +231,12 @@ export default function TrainerProfileScreen() {
           )}
 
           {/* Avatar */}
-          <TouchableOpacity
-            style={styles.avatarSection}
+          <ProfileAvatar
+            photoURL={userData?.photoURL ?? null}
+            name={userData?.displayName ?? '?'}
             onPress={handleChangePhoto}
-            disabled={photoLoading}
-          >
-            <Avatar
-              uri={userData?.photoURL ?? null}
-              name={userData?.displayName ?? '?'}
-              size={80}
-            />
-            <View style={styles.cameraIcon}>
-              <Ionicons name="camera" size={16} color={colors.textOnPrimary} />
-            </View>
-          </TouchableOpacity>
-          {!userData?.photoURL && (
-            <Text style={styles.optionalHint}>{t('profile.photoOptionalLabel')}</Text>
-          )}
+            loading={photoLoading}
+          />
 
           {userData?.displayId && (
             <View style={styles.idBadge}>
@@ -520,30 +475,6 @@ const styles = StyleSheet.create({
   },
   verifyBannerTitle: { fontSize: 14, fontWeight: '800', color: colors.text },
   verifyBannerBody: { fontSize: 12, color: colors.textSecondary, marginTop: 2 },
-  avatarSection: {
-    alignSelf: 'center',
-    marginBottom: spacing.lg,
-  },
-  cameraIcon: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    backgroundColor: colors.primary,
-    width: 28,
-    height: 28,
-    borderRadius: 14,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 2,
-    borderColor: colors.background,
-  },
-  optionalHint: {
-    fontSize: fontSize.xs,
-    color: colors.textLight,
-    marginTop: spacing.xs,
-    fontStyle: 'italic',
-    textAlign: 'center',
-  },
   row: {
     flexDirection: 'row',
     gap: spacing.md,
