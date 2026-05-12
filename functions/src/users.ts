@@ -1,7 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-
-const db = admin.firestore();
+import { db } from "./_shared";
 
 /** Firestore commit batches cap at 500 ops. We chunk our updates so a user
  *  with hundreds of chats/bookings still gets propagated correctly. */

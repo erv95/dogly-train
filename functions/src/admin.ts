@@ -1,8 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { sendSecurityEmail } from "./_shared";
-
-const db = admin.firestore();
+import { db, bucket, sendSecurityEmail } from "./_shared";
 
 /**
  * Delete all files under a Storage prefix.
@@ -11,7 +9,6 @@ const db = admin.firestore();
  */
 async function deleteStorageFolder(prefix: string): Promise<void> {
   try {
-    const bucket = admin.storage().bucket();
     const [files] = await bucket.getFiles({ prefix });
     if (files.length === 0) return;
     await Promise.allSettled(files.map((f) => f.delete()));

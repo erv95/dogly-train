@@ -2,6 +2,7 @@ import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import * as crypto from "crypto";
 import {
+  db,
   setupCors,
   verifyCallerToken,
   notifyByPush,
@@ -9,8 +10,6 @@ import {
   REFERRAL_LIFETIME_CAP,
   REFERRAL_IP_FLAG_THRESHOLD,
 } from "./_shared";
-
-const db = admin.firestore();
 
 /** Hash an IP for storage. Salt makes the hash useless if the DB leaks but
  *  same-IP detection still works because we use the same salt every time. */

@@ -1,5 +1,6 @@
 {
   "firestore": {
+    "database": "dogly-eu",
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
@@ -22,9 +23,12 @@
       }
     ]
   },
-  "storage": {
-    "rules": "storage.rules"
-  },
+  "storage": [
+    {
+      "bucket": "dogly-train-eu",
+      "rules": "storage.rules"
+    }
+  ],
   "emulators": {
     "auth": { "port": 9099 },
     "functions": { "port": 5001 },

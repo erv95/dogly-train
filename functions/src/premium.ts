@@ -1,8 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import Stripe from "stripe";
-
-const db = admin.firestore();
+import { db } from "./_shared";
 
 // Premium = one-time purchase to remove ads.
 // Single price (server-side source of truth — never trust client).

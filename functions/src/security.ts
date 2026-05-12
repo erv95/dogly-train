@@ -1,8 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { setupCors, verifyCallerToken, notifyByPush, sendSecurityEmail } from "./_shared";
-
-const db = admin.firestore();
+import { db, setupCors, verifyCallerToken, notifyByPush, sendSecurityEmail } from "./_shared";
 
 /**
  * Revoke all refresh tokens for the calling user. This forces every device

@@ -1,7 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-
-const db = admin.firestore();
+import { db } from "./_shared";
 
 const BOOST_COST = 20;
 const BOOST_DURATION_HOURS = 24;

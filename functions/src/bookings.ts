@@ -1,8 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
+import { db } from "./_shared";
 import { sendPush, sendSystemMessage } from "./notifications";
-
-const db = admin.firestore();
 
 // ── Constants (mirror src/config/booking.ts) ─────────────────────────────────
 const BOOKING_TIMEZONE = "Europe/Madrid";

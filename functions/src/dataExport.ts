@@ -1,8 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { setupCors, verifyCallerToken, enforceRateLimit } from "./_shared";
-
-const db = admin.firestore();
+import { db, setupCors, verifyCallerToken, enforceRateLimit } from "./_shared";
 
 /**
  * GDPR Article 20 — Right to data portability.

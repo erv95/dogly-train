@@ -1,7 +1,16 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
+import { getFirestore } from "firebase-admin/firestore";
 
-const db = admin.firestore();
+/**
+ * EU-region Firestore database (eur3 — Belgium/Netherlands) and Storage
+ * bucket (europe-west1). Migrated 2026-05-12 from the legacy nam5 default
+ * database / `dogly-train.firebasestorage.app` bucket — see Iter 1.0 of
+ * robust-petting-owl.md. Every Cloud Function MUST import `db` and `bucket`
+ * from here so a future region change becomes a single-file edit.
+ */
+export const db = getFirestore(admin.app(), "dogly-eu");
+export const bucket = admin.storage().bucket("dogly-train-eu");
 
 // ── CORS ─────────────────────────────────────────────────────────────────────
 

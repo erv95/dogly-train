@@ -13,7 +13,9 @@ const firebaseConfig = {
   apiKey: 'AIzaSyDqVgfKTGS7IiLQ1oY2TWW0w-IXIEzUvmo',
   authDomain: 'dogly-train.firebaseapp.com',
   projectId: 'dogly-train',
-  storageBucket: 'dogly-train.firebasestorage.app',
+  // EU bucket in europe-west1 (Belgium). Migrated 2026-05-12 from the
+  // legacy us-region bucket as part of Iter 1.0 (RGPD residency).
+  storageBucket: 'dogly-train-eu',
   messagingSenderId: '854259014276',
   appId: '1:854259014276:web:5003bea53305facf9c40d1',
 };
@@ -26,11 +28,14 @@ export const auth = initializeAuth(app, {
 
 // Persistent local cache enables offline reads from previously-fetched data
 // and queues writes while offline (auto-syncs on reconnect).
+// `databaseId: 'dogly-eu'` points to the EU multi-region database (eur3).
+// The legacy `(default)` DB in nam5 is kept read-only as a 7-day safety net
+// before final deletion — see robust-petting-owl.md Iter 1.0 Phase H.
 export const db = initializeFirestore(app, {
   localCache: persistentLocalCache({
     tabManager: persistentMultipleTabManager(),
   }),
-});
+}, 'dogly-eu');
 
 export const storage = getStorage(app);
 export const functions = getFunctions(app);

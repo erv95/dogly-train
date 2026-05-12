@@ -1,12 +1,11 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import {
+  db,
   setupCors,
   verifyCallerToken,
   enforceRateLimit,
 } from "./_shared";
-
-const db = admin.firestore();
 
 const BOOKING_TIMEZONE = "Europe/Madrid";
 const SLOT_MINUTES = 30;

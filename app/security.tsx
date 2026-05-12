@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '../src/contexts/AuthContext';
 import { Card } from '../src/components/ui';
+import { SUPPORT_EMAIL } from '../src/config/contact';
 import { colors, spacing, fontSize, borderRadius } from '../src/theme';
 
 /**
@@ -79,7 +80,7 @@ export default function SecurityScreen() {
   const { t } = useTranslation();
   const router = useRouter();
   const { firebaseUser } = useAuth();
-  const supportEmail = 'soporte@dogly-train.app';
+  const supportEmail = SUPPORT_EMAIL;
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.scroll}>

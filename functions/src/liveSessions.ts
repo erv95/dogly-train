@@ -1,12 +1,11 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import {
+  db,
   setupCors,
   verifyCallerToken,
   notifyByPush,
 } from "./_shared";
-
-const db = admin.firestore();
 
 const START_WINDOW_MS = 2 * 60 * 60 * 1000;   // ±2h around serviceAt
 const STALE_PING_MS = 30 * 60 * 1000;          // 30 min no ping → mark ended

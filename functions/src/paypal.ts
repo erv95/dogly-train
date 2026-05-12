@@ -1,8 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
+import { db } from "./_shared";
 import { applyPremium } from "./premium";
-
-const db = admin.firestore();
 
 // Coin packages — single source of truth for coin amounts.
 // Never trust the coins value from the client or custom_id.

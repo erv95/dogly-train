@@ -1,9 +1,8 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import Stripe from "stripe";
+import { db } from "./_shared";
 import { applyPremium } from "./premium";
-
-const db = admin.firestore();
 
 // Stripe keys are set via environment variables.
 // Locally: functions/.env

@@ -1,9 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import Anthropic from "@anthropic-ai/sdk";
-
-const db = admin.firestore();
-const storage = admin.storage();
+import { db, bucket } from "./_shared";
 
 const COIN_COST = 10;
 const DAILY_LIMIT = 5;          // identifications per user per UTC day
@@ -197,7 +195,6 @@ export const identifyBreed = functions
       });
 
       // 2. Download image from Storage
-      const bucket = storage.bucket();
       const file = bucket.file(storagePath);
       const [exists] = await file.exists();
       if (!exists) {
