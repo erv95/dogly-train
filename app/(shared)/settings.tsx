@@ -30,6 +30,8 @@ import { useAuth } from '../../src/contexts/AuthContext';
 import { ReauthModal } from '../../src/components/ReauthModal';
 import { revokeAllSessions } from '../../src/services/security';
 import { exportMyData } from '../../src/services/dataExport';
+import { showErrorAlert } from '../../src/utils/errors';
+import { callCF } from '../../src/utils/cfClient';
 import { colors, spacing, fontSize, borderRadius, PREMIUM_PRICE_EUR } from '../../src/theme';
 import { User } from '../../src/types';
 
@@ -193,12 +195,8 @@ export default function SettingsScreen() {
       // Light success ping. The share sheet is the real UX; this just
       // confirms the file was produced if the user cancels the sheet.
       console.log('Data export bytes:', bytes);
-    } catch (err: any) {
-      const code = err?.message ?? 'unknown';
-      const msg = code === 'rate_limited'
-        ? t('settings.exportDataRateLimited')
-        : t('settings.exportDataError');
-      Alert.alert(t('common.error'), msg);
+    } catch (err) {
+      showErrorAlert(err, 'settings.exportDataError');
     } finally {
       setExporting(false);
     }
@@ -228,8 +226,8 @@ export default function SettingsScreen() {
       // than waiting for the ID token to expire.
       await signOut();
       router.replace('/');
-    } catch {
-      Alert.alert(t('common.error'), t('authErrors.generic'));
+    } catch (err) {
+      showErrorAlert(err);
     } finally {
       setRevoking(false);
     }
@@ -255,23 +253,11 @@ export default function SettingsScreen() {
     if (!firebaseUser) return;
     setDeleting(true);
     try {
-      const CLOUD_FUNCTION_URL =
-        'https://us-central1-dogly-train.cloudfunctions.net/deleteUserAccount';
-      const idToken = await auth.currentUser?.getIdToken();
-      if (!idToken) throw new Error('Not authenticated');
-      const response = await fetch(CLOUD_FUNCTION_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${idToken}`,
-        },
-        body: JSON.stringify({ userId: firebaseUser.uid }),
-      });
-      if (!response.ok) throw new Error('Delete failed');
+      await callCF('deleteUserAccount', { userId: firebaseUser.uid });
       await signOut();
       router.replace('/');
-    } catch (error) {
-      Alert.alert(t('common.error'), t('authErrors.generic'));
+    } catch (err) {
+      showErrorAlert(err);
     } finally {
       setDeleting(false);
     }

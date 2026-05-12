@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { createCheckoutSession, createPaypalOrder } from '../../src/services/coins';
+import { showErrorAlert } from '../../src/utils/errors';
 import { Button, Card } from '../../src/components/ui';
 import { colors, spacing, fontSize, borderRadius, shadow, COIN_PACKAGES } from '../../src/theme';
 import { useEffect } from 'react';
@@ -50,8 +51,8 @@ export default function PurchaseScreen() {
       } else {
         Alert.alert(t('common.error'), t('authErrors.generic'));
       }
-    } catch (error) {
-      Alert.alert(t('common.error'), t('authErrors.generic'));
+    } catch (err) {
+      showErrorAlert(err);
     } finally {
       setLoading(false);
     }
@@ -68,8 +69,8 @@ export default function PurchaseScreen() {
       } else {
         Alert.alert(t('common.error'), t('authErrors.generic'));
       }
-    } catch (error) {
-      Alert.alert(t('common.error'), t('authErrors.generic'));
+    } catch (err) {
+      showErrorAlert(err);
     } finally {
       setPaypalLoading(false);
     }

@@ -473,6 +473,7 @@ export default function BookProviderScreen() {
               multiline
               style={styles.notesInput}
             />
+            <Text style={styles.charCounter}>{notes.length}/{BOOKING_NOTES_MAX}</Text>
 
             {/* Recurring toggle — turn this booking into a weekly series */}
             <View style={styles.recurringBox}>
@@ -609,6 +610,12 @@ const styles = StyleSheet.create({
     borderWidth: 1, borderColor: colors.border,
     padding: spacing.sm, minHeight: 80,
     color: colors.text, fontSize: fontSize.sm, textAlignVertical: 'top',
+  },
+  charCounter: {
+    fontSize: fontSize.xs,
+    color: colors.textLight,
+    textAlign: 'right',
+    marginTop: spacing.xs,
   },
 
   recurringBox: {

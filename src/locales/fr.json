@@ -1,4 +1,57 @@
 {
+  "errors": {
+    "generic": "Une erreur est survenue. Réessaie.",
+    "unauthenticated": "Ta session a expiré. Reconnecte-toi.",
+    "forbidden": "Tu n'as pas la permission de faire ça.",
+    "rateLimited": "Trop de requêtes. Attends un moment et réessaie.",
+    "invalidInput": "Les données envoyées sont invalides. Vérifie et réessaie.",
+    "networkError": "Pas de connexion. Vérifie Internet et réessaie.",
+    "slotTaken": "Ce créneau vient d'être pris. Choisis-en un autre.",
+    "slotOutsideAvailability": "Ce créneau n'est pas disponible pour ce professionnel.",
+    "tooCloseToNow": "Trop proche de l'heure actuelle. Réserve plus à l'avance.",
+    "tooFarInFuture": "Cette date est trop éloignée. Choisis-en une plus proche.",
+    "providerNotActive": "Ce professionnel n'est plus disponible.",
+    "dogNotFound": "Nous n'avons pas trouvé le chien sélectionné.",
+    "bookingNotFound": "Cette réservation n'existe plus.",
+    "noAvailableWeeks": "Aucune semaine disponible dans l'intervalle choisi.",
+    "outsideWindow": "Ce n'est pas le bon moment. Tu peux commencer 2 h avant et 2 h après le service.",
+    "sessionNotFound": "Cette session en direct n'existe plus.",
+    "sessionAlreadyEnded": "Cette session est déjà terminée.",
+    "bookingNotActive": "Cette réservation n'est pas active.",
+    "disputeNotFound": "Cette réclamation n'existe plus.",
+    "alreadyClosed": "Cette réclamation est déjà fermée.",
+    "insufficientCoins": "Coins insuffisants.",
+    "userNotFound": "Nous n'avons pas trouvé cet utilisateur.",
+    "wouldGoNegative": "L'opération laisserait le solde négatif.",
+    "boostFailed": "Impossible d'activer le boost. Réessaie.",
+    "dailyLimitReached": "Tu as atteint la limite quotidienne.",
+    "imageTooLarge": "L'image est trop grande. Utilises-en une plus petite.",
+    "imageNotFound": "Nous n'avons pas trouvé l'image téléversée.",
+    "aiError": "L'IA n'a pas pu traiter l'image. Réessaie.",
+    "alreadyPremium": "Tu as déjà la version premium."
+  },
+  "admin": {
+    "disputes": {
+      "empty": "Aucune réclamation dans cet état.",
+      "bookingLabel": "Réservation",
+      "openedByLabel": "Ouverte par",
+      "resolutionLabel": "Résolution du modérateur",
+      "resolveTitle": "Résoudre la réclamation",
+      "resolveIntro": "Note ta décision et clôture le cas. Les deux parties seront notifiées.",
+      "resolutionPlaceholder": "Note aux parties (facultatif, max 500 caractères).",
+      "resolutionTooLong": "La note ne peut pas dépasser 500 caractères.",
+      "resolve": "Résoudre",
+      "reject": "Rejeter"
+    },
+    "events": {
+      "empty": "Aucun événement pour ce filtre.",
+      "filterAll": "Tous",
+      "filterRevokeSessions": "Sessions révoquées",
+      "filterDataExport": "Exports",
+      "filterDispute": "Réclamations",
+      "filterDeletion": "Suppression de compte"
+    }
+  },
   "dispute": {
     "openCta": "Signaler un problème",
     "modalTitle": "Signaler un problème",

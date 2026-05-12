@@ -149,6 +149,7 @@ export default function ReviewScreen() {
             numberOfLines={5}
             maxLength={500}
           />
+          <Text style={styles.charCounter}>{comment.length}/500</Text>
         </View>
 
         {/* Submit */}
@@ -225,5 +226,11 @@ const styles = StyleSheet.create({
   },
   commentSection: {
     marginBottom: spacing.lg,
+  },
+  charCounter: {
+    fontSize: fontSize.xs,
+    color: colors.textLight,
+    textAlign: 'right',
+    marginTop: spacing.xs,
   },
 });

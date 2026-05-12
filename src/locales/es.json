@@ -1,4 +1,57 @@
 {
+  "errors": {
+    "generic": "Algo ha salido mal. Inténtalo de nuevo.",
+    "unauthenticated": "Tu sesión ha expirado. Vuelve a iniciar sesión.",
+    "forbidden": "No tienes permiso para hacer esto.",
+    "rateLimited": "Has hecho demasiadas peticiones. Espera un poco y vuelve a intentarlo.",
+    "invalidInput": "Los datos enviados no son válidos. Revísalos y vuelve a probar.",
+    "networkError": "Sin conexión. Comprueba tu Internet e inténtalo de nuevo.",
+    "slotTaken": "Ese horario acaba de ocuparse. Elige otro.",
+    "slotOutsideAvailability": "Ese horario no está disponible para este profesional.",
+    "tooCloseToNow": "Demasiado cerca de la hora actual. Reserva con más antelación.",
+    "tooFarInFuture": "Esa fecha está demasiado lejos. Elige una más cercana.",
+    "providerNotActive": "Este profesional ya no está disponible.",
+    "dogNotFound": "No encontramos el perro seleccionado.",
+    "bookingNotFound": "Esta reserva ya no existe.",
+    "noAvailableWeeks": "No hay semanas disponibles en el rango elegido.",
+    "outsideWindow": "Aún no es momento. Puedes empezar 2 h antes y 2 h después del servicio.",
+    "sessionNotFound": "Esta sesión en directo ya no existe.",
+    "sessionAlreadyEnded": "Esta sesión ya ha finalizado.",
+    "bookingNotActive": "Esta reserva no está activa.",
+    "disputeNotFound": "Esta reclamación ya no existe.",
+    "alreadyClosed": "Esta reclamación ya está cerrada.",
+    "insufficientCoins": "No tienes coins suficientes.",
+    "userNotFound": "No encontramos a este usuario.",
+    "wouldGoNegative": "La operación dejaría el saldo en negativo.",
+    "boostFailed": "No hemos podido activar el boost. Inténtalo de nuevo.",
+    "dailyLimitReached": "Has alcanzado el límite diario.",
+    "imageTooLarge": "La imagen es demasiado grande. Usa una más pequeña.",
+    "imageNotFound": "No encontramos la imagen subida.",
+    "aiError": "La IA no ha podido procesar la imagen. Inténtalo de nuevo.",
+    "alreadyPremium": "Ya tienes la versión premium."
+  },
+  "admin": {
+    "disputes": {
+      "empty": "No hay reclamaciones en este estado.",
+      "bookingLabel": "Booking",
+      "openedByLabel": "Abierta por",
+      "resolutionLabel": "Resolución del moderador",
+      "resolveTitle": "Resolver reclamación",
+      "resolveIntro": "Anota la decisión y cierra el caso. Ambas partes recibirán notificación.",
+      "resolutionPlaceholder": "Nota para las partes (opcional, máx 500 caracteres).",
+      "resolutionTooLong": "La nota no puede superar 500 caracteres.",
+      "resolve": "Resolver",
+      "reject": "Desestimar"
+    },
+    "events": {
+      "empty": "Sin eventos en este filtro.",
+      "filterAll": "Todos",
+      "filterRevokeSessions": "Sesiones revocadas",
+      "filterDataExport": "Exportes",
+      "filterDispute": "Reclamaciones",
+      "filterDeletion": "Borrado de cuenta"
+    }
+  },
   "dispute": {
     "openCta": "Reportar un problema",
     "modalTitle": "Reportar un problema",

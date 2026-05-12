@@ -1,4 +1,57 @@
 {
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "unauthenticated": "Your session has expired. Please sign in again.",
+    "forbidden": "You don't have permission to do this.",
+    "rateLimited": "Too many requests. Wait a moment and try again.",
+    "invalidInput": "The submitted data is invalid. Review it and try again.",
+    "networkError": "No connection. Check your Internet and try again.",
+    "slotTaken": "That time slot was just taken. Pick another one.",
+    "slotOutsideAvailability": "That slot isn't available for this provider.",
+    "tooCloseToNow": "Too close to the current time. Book further ahead.",
+    "tooFarInFuture": "That date is too far away. Pick a closer one.",
+    "providerNotActive": "This provider is no longer available.",
+    "dogNotFound": "We couldn't find the selected dog.",
+    "bookingNotFound": "This booking no longer exists.",
+    "noAvailableWeeks": "No available weeks in the chosen range.",
+    "outsideWindow": "Not the right moment. You can start 2 h before and 2 h after the service.",
+    "sessionNotFound": "This live session no longer exists.",
+    "sessionAlreadyEnded": "This session has already ended.",
+    "bookingNotActive": "This booking is not active.",
+    "disputeNotFound": "This dispute no longer exists.",
+    "alreadyClosed": "This dispute is already closed.",
+    "insufficientCoins": "Not enough coins.",
+    "userNotFound": "We couldn't find this user.",
+    "wouldGoNegative": "The operation would leave a negative balance.",
+    "boostFailed": "We couldn't activate the boost. Try again.",
+    "dailyLimitReached": "You've reached the daily limit.",
+    "imageTooLarge": "The image is too large. Use a smaller one.",
+    "imageNotFound": "We couldn't find the uploaded image.",
+    "aiError": "The AI couldn't process the image. Try again.",
+    "alreadyPremium": "You already have the premium version."
+  },
+  "admin": {
+    "disputes": {
+      "empty": "No disputes in this state.",
+      "bookingLabel": "Booking",
+      "openedByLabel": "Opened by",
+      "resolutionLabel": "Moderator resolution",
+      "resolveTitle": "Resolve dispute",
+      "resolveIntro": "Note your decision and close the case. Both parties will be notified.",
+      "resolutionPlaceholder": "Note to the parties (optional, max 500 chars).",
+      "resolutionTooLong": "The note can't exceed 500 characters.",
+      "resolve": "Resolve",
+      "reject": "Dismiss"
+    },
+    "events": {
+      "empty": "No events match this filter.",
+      "filterAll": "All",
+      "filterRevokeSessions": "Sessions revoked",
+      "filterDataExport": "Data exports",
+      "filterDispute": "Disputes",
+      "filterDeletion": "Account deletion"
+    }
+  },
   "dispute": {
     "openCta": "Report a problem",
     "modalTitle": "Report a problem",

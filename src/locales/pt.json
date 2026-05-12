@@ -1,4 +1,57 @@
 {
+  "errors": {
+    "generic": "Algo correu mal. Tenta de novo.",
+    "unauthenticated": "A tua sessão expirou. Inicia sessão de novo.",
+    "forbidden": "Não tens permissão para isto.",
+    "rateLimited": "Demasiados pedidos. Aguarda um momento e tenta de novo.",
+    "invalidInput": "Os dados enviados não são válidos. Verifica e tenta de novo.",
+    "networkError": "Sem ligação. Verifica a Internet e tenta de novo.",
+    "slotTaken": "Esse horário acabou de ser ocupado. Escolhe outro.",
+    "slotOutsideAvailability": "Esse horário não está disponível para este profissional.",
+    "tooCloseToNow": "Demasiado próximo da hora atual. Reserva com mais antecedência.",
+    "tooFarInFuture": "Essa data está demasiado longe. Escolhe uma mais próxima.",
+    "providerNotActive": "Este profissional já não está disponível.",
+    "dogNotFound": "Não encontrámos o cão selecionado.",
+    "bookingNotFound": "Esta reserva já não existe.",
+    "noAvailableWeeks": "Não há semanas disponíveis no intervalo escolhido.",
+    "outsideWindow": "Ainda não é o momento. Podes começar 2 h antes e 2 h depois do serviço.",
+    "sessionNotFound": "Esta sessão ao vivo já não existe.",
+    "sessionAlreadyEnded": "Esta sessão já terminou.",
+    "bookingNotActive": "Esta reserva não está ativa.",
+    "disputeNotFound": "Esta reclamação já não existe.",
+    "alreadyClosed": "Esta reclamação já está fechada.",
+    "insufficientCoins": "Não tens coins suficientes.",
+    "userNotFound": "Não encontrámos este utilizador.",
+    "wouldGoNegative": "A operação deixaria o saldo negativo.",
+    "boostFailed": "Não conseguimos ativar o boost. Tenta de novo.",
+    "dailyLimitReached": "Atingiste o limite diário.",
+    "imageTooLarge": "A imagem é demasiado grande. Usa uma mais pequena.",
+    "imageNotFound": "Não encontrámos a imagem enviada.",
+    "aiError": "A IA não conseguiu processar a imagem. Tenta de novo.",
+    "alreadyPremium": "Já tens a versão premium."
+  },
+  "admin": {
+    "disputes": {
+      "empty": "Sem reclamações neste estado.",
+      "bookingLabel": "Reserva",
+      "openedByLabel": "Aberta por",
+      "resolutionLabel": "Resolução do moderador",
+      "resolveTitle": "Resolver reclamação",
+      "resolveIntro": "Anota a tua decisão e fecha o caso. Ambas as partes serão notificadas.",
+      "resolutionPlaceholder": "Nota para as partes (opcional, máx 500 caracteres).",
+      "resolutionTooLong": "A nota não pode exceder 500 caracteres.",
+      "resolve": "Resolver",
+      "reject": "Indeferir"
+    },
+    "events": {
+      "empty": "Sem eventos para este filtro.",
+      "filterAll": "Todos",
+      "filterRevokeSessions": "Sessões revogadas",
+      "filterDataExport": "Exports",
+      "filterDispute": "Reclamações",
+      "filterDeletion": "Eliminação de conta"
+    }
+  },
   "dispute": {
     "openCta": "Reportar um problema",
     "modalTitle": "Reportar um problema",

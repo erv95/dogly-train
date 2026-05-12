@@ -1,4 +1,57 @@
 {
+  "errors": {
+    "generic": "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
+    "unauthenticated": "Deine Sitzung ist abgelaufen. Bitte erneut anmelden.",
+    "forbidden": "Du hast dafür keine Berechtigung.",
+    "rateLimited": "Zu viele Anfragen. Warte einen Moment und versuche es erneut.",
+    "invalidInput": "Die gesendeten Daten sind ungültig. Bitte überprüfen.",
+    "networkError": "Keine Verbindung. Prüfe dein Internet und versuche es erneut.",
+    "slotTaken": "Dieser Termin wurde gerade vergeben. Wähle einen anderen.",
+    "slotOutsideAvailability": "Dieser Termin ist für diesen Anbieter nicht verfügbar.",
+    "tooCloseToNow": "Zu nah an der aktuellen Zeit. Buche weiter im Voraus.",
+    "tooFarInFuture": "Das Datum ist zu weit entfernt. Wähle ein näheres.",
+    "providerNotActive": "Dieser Anbieter ist nicht mehr verfügbar.",
+    "dogNotFound": "Den ausgewählten Hund konnten wir nicht finden.",
+    "bookingNotFound": "Diese Buchung existiert nicht mehr.",
+    "noAvailableWeeks": "Keine verfügbaren Wochen im gewählten Zeitraum.",
+    "outsideWindow": "Noch nicht der richtige Moment. Du kannst 2 h vor und 2 h nach dem Service starten.",
+    "sessionNotFound": "Diese Live-Sitzung existiert nicht mehr.",
+    "sessionAlreadyEnded": "Diese Sitzung ist bereits beendet.",
+    "bookingNotActive": "Diese Buchung ist nicht aktiv.",
+    "disputeNotFound": "Diese Beschwerde existiert nicht mehr.",
+    "alreadyClosed": "Diese Beschwerde ist bereits geschlossen.",
+    "insufficientCoins": "Nicht genügend Coins.",
+    "userNotFound": "Dieser Nutzer wurde nicht gefunden.",
+    "wouldGoNegative": "Die Operation würde ein negatives Guthaben ergeben.",
+    "boostFailed": "Boost konnte nicht aktiviert werden. Bitte erneut versuchen.",
+    "dailyLimitReached": "Du hast das Tageslimit erreicht.",
+    "imageTooLarge": "Das Bild ist zu groß. Verwende ein kleineres.",
+    "imageNotFound": "Hochgeladenes Bild nicht gefunden.",
+    "aiError": "Die KI konnte das Bild nicht verarbeiten. Bitte erneut versuchen.",
+    "alreadyPremium": "Du hast bereits die Premium-Version."
+  },
+  "admin": {
+    "disputes": {
+      "empty": "Keine Beschwerden in diesem Status.",
+      "bookingLabel": "Buchung",
+      "openedByLabel": "Geöffnet von",
+      "resolutionLabel": "Moderator-Entscheidung",
+      "resolveTitle": "Beschwerde lösen",
+      "resolveIntro": "Notiere deine Entscheidung und schließe den Fall. Beide Parteien werden benachrichtigt.",
+      "resolutionPlaceholder": "Notiz für die Parteien (optional, max. 500 Zeichen).",
+      "resolutionTooLong": "Die Notiz darf 500 Zeichen nicht überschreiten.",
+      "resolve": "Lösen",
+      "reject": "Abweisen"
+    },
+    "events": {
+      "empty": "Keine Ereignisse für diesen Filter.",
+      "filterAll": "Alle",
+      "filterRevokeSessions": "Sitzungen widerrufen",
+      "filterDataExport": "Datenexporte",
+      "filterDispute": "Beschwerden",
+      "filterDeletion": "Kontolöschung"
+    }
+  },
   "dispute": {
     "openCta": "Problem melden",
     "modalTitle": "Problem melden",

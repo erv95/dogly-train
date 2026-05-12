@@ -6,7 +6,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "test:rules": "firebase emulators:exec --only firestore --project=dogly-train-rules-test \"jest --config jest.config.js\"",
+    "test:rules:watch": "firebase emulators:exec --only firestore --project=dogly-train-rules-test \"jest --config jest.config.js --watch\""
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
@@ -51,8 +53,12 @@
     "rn-emoji-keyboard": "^1.7.0"
   },
   "devDependencies": {
+    "@firebase/rules-unit-testing": "^5.0.1",
+    "@types/jest": "^30.0.0",
     "@types/react": "~19.1.10",
     "firebase-tools": "^15.12.0",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.9",
     "typescript": "~5.9.2"
   },
   "private": true

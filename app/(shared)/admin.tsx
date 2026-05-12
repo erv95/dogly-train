@@ -42,6 +42,8 @@ import {
   type SortBy,
 } from '../../src/services/adminUsers';
 import UserActionsModal from '../../src/components/UserActionsModal';
+import { AdminDisputesTab } from '../../src/components/admin/AdminDisputesTab';
+import { AdminEventsTab } from '../../src/components/admin/AdminEventsTab';
 import {
   listPlacesByStatus,
   approvePlace,
@@ -94,7 +96,7 @@ interface RecentUser {
   createdAt: any;
 }
 
-type Tab = 'overview' | 'trainers' | 'caretakers' | 'recent' | 'reports' | 'broadcast' | 'places' | 'verifications' | 'push';
+type Tab = 'overview' | 'trainers' | 'caretakers' | 'recent' | 'reports' | 'broadcast' | 'places' | 'verifications' | 'push' | 'disputes' | 'events';
 type TrainerFilter = 'pending' | 'active' | 'all';
 type BroadcastAudience = 'all' | 'owners' | 'trainers' | 'caretakers';
 
@@ -1611,6 +1613,8 @@ export default function AdminPanel() {
             { key: 'verifications', icon: 'shield-checkmark-outline', label: 'Verificación' },
             { key: 'push', icon: 'notifications-outline', label: 'Push' },
             { key: 'reports', icon: 'flag-outline', label: 'Reportes' },
+            { key: 'disputes', icon: 'alert-circle-outline', label: 'Disputas' },
+            { key: 'events', icon: 'time-outline', label: 'Eventos' },
             { key: 'broadcast', icon: 'megaphone-outline', label: 'Difusión' },
           ] as { key: Tab; icon: string; label: string }[]).map((t) => (
             <TouchableOpacity
@@ -1637,6 +1641,8 @@ export default function AdminPanel() {
           {tab === 'verifications' && renderVerifications()}
           {tab === 'push' && renderPushDashboard()}
           {tab === 'reports' && renderReports()}
+          {tab === 'disputes' && <AdminDisputesTab />}
+          {tab === 'events' && <AdminEventsTab />}
           {tab === 'broadcast' && renderBroadcast()}
         </>
       )}
