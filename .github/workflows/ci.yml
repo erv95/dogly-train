@@ -22,12 +22,15 @@ jobs:
       - name: Install client deps
         run: npm install --legacy-peer-deps --no-audit --no-fund
 
-      - name: Typecheck client
-        run: npx tsc --noEmit
-
+      # Install functions deps BEFORE client typecheck — even though
+      # tsconfig.json excludes `functions/`, this keeps both contexts ready
+      # for parallel use (e.g. future jobs that lint cross-folder imports).
       - name: Install functions deps
         working-directory: functions
         run: npm install --no-audit --no-fund
+
+      - name: Typecheck client
+        run: npx tsc --noEmit
 
       - name: Build functions
         working-directory: functions
