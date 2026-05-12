@@ -11,4 +11,9 @@ module.exports = {
   testTimeout: 15000,
   // Rules tests share a single Firestore emulator on port 8080; running them
   // in parallel causes clearFirestore races. CLI `--runInBand` enforces this.
+  // The github-actions reporter emits ::error:: lines so failures become
+  // annotations visible without GitHub sign-in.
+  reporters: process.env.CI
+    ? ['default', 'github-actions']
+    : ['default'],
 };
