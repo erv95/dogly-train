@@ -63,4 +63,6 @@ jobs:
         run: npm install -g firebase-tools@latest
 
       - name: Run Firestore rules tests
-        run: npm run test:rules
+        # `--verbose` prints individual test names + stack traces in CI logs.
+        # Without sign-in, annotations are the only diagnostic surface.
+        run: npx firebase emulators:exec --only firestore --project=dogly-train-rules-test "npx jest --config jest.config.js --runInBand --verbose"

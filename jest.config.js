@@ -8,6 +8,7 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   testMatch: ['<rootDir>/tests/firestore-rules/**/*.test.ts'],
-  setupFilesAfterEach: [],
   testTimeout: 15000,
+  // Rules tests share a single Firestore emulator on port 8080; running them
+  // in parallel causes clearFirestore races. CLI `--runInBand` enforces this.
 };

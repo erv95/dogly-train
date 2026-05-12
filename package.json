@@ -7,8 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test:rules": "firebase emulators:exec --only firestore --project=dogly-train-rules-test \"jest --config jest.config.js\"",
-    "test:rules:watch": "firebase emulators:exec --only firestore --project=dogly-train-rules-test \"jest --config jest.config.js --watch\""
+    "test:rules": "firebase emulators:exec --only firestore --project=dogly-train-rules-test \"jest --config jest.config.js --runInBand\"",
+    "test:rules:watch": "firebase emulators:exec --only firestore --project=dogly-train-rules-test \"jest --config jest.config.js --runInBand --watch\""
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
