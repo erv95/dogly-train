@@ -3966,6 +3966,9 @@
     "restoreCta": "Konto wiederherstellen",
     "restoredTitle": "Konto wiederhergestellt",
     "restoredBody": "Dein Konto ist wieder aktiv. Willkommen zurück!",
+    "exportCta": "Meine Daten vor der Löschung herunterladen",
+    "exportSuccessTitle": "Daten heruntergeladen",
+    "exportSuccessBody": "Speichere die Datei sicher vor dem {{date}} — danach kannst du sie nicht erneut herunterladen.",
     "errors": {
       "grace_expired": "Die 30-Tage-Frist ist abgelaufen. Dein Konto kann nicht wiederhergestellt werden.",
       "unknown": "Wir konnten dein Konto nicht wiederherstellen. Versuche es später."

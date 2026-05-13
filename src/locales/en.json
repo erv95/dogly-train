@@ -3966,6 +3966,9 @@
     "restoreCta": "Restore my account",
     "restoredTitle": "Account restored",
     "restoredBody": "Your account is active again. Welcome back!",
+    "exportCta": "Download my data before deletion",
+    "exportSuccessTitle": "Data downloaded",
+    "exportSuccessBody": "Save the file somewhere safe before {{date}} — after that you won't be able to download it again.",
     "errors": {
       "grace_expired": "The 30-day grace period has expired. Your account can't be restored.",
       "unknown": "We couldn't restore your account. Try again later."

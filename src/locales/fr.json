@@ -3966,6 +3966,9 @@
     "restoreCta": "Restaurer mon compte",
     "restoredTitle": "Compte restauré",
     "restoredBody": "Ton compte est de nouveau actif. Bon retour !",
+    "exportCta": "Télécharger mes données avant suppression",
+    "exportSuccessTitle": "Données téléchargées",
+    "exportSuccessBody": "Conserve le fichier en lieu sûr avant le {{date}} — après cette date, tu ne pourras plus le re-télécharger.",
     "errors": {
       "grace_expired": "Le délai de 30 jours est dépassé. Ton compte ne peut plus être restauré.",
       "unknown": "Impossible de restaurer ton compte. Réessaie plus tard."

@@ -14,6 +14,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { signOut } from '../../src/services/auth';
 import { restoreAccount } from '../../src/services/security';
+import { exportMyData } from '../../src/services/dataExport';
+import { showErrorAlert } from '../../src/utils/errors';
 import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 
 /**
@@ -28,6 +30,23 @@ export default function AccountPendingScreen() {
   const router = useRouter();
   const { userData, setUserData } = useAuth();
   const [restoring, setRestoring] = useState(false);
+  const [exporting, setExporting] = useState(false);
+
+  const handleExport = async () => {
+    if (exporting) return;
+    setExporting(true);
+    try {
+      await exportMyData();
+      Alert.alert(
+        t('accountPending.exportSuccessTitle'),
+        t('accountPending.exportSuccessBody', { date: scheduledLabel }),
+      );
+    } catch (err) {
+      showErrorAlert(err, 'accountPending.errors.unknown');
+    } finally {
+      setExporting(false);
+    }
+  };
 
   const scheduled = userData?.deletionScheduledFor?.toDate?.();
   const scheduledLabel = scheduled
@@ -97,6 +116,20 @@ export default function AccountPendingScreen() {
           {restoring
             ? <ActivityIndicator color={colors.textOnPrimary} />
             : <Text style={styles.btnPrimaryText}>{t('accountPending.restoreCta')}</Text>}
+        </TouchableOpacity>
+
+        {/* Last-chance export. Even mid-deletion, GDPR Art. 20 grants the
+         * right to portability. We show this BEFORE "Sign out" so the user
+         * sees it as a safety-net option. */}
+        <TouchableOpacity
+          style={[styles.btn, styles.btnSecondary, exporting && styles.btnDisabled]}
+          onPress={handleExport}
+          disabled={exporting}
+          activeOpacity={0.85}
+        >
+          {exporting
+            ? <ActivityIndicator color={colors.text} />
+            : <Text style={styles.btnSecondaryText}>{t('accountPending.exportCta')}</Text>}
         </TouchableOpacity>
 
         <TouchableOpacity
