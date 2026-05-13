@@ -50,14 +50,18 @@ jobs:
           cache: 'npm'
 
       # Firestore emulator is a Java JAR — needs a JRE.
+      # Pinned to 21 to match local dev (Java 17 fails the emulator handshake
+      # in the 2-core runner under load — confirmed by reproducing locally).
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
 
+      # `npm ci` strictly follows package-lock.json — no resolution drift
+      # between OS / arch. `--legacy-peer-deps` is supported since npm 8.
       - name: Install client deps
-        run: npm install --legacy-peer-deps --no-audit --no-fund
+        run: npm ci --legacy-peer-deps --no-audit --no-fund
 
       # Pin firebase-tools to the same version used locally to avoid surprise
       # behaviour changes between minor releases of the emulator wrapper.
