@@ -64,6 +64,62 @@ export const fontSize = {
   title: 34,
 };
 
+// Inter font variants. Map a semantic weight name to the exact font family
+// string registered by @expo-google-fonts/inter in _layout.tsx. Always pair
+// fontWeight in StyleSheet with fontFamily — React Native does NOT auto-pick
+// the right Inter variant from a numeric weight, you must name it.
+export const fontFamily = {
+  regular: 'Inter_400Regular',
+  medium: 'Inter_500Medium',
+  semibold: 'Inter_600SemiBold',
+  bold: 'Inter_700Bold',
+};
+
+// Pre-built typography styles for the home screens. Use these instead of
+// hand-rolling fontSize + fontFamily on every Text — keeps the visual rhythm
+// consistent across owner/trainer/caretaker home.
+export const typography = {
+  hero: {
+    fontFamily: fontFamily.bold,
+    fontSize: 28,
+    letterSpacing: -0.5,
+  },
+  heading: {
+    fontFamily: fontFamily.semibold,
+    fontSize: 22,
+    letterSpacing: -0.3,
+  },
+  sectionLabel: {
+    fontFamily: fontFamily.semibold,
+    fontSize: 11,
+    letterSpacing: 1.2,
+    textTransform: 'uppercase' as const,
+  },
+  body: {
+    fontFamily: fontFamily.regular,
+    fontSize: 15,
+  },
+  bodyEmphasis: {
+    fontFamily: fontFamily.medium,
+    fontSize: 15,
+  },
+  caption: {
+    fontFamily: fontFamily.regular,
+    fontSize: 13,
+  },
+  statNumber: {
+    fontFamily: fontFamily.bold,
+    fontSize: 32,
+    letterSpacing: -0.5,
+  },
+  statLabel: {
+    fontFamily: fontFamily.medium,
+    fontSize: 11,
+    letterSpacing: 0.5,
+    textTransform: 'uppercase' as const,
+  },
+};
+
 export const shadow = {
   sm: {
     shadowColor: '#000',

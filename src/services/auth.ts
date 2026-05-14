@@ -119,13 +119,13 @@ export async function createUserProfile({
   language,
   referredBy,
 }: CreateUserProfileParams) {
-  // Server-side age validation (16+ required by GDPR)
+  // Server-side age validation (18+ for marketplace compliance)
   const birth = new Date(dateOfBirth);
   const today = new Date();
   let age = today.getFullYear() - birth.getFullYear();
   const monthDiff = today.getMonth() - birth.getMonth();
   if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) age--;
-  if (age < 16) throw new Error('Must be 16 or older to register');
+  if (age < 18) throw new Error('Must be 18 or older to register');
 
   // Generate short readable ID from UID (6 alphanumeric chars, uppercase)
   const displayId = uid.replace(/[^A-Z0-9]/gi, '').slice(0, 6).toUpperCase();

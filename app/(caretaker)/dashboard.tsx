@@ -8,7 +8,7 @@ import { useAuth } from '../../src/contexts/AuthContext';
 import { Card, Button, StarRating } from '../../src/components/ui';
 import { CoinBalancePill } from '../../src/components/CoinBalancePill';
 import BookingStatsCard from '../../src/components/BookingStatsCard';
-import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
+import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
 import { CaretakerProfile } from '../../src/types';
 
 function getBoostTimeRemaining(boostedUntil: any): { hours: number; minutes: number } | null {
@@ -148,39 +148,39 @@ export default function CaretakerDashboardScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
   scrollContent: { padding: spacing.lg, paddingBottom: spacing.xxl },
-  header: { marginBottom: spacing.lg, flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
-  greeting: { fontSize: fontSize.xxl, fontWeight: '700', color: colors.text },
-  subtitle: { fontSize: fontSize.md, color: colors.textSecondary, marginTop: spacing.xs },
+  header: { marginBottom: spacing.xl, flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
+  greeting: { fontSize: 28, fontFamily: fontFamily.bold, color: colors.text, letterSpacing: -0.5 },
+  subtitle: { fontSize: 14, fontFamily: fontFamily.medium, color: colors.textSecondary, marginTop: 2 },
   pendingBanner: {
     flexDirection: 'row', alignItems: 'center', gap: spacing.sm,
     backgroundColor: colors.warning + '15', borderRadius: borderRadius.md,
     padding: spacing.md, marginBottom: spacing.md,
     borderLeftWidth: 4, borderLeftColor: colors.warning,
   },
-  pendingText: { color: colors.warning, fontWeight: '600', fontSize: fontSize.sm, flex: 1 },
+  pendingText: { color: colors.warning, fontFamily: fontFamily.semibold, fontSize: fontSize.sm, flex: 1 },
   warningBanner: {
     flexDirection: 'row', alignItems: 'center', gap: spacing.sm,
     backgroundColor: colors.info + '15', borderRadius: borderRadius.md,
     padding: spacing.md, marginBottom: spacing.md,
     borderLeftWidth: 4, borderLeftColor: colors.info,
   },
-  warningText: { color: colors.info, fontWeight: '600', fontSize: fontSize.sm, flex: 1 },
+  warningText: { color: colors.info, fontFamily: fontFamily.semibold, fontSize: fontSize.sm, flex: 1 },
   boostBanner: {
     flexDirection: 'row', alignItems: 'center', gap: spacing.sm,
     backgroundColor: colors.boost + '15', borderRadius: borderRadius.md,
     padding: spacing.md, marginBottom: spacing.md,
     borderLeftWidth: 4, borderLeftColor: colors.boost,
   },
-  boostTitle: { color: colors.text, fontWeight: '700', fontSize: fontSize.sm },
+  boostTitle: { color: colors.text, fontFamily: fontFamily.semibold, fontSize: fontSize.sm },
   boostExpiry: { color: colors.textSecondary, fontSize: fontSize.xs, marginTop: 2 },
-  statsRow: { flexDirection: 'row', gap: spacing.sm, marginBottom: spacing.lg },
-  statCard: { flex: 1, alignItems: 'center', paddingVertical: spacing.md },
-  statValue: { fontSize: fontSize.xl, fontWeight: '700', color: colors.text, marginTop: spacing.xs },
-  statLabel: { fontSize: fontSize.xs, color: colors.textSecondary, marginTop: 2, textAlign: 'center' },
+  statsRow: { flexDirection: 'row', gap: spacing.sm, marginBottom: spacing.xl },
+  statCard: { flex: 1, alignItems: 'center', paddingVertical: spacing.lg },
+  statValue: { fontSize: 28, fontFamily: fontFamily.bold, color: colors.text, marginTop: spacing.xs, letterSpacing: -0.5 },
+  statLabel: { fontSize: 11, fontFamily: fontFamily.semibold, color: colors.textSecondary, marginTop: 4, textAlign: 'center', letterSpacing: 0.8, textTransform: 'uppercase' },
   ratingCard: { alignItems: 'center', paddingVertical: spacing.lg, marginBottom: spacing.lg },
-  ratingCardTitle: { fontSize: fontSize.sm, color: colors.textSecondary, marginBottom: spacing.sm },
+  ratingCardTitle: { fontSize: 11, fontFamily: fontFamily.semibold, color: colors.textSecondary, marginBottom: spacing.sm, letterSpacing: 0.8, textTransform: 'uppercase' },
   ratingRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
-  ratingNumber: { fontSize: fontSize.xxl, fontWeight: '800', color: colors.text },
+  ratingNumber: { fontSize: 32, fontFamily: fontFamily.bold, color: colors.text, letterSpacing: -0.8 },
   ratingCount: { fontSize: fontSize.xs, color: colors.textSecondary, marginTop: spacing.xs },
   quickActions: { gap: spacing.sm },
 });

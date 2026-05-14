@@ -1,0 +1,31 @@
+# EAS-specific ignore. Anything here is excluded from the tarball EAS Build
+# receives — extends .gitignore with files that exist locally / on the repo
+# but should never reach the build server.
+
+# Claude Code workspace state (local-only, sensitive)
+.claude/
+CLAUDE.md
+
+# CI / automation that the build pipeline doesn't need
+.github/
+
+# Authoring docs that travel with the repo for the team only
+ai-system/
+docs/
+
+# Local debug / inventory artifacts
+firestore-debug.log
+storage-inventory-pre-eu.txt
+*.log
+
+# Scratch / migration scripts (not part of the app bundle)
+scripts/tmp/
+
+# Backup of the previous .json locales (kept on disk for reference, not shipped)
+src/locales/*.bak
+
+# Test suites — EAS Build doesn't execute them anyway
+tests/
+
+# Local-only screenshots / mockups
+Imágenes/

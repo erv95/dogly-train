@@ -8,7 +8,7 @@ import { useAuth } from '../../src/contexts/AuthContext';
 import { Card, Button, StarRating } from '../../src/components/ui';
 import { CoinBalancePill } from '../../src/components/CoinBalancePill';
 import BookingStatsCard from '../../src/components/BookingStatsCard';
-import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
+import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
 import { TrainerProfile } from '../../src/types';
 
 function getBoostTimeRemaining(boostedUntil: any): { hours: number; minutes: number } | null {
@@ -147,22 +147,22 @@ const styles = StyleSheet.create({
     paddingBottom: spacing.xxl,
   },
   header: {
-    marginBottom: spacing.lg,
+    marginBottom: spacing.xl,
     flexDirection: 'row',
     alignItems: 'center',
     gap: spacing.sm,
   },
   greeting: {
-    fontSize: fontSize.xxl,
-    fontWeight: '700',
+    fontSize: 28,
+    fontFamily: fontFamily.bold,
     color: colors.text,
-    textAlign: 'center',
+    letterSpacing: -0.5,
   },
   subtitle: {
-    fontSize: fontSize.md,
+    fontSize: 14,
+    fontFamily: fontFamily.medium,
     color: colors.textSecondary,
-    marginTop: spacing.xs,
-    textAlign: 'center',
+    marginTop: 2,
   },
   pendingBanner: {
     flexDirection: 'row',
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   },
   pendingText: {
     color: colors.warning,
-    fontWeight: '600',
+    fontFamily: fontFamily.semibold,
     fontSize: fontSize.sm,
     flex: 1,
   },
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   },
   boostTitle: {
     color: colors.text,
-    fontWeight: '700',
+    fontFamily: fontFamily.semibold,
     fontSize: fontSize.sm,
   },
   boostExpiry: {
@@ -205,24 +205,28 @@ const styles = StyleSheet.create({
   statsRow: {
     flexDirection: 'row',
     gap: spacing.sm,
-    marginBottom: spacing.lg,
+    marginBottom: spacing.xl,
   },
   statCard: {
     flex: 1,
     alignItems: 'center',
-    paddingVertical: spacing.md,
+    paddingVertical: spacing.lg,
   },
   statValue: {
-    fontSize: fontSize.xl,
-    fontWeight: '700',
+    fontSize: 28,
+    fontFamily: fontFamily.bold,
     color: colors.text,
     marginTop: spacing.xs,
+    letterSpacing: -0.5,
   },
   statLabel: {
-    fontSize: fontSize.xs,
+    fontSize: 11,
+    fontFamily: fontFamily.semibold,
     color: colors.textSecondary,
-    marginTop: 2,
+    marginTop: 4,
     textAlign: 'center',
+    letterSpacing: 0.8,
+    textTransform: 'uppercase',
   },
   ratingCard: {
     alignItems: 'center',
@@ -230,9 +234,12 @@ const styles = StyleSheet.create({
     marginBottom: spacing.lg,
   },
   ratingCardTitle: {
-    fontSize: fontSize.sm,
+    fontSize: 11,
+    fontFamily: fontFamily.semibold,
     color: colors.textSecondary,
     marginBottom: spacing.sm,
+    letterSpacing: 0.8,
+    textTransform: 'uppercase',
   },
   ratingRow: {
     flexDirection: 'row',
@@ -240,9 +247,10 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
   },
   ratingNumber: {
-    fontSize: fontSize.xxl,
-    fontWeight: '800',
+    fontSize: 32,
+    fontFamily: fontFamily.bold,
     color: colors.text,
+    letterSpacing: -0.8,
   },
   ratingCount: {
     fontSize: fontSize.xs,

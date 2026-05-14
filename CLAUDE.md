@@ -169,7 +169,7 @@ Levels: L1 (0-99 XP), L2 (100-199), L3 (200-299), L4 (300-399), L5 (400+). XP by
 - **Coin balance never shown by client without server backing**: read from Firestore user doc, single source of truth.
 - **Ranking**: boosted trainers > highest rating > closest distance.
 - **GeoHash for Firestore proximity**, trainers expose approximate zone only.
-- **GDPR**: explicit consent, age 16+ at registration, full data deletion (Firestore + Storage + Auth, best-effort Storage cleanup).
+- **GDPR**: explicit consent, age 18+ at registration (marketplace compliance — avoids COPPA / Designed-for-Families overhead), full data deletion (Firestore + Storage + Auth, best-effort Storage cleanup).
 - **Reviews**: private (visible only to receiver + admin), one per owner→provider pair.
 
 ## Chat Keyboard Handling (Android)

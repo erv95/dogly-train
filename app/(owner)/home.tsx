@@ -38,7 +38,7 @@ import { VerifiedBadge } from '../../src/components/VerifiedBadge';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { getDogsByOwner } from '../../src/services/dogs';
 import DailyTipsRail from '../../src/components/DailyTipsRail';
-import { colors, spacing, fontSize, borderRadius, shadow } from '../../src/theme';
+import { colors, spacing, fontSize, borderRadius, shadow, fontFamily } from '../../src/theme';
 
 const RADIUS_OPTIONS = [10, 25, 50, 100, 200];
 const RATING_OPTIONS = [0, 3, 3.5, 4, 4.5];
@@ -721,7 +721,7 @@ export default function OwnerHomeScreen() {
           onPress={() => setActiveTab('trainers')}
           activeOpacity={0.7}
         >
-          <Ionicons name="school" size={18} color={activeTab === 'trainers' ? colors.primary : colors.textLight} />
+          <Ionicons name="school" size={18} color={activeTab === 'trainers' ? '#fff' : colors.textSecondary} />
           <Text style={[styles.tabText, activeTab === 'trainers' && styles.tabTextActive]}>
             {t('auth.trainer')}
           </Text>
@@ -731,7 +731,7 @@ export default function OwnerHomeScreen() {
           onPress={() => setActiveTab('caretakers')}
           activeOpacity={0.7}
         >
-          <Ionicons name="home" size={18} color={activeTab === 'caretakers' ? colors.primary : colors.textLight} />
+          <Ionicons name="home" size={18} color={activeTab === 'caretakers' ? '#fff' : colors.textSecondary} />
           <Text style={[styles.tabText, activeTab === 'caretakers' && styles.tabTextActive]}>
             {t('auth.caretaker')}
           </Text>
@@ -802,8 +802,8 @@ const styles = StyleSheet.create({
   },
   title: {
     flex: 1,
-    fontSize: fontSize.xxl,
-    fontWeight: '800',
+    fontSize: 24,
+    fontFamily: fontFamily.bold,
     color: colors.text,
     textAlign: 'center',
     letterSpacing: -0.5,
@@ -854,9 +854,11 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.sm,
   },
   resultLabel: {
-    fontSize: fontSize.sm,
-    color: colors.text,
-    fontWeight: '800',
+    fontSize: 11,
+    color: colors.textSecondary,
+    fontFamily: fontFamily.semibold,
+    letterSpacing: 1.2,
+    textTransform: 'uppercase',
     flex: 1,
   },
   resultBadge: {
@@ -877,10 +879,14 @@ const styles = StyleSheet.create({
     fontVariant: ['tabular-nums'],
   },
 
-  // Tabs
+  // Tabs — pill-style active state with smooth visual contrast
   tabsRow: {
     flexDirection: 'row',
     backgroundColor: colors.background,
+    paddingHorizontal: spacing.md,
+    paddingTop: spacing.sm,
+    paddingBottom: spacing.md,
+    gap: spacing.sm,
     borderBottomWidth: 1,
     borderBottomColor: colors.borderLight,
   },
@@ -889,22 +895,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: spacing.xs,
-    paddingVertical: spacing.md,
-    borderBottomWidth: 2,
-    borderBottomColor: 'transparent',
+    gap: 6,
+    paddingVertical: 10,
+    borderRadius: borderRadius.full,
+    backgroundColor: colors.backgroundSecondary,
   },
   tabActive: {
-    borderBottomColor: colors.primary,
+    backgroundColor: colors.primary,
   },
   tabText: {
-    fontSize: fontSize.sm,
-    fontWeight: '600',
-    color: colors.textLight,
+    fontSize: 14,
+    fontFamily: fontFamily.semibold,
+    color: colors.textSecondary,
   },
   tabTextActive: {
-    color: colors.primary,
-    fontWeight: '700',
+    color: '#fff',
+    fontFamily: fontFamily.bold,
   },
   titleRow: {
     flexDirection: 'row',
@@ -941,14 +947,14 @@ const styles = StyleSheet.create({
   boostText: { fontSize: fontSize.xs, fontWeight: '700', color: '#92400E' },
   cardMain: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
   cardInfo: { flex: 1 },
-  trainerName: { fontSize: fontSize.md, fontWeight: '700', color: colors.text },
+  trainerName: { fontSize: fontSize.md, fontFamily: fontFamily.bold, color: colors.text, letterSpacing: -0.2 },
   statsRow: { marginTop: 3, gap: 3 },
   statItem: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   statText: { fontSize: fontSize.xs, color: colors.textSecondary },
   ratingRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.xs, marginTop: 4 },
   ratingText: { fontSize: fontSize.xs, color: colors.textSecondary },
   priceCol: { alignItems: 'flex-end' },
-  priceValue: { fontSize: fontSize.lg, fontWeight: '800', color: colors.primary },
+  priceValue: { fontSize: fontSize.lg, fontFamily: fontFamily.bold, color: colors.primary, letterSpacing: -0.3 },
   priceLabel: { fontSize: fontSize.xs, color: colors.textLight },
   specialties: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.xs, marginTop: spacing.sm },
   specialtyTag: {

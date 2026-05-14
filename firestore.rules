@@ -59,9 +59,11 @@ service cloud.firestore {
         && (!('coinBalance' in request.resource.data) || request.resource.data.coinBalance == 0)
         && (!('isActive' in request.resource.data) || request.resource.data.isActive == false)
         && (!('status' in request.resource.data) || request.resource.data.status == 'active')
-        // GDPR: dateOfBirth is stored as ISO string (YYYY-MM-DD). Lexicographic
-        // comparison works because ISO 8601 sorts chronologically. We compare
-        // against today minus 16 years (5844 days, Julian).
+        // dateOfBirth is stored as ISO string (YYYY-MM-DD). The 18+ age check
+        // runs server-side in createUserProfile (src/services/auth.ts). Here
+        // we only validate shape so rules stay cheap; we trust the client SDK
+        // to call createUserProfile, and Cloud Functions for any privileged
+        // updates that touch dateOfBirth.
         && (
           !('dateOfBirth' in request.resource.data)
           || (

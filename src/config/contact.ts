@@ -15,10 +15,9 @@
 // and update only this file.
 export const SUPPORT_EMAIL = 'doglytrain@gmail.com';
 export const DPO_EMAIL = 'doglytrain@gmail.com';
-// Sender address for transactional email. Gmail can't be used as a custom
-// SMTP sender for Firebase Auth — this constant is a placeholder until we
-// configure a real domain (see Iter 4.1).
-export const NO_REPLY_EMAIL = 'doglytrain@gmail.com';
+// Sender address for transactional email. Configured in Firebase Auth +
+// Brevo SMTP with SPF/DKIM/DMARC authentication.
+export const NO_REPLY_EMAIL = 'no-reply@doglytrain.com';
 
 /** Shown publicly on the /security page and in privacy disclosures. */
 export const PUBLIC_CONTACT = {
