@@ -5,6 +5,7 @@ import {
   db,
   setupCors,
   verifyCallerToken,
+  enforceRateLimit,
   notifyByPush,
   REFERRAL_BONUS_COINS,
   REFERRAL_LIFETIME_CAP,
@@ -199,6 +200,11 @@ export const recordReferralSignup = functions.https.onRequest(async (req, res) =
   }
   const caller = await verifyCallerToken(req, res);
   if (!caller) return;
+
+  // 5 attempts per hour per user. Stops attackers from enumerating valid
+  // displayId codes (which would let them flood referral_audit with bogus
+  // entries and force-flag legit referrers).
+  if (!(await enforceRateLimit(res, `referral_signup_${caller.uid}`, 5, 3600))) return;
 
   const { referredCode } = req.body ?? {};
   if (!referredCode || typeof referredCode !== "string") {

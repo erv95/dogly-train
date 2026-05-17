@@ -185,7 +185,8 @@ export const createBooking = functions
     }
     const safeNotes = typeof notes === "string" ? notes.slice(0, NOTES_MAX) : "";
 
-    // Rate-limit: 3 attempts / 60s per user (mirrors coins.ts:67-84).
+    // Rate-limit (per-user, short window): 3 attempts / 60s. Catches rapid
+    // double-tap or accidental loops. Mirrors coins.ts:67-84.
     const rlRef = db.collection("rate_limits").doc(`booking_${ownerUid}`);
     const rlSnap = await rlRef.get();
     const now = Date.now();
@@ -203,6 +204,29 @@ export const createBooking = functions
       }
     } else {
       await rlRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
+    }
+
+    // Rate-limit (per-(owner, provider), long window): 15 attempts / 1h.
+    // Stops calendar-probing attacks where one user keeps trying slots
+    // against a single victim provider to discover their availability
+    // pattern. The per-user limit above doesn't catch this because 3/60s
+    // resets — the cap PER-VICTIM does.
+    const pairRlRef = db.collection("rate_limits").doc(`booking_pair_${ownerUid}_${providerId}`);
+    const pairSnap = await pairRlRef.get();
+    if (pairSnap.exists) {
+      const lastAt = pairSnap.data()?.lastAt?.toDate?.()?.getTime?.() ?? 0;
+      const count = pairSnap.data()?.count ?? 0;
+      if (now - lastAt < 3_600_000 && count >= 15) {
+        res.status(429).json({ error: "rate_limited" });
+        return;
+      }
+      if (now - lastAt >= 3_600_000) {
+        await pairRlRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
+      } else {
+        await pairRlRef.update({ count: admin.firestore.FieldValue.increment(1) });
+      }
+    } else {
+      await pairRlRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
     }
 
     // Compute slot ids
@@ -583,6 +607,11 @@ export const cancelBooking = functions
         // Idempotent: if already cancelled, return success without doing anything.
         if (transitionSnap.exists) return;
 
+        // Booking auto-expired by cron between owner UI snapshot and tap.
+        // Treat as success — owner expected the booking to be gone and now
+        // it is. Don't throw "not_cancellable" or they see a confusing error.
+        if (booking.status === "expired") return;
+
         // Only confirmed bookings can be cancelled
         if (booking.status !== "confirmed") {
           const e = new Error("not_cancellable"); (e as any).code = "not_cancellable"; throw e;
@@ -690,10 +719,12 @@ export const markBookingCompleted = functions
       await db.runTransaction(async (tx) => {
         const bookingRef = db.collection("bookings").doc(bookingId);
         const transitionRef = db.collection("booking_transitions").doc(`${bookingId}_complete`);
+        const expireTransitionRef = db.collection("booking_transitions").doc(`${bookingId}_expire`);
 
-        const [bookingSnap, transitionSnap] = await Promise.all([
+        const [bookingSnap, transitionSnap, expireSnap] = await Promise.all([
           tx.get(bookingRef),
           tx.get(transitionRef),
+          tx.get(expireTransitionRef),
         ]);
 
         if (!bookingSnap.exists) {
@@ -705,6 +736,15 @@ export const markBookingCompleted = functions
         // Only the provider can mark completed
         if (callerUid !== booking.providerId) {
           const e = new Error("forbidden"); (e as any).code = "forbidden"; throw e;
+        }
+
+        // Race guard: if the cron has already expired this booking (between
+        // the provider opening the screen and tapping), abort instead of
+        // letting "completed" overwrite "expired". The cron itself checks
+        // both _expire and _complete; this is the symmetric guard for the
+        // provider-initiated path.
+        if (expireSnap.exists) {
+          const e = new Error("not_completable"); (e as any).code = "not_completable"; throw e;
         }
 
         // Idempotent: already completed → no-op

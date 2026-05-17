@@ -28,10 +28,29 @@ export const revokeAllSessions = functions.https.onRequest(async (req, res) => {
   try {
     await admin.auth().revokeRefreshTokens(caller.uid);
 
+    // If the caller is an admin, also strip their custom claims so the
+    // current ID token (still valid up to ~60 min) can't keep performing
+    // privileged operations. Without this, a compromised admin account
+    // retains admin powers for the residual token lifetime — small window
+    // but big blast radius. The admin will need their claims re-granted
+    // (by another admin) after they re-authenticate.
+    const wasAdmin = caller.isAdmin;
+    if (wasAdmin) {
+      try {
+        await admin.auth().setCustomUserClaims(caller.uid, {});
+      } catch (err: any) {
+        functions.logger.warn("Failed to clear admin claims on revoke", {
+          uid: caller.uid,
+          err: err?.message,
+        });
+      }
+    }
+
     // Audit log so admin can see security-related actions
     await db.collection("security_events").add({
       userId: caller.uid,
       type: "revoke_all_sessions",
+      adminCleared: wasAdmin,
       ip: req.headers["x-forwarded-for"]?.toString().split(",")[0] ?? null,
       userAgent: req.headers["user-agent"] ?? null,
       createdAt: admin.firestore.Timestamp.now(),

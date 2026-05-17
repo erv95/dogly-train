@@ -439,6 +439,21 @@ export const adminGrantCoins = functions.https.onRequest(async (req, res) => {
     functions.logger.info("Admin coin adjustment", {
       adminUid: callerUid, userId, amount: amt, newBalance,
     });
+
+    // Mirror to security_events so the admin dashboard's audit tab sees this
+    // alongside other privileged actions. coin_transactions captures the
+    // money flow; security_events captures the WHO/WHEN of admin override.
+    await db.collection("security_events").add({
+      type: "admin_grant_coins",
+      userId,
+      actorUid: callerUid,
+      amount: amt,
+      newBalance,
+      reason: safeReason,
+      ip: req.headers["x-forwarded-for"]?.toString().split(",")[0] ?? null,
+      createdAt: admin.firestore.Timestamp.now(),
+    });
+
     res.status(200).json({ success: true, newBalance });
   } catch (error: any) {
     const code: string = error.code ?? "";

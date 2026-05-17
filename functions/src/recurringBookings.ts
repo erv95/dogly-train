@@ -455,6 +455,12 @@ export const createRecurringBookings = functions
           localMinute: firstParts.minute,
           weekdayIndex: firstParts.dayIndex,
           bookingIds: createdSeriesBookingIds,
+          // Parallel array to bookingIds: intendedIndices[i] is the original
+          // 0-based week index of bookingIds[i]. Needed so cancelRecurringSeries
+          // can map a "from week N" client request back to the filtered list
+          // (when weeks were skipped via skipUnavailable, plain slice() of
+          // bookingIds skips the wrong items).
+          intendedIndices: availableIndices,
           skippedIndices: returnedSkipped.map((s) => s.index),
           createdAt: now,
           cancelledAt: null,
@@ -577,9 +583,25 @@ export const cancelRecurringSeries = functions
 
       const cancelledBy = series.ownerId === caller.uid ? "owner" : "provider";
       const allBookingIds: string[] = Array.isArray(series.bookingIds) ? series.bookingIds : [];
-      const targetIds = typeof fromIndex === "number"
-        ? allBookingIds.slice(fromIndex)
-        : allBookingIds;
+      // Map the client-supplied fromIndex (which is the ORIGINAL week index
+      // 0-based, including skipped weeks) to the actual subset of bookingIds
+      // we created. Falls back to plain slice for legacy series docs that
+      // don't have intendedIndices (older than this iter).
+      let targetIds: string[];
+      if (typeof fromIndex === "number" && fromIndex > 0) {
+        const intendedIndices: number[] = Array.isArray(series.intendedIndices)
+          ? series.intendedIndices
+          : [];
+        if (intendedIndices.length === allBookingIds.length) {
+          targetIds = allBookingIds.filter((_, j) => intendedIndices[j] >= fromIndex);
+        } else {
+          // Legacy series: bookingIds had no skipped indices (or skipUnavailable
+          // wasn't supported), so the slice behaves correctly.
+          targetIds = allBookingIds.slice(fromIndex);
+        }
+      } else {
+        targetIds = allBookingIds;
+      }
 
       let cancelled = 0;
       // Cancel each booking inside its own transaction. This keeps each cancel

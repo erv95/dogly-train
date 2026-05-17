@@ -16,6 +16,7 @@ import {
   StatusBar,
   PanResponder,
   LayoutChangeEvent,
+  Dimensions,
 } from 'react-native';
 import { useHeaderHeight } from '@react-navigation/elements';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -633,6 +634,19 @@ export default function ChatDetailScreen() {
       }
     });
     return () => { showSub.remove(); hideSub.remove(); };
+  }, []);
+
+  // On screen rotation / fold, the container's bottom Y coordinate changes
+  // (portrait vs landscape are different geometries). The keyboard overlay
+  // math caches that bottom Y in containerBottomRef and only measures it
+  // once. Without this reset, post-rotation the keyboard overlap calculation
+  // uses stale coords → input hides under keyboard on Xiaomi/MIUI landscape.
+  useEffect(() => {
+    if (Platform.OS !== 'android') return;
+    const sub = Dimensions.addEventListener('change', () => {
+      containerBottomRef.current = 0; // forces re-measure on next onLayout
+    });
+    return () => sub?.remove?.();
   }, []);
 
   // Cleanup sound and recording on unmount

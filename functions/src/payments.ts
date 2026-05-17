@@ -159,7 +159,12 @@ export const stripeWebhook = functions.https.onRequest(async (req, res) => {
   let event: Stripe.Event;
   try {
     const sig = req.headers["stripe-signature"] as string;
-    event = stripe.webhooks.constructEvent(req.rawBody, sig, webhookSecret);
+    // tolerance: 300s rejects events whose timestamp is older than 5 minutes.
+    // Stripe signatures already bind events to a timestamp, but a leaked-yet-
+    // valid event captured from logs could be replayed within Stripe's
+    // generous default tolerance (5min anyway, but being explicit prevents
+    // accidental widening if the default ever changes).
+    event = stripe.webhooks.constructEvent(req.rawBody, sig, webhookSecret, 300);
   } catch (err: any) {
     functions.logger.error("Webhook signature verification failed", err.message);
     res.status(400).send(`Webhook Error: ${err.message}`);

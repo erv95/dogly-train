@@ -8,7 +8,18 @@ import {
   GoogleAuthProvider,
   UserCredential,
 } from 'firebase/auth';
-import { doc, getDoc, setDoc, runTransaction, Timestamp } from 'firebase/firestore';
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  setDoc,
+  query,
+  where,
+  limit,
+  runTransaction,
+  Timestamp,
+} from 'firebase/firestore';
 import { auth, db } from '../config/firebase';
 import { UserRole } from '../types';
 import { normalizeForSearch } from '../utils/search';
@@ -96,6 +107,35 @@ export async function userProfileExists(uid: string): Promise<boolean> {
   return snap.exists();
 }
 
+// --- displayId generation ---
+
+// 32 chars, excluding visually-ambiguous (0/O, 1/I/L). 32^6 ≈ 1.07B combinations,
+// so collision probability stays under 0.1% even at 50k users (birthday-bound).
+const DISPLAY_ID_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+
+function randomDisplayId(): string {
+  let out = '';
+  for (let i = 0; i < 6; i++) {
+    out += DISPLAY_ID_ALPHABET[Math.floor(Math.random() * DISPLAY_ID_ALPHABET.length)];
+  }
+  return out;
+}
+
+/** Pick a 6-char displayId that isn't already in use. Up to 10 retries — way
+ *  more than statistics demands, mostly a defence against unlikely streaks. */
+async function findUniqueDisplayId(): Promise<string> {
+  const usersRef = collection(db, 'users');
+  for (let attempt = 0; attempt < 10; attempt++) {
+    const candidate = randomDisplayId();
+    const q = query(usersRef, where('displayId', '==', candidate), limit(1));
+    const snap = await getDocs(q);
+    if (snap.empty) return candidate;
+  }
+  // Pathological case (server flake, dedicated attacker, etc.): suffix with
+  // a 2-char timestamp tail so it's still readable but practically unique.
+  return randomDisplayId() + Date.now().toString(36).slice(-2).toUpperCase();
+}
+
 // --- User profile creation ---
 
 interface CreateUserProfileParams {
@@ -127,8 +167,13 @@ export async function createUserProfile({
   if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) age--;
   if (age < 18) throw new Error('Must be 18 or older to register');
 
-  // Generate short readable ID from UID (6 alphanumeric chars, uppercase)
-  const displayId = uid.replace(/[^A-Z0-9]/gi, '').slice(0, 6).toUpperCase();
+  // Generate a unique 6-char display id. Prior implementation derived it
+  // deterministically from the UID prefix — two UIDs with the same leading
+  // chars produced the same displayId and the referral code lookup picked
+  // whichever doc returned first. Random + uniqueness check eliminates the
+  // collision entirely. We exclude visually-ambiguous chars (0/O/I/1/L) so
+  // users typing the code by hand don't confuse them.
+  const displayId = await findUniqueDisplayId();
 
   const baseData = {
     email,

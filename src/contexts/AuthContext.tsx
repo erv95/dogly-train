@@ -49,6 +49,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         firebaseUser.getIdTokenResult(true),
       ]);
 
+      // The user signed out (or signed in as someone else) while we were
+      // awaiting Firestore + token refresh. Abort silently instead of
+      // overwriting `state` with the now-stale user's data.
+      if (auth.currentUser?.uid !== firebaseUser.uid) return;
+
       const isAdmin =
         tokenResult.status === 'fulfilled'
           ? tokenResult.value.claims['admin'] === true
@@ -89,6 +94,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       } else if (retries > 0) {
         // User doc not found yet (replication delay after registration) — retry
         await new Promise((r) => setTimeout(r, 1000));
+        // Same guard as above: caller may have signed out during the wait.
+        if (auth.currentUser?.uid !== firebaseUser.uid) return;
         return loadUserState(firebaseUser, retries - 1);
       } else {
         // Exhausted retries — mark initialized so the app can route
