@@ -624,26 +624,14 @@ service cloud.firestore {
       }
     }
 
-    // The averageRating/totalRatings fields on the parent place doc are bumped
-    // by the transactional `ratePlace` service. Since clients can't update
-    // arbitrary fields on places (only admin can), we need a special carve-out
-    // for the rating-side increment. Documented limitation: the transaction
-    // updates BOTH the rating subdoc AND the parent place doc — the parent
-    // update is rejected by the rule above, breaking the transaction.
-    //
-    // SOLUTION: allow non-admin writes to places ONLY when the only fields
-    // changing are averageRating/totalRatings/updatedAt. This keeps the
-    // moderation flow intact while permitting rating aggregates to update.
-    // (Re-applied here as a more permissive rule for places — Firestore picks
-    // the first matching `allow` so this is OR'd with the admin-only rule.)
-    // Note: the create rule above forces averageRating == 0 / totalRatings == 0
-    // at creation, so this carve-out only allows mutations.
-
-    match /places/{placeId} {
-      allow update: if isAuth() && isActive()
-        && request.resource.data.diff(resource.data).affectedKeys()
-            .hasOnly(['averageRating', 'totalRatings', 'updatedAt']);
-    }
+    // Note: the averageRating / totalRatings / sumRatings fields on the parent
+    // place doc are recomputed exclusively by the `onPlaceRatingWrite` Cloud
+    // Function trigger when a rating subdoc is created/updated/deleted. The
+    // client only writes to the `ratings/{uid}` subcollection above (one rating
+    // per user, enforced by ratingId == request.auth.uid). The previous
+    // client-side carve-out that allowed any auth user to update those parent
+    // aggregates has been removed — it was a privilege-escalation hole that
+    // let an attacker set arbitrary averages.
 
     // ── vet_records ──────────────────────────────────────────────────────────
     // Digital pet booklet entries (vaccines administered, vet visits, allergies,

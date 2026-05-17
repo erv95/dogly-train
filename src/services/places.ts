@@ -12,7 +12,6 @@ import {
   orderBy,
   limit,
   startAfter,
-  runTransaction,
   Timestamp,
   type QueryDocumentSnapshot,
   type DocumentData,
@@ -259,9 +258,10 @@ export async function listPlacesByStatus(
 // ── Ratings ──────────────────────────────────────────────────────────────────
 
 /**
- * Upsert the user's rating for a place (1 rating per user per place). Atomically
- * recomputes the place's averageRating and totalRatings inside a transaction so
- * concurrent ratings don't drift.
+ * Upsert the user's rating for a place (1 rating per user per place). Only
+ * writes the rating subdoc. The parent place's averageRating / totalRatings
+ * are recomputed server-side by the `onPlaceRatingWrite` Cloud Function so a
+ * client can't forge inflated aggregates.
  */
 export async function ratePlace(
   placeId: string,
@@ -270,44 +270,16 @@ export async function ratePlace(
   comment?: string,
 ): Promise<void> {
   if (rating < 1 || rating > 5) throw new Error('Rating must be 1-5');
-  const placeRef = doc(db, COLLECTION, placeId);
   const ratingRef = doc(db, COLLECTION, placeId, 'ratings', userId);
   const trimmed = clip(comment, COMMENT_MAX);
 
-  await runTransaction(db, async (tx) => {
-    const [placeSnap, ratingSnap] = await Promise.all([tx.get(placeRef), tx.get(ratingRef)]);
-    if (!placeSnap.exists()) throw new Error('Place not found');
-    const place = placeSnap.data() as Omit<Place, 'id'>;
-
-    const previousRating: number | null = ratingSnap.exists()
-      ? ((ratingSnap.data() as PlaceRating).rating ?? null)
-      : null;
-
-    const total = place.totalRatings ?? 0;
-    const sum = (place.averageRating ?? 0) * total;
-
-    let newSum: number;
-    let newTotal: number;
-    if (previousRating == null) {
-      newSum = sum + rating;
-      newTotal = total + 1;
-    } else {
-      newSum = sum - previousRating + rating;
-      newTotal = total;
-    }
-    const newAverage = newTotal > 0 ? Math.round((newSum / newTotal) * 10) / 10 : 0;
-
-    tx.set(ratingRef, {
-      rating,
-      ...(trimmed ? { comment: trimmed } : {}),
-      createdAt: ratingSnap.exists() ? (ratingSnap.data() as PlaceRating).createdAt : Timestamp.now(),
-    }, { merge: true });
-    tx.update(placeRef, {
-      averageRating: newAverage,
-      totalRatings: newTotal,
-      updatedAt: Timestamp.now(),
-    });
-  });
+  const existing = await getDoc(ratingRef);
+  await setDoc(ratingRef, {
+    rating,
+    ...(trimmed ? { comment: trimmed } : {}),
+    createdAt: existing.exists() ? (existing.data() as PlaceRating).createdAt : Timestamp.now(),
+    updatedAt: Timestamp.now(),
+  }, { merge: true });
 }
 
 export async function getMyRating(placeId: string, userId: string): Promise<PlaceRating | null> {

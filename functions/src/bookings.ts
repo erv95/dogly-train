@@ -665,6 +665,24 @@ export const markBookingCompleted = functions
       res.status(400).json({ error: "photo_required" });
       return;
     }
+    // The URL must point to OUR Storage bucket, under a path scoped to this
+    // booking. Without this, a provider could hotlink any image on the web
+    // (stock photo, screenshot from another user, etc.) as fake proof.
+    try {
+      const parsed = new URL(completionPhotoURL);
+      if (parsed.hostname !== "firebasestorage.googleapis.com") {
+        res.status(400).json({ error: "invalid_photo_url" }); return;
+      }
+      const allowedPrefixes = [
+        `/v0/b/dogly-train-eu/o/booking_completion_photos%2F${bookingId}%2F`,
+        `/v0/b/dogly-train-eu/o/live-sessions%2F${bookingId}%2F`,
+      ];
+      if (!allowedPrefixes.some((p) => parsed.pathname.startsWith(p))) {
+        res.status(400).json({ error: "invalid_photo_url" }); return;
+      }
+    } catch {
+      res.status(400).json({ error: "invalid_photo_url" }); return;
+    }
 
     let postState: { booking?: any; alreadyDone?: boolean } = {};
 
@@ -699,9 +717,14 @@ export const markBookingCompleted = functions
           const e = new Error("not_completable"); (e as any).code = "not_completable"; throw e;
         }
 
-        // Allow with -1h margin so providers don't have to wait for the exact end time.
-        const endMs = (booking.serviceEndAt?.toMillis?.() ?? new Date(booking.serviceEndAt).getTime()) || 0;
-        if (Date.now() < endMs - 60 * 60 * 1000) {
+        // Provider can mark completed any time from serviceAt onward. The
+        // previous gate (endMs - 1h) forced them to wait until 30 minutes
+        // before the end, so a provider finishing a 30-min walk before the
+        // scheduled end couldn't close the booking — bad UX. The cron
+        // `autoCompleteScheduled` still expires untouched bookings 2h after
+        // serviceEndAt, so there's no race with auto-expiry under normal use.
+        const startMs = (booking.serviceAt?.toMillis?.() ?? new Date(booking.serviceAt).getTime()) || 0;
+        if (Date.now() < startMs) {
           const e = new Error("too_early"); (e as any).code = "too_early"; throw e;
         }
 

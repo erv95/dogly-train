@@ -209,10 +209,12 @@ export default function ChatDetailScreen() {
       if (isNearBottomRef.current) {
         setTimeout(() => flatListRef.current?.scrollToOffset({ offset: 0, animated: true }), 50);
       }
-      // Clear unread count when new messages arrive while chat is open
+      // Clear unread count when new messages arrive while chat is open.
+      // onSnapshot fires immediately on subscribe with the current data, so
+      // this handles the initial-open case too — no need for a separate
+      // mark-as-read call outside the callback (it would just double-write).
       markChatAsRead(chat.id, uid).catch(() => {});
     });
-    markChatAsRead(chat.id, uid).catch(() => {});
     return unsub;
   }, [chat?.id, firebaseUser?.uid]);
 

@@ -126,12 +126,12 @@ export const exportUserData = functions.https.onRequest(async (req, res) => {
         for (const r of [...a, ...b]) map.set(r.id as string, r);
         return [...map.values()];
       }),
-      fetchDocs("dog_walks", [["ownerId", "==", uid]]),
-      fetchDocs("vet_records", [["ownerId", "==", uid]]),
-      fetchDocs("weekly_plans", [["ownerId", "==", uid]]),
+      fetchDocs("dog_walks", [["userId", "==", uid]]),
+      fetchDocs("vet_records", [["userId", "==", uid]]),
+      fetchDocs("weekly_plans", [["userId", "==", uid]]),
       fetchDocs("challenge_progress", [["userId", "==", uid]]),
-      fetchDocs("emergency_contacts", [["ownerId", "==", uid]]),
-      fetchDocs("dog_reminders", [["ownerId", "==", uid]]),
+      fetchDocs("emergency_contacts", [["userId", "==", uid]]),
+      fetchDocs("dog_reminders", [["userId", "==", uid]]),
       fetchDocs("id_verifications", [["userId", "==", uid]]),
       fetchDocs("places", [["submittedBy", "==", uid]]),
       fetchDocs("course_progress", [["userId", "==", uid]]),

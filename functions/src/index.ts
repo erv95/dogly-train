@@ -11,6 +11,10 @@ export { activateBoost } from "./coins";
 // Reviews
 export { onReviewWrite } from "./reviews";
 
+// Places — incremental rating aggregate (replaces client-side transaction
+// that needed a permissive rule on the parent place doc)
+export { onPlaceRatingWrite } from "./places";
+
 // Admin & GDPR
 export {
   checkBoostExpiration,

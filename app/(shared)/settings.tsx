@@ -16,7 +16,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import i18n from '../../src/config/i18n';
+import i18n, { setLanguage } from '../../src/config/i18n';
 import { signOut } from '../../src/services/auth';
 import { auth, db } from '../../src/config/firebase';
 import { doc, getDoc } from 'firebase/firestore';
@@ -88,7 +88,7 @@ export default function SettingsScreen() {
   const currentLang = LANGUAGES.find((l) => l.code === i18n.language) ?? LANGUAGES[0];
 
   const handleLanguageChange = async (code: string) => {
-    i18n.changeLanguage(code);
+    await setLanguage(code);
     setShowLangModal(false);
     await AsyncStorage.setItem('@dogly_language', code);
     if (firebaseUser) {

@@ -29,6 +29,8 @@ const KNOWN_CODES: Record<string, string> = {
   invalid_reason: 'errors.invalidInput',
   invalid_description: 'errors.invalidInput',
   invalid_amount: 'errors.invalidInput',
+  invalid_photo_url: 'errors.invalidInput',
+  photo_required: 'errors.invalidInput',
   invalid_token: 'errors.unauthenticated',
 
   // Booking flow

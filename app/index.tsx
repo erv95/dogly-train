@@ -3,7 +3,7 @@ import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAuth } from '../src/contexts/AuthContext';
 import { LoadingScreen } from '../src/components/ui';
-import i18n from '../src/config/i18n';
+import i18n, { setLanguage } from '../src/config/i18n';
 
 export default function Index() {
   const { firebaseUser, userData, role, initialized } = useAuth();
@@ -20,10 +20,10 @@ export default function Index() {
         return;
       }
 
-      // Restore saved language
+      // Restore saved language (loads its bundle on-demand if needed)
       const savedLang = await AsyncStorage.getItem('@dogly_language');
       if (savedLang && savedLang !== i18n.language) {
-        await i18n.changeLanguage(savedLang);
+        await setLanguage(savedLang);
       }
 
       // Onboarding gate — only shown to logged-out users on first run.

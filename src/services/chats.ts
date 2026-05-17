@@ -212,11 +212,17 @@ export function subscribeToUnreadCount(
   callback: (count: number) => void,
   onError?: (err: Error) => void
 ): () => void {
+  // Cap the snapshot to the 50 most recent chats — unread counts older than
+  // that are virtually always zero anyway, and an unbounded snapshot was
+  // the dominant Firestore read cost for active users.
   const q = query(
     collection(db, CHATS),
-    where('participants', 'array-contains', userId)
+    where('participants', 'array-contains', userId),
+    orderBy('lastMessageAt', 'desc'),
+    limit(50)
   );
-  return onSnapshot(q,
+  let unsubInternal: (() => void) | null = null;
+  unsubInternal = onSnapshot(q,
     (snapshot) => {
       let total = 0;
       snapshot.docs.forEach((d) => {
@@ -225,10 +231,17 @@ export function subscribeToUnreadCount(
       callback(total);
     },
     (err) => {
-      console.error('subscribeToUnreadCount error:', err);
+      console.warn('subscribeToUnreadCount error:', err);
+      // permission-denied means the user was banned / signed out / deleted.
+      // The listener will keep retrying and burning resources unless we
+      // explicitly tear it down.
+      if ((err as { code?: string }).code === 'permission-denied') {
+        unsubInternal?.();
+      }
       onError?.(err);
     }
   );
+  return () => unsubInternal?.();
 }
 
 // --- Get messages (paginated) ---

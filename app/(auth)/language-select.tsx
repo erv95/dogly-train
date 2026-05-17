@@ -11,7 +11,7 @@ import {
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import i18n from '../../src/config/i18n';
+import { setLanguage } from '../../src/config/i18n';
 import { colors, spacing, fontSize, borderRadius, shadow } from '../../src/theme';
 
 const LANGUAGES = [
@@ -46,7 +46,7 @@ export default function LanguageSelectScreen() {
     if (!selected) return;
     await AsyncStorage.setItem('@dogly_language', selected);
     await AsyncStorage.setItem('@dogly_lang_selected', '1');
-    i18n.changeLanguage(selected);
+    await setLanguage(selected);
     // Bounce through the index so the onboarding gate decides whether to show
     // the 5-slide intro or go straight to welcome.
     router.replace('/');

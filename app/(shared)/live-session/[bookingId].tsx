@@ -18,6 +18,7 @@ import { Ionicons } from '@expo/vector-icons';
 import * as Location from 'expo-location';
 import * as ImagePicker from 'expo-image-picker';
 import * as ImageManipulator from 'expo-image-manipulator';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAuth } from '../../../src/contexts/AuthContext';
 import {
   startLiveSession,
@@ -33,6 +34,40 @@ import { useHaptics } from '../../../src/hooks/useHaptics';
 import { colors, spacing, fontSize, borderRadius, shadow } from '../../../src/theme';
 
 const FLUSH_INTERVAL_MS = 30_000;
+
+// Disk-backed queue so we don't lose GPS samples on app crash, OS kill, or
+// network failure during a flush. The in-memory queueRef is still the
+// primary; AsyncStorage is the recovery cushion.
+type PendingPoint = { lat: number; lng: number; recordedAt: Date };
+const queueStorageKey = (bookingId: string) => `@livesession_queue_${bookingId}`;
+
+async function persistQueue(bookingId: string, queue: PendingPoint[]): Promise<void> {
+  try {
+    if (queue.length === 0) {
+      await AsyncStorage.removeItem(queueStorageKey(bookingId));
+    } else {
+      await AsyncStorage.setItem(queueStorageKey(bookingId), JSON.stringify(queue));
+    }
+  } catch {
+    // best-effort — don't crash the app over storage failure
+  }
+}
+
+async function restoreQueue(bookingId: string): Promise<PendingPoint[]> {
+  try {
+    const raw = await AsyncStorage.getItem(queueStorageKey(bookingId));
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    return parsed.map((p: any) => ({
+      lat: Number(p.lat),
+      lng: Number(p.lng),
+      recordedAt: new Date(p.recordedAt),
+    }));
+  } catch {
+    return [];
+  }
+}
 
 export default function LiveSessionScreen() {
   const { bookingId } = useLocalSearchParams<{ bookingId: string }>();
@@ -88,6 +123,14 @@ export default function LiveSessionScreen() {
         return;
       }
       if (cancelled) return;
+
+      // Recover any points that didn't make it off the device last time
+      // (app crash, OS kill, network failure mid-flush).
+      const recovered = await restoreQueue(bookingId);
+      if (!cancelled && recovered.length > 0) {
+        queueRef.current.push(...recovered);
+      }
+
       watchRef.current = await Location.watchPositionAsync(
         {
           accuracy: Location.Accuracy.Balanced,
@@ -100,6 +143,9 @@ export default function LiveSessionScreen() {
             lng: loc.coords.longitude,
             recordedAt: new Date(loc.timestamp),
           });
+          // Persist after each sample. Cheap (~ms) and means a crash between
+          // samples loses at most the in-flight write, not the whole queue.
+          persistQueue(bookingId, queueRef.current);
         },
       );
 
@@ -109,9 +155,14 @@ export default function LiveSessionScreen() {
         queueRef.current = [];
         try {
           await pushLocations(bookingId, queue);
+          // Successful push — clear the disk cushion for these points.
+          await persistQueue(bookingId, queueRef.current);
         } catch (e) {
-          // Re-queue on failure so we don't lose points
+          // Re-queue on failure so we don't lose points. Disk already has
+          // them via the watch callback, but persist current state for
+          // good measure.
           queueRef.current.unshift(...queue);
+          await persistQueue(bookingId, queueRef.current);
         }
       }, FLUSH_INTERVAL_MS);
     })();
@@ -126,11 +177,15 @@ export default function LiveSessionScreen() {
         clearInterval(flushTimerRef.current);
         flushTimerRef.current = null;
       }
-      // Final flush (best-effort)
+      // Final flush (best-effort). Anything still pending stays on disk
+      // and will be recovered on next mount.
       const q = queueRef.current;
       if (q.length > 0) {
         queueRef.current = [];
-        pushLocations(bookingId, q).catch(() => {});
+        pushLocations(bookingId, q).then(
+          () => persistQueue(bookingId, []),
+          () => persistQueue(bookingId, q),
+        );
       }
     };
   }, [isProvider, session?.status, bookingId]);
