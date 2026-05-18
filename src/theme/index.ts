@@ -1,3 +1,11 @@
+import type { TextStyle } from 'react-native';
+
+/** Tabular numerals — every digit takes equal width, so balance/coin/time
+ *  counters don't jump as the value changes. Use this constant instead of
+ *  `fontVariant: ['tabular-nums'] as any` (the cast was a workaround for
+ *  TextStyle's strict tuple typing in older RN versions). */
+export const TABULAR_NUMS: TextStyle['fontVariant'] = ['tabular-nums'];
+
 export const colors = {
   // Primary - warm orange/amber
   primary: '#F5A623',

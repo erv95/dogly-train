@@ -15,6 +15,7 @@ import { Avatar, StarRating, Card, Button, Skeleton, SkeletonList } from '../../
 import { VerifiedBadge } from '../../../src/components/VerifiedBadge';
 import { PublicReviewsList } from '../../../src/components/PublicReviewsList';
 import { colors, spacing, fontSize, borderRadius } from '../../../src/theme';
+import { isBoostActive } from '../../../src/utils/boost';
 import { CaretakerProfile, CaretakerService, CaretakerPricing } from '../../../src/types';
 
 const SERVICE_LABEL_KEY: Record<CaretakerService, string> = {
@@ -72,11 +73,10 @@ export default function CaretakerDetailScreen() {
 
   useEffect(() => { loadCaretaker(); }, [loadCaretaker]);
 
-  const isBoosted = useMemo(() => {
-    if (!caretaker?.boostedUntil) return false;
-    const date = (caretaker.boostedUntil as any).toDate?.();
-    return date && date > new Date();
-  }, [caretaker?.boostedUntil]);
+  const isBoosted = useMemo(
+    () => isBoostActive(caretaker?.boostedUntil as any),
+    [caretaker?.boostedUntil],
+  );
 
   const minPrice = useMemo(() => {
     if (!caretaker) return 0;

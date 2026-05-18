@@ -15,6 +15,7 @@ import {
   SecurityEventType,
 } from '../../services/adminEvents';
 import { colors, spacing, fontSize, borderRadius } from '../../theme';
+import { tsToDate } from '../../utils/firestore';
 
 /**
  * Audit log viewer. Filter by event type; tap a row to see raw JSON payload.
@@ -106,7 +107,7 @@ export function AdminEventsTab() {
         }
         contentContainerStyle={{ padding: spacing.md, gap: spacing.sm }}
         renderItem={({ item }) => {
-          const date = (item.createdAt as any)?.toDate?.()?.toLocaleString?.() ?? '—';
+          const date = tsToDate(item.createdAt)?.toLocaleString() ?? '—';
           const isOpen = expanded === item.id;
           return (
             <TouchableOpacity

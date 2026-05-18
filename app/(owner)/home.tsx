@@ -39,6 +39,7 @@ import { useAuth } from '../../src/contexts/AuthContext';
 import { getDogsByOwner } from '../../src/services/dogs';
 import DailyTipsRail from '../../src/components/DailyTipsRail';
 import { colors, spacing, fontSize, borderRadius, shadow, fontFamily } from '../../src/theme';
+import { isBoostActive } from '../../src/utils/boost';
 
 const RADIUS_OPTIONS = [10, 25, 50, 100, 200];
 const RATING_OPTIONS = [0, 3, 3.5, 4, 4.5];
@@ -229,8 +230,7 @@ export default function OwnerHomeScreen() {
   // ── Trainer card ──────────────────────────────────────────────────────────────
 
   const renderTrainerCard = ({ item }: { item: TrainerSearchResult }) => {
-    const isBoosted = item.boostedUntil &&
-      (item.boostedUntil as any).toDate?.() > new Date();
+    const isBoosted = isBoostActive(item.boostedUntil as any);
     const hasLocation = item.distanceKm > 0 || item.city;
     const currency = item.currency === 'EUR' ? '€' : item.currency === 'USD' ? '$' : item.currency;
 
@@ -311,8 +311,7 @@ export default function OwnerHomeScreen() {
   // ── Caretaker card ────────────────────────────────────────────────────────────
 
   const renderCaretakerCard = ({ item }: { item: CaretakerSearchResult }) => {
-    const isBoosted = item.boostedUntil &&
-      (item.boostedUntil as any).toDate?.() > new Date();
+    const isBoosted = isBoostActive(item.boostedUntil as any);
     const hasLocation = item.distanceKm > 0 || item.city;
     const currency = item.currency === 'EUR' ? '€' : item.currency === 'USD' ? '$' : item.currency;
     const isBusiness = item.accountType === 'business';

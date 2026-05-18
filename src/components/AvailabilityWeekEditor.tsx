@@ -16,7 +16,7 @@ import {
   WeeklyAvailabilityDay,
   WeeklyAvailabilityWindow,
 } from '../types';
-import { colors, spacing, fontSize, borderRadius, shadow } from '../theme';
+import { colors, spacing, fontSize, borderRadius, shadow, TABULAR_NUMS } from '../theme';
 
 interface Props {
   weekly: WeeklyAvailabilityDay[];
@@ -664,7 +664,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary + '10',
     borderRadius: borderRadius.md,
   },
-  rangeText: { flex: 1, fontSize: fontSize.md, color: colors.text, fontWeight: '700', fontVariant: ['tabular-nums'] as any },
+  rangeText: { flex: 1, fontSize: fontSize.md, color: colors.text, fontWeight: '700', fontVariant: TABULAR_NUMS },
 
   addBtn: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
@@ -734,7 +734,7 @@ const styles = StyleSheet.create({
   },
   timeBtnText: {
     fontSize: 28, fontWeight: '900', color: colors.primary,
-    letterSpacing: 1, fontVariant: ['tabular-nums'] as any,
+    letterSpacing: 1, fontVariant: TABULAR_NUMS,
   },
   errorText: {
     fontSize: fontSize.xs, color: colors.error, marginTop: spacing.sm, fontWeight: '700',

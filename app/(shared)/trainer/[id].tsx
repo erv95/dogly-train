@@ -16,6 +16,7 @@ import { ProfileSkeleton } from '../../../src/components/skeletons';
 import { VerifiedBadge } from '../../../src/components/VerifiedBadge';
 import { PublicReviewsList } from '../../../src/components/PublicReviewsList';
 import { colors, spacing, fontSize, borderRadius } from '../../../src/theme';
+import { isBoostActive } from '../../../src/utils/boost';
 import { TrainerProfile } from '../../../src/types';
 
 export default function TrainerDetailScreen() {
@@ -76,8 +77,7 @@ export default function TrainerDetailScreen() {
     );
   }
 
-  const isBoosted = trainer.boostedUntil &&
-    (trainer.boostedUntil as any).toDate?.() > new Date();
+  const isBoosted = isBoostActive(trainer.boostedUntil as any);
   const isOwner = userData?.role === 'owner';
 
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { colors, spacing, fontSize, borderRadius } from '../theme';
+import { colors, spacing, fontSize, borderRadius, TABULAR_NUMS } from '../theme';
 
 interface Props {
   data: Array<{ label: string; count: number }>;
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   barCol: { flex: 1, alignItems: 'center', justifyContent: 'flex-end' },
   barCount: {
     fontSize: 10, fontWeight: '800', color: colors.text,
-    fontVariant: ['tabular-nums'] as any,
+    fontVariant: TABULAR_NUMS,
     minHeight: 12,
   },
   barTrack: {

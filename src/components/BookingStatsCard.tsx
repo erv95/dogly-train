@@ -15,7 +15,7 @@ import {
 } from '../services/bookings';
 import BookingMonthlyChart from './BookingMonthlyChart';
 import { useAuth } from '../contexts/AuthContext';
-import { colors, spacing, fontSize, borderRadius, shadow } from '../theme';
+import { colors, spacing, fontSize, borderRadius, shadow, TABULAR_NUMS } from '../theme';
 
 /** Provider-side booking stats card. Shown on the trainer + caretaker
  *  dashboards. Self-loading; fails silently if no providerId. */
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   divider: { width: 1, height: 28, backgroundColor: colors.border },
   kpiValue: {
     fontSize: 26, fontWeight: '900', color: colors.text,
-    fontVariant: ['tabular-nums'] as any,
+    fontVariant: TABULAR_NUMS,
   },
   kpiLabel: {
     fontSize: 10, fontWeight: '700', color: colors.textSecondary,

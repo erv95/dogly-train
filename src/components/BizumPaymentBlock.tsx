@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '../contexts/AuthContext';
-import { colors, spacing, fontSize, borderRadius, shadow } from '../theme';
+import { colors, spacing, fontSize, borderRadius, shadow, TABULAR_NUMS } from '../theme';
 
 interface Props {
   /** Bizum / phone number of the counterpart. Null/empty → fallback chat-only block. */
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   phoneText: {
     fontSize: fontSize.lg, fontWeight: '800', color: BIZUM_BLUE,
     letterSpacing: 0.5,
-    fontVariant: ['tabular-nums'] as any,
+    fontVariant: TABULAR_NUMS,
   },
   disclaimer: { fontSize: fontSize.xs, color: colors.textSecondary, fontStyle: 'italic', marginTop: 2 },
 

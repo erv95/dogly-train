@@ -3,7 +3,7 @@ import { Text, StyleSheet, TouchableOpacity, View, ViewStyle } from 'react-nativ
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useAuth } from '../contexts/AuthContext';
-import { colors, spacing, fontSize, borderRadius } from '../theme';
+import { colors, spacing, fontSize, borderRadius, TABULAR_NUMS } from '../theme';
 
 interface Props {
   /** When true, tap navigates to /(shared)/transactions. Default true. */
@@ -59,6 +59,6 @@ const styles = StyleSheet.create({
     fontSize: fontSize.sm,
     fontWeight: '800',
     color: colors.text,
-    fontVariant: ['tabular-nums'] as any,
+    fontVariant: TABULAR_NUMS,
   },
 });

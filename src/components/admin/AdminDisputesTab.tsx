@@ -16,6 +16,7 @@ import { subscribeAdminDisputes, adminResolveDispute } from '../../services/disp
 import { showErrorAlert } from '../../utils/errors';
 import { Dispute, DisputeStatus } from '../../types';
 import { colors, spacing, fontSize, borderRadius } from '../../theme';
+import { tsToDate } from '../../utils/firestore';
 
 /**
  * Admin tab for moderating disputes. Three segments (open / resolved /
@@ -93,7 +94,7 @@ export function AdminDisputesTab() {
               <Ionicons name="flag" size={16} color={colors.warning} />
               <Text style={styles.rowReason}>{t(`dispute.reasons.${item.reason}`)}</Text>
               <Text style={styles.rowDate}>
-                {(item.createdAt as any)?.toDate?.()?.toLocaleDateString?.() ?? ''}
+                {tsToDate(item.createdAt)?.toLocaleDateString() ?? ''}
               </Text>
             </View>
             <Text style={styles.rowDescription} numberOfLines={3}>
