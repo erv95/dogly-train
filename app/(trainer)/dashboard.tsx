@@ -10,17 +10,7 @@ import { CoinBalancePill } from '../../src/components/CoinBalancePill';
 import BookingStatsCard from '../../src/components/BookingStatsCard';
 import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
 import { TrainerProfile } from '../../src/types';
-
-function getBoostTimeRemaining(boostedUntil: any): { hours: number; minutes: number } | null {
-  if (!boostedUntil) return null;
-  const end = boostedUntil.toDate ? boostedUntil.toDate() : new Date(boostedUntil);
-  const now = new Date();
-  const diff = end.getTime() - now.getTime();
-  if (diff <= 0) return null;
-  const hours = Math.floor(diff / (1000 * 60 * 60));
-  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  return { hours, minutes };
-}
+import { getBoostTimeRemaining } from '../../src/utils/boost';
 
 export default function TrainerDashboardScreen() {
   const { t } = useTranslation();

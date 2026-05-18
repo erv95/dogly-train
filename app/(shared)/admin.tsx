@@ -12,7 +12,7 @@ import {
   TextInput,
   Image,
 } from 'react-native';
-import { httpsCallable } from 'firebase/functions';
+import { callCF } from '../../src/utils/cfClient';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
@@ -30,7 +30,7 @@ import {
 } from 'firebase/firestore';
 import type { QueryDocumentSnapshot, DocumentData } from 'firebase/firestore';
 import { Report, User, UserRole, UserStatus } from '../../src/types';
-import { db, functions } from '../../src/config/firebase';
+import { db } from '../../src/config/firebase';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 import { Avatar } from '../../src/components/ui';
@@ -1227,9 +1227,11 @@ export default function AdminPanel() {
           onPress: async () => {
             setBroadcastSending(true);
             try {
-              const sendBroadcast = httpsCallable(functions, 'sendBroadcastMessage');
-              const result: any = await sendBroadcast({ message: broadcastMsg.trim(), audience: broadcastAudience });
-              Alert.alert('Enviado', `Mensaje enviado a ${result.data?.sent ?? '?'} usuarios.`);
+              const result = await callCF<{ sent: number; failed: number }>(
+                'sendBroadcastMessage',
+                { message: broadcastMsg.trim(), audience: broadcastAudience }
+              );
+              Alert.alert('Enviado', `Mensaje enviado a ${result.sent ?? '?'} usuarios.`);
               setBroadcastMsg('');
             } catch (err: any) {
               Alert.alert('Error', err.message ?? 'Error al enviar difusión');

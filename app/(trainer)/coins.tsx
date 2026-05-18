@@ -22,18 +22,7 @@ import { Confetti } from '../../src/components/Confetti';
 import { useHaptics } from '../../src/hooks/useHaptics';
 import { colors, spacing, fontSize, borderRadius, BOOST_COST } from '../../src/theme';
 import { TrainerProfile, CoinTransaction } from '../../src/types';
-
-function getBoostTimeRemaining(boostedUntil: any): { hours: number; minutes: number } | null {
-  if (!boostedUntil) return null;
-  const end = boostedUntil.toDate ? boostedUntil.toDate() : new Date(boostedUntil);
-  const now = new Date();
-  const diff = end.getTime() - now.getTime();
-  if (diff <= 0) return null;
-  return {
-    hours: Math.floor(diff / (1000 * 60 * 60)),
-    minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
-  };
-}
+import { getBoostTimeRemaining } from '../../src/utils/boost';
 
 export default function CoinsScreen() {
   const { t } = useTranslation();

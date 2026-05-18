@@ -2,6 +2,7 @@ import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import Stripe from "stripe";
 import { db } from "./_shared";
+import { getPaypalBase, getPaypalAccessToken } from "./_paypal";
 
 // Premium = one-time purchase to remove ads.
 // Single price (server-side source of truth — never trust client).
@@ -13,31 +14,6 @@ function getStripe(): Stripe {
   const key = process.env.STRIPE_SECRET_KEY;
   if (!key) throw new Error("STRIPE_SECRET_KEY not configured");
   return new Stripe(key, { apiVersion: "2024-04-10" as any });
-}
-
-function getPaypalBase(): string {
-  return process.env.PAYPAL_ENV === "live"
-    ? "https://api-m.paypal.com"
-    : "https://api-m.sandbox.paypal.com";
-}
-
-async function getPaypalAccessToken(): Promise<string> {
-  const clientId = process.env.PAYPAL_CLIENT_ID;
-  const clientSecret = process.env.PAYPAL_CLIENT_SECRET;
-  if (!clientId || !clientSecret) throw new Error("PayPal credentials not configured");
-
-  const base64 = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
-  const res = await fetch(`${getPaypalBase()}/v1/oauth2/token`, {
-    method: "POST",
-    headers: {
-      Authorization: `Basic ${base64}`,
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: "grant_type=client_credentials",
-  });
-  if (!res.ok) throw new Error("Failed to get PayPal access token");
-  const data = (await res.json()) as { access_token: string };
-  return data.access_token;
 }
 
 /**

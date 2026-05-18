@@ -1,6 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import { db } from "./_shared";
+import { getPaypalBase, getPaypalAccessToken } from "./_paypal";
 import { applyPremium } from "./premium";
 
 // Coin packages — single source of truth for coin amounts.
@@ -12,32 +13,6 @@ const COIN_PACKAGES: Record<string, { coins: number; priceUsd: string }> = {
   pack_200: { coins: 200, priceUsd: "11.99" },
   pack_500: { coins: 500, priceUsd: "24.99" },
 };
-
-function getPaypalBase(): string {
-  return process.env.PAYPAL_ENV === "live"
-    ? "https://api-m.paypal.com"
-    : "https://api-m.sandbox.paypal.com";
-}
-
-async function getPaypalAccessToken(): Promise<string> {
-  const clientId = process.env.PAYPAL_CLIENT_ID;
-  const clientSecret = process.env.PAYPAL_CLIENT_SECRET;
-  if (!clientId || !clientSecret) throw new Error("PayPal credentials not configured");
-
-  const base64 = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
-  const res = await fetch(`${getPaypalBase()}/v1/oauth2/token`, {
-    method: "POST",
-    headers: {
-      Authorization: `Basic ${base64}`,
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: "grant_type=client_credentials",
-  });
-
-  if (!res.ok) throw new Error("Failed to get PayPal access token");
-  const data = (await res.json()) as { access_token: string };
-  return data.access_token;
-}
 
 /**
  * Verify PayPal webhook signature via PayPal's official verification API.

@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { db } from "./_shared";
+import { db, setupCors, verifyCallerToken } from "./_shared";
 const SYSTEM_UID = "DOGLY_SYSTEM";
 
 // ── Welcome messages per language ─────────────────────────────────────────────
@@ -253,85 +253,82 @@ export const onUserCreate = functions.firestore
 type Audience = "all" | "owners" | "trainers" | "caretakers";
 
 /**
- * Callable function — admin only.
- * Sends a message to all users (or a filtered subset) via their system chat.
+ * HTTP endpoint — admin only. Sends a message to all users (or a filtered
+ * subset) via their system chat. Migrated from onCall to onRequest for
+ * consistency with the rest of the codebase — the client now uses the
+ * shared `callCF` helper instead of `httpsCallable`.
  */
-export const sendBroadcastMessage = functions.https.onCall(
-  async (data, context) => {
-    // Verify admin claim
-    if (!context.auth?.token?.admin) {
-      throw new functions.https.HttpsError(
-        "permission-denied",
-        "Only admins can send broadcasts."
-      );
-    }
+export const sendBroadcastMessage = functions.https.onRequest(async (req, res) => {
+  if (setupCors(req, res)) return;
+  if (req.method !== "POST") {
+    res.status(405).json({ error: "method_not_allowed" });
+    return;
+  }
+  const caller = await verifyCallerToken(req, res);
+  if (!caller) return;
+  if (!caller.isAdmin) {
+    res.status(403).json({ error: "admin_only" });
+    return;
+  }
 
-    const { message, audience }: { message: string; audience: Audience } =
-      data;
+  const { message, audience } = (req.body ?? {}) as { message?: string; audience?: Audience };
 
-    if (!message || typeof message !== "string" || message.trim().length === 0) {
-      throw new functions.https.HttpsError(
-        "invalid-argument",
-        "Message must be a non-empty string."
-      );
-    }
+  if (!message || typeof message !== "string" || message.trim().length === 0) {
+    res.status(400).json({ error: "invalid_input" });
+    return;
+  }
+  const trimmed = message.trim();
+  if (trimmed.length > MAX_MESSAGE_LENGTH) {
+    res.status(400).json({ error: "invalid_input" });
+    return;
+  }
+  if (!audience || !["all", "owners", "trainers", "caretakers"].includes(audience)) {
+    res.status(400).json({ error: "invalid_input" });
+    return;
+  }
 
-    const trimmed = message.trim();
-    if (trimmed.length > MAX_MESSAGE_LENGTH) {
-      throw new functions.https.HttpsError(
-        "invalid-argument",
-        `Message exceeds maximum length of ${MAX_MESSAGE_LENGTH} characters.`
-      );
-    }
-
-    if (!["all", "owners", "trainers", "caretakers"].includes(audience)) {
-      throw new functions.https.HttpsError("invalid-argument", "Invalid audience value.");
-    }
-
-    // Rate limiting inside a Firestore transaction — atomic read+write prevents
-    // two simultaneous admin broadcasts from both passing the cooldown check.
-    const metaRef = db.collection("admin_meta").doc("broadcast");
-    let cooldownRemaining = 0;
-    await db.runTransaction(async (tx) => {
-      const metaSnap = await tx.get(metaRef);
-      if (metaSnap.exists) {
-        const lastAt: admin.firestore.Timestamp = metaSnap.data()?.lastBroadcastAt;
-        if (lastAt) {
-          const secondsElapsed = (Date.now() / 1000) - lastAt.seconds;
-          if (secondsElapsed < BROADCAST_COOLDOWN_SECS) {
-            cooldownRemaining = Math.ceil(BROADCAST_COOLDOWN_SECS - secondsElapsed);
-            return; // abort write — cooldown still active
-          }
+  // Rate limiting inside a Firestore transaction — atomic read+write prevents
+  // two simultaneous admin broadcasts from both passing the cooldown check.
+  const metaRef = db.collection("admin_meta").doc("broadcast");
+  let cooldownRemaining = 0;
+  await db.runTransaction(async (tx) => {
+    const metaSnap = await tx.get(metaRef);
+    if (metaSnap.exists) {
+      const lastAt: admin.firestore.Timestamp = metaSnap.data()?.lastBroadcastAt;
+      if (lastAt) {
+        const secondsElapsed = (Date.now() / 1000) - lastAt.seconds;
+        if (secondsElapsed < BROADCAST_COOLDOWN_SECS) {
+          cooldownRemaining = Math.ceil(BROADCAST_COOLDOWN_SECS - secondsElapsed);
+          return; // abort write — cooldown still active
         }
       }
-      tx.set(metaRef, { lastBroadcastAt: admin.firestore.Timestamp.now() }, { merge: true });
-    });
-    if (cooldownRemaining > 0) {
-      throw new functions.https.HttpsError(
-        "resource-exhausted",
-        `Please wait ${cooldownRemaining}s before sending another broadcast.`
-      );
     }
+    tx.set(metaRef, { lastBroadcastAt: admin.firestore.Timestamp.now() }, { merge: true });
+  });
+  if (cooldownRemaining > 0) {
+    res.status(429).json({ error: "rate_limited", cooldownRemaining });
+    return;
+  }
 
-    // Query users
-    let usersQuery: admin.firestore.Query = db
-      .collection("users")
-      .where("status", "==", "active");
+  // Query users
+  let usersQuery: admin.firestore.Query = db
+    .collection("users")
+    .where("status", "==", "active");
 
-    if (audience === "owners") {
-      usersQuery = usersQuery.where("role", "==", "owner");
-    } else if (audience === "trainers") {
-      usersQuery = usersQuery.where("role", "==", "trainer");
-    } else if (audience === "caretakers") {
-      usersQuery = usersQuery.where("role", "==", "caretaker");
-    }
+  if (audience === "owners") {
+    usersQuery = usersQuery.where("role", "==", "owner");
+  } else if (audience === "trainers") {
+    usersQuery = usersQuery.where("role", "==", "trainer");
+  } else if (audience === "caretakers") {
+    usersQuery = usersQuery.where("role", "==", "caretaker");
+  }
 
-    let sent = 0;
-    let failed = 0;
-    const PAGE_SIZE = 500;
-    let lastDoc: admin.firestore.QueryDocumentSnapshot | null = null;
+  let sent = 0;
+  let failed = 0;
+  const PAGE_SIZE = 500;
+  let lastDoc: admin.firestore.QueryDocumentSnapshot | null = null;
 
-    // Cursor-based pagination to avoid loading all users into memory
+  // Cursor-based pagination to avoid loading all users into memory
     while (true) {
       let pageQuery = usersQuery.limit(PAGE_SIZE);
       if (lastDoc) pageQuery = pageQuery.startAfter(lastDoc);
@@ -371,7 +368,6 @@ export const sendBroadcastMessage = functions.https.onCall(
       if (pageSnap.docs.length < PAGE_SIZE) break;
     }
 
-    functions.logger.info("Broadcast sent", { audience, sent, failed });
-    return { sent, failed };
-  }
-);
+  functions.logger.info("Broadcast sent", { audience, sent, failed });
+  res.status(200).json({ sent, failed });
+});
