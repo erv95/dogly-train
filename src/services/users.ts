@@ -29,106 +29,62 @@ export async function searchUsers(queryStr: string, excludeUid: string): Promise
   };
 
   // Firestore rules only allow READING trainer/caretaker docs whose
-  // status == 'active' (chat search — broader than marketplace which also
-  // requires isActive == true). Owners are private. Every query MUST
-  // therefore include `role + status` filters — Firestore evaluates the rule
-  // against the *result set*, not per-document, so any unfiltered query that
-  // could include an unreadable doc gets rejected with permission-denied.
-
-  // Search by displayId (strip leading # if present, uppercase).
-  // We run two parallel queries per role: one by `status` (new accounts) and
-  // one by `isActive` (legacy accounts that haven't been auto-healed yet).
-  // The rule accepts both via "status == 'active' OR no status field".
-  const idQuery = cleaned.startsWith('#')
-    ? cleaned.slice(1).toUpperCase()
-    : cleaned.toUpperCase();
-
-  if (/^[A-Z0-9]{1,6}$/.test(idQuery)) {
-    const buildById = (role: 'trainer' | 'caretaker', filterField: 'status' | 'isActive') =>
-      query(
-        collection(db, 'users'),
-        where('role', '==', role),
-        where(filterField, '==', filterField === 'status' ? 'active' : true),
-        where('displayId', '==', idQuery),
-        limit(5),
-      );
-    const settled = await Promise.allSettled([
-      getDocs(buildById('trainer', 'status')),
-      getDocs(buildById('caretaker', 'status')),
-      getDocs(buildById('trainer', 'isActive')),
-      getDocs(buildById('caretaker', 'isActive')),
-    ]);
-    for (const r of settled) {
-      if (r.status === 'fulfilled') r.value.docs.forEach(acceptIfActive);
-      else console.warn('ID sub-query failed', r.reason);
-    }
-  }
-
-  // Search by displayName prefix.
+  // status == 'active'. Owners are private. Every query MUST include
+  // `role + status` filters or rules reject with permission-denied.
   //
-  // Hybrid strategy — handles both new and legacy accounts:
-  //   1) Primary: query `displayNameLower` (lowercase + accent-stripped).
-  //      Works for all users created after this feature shipped, plus legacy
-  //      users that have been auto-healed on their next login.
-  //   2) Fallback: query `displayName` directly with two casing variations
-  //      (lowercase + capitalised). Catches legacy users that haven't logged
-  //      in since the migration. Less robust (no accent stripping) but rescues
-  //      the obvious cases like "Pepe" / "pepe" / "PEPE".
-  // Results are merged into the same Map so duplicates collapse automatically.
-  const buildEnd = (s: string) =>
-    s.slice(0, -1) + String.fromCharCode(s.charCodeAt(s.length - 1) + 1);
-
-  const normalizedQuery = normalizeForSearch(cleaned);
-  const variations = new Set<string>([
-    normalizedQuery,                    // "pepe"
-    cleaned,                            // raw user input
-    cleaned.toLowerCase(),              // "pepe"
-    cleaned[0].toUpperCase() + cleaned.slice(1).toLowerCase(), // "Pepe"
-    cleaned.toUpperCase(),              // "PEPE"
-  ]);
+  // We collapsed an older hybrid strategy (status + isActive, multi-casing
+  // displayName fallbacks) into a single canonical query per role+search
+  // type. AuthContext now auto-heals `status` + `displayNameLower` on first
+  // login, so legacy accounts converge — keeping the fallback queries was
+  // costing ~24 queries per keystroke for a vanishing minority of users.
+  // Worst-case: an unheaaled legacy account is not found until its owner
+  // logs in once.
 
   const queries: Array<ReturnType<typeof query>> = [];
 
-  // Helper: build a query for a given role + filter field combination
-  const makeNameQuery = (
-    role: 'trainer' | 'caretaker',
-    nameField: 'displayName' | 'displayNameLower',
-    nameValue: string,
-    filterField: 'status' | 'isActive',
-  ) => query(
-    collection(db, 'users'),
-    where('role', '==', role),
-    where(filterField, '==', filterField === 'status' ? 'active' : true),
-    where(nameField, '>=', nameValue),
-    where(nameField, '<', buildEnd(nameValue)),
-    limit(10),
-  );
-
-  // Primary: displayNameLower (case-insensitive) — both filter strategies
-  for (const role of ['trainer', 'caretaker'] as const) {
-    for (const ff of ['status', 'isActive'] as const) {
-      queries.push(makeNameQuery(role, 'displayNameLower', normalizedQuery, ff));
-    }
-  }
-  // Fallback: displayName with multiple casings — both filter strategies.
-  // This catches legacy accounts that haven't been auto-healed yet.
-  for (const variant of variations) {
-    if (!variant || variant === normalizedQuery) continue;
+  // Search by displayId (exact, uppercase, leading # stripped).
+  const idQuery = cleaned.startsWith('#')
+    ? cleaned.slice(1).toUpperCase()
+    : cleaned.toUpperCase();
+  if (/^[A-Z0-9]{1,6}$/.test(idQuery)) {
     for (const role of ['trainer', 'caretaker'] as const) {
-      for (const ff of ['status', 'isActive'] as const) {
-        queries.push(makeNameQuery(role, 'displayName', variant, ff));
-      }
+      queries.push(query(
+        collection(db, 'users'),
+        where('role', '==', role),
+        where('status', '==', 'active'),
+        where('displayId', '==', idQuery),
+        limit(5),
+      ));
     }
   }
 
-  // Run all queries in parallel; settle so a single failure (missing index,
-  // permission edge) doesn't kill the whole search.
+  // Search by displayName prefix using the normalised (lowercase, accent-
+  // stripped) field — case-insensitive and handles diacritics. The
+  // upper-bound trick mirrors Firestore's startsWith pattern.
+  const normalizedQuery = normalizeForSearch(cleaned);
+  if (normalizedQuery) {
+    const upperBound = normalizedQuery.slice(0, -1)
+      + String.fromCharCode(normalizedQuery.charCodeAt(normalizedQuery.length - 1) + 1);
+    for (const role of ['trainer', 'caretaker'] as const) {
+      queries.push(query(
+        collection(db, 'users'),
+        where('role', '==', role),
+        where('status', '==', 'active'),
+        where('displayNameLower', '>=', normalizedQuery),
+        where('displayNameLower', '<', upperBound),
+        limit(10),
+      ));
+    }
+  }
+
+  // Run in parallel; settle so a single failure (missing index, permission
+  // edge for a banned user) doesn't kill the whole search.
   const settled = await Promise.allSettled(queries.map((q) => getDocs(q)));
   for (const r of settled) {
     if (r.status === 'fulfilled') {
       r.value.docs.forEach(acceptIfActive);
     } else {
-      console.warn('Name sub-query failed', r.reason);
+      console.warn('searchUsers sub-query failed', r.reason);
     }
   }
 

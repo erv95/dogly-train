@@ -30,7 +30,7 @@ const SERVICE_LABEL_KEYS: Record<string, string> = {
   home_care: 'bookings.service.home_care',
 };
 
-export default function BookingCard({ booking, viewerRole }: Props) {
+function BookingCard({ booking, viewerRole }: Props) {
   const { t } = useTranslation();
   const router = useRouter();
 
@@ -110,3 +110,9 @@ const styles = StyleSheet.create({
   metaItem: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   metaText: { fontSize: 10, color: colors.textSecondary, fontWeight: '600' },
 });
+
+// Memoized: BookingCard receives `booking` (which is an object reference that
+// only changes when the underlying doc updates) and `viewerRole` (string). The
+// default shallow equality check is exactly what we want — re-render only when
+// the booking actually changes, not on every parent scroll-induced re-render.
+export default React.memo(BookingCard);
