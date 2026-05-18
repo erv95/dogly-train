@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogly Train — Email verified</title>
+  <style>
+    :root { --primary: #F5A623; --bg: #FAFAFA; --text: #1A1A2E; --muted: #6B7280; --success: #10B981; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; display: flex; min-height: 100vh; align-items: center; justify-content: center; padding: 20px; }
+    .card { background: #fff; border-radius: 20px; padding: 40px 32px; max-width: 440px; width: 100%; text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+    .icon { width: 80px; height: 80px; border-radius: 50%; background: var(--success); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; }
+    .icon svg { stroke: #fff; }
+    h1 { font-size: 24px; color: var(--text); margin-bottom: 12px; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    p { font-size: 16px; color: #374151; margin-bottom: 24px; }
+    .btn { display: inline-block; background: var(--primary); color: #fff; text-decoration: none; padding: 14px 32px; border-radius: 12px; font-weight: 600; font-size: 16px; min-width: 200px; }
+    .lang-bar { margin-top: 28px; padding-top: 20px; border-top: 1px solid #e5e7eb; font-size: 13px; color: var(--muted); }
+    .lang-bar a { color: var(--primary); text-decoration: none; margin: 0 6px; font-weight: 500; cursor: pointer; }
+    .lang-bar a.active { text-decoration: underline; }
+    .footer { margin-top: 28px; font-size: 12px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="lang-section active" id="lang-en">
+      <h1>Email verified!</h1>
+      <p>Your email is now verified. You can close this page and return to the Dogly Train app.</p>
+      <a href="dogly-train://" class="btn">Open Dogly Train</a>
+    </div>
+
+    <!-- SPANISH -->
+    <div class="lang-section" id="lang-es">
+      <h1>¡Email verificado!</h1>
+      <p>Tu email se ha verificado correctamente. Puedes cerrar esta página y volver a la app de Dogly Train.</p>
+      <a href="dogly-train://" class="btn">Abrir Dogly Train</a>
+    </div>
+
+    <!-- FRENCH -->
+    <div class="lang-section" id="lang-fr">
+      <h1>E-mail vérifié !</h1>
+      <p>Votre e-mail a été vérifié avec succès. Vous pouvez fermer cette page et retourner sur l'application Dogly Train.</p>
+      <a href="dogly-train://" class="btn">Ouvrir Dogly Train</a>
+    </div>
+
+    <!-- PORTUGUESE -->
+    <div class="lang-section" id="lang-pt">
+      <h1>E-mail verificado!</h1>
+      <p>Seu e-mail foi verificado com sucesso. Você pode fechar esta página e voltar ao aplicativo Dogly Train.</p>
+      <a href="dogly-train://" class="btn">Abrir Dogly Train</a>
+    </div>
+
+    <!-- GERMAN -->
+    <div class="lang-section" id="lang-de">
+      <h1>E-Mail verifiziert!</h1>
+      <p>Deine E-Mail wurde erfolgreich verifiziert. Du kannst diese Seite schließen und zur Dogly-Train-App zurückkehren.</p>
+      <a href="dogly-train://" class="btn">Dogly Train öffnen</a>
+    </div>
+
+    <div class="lang-bar">
+      <a onclick="setLang('en')" id="btn-en" class="active">English</a>
+      <a onclick="setLang('es')" id="btn-es">Español</a>
+      <a onclick="setLang('fr')" id="btn-fr">Français</a>
+      <a onclick="setLang('pt')" id="btn-pt">Português</a>
+      <a onclick="setLang('de')" id="btn-de">Deutsch</a>
+    </div>
+
+    <div class="footer">Dogly Train &copy; 2026</div>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(function(el) { el.classList.remove('active'); });
+      document.querySelectorAll('.lang-bar a').forEach(function(el) { el.classList.remove('active'); });
+      document.getElementById('lang-' + lang).classList.add('active');
+      document.getElementById('btn-' + lang).classList.add('active');
+    }
+    (function() {
+      var nav = (navigator.language || '').substring(0, 2);
+      if (['es','fr','pt','de'].indexOf(nav) !== -1) setLang(nav);
+    })();
+  </script>
+</body>
+</html>

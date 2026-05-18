@@ -52,15 +52,31 @@ export async function signIn(email: string, password: string): Promise<UserCrede
   return signInWithEmailAndPassword(auth, email, password);
 }
 
+/**
+ * actionCodeSettings for the email-verification flow. Without these, Firebase
+ * uses its default hosted action page which doesn't redirect the user
+ * anywhere recognisable — they see a bare "verified" screen with no path
+ * back to the app, or worse a confusing error.
+ *
+ * With `url` set, Firebase processes the verification on its own page (kept
+ * `handleCodeInApp: false` so the verification doesn't need to bounce through
+ * a deep link handler) and then redirects to our hosted landing that says
+ * "all good, return to the app".
+ */
+const VERIFY_EMAIL_SETTINGS = {
+  url: 'https://dogly-train.web.app/email-verified',
+  handleCodeInApp: false,
+};
+
 export async function signUp(email: string, password: string): Promise<UserCredential> {
   const credential = await createUserWithEmailAndPassword(auth, email, password);
-  await sendEmailVerification(credential.user);
+  await sendEmailVerification(credential.user, VERIFY_EMAIL_SETTINGS);
   return credential;
 }
 
 export async function resendVerificationEmail(email: string, password: string): Promise<void> {
   const credential = await signInWithEmailAndPassword(auth, email, password);
-  await sendEmailVerification(credential.user);
+  await sendEmailVerification(credential.user, VERIFY_EMAIL_SETTINGS);
   await firebaseSignOut(auth);
 }
 
@@ -70,7 +86,7 @@ export async function resendVerificationEmail(email: string, password: string): 
  */
 export async function resendVerificationCurrentUser(): Promise<void> {
   if (!auth.currentUser) throw new Error('No current user');
-  await sendEmailVerification(auth.currentUser);
+  await sendEmailVerification(auth.currentUser, VERIFY_EMAIL_SETTINGS);
 }
 
 /**

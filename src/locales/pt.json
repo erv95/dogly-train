@@ -3782,6 +3782,10 @@
   },
   "chat": {
     "typeMessage": "Digite uma mensagem...",
+    "loadErrorTitle": "Não foi possível abrir o chat",
+    "loadErrorBody": "Verifique sua conexão e tente novamente.",
+    "notReadyTitle": "Chat ainda não está pronto",
+    "notReadyBody": "Aguarde um momento enquanto carrega.",
     "piiWarning": {
       "title": "Melhor manter a conversa aqui",
       "body": "A tua mensagem contém informação sensível:",
@@ -4942,6 +4946,7 @@
     "heading": "Identifica a raça com IA",
     "subtitle": "Envia uma foto e a nossa IA estima a raça, temperamento e dicas.",
     "identifyCta": "Identificar com IA",
+    "identifyHintOnCreate": "Você poderá identificar a raça por foto depois de salvar o cão",
     "cost": "Custa {{cost}} coins por identificação",
     "balance": "Saldo {{balance}}",
     "dailyLimit": "Máximo {{limit}} identificações por dia",

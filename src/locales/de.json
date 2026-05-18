@@ -3782,6 +3782,10 @@
   },
   "chat": {
     "typeMessage": "Nachricht schreiben...",
+    "loadErrorTitle": "Chat konnte nicht geöffnet werden",
+    "loadErrorBody": "Prüfe deine Verbindung und versuche es erneut.",
+    "notReadyTitle": "Chat ist noch nicht bereit",
+    "notReadyBody": "Bitte warte einen Moment, bis der Chat geladen ist.",
     "piiWarning": {
       "title": "Behalte das Gespräch besser hier",
       "body": "Deine Nachricht enthält sensible Daten:",
@@ -4942,6 +4946,7 @@
     "heading": "Rasse mit KI erkennen",
     "subtitle": "Lade ein Foto hoch und unsere KI schätzt Rasse, Temperament und Pflegetipps.",
     "identifyCta": "Mit KI identifizieren",
+    "identifyHintOnCreate": "Du kannst die Rasse per Foto identifizieren, sobald du den Hund gespeichert hast",
     "cost": "Kostet {{cost}} Coins pro Erkennung",
     "balance": "Guthaben {{balance}}",
     "dailyLimit": "Max. {{limit}} Erkennungen pro Tag",

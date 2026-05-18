@@ -221,7 +221,7 @@ export default function DogFormScreen() {
           maxLength={50}
         />
         {!!errors.breed && <Text style={styles.errorText}>{errors.breed}</Text>}
-        {isEditing && dogId && (
+        {isEditing && dogId ? (
           <TouchableOpacity
             style={styles.aiBreedBtn}
             onPress={() => router.push(`/(shared)/breed-identifier/${dogId}`)}
@@ -230,6 +230,14 @@ export default function DogFormScreen() {
             <Ionicons name="sparkles" size={14} color={colors.primary} />
             <Text style={styles.aiBreedBtnText}>{t('breedAi.identifyCta')}</Text>
           </TouchableOpacity>
+        ) : (
+          // Create flow: dogId doesn't exist yet, so the breed-identifier
+          // screen has nothing to attach the result to. Show a hint instead
+          // so the user knows the feature exists and is unlocked after save.
+          <View style={styles.aiBreedHint}>
+            <Ionicons name="sparkles" size={14} color={colors.textSecondary} />
+            <Text style={styles.aiBreedHintText}>{t('breedAi.identifyHintOnCreate')}</Text>
+          </View>
         )}
 
         {/* Age & Weight row */}
@@ -393,6 +401,12 @@ const styles = StyleSheet.create({
     marginBottom: spacing.sm,
   },
   aiBreedBtnText: { color: colors.primary, fontSize: fontSize.xs, fontWeight: '700' },
+  aiBreedHint: {
+    flexDirection: 'row', alignItems: 'center', gap: 4,
+    marginTop: -spacing.sm,
+    marginBottom: spacing.sm,
+  },
+  aiBreedHintText: { color: colors.textSecondary, fontSize: fontSize.xs, fontStyle: 'italic', flex: 1 },
   row: {
     flexDirection: 'row',
     gap: spacing.md,

@@ -3782,6 +3782,10 @@
   },
   "chat": {
     "typeMessage": "Type a message...",
+    "loadErrorTitle": "Couldn't open chat",
+    "loadErrorBody": "Check your connection and try again.",
+    "notReadyTitle": "Chat not ready yet",
+    "notReadyBody": "Wait a moment for it to finish loading.",
     "piiWarning": {
       "title": "Better keep the conversation here",
       "body": "Your message contains sensitive info:",
@@ -4942,6 +4946,7 @@
     "heading": "Identify the breed with AI",
     "subtitle": "Upload a photo and our AI will estimate breed, temperament and care tips.",
     "identifyCta": "Identify with AI",
+    "identifyHintOnCreate": "You'll be able to identify the breed from a photo after saving the dog",
     "cost": "Costs {{cost}} coins per identification",
     "balance": "Balance {{balance}}",
     "dailyLimit": "Up to {{limit}} identifications per day",

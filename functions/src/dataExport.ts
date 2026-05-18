@@ -65,8 +65,10 @@ export const exportUserData = functions.https.onRequest(async (req, res) => {
 
   const uid = caller.uid;
 
-  // 3 exports / hour ought to be plenty — guards against runaway scripts.
-  if (!(await enforceRateLimit(res, `export_${uid}`, 3, 3600))) return;
+  // 5 exports / hour — leaves headroom for testing iterations while still
+  // guarding against runaway scripts. Was 3 originally, but the early
+  // tester smoke test bumped against it quickly when re-trying export.
+  if (!(await enforceRateLimit(res, `export_${uid}`, 5, 3600))) return;
 
   try {
     const userSnap = await db.collection("users").doc(uid).get();

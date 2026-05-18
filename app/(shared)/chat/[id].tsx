@@ -186,6 +186,10 @@ export default function ChatDetailScreen() {
         }
       } catch (err) {
         console.error('Error loading chat:', err);
+        // Surface a visible error so the user understands why the screen
+        // is empty / why their send button does nothing. Silent failure
+        // here was the root cause of the "nothing happens" report.
+        Alert.alert(t('chat.loadErrorTitle'), t('chat.loadErrorBody'));
       } finally {
         setLoading(false);
       }
@@ -314,7 +318,15 @@ export default function ChatDetailScreen() {
   // ── Send text ──────────────────────────────────────────────────────────────
 
   const handleSend = async () => {
-    if (!inputText.trim() || !chat || !firebaseUser || isBusy) return;
+    if (!inputText.trim() || isBusy) return;
+    // If the chat hasn't finished loading (or failed to load), be explicit
+    // instead of silently bailing — that silent return was the symptom the
+    // user reported as "tap send, nothing happens".
+    if (!chat) {
+      Alert.alert(t('chat.notReadyTitle'), t('chat.notReadyBody'));
+      return;
+    }
+    if (!firebaseUser) return;
     const text = inputText.trim();
 
     // PII / leave-platform nudge: warn before sending phone numbers, emails

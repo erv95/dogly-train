@@ -3782,6 +3782,10 @@
   },
   "chat": {
     "typeMessage": "Écrivez un message...",
+    "loadErrorTitle": "Impossible d'ouvrir le chat",
+    "loadErrorBody": "Vérifiez votre connexion et réessayez.",
+    "notReadyTitle": "Chat pas encore prêt",
+    "notReadyBody": "Patientez un instant pendant le chargement.",
     "piiWarning": {
       "title": "Mieux vaut garder la conversation ici",
       "body": "Ton message contient des informations sensibles :",
@@ -4942,6 +4946,7 @@
     "heading": "Identifie la race avec l'IA",
     "subtitle": "Envoie une photo et notre IA estimera la race, le tempérament et les conseils.",
     "identifyCta": "Identifier avec IA",
+    "identifyHintOnCreate": "Vous pourrez identifier la race par photo après avoir enregistré le chien",
     "cost": "Coûte {{cost}} coins par identification",
     "balance": "Solde {{balance}}",
     "dailyLimit": "Maximum {{limit}} identifications par jour",
