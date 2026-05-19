@@ -146,6 +146,7 @@
     "footer": "Ce document est mis à jour à chaque ajout ou modification d'une mesure de sécurité. Dernière révision : 11 mai 2026."
   },
   "common": {
+    "hello": "Bonjour",
     "loading": "Chargement...",
     "loadMore": "Voir plus",
     "error": "Erreur",
@@ -3698,7 +3699,7 @@
     "stats": "Statistiques",
     "activeChats": "Messages actifs",
     "totalReviews": "Total des avis",
-    "avgRating": "Note moyenne",
+    "avgRating": "Note",
     "bio": "Biographie",
     "bioPlaceholder": "Parlez-nous de votre expérience en tant qu'éducateur...",
     "specialties": "Spécialités",

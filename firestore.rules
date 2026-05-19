@@ -713,5 +713,17 @@ service cloud.firestore {
       allow read, write: if isAdmin();
     }
 
+    // ── admins ───────────────────────────────────────────────────────────────
+    // Queryable list of admin uids — paired with (but NOT auto-synced to) the
+    // Custom Claim `admin == true`. Used by CF triggers like
+    // onIdVerificationCreate to fan out push notifications to every admin
+    // (Custom Claims live in the JWT only, so they can't be queried server-side).
+    // Maintenance is manual: when granting/revoking admin, update both the
+    // claim and the doc. Doc id MUST equal the user's uid.
+
+    match /admins/{uid} {
+      allow read, write: if isAdmin();
+    }
+
   }
 }

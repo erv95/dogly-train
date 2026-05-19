@@ -24,7 +24,7 @@ WebBrowser.maybeCompleteAuthSession();
 export default function LoginScreen() {
   const router = useRouter();
   const { t } = useTranslation();
-  const { userData, role, initialized } = useAuth();
+  const { firebaseUser, userData, role, initialized } = useAuth();
   const params = useLocalSearchParams<{ email?: string }>();
   // Pre-fill email when arriving from a "your account already exists" prompt.
   const [email, setEmail] = useState(params.email || '');
@@ -32,7 +32,17 @@ export default function LoginScreen() {
   const [loading, setLoading] = useState(false);
   const [awaitingAuth, setAwaitingAuth] = useState(false);
 
-  // Navigate once AuthContext confirms user data is loaded
+  // Navigate once AuthContext confirms user data is loaded.
+  //
+  // Three terminal states after a successful signIn:
+  //   1. userData + role present → route to role's home.
+  //   2. firebaseUser set but userData null → orphan account (Auth credential
+  //      exists, Firestore doc was never written or got lost). Recover by
+  //      sending the user to complete-profile so they finish registration —
+  //      this matches what app/index.tsx does for the same condition. Without
+  //      this branch the timeout below would fire a generic error and the
+  //      user gets stuck unable to log in, forever.
+  //   3. 10s passed with neither of the above → soft fail with generic alert.
   useEffect(() => {
     if (!awaitingAuth || !initialized) return;
     if (userData && role) {
@@ -41,6 +51,19 @@ export default function LoginScreen() {
       if (role === 'owner') router.replace('/(owner)/home');
       else if (role === 'trainer') router.replace('/(trainer)/dashboard');
       else if (role === 'caretaker') router.replace('/(caretaker)/dashboard');
+      return;
+    }
+    if (firebaseUser && !userData) {
+      setLoading(false);
+      setAwaitingAuth(false);
+      router.replace({
+        pathname: '/(auth)/complete-profile',
+        params: {
+          uid: firebaseUser.uid,
+          email: firebaseUser.email ?? '',
+          displayName: firebaseUser.displayName ?? '',
+        },
+      });
       return;
     }
     // Timeout: if user data doesn't load within 10s, reset loading state
@@ -52,7 +75,7 @@ export default function LoginScreen() {
       }
     }, 10000);
     return () => clearTimeout(timeout);
-  }, [awaitingAuth, initialized, userData, role]);
+  }, [awaitingAuth, initialized, firebaseUser, userData, role]);
 
   // Google Sign-In
   const googleDiscovery = AuthSession.useAutoDiscovery('https://accounts.google.com');

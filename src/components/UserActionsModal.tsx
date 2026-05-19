@@ -17,6 +17,7 @@ import {
   updateUserStatus,
   updateUserRole,
   setUserMarketplaceActive,
+  setUserVerified,
   adminSyncUserDenormalized,
 } from '../services/adminUsers';
 import { adminGrantCoins, GrantCoinsError } from '../services/adminCoins';
@@ -111,6 +112,16 @@ export default function UserActionsModal({ visible, user, adminUid, onClose, onU
   const toggleMarketplace = () => {
     if (role !== 'trainer' && role !== 'caretaker') return;
     const next = !(user.isActive ?? false);
+    // The marketplace rule enforces verified=true for isActive=true. Block
+    // the approval at the UI level so the admin gets a clear hint instead
+    // of a permission-denied error.
+    if (next && !(user.verified ?? false)) {
+      Alert.alert(
+        'Falta verificación',
+        'Activa primero la verificación de identidad para que pueda aparecer en el buscador.',
+      );
+      return;
+    }
     Alert.alert(
       t(next ? 'admin.userManagement.confirmApproveTitle' : 'admin.userManagement.confirmUnapproveTitle', { name: user.displayName }),
       t(next ? 'admin.userManagement.confirmApproveDesc' : 'admin.userManagement.confirmUnapproveDesc'),
@@ -124,6 +135,40 @@ export default function UserActionsModal({ visible, user, adminUid, onClose, onU
             try {
               await setUserMarketplaceActive(user.id, next);
               onUpdated(user.id, { isActive: next });
+            } catch {
+              Alert.alert(t('common.error'), t('authErrors.generic'));
+            } finally {
+              setWorking(null);
+            }
+          },
+        },
+      ],
+    );
+  };
+
+  const toggleVerified = () => {
+    if (role !== 'trainer' && role !== 'caretaker') return;
+    const next = !(user.verified ?? false);
+    const willDropActive = !next && (user.isActive ?? false);
+    Alert.alert(
+      next ? 'Marcar como verificado' : 'Quitar verificación',
+      next
+        ? `${user.displayName} pasará a verified=true. Después podrás activar su listado en el marketplace.`
+        : willDropActive
+          ? `${user.displayName} dejará de estar verificado y se ocultará del buscador.`
+          : `${user.displayName} dejará de estar verificado.`,
+      [
+        { text: t('common.cancel'), style: 'cancel' },
+        {
+          text: next ? 'Verificar' : 'Quitar',
+          style: next ? 'default' : 'destructive',
+          onPress: async () => {
+            setWorking('verified');
+            try {
+              await setUserVerified(user.id, next, { currentlyActive: user.isActive ?? false });
+              const patch: Partial<User> = { verified: next };
+              if (willDropActive) patch.isActive = false;
+              onUpdated(user.id, patch);
             } catch {
               Alert.alert(t('common.error'), t('authErrors.generic'));
             } finally {
@@ -311,10 +356,48 @@ export default function UserActionsModal({ visible, user, adminUid, onClose, onU
             {(role === 'trainer' || role === 'caretaker') && (
               <>
                 <Text style={styles.sectionTitle}>{t('admin.userManagement.marketplaceTitle')}</Text>
+
+                {/* Verified toggle — gate for marketplace listing */}
+                <TouchableOpacity
+                  style={[
+                    styles.verifiedBtn,
+                    user.verified ? styles.verifiedBtnOn : styles.verifiedBtnOff,
+                  ]}
+                  onPress={toggleVerified}
+                  disabled={working === 'verified'}
+                  activeOpacity={0.85}
+                >
+                  {working === 'verified' ? (
+                    <ActivityIndicator color={user.verified ? colors.success : colors.textSecondary} size="small" />
+                  ) : (
+                    <>
+                      <Ionicons
+                        name={user.verified ? 'shield-checkmark' : 'shield-outline'}
+                        size={18}
+                        color={user.verified ? colors.success : colors.textSecondary}
+                      />
+                      <Text
+                        style={[
+                          styles.verifiedBtnText,
+                          { color: user.verified ? colors.success : colors.textSecondary },
+                        ]}
+                      >
+                        {user.verified ? 'Verificado ✓' : 'No verificado'}
+                      </Text>
+                    </>
+                  )}
+                </TouchableOpacity>
+                <Text style={styles.helperText}>
+                  {user.verified
+                    ? 'La identidad está verificada — puedes activarlo en el marketplace.'
+                    : 'Marca como verificado para poder activar su listado.'}
+                </Text>
+
                 <TouchableOpacity
                   style={[
                     styles.marketplaceBtn,
                     user.isActive ? styles.marketplaceBtnOn : styles.marketplaceBtnOff,
+                    !user.verified && !user.isActive && styles.marketplaceBtnDisabled,
                   ]}
                   onPress={toggleMarketplace}
                   disabled={working === 'marketplace'}
@@ -506,7 +589,22 @@ const styles = StyleSheet.create({
   },
   marketplaceBtnOn: { backgroundColor: colors.error },
   marketplaceBtnOff: { backgroundColor: colors.success },
+  marketplaceBtnDisabled: { backgroundColor: colors.textLight },
   marketplaceBtnText: { color: '#fff', fontSize: fontSize.sm, fontWeight: '800' },
+
+  verifiedBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: spacing.sm,
+    paddingVertical: spacing.md,
+    borderRadius: borderRadius.md,
+    borderWidth: 1.5,
+    marginBottom: spacing.sm,
+  },
+  verifiedBtnOn: { borderColor: colors.success, backgroundColor: colors.success + '12' },
+  verifiedBtnOff: { borderColor: colors.border, backgroundColor: colors.backgroundSecondary },
+  verifiedBtnText: { fontSize: fontSize.sm, fontWeight: '800' },
 
   roleRow: { flexDirection: 'row', gap: spacing.sm },
   roleBtn: {

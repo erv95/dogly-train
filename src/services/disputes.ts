@@ -67,3 +67,29 @@ export async function getDisputeById(disputeId: string): Promise<Dispute | null>
   const snap = await getDoc(doc(db, 'disputes', disputeId));
   return snap.exists() ? ({ id: snap.id, ...snap.data() } as Dispute) : null;
 }
+
+/**
+ * Realtime count of open disputes, for the admin tab badge. Same
+ * permission-denied auto-teardown as subscribeToUnreadCount in chats.ts.
+ */
+export function subscribeToOpenDisputesCount(
+  callback: (count: number) => void,
+): Unsubscribe {
+  const q = query(
+    collection(db, 'disputes'),
+    where('status', '==', 'open'),
+    limit(100),
+  );
+  let unsubInternal: Unsubscribe | null = null;
+  unsubInternal = onSnapshot(
+    q,
+    (snap) => callback(snap.size),
+    (err) => {
+      console.warn('subscribeToOpenDisputesCount error:', err);
+      if ((err as { code?: string }).code === 'permission-denied') {
+        unsubInternal?.();
+      }
+    },
+  );
+  return () => unsubInternal?.();
+}

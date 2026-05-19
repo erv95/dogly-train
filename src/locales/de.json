@@ -146,6 +146,7 @@
     "footer": "Dieses Dokument wird bei jeder neuen oder geänderten Sicherheitsmaßnahme aktualisiert. Letzte Überprüfung: 11. Mai 2026."
   },
   "common": {
+    "hello": "Hallo",
     "loading": "Laden...",
     "loadMore": "Mehr anzeigen",
     "error": "Fehler",
@@ -3698,7 +3699,7 @@
     "stats": "Statistiken",
     "activeChats": "Aktive Chats",
     "totalReviews": "Bewertungen gesamt",
-    "avgRating": "Durchschnittsbewertung",
+    "avgRating": "Bewertung",
     "bio": "Biografie",
     "bioPlaceholder": "Erzähl uns von deiner Erfahrung als Trainer...",
     "specialties": "Spezialisierungen",

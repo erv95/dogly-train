@@ -26,7 +26,7 @@ type Step = 'role' | 'profile';
 export default function CompleteProfileScreen() {
   const router = useRouter();
   const { t } = useTranslation();
-  const { firebaseUser } = useAuth();
+  const { firebaseUser, setUserData } = useAuth();
   const params = useLocalSearchParams<{ uid: string; email: string; displayName: string }>();
 
   // Prefer params (fresh OAuth flow) but fall back to the live Auth user
@@ -93,7 +93,7 @@ export default function CompleteProfileScreen() {
 
     setLoading(true);
     try {
-      await createUserProfile({
+      const created = await createUserProfile({
         uid,
         email,
         displayName,
@@ -101,9 +101,15 @@ export default function CompleteProfileScreen() {
         dateOfBirth: ddmmyyyyToISO(dateOfBirth),
         language: i18n.language,
       });
-      if (role === 'owner') router.replace('/(owner)/home');
-      else if (role === 'caretaker') router.replace('/(caretaker)/dashboard');
-      else router.replace('/(trainer)/dashboard');
+      // Hydrate AuthContext with the freshly-created profile BEFORE navigating.
+      // Without this, userData stays null in context and the central index.tsx
+      // gate bounces the user back to this screen on any subsequent re-render
+      // (e.g. background→foreground), creating an infinite loop that survives
+      // app restarts. Mirrors the pattern in account-pending.tsx (handleRestore).
+      setUserData(created);
+      // Route through '/' so the index gate makes the final routing decision
+      // based on the (now populated) userData — single source of truth.
+      router.replace('/');
     } catch (error: any) {
       Alert.alert(t('common.error'), error.message || t('authErrors.generic'));
     } finally {

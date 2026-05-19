@@ -69,3 +69,6 @@ export { exportUserData } from "./dataExport";
 
 // Dispute resolution (booking-scoped, admin-moderated)
 export { openDispute, adminResolveDispute } from "./disputes";
+
+// Identity verification — notify all admins on new pending request
+export { onIdVerificationCreate } from "./idVerifications";

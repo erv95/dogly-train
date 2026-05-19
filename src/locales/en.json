@@ -146,6 +146,7 @@
     "footer": "This document is updated every time we add or change a security measure. Last review: May 11, 2026."
   },
   "common": {
+    "hello": "Hello",
     "loading": "Loading...",
     "loadMore": "Show more",
     "error": "Error",
@@ -3698,7 +3699,7 @@
     "stats": "Statistics",
     "activeChats": "Active chats",
     "totalReviews": "Total reviews",
-    "avgRating": "Average rating",
+    "avgRating": "Rating",
     "bio": "Bio",
     "bioPlaceholder": "Tell us about your experience as a trainer...",
     "specialties": "Specialties",

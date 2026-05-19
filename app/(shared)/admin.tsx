@@ -32,8 +32,8 @@ import type { QueryDocumentSnapshot, DocumentData } from 'firebase/firestore';
 import { Report, User, UserRole, UserStatus } from '../../src/types';
 import { db } from '../../src/config/firebase';
 import { useAuth } from '../../src/contexts/AuthContext';
-import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
-import { Avatar } from '../../src/components/ui';
+import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
+import { Avatar, FullscreenImageModal, Skeleton } from '../../src/components/ui';
 import {
   listUsers,
   type RoleFilter,
@@ -55,7 +55,10 @@ import {
   listVerificationsByStatus,
   approveIdVerification,
   rejectIdVerification,
+  subscribeToPendingVerificationCount,
 } from '../../src/services/idVerification';
+import { subscribeToOpenDisputesCount } from '../../src/services/disputes';
+import { subscribeToPendingReportsCount } from '../../src/services/adminReports';
 import { ref as storageRef, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../src/config/firebase';
 
@@ -160,12 +163,31 @@ export default function AdminPanel() {
    *  expands a verification card. Avoids hammering Storage on first paint. */
   const [docUrlCache, setDocUrlCache] = useState<Record<string, string>>({});
   const [expandedVerifId, setExpandedVerifId] = useState<string | null>(null);
+  /** URL currently shown in the fullscreen pinch-zoom modal (verification docs). */
+  const [previewImageUrl, setPreviewImageUrl] = useState<string | null>(null);
+  /** Realtime badges on Verificación / Disputas / Reportes tabs. */
+  const [pendingVerifCount, setPendingVerifCount] = useState(0);
+  const [openDisputesCount, setOpenDisputesCount] = useState(0);
+  const [pendingReportsCount, setPendingReportsCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     if (!isAdmin) { router.replace('/'); return; }
     loadAll();
+  }, [isAdmin]);
+
+  // Realtime tab badges — wired only once for an admin session. The
+  // subscriptions auto-tear-down on permission-denied (e.g. if the admin
+  // claim is revoked mid-session).
+  useEffect(() => {
+    if (!isAdmin) return;
+    const unsubs = [
+      subscribeToPendingVerificationCount(setPendingVerifCount),
+      subscribeToOpenDisputesCount(setOpenDisputesCount),
+      subscribeToPendingReportsCount(setPendingReportsCount),
+    ];
+    return () => unsubs.forEach((u) => u());
   }, [isAdmin]);
 
   useEffect(() => {
@@ -1344,17 +1366,22 @@ export default function AdminPanel() {
       </View>
 
       {verifLoading ? (
-        <ActivityIndicator style={styles.loader} color={colors.primary} size="large" />
+        <View style={{ padding: spacing.md, gap: spacing.sm }}>
+          {[0, 1, 2].map((i) => (
+            <Skeleton key={i} height={88} style={{ borderRadius: borderRadius.md }} />
+          ))}
+        </View>
       ) : (
         <FlatList
           data={verifList}
           keyExtractor={(v) => v.id}
           contentContainerStyle={{ padding: spacing.md, gap: spacing.sm }}
           ListEmptyComponent={
-            <View style={{ padding: spacing.xl, alignItems: 'center' }}>
-              <Ionicons name="shield-outline" size={48} color={colors.textLight} />
-              <Text style={{ color: colors.textSecondary, marginTop: spacing.sm }}>
-                {t('identityVerification.admin.empty')}
+            <View style={styles.emptyStateBlock}>
+              <Ionicons name="shield-checkmark-outline" size={48} color={colors.textLight} />
+              <Text style={styles.emptyStateTitle}>{t('identityVerification.admin.empty')}</Text>
+              <Text style={styles.emptyStateSubtitle}>
+                Cuando un entrenador o cuidador envíe sus documentos, aparecerán aquí.
               </Text>
             </View>
           }
@@ -1367,7 +1394,7 @@ export default function AdminPanel() {
                   onPress={() => toggleExpandVerif(item)}
                   activeOpacity={0.85}
                 >
-                  <Text style={{ fontWeight: '800', color: colors.text }}>
+                  <Text style={styles.verifCardTitle}>
                     UID {item.userId.slice(0, 10)}…
                   </Text>
                   <Text style={{ fontSize: fontSize.xs, color: colors.textSecondary, marginTop: 2 }}>
@@ -1379,11 +1406,22 @@ export default function AdminPanel() {
                       {[item.frontPath, item.backPath, item.selfiePath].filter(Boolean).map((p, i) => {
                         const url = docUrlCache[p as string];
                         return (
-                          <View key={i} style={styles.verifPhotoBox}>
+                          <TouchableOpacity
+                            key={i}
+                            style={styles.verifPhotoBox}
+                            onPress={() => url && setPreviewImageUrl(url)}
+                            activeOpacity={0.8}
+                            disabled={!url}
+                          >
                             {url
                               ? <Image source={{ uri: url }} style={styles.verifPhoto} resizeMode="cover" />
                               : <ActivityIndicator color={colors.primary} size="small" />}
-                          </View>
+                            {url && (
+                              <View style={styles.verifPhotoZoomHint}>
+                                <Ionicons name="search" size={12} color="#fff" />
+                              </View>
+                            )}
+                          </TouchableOpacity>
                         );
                       })}
                     </View>
@@ -1612,22 +1650,33 @@ export default function AdminPanel() {
             { key: 'caretakers', icon: 'home-outline', label: 'Cuidadores' },
             { key: 'recent', icon: 'people-outline', label: 'Usuarios' },
             { key: 'places', icon: 'map-outline', label: 'Lugares' },
-            { key: 'verifications', icon: 'shield-checkmark-outline', label: 'Verificación' },
+            { key: 'verifications', icon: 'shield-checkmark-outline', label: 'Verificación', badge: pendingVerifCount },
             { key: 'push', icon: 'notifications-outline', label: 'Push' },
-            { key: 'reports', icon: 'flag-outline', label: 'Reportes' },
-            { key: 'disputes', icon: 'alert-circle-outline', label: 'Disputas' },
+            { key: 'reports', icon: 'flag-outline', label: 'Reportes', badge: pendingReportsCount },
+            { key: 'disputes', icon: 'alert-circle-outline', label: 'Disputas', badge: openDisputesCount },
             { key: 'events', icon: 'time-outline', label: 'Eventos' },
             { key: 'broadcast', icon: 'megaphone-outline', label: 'Difusión' },
-          ] as { key: Tab; icon: string; label: string }[]).map((t) => (
-            <TouchableOpacity
-              key={t.key}
-              style={[styles.mainTab, tab === t.key && styles.mainTabActive]}
-              onPress={() => setTab(t.key)}
-            >
-              <Ionicons name={t.icon as any} size={18} color={tab === t.key ? colors.primary : colors.textSecondary} />
-              <Text style={[styles.mainTabText, tab === t.key && styles.mainTabTextActive]}>{t.label}</Text>
-            </TouchableOpacity>
-          ))}
+          ] as { key: Tab; icon: string; label: string; badge?: number }[]).map((t) => {
+            const showBadge = (t.badge ?? 0) > 0;
+            const badgeLabel = (t.badge ?? 0) > 99 ? '99+' : String(t.badge);
+            return (
+              <TouchableOpacity
+                key={t.key}
+                style={[styles.mainTab, tab === t.key && styles.mainTabActive]}
+                onPress={() => setTab(t.key)}
+              >
+                <View style={styles.mainTabIconWrap}>
+                  <Ionicons name={t.icon as any} size={18} color={tab === t.key ? colors.primary : colors.textSecondary} />
+                  {showBadge && (
+                    <View style={styles.tabBadge}>
+                      <Text style={styles.tabBadgeText}>{badgeLabel}</Text>
+                    </View>
+                  )}
+                </View>
+                <Text style={[styles.mainTabText, tab === t.key && styles.mainTabTextActive]}>{t.label}</Text>
+              </TouchableOpacity>
+            );
+          })}
         </View>
       </ScrollView>
 
@@ -1662,6 +1711,13 @@ export default function AdminPanel() {
           setUmModalUser((prev) => (prev && prev.id === uid ? ({ ...prev, ...patch } as User) : prev));
         }}
       />
+
+      {/* Fullscreen image viewer — pinch-zoom for verification docs */}
+      <FullscreenImageModal
+        visible={!!previewImageUrl}
+        imageUrl={previewImageUrl}
+        onClose={() => setPreviewImageUrl(null)}
+      />
     </SafeAreaView>
   );
 }
@@ -1673,9 +1729,61 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.lg, paddingVertical: spacing.md,
     borderBottomWidth: 1, borderBottomColor: colors.border,
   },
-  headerTitle: { fontSize: fontSize.lg, fontWeight: '700', color: colors.text },
+  headerTitle: { fontSize: fontSize.xl, fontFamily: fontFamily.bold, color: colors.text, letterSpacing: -0.3 },
   mainTabs: {
     flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: colors.border,
+  },
+  mainTabIconWrap: { position: 'relative' },
+  tabBadge: {
+    position: 'absolute',
+    top: -6,
+    right: -10,
+    backgroundColor: colors.error,
+    borderRadius: 10,
+    minWidth: 18,
+    height: 18,
+    paddingHorizontal: 4,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  tabBadgeText: {
+    color: '#fff',
+    fontSize: 10,
+    fontFamily: fontFamily.bold,
+  },
+  emptyStateBlock: {
+    padding: spacing.xl,
+    alignItems: 'center',
+    gap: spacing.sm,
+  },
+  emptyStateTitle: {
+    fontSize: fontSize.md,
+    fontFamily: fontFamily.semibold,
+    color: colors.text,
+    textAlign: 'center',
+    marginTop: spacing.sm,
+  },
+  emptyStateSubtitle: {
+    fontSize: fontSize.xs,
+    color: colors.textSecondary,
+    textAlign: 'center',
+    maxWidth: 280,
+  },
+  verifCardTitle: {
+    fontFamily: fontFamily.semibold,
+    color: colors.text,
+    fontSize: fontSize.sm,
+  },
+  verifPhotoZoomHint: {
+    position: 'absolute',
+    bottom: 4,
+    right: 4,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    borderRadius: 10,
+    width: 20,
+    height: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   mainTab: {
     flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
@@ -1683,7 +1791,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2, borderBottomColor: 'transparent',
   },
   mainTabActive: { borderBottomColor: colors.primary },
-  mainTabText: { fontSize: fontSize.xs, color: colors.textSecondary, fontWeight: '600' },
+  mainTabText: { fontSize: fontSize.xs, color: colors.textSecondary, fontFamily: fontFamily.semibold },
   mainTabTextActive: { color: colors.primary },
   loader: { flex: 1, alignSelf: 'center' },
 

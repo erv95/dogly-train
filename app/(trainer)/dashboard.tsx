@@ -31,8 +31,7 @@ export default function TrainerDashboardScreen() {
         <View style={styles.header}>
           <View style={{ flex: 1 }}>
             <Text style={styles.greeting}>
-              {t('auth.welcome').split(' ').slice(0, 1).join('')},{' '}
-              {trainer?.displayName?.split(' ')[0] ?? ''}
+              {t('common.hello')}, {trainer?.displayName?.split(' ')[0] ?? ''}
             </Text>
             <Text style={styles.subtitle}>{t('trainer.dashboard')}</Text>
           </View>
@@ -67,17 +66,23 @@ export default function TrainerDashboardScreen() {
             <Text style={styles.statValue}>
               {trainer?.averageRating?.toFixed(1) ?? '0.0'}
             </Text>
-            <Text style={styles.statLabel}>{t('trainer.avgRating')}</Text>
+            <Text style={styles.statLabel} numberOfLines={2} adjustsFontSizeToFit minimumFontScale={0.7}>
+              {t('trainer.avgRating')}
+            </Text>
           </Card>
           <Card style={styles.statCard}>
             <Ionicons name="chatbubbles-outline" size={24} color={colors.secondary} />
             <Text style={styles.statValue}>{trainer?.totalReviews ?? 0}</Text>
-            <Text style={styles.statLabel}>{t('trainer.totalReviews')}</Text>
+            <Text style={styles.statLabel} numberOfLines={2} adjustsFontSizeToFit minimumFontScale={0.7}>
+              {t('trainer.totalReviews')}
+            </Text>
           </Card>
           <Card style={styles.statCard}>
             <Ionicons name="wallet-outline" size={24} color={colors.primary} />
             <Text style={styles.statValue}>{trainer?.coinBalance ?? 0}</Text>
-            <Text style={styles.statLabel}>{t('trainer.coins')}</Text>
+            <Text style={styles.statLabel} numberOfLines={2} adjustsFontSizeToFit minimumFontScale={0.7}>
+              {t('trainer.coins')}
+            </Text>
           </Card>
         </View>
 

@@ -3,6 +3,7 @@ import {
   doc,
   getDoc,
   getDocs,
+  onSnapshot,
   query,
   setDoc,
   updateDoc,
@@ -105,6 +106,36 @@ export async function listVerificationsByStatus(
     items: snap.docs.map((d) => ({ id: d.id, ...(d.data() as Omit<IdVerification, 'id'>) })),
     nextCursor: snap.docs.length === pageSize ? snap.docs[snap.docs.length - 1] : null,
   };
+}
+
+/**
+ * Realtime count of pending verifications for the admin badge. Mirrors the
+ * shape of subscribeToUnreadCount in chats.ts — auto-tears down on
+ * permission-denied so a revoked admin doesn't leak a listener.
+ *
+ * Cap at 100 because the admin processes them in batches anyway; if the
+ * queue ever exceeds 100 the badge can render "99+" client-side.
+ */
+export function subscribeToPendingVerificationCount(
+  callback: (count: number) => void,
+): () => void {
+  const q = query(
+    collection(db, COLLECTION),
+    where('status', '==', 'pending'),
+    limit(100),
+  );
+  let unsubInternal: (() => void) | null = null;
+  unsubInternal = onSnapshot(
+    q,
+    (snap) => callback(snap.size),
+    (err) => {
+      console.warn('subscribeToPendingVerificationCount error:', err);
+      if ((err as { code?: string }).code === 'permission-denied') {
+        unsubInternal?.();
+      }
+    },
+  );
+  return () => unsubInternal?.();
 }
 
 /** Best-effort cleanup of the stored ID/selfie images. Call after approving

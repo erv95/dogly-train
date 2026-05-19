@@ -138,18 +138,41 @@ function randomDisplayId(): string {
 }
 
 /** Pick a 6-char displayId that isn't already in use. Up to 10 retries — way
- *  more than statistics demands, mostly a defence against unlikely streaks. */
-async function findUniqueDisplayId(): Promise<string> {
+ *  more than statistics demands, mostly a defence against unlikely streaks.
+ *
+ *  IMPORTANT — permission fallback: the `where('displayId', '==', …)` query
+ *  needs to read other users' docs, but Firestore rules only allow that when
+ *  the caller's own user doc has `status: 'active'`. A brand-new signup
+ *  doesn't have a doc yet, so the query throws "Missing or insufficient
+ *  permissions" and blocks registration entirely. When that happens we fall
+ *  back to a UID-derived id (which is what the codebase used originally,
+ *  before the random-with-uniqueness-check refactor). Collisions are
+ *  theoretically possible with the fallback but require two UIDs with the
+ *  same leading characters in the alphabet — unlikely enough for the
+ *  marketplace size, and never a security issue (the referral CF re-checks
+ *  the code on use). */
+async function findUniqueDisplayId(uidForFallback: string): Promise<string> {
   const usersRef = collection(db, 'users');
-  for (let attempt = 0; attempt < 10; attempt++) {
-    const candidate = randomDisplayId();
-    const q = query(usersRef, where('displayId', '==', candidate), limit(1));
-    const snap = await getDocs(q);
-    if (snap.empty) return candidate;
+  try {
+    for (let attempt = 0; attempt < 10; attempt++) {
+      const candidate = randomDisplayId();
+      const q = query(usersRef, where('displayId', '==', candidate), limit(1));
+      const snap = await getDocs(q);
+      if (snap.empty) return candidate;
+    }
+    return randomDisplayId() + Date.now().toString(36).slice(-2).toUpperCase();
+  } catch (err: any) {
+    // Permission-denied at signup time — the caller has no profile doc yet
+    // and the rules require `isActive()` to read other users. Fall back to
+    // a deterministic UID-derived id so registration can complete.
+    if (err?.code === 'permission-denied') {
+      const derived = uidForFallback.replace(/[^A-Z0-9]/gi, '').slice(0, 6).toUpperCase();
+      if (derived.length === 6) return derived;
+      // Pathological UID shape — pad with random chars to reach 6.
+      return (derived + randomDisplayId()).slice(0, 6);
+    }
+    throw err;
   }
-  // Pathological case (server flake, dedicated attacker, etc.): suffix with
-  // a 2-char timestamp tail so it's still readable but practically unique.
-  return randomDisplayId() + Date.now().toString(36).slice(-2).toUpperCase();
 }
 
 // --- User profile creation ---
@@ -188,8 +211,10 @@ export async function createUserProfile({
   // chars produced the same displayId and the referral code lookup picked
   // whichever doc returned first. Random + uniqueness check eliminates the
   // collision entirely. We exclude visually-ambiguous chars (0/O/I/1/L) so
-  // users typing the code by hand don't confuse them.
-  const displayId = await findUniqueDisplayId();
+  // users typing the code by hand don't confuse them. The function takes the
+  // uid so it can fall back to a UID-derived id when the uniqueness query
+  // gets denied (which happens for brand-new signups without a profile yet).
+  const displayId = await findUniqueDisplayId(uid);
 
   const baseData = {
     email,

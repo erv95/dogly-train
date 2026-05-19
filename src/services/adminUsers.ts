@@ -145,6 +145,35 @@ export async function setUserMarketplaceActive(uid: string, isActive: boolean): 
 }
 
 /**
+ * Flip a provider's `verified` flag from admin. The marketplace rule
+ * (firestore.rules) forbids `isActive=true` without `verified=true`, so when
+ * un-verifying we also force `isActive=false` in the same write — otherwise
+ * the rule would reject the update.
+ *
+ * On verify=true we leave isActive untouched; the admin can then approve.
+ */
+export async function setUserVerified(
+  uid: string,
+  verified: boolean,
+  opts: { currentlyActive?: boolean } = {},
+): Promise<void> {
+  const patch: Record<string, unknown> = {
+    verified,
+    updatedAt: serverTimestamp(),
+  };
+  if (!verified && opts.currentlyActive) {
+    // Drop the marketplace listing too, otherwise the rule rejects the write.
+    patch.isActive = false;
+  }
+  if (verified) {
+    patch.verifiedAt = serverTimestamp();
+  } else {
+    patch.verifiedAt = null;
+  }
+  await updateDoc(doc(db, 'users', uid), patch);
+}
+
+/**
  * Change a user's role. Caller is expected to confirm with the operator
  * because the destination role-specific fields will be incomplete and the
  * user must complete their profile on next login.

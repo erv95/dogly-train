@@ -146,6 +146,7 @@
     "footer": "Este documento é atualizado sempre que adicionamos ou alteramos uma medida de segurança. Última revisão: 11 de maio de 2026."
   },
   "common": {
+    "hello": "Olá",
     "loading": "Carregando...",
     "loadMore": "Ver mais",
     "error": "Erro",
@@ -3698,7 +3699,7 @@
     "stats": "Estatísticas",
     "activeChats": "Conversas ativas",
     "totalReviews": "Total de avaliações",
-    "avgRating": "Avaliação média",
+    "avgRating": "Avaliação",
     "bio": "Biografia",
     "bioPlaceholder": "Conte-nos sobre sua experiência como treinador...",
     "specialties": "Especialidades",

@@ -32,7 +32,7 @@ export default function CaretakerDashboardScreen() {
         <View style={styles.header}>
           <View style={{ flex: 1 }}>
             <Text style={styles.greeting}>
-              {caretaker?.displayName?.split(' ')[0] ?? ''}
+              {t('common.hello')}, {caretaker?.displayName?.split(' ')[0] ?? ''}
             </Text>
             <Text style={styles.subtitle}>{t('caretaker.dashboard')}</Text>
           </View>
@@ -75,17 +75,23 @@ export default function CaretakerDashboardScreen() {
             <Text style={styles.statValue}>
               {caretaker?.averageRating?.toFixed(1) ?? '0.0'}
             </Text>
-            <Text style={styles.statLabel}>{t('trainer.avgRating')}</Text>
+            <Text style={styles.statLabel} numberOfLines={2} adjustsFontSizeToFit minimumFontScale={0.7}>
+              {t('trainer.avgRating')}
+            </Text>
           </Card>
           <Card style={styles.statCard}>
             <Ionicons name="chatbubbles-outline" size={24} color={colors.secondary} />
             <Text style={styles.statValue}>{caretaker?.totalReviews ?? 0}</Text>
-            <Text style={styles.statLabel}>{t('trainer.totalReviews')}</Text>
+            <Text style={styles.statLabel} numberOfLines={2} adjustsFontSizeToFit minimumFontScale={0.7}>
+              {t('trainer.totalReviews')}
+            </Text>
           </Card>
           <Card style={styles.statCard}>
             <Ionicons name="wallet-outline" size={24} color={colors.primary} />
             <Text style={styles.statValue}>{caretaker?.coinBalance ?? 0}</Text>
-            <Text style={styles.statLabel}>{t('caretaker.coins')}</Text>
+            <Text style={styles.statLabel} numberOfLines={2} adjustsFontSizeToFit minimumFontScale={0.7}>
+              {t('caretaker.coins')}
+            </Text>
           </Card>
         </View>
 
