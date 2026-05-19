@@ -218,7 +218,11 @@
     "completeProfile": "Complete seu perfil",
     "completeLater": "Sair sem terminar?",
     "completeLaterDesc": "A sua conta fica guardada. Quando voltar a iniciar sessão, poderá terminar o questionário onde o deixou.",
-    "completeLaterLogout": "Sair e continuar depois"
+    "completeLaterLogout": "Sair e continuar depois",
+    "genderLabel": "Género (só para nos dirigirmos a ti corretamente)",
+    "gender_female": "Mulher",
+    "gender_male": "Homem",
+    "gender_unspecified": "Prefiro não dizer"
   },
   "authErrors": {
     "generic": "Ocorreu um erro. Tente novamente.",
@@ -3971,6 +3975,7 @@
     "restoreCta": "Restaurar a minha conta",
     "restoredTitle": "Conta restaurada",
     "restoredBody": "A tua conta está ativa de novo. Bem-vindo de volta!",
+    "restoredBody_female": "A tua conta está ativa de novo. Bem-vinda de volta!",
     "exportCta": "Descarregar os meus dados antes da eliminação",
     "exportSuccessTitle": "Dados descarregados",
     "exportSuccessBody": "Guarda o ficheiro num local seguro antes de {{date}} — depois não poderás voltar a descarregá-lo.",
@@ -4410,10 +4415,12 @@
     "goodAfternoon": "Boa tarde! ☀️",
     "goodEvening": "Boa noite! 🌙",
     "goodNight": "Ainda acordado? 🌌",
+    "goodNight_female": "Ainda acordada? 🌌",
     "goodMorningNamed": "Bom dia, {{name}}! 🌅",
     "goodAfternoonNamed": "Boa tarde, {{name}}! ☀️",
     "goodEveningNamed": "Boa noite, {{name}}! 🌙",
     "goodNightNamed": "Ainda acordado, {{name}}? 🌌",
+    "goodNightNamed_female": "Ainda acordada, {{name}}? 🌌",
     "forDog": "Plano de hoje para {{name}}",
     "allCaughtUp": "Tudo em dia! Continue 🎉",
     "reminderToday": "Hoje",

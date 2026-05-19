@@ -11,6 +11,7 @@ import BookingStatsCard from '../../src/components/BookingStatsCard';
 import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
 import { TrainerProfile } from '../../src/types';
 import { getBoostTimeRemaining } from '../../src/utils/boost';
+import { getGreetingSlot } from '../../src/services/dailyRecommendations';
 
 export default function TrainerDashboardScreen() {
   const { t } = useTranslation();
@@ -31,7 +32,10 @@ export default function TrainerDashboardScreen() {
         <View style={styles.header}>
           <View style={{ flex: 1 }}>
             <Text style={styles.greeting}>
-              {t('common.hello')}, {trainer?.displayName?.split(' ')[0] ?? ''}
+              {t(`daily.${getGreetingSlot(new Date())}Named`, {
+                name: trainer?.displayName?.split(' ')[0] ?? '',
+                context: trainer?.gender === 'female' ? 'female' : '',
+              })}
             </Text>
             <Text style={styles.subtitle}>{t('trainer.dashboard')}</Text>
           </View>

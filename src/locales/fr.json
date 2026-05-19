@@ -218,7 +218,11 @@
     "completeProfile": "Complétez votre profil",
     "completeLater": "Quitter sans terminer ?",
     "completeLaterDesc": "Votre compte est sauvegardé. À la prochaine connexion, vous reprendrez le questionnaire là où vous l'avez laissé.",
-    "completeLaterLogout": "Quitter et continuer plus tard"
+    "completeLaterLogout": "Quitter et continuer plus tard",
+    "genderLabel": "Genre (uniquement pour vous adresser correctement)",
+    "gender_female": "Femme",
+    "gender_male": "Homme",
+    "gender_unspecified": "Je préfère ne pas le dire"
   },
   "authErrors": {
     "generic": "Une erreur est survenue. Veuillez réessayer.",

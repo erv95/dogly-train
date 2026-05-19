@@ -70,7 +70,7 @@ export default function AccountPendingScreen() {
       }
       Alert.alert(
         t('accountPending.restoredTitle'),
-        t('accountPending.restoredBody'),
+        t('accountPending.restoredBody', { context: userData?.gender === 'female' ? 'female' : '' }),
         [{ text: t('common.ok'), onPress: () => router.replace('/') }],
       );
     } catch (e: any) {

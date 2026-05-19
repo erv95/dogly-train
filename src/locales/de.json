@@ -218,7 +218,11 @@
     "completeProfile": "Profil vervollständigen",
     "completeLater": "Ohne Beenden verlassen?",
     "completeLaterDesc": "Dein Konto bleibt gespeichert. Bei der nächsten Anmeldung kannst du den Fragebogen dort fortsetzen wo du aufgehört hast.",
-    "completeLaterLogout": "Verlassen und später fortsetzen"
+    "completeLaterLogout": "Verlassen und später fortsetzen",
+    "genderLabel": "Geschlecht (nur damit wir dich richtig ansprechen)",
+    "gender_female": "Frau",
+    "gender_male": "Mann",
+    "gender_unspecified": "Möchte ich nicht sagen"
   },
   "authErrors": {
     "generic": "Ein Fehler ist aufgetreten. Bitte versuche es erneut.",

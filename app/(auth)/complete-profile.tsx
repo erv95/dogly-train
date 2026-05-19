@@ -40,6 +40,7 @@ export default function CompleteProfileScreen() {
   const [role, setRole] = useState<UserRole | null>(null);
   const [displayName, setDisplayName] = useState(params.displayName || firebaseUser?.displayName || '');
   const [dateOfBirth, setDateOfBirth] = useState('');
+  const [gender, setGender] = useState<'female' | 'male' | 'unspecified'>('unspecified');
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [acceptPrivacy, setAcceptPrivacy] = useState(false);
 
@@ -100,6 +101,7 @@ export default function CompleteProfileScreen() {
         role,
         dateOfBirth: ddmmyyyyToISO(dateOfBirth),
         language: i18n.language,
+        gender,
       });
       // Hydrate AuthContext with the freshly-created profile BEFORE navigating.
       // Without this, userData stays null in context and the central index.tsx
@@ -211,6 +213,28 @@ export default function CompleteProfileScreen() {
             maxLength={10}
           />
 
+          {/* Gender — used only to inflect greetings (e.g. "Bienvenida, Alicia").
+              Never shown to other users. The 3rd option keeps the masculine
+              generic, matching standard Spanish convention. */}
+          <Text style={styles.fieldLabel}>{t('auth.genderLabel')}</Text>
+          <View style={styles.genderRow}>
+            {(['female', 'male', 'unspecified'] as const).map((g) => {
+              const selected = gender === g;
+              return (
+                <TouchableOpacity
+                  key={g}
+                  style={[styles.genderBtn, selected && styles.genderBtnSelected]}
+                  onPress={() => setGender(g)}
+                  activeOpacity={0.7}
+                >
+                  <Text style={[styles.genderBtnText, selected && styles.genderBtnTextSelected]}>
+                    {t(`auth.gender_${g}`)}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+
           <View style={styles.checkboxRow}>
             <Switch
               value={acceptTerms}
@@ -308,6 +332,41 @@ const styles = StyleSheet.create({
     fontSize: fontSize.sm,
     color: colors.textSecondary,
     textAlign: 'center',
+  },
+  fieldLabel: {
+    fontSize: fontSize.sm,
+    fontWeight: '600',
+    color: colors.text,
+    marginTop: spacing.md,
+    marginBottom: spacing.xs,
+  },
+  genderRow: {
+    flexDirection: 'row',
+    gap: spacing.sm,
+    marginBottom: spacing.md,
+  },
+  genderBtn: {
+    flex: 1,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.xs,
+    borderRadius: borderRadius.md,
+    borderWidth: 1.5,
+    borderColor: colors.border,
+    backgroundColor: colors.background,
+    alignItems: 'center',
+  },
+  genderBtnSelected: {
+    borderColor: colors.primary,
+    backgroundColor: colors.primaryLight + '20',
+  },
+  genderBtnText: {
+    fontSize: fontSize.sm,
+    fontWeight: '600',
+    color: colors.textSecondary,
+  },
+  genderBtnTextSelected: {
+    color: colors.primary,
+    fontWeight: '800',
   },
   checkboxRow: {
     flexDirection: 'row',

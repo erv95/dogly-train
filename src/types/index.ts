@@ -17,6 +17,11 @@ export interface User {
   role: UserRole;
   status: UserStatus;
   dateOfBirth: string; // ISO date string
+  /** Self-declared gender. Used ONLY to inflect greetings/messages so the app
+   *  doesn't address a female user as "Bienvenido" or similar. Never visible
+   *  to other users. `'unspecified'` (or missing) falls back to masculine
+   *  grammar — the standard generic in Spanish. */
+  gender?: 'female' | 'male' | 'unspecified';
   consentAt: Timestamp;
   privacyPolicyVersion: string;
   language: string;

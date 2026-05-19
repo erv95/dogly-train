@@ -75,13 +75,22 @@ export default function DailyTipsRail({ dog, otherDogs = [], onChangeDog }: Prop
 
   const greetingKey = `daily.${getGreetingSlot(new Date())}`;
   const userName = userData?.displayName?.split(' ')[0] ?? '';
+  // i18next `context` resolves `key_female` (or `key_male`) when present,
+  // otherwise falls back to plain `key`. Spanish + Portuguese have feminine
+  // variants for the `goodNight*` keys; other locales are gender-neutral and
+  // just use the base key.
+  const greetingContext = userData?.gender === 'female' ? 'female'
+    : userData?.gender === 'male' ? 'male'
+    : '';
 
   return (
     <View style={styles.container}>
       {/* Greeting (centered) + dog mini-stats */}
       <View style={styles.headerTextBlock}>
         <Text style={styles.greeting} numberOfLines={1}>
-          {userName ? t(greetingKey + 'Named', { name: userName }) : t(greetingKey)}
+          {userName
+            ? t(greetingKey + 'Named', { name: userName, context: greetingContext })
+            : t(greetingKey, { context: greetingContext })}
         </Text>
         <Text style={styles.subhead} numberOfLines={1}>
           {t('daily.forDog', { name: dog.name })}

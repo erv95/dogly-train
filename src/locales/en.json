@@ -218,7 +218,11 @@
     "completeProfile": "Complete your profile",
     "completeLater": "Leave without finishing?",
     "completeLaterDesc": "Your account is saved. When you log in again you can resume the questionnaire where you left off.",
-    "completeLaterLogout": "Leave and continue later"
+    "completeLaterLogout": "Leave and continue later",
+    "genderLabel": "Gender (only used to address you correctly)",
+    "gender_female": "Woman",
+    "gender_male": "Man",
+    "gender_unspecified": "Prefer not to say"
   },
   "authErrors": {
     "generic": "An error occurred. Please try again.",

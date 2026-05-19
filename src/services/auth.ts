@@ -187,6 +187,10 @@ interface CreateUserProfileParams {
   /** Optional `displayId` of the referrer. Set when the user entered a valid
    *  referral code in register. Append-only — never edited later. */
   referredBy?: string | null;
+  /** Self-declared gender — used only to inflect greetings. Optional; if
+   *  missing we treat it as `'unspecified'` and i18n falls back to masculine
+   *  generic (Spanish convention). */
+  gender?: 'female' | 'male' | 'unspecified';
 }
 
 export async function createUserProfile({
@@ -197,6 +201,7 @@ export async function createUserProfile({
   dateOfBirth,
   language,
   referredBy,
+  gender,
 }: CreateUserProfileParams) {
   // Server-side age validation (18+ for marketplace compliance)
   const birth = new Date(dateOfBirth);
@@ -225,6 +230,7 @@ export async function createUserProfile({
     role,
     status: 'active' as const,
     dateOfBirth,
+    gender: gender ?? 'unspecified',
     consentAt: Timestamp.now(),
     privacyPolicyVersion: '1.0',
     language,
