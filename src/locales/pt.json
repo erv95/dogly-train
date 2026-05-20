@@ -3745,6 +3745,9 @@
     "name": "Nome",
     "breed": "Raça",
     "age": "Idade (anos)",
+    "ageLegacy": "Idade em anos (sem data exata)",
+    "birthdate": "Data de nascimento",
+    "birthdateLegacyHint": "Adiciona-a quando souberes a data exata para que o plano corresponda à idade real.",
     "weight": "Peso (kg)",
     "sex": "Sexo",
     "male": "Macho",
@@ -3778,6 +3781,10 @@
       "breedTooLong": "A raça não pode ter mais de 50 caracteres",
       "ageRequired": "A idade é obrigatória",
       "ageInvalid": "A idade deve estar entre 0 e 30 anos",
+      "birthdateRequired": "A data de nascimento é obrigatória",
+      "birthdateInvalid": "Data inválida. Usa o formato DD/MM/AAAA",
+      "birthdateFuture": "A data não pode ser futura",
+      "birthdateTooOld": "A data é demasiado antiga",
       "weightRequired": "O peso é obrigatório",
       "weightInvalid": "O peso deve estar entre 0,5 e 120 kg",
       "behaviorTooLong": "A descrição do comportamento não pode ter mais de 300 caracteres"
@@ -4111,24 +4118,24 @@
     "next": "Próximo",
     "start": "Começar",
     "slide1": {
-      "title": "Encontre o profissional ideal",
-      "subtitle": "Treinadores e cuidadores perto de você, com avaliações e preços claros."
+      "title": "O teu cachorro em boas mãos",
+      "subtitle": "Uma app pensada para os primeiros 12 meses — os que marcam o resto da vida dele."
     },
     "slide2": {
-      "title": "Reserve na hora",
-      "subtitle": "Escolha dia e hora. Pagamento direto por Bizum ou dinheiro, sem taxas."
+      "title": "Plano diário adaptado à idade",
+      "subtitle": "Sabes exatamente o que fazer hoje: socialização, descanso, mordidas, primeiros passeios."
     },
     "slide3": {
-      "title": "Acompanhe ao vivo",
-      "subtitle": "Mapa em tempo real e fotos do passeio ou cuidado do seu cão."
+      "title": "Cursos curtos passo a passo",
+      "subtitle": "Sentar, vir, andar com trela. 5 minutos por dia bastam para começar bem."
     },
     "slide4": {
-      "title": "Recompensas e comunidade",
-      "subtitle": "Coins, desafios, cursos e fotos a cada passo do seu peludo."
+      "title": "Vacinas, peso e veterinário",
+      "subtitle": "Calendário de vacinas, controlo de peso e curva de crescimento, tudo num só sítio."
     },
     "slide5": {
-      "title": "Comece agora",
-      "subtitle": "Crie sua conta ou faça login para descobrir tudo que o Dogly Train oferece."
+      "title": "Profissionais quando precisares",
+      "subtitle": "Treinadores e cuidadores perto de ti, validados e com avaliações reais."
     }
   },
   "clicker": {
@@ -4409,6 +4416,12 @@
       "exercises": "• Kong congelado: encha com patê, comida úmida e água, congele. Entretém 30-60 min. • Tapete olfativo: esconda sua ração. • Caixa de papelão com prêmios embrulhados: estimulação brutal. • Osso de vegetal congelado: cenoura. • Novos brinquedos rotando a cada 3-4 dias.",
       "whenToSeekHelp": "Se o cão destrói só quando fica sozinho (provável ansiedade por separação), engole objetos perigosos (risco vital), se autolesiona (lambida excessiva), ou o problema persiste após 2 meses de enriquecimento ambiental adequado."
     }
+  },
+  "puppy": {
+    "monthSingular": "{{count}} mês",
+    "monthsPlural": "{{count}} meses",
+    "yearSingular": "{{count}} ano",
+    "yearsPlural": "{{count}} anos"
   },
   "daily": {
     "goodMorning": "Bom dia! 🌅",

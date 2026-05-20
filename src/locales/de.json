@@ -3745,6 +3745,9 @@
     "name": "Name",
     "breed": "Rasse",
     "age": "Alter (Jahre)",
+    "ageLegacy": "Alter in Jahren (ohne genaues Datum)",
+    "birthdate": "Geburtsdatum",
+    "birthdateLegacyHint": "Trage es ein, sobald du das genaue Datum kennst, damit der Plan zum tatsächlichen Alter passt.",
     "weight": "Gewicht (kg)",
     "sex": "Geschlecht",
     "male": "Männlich",
@@ -3778,6 +3781,10 @@
       "breedTooLong": "Die Rasse darf maximal 50 Zeichen lang sein",
       "ageRequired": "Alter ist erforderlich",
       "ageInvalid": "Das Alter muss zwischen 0 und 30 Jahren liegen",
+      "birthdateRequired": "Geburtsdatum ist erforderlich",
+      "birthdateInvalid": "Ungültiges Datum. Format TT/MM/JJJJ verwenden",
+      "birthdateFuture": "Das Geburtsdatum kann nicht in der Zukunft liegen",
+      "birthdateTooOld": "Das Geburtsdatum liegt zu weit zurück",
       "weightRequired": "Gewicht ist erforderlich",
       "weightInvalid": "Das Gewicht muss zwischen 0,5 und 120 kg liegen",
       "behaviorTooLong": "Die Verhaltensbeschreibung darf maximal 300 Zeichen lang sein"
@@ -4110,24 +4117,24 @@
     "next": "Weiter",
     "start": "Loslegen",
     "slide1": {
-      "title": "Finde den perfekten Profi",
-      "subtitle": "Trainer und Hundesitter in deiner Nähe — mit echten Bewertungen und klaren Preisen."
+      "title": "Dein Welpe in besten Händen",
+      "subtitle": "Eine App für die ersten 12 Monate — die das ganze Hundeleben prägen."
     },
     "slide2": {
-      "title": "In Sekunden buchen",
-      "subtitle": "Tag und Uhrzeit wählen. Direktzahlung per Bizum oder bar — ohne Gebühren."
+      "title": "Ein Tagesplan, der mitwächst",
+      "subtitle": "Du weißt genau, was heute dran ist: Sozialisierung, Ruhe, Beißen, erste Spaziergänge."
     },
     "slide3": {
-      "title": "Service live verfolgen",
-      "subtitle": "Echtzeit-Karte und Fotos vom Spaziergang oder der Betreuung deines Hundes."
+      "title": "Kurze Kurse Schritt für Schritt",
+      "subtitle": "Sitz, Rückruf, Leinenführigkeit. 5 Minuten am Tag genügen zum guten Start."
     },
     "slide4": {
-      "title": "Belohnungen & Community",
-      "subtitle": "Coins, Challenges, Kurse und Fotos für jeden Fortschritt deines Vierbeiners."
+      "title": "Impfungen, Gewicht und Tierarzt",
+      "subtitle": "Impfkalender, Gewichtskontrolle und Wachstumskurve — alles an einem Ort."
     },
     "slide5": {
-      "title": "Jetzt starten",
-      "subtitle": "Konto erstellen oder anmelden und entdecken, was Dogly Train zu bieten hat."
+      "title": "Profis, wenn du sie brauchst",
+      "subtitle": "Trainer und Sitter in deiner Nähe — verifiziert und mit echten Bewertungen."
     }
   },
   "clicker": {
@@ -4408,6 +4415,12 @@
       "exercises": "• Gefrorener Kong: fülle mit Pastete, Nassfutter und Wasser, friere ein. Beschäftigt 30-60 Min. • Schnüffelteppich: verstecke seine Ration. • Pappkarton mit in Papier eingewickelten Leckerlis: brutale Stimulation. • Gefrorener Gemüseknochen: Karotte. • Neue Spielzeuge alle 3-4 Tage rotieren.",
       "whenToSeekHelp": "Wenn der Hund nur zerstört, wenn allein gelassen (wahrscheinliche Trennungsangst), gefährliche Objekte verschluckt (Lebensgefahr), sich selbst verletzt (übermäßiges Lecken), oder das Problem nach 2 Monaten angemessener Umweltbereicherung anhält."
     }
+  },
+  "puppy": {
+    "monthSingular": "{{count}} Monat",
+    "monthsPlural": "{{count}} Monate",
+    "yearSingular": "{{count}} Jahr",
+    "yearsPlural": "{{count}} Jahre"
   },
   "daily": {
     "goodMorning": "Guten Morgen! 🌅",

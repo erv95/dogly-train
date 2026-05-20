@@ -3745,6 +3745,9 @@
     "name": "Name",
     "breed": "Breed",
     "age": "Age (years)",
+    "ageLegacy": "Age in years (no exact date)",
+    "birthdate": "Birthdate",
+    "birthdateLegacyHint": "Add it when you know the exact date so the plan matches their real age.",
     "weight": "Weight (kg)",
     "sex": "Sex",
     "male": "Male",
@@ -3778,6 +3781,10 @@
       "breedTooLong": "Breed cannot exceed 50 characters",
       "ageRequired": "Age is required",
       "ageInvalid": "Age must be between 0 and 30 years",
+      "birthdateRequired": "Birthdate is required",
+      "birthdateInvalid": "Invalid date. Use DD/MM/YYYY format",
+      "birthdateFuture": "Birthdate can't be in the future",
+      "birthdateTooOld": "Birthdate is too far in the past",
       "weightRequired": "Weight is required",
       "weightInvalid": "Weight must be between 0.5 and 120 kg",
       "behaviorTooLong": "Behavior description cannot exceed 300 characters"
@@ -4110,24 +4117,24 @@
     "next": "Next",
     "start": "Get started",
     "slide1": {
-      "title": "Find the right pro",
-      "subtitle": "Trainers and pet sitters near you with real reviews and clear prices."
+      "title": "Your puppy, in good hands",
+      "subtitle": "An app made for the first 12 months — the ones that shape the rest of their life."
     },
     "slide2": {
-      "title": "Book in an instant",
-      "subtitle": "Pick a day and time. Pay directly via Bizum or cash — zero fees."
+      "title": "A daily plan that grows with them",
+      "subtitle": "You know exactly what to do today: socialisation, rest, biting, first walks."
     },
     "slide3": {
-      "title": "Follow the service live",
-      "subtitle": "Real-time map and photos of your dog's walk or stay."
+      "title": "Short, step-by-step courses",
+      "subtitle": "Sit, come, leash walking. 5 minutes a day is enough to start right."
     },
     "slide4": {
-      "title": "Rewards & community",
-      "subtitle": "Coins, challenges, courses, and photos for every step your pup takes."
+      "title": "Vaccines, weight and vet",
+      "subtitle": "Vaccine calendar, weight tracking and growth curve, all in one place."
     },
     "slide5": {
-      "title": "Start now",
-      "subtitle": "Create an account or sign in to unlock everything Dogly Train can do."
+      "title": "Pros when you need them",
+      "subtitle": "Trainers and sitters near you, verified and with real reviews."
     }
   },
   "clicker": {
@@ -4408,6 +4415,12 @@
       "exercises": "• Frozen Kong: fill with paté, wet food and water, freeze. Entertains 30-60 min. • Snuffle mat: hide their kibble ration, takes 15-20 min to find. • Cardboard box with treats wrapped in paper: brutal stimulation. • Frozen vegetable bone: frozen carrot, chewable and healthy. • New toys rotating every 3-4 days to maintain novelty.",
       "whenToSeekHelp": "If the dog destroys only when left alone (probable separation anxiety), swallows dangerous objects (vital risk), self-harms (excessive licking, paw chewing), or the problem persists after 2 months of adequate environmental enrichment."
     }
+  },
+  "puppy": {
+    "monthSingular": "{{count}} month",
+    "monthsPlural": "{{count}} months",
+    "yearSingular": "{{count}} year",
+    "yearsPlural": "{{count}} years"
   },
   "daily": {
     "goodMorning": "Good morning! 🌅",

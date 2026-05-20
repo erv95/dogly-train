@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import {
   View,
   Text,
@@ -8,7 +8,7 @@ import {
   Alert,
   Image,
   RefreshControl,
-  Dimensions,
+  useWindowDimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter, useFocusEffect } from 'expo-router';
@@ -21,9 +21,12 @@ import { getDogStats, getLevelInfo, DogStats } from '../../src/services/dogStats
 import { DogCardSkeleton } from '../../src/components/skeletons';
 import { colors, spacing, fontSize, borderRadius, shadow } from '../../src/theme';
 import { Dog } from '../../src/types';
+import { formatAgeShort } from '../../src/utils/dogAge';
 
-const { width } = Dimensions.get('window');
-const CARD_WIDTH = (width - spacing.lg * 2 - spacing.md) / 2;
+// Card dimensions are computed inside the component via useWindowDimensions
+// so the layout reacts to rotation, foldables and Android XR. Previously a
+// module-scope Dimensions.get() captured the width at import time and never
+// recalculated — broke on tablet rotation and split-screen.
 
 const SEX_ICON: Record<string, { icon: string; color: string }> = {
   male: { icon: '♂', color: '#3B82F6' },
@@ -34,6 +37,15 @@ export default function DogsScreen() {
   const { t } = useTranslation();
   const { firebaseUser } = useAuth();
   const router = useRouter();
+  const { width: windowWidth } = useWindowDimensions();
+  // Recompute on every layout change (rotation, foldable unfold, etc.).
+  // Same formula as the previous module-scope CARD_WIDTH — half of the
+  // available width after page padding and gap between the two columns.
+  const cardWidth = useMemo(
+    () => (windowWidth - spacing.lg * 2 - spacing.md) / 2,
+    [windowWidth],
+  );
+  const photoHeight = cardWidth * 0.9;
   const [dogs, setDogs] = useState<Dog[]>([]);
   const [dogStatsMap, setDogStatsMap] = useState<Record<string, DogStats | null>>({});
   const [loading, setLoading] = useState(true);
@@ -114,11 +126,15 @@ export default function DogsScreen() {
       <TouchableOpacity
         activeOpacity={0.85}
         onPress={() => router.push(`/(shared)/dog-form?dogId=${item.id}`)}
-        style={[styles.cardWrapper, isLeft ? { marginRight: spacing.sm / 2 } : { marginLeft: spacing.sm / 2 }]}
+        style={[
+          styles.cardWrapper,
+          { width: cardWidth },
+          isLeft ? { marginRight: spacing.sm / 2 } : { marginLeft: spacing.sm / 2 },
+        ]}
       >
         <View style={styles.card}>
           {/* Photo */}
-          <View style={styles.photoContainer}>
+          <View style={[styles.photoContainer, { height: photoHeight }]}>
             {item.photoURL ? (
               <Image source={{ uri: item.photoURL }} style={styles.dogPhoto} resizeMode="cover" />
             ) : (
@@ -152,7 +168,7 @@ export default function DogsScreen() {
             <View style={styles.statsRow}>
               <View style={styles.statPill}>
                 <Ionicons name="calendar-outline" size={10} color={colors.textSecondary} />
-                <Text style={styles.statText}>{item.age}y</Text>
+                <Text style={styles.statText}>{formatAgeShort(item, t)}</Text>
               </View>
               <View style={styles.statPill}>
                 <Ionicons name="fitness-outline" size={10} color={colors.textSecondary} />
@@ -182,7 +198,9 @@ export default function DogsScreen() {
             {stats && <Text style={styles.levelXp}>{stats.xp} XP</Text>}
           </View>
 
-          {/* Action buttons row */}
+          {/* Action buttons row. Use numberOfLines + adjustsFontSizeToFit on
+              the labels so long translations (e.g. "Ver cursos" in ES) don't
+              spill outside the pill background when the card is narrow. */}
           <View style={styles.actionsRow}>
             <TouchableOpacity
               style={styles.actionBtn}
@@ -190,7 +208,14 @@ export default function DogsScreen() {
               onPress={() => router.push(`/(shared)/courses?dogId=${item.id}&dogName=${encodeURIComponent(item.name)}`)}
             >
               <Ionicons name="school-outline" size={13} color={colors.primary} />
-              <Text style={styles.actionBtnText}>{t('dogs.viewCourses')}</Text>
+              <Text
+                style={styles.actionBtnText}
+                numberOfLines={1}
+                adjustsFontSizeToFit
+                minimumFontScale={0.75}
+              >
+                {t('dogs.viewCourses')}
+              </Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.actionBtn, styles.healthBtn]}
@@ -198,7 +223,14 @@ export default function DogsScreen() {
               onPress={() => router.push(`/(shared)/dog-health/${item.id}?dogName=${encodeURIComponent(item.name)}`)}
             >
               <Ionicons name="medkit-outline" size={13} color="#EF4444" />
-              <Text style={[styles.actionBtnText, { color: '#EF4444' }]}>{t('health.shortLabel')}</Text>
+              <Text
+                style={[styles.actionBtnText, { color: '#EF4444' }]}
+                numberOfLines={1}
+                adjustsFontSizeToFit
+                minimumFontScale={0.75}
+              >
+                {t('health.shortLabel')}
+              </Text>
             </TouchableOpacity>
           </View>
 
@@ -323,10 +355,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  // Card
-  cardWrapper: {
-    width: CARD_WIDTH,
-  },
+  // Card. `width` and `photoContainer.height` are applied inline at render
+  // time using `useWindowDimensions` so the layout adapts to rotation /
+  // foldables / Android XR (Iter 8.2.5.3).
+  cardWrapper: {},
   card: {
     backgroundColor: colors.background,
     borderRadius: borderRadius.xl,
@@ -335,7 +367,6 @@ const styles = StyleSheet.create({
   },
   photoContainer: {
     width: '100%',
-    height: CARD_WIDTH * 0.9,
     position: 'relative',
   },
   dogPhoto: {
@@ -464,6 +495,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 4,
     paddingVertical: spacing.sm,
+    // Horizontal padding prevents long labels from touching the pill's
+    // rounded edges — without it "Ver cursos" reads as if it overflows.
+    paddingHorizontal: spacing.sm,
     borderRadius: borderRadius.full,
     backgroundColor: colors.primary + '12',
     borderWidth: 1,
@@ -474,25 +508,6 @@ const styles = StyleSheet.create({
     borderColor: '#EF4444' + '30',
   },
   actionBtnText: {
-    fontSize: 11,
-    fontWeight: '700',
-    color: colors.primary,
-  },
-  // Legacy single-button styles (kept for compat if referenced elsewhere)
-  coursesBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 4,
-    marginHorizontal: spacing.md,
-    marginBottom: spacing.sm,
-    paddingVertical: spacing.sm,
-    borderRadius: borderRadius.full,
-    backgroundColor: colors.primary + '12',
-    borderWidth: 1,
-    borderColor: colors.primary + '30',
-  },
-  coursesBtnText: {
     fontSize: 11,
     fontWeight: '700',
     color: colors.primary,

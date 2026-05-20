@@ -21,6 +21,7 @@ import { pickAndUploadImage } from '../../src/utils/photo';
 import { Button, Input } from '../../src/components/ui';
 import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 import { Dog, DogSex, DogIssue } from '../../src/types';
+import { formatDateInput, ddmmyyyyToISO, isoToDDMMYYYY } from '../../src/utils/dateInput';
 
 const ALL_ISSUES: DogIssue[] = [
   'aggression', 'anxiety', 'barking', 'pulling', 'fearful', 'destructive', 'other',
@@ -41,7 +42,12 @@ export default function DogFormScreen() {
   // Form fields
   const [name, setName] = useState('');
   const [breed, setBreed] = useState('');
+  /** Whole-years input (legacy). Kept as fallback for editing dogs that
+   *  pre-date the `birthdate` field. New dogs use `birthdate` exclusively. */
   const [age, setAge] = useState('');
+  /** DD/MM/YYYY masked input for birthdate (new in Iter 8.1). Empty when
+   *  editing a legacy dog without `birthdate` — user can fill it later. */
+  const [birthdateDisplay, setBirthdateDisplay] = useState('');
   const [weight, setWeight] = useState('');
   const [sex, setSex] = useState<DogSex>('male');
   const [behavior, setBehavior] = useState('');
@@ -67,8 +73,27 @@ export default function DogFormScreen() {
     else if (trimBreed.length < 2) newErrors.breed = t('dogs.validation.breedTooShort');
     else if (trimBreed.length > 50) newErrors.breed = t('dogs.validation.breedTooLong');
 
-    if (age === '') newErrors.age = t('dogs.validation.ageRequired');
-    else if (!Number.isInteger(ageNum) || ageNum < 0 || ageNum > 30) newErrors.age = t('dogs.validation.ageInvalid');
+    // Birthdate is required on create. On edit, allow falling back to the
+    // legacy whole-years input so users with pre-Iter-8 dogs don't get
+    // blocked from saving a quick weight/photo change.
+    if (birthdateDisplay) {
+      const iso = ddmmyyyyToISO(birthdateDisplay);
+      const birth = new Date(iso);
+      const now = new Date();
+      if (!iso || Number.isNaN(birth.getTime())) {
+        newErrors.birthdate = t('dogs.validation.birthdateInvalid');
+      } else if (birth > now) {
+        newErrors.birthdate = t('dogs.validation.birthdateFuture');
+      } else if (now.getFullYear() - birth.getFullYear() > 30) {
+        newErrors.birthdate = t('dogs.validation.birthdateTooOld');
+      }
+    } else if (!isEditing) {
+      newErrors.birthdate = t('dogs.validation.birthdateRequired');
+    } else if (age === '') {
+      newErrors.age = t('dogs.validation.ageRequired');
+    } else if (!Number.isInteger(ageNum) || ageNum < 0 || ageNum > 30) {
+      newErrors.age = t('dogs.validation.ageInvalid');
+    }
 
     if (weight === '') newErrors.weight = t('dogs.validation.weightRequired');
     else if (isNaN(weightNum) || weightNum < 0.5 || weightNum > 120) newErrors.weight = t('dogs.validation.weightInvalid');
@@ -102,6 +127,7 @@ export default function DogFormScreen() {
             setName(data.name);
             setBreed(data.breed);
             setAge(String(data.age));
+            setBirthdateDisplay(isoToDDMMYYYY(data.birthdate));
             setWeight(String(data.weight));
             setSex(data.sex);
             setBehavior(data.behavior);
@@ -142,10 +168,15 @@ export default function DogFormScreen() {
     if (!firebaseUser) return;
     if (!validate()) return;
 
+    const isoBirthdate = birthdateDisplay ? ddmmyyyyToISO(birthdateDisplay) : null;
     const formData: DogFormData = {
       name: name.trim(),
       breed: breed.trim(),
-      age: Number(age),
+      // Legacy `age` is still written for backwards compatibility. When
+      // birthdate is set, the service derives age from it (overriding this
+      // value). When it isn't (legacy edits), this value is used as-is.
+      age: Number(age) || 0,
+      birthdate: isoBirthdate,
       weight: Number(weight),
       sex,
       behavior: behavior.trim(),
@@ -240,18 +271,30 @@ export default function DogFormScreen() {
           </View>
         )}
 
-        {/* Age & Weight row */}
+        {/* Birthdate & Weight row.
+            Birthdate is the canonical age source (Iter 8.1). We only show
+            the legacy `age` (years) input as a fallback when editing a
+            pre-existing dog that has no `birthdate` yet AND the user
+            hasn't typed a new birthdate in this session — that way the
+            user can still hit Save without being forced to look up an
+            exact date for an older dog. */}
         <View style={styles.row}>
           <View style={styles.halfField}>
             <Input
-              label={t('dogs.age')}
-              value={age}
-              onChangeText={(v) => { setAge(v); setErrors((e) => ({ ...e, age: '' })); }}
-              keyboardType="numeric"
-              placeholder="3"
-              maxLength={2}
+              label={t('dogs.birthdate')}
+              value={birthdateDisplay}
+              onChangeText={(v) => {
+                setBirthdateDisplay(formatDateInput(v));
+                setErrors((e) => ({ ...e, birthdate: '', age: '' }));
+              }}
+              placeholder="DD/MM/YYYY"
+              keyboardType="number-pad"
+              maxLength={10}
             />
-            {!!errors.age && <Text style={styles.errorText}>{errors.age}</Text>}
+            {!!errors.birthdate && <Text style={styles.errorText}>{errors.birthdate}</Text>}
+            {isEditing && !birthdateDisplay && (
+              <Text style={styles.helperText}>{t('dogs.birthdateLegacyHint')}</Text>
+            )}
           </View>
           <View style={styles.halfField}>
             <Input
@@ -265,6 +308,22 @@ export default function DogFormScreen() {
             {!!errors.weight && <Text style={styles.errorText}>{errors.weight}</Text>}
           </View>
         </View>
+
+        {/* Legacy years input — only when editing a dog that has no
+            birthdate yet. Hidden completely on create. */}
+        {isEditing && !birthdateDisplay && (
+          <Input
+            label={t('dogs.ageLegacy')}
+            value={age}
+            onChangeText={(v) => { setAge(v); setErrors((e) => ({ ...e, age: '' })); }}
+            keyboardType="numeric"
+            placeholder="3"
+            maxLength={2}
+          />
+        )}
+        {isEditing && !birthdateDisplay && !!errors.age && (
+          <Text style={styles.errorText}>{errors.age}</Text>
+        )}
 
         {/* Sex */}
         <Text style={styles.label}>{t('dogs.sex')}</Text>
@@ -390,6 +449,14 @@ const styles = StyleSheet.create({
     marginTop: -spacing.sm,
     marginBottom: spacing.sm,
     marginLeft: 2,
+  },
+  helperText: {
+    fontSize: fontSize.xs,
+    color: colors.textSecondary,
+    marginTop: -spacing.sm,
+    marginBottom: spacing.sm,
+    marginLeft: 2,
+    fontStyle: 'italic',
   },
   aiBreedBtn: {
     flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-start',

@@ -56,6 +56,16 @@ export interface User {
      *  same flag locally for cold-start gating; this one is the source of
      *  truth across reinstalls. */
     onboardingCompleted?: boolean;
+    /** Owner-only. Captured in the `parent-type` screen right after
+     *  complete-profile. Drives copy, tutorial steps, and the daily plan
+     *  emphasis. `'puppy'` = strict <12mo focus; `'adult'` = generic;
+     *  `'considering'` = adoption interest. Missing => treated as `'adult'`
+     *  (legacy users keep working without forced re-onboarding). */
+    parentType?: 'puppy' | 'adult' | 'considering';
+    /** Owner-only. True once the mandatory tutorial has been completed.
+     *  Triggers auto-start of the copilot tour on first owner home paint
+     *  when false / undefined. Replay-able from settings. */
+    tutorialCompleted?: boolean;
   };
   /** When the user signed up using a referral code, this stores the referrer's
    *  `displayId`. Append-only — set during register, never edited. */
@@ -617,7 +627,15 @@ export interface Dog {
   name: string;
   photoURL: string | null;
   breed: string;
+  /** Whole years old. Kept for backwards compatibility with dogs created
+   *  before `birthdate` was added — readers should prefer `getAgeMonths(dog)`
+   *  from `src/utils/dogAge.ts` which derives a more precise value from
+   *  `birthdate` when present. */
   age: number;
+  /** ISO `YYYY-MM-DD`. Optional because legacy dogs don't have it. When set,
+   *  drives the puppy / adult logic (`isPuppy` = age < 12 months) and the
+   *  human-friendly age display ("8 meses" vs "2 años"). */
+  birthdate?: string | null;
   weight: number;          // current weight (mirrors last entry of weights[])
   weights?: WeightEntry[]; // historical record, sorted ascending by date
   sex: DogSex;

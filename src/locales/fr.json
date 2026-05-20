@@ -3745,6 +3745,9 @@
     "name": "Nom",
     "breed": "Race",
     "age": "Âge (années)",
+    "ageLegacy": "Âge en années (sans date exacte)",
+    "birthdate": "Date de naissance",
+    "birthdateLegacyHint": "Ajoute-la quand tu connais la date exacte pour que le plan corresponde à son âge réel.",
     "weight": "Poids (kg)",
     "sex": "Sexe",
     "male": "Mâle",
@@ -3778,6 +3781,10 @@
       "breedTooLong": "La race ne peut pas dépasser 50 caractères",
       "ageRequired": "L'âge est obligatoire",
       "ageInvalid": "L'âge doit être compris entre 0 et 30 ans",
+      "birthdateRequired": "La date de naissance est obligatoire",
+      "birthdateInvalid": "Date non valide. Utilise le format JJ/MM/AAAA",
+      "birthdateFuture": "La date ne peut pas être future",
+      "birthdateTooOld": "La date est trop ancienne",
       "weightRequired": "Le poids est obligatoire",
       "weightInvalid": "Le poids doit être compris entre 0,5 et 120 kg",
       "behaviorTooLong": "La description du comportement ne peut pas dépasser 300 caractères"
@@ -4110,24 +4117,24 @@
     "next": "Suivant",
     "start": "Commencer",
     "slide1": {
-      "title": "Trouvez le pro idéal",
-      "subtitle": "Éducateurs et pet sitters près de chez vous, avec avis et tarifs clairs."
+      "title": "Ton chiot, entre de bonnes mains",
+      "subtitle": "Une app pensée pour les 12 premiers mois — ceux qui marquent le reste de sa vie."
     },
     "slide2": {
-      "title": "Réservez en un instant",
-      "subtitle": "Choisissez un jour et une heure. Paiement direct par Bizum ou espèces, sans frais."
+      "title": "Un plan quotidien adapté à son âge",
+      "subtitle": "Tu sais exactement quoi faire aujourd'hui : socialisation, repos, mordillements, premières balades."
     },
     "slide3": {
-      "title": "Suivez la prestation en direct",
-      "subtitle": "Carte en temps réel et photos de la balade ou du séjour de votre chien."
+      "title": "Des cours courts pas à pas",
+      "subtitle": "Assis, rappel, marche en laisse. 5 minutes par jour suffisent pour bien commencer."
     },
     "slide4": {
-      "title": "Récompenses & communauté",
-      "subtitle": "Pièces, défis, cours et photos à chaque progrès de votre toutou."
+      "title": "Vaccins, poids et vétérinaire",
+      "subtitle": "Calendrier des vaccins, suivi du poids et courbe de croissance — tout au même endroit."
     },
     "slide5": {
-      "title": "Commencez maintenant",
-      "subtitle": "Créez un compte ou connectez-vous pour découvrir tout ce que Dogly Train propose."
+      "title": "Des pros quand tu en as besoin",
+      "subtitle": "Éducateurs et pet sitters près de chez toi, vérifiés et avec de vrais avis."
     }
   },
   "clicker": {
@@ -4408,6 +4415,12 @@
       "exercises": "• Kong congelé : remplissez avec pâté, nourriture humide et eau, congelez. Occupe 30-60 min. • Tapis de fouille : cachez sa ration. • Boîte en carton avec friandises emballées : stimulation brutale. • Os de légume congelé : carotte. • Nouveaux jouets tournants tous les 3-4 jours.",
       "whenToSeekHelp": "Si le chien détruit seul (anxiété de séparation probable), avale des objets dangereux (risque vital), s'auto-mutile (léchage excessif), ou le problème persiste après 2 mois d'enrichissement environnemental adéquat."
     }
+  },
+  "puppy": {
+    "monthSingular": "{{count}} mois",
+    "monthsPlural": "{{count}} mois",
+    "yearSingular": "{{count}} an",
+    "yearsPlural": "{{count}} ans"
   },
   "daily": {
     "goodMorning": "Bonjour ! 🌅",

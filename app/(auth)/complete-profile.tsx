@@ -20,6 +20,7 @@ import { createUserProfile, signOut } from '../../src/services/auth';
 import { Button, Input } from '../../src/components/ui';
 import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 import { UserRole } from '../../src/types';
+import { formatDateInput, ddmmyyyyToISO } from '../../src/utils/dateInput';
 
 type Step = 'role' | 'profile';
 
@@ -43,19 +44,6 @@ export default function CompleteProfileScreen() {
   const [gender, setGender] = useState<'female' | 'male' | 'unspecified'>('unspecified');
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [acceptPrivacy, setAcceptPrivacy] = useState(false);
-
-  const formatDateInput = (raw: string): string => {
-    const digits = raw.replace(/\D/g, '').slice(0, 8);
-    if (digits.length <= 2) return digits;
-    if (digits.length <= 4) return `${digits.slice(0, 2)}/${digits.slice(2)}`;
-    return `${digits.slice(0, 2)}/${digits.slice(2, 4)}/${digits.slice(4)}`;
-  };
-
-  const ddmmyyyyToISO = (display: string): string => {
-    const parts = display.split('/');
-    if (parts.length !== 3 || parts[2].length !== 4) return '';
-    return `${parts[2]}-${parts[1]}-${parts[0]}`;
-  };
 
   const validateAge = (dob: string): boolean => {
     const iso = ddmmyyyyToISO(dob);

@@ -230,7 +230,7 @@ export default function OwnerHomeScreen() {
   // ── Trainer card ──────────────────────────────────────────────────────────────
 
   const renderTrainerCard = ({ item }: { item: TrainerSearchResult }) => {
-    const isBoosted = isBoostActive(item.boostedUntil as any);
+    const isBoosted = isBoostActive(item.boostedUntil);
     const hasLocation = item.distanceKm > 0 || item.city;
     const currency = item.currency === 'EUR' ? '€' : item.currency === 'USD' ? '$' : item.currency;
 
@@ -253,7 +253,7 @@ export default function OwnerHomeScreen() {
             <View style={styles.cardInfo}>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
                 <Text style={styles.trainerName} numberOfLines={1}>{item.displayName}</Text>
-                <VerifiedBadge visible={(item as any).verified === true} size="sm" showLabel={false} />
+                <VerifiedBadge visible={item.verified === true} size="sm" showLabel={false} />
               </View>
 
               {/* Stats row */}
@@ -311,7 +311,7 @@ export default function OwnerHomeScreen() {
   // ── Caretaker card ────────────────────────────────────────────────────────────
 
   const renderCaretakerCard = ({ item }: { item: CaretakerSearchResult }) => {
-    const isBoosted = isBoostActive(item.boostedUntil as any);
+    const isBoosted = isBoostActive(item.boostedUntil);
     const hasLocation = item.distanceKm > 0 || item.city;
     const currency = item.currency === 'EUR' ? '€' : item.currency === 'USD' ? '$' : item.currency;
     const isBusiness = item.accountType === 'business';
@@ -340,7 +340,7 @@ export default function OwnerHomeScreen() {
                 {isBusiness && (
                   <Ionicons name="business" size={14} color={colors.secondary} />
                 )}
-                <VerifiedBadge visible={(item as any).verified === true} size="sm" showLabel={false} />
+                <VerifiedBadge visible={item.verified === true} size="sm" showLabel={false} />
               </View>
 
               {/* Stats row */}

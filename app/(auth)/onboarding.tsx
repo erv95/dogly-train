@@ -20,12 +20,18 @@ import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 
 const { width } = Dimensions.get('window');
 
+// Icons re-themed in Iter 8.2 to match the puppy-parent positioning:
+// (1) paw  = "your puppy in good hands"
+// (2) calendar = "daily plan that grows with them"
+// (3) school = "short courses"
+// (4) medkit = "vaccines, weight, vet"
+// (5) people = "pros when you need them"
 const SLIDES = [
-  { icon: 'search-outline' as const, tint: '#F5A62333', titleKey: 'onboarding.slide1.title', subtitleKey: 'onboarding.slide1.subtitle' },
+  { icon: 'paw' as const, tint: '#F5A62333', titleKey: 'onboarding.slide1.title', subtitleKey: 'onboarding.slide1.subtitle' },
   { icon: 'calendar-outline' as const, tint: '#2D9CDB33', titleKey: 'onboarding.slide2.title', subtitleKey: 'onboarding.slide2.subtitle' },
-  { icon: 'location-outline' as const, tint: '#10B98133', titleKey: 'onboarding.slide3.title', subtitleKey: 'onboarding.slide3.subtitle' },
-  { icon: 'sparkles-outline' as const, tint: '#FFD70033', titleKey: 'onboarding.slide4.title', subtitleKey: 'onboarding.slide4.subtitle' },
-  { icon: 'paw-outline' as const, tint: '#F5A62333', titleKey: 'onboarding.slide5.title', subtitleKey: 'onboarding.slide5.subtitle' },
+  { icon: 'school-outline' as const, tint: '#10B98133', titleKey: 'onboarding.slide3.title', subtitleKey: 'onboarding.slide3.subtitle' },
+  { icon: 'medkit-outline' as const, tint: '#FFD70033', titleKey: 'onboarding.slide4.title', subtitleKey: 'onboarding.slide4.subtitle' },
+  { icon: 'people-outline' as const, tint: '#F5A62333', titleKey: 'onboarding.slide5.title', subtitleKey: 'onboarding.slide5.subtitle' },
 ];
 
 export default function OnboardingScreen() {
