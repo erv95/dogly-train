@@ -54,7 +54,7 @@ export default function Index() {
         // until the user either restores or signs out.
         router.replace('/(auth)/account-pending');
       } else if (role === 'owner') {
-        router.replace('/(owner)/home');
+        router.replace('/(owner)/today');
       } else if (role === 'trainer') {
         router.replace('/(trainer)/dashboard');
       } else if (role === 'caretaker') {

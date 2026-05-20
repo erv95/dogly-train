@@ -259,6 +259,14 @@
   },
   "owner": {
     "home": "Inicio",
+    "todayTab": "Hoy",
+    "coursesTab": "Cursos",
+    "findProsTab": "Buscar Pros",
+    "todayTitle": "Hoy",
+    "todayNoDogTitle": "Añade a tu cachorro 🐶",
+    "todayNoDogBody": "Empieza el plan personalizado de los primeros 12 meses",
+    "todayNoDogCta": "Añadir cachorro",
+    "prosNearby": "Profesionales cerca de ti",
     "myDogs": "Mis perros",
     "chats": "Chats",
     "profile": "Perfil",
@@ -4422,6 +4430,40 @@
     "monthsPlural": "{{count}} meses",
     "yearSingular": "{{count}} año",
     "yearsPlural": "{{count}} años"
+  },
+  "empty": {
+    "dogs": {
+      "title": "Añade a tu cachorro 🐶",
+      "body": "Empieza el plan personalizado de los primeros 12 meses",
+      "cta": "Añadir cachorro"
+    },
+    "health": {
+      "title": "Aún no hay vacunas registradas",
+      "body": "El cachorro empieza la pauta vacunal a las 6 semanas. Anótalas para no perderte ninguna.",
+      "cta": "Añadir primera vacuna"
+    },
+    "weekly": {
+      "title": "Genera el plan de la semana",
+      "body": "Sugerimos 7 días de actividades adaptadas a la edad y comportamiento de tu cachorro.",
+      "cta": "Generar plan"
+    }
+  },
+  "parentType": {
+    "title": "Cuéntanos sobre tu perro",
+    "subtitle": "Adaptamos la app a lo que necesitas hoy. Puedes cambiarlo más tarde en Ajustes.",
+    "continue": "Continuar",
+    "puppy": {
+      "title": "Tengo un cachorro",
+      "desc": "Menos de 12 meses — el momento clave de su educación"
+    },
+    "adult": {
+      "title": "Tengo un perro adulto",
+      "desc": "Más de 12 meses, ya con rutinas establecidas"
+    },
+    "considering": {
+      "title": "Estoy pensando en adoptar",
+      "desc": "Aún no tengo perro, me estoy informando"
+    }
   },
   "daily": {
     "goodMorning": "¡Buenos días! 🌅",

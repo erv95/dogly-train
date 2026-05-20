@@ -259,6 +259,14 @@
   },
   "owner": {
     "home": "Start",
+    "todayTab": "Heute",
+    "coursesTab": "Kurse",
+    "findProsTab": "Profis",
+    "todayTitle": "Heute",
+    "todayNoDogTitle": "Welpen hinzufügen 🐶",
+    "todayNoDogBody": "Starte den personalisierten Plan für die ersten 12 Monate",
+    "todayNoDogCta": "Welpen hinzufügen",
+    "prosNearby": "Profis in deiner Nähe",
     "myDogs": "Meine Hunde",
     "chats": "Chats",
     "profile": "Profil",
@@ -4421,6 +4429,40 @@
     "monthsPlural": "{{count}} Monate",
     "yearSingular": "{{count}} Jahr",
     "yearsPlural": "{{count}} Jahre"
+  },
+  "empty": {
+    "dogs": {
+      "title": "Welpen hinzufügen 🐶",
+      "body": "Starte den personalisierten Plan für die ersten 12 Monate",
+      "cta": "Welpen hinzufügen"
+    },
+    "health": {
+      "title": "Noch keine Impfungen erfasst",
+      "body": "Welpen starten die Impfungen um die 6. Woche. Trage sie ein, damit dir keine entgeht.",
+      "cta": "Erste Impfung eintragen"
+    },
+    "weekly": {
+      "title": "Wochenplan erstellen",
+      "body": "Wir schlagen 7 Tage Aktivitäten vor, abgestimmt auf Alter und Verhalten deines Welpen.",
+      "cta": "Plan erstellen"
+    }
+  },
+  "parentType": {
+    "title": "Erzähl uns von deinem Hund",
+    "subtitle": "Wir passen die App an, was du heute brauchst. Du kannst es später in den Einstellungen ändern.",
+    "continue": "Weiter",
+    "puppy": {
+      "title": "Ich habe einen Welpen",
+      "desc": "Unter 12 Monate — die wichtigste Lernphase"
+    },
+    "adult": {
+      "title": "Ich habe einen erwachsenen Hund",
+      "desc": "Über 12 Monate, schon mit festen Routinen"
+    },
+    "considering": {
+      "title": "Ich überlege zu adoptieren",
+      "desc": "Noch keinen Hund, ich informiere mich"
+    }
   },
   "daily": {
     "goodMorning": "Guten Morgen! 🌅",

@@ -259,6 +259,14 @@
   },
   "owner": {
     "home": "Home",
+    "todayTab": "Today",
+    "coursesTab": "Courses",
+    "findProsTab": "Find Pros",
+    "todayTitle": "Today",
+    "todayNoDogTitle": "Add your puppy 🐶",
+    "todayNoDogBody": "Start the personalised plan for the first 12 months",
+    "todayNoDogCta": "Add puppy",
+    "prosNearby": "Pros near you",
     "myDogs": "My dogs",
     "chats": "Chats",
     "profile": "Profile",
@@ -4421,6 +4429,40 @@
     "monthsPlural": "{{count}} months",
     "yearSingular": "{{count}} year",
     "yearsPlural": "{{count}} years"
+  },
+  "empty": {
+    "dogs": {
+      "title": "Add your puppy 🐶",
+      "body": "Start the personalised plan for the first 12 months",
+      "cta": "Add puppy"
+    },
+    "health": {
+      "title": "No vaccines recorded yet",
+      "body": "Puppies start vaccinations around 6 weeks. Log them so you don't miss any.",
+      "cta": "Add first vaccine"
+    },
+    "weekly": {
+      "title": "Generate this week's plan",
+      "body": "We'll suggest 7 days of activities matched to your puppy's age and behaviour.",
+      "cta": "Generate plan"
+    }
+  },
+  "parentType": {
+    "title": "Tell us about your dog",
+    "subtitle": "We'll tailor the app to what you need today. You can change this later in Settings.",
+    "continue": "Continue",
+    "puppy": {
+      "title": "I have a puppy",
+      "desc": "Less than 12 months — the most important learning window"
+    },
+    "adult": {
+      "title": "I have an adult dog",
+      "desc": "Over 12 months, routines already in place"
+    },
+    "considering": {
+      "title": "I'm thinking of adopting",
+      "desc": "No dog yet, just doing my homework"
+    }
   },
   "daily": {
     "goodMorning": "Good morning! 🌅",

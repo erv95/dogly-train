@@ -259,6 +259,14 @@
   },
   "owner": {
     "home": "Início",
+    "todayTab": "Hoje",
+    "coursesTab": "Cursos",
+    "findProsTab": "Profissionais",
+    "todayTitle": "Hoje",
+    "todayNoDogTitle": "Adiciona o teu cachorro 🐶",
+    "todayNoDogBody": "Começa o plano personalizado dos primeiros 12 meses",
+    "todayNoDogCta": "Adicionar cachorro",
+    "prosNearby": "Profissionais perto de ti",
     "myDogs": "Meus cães",
     "chats": "Conversas",
     "profile": "Perfil",
@@ -4422,6 +4430,40 @@
     "monthsPlural": "{{count}} meses",
     "yearSingular": "{{count}} ano",
     "yearsPlural": "{{count}} anos"
+  },
+  "empty": {
+    "dogs": {
+      "title": "Adiciona o teu cachorro 🐶",
+      "body": "Começa o plano personalizado dos primeiros 12 meses",
+      "cta": "Adicionar cachorro"
+    },
+    "health": {
+      "title": "Sem vacinas registadas ainda",
+      "body": "O cachorro começa o plano de vacinação às 6 semanas. Regista-as para não te esqueceres de nenhuma.",
+      "cta": "Adicionar primeira vacina"
+    },
+    "weekly": {
+      "title": "Gera o plano da semana",
+      "body": "Sugerimos 7 dias de atividades adaptadas à idade e comportamento do teu cachorro.",
+      "cta": "Gerar plano"
+    }
+  },
+  "parentType": {
+    "title": "Conta-nos sobre o teu cão",
+    "subtitle": "Adaptamos a app ao que precisas hoje. Podes mudar depois nas Definições.",
+    "continue": "Continuar",
+    "puppy": {
+      "title": "Tenho um cachorro",
+      "desc": "Menos de 12 meses — a fase mais importante da educação"
+    },
+    "adult": {
+      "title": "Tenho um cão adulto",
+      "desc": "Mais de 12 meses, com rotinas já estabelecidas"
+    },
+    "considering": {
+      "title": "Estou a pensar em adotar",
+      "desc": "Ainda não tenho cão, estou a informar-me"
+    }
   },
   "daily": {
     "goodMorning": "Bom dia! 🌅",

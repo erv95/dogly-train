@@ -259,6 +259,14 @@
   },
   "owner": {
     "home": "Accueil",
+    "todayTab": "Aujourd'hui",
+    "coursesTab": "Cours",
+    "findProsTab": "Pros",
+    "todayTitle": "Aujourd'hui",
+    "todayNoDogTitle": "Ajoute ton chiot 🐶",
+    "todayNoDogBody": "Commence le plan personnalisé des 12 premiers mois",
+    "todayNoDogCta": "Ajouter le chiot",
+    "prosNearby": "Pros près de toi",
     "myDogs": "Mes chiens",
     "chats": "Messages",
     "profile": "Profil",
@@ -4421,6 +4429,40 @@
     "monthsPlural": "{{count}} mois",
     "yearSingular": "{{count}} an",
     "yearsPlural": "{{count}} ans"
+  },
+  "empty": {
+    "dogs": {
+      "title": "Ajoute ton chiot 🐶",
+      "body": "Commence le plan personnalisé des 12 premiers mois",
+      "cta": "Ajouter le chiot"
+    },
+    "health": {
+      "title": "Aucun vaccin enregistré",
+      "body": "Le chiot commence les vaccins vers 6 semaines. Note-les pour ne rien manquer.",
+      "cta": "Ajouter le premier vaccin"
+    },
+    "weekly": {
+      "title": "Génère le plan de la semaine",
+      "body": "Nous proposons 7 jours d'activités adaptées à l'âge et au comportement de ton chiot.",
+      "cta": "Générer le plan"
+    }
+  },
+  "parentType": {
+    "title": "Parle-nous de ton chien",
+    "subtitle": "Nous adaptons l'app à tes besoins actuels. Tu peux changer plus tard dans les Paramètres.",
+    "continue": "Continuer",
+    "puppy": {
+      "title": "J'ai un chiot",
+      "desc": "Moins de 12 mois — la fenêtre d'apprentissage la plus importante"
+    },
+    "adult": {
+      "title": "J'ai un chien adulte",
+      "desc": "Plus de 12 mois, avec ses habitudes déjà bien installées"
+    },
+    "considering": {
+      "title": "Je pense en adopter un",
+      "desc": "Pas encore de chien, je me renseigne"
+    }
   },
   "daily": {
     "goodMorning": "Bonjour ! 🌅",

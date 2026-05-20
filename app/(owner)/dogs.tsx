@@ -19,6 +19,7 @@ import { useAuth } from '../../src/contexts/AuthContext';
 import { getDogsByOwner, deleteDog } from '../../src/services/dogs';
 import { getDogStats, getLevelInfo, DogStats } from '../../src/services/dogStats';
 import { DogCardSkeleton } from '../../src/components/skeletons';
+import EmptyHint from '../../src/components/EmptyHint';
 import { colors, spacing, fontSize, borderRadius, shadow } from '../../src/theme';
 import { Dog } from '../../src/types';
 import { formatAgeShort } from '../../src/utils/dogAge';
@@ -242,17 +243,14 @@ export default function DogsScreen() {
   };
 
   const renderEmpty = () => (
-    <View style={styles.emptyContainer}>
-      <View style={styles.emptyIconCircle}>
-        <Ionicons name="paw-outline" size={48} color={colors.primary} />
-      </View>
-      <Text style={styles.emptyTitle}>{t('dogs.noDogs')}</Text>
-      <Text style={styles.emptySubtitle}>{t('dogs.addDog')}</Text>
-      <TouchableOpacity style={styles.emptyBtn} onPress={() => router.push('/(shared)/dog-form')}>
-        <Ionicons name="add" size={18} color={colors.textOnPrimary} />
-        <Text style={styles.emptyBtnText}>{t('dogs.addDog')}</Text>
-      </TouchableOpacity>
-    </View>
+    <EmptyHint
+      icon="paw"
+      variant="puppy"
+      title={t('empty.dogs.title')}
+      body={t('empty.dogs.body')}
+      ctaLabel={t('empty.dogs.cta')}
+      onCta={() => router.push('/(shared)/dog-form')}
+    />
   );
 
   return (

@@ -97,9 +97,14 @@ export default function CompleteProfileScreen() {
       // (e.g. background→foreground), creating an infinite loop that survives
       // app restarts. Mirrors the pattern in account-pending.tsx (handleRestore).
       setUserData(created);
-      // Route through '/' so the index gate makes the final routing decision
-      // based on the (now populated) userData — single source of truth.
-      router.replace('/');
+      // New owners go through the parent-type capture screen before landing
+      // on the dashboard (Iter 8.4). Trainers / caretakers skip straight to
+      // their dashboard — the puppy-mode question is irrelevant to them.
+      if (role === 'owner') {
+        router.replace('/(auth)/parent-type');
+      } else {
+        router.replace('/');
+      }
     } catch (error: any) {
       Alert.alert(t('common.error'), error.message || t('authErrors.generic'));
     } finally {

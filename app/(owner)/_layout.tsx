@@ -38,12 +38,15 @@ export default function OwnerLayout() {
         tabBarItemStyle: { paddingVertical: 8 },
       }}
     >
+      {/* Order matters: first Tabs.Screen is the default landing tab for
+          owners. Iter 8.3 places `today` (puppy daily plan) first so new
+          puppy parents land on their plan, not the marketplace. */}
       <Tabs.Screen
-        name="home"
+        name="today"
         options={{
-          title: t('owner.home'),
+          title: t('owner.todayTab'),
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="search" size={size} color={color} />
+            <Ionicons name="sunny-outline" size={size} color={color} />
           ),
         }}
       />
@@ -57,11 +60,20 @@ export default function OwnerLayout() {
         }}
       />
       <Tabs.Screen
-        name="bookings"
+        name="courses"
         options={{
-          title: t('bookings.list.title'),
+          title: t('owner.coursesTab'),
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="calendar" size={size} color={color} />
+            <Ionicons name="school" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="home"
+        options={{
+          title: t('owner.findProsTab'),
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="search" size={size} color={color} />
           ),
         }}
       />
@@ -77,12 +89,6 @@ export default function OwnerLayout() {
         }}
       />
       <Tabs.Screen
-        name="courses"
-        options={{
-          href: null,
-        }}
-      />
-      <Tabs.Screen
         name="profile"
         options={{
           title: t('owner.profile'),
@@ -90,6 +96,13 @@ export default function OwnerLayout() {
             <Ionicons name="person" size={size} color={color} />
           ),
         }}
+      />
+      {/* Bookings moved off the tab bar (Iter 8.3). Still reachable via
+          profile.tsx "My bookings" button and via the upcoming-booking card
+          inside Today's DailyTipsRail. */}
+      <Tabs.Screen
+        name="bookings"
+        options={{ href: null }}
       />
     </Tabs>
       </View>

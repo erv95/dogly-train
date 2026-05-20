@@ -37,6 +37,14 @@ export function isPuppy(dog: DogAgeInputs): boolean {
   return getAgeMonths(dog) < 12;
 }
 
+/** Same logic as `isPuppy` but returns the enum tag we use in copy /
+ *  recommendation scoring. Computed, never stored on the doc — this way
+ *  the dog "graduates" automatically the day it turns 12 months without
+ *  needing a cron or a migration. */
+export function getLifecycle(dog: DogAgeInputs): 'puppy' | 'adult' {
+  return isPuppy(dog) ? 'puppy' : 'adult';
+}
+
 /** Short human-readable age string: "8 meses" / "2 años". Picks singular vs
  *  plural in code instead of relying on i18next pluralisation suffixes — the
  *  project runs with `compatibilityJSON: 'v3'`, which is incompatible with

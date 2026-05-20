@@ -48,7 +48,7 @@ export default function LoginScreen() {
     if (userData && role) {
       setLoading(false);
       setAwaitingAuth(false);
-      if (role === 'owner') router.replace('/(owner)/home');
+      if (role === 'owner') router.replace('/(owner)/today');
       else if (role === 'trainer') router.replace('/(trainer)/dashboard');
       else if (role === 'caretaker') router.replace('/(caretaker)/dashboard');
       return;

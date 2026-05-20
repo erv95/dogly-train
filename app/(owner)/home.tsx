@@ -30,14 +30,14 @@ import {
   DEFAULT_CARETAKER_FILTERS,
   getMinPrice,
 } from '../../src/services/caretakers';
-import { CaretakerService, Dog } from '../../src/types';
+import { CaretakerService } from '../../src/types';
 import { Avatar, StarRating } from '../../src/components/ui';
 import { TrainerCardSkeleton } from '../../src/components/skeletons';
 import { CoinBalancePill } from '../../src/components/CoinBalancePill';
 import { VerifiedBadge } from '../../src/components/VerifiedBadge';
 import { useAuth } from '../../src/contexts/AuthContext';
-import { getDogsByOwner } from '../../src/services/dogs';
-import DailyTipsRail from '../../src/components/DailyTipsRail';
+// DailyTipsRail moved to app/(owner)/today.tsx in Iter 8.3. The dogs
+// fetch and its state were also retired from this screen.
 import { colors, spacing, fontSize, borderRadius, shadow, fontFamily } from '../../src/theme';
 import { isBoostActive } from '../../src/utils/boost';
 
@@ -63,10 +63,6 @@ export default function OwnerHomeScreen() {
 
   // Active tab (trainers vs caretakers)
   const [activeTab, setActiveTab] = useState<ActiveTab>('trainers');
-
-  // User's dogs (for the daily-tips rail)
-  const [dogs, setDogs] = useState<Dog[]>([]);
-  const [selectedDogId, setSelectedDogId] = useState<string | null>(null);
 
   const [trainers, setTrainers] = useState<TrainerSearchResult[]>([]);
   const [caretakers, setCaretakers] = useState<CaretakerSearchResult[]>([]);
@@ -165,20 +161,6 @@ export default function OwnerHomeScreen() {
       loadTrainers(coords, filters);
     })();
   }, []);
-
-  // Load user's dogs in parallel for the daily-tips rail
-  useEffect(() => {
-    if (!firebaseUser?.uid) return;
-    let cancelled = false;
-    getDogsByOwner(firebaseUser.uid)
-      .then((list) => {
-        if (cancelled) return;
-        setDogs(list);
-        if (list.length > 0 && !selectedDogId) setSelectedDogId(list[0].id);
-      })
-      .catch(() => { /* silent: rail just won't show */ });
-    return () => { cancelled = true; };
-  }, [firebaseUser?.uid]);
 
   // Track first run to avoid double-load on mount.
   // We intentionally only depend on activeTab here: re-running on filter changes
@@ -651,7 +633,7 @@ export default function OwnerHomeScreen() {
 
   // ── Render ────────────────────────────────────────────────────────────────────
 
-  const headerTitle = t('owner.home');
+  const headerTitle = t('owner.findProsTab');
   const currentList = activeTab === 'trainers' ? trainers : caretakers;
   const renderItem = activeTab === 'trainers' ? renderTrainerCard : renderCaretakerCard;
 
@@ -704,14 +686,8 @@ export default function OwnerHomeScreen() {
         </TouchableOpacity>
       </View>
 
-      {/* Plan de hoy — fixed below header, visible on both tabs */}
-      {selectedDogId && dogs.length > 0 && (
-        <DailyTipsRail
-          dog={dogs.find((d) => d.id === selectedDogId) ?? dogs[0]}
-          otherDogs={dogs.filter((d) => d.id !== selectedDogId)}
-          onChangeDog={setSelectedDogId}
-        />
-      )}
+      {/* DailyTipsRail moved to its own `today` tab in Iter 8.3 — this
+          screen is now the pure "Buscar Pros" marketplace view. */}
 
       {/* Tabs */}
       <View style={styles.tabsRow}>

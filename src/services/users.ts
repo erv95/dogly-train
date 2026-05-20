@@ -103,3 +103,27 @@ export async function updateUserProfile(
   }
   await updateDoc(doc(db, 'users', userId), patch);
 }
+
+/**
+ * Merge-patch a subset of `User.preferences` without overwriting other
+ * preference keys. Firestore's default `update` REPLACES nested objects,
+ * so we read the current preferences and merge in JS — slightly more
+ * expensive than a transaction but safe for single-user writes and
+ * avoids the dot-notation footgun (Firestore dot-notation only works
+ * with primitive nested values, not with TypeScript-typed sub-objects).
+ *
+ * Used by parent-type (Iter 8.4) and the tutorial completion flag (8.6).
+ */
+export async function updateUserPreferences(
+  userId: string,
+  patch: Partial<NonNullable<User['preferences']>>,
+): Promise<void> {
+  // Build dotted-path patch so we only touch the keys we care about and
+  // leave unrelated preference fields intact. Firestore accepts dotted
+  // paths in updateDoc for nested map updates.
+  const update: Record<string, unknown> = { updatedAt: Timestamp.now() };
+  for (const [k, v] of Object.entries(patch)) {
+    update[`preferences.${k}`] = v;
+  }
+  await updateDoc(doc(db, 'users', userId), update);
+}
