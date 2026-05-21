@@ -14,6 +14,7 @@ import {
   writeBatch,
 } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import * as Crypto from 'expo-crypto';
 import { auth, db, storage } from '../config/firebase';
 import { callCF } from '../utils/cfClient';
 import { LivePathPoint, LivePhoto, LiveSession } from '../types';
@@ -67,7 +68,12 @@ export async function uploadLivePhoto(
 ): Promise<LivePhoto> {
   const u = auth.currentUser;
   if (!u) throw new Error('unauthenticated');
-  const photoId = `${Date.now()}`;
+  // Crypto-random suffix prevents enumeration by anyone who knows the
+  // bookingId — a 13-digit Date.now() alone is enumerable in ~60k attempts
+  // per minute. 12 random bytes = 96 bits of entropy on top of the timestamp.
+  const randBytes = await Crypto.getRandomBytesAsync(12);
+  const randHex = Array.from(randBytes).map((b) => b.toString(16).padStart(2, '0')).join('');
+  const photoId = `${Date.now()}_${randHex}`;
   const path = `live-sessions/${bookingId}/${photoId}.jpg`;
   const response = await fetch(uri);
   const blob = await response.blob();
@@ -102,33 +108,47 @@ export function subscribeToLiveSession(
 
   const emit = () => cb({ session, path, photos });
 
-  const unsubSession = onSnapshot(
+  // Refs in closure scope so onError can tear down all three at once when
+  // the user loses access mid-session (booking cancelled, account banned).
+  // Without this, permission-denied retries silently forever.
+  let unsubSession: Unsubscribe | undefined;
+  let unsubPath: Unsubscribe | undefined;
+  let unsubPhotos: Unsubscribe | undefined;
+  const unsubAll = () => {
+    unsubSession?.(); unsubPath?.(); unsubPhotos?.();
+    unsubSession = unsubPath = unsubPhotos = undefined;
+  };
+  const onErr = (label: string) => (err: any) => {
+    if (err?.code === 'permission-denied') unsubAll();
+    console.warn(`liveSession listener error (${label}):`, err?.code ?? err?.message);
+  };
+
+  unsubSession = onSnapshot(
     doc(db, 'booking_live_sessions', bookingId),
     (snap) => {
       session = snap.exists() ? ({ id: snap.id, ...snap.data() } as LiveSession) : null;
       emit();
     },
+    onErr('session'),
   );
-  const unsubPath = onSnapshot(
+  unsubPath = onSnapshot(
     query(collection(db, 'booking_live_sessions', bookingId, 'path'), orderBy('recordedAt', 'asc')),
     (snap) => {
       path = snap.docs.map((d) => ({ id: d.id, ...d.data() } as LivePathPoint));
       emit();
     },
+    onErr('path'),
   );
-  const unsubPhotos = onSnapshot(
+  unsubPhotos = onSnapshot(
     query(collection(db, 'booking_live_sessions', bookingId, 'photos'), orderBy('takenAt', 'asc')),
     (snap) => {
       photos = snap.docs.map((d) => ({ id: d.id, ...d.data() } as LivePhoto));
       emit();
     },
+    onErr('photos'),
   );
 
-  return () => {
-    unsubSession();
-    unsubPath();
-    unsubPhotos();
-  };
+  return unsubAll;
 }
 
 export async function getLiveSessionOnce(bookingId: string): Promise<LiveSession | null> {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Modal, Animated } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Modal, Animated, useWindowDimensions } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { useCoachmark } from '../contexts/CoachmarkContext';
 import { colors, spacing, fontSize, borderRadius, fontFamily } from '../theme';
@@ -20,14 +20,16 @@ import { colors, spacing, fontSize, borderRadius, fontFamily } from '../theme';
  * "Next" advances; on the final step the label switches to "Finish".
  */
 
-const { width: SCREEN_W, height: SCREEN_H } = Dimensions.get('window');
 const TARGET_PADDING = 8;
 const TOOLTIP_MARGIN = 12;
-const TOOLTIP_WIDTH = Math.min(SCREEN_W - spacing.lg * 2, 340);
 
 export default function CoachmarkOverlay() {
   const { t } = useTranslation();
   const { active, steps, currentIndex, measureTarget, next } = useCoachmark();
+  // Recompute on every render so foldables / rotations / split-screen
+  // pick up the new dimensions immediately.
+  const { width: SCREEN_W, height: SCREEN_H } = useWindowDimensions();
+  const TOOLTIP_WIDTH = Math.min(SCREEN_W - spacing.lg * 2, 340);
   const [rect, setRect] = useState<{ x: number; y: number; width: number; height: number } | null>(null);
   const fade = useState(new Animated.Value(0))[0];
 

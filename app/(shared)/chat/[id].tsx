@@ -54,15 +54,19 @@ function formatMsgTime(timestamp: any): string {
   const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
   const now = new Date();
   const diffMs = now.getTime() - date.getTime();
-  const time = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  // App targets Spain — pin formatters to Europe/Madrid so users travelling
+  // across time zones still see chat timestamps in the locale they expect.
+  const TZ = { timeZone: 'Europe/Madrid' as const };
+  const time = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', ...TZ });
   // Same day → just time
-  if (date.toDateString() === now.toDateString()) return time;
+  const sameDay = date.toLocaleDateString([], TZ) === now.toLocaleDateString([], TZ);
+  if (sameDay) return time;
   // Within 7 days → weekday + time
   if (diffMs < 7 * 24 * 60 * 60 * 1000) {
-    return `${date.toLocaleDateString([], { weekday: 'short' })} ${time}`;
+    return `${date.toLocaleDateString([], { weekday: 'short', ...TZ })} ${time}`;
   }
   // Older → date + time
-  return `${date.toLocaleDateString([], { day: '2-digit', month: '2-digit' })} ${time}`;
+  return `${date.toLocaleDateString([], { day: '2-digit', month: '2-digit', ...TZ })} ${time}`;
 }
 
 function formatDuration(seconds: number): string {
@@ -377,6 +381,14 @@ export default function ChatDetailScreen() {
       quality: 0.8,
     });
     if (result.canceled || !result.assets[0]) return;
+    // Validate size BEFORE upload — Storage rule caps at 5 MB for images.
+    // Without this the upload starts, takes seconds, then 403s with a
+    // generic error. Better to refuse early with a clear message.
+    const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
+    if (result.assets[0].fileSize && result.assets[0].fileSize > MAX_IMAGE_BYTES) {
+      Alert.alert(t('common.error'), t('chat.fileTooLarge'));
+      return;
+    }
     setUploading(true);
     try {
       const path = `chat_media/${chat.id}/${firebaseUser.uid}/images/${Date.now()}.jpg`;
@@ -401,6 +413,12 @@ export default function ChatDetailScreen() {
     }
     const result = await ImagePicker.launchCameraAsync({ quality: 0.8 });
     if (result.canceled || !result.assets[0]) return;
+    // Same 5 MB cap as the gallery path — keeps Storage rule contract tight.
+    const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
+    if (result.assets[0].fileSize && result.assets[0].fileSize > MAX_IMAGE_BYTES) {
+      Alert.alert(t('common.error'), t('chat.fileTooLarge'));
+      return;
+    }
     setUploading(true);
     try {
       const path = `chat_media/${chat.id}/${firebaseUser.uid}/images/${Date.now()}.jpg`;
@@ -764,6 +782,8 @@ export default function ChatDetailScreen() {
                   onPress={() => playAudio(item.id, item.mediaURL!)}
                   activeOpacity={0.8}
                   style={[styles.playBtn, isMe ? styles.playBtnMe : styles.playBtnOther]}
+                  accessibilityRole="button"
+                  accessibilityLabel={t(isPlaying ? 'chat.a11y.pauseAudio' : 'chat.a11y.playAudio')}
                 >
                   <Ionicons
                     name={isPlaying ? 'pause' : 'play'}
@@ -878,19 +898,34 @@ export default function ChatDetailScreen() {
       {/* Attach menu popup */}
       {attachVisible && (
         <View style={styles.attachMenu}>
-          <TouchableOpacity style={styles.attachItem} onPress={handleCamera}>
+          <TouchableOpacity
+            style={styles.attachItem}
+            onPress={handleCamera}
+            accessibilityRole="button"
+            accessibilityLabel={t('chat.camera')}
+          >
             <View style={[styles.attachIcon, { backgroundColor: '#EF4444' }]}>
               <Ionicons name="camera-outline" size={22} color="#fff" />
             </View>
             <Text style={styles.attachLabel}>{t('chat.camera')}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.attachItem} onPress={handleGallery}>
+          <TouchableOpacity
+            style={styles.attachItem}
+            onPress={handleGallery}
+            accessibilityRole="button"
+            accessibilityLabel={t('chat.gallery')}
+          >
             <View style={[styles.attachIcon, { backgroundColor: '#8B5CF6' }]}>
               <Ionicons name="images-outline" size={22} color="#fff" />
             </View>
             <Text style={styles.attachLabel}>{t('chat.gallery')}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.attachItem} onPress={handleFile}>
+          <TouchableOpacity
+            style={styles.attachItem}
+            onPress={handleFile}
+            accessibilityRole="button"
+            accessibilityLabel={t('chat.file')}
+          >
             <View style={[styles.attachIcon, { backgroundColor: '#3B82F6' }]}>
               <Ionicons name="document-outline" size={22} color="#fff" />
             </View>
@@ -926,7 +961,12 @@ export default function ChatDetailScreen() {
               <View style={styles.recordingDot} />
               <Text style={styles.recordingTime}>{formatDuration(recordingSecs)}</Text>
               <Text style={styles.recordingHint}>{t('chat.recording')}</Text>
-              <TouchableOpacity onPress={stopRecording} style={styles.recordingStop}>
+              <TouchableOpacity
+                onPress={stopRecording}
+                style={styles.recordingStop}
+                accessibilityRole="button"
+                accessibilityLabel={t('chat.a11y.stopRecording')}
+              >
                 <Ionicons name="stop-circle" size={32} color={colors.error} />
               </TouchableOpacity>
             </View>
@@ -937,6 +977,8 @@ export default function ChatDetailScreen() {
                 <TouchableOpacity
                   style={styles.pillIconBtn}
                   onPress={toggleEmojiPicker}
+                  accessibilityRole="button"
+                  accessibilityLabel={t(emojiOpen ? 'chat.a11y.showKeyboard' : 'chat.a11y.showEmoji')}
                 >
                   <Ionicons
                     name={emojiOpen ? 'keypad-outline' : 'happy-outline'}
@@ -960,6 +1002,8 @@ export default function ChatDetailScreen() {
                 <TouchableOpacity
                   style={styles.pillIconBtn}
                   onPress={() => { Keyboard.dismiss(); setEmojiOpen(false); setAttachVisible((v) => !v); }}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('chat.a11y.attachment')}
                 >
                   <Ionicons
                     name={attachVisible ? 'close' : 'attach'}
@@ -970,7 +1014,12 @@ export default function ChatDetailScreen() {
                 </TouchableOpacity>
 
                 {!inputText.trim() && (
-                  <TouchableOpacity style={styles.pillIconBtn} onPress={handleCamera}>
+                  <TouchableOpacity
+                    style={styles.pillIconBtn}
+                    onPress={handleCamera}
+                    accessibilityRole="button"
+                    accessibilityLabel={t('chat.camera')}
+                  >
                     <Ionicons name="camera-outline" size={22} color={colors.textSecondary} />
                   </TouchableOpacity>
                 )}
@@ -982,6 +1031,8 @@ export default function ChatDetailScreen() {
                   style={[styles.actionCircle, isBusy && styles.actionCircleBusy]}
                   onPress={handleSend}
                   disabled={!inputText.trim() || isBusy}
+                  accessibilityRole="button"
+                  accessibilityLabel={t(isBusy ? 'chat.a11y.sending' : 'chat.a11y.send')}
                 >
                   {isBusy
                     ? <ActivityIndicator size="small" color="#fff" />
@@ -992,6 +1043,8 @@ export default function ChatDetailScreen() {
                   style={styles.actionCircle}
                   onPressIn={startRecording}
                   onPressOut={stopRecording}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('chat.a11y.recordAudio')}
                 >
                   <Ionicons name="mic" size={22} color="#fff" />
                 </TouchableOpacity>

@@ -13,17 +13,33 @@ export const XP_BY_DIFFICULTY: Record<string, number> = {
 
 // ── Course → difficulty (single source of truth) ──────────────────────────────
 // Used by both UI screens and the recompute/auto-heal logic so XP is canonical.
+// MUST stay in sync with the COURSES catalog in app/(shared)/courses.tsx — if
+// you add a course id there, add it here too or auto-heal will silently
+// truncate the user's XP back to the partial sum.
 export const COURSE_DIFFICULTIES: Record<string, string> = {
+  // Foundational
   sit:         'very_basic',
   lie:         'very_basic',
   name:        'very_basic',
   come:        'basic',
   stay:        'basic',
   leash:       'basic',
+  leave_it:    'basic',
+  fetch:       'basic',
+  wait:        'basic',
+  // Intermediate
   paw:         'intermediate',
   place:       'intermediate',
+  settle:      'intermediate',
+  heel:        'intermediate',
+  shake:       'intermediate',
+  spin:        'intermediate',
+  high_five:   'intermediate',
+  bow:         'intermediate',
+  // Advanced
   distraction: 'advanced',
   drop:        'advanced',
+  roll_over:   'advanced',
 };
 
 // Total XP achievable today by completing all 20 courses:

@@ -105,24 +105,37 @@ export async function updateUserProfile(
 }
 
 /**
+ * Whitelist of preference keys the client is allowed to write. Mirrored in
+ * firestore.rules — any new preference field needs to be added in BOTH
+ * places. Keeps malicious or buggy callers from writing arbitrary keys
+ * (e.g. `isPremium`) that downstream code might trust as a flag.
+ */
+const ALLOWED_PREF_KEYS = [
+  'disableHaptics',
+  'onboardingCompleted',
+  'parentType',
+  'tutorialCompleted',
+] as const;
+type AllowedPrefKey = typeof ALLOWED_PREF_KEYS[number];
+
+/**
  * Merge-patch a subset of `User.preferences` without overwriting other
- * preference keys. Firestore's default `update` REPLACES nested objects,
- * so we read the current preferences and merge in JS — slightly more
- * expensive than a transaction but safe for single-user writes and
- * avoids the dot-notation footgun (Firestore dot-notation only works
- * with primitive nested values, not with TypeScript-typed sub-objects).
+ * preference keys. Uses Firestore dot-notation so we only touch the keys
+ * we care about and leave unrelated preference fields intact.
  *
  * Used by parent-type (Iter 8.4) and the tutorial completion flag (8.6).
+ * Runtime-guards against unknown keys to catch dynamic callers that the
+ * TypeScript signature can't constrain.
  */
 export async function updateUserPreferences(
   userId: string,
-  patch: Partial<NonNullable<User['preferences']>>,
+  patch: Partial<Pick<NonNullable<User['preferences']>, AllowedPrefKey>>,
 ): Promise<void> {
-  // Build dotted-path patch so we only touch the keys we care about and
-  // leave unrelated preference fields intact. Firestore accepts dotted
-  // paths in updateDoc for nested map updates.
   const update: Record<string, unknown> = { updatedAt: Timestamp.now() };
   for (const [k, v] of Object.entries(patch)) {
+    if (!ALLOWED_PREF_KEYS.includes(k as AllowedPrefKey)) {
+      throw new Error(`updateUserPreferences: forbidden key "${k}"`);
+    }
     update[`preferences.${k}`] = v;
   }
   await updateDoc(doc(db, 'users', userId), update);

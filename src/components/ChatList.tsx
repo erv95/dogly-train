@@ -32,10 +32,12 @@ function formatTime(timestamp: any): string {
   const diffDays = diffMs / (1000 * 60 * 60 * 24);
   if (diffHours < 1) return `${Math.max(1, Math.floor(diffMs / 60000))}m`;
   if (diffHours < 24) return `${Math.floor(diffHours)}h`;
+  // App targets Spain — pin formatters to Europe/Madrid so users travelling
+  // across time zones see chat list dates in the locale they expect.
   if (diffDays < 7) {
-    return date.toLocaleDateString([], { weekday: 'short' });
+    return date.toLocaleDateString([], { weekday: 'short', timeZone: 'Europe/Madrid' });
   }
-  return date.toLocaleDateString([], { day: '2-digit', month: '2-digit' });
+  return date.toLocaleDateString([], { day: '2-digit', month: '2-digit', timeZone: 'Europe/Madrid' });
 }
 
 export default function ChatList() {

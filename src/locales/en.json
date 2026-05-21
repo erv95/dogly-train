@@ -147,6 +147,15 @@
   },
   "common": {
     "hello": "Hello",
+    "day": {
+      "mon": "M",
+      "tue": "T",
+      "wed": "W",
+      "thu": "T",
+      "fri": "F",
+      "sat": "S",
+      "sun": "S"
+    },
     "loading": "Loading...",
     "loadMore": "Show more",
     "error": "Error",
@@ -271,6 +280,7 @@
     "todayNoDogBody": "Start the personalised plan for the first 12 months",
     "todayNoDogCta": "Add puppy",
     "prosNearby": "Pros near you",
+    "thisWeek": "This week",
     "myDogs": "My dogs",
     "chats": "Chats",
     "profile": "Profile",
@@ -302,6 +312,8 @@
       "review": "Review",
       "markComplete": "Mark as completed",
       "completed": "Completed!",
+      "completeErrorTitle": "Couldn't save your progress",
+      "completeErrorBody": "Check your connection and try again.",
       "comingSoon": "Coming soon...",
       "comingSoonLabel": "Coming soon",
       "courseLabel": "Course",
@@ -3830,6 +3842,17 @@
     "reportReason": "Report reason",
     "reportSent": "Report sent",
     "fileTooLarge": "File is too large. Maximum 10 MB",
+    "a11y": {
+      "send": "Send message",
+      "sending": "Sending message",
+      "recordAudio": "Hold to record audio",
+      "stopRecording": "Stop recording",
+      "showEmoji": "Open emoji keyboard",
+      "showKeyboard": "Open keyboard",
+      "attachment": "Attach file",
+      "playAudio": "Play audio",
+      "pauseAudio": "Pause audio"
+    },
     "permissionTitle": "Permission required",
     "cameraPermissionDenied": "We need camera access to take photos. Please enable it in your device settings.",
     "micPermissionDenied": "We need microphone access to record audio. Please enable it in your device settings.",
@@ -3985,7 +4008,9 @@
     "paypalSuccess": "PayPal payment successful",
     "historyTitle": "Payment history",
     "historyEmpty": "No transactions yet",
-    "refund": "Refund"
+    "refund": "Refund",
+    "coinBalanceA11y": "{{count}} coins. Tap to view history",
+    "coinBalanceA11y_one": "{{count}} coin. Tap to view history"
   },
   "accountPending": {
     "title": "Account pending deletion",
@@ -4434,6 +4459,14 @@
     "yearSingular": "{{count}} year",
     "yearsPlural": "{{count}} years"
   },
+  "reminders": {
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "inDays": "In {{count}} days",
+    "overdueDays": "{{count}} days overdue",
+    "loadErrorLabel": "Offline",
+    "loadErrorRetry": "Tap to retry"
+  },
   "tutorial": {
     "next": "Next",
     "finish": "Let's go",
@@ -4493,6 +4526,7 @@
     }
   },
   "daily": {
+    "loadErrorBanner": "Some recommendations couldn't load. Tap to retry.",
     "goodMorning": "Good morning! 🌅",
     "goodAfternoon": "Good afternoon! ☀️",
     "goodEvening": "Good evening! 🌙",
@@ -5661,6 +5695,9 @@
   "bookings": {
     "bizumLabel": "Bizum / phone number",
     "bizumHelper": "Shown only in confirmed bookings so clients can pay you. Optional — you can also coordinate payment by chat.",
+    "loadErrorTitle": "Couldn't load bookings",
+    "loadErrorBody": "Check your connection and try again.",
+    "loadErrorRetry": "Retry",
     "weekday": {
       "short": {
         "mon": "Mon",

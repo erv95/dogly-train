@@ -108,19 +108,25 @@ export async function searchTrainers(
         seen.add(docSnap.id);
         const data = { id: docSnap.id, ...docSnap.data() } as TrainerProfile;
         const distanceKm = distanceBetween([data.latitude, data.longitude], center);
+        // Skip providers with missing/invalid coords — distanceBetween can
+        // return NaN/Infinity if lat/lng are 0/null, which would otherwise
+        // poison the radius filter (NaN > x is false, so they'd leak in).
+        if (!isFinite(distanceKm)) continue;
         if (distanceKm > filters.radiusKm) continue;
         results.push({ ...data, distanceKm });
       }
     }
   } else {
-    // Global query — verified+active trainers, capped to prevent OOM
+    // Global query — verified+active trainers, capped to prevent OOM.
+    // 50 is the conservative default; encourage geo-search via location
+    // permission in the UI. Pagination deferred to Iter 9.7.
     const snap = await getDocs(
       query(
         collection(db, 'users'),
         where('role', '==', 'trainer'),
         where('isActive', '==', true),
         where('verified', '==', true),
-        limit(200)
+        limit(50)
       )
     );
     for (const docSnap of snap.docs) {
@@ -130,6 +136,7 @@ export async function searchTrainers(
       const distanceKm = center
         ? distanceBetween([data.latitude, data.longitude], center)
         : 0;
+      if (!isFinite(distanceKm)) continue;
       results.push({ ...data, distanceKm });
     }
   }

@@ -152,19 +152,23 @@ export async function searchCaretakers(
         seen.add(docSnap.id);
         const data = { id: docSnap.id, ...docSnap.data() } as CaretakerProfile;
         const distanceKm = distanceBetween([data.latitude, data.longitude], center);
+        // Skip caretakers with missing/invalid coords — distanceBetween can
+        // return NaN/Infinity if lat/lng are 0/null, poisoning the filter.
+        if (!isFinite(distanceKm)) continue;
         if (distanceKm > filters.radiusKm) continue;
         results.push({ ...data, distanceKm });
       }
     }
   } else {
-    // Global query — verified+active only, capped at 200
+    // Global query — verified+active only, capped at 50.
+    // Encourage geo-search via location permission. Pagination deferred to Iter 9.7.
     const snap = await getDocs(
       query(
         collection(db, 'users'),
         where('role', '==', 'caretaker'),
         where('isActive', '==', true),
         where('verified', '==', true),
-        limit(200)
+        limit(50)
       )
     );
     for (const docSnap of snap.docs) {
@@ -174,6 +178,7 @@ export async function searchCaretakers(
       const distanceKm = center
         ? distanceBetween([data.latitude, data.longitude], center)
         : 0;
+      if (!isFinite(distanceKm)) continue;
       results.push({ ...data, distanceKm });
     }
   }

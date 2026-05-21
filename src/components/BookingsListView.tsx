@@ -59,6 +59,7 @@ export default function BookingsListView() {
   const [loading, setLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
+  const [loadError, setLoadError] = useState(false);
 
   // Filters — applied client-side over the fetched page(s). Reset when the
   // segment changes so each tab starts clean.
@@ -68,6 +69,7 @@ export default function BookingsListView() {
   const load = useCallback(async (seg: Segment, replace = true) => {
     if (!firebaseUser) return;
     if (replace) setLoading(true);
+    setLoadError(false);
     try {
       const status = SEGMENT_FILTER[seg];
       const result = await listMyBookings(role, firebaseUser.uid, {
@@ -92,8 +94,11 @@ export default function BookingsListView() {
       }
       setBookings((prev) => (replace ? items : [...prev, ...items]));
       setCursor(result.nextCursor);
-    } catch (e) {
-      console.error('listMyBookings error', e);
+    } catch (e: any) {
+      // Surface to user instead of silent — without this the list stays
+      // empty with no explanation when network/permission errors strike.
+      console.error('listMyBookings error', e?.code, e?.message);
+      setLoadError(true);
     } finally {
       setLoading(false);
       setLoadingMore(false);
@@ -203,27 +208,43 @@ export default function BookingsListView() {
           showsVerticalScrollIndicator={false}
           ItemSeparatorComponent={() => <View style={{ height: spacing.sm }} />}
           ListEmptyComponent={
-            <View style={styles.empty}>
-              <Ionicons name="calendar-outline" size={48} color={colors.textLight} />
-              <Text style={styles.emptyTitle}>
-                {filterCount > 0
-                  ? t('bookings.filters.noResultsTitle')
-                  : t(`bookings.list.empty.${segment}.title`)}
-              </Text>
-              <Text style={styles.emptyBody}>
-                {filterCount > 0
-                  ? t('bookings.filters.noResultsBody')
-                  : t(`bookings.list.empty.${segment}.body`)}
-              </Text>
-              {filterCount > 0 && (
+            loadError ? (
+              <View style={styles.empty}>
+                <Ionicons name="cloud-offline-outline" size={48} color={colors.error} />
+                <Text style={styles.emptyTitle}>{t('bookings.loadErrorTitle')}</Text>
+                <Text style={styles.emptyBody}>{t('bookings.loadErrorBody')}</Text>
                 <TouchableOpacity
                   style={styles.resetBtn}
-                  onPress={() => setFilters(EMPTY_FILTERS)}
+                  onPress={() => load(segment, true)}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('bookings.loadErrorRetry')}
                 >
-                  <Text style={styles.resetBtnText}>{t('bookings.filters.reset')}</Text>
+                  <Text style={styles.resetBtnText}>{t('bookings.loadErrorRetry')}</Text>
                 </TouchableOpacity>
-              )}
-            </View>
+              </View>
+            ) : (
+              <View style={styles.empty}>
+                <Ionicons name="calendar-outline" size={48} color={colors.textLight} />
+                <Text style={styles.emptyTitle}>
+                  {filterCount > 0
+                    ? t('bookings.filters.noResultsTitle')
+                    : t(`bookings.list.empty.${segment}.title`)}
+                </Text>
+                <Text style={styles.emptyBody}>
+                  {filterCount > 0
+                    ? t('bookings.filters.noResultsBody')
+                    : t(`bookings.list.empty.${segment}.body`)}
+                </Text>
+                {filterCount > 0 && (
+                  <TouchableOpacity
+                    style={styles.resetBtn}
+                    onPress={() => setFilters(EMPTY_FILTERS)}
+                  >
+                    <Text style={styles.resetBtnText}>{t('bookings.filters.reset')}</Text>
+                  </TouchableOpacity>
+                )}
+              </View>
+            )
           }
           ListFooterComponent={
             cursor && !loadingMore ? (

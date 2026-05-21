@@ -8,8 +8,8 @@ import {
   Alert,
   Image,
   Modal,
-  Dimensions,
   ActivityIndicator,
+  useWindowDimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
@@ -59,11 +59,18 @@ async function restoreQueue(bookingId: string): Promise<PendingPoint[]> {
     if (!raw) return [];
     const parsed = JSON.parse(raw);
     if (!Array.isArray(parsed)) return [];
-    return parsed.map((p: any) => ({
-      lat: Number(p.lat),
-      lng: Number(p.lng),
-      recordedAt: new Date(p.recordedAt),
-    }));
+    // Validate each entry — corrupted AsyncStorage can produce NaN coords
+    // or Invalid Date which later poisons distance/polyline calculations.
+    const valid: PendingPoint[] = [];
+    for (const p of parsed) {
+      const lat = Number(p?.lat);
+      const lng = Number(p?.lng);
+      const ts = new Date(p?.recordedAt);
+      if (!isFinite(lat) || !isFinite(lng)) continue;
+      if (isNaN(ts.getTime())) continue;
+      valid.push({ lat, lng, recordedAt: ts });
+    }
+    return valid;
   } catch {
     return [];
   }
@@ -75,6 +82,8 @@ export default function LiveSessionScreen() {
   const router = useRouter();
   const { firebaseUser } = useAuth();
   const haptics = useHaptics();
+  // Window dimensions are recomputed on rotation / foldable / split-screen.
+  const { width: SCREEN_W } = useWindowDimensions();
 
   const [session, setSession] = useState<LiveSession | null>(null);
   const [path, setPath] = useState<LivePathPoint[]>([]);
@@ -371,15 +380,13 @@ export default function LiveSessionScreen() {
       <Modal visible={!!photoModal} transparent animationType="fade" onRequestClose={() => setPhotoModal(null)}>
         <TouchableOpacity style={styles.modalOverlay} onPress={() => setPhotoModal(null)} activeOpacity={1}>
           {photoModal && (
-            <Image source={{ uri: photoModal }} style={styles.modalImage} resizeMode="contain" />
+            <Image source={{ uri: photoModal }} style={{ width: SCREEN_W, height: SCREEN_W * 1.3 }} resizeMode="contain" />
           )}
         </TouchableOpacity>
       </Modal>
     </SafeAreaView>
   );
 }
-
-const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.backgroundSecondary },
@@ -457,8 +464,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  modalImage: {
-    width,
-    height: width * 1.3,
-  },
+  // modalImage dimensions are inlined in render (depend on useWindowDimensions)
 });

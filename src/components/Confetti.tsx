@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Animated, Dimensions, StyleSheet, View, Easing } from 'react-native';
+import { Animated, StyleSheet, View, Easing, useWindowDimensions } from 'react-native';
 
 interface ConfettiProps {
   /** When this prop flips to true, the animation fires once. Reset it to false
@@ -37,7 +37,9 @@ export function Confetti({ trigger, count = 80, duration = 1800, onDone }: Confe
   const [active, setActive] = useState(false);
   const progress = useRef(new Animated.Value(0)).current;
 
-  const { width, height } = Dimensions.get('window');
+  // useWindowDimensions so particles reflow on rotation / split-screen
+  // instead of using stale values captured at module load.
+  const { width, height } = useWindowDimensions();
 
   const particles = useMemo<Particle[]>(() => {
     return Array.from({ length: count }).map(() => ({

@@ -147,6 +147,15 @@
   },
   "common": {
     "hello": "Hallo",
+    "day": {
+      "mon": "M",
+      "tue": "D",
+      "wed": "M",
+      "thu": "D",
+      "fri": "F",
+      "sat": "S",
+      "sun": "S"
+    },
     "loading": "Laden...",
     "loadMore": "Mehr anzeigen",
     "error": "Fehler",
@@ -271,6 +280,7 @@
     "todayNoDogBody": "Starte den personalisierten Plan für die ersten 12 Monate",
     "todayNoDogCta": "Welpen hinzufügen",
     "prosNearby": "Profis in deiner Nähe",
+    "thisWeek": "Diese Woche",
     "myDogs": "Meine Hunde",
     "chats": "Chats",
     "profile": "Profil",
@@ -302,6 +312,8 @@
       "review": "Wiederholen",
       "markComplete": "Als abgeschlossen markieren",
       "completed": "Abgeschlossen!",
+      "completeErrorTitle": "Fortschritt konnte nicht gespeichert werden",
+      "completeErrorBody": "Überprüfe deine Verbindung und versuche es erneut.",
       "comingSoon": "Demnächst...",
       "comingSoonLabel": "Demnächst",
       "courseLabel": "Kurs",
@@ -3830,6 +3842,17 @@
     "reportReason": "Meldegrund",
     "reportSent": "Meldung gesendet",
     "fileTooLarge": "Datei ist zu groß. Maximal 10 MB",
+    "a11y": {
+      "send": "Nachricht senden",
+      "sending": "Nachricht wird gesendet",
+      "recordAudio": "Halten, um Audio aufzunehmen",
+      "stopRecording": "Aufnahme stoppen",
+      "showEmoji": "Emoji-Tastatur öffnen",
+      "showKeyboard": "Tastatur öffnen",
+      "attachment": "Datei anhängen",
+      "playAudio": "Audio abspielen",
+      "pauseAudio": "Audio pausieren"
+    },
     "permissionTitle": "Berechtigung erforderlich",
     "cameraPermissionDenied": "Wir benötigen Kamerazugriff, um Fotos aufzunehmen. Bitte aktiviere ihn in den Geräteeinstellungen.",
     "micPermissionDenied": "Wir benötigen Mikrofonzugriff, um Audio aufzunehmen. Bitte aktiviere ihn in den Geräteeinstellungen.",
@@ -3985,7 +4008,9 @@
     "paypalSuccess": "PayPal-Zahlung erfolgreich",
     "historyTitle": "Zahlungsverlauf",
     "historyEmpty": "Noch keine Transaktionen",
-    "refund": "Erstattung"
+    "refund": "Erstattung",
+    "coinBalanceA11y": "{{count}} Münzen. Tippe für den Verlauf",
+    "coinBalanceA11y_one": "{{count}} Münze. Tippe für den Verlauf"
   },
   "accountPending": {
     "title": "Konto wartet auf Löschung",
@@ -4434,6 +4459,14 @@
     "yearSingular": "{{count}} Jahr",
     "yearsPlural": "{{count}} Jahre"
   },
+  "reminders": {
+    "today": "Heute",
+    "tomorrow": "Morgen",
+    "inDays": "In {{count}} Tagen",
+    "overdueDays": "{{count}} Tage überfällig",
+    "loadErrorLabel": "Offline",
+    "loadErrorRetry": "Zum Wiederholen tippen"
+  },
   "tutorial": {
     "next": "Weiter",
     "finish": "Los geht's",
@@ -4493,6 +4526,7 @@
     }
   },
   "daily": {
+    "loadErrorBanner": "Einige Empfehlungen konnten nicht geladen werden. Zum Wiederholen tippen.",
     "goodMorning": "Guten Morgen! 🌅",
     "goodAfternoon": "Guten Tag! ☀️",
     "goodEvening": "Guten Abend! 🌙",
@@ -5661,6 +5695,9 @@
   "bookings": {
     "bizumLabel": "Bizum / Telefonnummer",
     "bizumHelper": "Erscheint nur in bestätigten Buchungen, damit Kunden dich bezahlen können. Optional — du kannst Zahlung auch per Chat absprechen.",
+    "loadErrorTitle": "Buchungen konnten nicht geladen werden",
+    "loadErrorBody": "Überprüfe deine Verbindung und versuche es erneut.",
+    "loadErrorRetry": "Erneut versuchen",
     "weekday": {
       "short": {
         "mon": "Mo",

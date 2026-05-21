@@ -147,6 +147,15 @@
   },
   "common": {
     "hello": "Hola",
+    "day": {
+      "mon": "L",
+      "tue": "M",
+      "wed": "X",
+      "thu": "J",
+      "fri": "V",
+      "sat": "S",
+      "sun": "D"
+    },
     "loading": "Cargando...",
     "loadMore": "Ver más",
     "error": "Error",
@@ -271,6 +280,7 @@
     "todayNoDogBody": "Empieza el plan personalizado de los primeros 12 meses",
     "todayNoDogCta": "Añadir cachorro",
     "prosNearby": "Profesionales cerca de ti",
+    "thisWeek": "Esta semana",
     "myDogs": "Mis perros",
     "chats": "Chats",
     "profile": "Perfil",
@@ -302,6 +312,8 @@
       "review": "Repasar",
       "markComplete": "Marcar como completado",
       "completed": "¡Completado!",
+      "completeErrorTitle": "No se pudo guardar el progreso",
+      "completeErrorBody": "Comprueba tu conexión y vuelve a intentarlo.",
       "comingSoon": "Próximamente...",
       "comingSoonLabel": "Próximamente",
       "courseLabel": "Curso",
@@ -3830,6 +3842,17 @@
     "reportReason": "Motivo del reporte",
     "reportSent": "Reporte enviado",
     "fileTooLarge": "El archivo es demasiado grande. Máximo 10 MB",
+    "a11y": {
+      "send": "Enviar mensaje",
+      "sending": "Enviando mensaje",
+      "recordAudio": "Mantén pulsado para grabar audio",
+      "stopRecording": "Detener grabación",
+      "showEmoji": "Abrir teclado de emojis",
+      "showKeyboard": "Abrir teclado",
+      "attachment": "Adjuntar archivo",
+      "playAudio": "Reproducir audio",
+      "pauseAudio": "Pausar audio"
+    },
     "permissionTitle": "Permiso necesario",
     "cameraPermissionDenied": "Necesitamos acceso a la cámara para tomar fotos. Actívalo en los ajustes del dispositivo.",
     "micPermissionDenied": "Necesitamos acceso al micrófono para grabar audio. Actívalo en los ajustes del dispositivo.",
@@ -3985,7 +4008,9 @@
     "paypalSuccess": "Pago con PayPal exitoso",
     "historyTitle": "Historial de pagos",
     "historyEmpty": "Aún no tienes transacciones",
-    "refund": "Reembolso"
+    "refund": "Reembolso",
+    "coinBalanceA11y": "{{count}} monedas. Toca para ver el historial",
+    "coinBalanceA11y_one": "{{count}} moneda. Toca para ver el historial"
   },
   "accountPending": {
     "title": "Cuenta pendiente de borrado",
@@ -4435,6 +4460,14 @@
     "yearSingular": "{{count}} año",
     "yearsPlural": "{{count}} años"
   },
+  "reminders": {
+    "today": "Hoy",
+    "tomorrow": "Mañana",
+    "inDays": "En {{count}} días",
+    "overdueDays": "Atrasado {{count}} días",
+    "loadErrorLabel": "Sin conexión",
+    "loadErrorRetry": "Toca para reintentar"
+  },
   "tutorial": {
     "next": "Siguiente",
     "finish": "Empezar",
@@ -4494,6 +4527,7 @@
     }
   },
   "daily": {
+    "loadErrorBanner": "Algunas recomendaciones no se cargaron. Toca para reintentar.",
     "goodMorning": "¡Buenos días! 🌅",
     "goodAfternoon": "¡Buenas tardes! ☀️",
     "goodEvening": "¡Buenas noches! 🌙",
@@ -5664,6 +5698,9 @@
   "bookings": {
     "bizumLabel": "Número Bizum",
     "bizumHelper": "Aparece sólo en las reservas confirmadas para que tus clientes te paguen. Lo puedes dejar vacío y coordinar el pago por chat.",
+    "loadErrorTitle": "No se pudieron cargar las reservas",
+    "loadErrorBody": "Comprueba tu conexión y vuelve a intentarlo.",
+    "loadErrorRetry": "Reintentar",
     "weekday": {
       "short": {
         "mon": "Lun",

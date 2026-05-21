@@ -58,9 +58,20 @@ export function subscribeAdminDisputes(
     orderBy('createdAt', 'desc'),
     limit(50),
   );
-  return onSnapshot(q, (snap) => {
-    cb(snap.docs.map((d) => ({ id: d.id, ...d.data() } as Dispute)));
-  });
+  let unsubInternal: Unsubscribe | null = null;
+  unsubInternal = onSnapshot(
+    q,
+    (snap) => cb(snap.docs.map((d) => ({ id: d.id, ...d.data() } as Dispute))),
+    (err) => {
+      console.warn('subscribeAdminDisputes error:', (err as any)?.code ?? err);
+      // Auto-teardown when admin claim is revoked mid-session so we don't
+      // burn reads retrying a query the listener can no longer execute.
+      if ((err as { code?: string }).code === 'permission-denied') {
+        unsubInternal?.();
+      }
+    },
+  );
+  return () => unsubInternal?.();
 }
 
 export async function getDisputeById(disputeId: string): Promise<Dispute | null> {

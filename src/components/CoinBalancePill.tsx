@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, View, ViewStyle } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { useTranslation } from 'react-i18next';
 import { useAuth } from '../contexts/AuthContext';
 import { colors, spacing, fontSize, borderRadius, TABULAR_NUMS } from '../theme';
 
@@ -19,6 +20,7 @@ interface Props {
 export function CoinBalancePill({ navigable = true, style }: Props) {
   const { userData } = useAuth();
   const router = useRouter();
+  const { t } = useTranslation();
 
   if (!userData) return null;
   const balance = userData.coinBalance ?? 0;
@@ -37,6 +39,8 @@ export function CoinBalancePill({ navigable = true, style }: Props) {
       onPress={() => router.push('/(shared)/transactions')}
       activeOpacity={0.7}
       hitSlop={8}
+      accessibilityRole="button"
+      accessibilityLabel={t('coins.coinBalanceA11y', { count: balance })}
     >
       {Inner}
     </TouchableOpacity>

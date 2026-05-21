@@ -7,7 +7,7 @@ import {
   Image,
   Modal,
   ScrollView,
-  Dimensions,
+  useWindowDimensions,
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
@@ -42,6 +42,7 @@ interface Props {
 }
 
 export default function ServiceReportCard({ report, timeLabel, isOwn = false }: Props) {
+  const { width: SCREEN_W, height: SCREEN_H } = useWindowDimensions();
   const { t } = useTranslation();
   const tint = CATEGORY_TINTS[report.category];
   const [lightboxUri, setLightboxUri] = useState<string | null>(null);
@@ -126,7 +127,7 @@ export default function ServiceReportCard({ report, timeLabel, isOwn = false }: 
           {lightboxUri && (
             <Image
               source={{ uri: lightboxUri }}
-              style={styles.lightboxImage}
+              style={{ width: SCREEN_W, height: SCREEN_H * 0.85 }}
               resizeMode="contain"
             />
           )}
@@ -138,8 +139,6 @@ export default function ServiceReportCard({ report, timeLabel, isOwn = false }: 
     </View>
   );
 }
-
-const { width: SCREEN_W, height: SCREEN_H } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   card: {
@@ -201,7 +200,7 @@ const styles = StyleSheet.create({
     flex: 1, backgroundColor: 'rgba(0,0,0,0.95)',
     alignItems: 'center', justifyContent: 'center',
   },
-  lightboxImage: { width: SCREEN_W, height: SCREEN_H * 0.85 },
+  // lightbox image dimensions are inlined in render (depend on useWindowDimensions)
   lightboxCloseHint: {
     position: 'absolute', top: 40, right: 20,
     backgroundColor: 'rgba(0,0,0,0.5)', padding: spacing.sm, borderRadius: 20,

@@ -4,8 +4,12 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../src/contexts/AuthContext';
+import { DogStatsProvider } from '../../src/contexts/DogStatsContext';
 import { getDogsByOwner } from '../../src/services/dogs';
 import DailyTipsRail from '../../src/components/DailyTipsRail';
+import TodayHero from '../../src/components/TodayHero';
+import WeekStrip from '../../src/components/WeekStrip';
+import NextReminderCard from '../../src/components/NextReminderCard';
 import EmptyHint from '../../src/components/EmptyHint';
 import CoachmarkTarget from '../../src/components/CoachmarkTarget';
 import { CoinBalancePill } from '../../src/components/CoinBalancePill';
@@ -90,13 +94,26 @@ export default function TodayScreen() {
         showsVerticalScrollIndicator={false}
       >
         {loading ? null : selectedDog ? (
-          <CoachmarkTarget id="today-rail">
-            <DailyTipsRail
-              dog={selectedDog}
-              otherDogs={dogs.filter((d) => d.id !== selectedDog.id)}
-              onChangeDog={setSelectedDogId}
-            />
-          </CoachmarkTarget>
+          // DogStatsProvider loads stats/reminders/walks ONCE per dog and
+          // shares them with the 4 children below (HIGH-8 fix). Without it
+          // every child component would refetch independently.
+          <DogStatsProvider dogId={selectedDog.id}>
+            <CoachmarkTarget id="today-rail">
+              {/* Order matters: DailyTipsRail owns the personalised greeting
+                  (e.g. "Buenos días, Eric") and the dog-switcher chips, so
+                  it stays on top. The Iter 8.7 hero + week strip + next
+                  reminder sit underneath as the "denser" body of the Hoy
+                  screen. */}
+              <DailyTipsRail
+                dog={selectedDog}
+                otherDogs={dogs.filter((d) => d.id !== selectedDog.id)}
+                onChangeDog={setSelectedDogId}
+              />
+              <TodayHero dog={selectedDog} />
+              <WeekStrip dogId={selectedDog.id} />
+              <NextReminderCard dogId={selectedDog.id} />
+            </CoachmarkTarget>
+          </DogStatsProvider>
         ) : (
           <EmptyHint
             icon="paw"

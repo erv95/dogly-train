@@ -288,7 +288,9 @@ export function subscribeToMessages(
       callback(messages);
     },
     (err) => {
-      console.error('subscribeToMessages error:', err);
+      // Log only code + message to avoid leaking stack traces / internal
+      // request metadata to dev consoles or remote log sinks.
+      console.error('subscribeToMessages error:', (err as any)?.code, (err as any)?.message);
       onError?.(err);
     }
   );

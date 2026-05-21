@@ -378,18 +378,21 @@ export default function DogCoursesScreen() {
     if (!firebaseUser || !effectiveDogId) return;
 
     const prevLevel = dogStats?.level ?? 1;
+    const prevProgressEntry = progress[courseId];
 
-    // Mark progress in UI immediately regardless of stats outcome
+    // Optimistic UI: mark progress immediately. If either write fails we
+    // revert below so the user does not see a fake "completed" state.
     setProgress((prev) => ({
       ...prev,
       [courseId]: { ...prev[courseId], userId: firebaseUser.uid, dogId: effectiveDogId, courseId, completed: true } as CourseProgress,
     }));
 
     try {
-      const [newStats] = await Promise.all([
-        updateStatsOnCourseComplete(effectiveDogId, firebaseUser.uid, courseId, difficulty),
-        markCourseCompleted(firebaseUser.uid, effectiveDogId, courseId),
-      ]);
+      // Sequential: stats first (authoritative XP), then course_progress
+      // (UI flag). If stats fails the UI flag never gets set; if progress
+      // fails the user already got their XP and we recover on next reload.
+      const newStats = await updateStatsOnCourseComplete(effectiveDogId, firebaseUser.uid, courseId, difficulty);
+      await markCourseCompleted(firebaseUser.uid, effectiveDogId, courseId);
 
       setDogStats(newStats);
 
@@ -399,8 +402,14 @@ export default function DogCoursesScreen() {
       }
     } catch (e) {
       console.error('Error updating dog stats:', e);
-      // Re-load from Firestore to stay in sync
-      loadData();
+      // Roll back the optimistic UI so the user sees what actually persisted
+      setProgress((prev) => {
+        const next = { ...prev };
+        if (prevProgressEntry) next[courseId] = prevProgressEntry;
+        else delete next[courseId];
+        return next;
+      });
+      Alert.alert(t('owner.coursesPage.completeErrorTitle'), t('owner.coursesPage.completeErrorBody'));
     }
   };
 
@@ -725,6 +734,7 @@ export default function DogCoursesScreen() {
       <Modal
         visible={selectedCourse !== null}
         animationType="slide"
+        statusBarTranslucent
         onRequestClose={() => setSelectedCourse(null)}
       >
         {selectedCourse && (

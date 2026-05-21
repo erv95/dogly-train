@@ -210,12 +210,23 @@ export default function DogHealthScreen() {
   // Live subscription to dog doc (for weights tab)
   useEffect(() => {
     if (!dogId) return;
-    const unsub = onSnapshot(doc(db, 'dogs', dogId), (snap) => {
-      if (snap.exists()) {
-        setDog({ id: snap.id, ...snap.data() } as Dog);
-      }
-    });
-    return unsub;
+    let unsub: (() => void) | undefined;
+    unsub = onSnapshot(
+      doc(db, 'dogs', dogId),
+      (snap) => {
+        if (snap.exists()) {
+          setDog({ id: snap.id, ...snap.data() } as Dog);
+        }
+      },
+      (err: any) => {
+        // Tear down the listener when the user loses read access (e.g. the
+        // dog is deleted while the screen is open) so we don't burn reads
+        // retrying a query that will never succeed again.
+        console.warn('dog listener error:', err?.code ?? err?.message);
+        if (err?.code === 'permission-denied') unsub?.();
+      },
+    );
+    return () => unsub?.();
   }, [dogId]);
 
   const openNew = () => { setEditing(null); setFormVisible(true); };

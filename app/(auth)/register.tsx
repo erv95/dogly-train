@@ -145,9 +145,14 @@ export default function RegisterScreen() {
       });
       // Best-effort: register the referral with the caller's real IP so the
       // server can flag farms. Always runs before signOut so the auth token is
-      // still valid.
+      // still valid. Logged on failure so we can diagnose silent referral
+      // drops without surfacing the error to the user (signup already succeeded).
       if (resolvedReferrer) {
-        await recordReferralSignup(resolvedReferrer);
+        try {
+          await recordReferralSignup(resolvedReferrer);
+        } catch (referralErr: any) {
+          console.warn('recordReferralSignup failed:', referralErr?.code ?? referralErr?.message);
+        }
       }
       await signOut();
       Alert.alert(

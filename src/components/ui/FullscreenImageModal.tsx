@@ -1,12 +1,12 @@
 import React, { useRef, useState } from 'react';
 import {
   Animated,
-  Dimensions,
   Modal,
   StyleSheet,
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
+  useWindowDimensions,
 } from 'react-native';
 import {
   GestureHandlerRootView,
@@ -18,7 +18,6 @@ import {
 } from 'react-native-gesture-handler';
 import { Ionicons } from '@expo/vector-icons';
 
-const { width: SCREEN_W, height: SCREEN_H } = Dimensions.get('window');
 const MIN_SCALE = 1;
 const MAX_SCALE = 4;
 
@@ -37,6 +36,10 @@ interface Props {
  * to [1, 4] so the image can't be flung off-screen.
  */
 export default function FullscreenImageModal({ visible, imageUrl, onClose }: Props) {
+  // Recompute on every render — foldables / rotation / split-screen
+  // change dimensions mid-mount, and a module-scope capture would lock
+  // the image to the wrong size.
+  const { width: SCREEN_W, height: SCREEN_H } = useWindowDimensions();
   const pinchRef = useRef(null);
   const doubleTapRef = useRef(null);
 
@@ -103,7 +106,10 @@ export default function FullscreenImageModal({ visible, imageUrl, onClose }: Pro
               >
                 <Animated.Image
                   source={{ uri: imageUrl }}
-                  style={[styles.image, { transform: [{ scale }] }]}
+                  style={[
+                    { width: SCREEN_W, height: SCREEN_H * 0.85 },
+                    { transform: [{ scale }] },
+                  ]}
                   resizeMode="contain"
                 />
               </TapGestureHandler>
@@ -127,10 +133,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  image: {
-    width: SCREEN_W,
-    height: SCREEN_H * 0.85,
-  },
+  // image dimensions inlined in the render — they depend on
+  // useWindowDimensions and can't live in a static StyleSheet.
   closeBtn: {
     position: 'absolute',
     top: 48,

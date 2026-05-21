@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   View,
   Text,
@@ -10,15 +10,10 @@ import {
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
-import { doc, getDoc } from 'firebase/firestore';
-import { db } from '../config/firebase';
 import { useAuth } from '../contexts/AuthContext';
+import { useDogStats } from '../contexts/DogStatsContext';
 import { Dog } from '../types';
-import { getDogStats, DogStats, getLevelInfo } from '../services/dogStats';
-import { getDogReminders } from '../services/reminders';
-import { getDogWalks } from '../services/dogWalks';
 import { getEmergencyContacts } from '../services/emergencyContacts';
-import { DogWalk } from '../types';
 import {
   getDailyRecommendations,
   getGreetingSlot,
@@ -39,34 +34,34 @@ export default function DailyTipsRail({ dog, otherDogs = [], onChangeDog }: Prop
   const router = useRouter();
   const { firebaseUser, userData } = useAuth();
 
-  const [stats, setStats] = useState<DogStats | null>(null);
-  const [reminders, setReminders] = useState<any[]>([]);
-  const [walks, setWalks] = useState<DogWalk[]>([]);
+  // Stats/reminders/walks come from the shared context — same data is used by
+  // TodayHero, WeekStrip and NextReminderCard, so one fetch covers all four.
+  const { stats, reminders, walks, loading: ctxLoading, partialFailure: ctxFailure, refresh } = useDogStats();
   const [hasEmergencyContacts, setHasEmergencyContacts] = useState<boolean | undefined>(undefined);
-  const [loading, setLoading] = useState(true);
+  const [ecLoading, setEcLoading] = useState(true);
+  const [ecFailure, setEcFailure] = useState(false);
 
-  const load = useCallback(async () => {
-    if (!firebaseUser || !dog?.id) return;
-    setLoading(true);
-    try {
-      const [s, r, w, ec] = await Promise.all([
-        getDogStats(dog.id).catch(() => null),
-        getDogReminders(dog.id, firebaseUser.uid).catch(() => []),
-        getDogWalks(dog.id, firebaseUser.uid, 30).catch(() => []),
-        getEmergencyContacts(firebaseUser.uid).catch(() => []),
-      ]);
-      setStats(s);
-      setReminders(r);
-      setWalks(w);
-      setHasEmergencyContacts(ec.length > 0);
-    } finally {
-      setLoading(false);
-    }
-  }, [dog?.id, firebaseUser]);
-
+  // Emergency contacts are per-USER (not per-dog) so we load them locally.
   useEffect(() => {
-    load();
-  }, [load]);
+    if (!firebaseUser) return;
+    let cancelled = false;
+    setEcLoading(true);
+    setEcFailure(false);
+    getEmergencyContacts(firebaseUser.uid)
+      .then((ec) => { if (!cancelled) setHasEmergencyContacts(ec.length > 0); })
+      .catch((err) => {
+        if (cancelled) return;
+        console.warn('DailyTipsRail: emergency contacts failed', (err as any)?.code);
+        setHasEmergencyContacts(undefined);
+        setEcFailure(true);
+      })
+      .finally(() => { if (!cancelled) setEcLoading(false); });
+    return () => { cancelled = true; };
+  }, [firebaseUser]);
+
+  const loading = ctxLoading || ecLoading;
+  const partialFailure = ctxFailure || ecFailure;
+  const load = refresh;
 
   const recommendations: DailyRecommendation[] = useMemo(
     () => getDailyRecommendations({ dog, stats, reminders, walks, hasEmergencyContacts, now: new Date() }),
@@ -95,28 +90,9 @@ export default function DailyTipsRail({ dog, otherDogs = [], onChangeDog }: Prop
         <Text style={styles.subhead} numberOfLines={1}>
           {t('daily.forDog', { name: dog.name })}
         </Text>
-        {stats && (
-          <View style={styles.miniStatsRow}>
-            <View style={styles.miniStat}>
-              <Text style={styles.miniStatEmoji}>{getLevelInfo(stats.level).emoji}</Text>
-              <Text style={styles.miniStatValue}>{t('progress.level')} {stats.level}</Text>
-            </View>
-            <View style={styles.miniStatDot} />
-            <View style={styles.miniStat}>
-              <Text style={styles.miniStatEmoji}>⚡</Text>
-              <Text style={styles.miniStatValue}>{stats.xp} XP</Text>
-            </View>
-            {stats.currentStreak > 0 && (
-              <>
-                <View style={styles.miniStatDot} />
-                <View style={styles.miniStat}>
-                  <Text style={styles.miniStatEmoji}>🔥</Text>
-                  <Text style={styles.miniStatValue}>{stats.currentStreak}d</Text>
-                </View>
-              </>
-            )}
-          </View>
-        )}
+        {/* Mini stats (Nivel / XP / streak) intentionally removed in Iter
+            8.7 — they duplicated TodayHero (level + XP bar) and WeekStrip
+            (streak) which sit just below the rail on the Hoy screen. */}
       </View>
 
       {/* Dog selector — full width row below greeting, only when there are multiple dogs */}
@@ -144,6 +120,13 @@ export default function DailyTipsRail({ dog, otherDogs = [], onChangeDog }: Prop
             );
           })}
         </ScrollView>
+      )}
+
+      {partialFailure && !loading && (
+        <TouchableOpacity onPress={load} activeOpacity={0.8} style={styles.errorBanner}>
+          <Ionicons name="cloud-offline-outline" size={14} color={colors.error} />
+          <Text style={styles.errorBannerText}>{t('daily.loadErrorBanner')}</Text>
+        </TouchableOpacity>
       )}
 
       {loading ? (
@@ -401,22 +384,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: '600',
   },
-  miniStatsRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    marginTop: spacing.xs,
-    backgroundColor: colors.background,
-    paddingHorizontal: spacing.md,
-    paddingVertical: 5,
-    borderRadius: borderRadius.full,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  miniStat: { flexDirection: 'row', alignItems: 'center', gap: 4 },
-  miniStatEmoji: { fontSize: 13 },
-  miniStatValue: { fontSize: 11, fontWeight: '800', color: colors.text },
-  miniStatDot: { width: 3, height: 3, borderRadius: 1.5, backgroundColor: colors.textLight },
   dogChipsRow: {
     paddingHorizontal: spacing.md,
     gap: spacing.xs,
@@ -438,6 +405,18 @@ const styles = StyleSheet.create({
   loadingBox: { padding: spacing.lg, alignItems: 'center' },
   emptyBox: { padding: spacing.md, alignItems: 'center' },
   emptyText: { fontSize: fontSize.sm, color: colors.textSecondary, fontStyle: 'italic' },
+  errorBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    marginHorizontal: spacing.md,
+    marginBottom: spacing.sm,
+    paddingVertical: 6,
+    paddingHorizontal: spacing.sm,
+    borderRadius: borderRadius.md,
+    backgroundColor: colors.error + '14',
+  },
+  errorBannerText: { fontSize: 11, color: colors.error, fontWeight: '600', flex: 1 },
 
   rail: { paddingHorizontal: spacing.md, gap: spacing.sm, paddingBottom: spacing.xs },
   card: {
