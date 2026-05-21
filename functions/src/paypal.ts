@@ -184,13 +184,13 @@ export const paypalWebhook = functions.https.onRequest(async (req, res) => {
     return;
   }
 
-  // Step 0: Reject only obviously stale webhooks (24h window).
-  // PayPal can legitimately retry hours later under load. The Firestore
-  // idempotency key (txId = paypal_<captureId>) protects against true replays.
+  // Step 0: Reject stale webhooks (10-min window — matches Stripe default).
+  // Idempotency (txId = paypal_<captureId>) still catches true replays inside
+  // the window. If PayPal's retry policy needs more, widen with care.
   const transmissionTime = req.headers["paypal-transmission-time"] as string | undefined;
   if (transmissionTime) {
     const transmissionMs = new Date(transmissionTime).getTime();
-    if (isNaN(transmissionMs) || Math.abs(Date.now() - transmissionMs) > 24 * 60 * 60 * 1000) {
+    if (isNaN(transmissionMs) || Math.abs(Date.now() - transmissionMs) > 10 * 60 * 1000) {
       functions.logger.warn("PayPal webhook rejected: stale transmission_time", { transmissionTime });
       res.status(401).send("Stale webhook");
       return;

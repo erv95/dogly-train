@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { db } from "./_shared";
+import { db, bucket } from "./_shared";
 import { sendPush, sendSystemMessage } from "./notifications";
 
 // ── Constants (mirror src/config/booking.ts) ─────────────────────────────────
@@ -697,6 +697,7 @@ export const markBookingCompleted = functions
     // The URL must point to OUR Storage bucket, under a path scoped to this
     // booking. Without this, a provider could hotlink any image on the web
     // (stock photo, screenshot from another user, etc.) as fake proof.
+    let storagePath: string;
     try {
       const parsed = new URL(completionPhotoURL);
       if (parsed.hostname !== "firebasestorage.googleapis.com") {
@@ -706,11 +707,29 @@ export const markBookingCompleted = functions
         `/v0/b/dogly-train-eu/o/booking_completion_photos%2F${bookingId}%2F`,
         `/v0/b/dogly-train-eu/o/live-sessions%2F${bookingId}%2F`,
       ];
-      if (!allowedPrefixes.some((p) => parsed.pathname.startsWith(p))) {
+      const matchedPrefix = allowedPrefixes.find((p) => parsed.pathname.startsWith(p));
+      if (!matchedPrefix) {
         res.status(400).json({ error: "invalid_photo_url" }); return;
       }
+      // Extract the storage path (decoded) so we can verify the object exists.
+      // pathname is `/v0/b/<bucket>/o/<encoded-path>`; we strip the prefix and decode.
+      const encodedPath = parsed.pathname.replace("/v0/b/dogly-train-eu/o/", "");
+      storagePath = decodeURIComponent(encodedPath);
     } catch {
       res.status(400).json({ error: "invalid_photo_url" }); return;
+    }
+
+    // Confirm the file actually exists in Storage. Without this check a
+    // provider could upload, capture the download URL, delete the file, and
+    // submit the stale URL — owner ends up with a broken-image proof.
+    try {
+      const [exists] = await bucket.file(storagePath).exists();
+      if (!exists) {
+        res.status(400).json({ error: "photo_not_found" }); return;
+      }
+    } catch (err) {
+      functions.logger.warn("photo exists() check failed", { bookingId, err: (err as any)?.message });
+      res.status(500).json({ error: "storage_check_failed" }); return;
     }
 
     let postState: { booking?: any; alreadyDone?: boolean } = {};

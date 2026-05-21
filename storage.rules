@@ -123,13 +123,19 @@ service firebase.storage {
         );
     }
 
-    // ── Booking completion photo: booking_completion_photos/{bookingId}/photo.jpg
+    // ── Booking completion photo: booking_completion_photos/{bookingId}/photo.{ext}
     // Provider uploads a single photo as proof of service when marking a booking
     // completed. Both parties read it (URL is unguessable; metadata enforced via
     // Firestore rules on the booking doc). 5MB max, image only.
+    //
+    // Defense-in-depth: fileName is restricted to `photo.{ext}` so an attacker
+    // who knows another user's bookingId cannot litter the folder with arbitrary
+    // images. The Firestore-side validation in markBookingCompleted CF
+    // (functions/src/bookings.ts) still catches forged URLs end-to-end.
     match /booking_completion_photos/{bookingId}/{fileName} {
       allow read: if isAuth();
-      allow write: if isAuth() && isValidImage();
+      allow write: if isAuth() && isValidImage()
+        && fileName.matches('photo\\.(jpg|jpeg|png|webp)');
     }
 
     // ── Live session photos: live-sessions/{bookingId}/{fileName} ──────────

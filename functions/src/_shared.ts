@@ -155,7 +155,19 @@ export async function notifyByPush(
     const { sendPush } = await import("./notifications");
     await sendPush(fcmToken, args.title, args.body, args.data, userId);
   } catch (err) {
-    functions.logger.warn("notifyByPush failed", { userId, err: (err as any)?.message });
+    const code = (err as any)?.code;
+    // Permanent token-invalidity codes don't warrant WARN-level spam on every
+    // subsequent notification — sendPush already cleans up the dead token.
+    // Downgrade those to DEBUG; keep WARN for unexpected / retryable failures.
+    const isPermanentTokenError =
+      code === "messaging/registration-token-not-registered" ||
+      code === "messaging/invalid-registration-token" ||
+      code === "messaging/invalid-argument";
+    if (isPermanentTokenError) {
+      functions.logger.debug("notifyByPush permanent token failure", { userId, code });
+    } else {
+      functions.logger.warn("notifyByPush failed", { userId, code, err: (err as any)?.message });
+    }
   }
 }
 
@@ -242,3 +254,33 @@ export const REFERRAL_BONUS_COINS = 30;
 export const REFERRAL_LIFETIME_CAP = 50;
 /** Max distinct signups from the same IP hash in 24h before flagging for admin review. */
 export const REFERRAL_IP_FLAG_THRESHOLD = 3;
+
+// ── Rate-limit cleanup ───────────────────────────────────────────────────────
+
+/**
+ * Daily cron — prunes stale `rate_limits/{key}` docs so the collection does
+ * not grow unbounded. `enforceRateLimit` creates one doc per (uid, action)
+ * pair and only updates it; without a sweep the collection accumulates
+ * forever. Anything older than 24h is older than every rate window we use,
+ * so it's safe to delete.
+ *
+ * Processes up to 500 docs per run; with normal traffic the backlog clears
+ * in a single run.
+ */
+export const pruneRateLimits = functions.pubsub
+  .schedule("every 24 hours")
+  .onRun(async () => {
+    const cutoff = admin.firestore.Timestamp.fromMillis(Date.now() - 24 * 60 * 60 * 1000);
+    const stale = await db.collection("rate_limits")
+      .where("lastAt", "<", cutoff)
+      .limit(500)
+      .get();
+    if (stale.empty) {
+      functions.logger.info("pruneRateLimits: nothing to delete");
+      return;
+    }
+    const batch = db.batch();
+    stale.docs.forEach((d) => batch.delete(d.ref));
+    await batch.commit();
+    functions.logger.info("pruneRateLimits done", { deleted: stale.size });
+  });

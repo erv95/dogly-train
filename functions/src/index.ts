@@ -72,3 +72,6 @@ export { openDispute, adminResolveDispute } from "./disputes";
 
 // Identity verification — notify all admins on new pending request
 export { onIdVerificationCreate } from "./idVerifications";
+
+// Rate-limit cleanup cron — sweeps stale rate_limits docs daily
+export { pruneRateLimits } from "./_shared";

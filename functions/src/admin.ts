@@ -443,6 +443,8 @@ export const adminGrantCoins = functions.https.onRequest(async (req, res) => {
     // Mirror to security_events so the admin dashboard's audit tab sees this
     // alongside other privileged actions. coin_transactions captures the
     // money flow; security_events captures the WHO/WHEN of admin override.
+    // IP intentionally NOT logged — if an admin account is compromised, the
+    // attacker's proxy IP is low-value forensics and high-value privacy leak.
     await db.collection("security_events").add({
       type: "admin_grant_coins",
       userId,
@@ -450,7 +452,6 @@ export const adminGrantCoins = functions.https.onRequest(async (req, res) => {
       amount: amt,
       newBalance,
       reason: safeReason,
-      ip: req.headers["x-forwarded-for"]?.toString().split(",")[0] ?? null,
       createdAt: admin.firestore.Timestamp.now(),
     });
 

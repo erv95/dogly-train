@@ -37,7 +37,26 @@ service cloud.firestore {
               'isPremium', 'premiumPurchasedAt',
               // Identity verification — only admin (or verified server flow)
               // can flip these. Otherwise users could self-promote to verified.
-              'verified', 'verifiedAt'];
+              'verified', 'verifiedAt',
+              // Email goes through Firebase Auth updateEmail() (re-auth required).
+              // Changing only the Firestore mirror desyncs server triggers.
+              'email',
+              // displayId is server-generated at signup, immutable thereafter.
+              'displayId'];
+    }
+
+    // Keys the client may write inside `users/{uid}.preferences`. Mirrored
+    // in src/services/users.ts (ALLOWED_PREF_KEYS) — keep in sync.
+    function allowedPreferenceKeys() {
+      return ['disableHaptics', 'onboardingCompleted', 'parentType', 'tutorialCompleted'];
+    }
+
+    // True if the update either does not touch `preferences` at all, or
+    // the merged preferences map contains only whitelisted keys. Blocks
+    // a malicious client from writing e.g. `preferences.isPremium = true`.
+    function isPreferenceUpdateOk() {
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny(['preferences'])
+        || request.resource.data.preferences.keys().hasOnly(allowedPreferenceKeys());
     }
 
     // ── users ─────────────────────────────────────────────────────────────────
@@ -76,6 +95,7 @@ service cloud.firestore {
       allow update: if (
         isUser(userId)
         && !request.resource.data.diff(resource.data).affectedKeys().hasAny(protectedUserFields())
+        && isPreferenceUpdateOk()
       ) || (
         isAdmin()
         // Marketplace gate: a provider can only be `isActive=true` if their
@@ -269,8 +289,13 @@ service cloud.firestore {
         && request.resource.data.userId == request.auth.uid
         && progressId.matches(request.auth.uid + '_.+');
 
+      // UPDATE defense-in-depth: enforce both the progressId pattern AND
+      // userId immutability so the rule does not rely solely on the existing
+      // doc's userId field for ownership.
       allow update: if isAuth() && isActive()
-        && resource.data.userId == request.auth.uid;
+        && progressId.matches(request.auth.uid + '_.+')
+        && resource.data.userId == request.auth.uid
+        && request.resource.data.userId == request.auth.uid;
 
       allow delete: if isAdmin();
     }

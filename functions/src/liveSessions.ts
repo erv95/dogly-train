@@ -10,10 +10,12 @@ import {
 const START_WINDOW_MS = 2 * 60 * 60 * 1000;   // ±2h around serviceAt
 const STALE_PING_MS = 30 * 60 * 1000;          // 30 min no ping → mark ended
 
-// Round to nearest ~0.005° (≈500 m at 40° N). Applied to the LAST GPS point of
+// Round to nearest ~0.01° (≈1.1 km at 40° N). Applied to the LAST GPS point of
 // a live session so the polyline doesn't reveal that the provider walked back
 // to their own house at the end (overnight stays, doggy-day-care drop-offs).
-const ANON_GRID = 0.005;
+// 500m grid was too tight for dense Madrid blocks — could still pinpoint the
+// provider's home to a city-block resolution.
+const ANON_GRID = 0.01;
 function snapToGrid(n: number): number {
   return Math.round(n / ANON_GRID) * ANON_GRID;
 }
