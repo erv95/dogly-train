@@ -1,8 +1,9 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, RefreshControl } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, RefreshControl, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { DogStatsProvider } from '../../src/contexts/DogStatsContext';
 import { getDogsByOwner } from '../../src/services/dogs';
@@ -32,11 +33,20 @@ import { colors, spacing, fontSize, fontFamily } from '../../src/theme';
 export default function TodayScreen() {
   const { t } = useTranslation();
   const router = useRouter();
-  const { firebaseUser } = useAuth();
+  const { firebaseUser, userData } = useAuth();
   const [dogs, setDogs] = useState<Dog[]>([]);
   const [selectedDogId, setSelectedDogId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
+
+  // Legacy owners that signed up before Iter 8.4 have no `parentType` set.
+  // Show a one-tap banner so they can activate puppy-mode copy without
+  // forcing them through the gating screen retroactively.
+  const showLegacyParentTypeBanner =
+    !!userData
+    && userData.role === 'owner'
+    && !userData.preferences?.parentType
+    && dogs.length > 0;
 
   const load = useCallback(async (cancelledRef: { current: boolean }) => {
     if (!firebaseUser) return;
@@ -93,6 +103,23 @@ export default function TodayScreen() {
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={colors.primary} />}
         showsVerticalScrollIndicator={false}
       >
+        {showLegacyParentTypeBanner && (
+          <TouchableOpacity
+            style={styles.legacyBanner}
+            onPress={() => router.push('/(auth)/parent-type')}
+            activeOpacity={0.85}
+            accessibilityRole="button"
+            accessibilityLabel={t('owner.legacyParentTypeBannerTitle')}
+          >
+            <Ionicons name="paw" size={18} color={colors.primary} />
+            <View style={{ flex: 1 }}>
+              <Text style={styles.legacyBannerTitle}>{t('owner.legacyParentTypeBannerTitle')}</Text>
+              <Text style={styles.legacyBannerBody}>{t('owner.legacyParentTypeBannerBody')}</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={16} color={colors.primary} />
+          </TouchableOpacity>
+        )}
+
         {loading ? null : selectedDog ? (
           // DogStatsProvider loads stats/reminders/walks ONCE per dog and
           // shares them with the 4 children below (HIGH-8 fix). Without it
@@ -146,4 +173,27 @@ const styles = StyleSheet.create({
   },
   title: { fontSize: fontSize.xxl, fontFamily: fontFamily.bold, color: colors.text, letterSpacing: -0.5 },
   scroll: { paddingBottom: spacing.xxl },
+  legacyBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+    marginHorizontal: spacing.lg,
+    marginBottom: spacing.md,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    backgroundColor: colors.primary + '12',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: colors.primary + '40',
+  },
+  legacyBannerTitle: {
+    fontSize: fontSize.sm,
+    fontFamily: fontFamily.bold,
+    color: colors.text,
+  },
+  legacyBannerBody: {
+    fontSize: fontSize.xs,
+    color: colors.textSecondary,
+    marginTop: 2,
+  },
 });

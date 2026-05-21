@@ -76,6 +76,7 @@ export default function TrainingPrefsScreen() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [step, setStep] = useState(0);
+  const [helpOpen, setHelpOpen] = useState(false);
 
   // Answers (initialized from existing prefs if editing)
   const [ageGroup, setAgeGroup] = useState<DogAgeGroup | null>(null);
@@ -198,6 +199,34 @@ export default function TrainingPrefsScreen() {
       </View>
 
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+        {/* Collapsible help — first-time users often don't know what to put.
+            Tapping reveals 4 short bullets explaining the questionnaire intent. */}
+        <TouchableOpacity
+          style={styles.helpHeader}
+          onPress={() => setHelpOpen((v) => !v)}
+          activeOpacity={0.85}
+          accessibilityRole="button"
+          accessibilityLabel={t('plan.howToFillTitle')}
+        >
+          <Ionicons name="help-circle-outline" size={18} color={colors.primary} />
+          <Text style={styles.helpHeaderText}>{t('plan.howToFillTitle')}</Text>
+          <Ionicons
+            name={helpOpen ? 'chevron-up' : 'chevron-down'}
+            size={16}
+            color={colors.primary}
+          />
+        </TouchableOpacity>
+        {helpOpen && (
+          <View style={styles.helpBody}>
+            {[1, 2, 3, 4].map((n) => (
+              <View key={n} style={styles.helpRow}>
+                <Text style={styles.helpBullet}>•</Text>
+                <Text style={styles.helpText}>{t(`plan.howToFillBullet${n}`)}</Text>
+              </View>
+            ))}
+          </View>
+        )}
+
         {step === 0 && (
           <StepView
             question={t('plan.q_age')}
@@ -428,6 +457,38 @@ const styles = StyleSheet.create({
     padding: spacing.lg,
     paddingBottom: spacing.xxl,
   },
+
+  // Help expandable
+  helpHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.xs,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.md,
+    backgroundColor: colors.primary + '0E',
+    borderRadius: borderRadius.md,
+    borderWidth: 1,
+    borderColor: colors.primary + '30',
+    marginBottom: spacing.md,
+  },
+  helpHeaderText: {
+    flex: 1,
+    fontSize: fontSize.sm,
+    color: colors.primary,
+    fontWeight: '700',
+  },
+  helpBody: {
+    marginTop: -spacing.sm,
+    marginBottom: spacing.md,
+    padding: spacing.md,
+    backgroundColor: colors.primary + '08',
+    borderRadius: borderRadius.md,
+    gap: spacing.xs,
+  },
+  helpRow: { flexDirection: 'row', gap: spacing.xs },
+  helpBullet: { color: colors.primary, fontWeight: '900', width: 12 },
+  helpText: { flex: 1, fontSize: fontSize.xs, color: colors.text, lineHeight: 18 },
+
   stepContainer: { gap: spacing.md },
   question: {
     fontSize: fontSize.xxl,

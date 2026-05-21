@@ -87,6 +87,15 @@ export default function BehaviorGuidesIndexScreen() {
               <Text style={styles.infoText}>{t('guides.noMatch')}</Text>
             </View>
           )}
+          {/* When the user arrives without a dogId param (e.g. tapping into
+              guides from settings or a deep link), encourage them to mark
+              issues on a dog so the personalised matching kicks in next time. */}
+          {!dogId && (
+            <View style={styles.infoBox}>
+              <Ionicons name="paw-outline" size={18} color={colors.primary} />
+              <Text style={styles.infoText}>{t('guides.noDogHint')}</Text>
+            </View>
+          )}
         </View>
 
         {orderedGuides.map((g) => {

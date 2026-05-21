@@ -27,6 +27,7 @@ import {
 } from '../../src/services/emergencyContacts';
 import { EmergencyContact, EmergencyRelationship, ProtocolId } from '../../src/types';
 import { useAuth } from '../../src/contexts/AuthContext';
+import EmptyHint from '../../src/components/EmptyHint';
 import { colors, spacing, fontSize, borderRadius, shadow } from '../../src/theme';
 
 const PROTOCOLS: { id: ProtocolId; emoji: string; tint: string }[] = [
@@ -234,15 +235,15 @@ export default function EmergencyScreen() {
         {loading ? (
           <ActivityIndicator color={colors.error} style={{ marginVertical: spacing.lg }} />
         ) : contacts.length === 0 ? (
-          <TouchableOpacity
-            style={styles.emptyContacts}
-            onPress={() => { setEditing(null); setFormVisible(true); }}
-            activeOpacity={0.85}
-          >
-            <Ionicons name="person-add-outline" size={32} color={colors.primary} />
-            <Text style={styles.emptyText}>{t('emergency.contacts.empty')}</Text>
-            <Text style={styles.emptyCta}>{t('emergency.contacts.add')} →</Text>
-          </TouchableOpacity>
+          <EmptyHint
+            icon="medkit-outline"
+            variant="puppy"
+            size="sm"
+            title={t('emergency.contacts.emptyTitle')}
+            body={t('emergency.contacts.emptyBody')}
+            ctaLabel={t('emergency.contacts.add')}
+            onCta={() => { setEditing(null); setFormVisible(true); }}
+          />
         ) : (
           contacts.map((c) => (
             <ContactRow
@@ -614,20 +615,6 @@ const styles = StyleSheet.create({
   },
   sectionTitle: { flex: 1, fontSize: fontSize.md, fontWeight: '800', color: colors.text },
   addBtn: { padding: 2 },
-
-  emptyContacts: {
-    margin: spacing.md,
-    padding: spacing.lg,
-    backgroundColor: colors.primary + '10',
-    borderRadius: borderRadius.md,
-    borderWidth: 1.5,
-    borderColor: colors.primary + '30',
-    borderStyle: 'dashed',
-    alignItems: 'center',
-    gap: spacing.sm,
-  },
-  emptyText: { fontSize: fontSize.sm, color: colors.text, fontWeight: '600', textAlign: 'center' },
-  emptyCta: { fontSize: fontSize.sm, color: colors.primary, fontWeight: '800' },
 
   contactRow: {
     flexDirection: 'row',
