@@ -208,6 +208,10 @@
     "trainerDesc": "Ofereça seus serviços de adestramento",
     "dateOfBirth": "Data de nascimento",
     "ageError": "Você deve ter pelo menos 18 anos",
+    "ageError_invalid": "Data inválida. Usa o formato DD/MM/AAAA",
+    "ageError_future": "A data não pode ser futura",
+    "ageError_tooYoung": "Deves ter pelo menos 18 anos",
+    "ageError_tooOld": "Verifica a data — o ano parece incorreto",
     "acceptTerms": "Aceito os Termos e Condições",
     "acceptPrivacy": "Aceito a Política de Privacidade",
     "termsRequired": "Você deve aceitar os termos para continuar",
@@ -4430,6 +4434,30 @@
     "monthsPlural": "{{count}} meses",
     "yearSingular": "{{count}} ano",
     "yearsPlural": "{{count}} anos"
+  },
+  "tutorial": {
+    "next": "Seguinte",
+    "finish": "Vamos lá",
+    "step1": {
+      "title": "O teu plano de hoje",
+      "body": "Aqui vês todos os dias o que fazer com o teu cachorro: cursos sugeridos, vacinas, passeios e lembretes."
+    },
+    "step2": {
+      "title": "As tuas moedas",
+      "body": "As moedas servem para identificar a raça por IA ou destacar o teu perfil. Começas com algumas de oferta."
+    },
+    "step3": {
+      "title": "Cães, Cursos e Profissionais",
+      "body": "Os separadores em baixo levam-te à ficha do teu cachorro, aos cursos passo a passo e ao motor de busca de profissionais."
+    },
+    "step4": {
+      "title": "Chats com profissionais",
+      "body": "Quando contactares um treinador ou cuidador, as mensagens aparecerão no separador Chats."
+    },
+    "step5": {
+      "title": "Vamos começar!",
+      "body": "Primeiro passo: adiciona o teu cachorro para adaptarmos o plano à idade dele. Vai ao separador Os Meus Cães."
+    }
   },
   "empty": {
     "dogs": {

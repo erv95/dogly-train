@@ -7,6 +7,7 @@ import { useAuth } from '../../src/contexts/AuthContext';
 import { getDogsByOwner } from '../../src/services/dogs';
 import DailyTipsRail from '../../src/components/DailyTipsRail';
 import EmptyHint from '../../src/components/EmptyHint';
+import CoachmarkTarget from '../../src/components/CoachmarkTarget';
 import { CoinBalancePill } from '../../src/components/CoinBalancePill';
 import { Dog } from '../../src/types';
 import { isPuppy } from '../../src/utils/dogAge';
@@ -68,9 +69,19 @@ export default function TodayScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
+      {/* Header layout: centered title with the coins pill anchored right.
+          We mirror the title width with a same-size empty spacer on the
+          left so the centre lands true regardless of the pill width. */}
       <View style={styles.header}>
-        <Text style={styles.title}>{t('owner.todayTitle')}</Text>
-        <CoinBalancePill />
+        <View style={styles.headerSide} />
+        <View style={styles.headerCenter}>
+          <Text style={styles.title}>{t('owner.todayTitle')}</Text>
+        </View>
+        <View style={styles.headerSide}>
+          <CoachmarkTarget id="today-coins">
+            <CoinBalancePill />
+          </CoachmarkTarget>
+        </View>
       </View>
 
       <ScrollView
@@ -79,11 +90,13 @@ export default function TodayScreen() {
         showsVerticalScrollIndicator={false}
       >
         {loading ? null : selectedDog ? (
-          <DailyTipsRail
-            dog={selectedDog}
-            otherDogs={dogs.filter((d) => d.id !== selectedDog.id)}
-            onChangeDog={setSelectedDogId}
-          />
+          <CoachmarkTarget id="today-rail">
+            <DailyTipsRail
+              dog={selectedDog}
+              otherDogs={dogs.filter((d) => d.id !== selectedDog.id)}
+              onChangeDog={setSelectedDogId}
+            />
+          </CoachmarkTarget>
         ) : (
           <EmptyHint
             icon="paw"
@@ -104,9 +117,15 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.md,
+  },
+  headerSide: {
+    flex: 1,
+    alignItems: 'flex-end',
+  },
+  headerCenter: {
+    alignItems: 'center',
   },
   title: { fontSize: fontSize.xxl, fontFamily: fontFamily.bold, color: colors.text, letterSpacing: -0.5 },
   scroll: { paddingBottom: spacing.xxl },

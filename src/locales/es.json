@@ -208,6 +208,10 @@
     "caretakerDesc": "Ofrece servicios de paseo, guardería o cuidado",
     "dateOfBirth": "Fecha de nacimiento",
     "ageError": "Debes tener al menos 18 años",
+    "ageError_invalid": "Fecha no válida. Usa el formato DD/MM/AAAA",
+    "ageError_future": "La fecha no puede ser futura",
+    "ageError_tooYoung": "Debes tener al menos 18 años",
+    "ageError_tooOld": "Comprueba la fecha — el año parece incorrecto",
     "acceptTerms": "Acepto los Términos y Condiciones",
     "acceptPrivacy": "Acepto la Política de Privacidad",
     "termsRequired": "Debes aceptar los términos para continuar",
@@ -4430,6 +4434,30 @@
     "monthsPlural": "{{count}} meses",
     "yearSingular": "{{count}} año",
     "yearsPlural": "{{count}} años"
+  },
+  "tutorial": {
+    "next": "Siguiente",
+    "finish": "Empezar",
+    "step1": {
+      "title": "Tu plan de hoy",
+      "body": "Aquí ves cada día qué hacer con tu cachorro: cursos sugeridos, vacunas, paseos y recordatorios."
+    },
+    "step2": {
+      "title": "Tus monedas",
+      "body": "Las monedas sirven para identificar la raza por IA o destacar tu perfil. Empiezas con algunas de regalo."
+    },
+    "step3": {
+      "title": "Mis Perros, Cursos y Pros",
+      "body": "Las pestañas de abajo te llevan a la ficha de tu cachorro, los cursos paso a paso y al buscador de profesionales."
+    },
+    "step4": {
+      "title": "Chats con profesionales",
+      "body": "Cuando contactes con un adiestrador o cuidador, los mensajes aparecerán en la pestaña Chats."
+    },
+    "step5": {
+      "title": "¡Vamos allá!",
+      "body": "Lo primero: añade a tu cachorro para que adaptemos el plan a su edad. Empieza ahora desde la pestaña Mis Perros."
+    }
   },
   "empty": {
     "dogs": {

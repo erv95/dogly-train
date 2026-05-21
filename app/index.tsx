@@ -53,6 +53,16 @@ export default function Index() {
         // Account in 30-day soft-delete grace window. Block in-app routes
         // until the user either restores or signs out.
         router.replace('/(auth)/account-pending');
+      } else if (role === 'owner' && !userData.preferences?.parentType) {
+        // Owner-only one-shot gate (Iter 8.4): the puppy/adult/considering
+        // capture screen runs after the first login of any owner that hasn't
+        // answered yet. Driven from here rather than from complete-profile
+        // because complete-profile is only reached on the "recovery" path
+        // (interrupted registration) — a clean new signup goes through
+        // register.tsx → signOut → login.tsx → here, and login.tsx routes
+        // through `/` so this gate is the centralised place to capture the
+        // missing preference for legacy + brand-new owners alike.
+        router.replace('/(auth)/parent-type');
       } else if (role === 'owner') {
         router.replace('/(owner)/today');
       } else if (role === 'trainer') {

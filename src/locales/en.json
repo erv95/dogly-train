@@ -208,6 +208,10 @@
     "trainerDesc": "Offer your training services",
     "dateOfBirth": "Date of birth",
     "ageError": "You must be at least 18 years old",
+    "ageError_invalid": "Invalid date. Use DD/MM/YYYY format",
+    "ageError_future": "Birthdate can't be in the future",
+    "ageError_tooYoung": "You must be at least 18 years old",
+    "ageError_tooOld": "Check the date — the year looks wrong",
     "acceptTerms": "I accept the Terms and Conditions",
     "acceptPrivacy": "I accept the Privacy Policy",
     "termsRequired": "You must accept the terms to continue",
@@ -4429,6 +4433,30 @@
     "monthsPlural": "{{count}} months",
     "yearSingular": "{{count}} year",
     "yearsPlural": "{{count}} years"
+  },
+  "tutorial": {
+    "next": "Next",
+    "finish": "Let's go",
+    "step1": {
+      "title": "Your plan for today",
+      "body": "Here you see every day what to do with your puppy: suggested courses, vaccines, walks and reminders."
+    },
+    "step2": {
+      "title": "Your coins",
+      "body": "Coins are used for AI breed identification or to boost your profile. You start with a few as a welcome gift."
+    },
+    "step3": {
+      "title": "Dogs, Courses and Pros",
+      "body": "The tabs below take you to your puppy's profile, step-by-step courses and the professional finder."
+    },
+    "step4": {
+      "title": "Chats with professionals",
+      "body": "When you contact a trainer or sitter, messages will appear in the Chats tab."
+    },
+    "step5": {
+      "title": "Let's get started!",
+      "body": "First step: add your puppy so we can tailor the plan to their age. Tap the My Dogs tab to begin."
+    }
   },
   "empty": {
     "dogs": {

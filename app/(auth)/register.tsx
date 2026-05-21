@@ -21,6 +21,7 @@ import { recordReferralSignup } from '../../src/services/referrals';
 import { Button, Input } from '../../src/components/ui';
 import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 import { UserRole } from '../../src/types';
+import { formatDateInput, ddmmyyyyToISO, validateUserBirthdate } from '../../src/utils/dateInput';
 
 type Step = 'credentials' | 'role' | 'profile';
 
@@ -47,32 +48,6 @@ export default function RegisterScreen() {
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [acceptPrivacy, setAcceptPrivacy] = useState(false);
 
-  const formatDateInput = (raw: string): string => {
-    const digits = raw.replace(/\D/g, '').slice(0, 8);
-    if (digits.length <= 2) return digits;
-    if (digits.length <= 4) return `${digits.slice(0, 2)}/${digits.slice(2)}`;
-    return `${digits.slice(0, 2)}/${digits.slice(2, 4)}/${digits.slice(4)}`;
-  };
-
-  const ddmmyyyyToISO = (display: string): string => {
-    const parts = display.split('/');
-    if (parts.length !== 3 || parts[2].length !== 4) return '';
-    return `${parts[2]}-${parts[1]}-${parts[0]}`;
-  };
-
-  const validateAge = (dob: string): boolean => {
-    const iso = ddmmyyyyToISO(dob);
-    if (!iso) return false;
-    const birth = new Date(iso);
-    if (isNaN(birth.getTime())) return false;
-    const today = new Date();
-    const age = today.getFullYear() - birth.getFullYear();
-    const monthDiff = today.getMonth() - birth.getMonth();
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
-      return age - 1 >= 16;
-    }
-    return age >= 16;
-  };
 
   const validatePassword = (pwd: string): string | null => {
     if (pwd.length < 8) return t('authErrors.passwordMin8');
@@ -109,8 +84,9 @@ export default function RegisterScreen() {
   const handleRegister = async () => {
     if (!displayName || !dateOfBirth) return;
 
-    if (!validateAge(dateOfBirth)) {
-      Alert.alert(t('common.error'), t('auth.ageError'));
+    const ageErr = validateUserBirthdate(dateOfBirth);
+    if (ageErr) {
+      Alert.alert(t('common.error'), t(`auth.ageError_${ageErr}`, { defaultValue: t('auth.ageError') }));
       return;
     }
 

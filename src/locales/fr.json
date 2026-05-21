@@ -208,6 +208,10 @@
     "trainerDesc": "Proposez vos services d'éducation",
     "dateOfBirth": "Date de naissance",
     "ageError": "Vous devez avoir au moins 18 ans",
+    "ageError_invalid": "Date non valide. Utilise le format JJ/MM/AAAA",
+    "ageError_future": "La date ne peut pas être future",
+    "ageError_tooYoung": "Tu dois avoir au moins 18 ans",
+    "ageError_tooOld": "Vérifie la date — l'année semble incorrecte",
     "acceptTerms": "J'accepte les Conditions Générales",
     "acceptPrivacy": "J'accepte la Politique de Confidentialité",
     "termsRequired": "Vous devez accepter les conditions pour continuer",
@@ -4429,6 +4433,30 @@
     "monthsPlural": "{{count}} mois",
     "yearSingular": "{{count}} an",
     "yearsPlural": "{{count}} ans"
+  },
+  "tutorial": {
+    "next": "Suivant",
+    "finish": "C'est parti",
+    "step1": {
+      "title": "Ton plan d'aujourd'hui",
+      "body": "Tu vois chaque jour quoi faire avec ton chiot : cours suggérés, vaccins, balades et rappels."
+    },
+    "step2": {
+      "title": "Tes pièces",
+      "body": "Les pièces servent à l'identification de la race par IA ou à mettre en avant ton profil. Tu commences avec quelques-unes en cadeau."
+    },
+    "step3": {
+      "title": "Chiens, Cours et Pros",
+      "body": "Les onglets en bas t'amènent à la fiche de ton chiot, aux cours pas à pas et au moteur de recherche de pros."
+    },
+    "step4": {
+      "title": "Chats avec les pros",
+      "body": "Quand tu contactes un éducateur ou un sitter, les messages apparaîtront dans l'onglet Chats."
+    },
+    "step5": {
+      "title": "C'est parti !",
+      "body": "Première étape : ajoute ton chiot pour qu'on adapte le plan à son âge. Va dans l'onglet Mes Chiens."
+    }
   },
   "empty": {
     "dogs": {

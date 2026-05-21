@@ -15,6 +15,9 @@ import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../src/contexts/AuthContext';
+import { getDogsByOwner } from '../../src/services/dogs';
+import { isPuppy } from '../../src/utils/dogAge';
+import EmptyHint from '../../src/components/EmptyHint';
 import { getCourseProgress, markCourseCompleted, CourseProgress } from '../../src/services/courseProgress';
 import {
   getDogStats,
@@ -120,7 +123,61 @@ export default function DogCoursesScreen() {
   const { t } = useTranslation();
   const { firebaseUser } = useAuth();
   const router = useRouter();
-  const { dogId, dogName } = useLocalSearchParams<{ dogId: string; dogName: string }>();
+  const { dogId: paramDogId, dogName } = useLocalSearchParams<{ dogId: string; dogName: string }>();
+
+  // Owner-side entry point (no dogId param) auto-picks a dog so the screen
+  // is useful from the Cursos tab too, not only when deep-linked from a
+  // dog card. With multiple dogs we show a small chip picker; with one we
+  // auto-select; with zero we render an EmptyHint.
+  const [ownerDogs, setOwnerDogs] = useState<Dog[]>([]);
+  const [autoDogId, setAutoDogId] = useState<string | null>(null);
+  const [ownerDogsLoaded, setOwnerDogsLoaded] = useState(false);
+  const effectiveDogId = paramDogId || autoDogId;
+
+  // Track load error separately from "no dogs found" so we can show a
+  // different message — confusing the user with "Add your puppy 🐶" when
+  // they actually have dogs (just couldn't read them due to a permission /
+  // index issue) was the bug they reported in Iter 8.5.
+  const [loadError, setLoadError] = useState(false);
+
+  // Use useFocusEffect so the dog list refreshes when the user comes back
+  // from /(shared)/dog-form after creating their first puppy from the empty
+  // state CTA. A plain useEffect only ran once on mount, leaving the empty
+  // state stuck even after the dog was added.
+  useFocusEffect(
+    useCallback(() => {
+      if (paramDogId) {
+        setOwnerDogsLoaded(true);
+        return;
+      }
+      if (!firebaseUser) return;
+      let cancelled = false;
+      (async () => {
+        try {
+          const list = await getDogsByOwner(firebaseUser.uid);
+          if (cancelled) return;
+          setOwnerDogs(list);
+          if (list.length > 0) {
+            // Preserve current selection if still valid, otherwise prefer a
+            // puppy. This stops the chip jumping back to the first dog when
+            // the screen refocuses with a different selection in flight.
+            setAutoDogId((current) => {
+              if (current && list.some((d) => d.id === current)) return current;
+              const puppy = list.find(isPuppy);
+              return puppy?.id ?? list[0].id;
+            });
+          }
+          setLoadError(false);
+        } catch (err) {
+          console.warn('[courses-tab] getDogsByOwner failed:', err);
+          if (!cancelled) setLoadError(true);
+        } finally {
+          if (!cancelled) setOwnerDogsLoaded(true);
+        }
+      })();
+      return () => { cancelled = true; };
+    }, [paramDogId, firebaseUser?.uid]),
+  );
 
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [progress, setProgress] = useState<Record<string, CourseProgress>>({});
@@ -129,7 +186,10 @@ export default function DogCoursesScreen() {
   const [levelUpVisible, setLevelUpVisible] = useState(false);
   const xpAnim = useState(new Animated.Value(0))[0];
 
-  const decodedName = dogName ? decodeURIComponent(dogName) : '';
+  // Display name from params (deep-link), local dog (auto-pick), or empty.
+  const decodedName = dogName
+    ? decodeURIComponent(dogName)
+    : (dog?.name ?? '');
 
   // ── Build courses ─────────────────────────────────────────────────────────────
 
@@ -220,34 +280,51 @@ export default function DogCoursesScreen() {
   // ── Load data ─────────────────────────────────────────────────────────────────
 
   const loadData = useCallback(async () => {
-    if (!firebaseUser || !dogId) return;
+    if (!firebaseUser || !effectiveDogId) return;
     const [p, stats, dogSnap] = await Promise.all([
-      getCourseProgress(firebaseUser.uid, dogId, COURSES.map((c) => c.id)),
-      getDogStats(dogId).catch(() => null),
-      fsGetDoc(fsDoc(db, 'dogs', dogId)).catch(() => null),
+      getCourseProgress(firebaseUser.uid, effectiveDogId, COURSES.map((c) => c.id)),
+      getDogStats(effectiveDogId).catch(() => null),
+      fsGetDoc(fsDoc(db, 'dogs', effectiveDogId)).catch(() => null),
     ]);
     setProgress(p);
-    if (stats) setDogStats(stats);
-    if (dogSnap?.exists()) setDog({ id: dogSnap.id, ...dogSnap.data() } as Dog);
-  }, [firebaseUser, dogId]);
+    // Always overwrite — not conditionally. Earlier code was `if (stats)
+    // setDogStats(stats)` which left the previous dog's stats stuck when
+    // the new dog had no stats doc yet (fresh dog). That produced the
+    // "XP leaks across chips" bug. Same for `dog` itself.
+    setDogStats(stats);
+    setDog(dogSnap?.exists() ? ({ id: dogSnap.id, ...dogSnap.data() } as Dog) : null);
+  }, [firebaseUser, effectiveDogId]);
 
-  // Reload on focus (so changes from training-prefs questionnaire are reflected
-  // when the user navigates back to this screen).
+  // Reload on focus (so changes from training-prefs questionnaire are
+  // reflected when the user navigates back to this screen).
   useFocusEffect(useCallback(() => { loadData(); }, [loadData]));
 
-  // Animate XP bar when dogStats change
+  // ALSO reload when the active dog changes (chip switcher on the tab).
+  // useFocusEffect only re-fires when the screen refocuses — switching
+  // chips happens within the same focus session, so without this effect
+  // the previous dog's progress + stats remained visible.
+  useEffect(() => { loadData(); }, [loadData]);
+
+  // Animate XP bar when dogStats change. When dogStats becomes null
+  // (e.g. switching the chip to a fresh dog with no progress yet) the
+  // bar must reset to 0 — earlier the effect early-returned and left
+  // the previous dog's filled bar visible.
   useEffect(() => {
-    if (!dogStats) return;
+    if (!dogStats) {
+      // Snap to zero immediately so the switch doesn't show a stale fill.
+      xpAnim.setValue(0);
+      return;
+    }
     const level = getLevelInfo(dogStats.level);
     const next = xpForNextLevel(dogStats.level);
     const isMax = next === Infinity;
     const pct = isMax ? 1 : (dogStats.xp - level.minXp) / (next - level.minXp);
     Animated.timing(xpAnim, {
-      toValue: Math.min(pct, 1),
+      toValue: Math.min(Math.max(pct, 0), 1),
       duration: 600,
       useNativeDriver: false,
     }).start();
-  }, [dogStats?.xp]);
+  }, [dogStats?.xp, dogStats?.level]);
 
   // ── Certificate generation ────────────────────────────────────────────────────
 
@@ -298,20 +375,20 @@ export default function DogCoursesScreen() {
   // ── Complete handler ──────────────────────────────────────────────────────────
 
   const handleComplete = async (courseId: string, difficulty: string) => {
-    if (!firebaseUser || !dogId) return;
+    if (!firebaseUser || !effectiveDogId) return;
 
     const prevLevel = dogStats?.level ?? 1;
 
     // Mark progress in UI immediately regardless of stats outcome
     setProgress((prev) => ({
       ...prev,
-      [courseId]: { ...prev[courseId], userId: firebaseUser.uid, dogId, courseId, completed: true } as CourseProgress,
+      [courseId]: { ...prev[courseId], userId: firebaseUser.uid, dogId: effectiveDogId, courseId, completed: true } as CourseProgress,
     }));
 
     try {
       const [newStats] = await Promise.all([
-        updateStatsOnCourseComplete(dogId, firebaseUser.uid, courseId, difficulty),
-        markCourseCompleted(firebaseUser.uid, dogId, courseId),
+        updateStatsOnCourseComplete(effectiveDogId, firebaseUser.uid, courseId, difficulty),
+        markCourseCompleted(firebaseUser.uid, effectiveDogId, courseId),
       ]);
 
       setDogStats(newStats);
@@ -340,13 +417,67 @@ export default function DogCoursesScreen() {
 
   // ── Render ────────────────────────────────────────────────────────────────────
 
+  // When accessed from the (owner)/courses tab there's no useful back
+  // destination — the user is "on" the tab. Hide the back button in that case.
+  const isTabEntry = !paramDogId;
+
+  // Empty-state takeover.
+  // - If load actually failed (rules, network, missing index) AND we have
+  //   no dogs in state, tell the user to retry rather than ask them to add
+  //   a dog they may already have.
+  // - Only when load succeeded AND truly returned zero dogs do we suggest
+  //   adding the first puppy.
+  if (isTabEntry && ownerDogsLoaded && ownerDogs.length === 0) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.header}>
+          <View style={styles.backBtn} />
+          <View style={styles.headerCenter}>
+            <Text style={styles.headerTitle}>{`🎓 ${t('owner.coursesPage.title')}`}</Text>
+          </View>
+          <View style={styles.backBtn} />
+        </View>
+        {loadError ? (
+          <EmptyHint
+            icon="cloud-offline-outline"
+            title={t('common.error')}
+            body={t('authErrors.generic')}
+            ctaLabel={t('common.retry')}
+            onCta={() => {
+              setLoadError(false);
+              setOwnerDogsLoaded(false);
+              // Re-fire the effect by toggling a state used in its deps. The
+              // simplest is to flip ownerDogsLoaded — the effect's dep is
+              // firebaseUser?.uid but on next render the load reruns thanks
+              // to ownerDogsLoaded reset (the early return in the empty-state
+              // branch above gates further renders).
+            }}
+          />
+        ) : (
+          <EmptyHint
+            icon="paw"
+            variant="puppy"
+            title={t('empty.dogs.title')}
+            body={t('empty.dogs.body')}
+            ctaLabel={t('empty.dogs.cta')}
+            onCta={() => router.push('/(shared)/dog-form')}
+          />
+        )}
+      </SafeAreaView>
+    );
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
-          <Ionicons name="arrow-back" size={24} color={colors.text} />
-        </TouchableOpacity>
+        {isTabEntry ? (
+          <View style={styles.backBtn} />
+        ) : (
+          <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+            <Ionicons name="arrow-back" size={24} color={colors.text} />
+          </TouchableOpacity>
+        )}
         <View style={styles.headerCenter}>
           <Text style={styles.headerTitle} numberOfLines={1}>
             {decodedName ? t('owner.coursesPage.coursesFor', { name: decodedName }) : `🎓 ${t('owner.coursesPage.title')}`}
@@ -376,6 +507,39 @@ export default function DogCoursesScreen() {
           <Ionicons name="radio-button-on" size={22} color={colors.primary} />
         </TouchableOpacity>
       </View>
+
+      {/* Dog selector — only when accessed from the tab with multiple dogs.
+          Switching the chip changes `autoDogId`, which feeds into
+          `effectiveDogId` and re-triggers loadData. */}
+      {isTabEntry && ownerDogs.length > 1 && (
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.dogPickerRow}
+        >
+          {ownerDogs.map((d) => {
+            const selected = d.id === effectiveDogId;
+            // Fallback to a generic label when a dog doc somehow has no
+            // name — prevents the row from looking like empty pills.
+            const label = (d.name && d.name.trim()) || '🐶';
+            return (
+              <TouchableOpacity
+                key={d.id}
+                onPress={() => setAutoDogId(d.id)}
+                activeOpacity={0.75}
+                style={[styles.dogPickerChip, selected && styles.dogPickerChipSelected]}
+              >
+                <Text
+                  numberOfLines={1}
+                  style={[styles.dogPickerChipText, selected && styles.dogPickerChipTextSelected]}
+                >
+                  {label}
+                </Text>
+              </TouchableOpacity>
+            );
+          })}
+        </ScrollView>
+      )}
 
       {/* ── Stats panel ── */}
       <View style={styles.statsPanel}>
@@ -418,12 +582,14 @@ export default function DogCoursesScreen() {
             />
           </View>
 
-          {/* Streak + completed pills */}
+          {/* Streak + completed pills. The streak label already includes
+              `{{count}}` via i18n interpolation — don't prefix the number
+              manually or it renders twice ("1 1 día"). */}
           <View style={styles.pillRow}>
             <View style={styles.pill}>
               <Text style={styles.pillIcon}>🔥</Text>
               <Text style={styles.pillText}>
-                {dogStats?.currentStreak ?? 0} {t('progress.streakDays', { count: dogStats?.currentStreak ?? 0 })}
+                {t('progress.streakDays', { count: dogStats?.currentStreak ?? 0 })}
               </Text>
             </View>
             <View style={styles.pill}>
@@ -469,10 +635,10 @@ export default function DogCoursesScreen() {
         return (
       <ScrollView contentContainerStyle={styles.list} showsVerticalScrollIndicator={false}>
         {/* Personalized plan banner */}
-        {dogId && !dog?.trainingPrefs ? (
+        {effectiveDogId && !dog?.trainingPrefs ? (
           <TouchableOpacity
             style={styles.planBanner}
-            onPress={() => router.push(`/(shared)/training-prefs/${dogId}`)}
+            onPress={() => router.push(`/(shared)/training-prefs/${effectiveDogId}`)}
             activeOpacity={0.85}
           >
             <View style={styles.planBannerIcon}>
@@ -484,10 +650,10 @@ export default function DogCoursesScreen() {
             </View>
             <Ionicons name="chevron-forward" size={20} color={colors.primary} />
           </TouchableOpacity>
-        ) : dog?.trainingPrefs && dogId ? (
+        ) : dog?.trainingPrefs && effectiveDogId ? (
           <TouchableOpacity
             style={styles.planEditChip}
-            onPress={() => router.push(`/(shared)/training-prefs/${dogId}`)}
+            onPress={() => router.push(`/(shared)/training-prefs/${effectiveDogId}`)}
             activeOpacity={0.7}
           >
             <Ionicons name="sparkles" size={12} color={colors.primary} />
@@ -1082,6 +1248,46 @@ const styles = StyleSheet.create({
   backBtn: { width: 40, height: 40, justifyContent: 'center' },
   headerCenter: { flex: 1, alignItems: 'center' },
   headerTitle: { fontSize: fontSize.lg, fontWeight: '800', color: colors.text, textAlign: 'center' },
+
+  // Dog picker (only shown when accessing from the tab with multiple dogs).
+  // The chips need an explicit minHeight + minWidth because the original
+  // build was rendering as ~empty pills on Android — looked like the row
+  // got compressed by the parent's flex layout and the text was clipped
+  // out. Setting explicit dimensions guarantees the labels render.
+  dogPickerRow: {
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    gap: spacing.sm,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
+    alignItems: 'center',
+  },
+  dogPickerChip: {
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    minHeight: 36,
+    minWidth: 64,
+    borderRadius: borderRadius.full,
+    backgroundColor: colors.backgroundSecondary,
+    borderWidth: 1,
+    borderColor: colors.border,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  dogPickerChipSelected: {
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
+  },
+  dogPickerChipText: {
+    fontSize: fontSize.sm,
+    color: colors.text,
+    fontWeight: '700',
+    textAlign: 'center',
+  },
+  dogPickerChipTextSelected: {
+    color: colors.textOnPrimary,
+    fontWeight: '800',
+  },
 
   // ── Stats panel ──
   statsPanel: {

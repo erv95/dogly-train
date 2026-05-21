@@ -20,7 +20,7 @@ import { createUserProfile, signOut } from '../../src/services/auth';
 import { Button, Input } from '../../src/components/ui';
 import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
 import { UserRole } from '../../src/types';
-import { formatDateInput, ddmmyyyyToISO } from '../../src/utils/dateInput';
+import { formatDateInput, ddmmyyyyToISO, validateUserBirthdate } from '../../src/utils/dateInput';
 
 type Step = 'role' | 'profile';
 
@@ -45,20 +45,6 @@ export default function CompleteProfileScreen() {
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [acceptPrivacy, setAcceptPrivacy] = useState(false);
 
-  const validateAge = (dob: string): boolean => {
-    const iso = ddmmyyyyToISO(dob);
-    if (!iso) return false;
-    const birth = new Date(iso);
-    if (isNaN(birth.getTime())) return false;
-    const today = new Date();
-    const age = today.getFullYear() - birth.getFullYear();
-    const monthDiff = today.getMonth() - birth.getMonth();
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
-      return age - 1 >= 16;
-    }
-    return age >= 16;
-  };
-
   const handleComplete = async () => {
     if (!displayName || !dateOfBirth || !role) return;
 
@@ -70,8 +56,9 @@ export default function CompleteProfileScreen() {
       return;
     }
 
-    if (!validateAge(dateOfBirth)) {
-      Alert.alert(t('common.error'), t('auth.ageError'));
+    const ageErr = validateUserBirthdate(dateOfBirth);
+    if (ageErr) {
+      Alert.alert(t('common.error'), t(`auth.ageError_${ageErr}`, { defaultValue: t('auth.ageError') }));
       return;
     }
 

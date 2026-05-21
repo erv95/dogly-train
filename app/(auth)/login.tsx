@@ -48,9 +48,10 @@ export default function LoginScreen() {
     if (userData && role) {
       setLoading(false);
       setAwaitingAuth(false);
-      if (role === 'owner') router.replace('/(owner)/today');
-      else if (role === 'trainer') router.replace('/(trainer)/dashboard');
-      else if (role === 'caretaker') router.replace('/(caretaker)/dashboard');
+      // Route through `/` so the central index gate decides — handles the
+      // owner parent-type one-shot capture (Iter 8.4) without duplicating
+      // that condition here.
+      router.replace('/');
       return;
     }
     if (firebaseUser && !userData) {

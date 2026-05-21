@@ -208,6 +208,10 @@
     "trainerDesc": "Biete deine Trainerdienste an",
     "dateOfBirth": "Geburtsdatum",
     "ageError": "Du musst mindestens 18 Jahre alt sein",
+    "ageError_invalid": "Ungültiges Datum. Format TT/MM/JJJJ verwenden",
+    "ageError_future": "Das Geburtsdatum kann nicht in der Zukunft liegen",
+    "ageError_tooYoung": "Du musst mindestens 18 Jahre alt sein",
+    "ageError_tooOld": "Prüfe das Datum — das Jahr sieht falsch aus",
     "acceptTerms": "Ich akzeptiere die AGB",
     "acceptPrivacy": "Ich akzeptiere die Datenschutzerklärung",
     "termsRequired": "Du musst die Bedingungen akzeptieren",
@@ -4429,6 +4433,30 @@
     "monthsPlural": "{{count}} Monate",
     "yearSingular": "{{count}} Jahr",
     "yearsPlural": "{{count}} Jahre"
+  },
+  "tutorial": {
+    "next": "Weiter",
+    "finish": "Los geht's",
+    "step1": {
+      "title": "Dein Plan für heute",
+      "body": "Hier siehst du jeden Tag, was mit deinem Welpen ansteht: empfohlene Kurse, Impfungen, Spaziergänge und Erinnerungen."
+    },
+    "step2": {
+      "title": "Deine Münzen",
+      "body": "Münzen werden für die KI-Rassenerkennung oder zum Hervorheben deines Profils verwendet. Du startest mit ein paar geschenkten."
+    },
+    "step3": {
+      "title": "Hunde, Kurse und Profis",
+      "body": "Die Tabs unten führen dich zum Profil deines Welpen, zu den Kursen Schritt für Schritt und zur Profi-Suche."
+    },
+    "step4": {
+      "title": "Chats mit Profis",
+      "body": "Wenn du einen Trainer oder Sitter kontaktierst, erscheinen die Nachrichten im Chats-Tab."
+    },
+    "step5": {
+      "title": "Los geht's!",
+      "body": "Erster Schritt: füge deinen Welpen hinzu, damit wir den Plan an sein Alter anpassen. Geh auf den Tab Meine Hunde."
+    }
   },
   "empty": {
     "dogs": {

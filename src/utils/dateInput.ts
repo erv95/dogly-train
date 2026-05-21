@@ -37,3 +37,36 @@ export function isoToDDMMYYYY(iso: string | null | undefined): string {
   if (parts.length !== 3) return '';
   return `${parts[2]}/${parts[1]}/${parts[0]}`;
 }
+
+/** Marketplace minimum age (Spain pet-service marketplace compliance — see
+ *  CLAUDE.md note on 18+ at registration / Designed-for-Families avoidance). */
+export const MIN_USER_AGE_YEARS = 18;
+/** Sanity upper bound. Catches obvious typos like "1010-10-10". */
+export const MAX_USER_AGE_YEARS = 120;
+
+export type AgeValidationError =
+  | 'invalid'      // unparseable date or non-DDMMYYYY
+  | 'future'       // birthdate is in the future
+  | 'tooYoung'     // < MIN_USER_AGE_YEARS
+  | 'tooOld';      // > MAX_USER_AGE_YEARS
+
+/** Validate a DD/MM/YYYY user birthdate. Returns null on success or an
+ *  error code the caller can map to a localized message. Single source of
+ *  truth — replaces the 2 hand-rolled validateAge copies that lived in
+ *  register.tsx and complete-profile.tsx (both checked only >= 16 with no
+ *  upper bound, allowing year-1010 typos through to Firestore).
+ */
+export function validateUserBirthdate(dob: string): AgeValidationError | null {
+  const iso = ddmmyyyyToISO(dob);
+  if (!iso) return 'invalid';
+  const birth = new Date(iso);
+  if (Number.isNaN(birth.getTime())) return 'invalid';
+  const now = new Date();
+  if (birth > now) return 'future';
+  let years = now.getFullYear() - birth.getFullYear();
+  const monthDiff = now.getMonth() - birth.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < birth.getDate())) years -= 1;
+  if (years < MIN_USER_AGE_YEARS) return 'tooYoung';
+  if (years > MAX_USER_AGE_YEARS) return 'tooOld';
+  return null;
+}
