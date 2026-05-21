@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import {
   View,
   Text,
@@ -6,7 +6,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { useLocalSearchParams, useRouter, useNavigation } from 'expo-router';
+import { useLocalSearchParams, useRouter, useNavigation, useFocusEffect } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { getCaretakerById } from '../../../src/services/caretakers';
@@ -71,7 +71,12 @@ export default function CaretakerDetailScreen() {
     }
   }, [id, navigation]);
 
-  useEffect(() => { loadCaretaker(); }, [loadCaretaker]);
+  // useFocusEffect so the profile reloads when the user navigates back
+  // after writing a review — totalReviews/averageRating are denormalised
+  // and would otherwise stay stale until the next cold launch.
+  useFocusEffect(
+    useCallback(() => { loadCaretaker(); }, [loadCaretaker]),
+  );
 
   const isBoosted = useMemo(
     () => isBoostActive(caretaker?.boostedUntil as any),

@@ -85,12 +85,18 @@ export function PublicReviewsList({ providerId, totalReviews }: Props) {
   const visible = expanded ? reviews : reviews.slice(0, INITIAL_VISIBLE);
   const canExpand = reviews.length > INITIAL_VISIBLE;
 
+  // The badge derives from the actual reviews fetched, NOT from the
+  // denormalised `totalReviews` prop. Otherwise the badge can disagree with
+  // the visible list when the user just wrote a review (the screen-level
+  // refetch lags by one navigation cycle even with useFocusEffect).
+  const displayCount = reviews.length;
+
   return (
     <Card style={styles.section}>
       <View style={styles.header}>
         <Text style={styles.sectionTitle}>{t('reviews.publicSectionTitle')}</Text>
-        {totalReviews > 0 && (
-          <Text style={styles.countBadge}>{totalReviews}</Text>
+        {displayCount > 0 && (
+          <Text style={styles.countBadge}>{displayCount}</Text>
         )}
       </View>
 

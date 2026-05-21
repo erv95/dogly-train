@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import {
   View,
   Text,
@@ -6,7 +6,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { useLocalSearchParams, useRouter, useNavigation } from 'expo-router';
+import { useLocalSearchParams, useRouter, useNavigation, useFocusEffect } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { getTrainerById } from '../../../src/services/trainers';
@@ -48,7 +48,13 @@ export default function TrainerDetailScreen() {
     }
   }, [id, navigation]);
 
-  useEffect(() => { loadTrainer(); }, [loadTrainer]);
+  // useFocusEffect (not useEffect) so the screen reloads when the user
+  // navigates back after writing a review — without this the denormalised
+  // totalReviews / averageRating on the user doc stay stale and the badge
+  // / hero counter visually disagrees with the actual review list.
+  useFocusEffect(
+    useCallback(() => { loadTrainer(); }, [loadTrainer]),
+  );
 
   if (loading) return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
