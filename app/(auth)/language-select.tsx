@@ -12,7 +12,7 @@ import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { setLanguage } from '../../src/config/i18n';
-import { colors, spacing, fontSize, borderRadius, shadow } from '../../src/theme';
+import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
 
 const LANGUAGES = [
   { code: 'es', flag: '🇪🇸', label: 'Español',   native: 'Español' },
@@ -142,6 +142,7 @@ const styles = StyleSheet.create({
   logo: { fontSize: 48 },
   appName: {
     fontSize: fontSize.title,
+    fontFamily: fontFamily.bold,
     fontWeight: '800',
     color: colors.text,
     letterSpacing: -1,
@@ -197,11 +198,13 @@ const styles = StyleSheet.create({
   langLabel: {
     flex: 1,
     fontSize: fontSize.lg,
+    fontFamily: fontFamily.semibold,
     fontWeight: '600',
     color: colors.text,
   },
   langLabelSelected: {
     color: colors.primary,
+    fontFamily: fontFamily.bold,
     fontWeight: '800',
   },
   checkBubble: {
@@ -221,15 +224,20 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.full,
     paddingVertical: spacing.md + 2,
     marginTop: spacing.md,
-    ...shadow.md,
+    // No shadow — MIUI/Xiaomi renders it as a hard grey rectangle. Solid fill
+    // + a matching border keeps a crisp edge (same pattern as the cards above).
+    borderWidth: 1.5,
+    borderColor: colors.primary,
   },
   btnDisabled: {
     backgroundColor: colors.borderLight,
+    borderColor: colors.borderLight,
     shadowOpacity: 0,
     elevation: 0,
   },
   btnText: {
     fontSize: fontSize.md,
+    fontFamily: fontFamily.bold,
     fontWeight: '800',
     color: colors.textOnPrimary,
     letterSpacing: 0.3,

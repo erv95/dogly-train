@@ -16,7 +16,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Ionicons } from '@expo/vector-icons';
 import { OnboardingSlide } from '../../src/components/onboarding/OnboardingSlide';
 import { useHaptics } from '../../src/hooks/useHaptics';
-import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
+import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
 
 const { width } = Dimensions.get('window');
 
@@ -169,6 +169,7 @@ const styles = StyleSheet.create({
   ctaText: {
     color: colors.textOnPrimary,
     fontSize: fontSize.md,
+    fontFamily: fontFamily.bold,
     fontWeight: '800',
   },
 });

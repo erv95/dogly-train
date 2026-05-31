@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Button } from '../../src/components/ui';
-import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
+import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
 
 const FEATURES = [
   {
@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: fontSize.title,
+    fontFamily: fontFamily.bold,
     fontWeight: '800',
     color: colors.text,
     marginBottom: spacing.xs,
@@ -152,6 +153,7 @@ const styles = StyleSheet.create({
   },
   featureTitle: {
     fontSize: fontSize.md,
+    fontFamily: fontFamily.bold,
     fontWeight: '700',
     color: colors.text,
     marginBottom: 2,

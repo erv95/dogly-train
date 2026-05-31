@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Animated, Easing, StyleSheet, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { colors, spacing, fontSize } from '../../theme';
+import { colors, spacing, fontSize, fontFamily } from '../../theme';
 
 interface Props {
   /** Ionicons name used as placeholder icon. Will be replaced with Lottie when
@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: fontSize.xxl,
+    fontFamily: fontFamily.bold,
     fontWeight: '800',
     color: colors.text,
     textAlign: 'center',
