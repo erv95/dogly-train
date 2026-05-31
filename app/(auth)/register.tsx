@@ -3,7 +3,6 @@ import {
   View,
   Text,
   StyleSheet,
-  Alert,
   TouchableOpacity,
   ScrollView,
   Switch,
@@ -16,6 +15,7 @@ import { useTranslation } from 'react-i18next';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import i18n from '../../src/config/i18n';
 import { useAuth } from '../../src/contexts/AuthContext';
+import { useAppAlert } from '../../src/contexts/AlertContext';
 import { signUp, signOut, createUserProfile, getAuthErrorKey } from '../../src/services/auth';
 import { recordReferralSignup } from '../../src/services/referrals';
 import { Button, Input } from '../../src/components/ui';
@@ -29,6 +29,7 @@ export default function RegisterScreen() {
   const router = useRouter();
   const { t } = useTranslation();
   const { setUserData } = useAuth();
+  const { showAlert } = useAppAlert();
 
   const [step, setStep] = useState<Step>('credentials');
   const [loading, setLoading] = useState(false);
@@ -62,11 +63,11 @@ export default function RegisterScreen() {
       if (!email || !password || !confirmPassword) return;
       const pwdError = validatePassword(password);
       if (pwdError) {
-        Alert.alert(t('common.error'), pwdError);
+        showAlert(t('common.oops'), pwdError);
         return;
       }
       if (password !== confirmPassword) {
-        Alert.alert(t('common.error'), t('authErrors.passwordsDoNotMatch'));
+        showAlert(t('common.oops'), t('authErrors.passwordsDoNotMatch'));
         return;
       }
       setStep('role');
@@ -86,12 +87,12 @@ export default function RegisterScreen() {
 
     const ageErr = validateUserBirthdate(dateOfBirth);
     if (ageErr) {
-      Alert.alert(t('common.error'), t(`auth.ageError_${ageErr}`, { defaultValue: t('auth.ageError') }));
+      showAlert(t('common.oops'), t(`auth.ageError_${ageErr}`, { defaultValue: t('auth.ageError') }));
       return;
     }
 
     if (!acceptTerms || !acceptPrivacy) {
-      Alert.alert(t('common.error'), t('auth.termsRequired'));
+      showAlert(t('common.oops'), t('auth.termsRequired'));
       return;
     }
 
@@ -114,7 +115,7 @@ export default function RegisterScreen() {
     } catch (error: any) {
       setLoading(false);
       if (error?.code === 'auth/email-already-in-use') {
-        Alert.alert(
+        showAlert(
           t('authErrors.emailAlreadyInUseTitle'),
           t('authErrors.emailAlreadyInUseDesc'),
           [
@@ -124,7 +125,7 @@ export default function RegisterScreen() {
           ],
         );
       } else {
-        Alert.alert(t('common.error'), t(getAuthErrorKey(error)));
+        showAlert(t('common.oops'), t(getAuthErrorKey(error)));
       }
       return;
     }
@@ -155,7 +156,7 @@ export default function RegisterScreen() {
         }
       }
       await signOut();
-      Alert.alert(
+      showAlert(
         t('authErrors.accountCreated'),
         t('authErrors.accountCreatedMsg'),
         [{ text: t('auth.login'), onPress: () => router.replace({ pathname: '/(auth)/login', params: { email } }) }]
@@ -165,7 +166,7 @@ export default function RegisterScreen() {
       // on this device, but the Auth credential remains in Firebase so they
       // can sign in later and the app will resume from complete-profile.
       await signOut().catch(() => {});
-      Alert.alert(
+      showAlert(
         t('authErrors.profileSaveFailedTitle'),
         t('authErrors.profileSaveFailedDesc'),
         [{ text: t('common.ok'), onPress: () => router.replace({ pathname: '/(auth)/login', params: { email } }) }],
@@ -355,6 +356,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: fontSize.xxl,
+    fontFamily: fontFamily.bold,
     fontWeight: '700',
     color: colors.text,
     marginBottom: spacing.xl,
@@ -362,7 +364,6 @@ const styles = StyleSheet.create({
   backLink: {
     fontSize: fontSize.sm,
     color: colors.primary,
-    fontFamily: fontFamily.bold,
     fontWeight: '600',
     marginBottom: spacing.md,
   },
@@ -387,6 +388,7 @@ const styles = StyleSheet.create({
   },
   roleTitle: {
     fontSize: fontSize.lg,
+    fontFamily: fontFamily.bold,
     fontWeight: '700',
     color: colors.text,
     marginBottom: spacing.xs,
@@ -394,7 +396,6 @@ const styles = StyleSheet.create({
   roleDesc: {
     fontSize: fontSize.sm,
     color: colors.textSecondary,
-    fontFamily: fontFamily.bold,
     textAlign: 'center',
   },
   checkboxRow: {

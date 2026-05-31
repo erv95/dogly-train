@@ -3,7 +3,6 @@ import {
   View,
   Text,
   StyleSheet,
-  Alert,
   TouchableOpacity,
   ScrollView,
   Switch,
@@ -16,6 +15,7 @@ import { useTranslation } from 'react-i18next';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import i18n from '../../src/config/i18n';
 import { useAuth } from '../../src/contexts/AuthContext';
+import { useAppAlert } from '../../src/contexts/AlertContext';
 import { createUserProfile, signOut } from '../../src/services/auth';
 import { Button, Input } from '../../src/components/ui';
 import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
@@ -28,6 +28,7 @@ export default function CompleteProfileScreen() {
   const router = useRouter();
   const { t } = useTranslation();
   const { firebaseUser, setUserData } = useAuth();
+  const { showAlert } = useAppAlert();
   const params = useLocalSearchParams<{ uid: string; email: string; displayName: string }>();
 
   // Prefer params (fresh OAuth flow) but fall back to the live Auth user
@@ -50,7 +51,7 @@ export default function CompleteProfileScreen() {
 
     if (!uid || !email) {
       // Should not happen — we got here without an Auth session. Send to login.
-      Alert.alert(t('common.error'), t('authErrors.sessionExpired'), [
+      showAlert(t('common.oops'), t('authErrors.sessionExpired'), [
         { text: t('common.ok'), onPress: () => router.replace('/(auth)/login') },
       ]);
       return;
@@ -58,12 +59,12 @@ export default function CompleteProfileScreen() {
 
     const ageErr = validateUserBirthdate(dateOfBirth);
     if (ageErr) {
-      Alert.alert(t('common.error'), t(`auth.ageError_${ageErr}`, { defaultValue: t('auth.ageError') }));
+      showAlert(t('common.oops'), t(`auth.ageError_${ageErr}`, { defaultValue: t('auth.ageError') }));
       return;
     }
 
     if (!acceptTerms || !acceptPrivacy) {
-      Alert.alert(t('common.error'), t('auth.termsRequired'));
+      showAlert(t('common.oops'), t('auth.termsRequired'));
       return;
     }
 
@@ -93,7 +94,7 @@ export default function CompleteProfileScreen() {
         router.replace('/');
       }
     } catch (error: any) {
-      Alert.alert(t('common.error'), error.message || t('authErrors.generic'));
+      showAlert(t('common.oops'), error.message || t('authErrors.generic'));
     } finally {
       setLoading(false);
     }
@@ -102,7 +103,7 @@ export default function CompleteProfileScreen() {
   const handleCancel = () => {
     // Don't sign out — the user can return later and resume from index.tsx.
     // We just warn them so they understand the questionnaire isn't lost.
-    Alert.alert(
+    showAlert(
       t('auth.completeLater'),
       t('auth.completeLaterDesc'),
       [
@@ -273,8 +274,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: fontSize.xxl,
-    fontWeight: '700',
     fontFamily: fontFamily.bold,
+    fontWeight: '700',
     color: colors.text,
     marginBottom: spacing.xl,
   },
@@ -305,8 +306,8 @@ const styles = StyleSheet.create({
   },
   roleTitle: {
     fontSize: fontSize.lg,
-    fontWeight: '700',
     fontFamily: fontFamily.bold,
+    fontWeight: '700',
     color: colors.text,
     marginBottom: spacing.xs,
   },

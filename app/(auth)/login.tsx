@@ -3,7 +3,6 @@ import {
   View,
   Text,
   StyleSheet,
-  Alert,
   TouchableOpacity,
   Modal,
   KeyboardAvoidingView,
@@ -16,6 +15,7 @@ import * as WebBrowser from 'expo-web-browser';
 import * as AuthSession from 'expo-auth-session';
 import { signIn, signOut, resetPassword, resendVerificationEmail, firebaseGoogleSignIn, userProfileExists, getAuthErrorKey } from '../../src/services/auth';
 import { useAuth } from '../../src/contexts/AuthContext';
+import { useAppAlert } from '../../src/contexts/AlertContext';
 import { Button, Input } from '../../src/components/ui';
 import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
 
@@ -25,6 +25,7 @@ export default function LoginScreen() {
   const router = useRouter();
   const { t } = useTranslation();
   const { firebaseUser, userData, role, initialized } = useAuth();
+  const { showAlert } = useAppAlert();
   const params = useLocalSearchParams<{ email?: string }>();
   // Pre-fill email when arriving from a "your account already exists" prompt.
   const [email, setEmail] = useState(params.email || '');
@@ -72,7 +73,7 @@ export default function LoginScreen() {
       if (awaitingAuth) {
         setLoading(false);
         setAwaitingAuth(false);
-        Alert.alert(t('common.error'), t('authErrors.generic'));
+        showAlert(t('common.oops'), t('authErrors.generic'));
       }
     }, 10000);
     return () => clearTimeout(timeout);
@@ -107,7 +108,7 @@ export default function LoginScreen() {
       setAwaitingAuth(true);
     } catch (error: any) {
       setLoading(false);
-      Alert.alert(t('common.error'), t(getAuthErrorKey(error)));
+      showAlert(t('common.oops'), t(getAuthErrorKey(error)));
     }
   }, [router, t]);
 
@@ -132,19 +133,19 @@ export default function LoginScreen() {
       if (!credential.user.emailVerified) {
         await signOut();
         setLoading(false);
-        Alert.alert(
+        showAlert(
           t('authErrors.emailNotVerified'),
           t('authErrors.checkInboxVerify'),
           [
-            { text: 'OK', style: 'cancel' },
+            { text: t('common.ok'), style: 'cancel' },
             {
               text: t('authErrors.resendEmail'),
               onPress: async () => {
                 try {
                   await resendVerificationEmail(email, password);
-                  Alert.alert(t('authErrors.emailSent'), t('authErrors.checkInbox'));
+                  showAlert(t('authErrors.emailSent'), t('authErrors.checkInbox'));
                 } catch {
-                  Alert.alert(t('common.error'), t('authErrors.generic'));
+                  showAlert(t('common.oops'), t('authErrors.generic'));
                 }
               },
             },
@@ -156,7 +157,7 @@ export default function LoginScreen() {
       setAwaitingAuth(true);
     } catch (error: any) {
       setLoading(false);
-      Alert.alert(t('common.error'), t(getAuthErrorKey(error)));
+      showAlert(t('common.oops'), t(getAuthErrorKey(error)));
     }
   };
 
@@ -166,11 +167,11 @@ export default function LoginScreen() {
     setResetLoading(true);
     try {
       await resetPassword(resetEmail);
-      Alert.alert(t('common.ok'), t('auth.resetPasswordSent'));
+      showAlert(t('common.ok'), t('auth.resetPasswordSent'));
       setShowResetModal(false);
       setResetEmail('');
     } catch (error: any) {
-      Alert.alert(t('common.error'), t(getAuthErrorKey(error)));
+      showAlert(t('common.oops'), t(getAuthErrorKey(error)));
     } finally {
       setResetLoading(false);
     }
@@ -294,8 +295,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: fontSize.xxl,
-    fontWeight: '700',
     fontFamily: fontFamily.bold,
+    fontWeight: '700',
     color: colors.text,
     marginBottom: spacing.xl,
   },
@@ -352,8 +353,8 @@ const styles = StyleSheet.create({
   },
   modalTitle: {
     fontSize: fontSize.xl,
-    fontWeight: '700',
     fontFamily: fontFamily.bold,
+    fontWeight: '700',
     color: colors.text,
     marginBottom: spacing.sm,
   },
