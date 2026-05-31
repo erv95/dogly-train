@@ -59,3 +59,10 @@ assets/assets/
 
 # Personal assets (not part of the app source)
 Imágenes/
+
+# Local debug logs & temp artifacts (not versioned)
+*-debug.log
+firebase-debug.log
+storage-inventory-*.txt
+*.bak
+*.bak.*
