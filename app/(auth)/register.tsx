@@ -50,6 +50,8 @@ export default function RegisterScreen() {
   const [acceptPrivacy, setAcceptPrivacy] = useState(false);
 
 
+  const isValidEmail = (e: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.trim());
+
   const validatePassword = (pwd: string): string | null => {
     if (pwd.length < 8) return t('authErrors.passwordMin8');
     if (!/[A-Z]/.test(pwd)) return t('authErrors.passwordUppercase');
@@ -68,6 +70,10 @@ export default function RegisterScreen() {
       }
       if (password !== confirmPassword) {
         showAlert(t('common.oops'), t('authErrors.passwordsDoNotMatch'));
+        return;
+      }
+      if (!isValidEmail(email)) {
+        showAlert(t('common.oops'), t('authErrors.invalidEmail'));
         return;
       }
       setStep('role');
