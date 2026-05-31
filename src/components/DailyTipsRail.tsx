@@ -19,7 +19,7 @@ import {
   getGreetingSlot,
   DailyRecommendation,
 } from '../services/dailyRecommendations';
-import { colors, spacing, fontSize, borderRadius, shadow } from '../theme';
+import { colors, spacing, fontSize, borderRadius, fontFamily } from '../theme';
 
 interface Props {
   /** Pre-loaded dog (avoids the rail querying Firestore for it). */
@@ -373,6 +373,7 @@ const styles = StyleSheet.create({
   },
   greeting: {
     fontSize: fontSize.lg,
+    fontFamily: fontFamily.bold,
     fontWeight: '900',
     color: colors.text,
     textAlign: 'center',
@@ -382,6 +383,7 @@ const styles = StyleSheet.create({
     color: colors.textSecondary,
     marginTop: 2,
     textAlign: 'center',
+    fontFamily: fontFamily.semibold,
     fontWeight: '600',
   },
   dogChipsRow: {
@@ -399,7 +401,7 @@ const styles = StyleSheet.create({
     maxWidth: 120,
   },
   dogChipActive: { backgroundColor: colors.primary, borderColor: colors.primary },
-  dogChipText: { fontSize: 11, fontWeight: '700', color: colors.text },
+  dogChipText: { fontSize: 11, fontFamily: fontFamily.bold, fontWeight: '700', color: colors.text },
   dogChipTextActive: { color: '#fff' },
 
   loadingBox: { padding: spacing.lg, alignItems: 'center' },
@@ -427,7 +429,6 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     padding: spacing.md,
     gap: 6,
-    ...shadow.sm,
   },
   // Variant for "passive" cards (progress summary, daily tip): solid white background
   // with a thick coloured top edge that doubles as a visual tag — avoids the muddy
@@ -442,10 +443,11 @@ const styles = StyleSheet.create({
   },
   cardLabel: {
     fontSize: 10,
+    fontFamily: fontFamily.bold,
     fontWeight: '800',
     textTransform: 'uppercase',
     letterSpacing: 0.5,
   },
-  cardTitle: { fontSize: fontSize.sm, fontWeight: '700', color: colors.text, lineHeight: 18 },
-  cardCta: { fontSize: fontSize.xs, color: colors.primary, fontWeight: '700', marginTop: 'auto' },
+  cardTitle: { fontSize: fontSize.sm, fontFamily: fontFamily.bold, fontWeight: '700', color: colors.text, lineHeight: 18 },
+  cardCta: { fontSize: fontSize.xs, fontFamily: fontFamily.bold, color: colors.primary, fontWeight: '700', marginTop: 'auto' },
 });
