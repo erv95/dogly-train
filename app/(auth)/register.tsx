@@ -19,7 +19,7 @@ import { useAuth } from '../../src/contexts/AuthContext';
 import { signUp, signOut, createUserProfile, getAuthErrorKey } from '../../src/services/auth';
 import { recordReferralSignup } from '../../src/services/referrals';
 import { Button, Input } from '../../src/components/ui';
-import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
+import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
 import { UserRole } from '../../src/types';
 import { formatDateInput, ddmmyyyyToISO, validateUserBirthdate } from '../../src/utils/dateInput';
 
@@ -362,6 +362,7 @@ const styles = StyleSheet.create({
   backLink: {
     fontSize: fontSize.sm,
     color: colors.primary,
+    fontFamily: fontFamily.bold,
     fontWeight: '600',
     marginBottom: spacing.md,
   },
@@ -378,7 +379,7 @@ const styles = StyleSheet.create({
   },
   roleCardSelected: {
     borderColor: colors.primary,
-    backgroundColor: colors.primaryLight + '20',
+    backgroundColor: colors.primary + '20',
   },
   roleEmoji: {
     fontSize: 48,
@@ -393,6 +394,7 @@ const styles = StyleSheet.create({
   roleDesc: {
     fontSize: fontSize.sm,
     color: colors.textSecondary,
+    fontFamily: fontFamily.bold,
     textAlign: 'center',
   },
   checkboxRow: {

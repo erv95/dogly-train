@@ -135,6 +135,7 @@ const styles = StyleSheet.create({
   skip: {
     fontSize: fontSize.md,
     color: colors.textSecondary,
+    fontFamily: fontFamily.semibold,
     fontWeight: '600',
   },
   dotsRow: {

@@ -18,7 +18,7 @@ import i18n from '../../src/config/i18n';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { createUserProfile, signOut } from '../../src/services/auth';
 import { Button, Input } from '../../src/components/ui';
-import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
+import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
 import { UserRole } from '../../src/types';
 import { formatDateInput, ddmmyyyyToISO, validateUserBirthdate } from '../../src/utils/dateInput';
 
@@ -274,6 +274,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: fontSize.xxl,
     fontWeight: '700',
+    fontFamily: fontFamily.bold,
     color: colors.text,
     marginBottom: spacing.xl,
   },
@@ -296,7 +297,7 @@ const styles = StyleSheet.create({
   },
   roleCardSelected: {
     borderColor: colors.primary,
-    backgroundColor: colors.primaryLight + '20',
+    backgroundColor: colors.primary + '20',
   },
   roleEmoji: {
     fontSize: 48,
@@ -305,6 +306,7 @@ const styles = StyleSheet.create({
   roleTitle: {
     fontSize: fontSize.lg,
     fontWeight: '700',
+    fontFamily: fontFamily.bold,
     color: colors.text,
     marginBottom: spacing.xs,
   },

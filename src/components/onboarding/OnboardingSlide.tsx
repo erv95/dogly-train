@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: fontSize.md,
+    fontFamily: fontFamily.regular,
     color: colors.textSecondary,
     textAlign: 'center',
     lineHeight: 22,

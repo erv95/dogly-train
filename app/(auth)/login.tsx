@@ -17,7 +17,7 @@ import * as AuthSession from 'expo-auth-session';
 import { signIn, signOut, resetPassword, resendVerificationEmail, firebaseGoogleSignIn, userProfileExists, getAuthErrorKey } from '../../src/services/auth';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { Button, Input } from '../../src/components/ui';
-import { colors, spacing, fontSize, borderRadius } from '../../src/theme';
+import { colors, spacing, fontSize, borderRadius, fontFamily } from '../../src/theme';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -295,6 +295,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: fontSize.xxl,
     fontWeight: '700',
+    fontFamily: fontFamily.bold,
     color: colors.text,
     marginBottom: spacing.xl,
   },
@@ -352,6 +353,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: fontSize.xl,
     fontWeight: '700',
+    fontFamily: fontFamily.bold,
     color: colors.text,
     marginBottom: spacing.sm,
   },
