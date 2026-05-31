@@ -112,6 +112,17 @@ async function purgeUserAccount(userId: string): Promise<void> {
   remindersSnapshot.forEach((d) => batch3b.delete(d.ref));
   if (!walksSnapshot.empty || !remindersSnapshot.empty) await batch3b.commit();
 
+  // 3c. AI breed identification records (GDPR right-to-erasure). The uploaded
+  // photos themselves live under breed_uploads/<uid>/ and are removed in the
+  // Storage cleanup step below.
+  const breedSnapshot = await db
+    .collection("breed_identifications")
+    .where("userId", "==", userId)
+    .get();
+  const batch3c = db.batch();
+  breedSnapshot.forEach((d) => batch3c.delete(d.ref));
+  if (!breedSnapshot.empty) await batch3c.commit();
+
   // 4. Anonymize participant info in shared chats
   const chatsSnapshot = await db
     .collection("chats")
@@ -132,6 +143,7 @@ async function purgeUserAccount(userId: string): Promise<void> {
     deleteStorageFolder(`users/${userId}/`),
     deleteStorageFolder(`dogs/${userId}/`),
     deleteStorageFolder(`certs/${userId}/`),
+    deleteStorageFolder(`breed_uploads/${userId}/`),
   ]);
 
   // ── Identity deletion (last) ──────────────────────────────────────────
