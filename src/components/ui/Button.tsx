@@ -7,7 +7,7 @@ import {
   ViewStyle,
   TextStyle,
 } from 'react-native';
-import { colors, borderRadius, fontSize, spacing } from '../../theme';
+import { colors, borderRadius, fontSize, spacing, fontFamily } from '../../theme';
 
 interface ButtonProps {
   title: string;
@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
   text: {
+    fontFamily: fontFamily.semibold,
     fontWeight: '600',
   },
   text_primary: {

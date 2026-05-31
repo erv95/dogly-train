@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
-import { colors, borderRadius } from '../../theme';
+import { colors, borderRadius, fontFamily } from '../../theme';
 
 interface AvatarProps {
   uri: string | null;
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
   },
   initials: {
     color: colors.textOnPrimary,
+    fontFamily: fontFamily.bold,
     fontWeight: '700',
   },
 });

@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { colors, borderRadius, fontSize, spacing } from '../../theme';
+import { colors, borderRadius, fontSize, spacing, fontFamily } from '../../theme';
 
 interface InputProps extends TextInputProps {
   label?: string;
@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: fontSize.sm,
+    fontFamily: fontFamily.medium,
     fontWeight: '500',
     color: colors.text,
     marginBottom: spacing.xs,
