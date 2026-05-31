@@ -10,19 +10,16 @@
       "Bash(git ls-files:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-
       "Bash(npx tsc --noEmit:*)",
       "Bash(npm run build:*)",
       "Bash(npm run serve:*)",
       "Bash(npm run lint:*)",
       "Bash(npm test:*)",
       "Bash(npm run test:*)",
-
       "Bash(firebase functions:log:*)",
       "Bash(firebase functions:list:*)",
       "Bash(firebase projects:list:*)",
       "Bash(firebase use:*)",
-
       "Bash(ls:*)",
       "Bash(pwd:*)",
       "Bash(echo:*)",
@@ -31,10 +28,12 @@
       "Bash(cat firebase.json:*)",
       "Bash(wc -l:*)",
       "Bash(find:*)",
-
       "Bash(cd functions && npm run build:*)",
       "Bash(cd functions && npx tsc:*)",
-      "Bash(cd functions && npm run lint:*)"
+      "Bash(cd functions && npm run lint:*)",
+      "Bash(node scripts/check-locale-parity.mjs)",
+      "Bash(grep -E \"\\\\.\\(tsx|ts\\)$\")",
+      "Bash(xargs grep -l \"useFocusEffect\")"
     ],
     "deny": [
       "Bash(rm -rf:*)",
