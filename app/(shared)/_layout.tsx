@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Stack, useRouter } from 'expo-router';
 import { colors } from '../../src/theme';
 import { useAuth } from '../../src/contexts/AuthContext';
+import ErrorBoundary from '../../src/components/ErrorBoundary';
 
 export default function SharedLayout() {
   const { initialized, firebaseUser } = useAuth();
@@ -14,6 +15,7 @@ export default function SharedLayout() {
   }, [initialized, firebaseUser]);
 
   return (
+    <ErrorBoundary>
     <Stack
       screenOptions={{
         headerShown: true,
@@ -54,5 +56,6 @@ export default function SharedLayout() {
       <Stack.Screen name="referrals" options={{ title: 'Referidos' }} />
       <Stack.Screen name="live-session/[bookingId]" options={{ title: 'En vivo' }} />
     </Stack>
+    </ErrorBoundary>
   );
 }

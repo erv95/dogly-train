@@ -8,6 +8,7 @@ import { colors } from '../../src/theme';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { subscribeToUnreadCount } from '../../src/services/chats';
 import EmailVerificationBanner from '../../src/components/EmailVerificationBanner';
+import ErrorBoundary from '../../src/components/ErrorBoundary';
 
 export default function TrainerLayout() {
   const { t } = useTranslation();
@@ -28,6 +29,7 @@ export default function TrainerLayout() {
   }, [initialized, role]);
 
   return (
+    <ErrorBoundary>
     <View style={{ flex: 1, backgroundColor: colors.background }}>
       <SafeAreaView edges={['top']} style={{ backgroundColor: colors.warning }}>
         <EmailVerificationBanner />
@@ -95,5 +97,6 @@ export default function TrainerLayout() {
     </Tabs>
       </View>
     </View>
+    </ErrorBoundary>
   );
 }

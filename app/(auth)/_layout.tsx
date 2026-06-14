@@ -1,7 +1,9 @@
 import { Stack } from 'expo-router';
+import ErrorBoundary from '../../src/components/ErrorBoundary';
 
 export default function AuthLayout() {
   return (
+    <ErrorBoundary>
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="language-select" />
       <Stack.Screen name="onboarding" />
@@ -12,5 +14,6 @@ export default function AuthLayout() {
       <Stack.Screen name="complete-profile" />
       <Stack.Screen name="parent-type" />
     </Stack>
+    </ErrorBoundary>
   );
 }

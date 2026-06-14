@@ -1,5 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { router } from 'expo-router';
 import { colors, spacing, fontSize, borderRadius } from '../theme';
 import i18n from '../config/i18n';
 
@@ -24,6 +25,15 @@ export default class ErrorBoundary extends Component<Props, State> {
 
   handleRestart = () => {
     this.setState({ hasError: false });
+    // Navigate somewhere safe instead of just re-rendering the screen that threw
+    // (which would immediately re-crash and re-blank). The index gate at '/'
+    // re-routes to the right home for the user's role. Guarded in case the
+    // navigator isn't mounted yet — clearing hasError already happened above.
+    try {
+      router.replace('/');
+    } catch {
+      // navigator not ready — state reset is enough
+    }
   };
 
   render() {

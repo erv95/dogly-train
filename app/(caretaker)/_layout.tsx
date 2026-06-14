@@ -8,6 +8,7 @@ import { colors } from '../../src/theme';
 import { useAuth } from '../../src/contexts/AuthContext';
 import { subscribeToUnreadCount } from '../../src/services/chats';
 import EmailVerificationBanner from '../../src/components/EmailVerificationBanner';
+import ErrorBoundary from '../../src/components/ErrorBoundary';
 
 export default function CaretakerLayout() {
   const { t } = useTranslation();
@@ -28,6 +29,7 @@ export default function CaretakerLayout() {
   }, [initialized, role]);
 
   return (
+    <ErrorBoundary>
     <View style={{ flex: 1, backgroundColor: colors.background }}>
       <SafeAreaView edges={['top']} style={{ backgroundColor: colors.warning }}>
         <EmailVerificationBanner />
@@ -95,5 +97,6 @@ export default function CaretakerLayout() {
     </Tabs>
       </View>
     </View>
+    </ErrorBoundary>
   );
 }

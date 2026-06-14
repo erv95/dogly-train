@@ -9,6 +9,7 @@ import { useAuth } from '../../src/contexts/AuthContext';
 import { subscribeToUnreadCount } from '../../src/services/chats';
 import { updateUserPreferences } from '../../src/services/users';
 import EmailVerificationBanner from '../../src/components/EmailVerificationBanner';
+import ErrorBoundary from '../../src/components/ErrorBoundary';
 import { CoachmarkProvider, useCoachmark, CoachmarkStepDef } from '../../src/contexts/CoachmarkContext';
 import CoachmarkOverlay from '../../src/components/CoachmarkOverlay';
 
@@ -94,6 +95,7 @@ export default function OwnerLayout() {
   }, [firebaseUser?.uid]);
 
   return (
+    <ErrorBoundary>
     <CoachmarkProvider>
     <View style={{ flex: 1, backgroundColor: colors.background }}>
       <SafeAreaView edges={['top']} style={{ backgroundColor: colors.warning }}>
@@ -184,5 +186,6 @@ export default function OwnerLayout() {
       </View>
     </View>
     </CoachmarkProvider>
+    </ErrorBoundary>
   );
 }
