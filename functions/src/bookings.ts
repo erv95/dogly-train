@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { db, bucket } from "./_shared";
+import { db, bucket, enforceRateLimit } from "./_shared";
 import { sendPush, sendSystemMessage } from "./notifications";
 
 // ── Constants (mirror src/config/booking.ts) ─────────────────────────────────
@@ -185,49 +185,14 @@ export const createBooking = functions
     }
     const safeNotes = typeof notes === "string" ? notes.slice(0, NOTES_MAX) : "";
 
-    // Rate-limit (per-user, short window): 3 attempts / 60s. Catches rapid
-    // double-tap or accidental loops. Mirrors coins.ts:67-84.
-    const rlRef = db.collection("rate_limits").doc(`booking_${ownerUid}`);
-    const rlSnap = await rlRef.get();
-    const now = Date.now();
-    if (rlSnap.exists) {
-      const lastAt = rlSnap.data()?.lastAt?.toDate?.()?.getTime?.() ?? 0;
-      const count = rlSnap.data()?.count ?? 0;
-      if (now - lastAt < 60_000 && count >= 3) {
-        res.status(429).json({ error: "rate_limited" });
-        return;
-      }
-      if (now - lastAt >= 60_000) {
-        await rlRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
-      } else {
-        await rlRef.update({ count: admin.firestore.FieldValue.increment(1) });
-      }
-    } else {
-      await rlRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
-    }
+    // Rate-limit via the atomic _shared helper (transactional read+increment).
+    // Per-user 3/60s catches rapid double-tap/loops; per-(owner,provider)
+    // 15/1h stops calendar-probing a single victim provider. Both respond
+    // {error:"rate_limited"} — same as before.
+    if (!(await enforceRateLimit(res, `booking_${ownerUid}`, 3, 60))) return;
+    if (!(await enforceRateLimit(res, `booking_pair_${ownerUid}_${providerId}`, 15, 3600))) return;
 
-    // Rate-limit (per-(owner, provider), long window): 15 attempts / 1h.
-    // Stops calendar-probing attacks where one user keeps trying slots
-    // against a single victim provider to discover their availability
-    // pattern. The per-user limit above doesn't catch this because 3/60s
-    // resets — the cap PER-VICTIM does.
-    const pairRlRef = db.collection("rate_limits").doc(`booking_pair_${ownerUid}_${providerId}`);
-    const pairSnap = await pairRlRef.get();
-    if (pairSnap.exists) {
-      const lastAt = pairSnap.data()?.lastAt?.toDate?.()?.getTime?.() ?? 0;
-      const count = pairSnap.data()?.count ?? 0;
-      if (now - lastAt < 3_600_000 && count >= 15) {
-        res.status(429).json({ error: "rate_limited" });
-        return;
-      }
-      if (now - lastAt >= 3_600_000) {
-        await pairRlRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
-      } else {
-        await pairRlRef.update({ count: admin.firestore.FieldValue.increment(1) });
-      }
-    } else {
-      await pairRlRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
-    }
+    const now = Date.now();
 
     // Compute slot ids
     const slotIds = slotIdsForRange(serviceAtDate.getTime(), durationMinutes);
