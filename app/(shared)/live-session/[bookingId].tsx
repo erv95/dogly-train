@@ -20,6 +20,7 @@ import * as ImagePicker from 'expo-image-picker';
 import * as ImageManipulator from 'expo-image-manipulator';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAuth } from '../../../src/contexts/AuthContext';
+import { useAppAlert } from '../../../src/contexts/AlertContext';
 import {
   startLiveSession,
   endLiveSession,
@@ -81,6 +82,7 @@ export default function LiveSessionScreen() {
   const { t } = useTranslation();
   const router = useRouter();
   const { firebaseUser } = useAuth();
+  const { showAlert } = useAppAlert();
   const haptics = useHaptics();
   // Window dimensions are recomputed on rotation / foldable / split-screen.
   const { width: SCREEN_W } = useWindowDimensions();
@@ -106,15 +108,23 @@ export default function LiveSessionScreen() {
     if (!bookingId) return;
     let unsub: (() => void) | null = null;
     (async () => {
-      // First check if a session already exists
-      const initial = await getLiveSessionOnce(bookingId);
-      setSession(initial);
-      setLoading(false);
-      unsub = subscribeToLiveSession(bookingId, ({ session, path, photos }) => {
-        setSession(session);
-        setPath(path);
-        setPhotos(photos);
-      });
+      try {
+        // First check if a session already exists
+        const initial = await getLiveSessionOnce(bookingId);
+        setSession(initial);
+        unsub = subscribeToLiveSession(bookingId, ({ session, path, photos }) => {
+          setSession(session);
+          setPath(path);
+          setPhotos(photos);
+        });
+      } catch (err) {
+        // Offline, or permission-denied on an expired/cancelled booking opened
+        // via deep link. Without this the spinner below would hang forever.
+        console.error('Error loading live session:', err);
+        showAlert(t('common.oops'), t('errors.loadFailed'));
+      } finally {
+        setLoading(false);
+      }
     })();
     return () => { if (unsub) unsub(); };
   }, [bookingId]);

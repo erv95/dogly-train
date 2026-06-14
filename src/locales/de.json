@@ -1,6 +1,7 @@
 {
   "errors": {
     "generic": "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
+    "loadFailed": "Die Informationen konnten nicht geladen werden. Prüfe deine Verbindung und versuche es erneut.",
     "unauthenticated": "Deine Sitzung ist abgelaufen. Bitte erneut anmelden.",
     "forbidden": "Du hast dafür keine Berechtigung.",
     "rateLimited": "Zu viele Anfragen. Warte einen Moment und versuche es erneut.",

@@ -1,6 +1,7 @@
 {
   "errors": {
     "generic": "Une erreur est survenue. Réessaie.",
+    "loadFailed": "Impossible de charger les informations. Vérifie ta connexion et réessaie.",
     "unauthenticated": "Ta session a expiré. Reconnecte-toi.",
     "forbidden": "Tu n'as pas la permission de faire ça.",
     "rateLimited": "Trop de requêtes. Attends un moment et réessaie.",

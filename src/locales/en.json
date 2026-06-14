@@ -1,6 +1,7 @@
 {
   "errors": {
     "generic": "Something went wrong. Please try again.",
+    "loadFailed": "Couldn't load the information. Check your connection and try again.",
     "unauthenticated": "Your session has expired. Please sign in again.",
     "forbidden": "You don't have permission to do this.",
     "rateLimited": "Too many requests. Wait a moment and try again.",

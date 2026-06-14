@@ -1,6 +1,7 @@
 {
   "errors": {
     "generic": "Algo ha salido mal. Inténtalo de nuevo.",
+    "loadFailed": "No se pudo cargar la información. Comprueba tu conexión e inténtalo de nuevo.",
     "unauthenticated": "Tu sesión ha expirado. Vuelve a iniciar sesión.",
     "forbidden": "No tienes permiso para hacer esto.",
     "rateLimited": "Has hecho demasiadas peticiones. Espera un poco y vuelve a intentarlo.",

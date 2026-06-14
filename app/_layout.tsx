@@ -12,6 +12,7 @@ import {
 } from '@expo-google-fonts/inter';
 import { AuthProvider } from '../src/contexts/AuthContext';
 import { useAuth } from '../src/contexts/AuthContext';
+import { AlertProvider } from '../src/contexts/AlertContext';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import { registerPushToken } from '../src/services/notifications';
 import '../src/config/i18n';
@@ -91,17 +92,19 @@ export default function RootLayout() {
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
           <PushTokenRegistrar />
-          <Stack screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="index" />
-            <Stack.Screen name="(auth)" />
-            <Stack.Screen name="(owner)" />
-            <Stack.Screen name="(trainer)" />
-            <Stack.Screen name="(shared)" />
-            <Stack.Screen
-              name="security"
-              options={{ headerShown: true, title: 'Seguridad' }}
-            />
-          </Stack>
+          <AlertProvider>
+            <Stack screenOptions={{ headerShown: false }}>
+              <Stack.Screen name="index" />
+              <Stack.Screen name="(auth)" />
+              <Stack.Screen name="(owner)" />
+              <Stack.Screen name="(trainer)" />
+              <Stack.Screen name="(shared)" />
+              <Stack.Screen
+                name="security"
+                options={{ headerShown: true, title: 'Seguridad' }}
+              />
+            </Stack>
+          </AlertProvider>
         </AuthProvider>
       </QueryClientProvider>
     </ErrorBoundary>
