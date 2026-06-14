@@ -86,23 +86,37 @@ export async function enforceRateLimit(
   windowSec: number,
 ): Promise<boolean> {
   const ref = db.collection("rate_limits").doc(key);
-  const snap = await ref.get();
-  const now = Date.now();
   const windowMs = windowSec * 1000;
-  if (snap.exists) {
-    const lastAt = snap.data()?.lastAt?.toDate?.();
-    const count = snap.data()?.count ?? 0;
-    if (lastAt && (now - lastAt.getTime()) < windowMs && count >= maxAttempts) {
-      res.status(429).json({ error: "rate_limited" });
-      return false;
+  // Read + increment inside a transaction so concurrent requests can't all
+  // read `count < max` and slip through (the previous non-transactional
+  // get()-then-write version had this TOCTOU race). Same approach the admin
+  // broadcast cooldown already uses. The 429 response is sent AFTER the tx
+  // resolves — never inside it, since transactions can retry.
+  const allowed = await db.runTransaction(async (tx) => {
+    const snap = await tx.get(ref);
+    const now = Date.now();
+    if (snap.exists) {
+      const lastAt = snap.data()?.lastAt?.toDate?.();
+      const count = snap.data()?.count ?? 0;
+      if (lastAt && (now - lastAt.getTime()) < windowMs) {
+        // Inside the current window
+        if (count >= maxAttempts) {
+          return false; // blocked — no write
+        }
+        tx.update(ref, { count: admin.firestore.FieldValue.increment(1) });
+        return true;
+      }
+      // Window elapsed (or doc somehow lacks lastAt) — start a fresh window
+      tx.set(ref, { lastAt: admin.firestore.Timestamp.now(), count: 1 });
+      return true;
     }
-    if (lastAt && (now - lastAt.getTime()) >= windowMs) {
-      await ref.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
-    } else {
-      await ref.update({ count: admin.firestore.FieldValue.increment(1) });
-    }
-  } else {
-    await ref.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
+    tx.set(ref, { lastAt: admin.firestore.Timestamp.now(), count: 1 });
+    return true;
+  });
+
+  if (!allowed) {
+    res.status(429).json({ error: "rate_limited" });
+    return false;
   }
   return true;
 }
