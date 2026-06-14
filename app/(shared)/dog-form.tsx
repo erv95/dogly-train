@@ -131,7 +131,7 @@ export default function DogFormScreen() {
             setWeight(String(data.weight));
             setSex(data.sex);
             setBehavior(data.behavior);
-            setIssues(data.issues);
+            setIssues(data.issues ?? []);
             setPhotoURL(data.photoURL);
           }
         } catch (error) {

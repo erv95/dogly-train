@@ -118,6 +118,10 @@ export default function DogsScreen() {
 
   const renderDogCard = ({ item, index }: { item: Dog; index: number }) => {
     const sex = SEX_ICON[item.sex];
+    // Defensive: legacy/externally-created dog docs may lack the issues array.
+    // Without this fallback, issues.length/[0] below throws inside renderItem
+    // and (with a single root ErrorBoundary) blanks the whole app.
+    const issues = item.issues ?? [];
     const isLeft = index % 2 === 0;
     const stats = dogStatsMap[item.id];
     const levelInfo = getLevelInfo(stats?.level ?? 1);
@@ -178,15 +182,15 @@ export default function DogsScreen() {
             </View>
 
             {/* Issues */}
-            {item.issues.length > 0 && (
+            {issues.length > 0 && (
               <View style={styles.issueRow}>
                 <View style={styles.issueTag}>
                   <Text style={styles.issueTagText} numberOfLines={1}>
-                    {t(`dogs.issueOptions.${item.issues[0]}`)}
+                    {t(`dogs.issueOptions.${issues[0]}`)}
                   </Text>
                 </View>
-                {item.issues.length > 1 && (
-                  <Text style={styles.moreIssues}>+{item.issues.length - 1}</Text>
+                {issues.length > 1 && (
+                  <Text style={styles.moreIssues}>+{issues.length - 1}</Text>
                 )}
               </View>
             )}
