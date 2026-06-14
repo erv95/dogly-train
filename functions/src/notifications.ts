@@ -205,6 +205,13 @@ export const onNewMessage = functions.firestore
     if (!chatDoc.exists) return;
 
     const { participants, participantNames } = chatDoc.data()!;
+    // Defensive: a malformed/legacy chat doc without a participants array would
+    // make `.find` throw. Since this is an at-least-once trigger, the throw
+    // would retry forever on the same bad doc. Bail cleanly instead.
+    if (!Array.isArray(participants)) {
+      functions.logger.warn("onNewMessage: chat missing participants array", { chatId });
+      return;
+    }
     const recipientId = participants.find((id: string) => id !== senderId);
     if (!recipientId || recipientId === SYSTEM_UID) return;
 
