@@ -1,7 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import Stripe from "stripe";
-import { db } from "./_shared";
+import { db, enforceRateLimit } from "./_shared";
 import { applyPremium } from "./premium";
 
 // Stripe keys are set via environment variables.
@@ -77,24 +77,9 @@ export const createCheckoutSession = functions.https.onRequest(async (req, res) 
     return;
   }
 
-  // Rate limit: max 5 checkout sessions per user per minute
-  const rateLimitRef = db.collection("rate_limits").doc(`stripe_${userId}`);
-  const rateLimitSnap = await rateLimitRef.get();
-  if (rateLimitSnap.exists) {
-    const lastAt = rateLimitSnap.data()?.lastAt?.toDate?.();
-    const count = rateLimitSnap.data()?.count ?? 0;
-    if (lastAt && (Date.now() - lastAt.getTime()) < 60_000 && count >= 5) {
-      res.status(429).json({ error: "Too many requests. Please wait a moment." });
-      return;
-    }
-    if (lastAt && (Date.now() - lastAt.getTime()) >= 60_000) {
-      await rateLimitRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
-    } else {
-      await rateLimitRef.update({ count: admin.firestore.FieldValue.increment(1) });
-    }
-  } else {
-    await rateLimitRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
-  }
+  // Rate limit: max 5 checkout sessions per user per minute.
+  // Atomic helper — responds {error:"rate_limited"} on 429.
+  if (!(await enforceRateLimit(res, `stripe_${userId}`, 5, 60))) return;
 
   try {
     const stripe = getStripe();
