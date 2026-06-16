@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { db } from "./_shared";
+import { db, enforceRateLimit } from "./_shared";
 import { getPaypalBase, getPaypalAccessToken } from "./_paypal";
 import { applyPremium } from "./premium";
 
@@ -107,24 +107,9 @@ export const createPaypalOrder = functions.https.onRequest(async (req, res) => {
   const pkg = COIN_PACKAGES[packageId];
   if (!pkg) { res.status(400).json({ error: "Invalid package" }); return; }
 
-  // Rate limit: max 5 orders per user per minute
-  const rateLimitRef = db.collection("rate_limits").doc(`paypal_${userId}`);
-  const rateLimitSnap = await rateLimitRef.get();
-  if (rateLimitSnap.exists) {
-    const lastAt = rateLimitSnap.data()?.lastAt?.toDate?.();
-    const count = rateLimitSnap.data()?.count ?? 0;
-    if (lastAt && (Date.now() - lastAt.getTime()) < 60_000 && count >= 5) {
-      res.status(429).json({ error: "Too many requests. Please wait a moment." });
-      return;
-    }
-    if (lastAt && (Date.now() - lastAt.getTime()) >= 60_000) {
-      await rateLimitRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
-    } else {
-      await rateLimitRef.update({ count: admin.firestore.FieldValue.increment(1) });
-    }
-  } else {
-    await rateLimitRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
-  }
+  // Rate limit: max 5 orders per user per minute.
+  // Atomic helper — responds {error:"rate_limited"} on 429.
+  if (!(await enforceRateLimit(res, `paypal_${userId}`, 5, 60))) return;
 
   try {
     const accessToken = await getPaypalAccessToken();
