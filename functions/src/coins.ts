@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import { db } from "./_shared";
+import { db, enforceRateLimit } from "./_shared";
 
 const BOOST_COST = 20;
 const BOOST_DURATION_HOURS = 24;
@@ -63,24 +63,9 @@ export const activateBoost = functions.https.onRequest(async (req, res) => {
     return;
   }
 
-  // Rate limit: max 3 boost attempts per user per minute
-  const rateLimitRef = db.collection("rate_limits").doc(`boost_${userId}`);
-  const rateLimitSnap = await rateLimitRef.get();
-  if (rateLimitSnap.exists) {
-    const lastAt = rateLimitSnap.data()?.lastAt?.toDate?.();
-    const count = rateLimitSnap.data()?.count ?? 0;
-    if (lastAt && (Date.now() - lastAt.getTime()) < 60_000 && count >= 3) {
-      res.status(429).json({ error: "Too many requests. Please wait a moment." });
-      return;
-    }
-    if (lastAt && (Date.now() - lastAt.getTime()) >= 60_000) {
-      await rateLimitRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
-    } else {
-      await rateLimitRef.update({ count: admin.firestore.FieldValue.increment(1) });
-    }
-  } else {
-    await rateLimitRef.set({ lastAt: admin.firestore.Timestamp.now(), count: 1 });
-  }
+  // Rate limit: max 3 boost attempts per user per minute.
+  // Atomic helper — responds {error:"rate_limited"} on 429.
+  if (!(await enforceRateLimit(res, `boost_${userId}`, 3, 60))) return;
 
   try {
     await db.runTransaction(async (transaction) => {
